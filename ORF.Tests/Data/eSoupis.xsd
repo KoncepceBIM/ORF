@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eSoupis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="STAVBA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="SUBJEKT">
+                <xs:complexType>
+                  <xs:attribute name="Typ" type="xs:string" use="required" />
+                  <xs:attribute name="ICO" type="xs:string" use="required" />
+                  <xs:attribute name="DIC" type="xs:string" use="required" />
+                  <xs:attribute name="Nazev" type="xs:string" use="required" />
+                  <xs:attribute name="Adresa" type="xs:string" use="required" />
+                  <xs:attribute name="Misto" type="xs:string" use="required" />
+                  <xs:attribute name="PSC" type="xs:string" use="required" />
+                  <xs:attribute name="Stat" type="xs:string" use="required" />
+                  <xs:attribute name="Kontakt" type="xs:string" use="required" />
+                  <xs:attribute name="Telefon" type="xs:string" use="required" />
+                  <xs:attribute name="Email" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SPOPIS" type="xs:string" />
+              <xs:element maxOccurs="unbounded" name="OBJEKT">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SOUPIS">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="RPOPIS" type="xs:string" />
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="ZATRIDENI">
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0">
+                                <xs:element minOccurs="0" name="ZPOPIS" type="xs:string" />
+                                <xs:element maxOccurs="unbounded" name="ZATRIDENI">
+                                  <xs:complexType>
+                                    <xs:sequence minOccurs="0">
+                                      <xs:choice maxOccurs="unbounded">
+                                        <xs:element name="ZATRIDENI">
+                                          <xs:complexType>
+                                            <xs:sequence minOccurs="0">
+                                              <xs:choice maxOccurs="unbounded">
+                                                <xs:element name="ZATRIDENI">
+                                                  <xs:complexType>
+                                                    <xs:sequence minOccurs="0">
+                                                      <xs:element name="ZPOPIS" type="xs:string" />
+                                                    </xs:sequence>
+                                                    <xs:attribute name="PolozkaZatrideniUID" type="xs:unsignedShort" use="required" />
+                                                    <xs:attribute name="Typ" type="xs:string" use="required" />
+                                                    <xs:attribute name="Cislo" type="xs:unsignedInt" use="required" />
+                                                    <xs:attribute name="Nazev" type="xs:string" use="required" />
+                                                  </xs:complexType>
+                                                </xs:element>
+                                                <xs:element name="ZPOPIS" type="xs:string" />
+                                              </xs:choice>
+                                            </xs:sequence>
+                                            <xs:attribute name="PolozkaZatrideniUID" type="xs:unsignedShort" use="required" />
+                                            <xs:attribute name="Typ" type="xs:string" use="required" />
+                                            <xs:attribute name="Cislo" type="xs:unsignedInt" use="required" />
+                                            <xs:attribute name="Nazev" type="xs:string" use="required" />
+                                          </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="ZPOPIS" type="xs:string" />
+                                      </xs:choice>
+                                    </xs:sequence>
+                                    <xs:attribute name="PolozkaZatrideniUID" type="xs:unsignedShort" use="required" />
+                                    <xs:attribute name="Typ" type="xs:string" use="required" />
+                                    <xs:attribute name="Cislo" type="xs:decimal" use="required" />
+                                    <xs:attribute name="Nazev" type="xs:string" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="PolozkaZatrideniUID" type="xs:int" use="required" />
+                              <xs:attribute name="Typ" type="xs:string" use="required" />
+                              <xs:attribute name="Cislo" type="xs:string" use="required" />
+                              <xs:attribute name="Nazev" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element maxOccurs="unbounded" name="DIL">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element maxOccurs="unbounded" name="POLOZKA">
+                                  <xs:complexType>
+                                    <xs:sequence minOccurs="0">
+                                      <xs:element name="PPOPIS" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="UID" type="xs:string" use="required" />
+                                    <xs:attribute name="PoradoveCislo" type="xs:unsignedShort" use="required" />
+                                    <xs:attribute name="Cislo" type="xs:string" use="required" />
+                                    <xs:attribute name="Typ" type="xs:string" use="required" />
+                                    <xs:attribute name="Nazev" type="xs:string" use="required" />
+                                    <xs:attribute name="MJ" type="xs:string" use="required" />
+                                    <xs:attribute name="Mnozstvi" type="xs:decimal" use="required" />
+                                    <xs:attribute name="JHmotnost" type="xs:decimal" use="optional" />
+                                    <xs:attribute name="JDemontazniHmotnost" type="xs:decimal" use="optional" />
+                                    <xs:attribute name="SazbaDPH" type="xs:decimal" use="required" />
+                                    <xs:attribute name="JCena" type="xs:decimal" use="required" />
+                                    <xs:attribute name="Cena" type="xs:decimal" use="required" />
+                                    <xs:attribute name="PolozkaZatrideniUID" type="xs:string" use="optional" />
+                                    <xs:attribute name="ObchNazev" type="xs:string" use="optional" />
+                                    <xs:attribute name="ObchNazevAN" type="xs:unsignedByte" use="optional" />
+                                    <xs:attribute name="CenovaSoustava" type="xs:string" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="Cislo" type="xs:string" use="required" />
+                              <xs:attribute name="Nazev" type="xs:string" use="required" />
+                              <xs:attribute name="Typ" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="Cislo" type="xs:string" use="required" />
+                        <xs:attribute name="Nazev" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Cislo" type="xs:string" use="required" />
+                  <xs:attribute name="Nazev" type="xs:string" use="required" />
+                  <xs:attribute name="Typ" type="xs:string" use="required" />
+                  <xs:attribute name="CisloJKSO" type="xs:string" use="required" />
+                  <xs:attribute name="NazevJKSO" type="xs:string" use="required" />
+                  <xs:attribute name="Charakteristika" type="xs:string" use="required" />
+                  <xs:attribute name="DruhStavebniAkce" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Cislo" type="xs:string" use="required" />
+            <xs:attribute name="Nazev" type="xs:string" use="required" />
+            <xs:attribute name="Misto" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Mena" type="xs:string" use="required" />
+      <xs:attribute name="Verze" type="xs:decimal" use="required" />
+      <xs:attribute name="Zdroj" type="xs:string" use="required" />
+      <xs:attribute name="UID" type="xs:unsignedShort" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

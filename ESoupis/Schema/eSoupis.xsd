@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="TStrNumber">
+		<xs:restriction base="xs:normalizedString">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TText">
+		<xs:restriction base="xs:normalizedString">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TMemo">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="TLong">
+		<xs:restriction base="xs:long"/>
+	</xs:simpleType>
+	<xs:simpleType name="TPrice">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="18"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TNumber">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="18"/>
+			<xs:fractionDigits value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TBoolean">
+		<xs:restriction base="xs:boolean"/>
+	</xs:simpleType>
+	<xs:simpleType name="TKodMeny">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CZK"/>
+			<xs:enumeration value="EUR"/>
+			<xs:enumeration value="USD"/>
+			<xs:enumeration value="GPB"/>
+			<xs:enumeration value="RUR"/>
+			<xs:enumeration value="CHF"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TVerze">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TTypObjektu">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="STA"/>
+			<xs:enumeration value="PRO"/>
+			<xs:enumeration value="ING"/>
+			<xs:enumeration value="VON"/>
+			<xs:enumeration value="OST"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TTypDilu">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="HSV"/>
+			<xs:enumeration value="PSV"/>
+			<xs:enumeration value="MON"/>
+			<xs:enumeration value="VN"/>
+			<xs:enumeration value="ON"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TTypPolozky">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="P"/>
+			<xs:enumeration value="M"/>
+			<xs:enumeration value="N"/>
+			<xs:enumeration value="J"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TTypSubjektu">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="OBJEDNATEL"/>
+			<xs:enumeration value="DODAVATEL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TTypZdroje">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RTS"/>
+			<xs:enumeration value="Callida"/>
+			<xs:enumeration value="URS"/>
+			<xs:enumeration value="Valbek"/>
+			<xs:enumeration value="Ostatni"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TTypZatrideni">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="C"/>
+			<xs:enumeration value="K"/>
+			<xs:enumeration value="P"/>
+			<xs:enumeration value="D"/>
+			<xs:enumeration value="O"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TTypVymery">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="N"/>
+			<xs:enumeration value="P"/>
+			<xs:enumeration value="S"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TVymera">
+		<xs:attribute name="PoradoveCislo" type="TLong" use="required"/>
+		<xs:attribute name="Typ" type="TTypVymery" use="required"/>
+		<xs:attribute name="Popis" type="TText" use="required"/>
+		<xs:attribute name="Vyraz" type="TText" use="required"/>
+		<xs:attribute name="Hodnota" type="TNumber" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TPolozka">
+		<xs:sequence>
+			<xs:element name="PPOPIS" minOccurs="0"/>
+			<xs:element name="VYMERA" type="TVymera" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="PoradoveCislo" type="TLong" use="required"/>
+		<xs:attribute name="UID" type="TStrNumber" use="required"/>
+		<xs:attribute name="Cislo" type="TStrNumber" use="required"/>
+		<xs:attribute name="Typ" type="TTypPolozky" use="required"/>
+		<xs:attribute name="Nazev" type="TText" use="required"/>
+		<xs:attribute name="MJ" type="TText" use="required"/>
+		<xs:attribute name="Mnozstvi" type="TNumber" use="required"/>
+		<xs:attribute name="JHmotnost" type="TNumber"/>
+		<xs:attribute name="JDemontazniHmotnost" type="TNumber"/>
+		<xs:attribute name="SazbaDPH" type="TNumber" use="required"/>
+		<xs:attribute name="JCena" type="TPrice"/>
+		<xs:attribute name="Cena" type="TPrice"/>
+		<xs:attribute name="PolozkaZatrideniUID" type="TStrNumber"/>
+		<xs:attribute name="ObchNazev" type="TText"/>
+		<xs:attribute name="ObchNazevAN" type="TBoolean"/>
+		<xs:attribute name="CenovaSoustava" type="TStrNumber" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TDil">
+		<xs:sequence>
+			<xs:element name="DPOPIS" type="TMemo" minOccurs="0"/>
+			<xs:element name="POLOZKA" type="TPolozka" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Typ" type="TTypDilu"/>
+		<xs:attribute name="Cislo" type="TStrNumber" use="required"/>
+		<xs:attribute name="Nazev" type="TText" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TZatrideni">
+		<xs:sequence>
+			<xs:element name="ZPOPIS" minOccurs="0"/>
+			<xs:element name="ZATRIDENI" type="TZatrideni" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="PolozkaZatrideniUID" type="TStrNumber" use="required"/>
+		<xs:attribute name="Typ" type="TTypZatrideni" use="required"/>
+		<xs:attribute name="Cislo" type="TStrNumber"/>
+		<xs:attribute name="Nazev" type="TText" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TSoupis">
+		<xs:sequence>
+			<xs:element name="RPOPIS" type="TMemo" minOccurs="0"/>
+			<xs:element name="ZATRIDENI" type="TZatrideni" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="DIL" type="TDil" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Cislo" type="TStrNumber" use="required"/>
+		<xs:attribute name="Nazev" type="TText" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TObjekt">
+		<xs:sequence>
+			<xs:element name="OPOPIS" type="TMemo" minOccurs="0"/>
+			<xs:element name="SOUPIS" type="TSoupis" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Cislo" type="TStrNumber" use="required"/>
+		<xs:attribute name="Nazev" type="TText" use="required"/>
+		<xs:attribute name="Typ" type="TTypObjektu" use="required"/>
+		<xs:attribute name="CisloJKSO" type="TStrNumber"/>
+		<xs:attribute name="NazevJKSO" type="TText"/>
+		<xs:attribute name="Charakteristika" type="TText"/>
+		<xs:attribute name="DruhStavebniAkce" type="TText"/>
+	</xs:complexType>
+	<xs:complexType name="TSubjekt">
+		<xs:attribute name="Typ" type="TTypSubjektu" use="required"/>
+		<xs:attribute name="ICO" type="TText"/>
+		<xs:attribute name="DIC" type="TText"/>
+		<xs:attribute name="Nazev" type="TText" use="required"/>
+		<xs:attribute name="Adresa" type="TText"/>
+		<xs:attribute name="Misto" type="TText"/>
+		<xs:attribute name="PSC" type="TText"/>
+		<xs:attribute name="Stat" type="TText" use="required"/>
+		<xs:attribute name="Kontakt" type="TText"/>
+		<xs:attribute name="Telefon" type="TText"/>
+		<xs:attribute name="Email" type="TText"/>
+	</xs:complexType>
+	<xs:complexType name="TStavba">
+		<xs:sequence>
+			<xs:element name="SUBJEKT" type="TSubjekt" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="SPOPIS" minOccurs="0"/>
+			<xs:element name="OBJEKT" type="TObjekt" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Cislo" type="TStrNumber" use="required"/>
+		<xs:attribute name="Nazev" type="TText" use="required"/>
+		<xs:attribute name="Misto" type="TText"/>
+	</xs:complexType>
+	<xs:complexType name="TeSoupis">
+		<xs:sequence>
+			<xs:element name="STAVBA" type="TStavba" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Mena" type="TKodMeny"/>
+		<xs:attribute name="Verze" type="TVerze"/>
+		<xs:attribute name="Zdroj" type="TTypZdroje"/>
+		<xs:attribute name="UID" type="TStrNumber"/>
+	</xs:complexType>
+	<xs:element name="eSoupis" type="TeSoupis"/>
+</xs:schema>

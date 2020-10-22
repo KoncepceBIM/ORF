@@ -1,0 +1,1034 @@
+﻿<eSoupis Mena="CZK" Verze="1.0" Zdroj="RTS" UID="2767">
+	<STAVBA Cislo="12-005" Nazev="Rodiný dům" Misto="">
+		<SUBJEKT Typ="OBJEDNATEL" ICO="64442381" DIC="CZ6912053819" Nazev="Marek Menšík" Adresa="32" Misto="Šumice-Šumice" PSC="67175" Stat="Slovenská republika" Kontakt="Štěpánek Igor" Telefon="777123456" Email="Stepanek.Igor@email.cz"/>
+		<SUBJEKT Typ="DODAVATEL" ICO="" DIC="" Nazev="" Adresa="" Misto="" PSC="" Stat="" Kontakt="" Telefon="" Email=""/>
+		<SPOPIS>Soupisy stavebních prací a dodávek jsou zpracovány kombinací cenové soustavy zpracované společností RTS, a.s. pro rok 2012 a individuálního popisu. Veškeré položky obsažené v soupise, u nichž je definován i příslušný sborník jsou převzaty z cenové soustavy RTS, a s., ostatní položky jsou definovány individuálním popisem.							
+Technické a kvalitativní podmínky							
+"Obsah jednotlivých položek, způsob měření a ostatní další podmínky definující obsah a použití jednotlivých položek jsou obsaženy v úvodních ustanoveních příslušných sborníků (viz zařazení u položky), které jsou volně dostupné na adrese www.cenovasoustava.cz 
+Pokud je v soupise použita individuální položka (tedy položky neobsažená v cenové soustavě RTS, a.s.), pak její technické a kvalitativní podmínky jsou definovány jejím popisem a v ostatním se pak  řídí technickými a kvalitativními podmínky toho sborníku, k němuž popsaný druh stavební práce věcně přísluší"							
+Cenové podmínky							
+"Jsou uvedeny na adrese www.cenovasoustava.cz a platí pro položky uvedené v daném ceníku.
+Pokud se jedná o položku individuální, která není v cenové soustavě, pak musí zadavatel potvrdit nebo uvést cenové podmínky.
+
+Cenovými podmínkami se rozumí zejména:
+Platnost položek / kvalitativní podmínky / způsob měření / technologická manipulace / podmínky kalkulace jednotkové ceny"							
+		</SPOPIS>
+		<OBJEKT Cislo="01" Nazev="Hlavní budova" Typ="STA" CisloJKSO="--" NazevJKSO="" Charakteristika="" DruhStavebniAkce="">
+			<SOUPIS Cislo="S01" Nazev="Soupis prací a dodávek">
+				<RPOPIS>
+				</RPOPIS>
+				<ZATRIDENI PolozkaZatrideniUID="34437" Typ="D" Cislo="" Nazev="kamenivo přírodní těžené"/>
+				<ZATRIDENI PolozkaZatrideniUID="34435" Typ="D" Cislo="" Nazev="žlab odvodňovací"/>
+				<ZATRIDENI PolozkaZatrideniUID="34445" Typ="D" Cislo="" Nazev="práh"/>
+				<ZATRIDENI PolozkaZatrideniUID="34440" Typ="D" Cislo="" Nazev="tyč ocelová  L (úhelník) válcovaná za tepla"/>
+				<ZATRIDENI PolozkaZatrideniUID="34428" Typ="D" Cislo="" Nazev="geotextilie"/>
+				<ZATRIDENI PolozkaZatrideniUID="34430" Typ="D" Cislo="" Nazev="fólie izolační střešní"/>
+				<ZATRIDENI PolozkaZatrideniUID="34433" Typ="D" Cislo="" Nazev="fólie izolační zemní"/>
+				<ZATRIDENI PolozkaZatrideniUID="34421" Typ="D" Cislo="" Nazev="deska izolační"/>
+				<ZATRIDENI PolozkaZatrideniUID="34427" Typ="D" Cislo="" Nazev="deska spádová, klín"/>
+				<ZATRIDENI PolozkaZatrideniUID="34423" Typ="D" Cislo="" Nazev="profil dilatační"/>
+				<ZATRIDENI PolozkaZatrideniUID="34443" Typ="D" Cislo="" Nazev="směs travní"/>
+				<ZATRIDENI PolozkaZatrideniUID="34446" Typ="D" Cislo="" Nazev="trubka plastová drenážní"/>
+				<ZATRIDENI PolozkaZatrideniUID="34426" Typ="D" Cislo="" Nazev="OSB deska"/>
+				<ZATRIDENI PolozkaZatrideniUID="34447" Typ="D" Cislo="" Nazev="dlažba betonová"/>
+				<ZATRIDENI PolozkaZatrideniUID="34425" Typ="D" Cislo="" Nazev="lišta"/>
+				<ZATRIDENI PolozkaZatrideniUID="34438" Typ="D" Cislo="" Nazev="deska cementotřísková"/>
+				<ZATRIDENI PolozkaZatrideniUID="34424" Typ="D" Cislo="" Nazev="profil plastový na obklad"/>
+				<ZATRIDENI PolozkaZatrideniUID="34439" Typ="D" Cislo="" Nazev="deska sádrovláknitá"/>
+				<ZATRIDENI PolozkaZatrideniUID="34442" Typ="D" Cislo="" Nazev="substrát"/>
+				<ZATRIDENI PolozkaZatrideniUID="-8070" Typ="C" Cislo="800-1" Nazev="Zemní práce">
+					<ZPOPIS>X</ZPOPIS>
+					<ZATRIDENI PolozkaZatrideniUID="34224" Typ="K" Cislo="1211011" Nazev="Sejmutí ornice">
+						<ZPOPIS>STANDARDY KONSTRUKCÍ
+Obsah standardu je popsán následujícími technickými a kvalitativními parametry.
+
+Odstranění travin, rákosu ruderálního porostu, stařiny, zřízení protipožárních pásů a kosení ve vegetačním období s ponecháním na místě
+Odstraněním travin a rákosu se rozumí ruční posekání travin, rákosu a také všech zemědělských plodin, ruderálního porostu, stařiny apod. kosou. Obsahem standardu je pro odstranění travin ruční posekání trávy a rákosu se shrabání hráběmi a odnosem 50 m a uložením na hromady, pro odstranění ruderálního porostu a odstranění stařiny kosení, naložení shrabků, odvoz do 20 km a složení, pro protipožární pásy srýpnutí organického půdního krytu až na minerální půdu, vykopání a odhrabání organických látek a jejich odstranění na vzdálenost do 2 m, pro odstranění rákosu, plazivého rostlinstva a bodláčí práce při hloubce vody do 300 mm, vybrání a svázání prutů pro průmyslové účely do snopků vázacím drátem a odklizení a uložení až na vzdálenost do 20 m od kraje hladiny v dané době, pro vytrhání bodláčí uložení na hromady mimo pěstované travní plochy a spálení po seschnutí
+Popis standardu musí vymezit druh traviny, hustotu porostu a kosenou plochu.
+
+Celoplošné vyžínání buřeně v lesních výsadbách
+Celoplošným vyžínáním buřeně v lesních výsadbách se rozumí odstranění maliní, ostružiní, křovin apod. Obsahem standardu je kosení, shrabání a složení do hromad
+
+Odstranění křovin a stromů s odstraněním nebo ponecháním kořenů, seřezání vrbového proutí, prořezávka porostů. 
+Odstraněním křovin a stromů s odstraněním nebo ponecháním kořenů, seřezání vrbového proutí, prořezávka porostů a spálení křovin větví a stromů se rozumí odstranění křovin a stromů o průměru kmene do 100 mm, seřezávka vrbového proutí na vegetačních zpevněních, prořezávka porostů, spálení křovin, větví a stromů a odstranění pařezů odfrézováním. Obsahem standardu je: odstranění keřovitého porostu a seřezání vrbového proutí na vegetačních zpevněních (křoviny a stromky o průměru kmenů do 5 cm) ruční pilkou nebo sekerkou nad 5 cm motorovou pilou s odstraněním kořenů a složením do hromad do vzdálenosti 20 m ( průměrný počet stromků nebo keřů na 1 m2: řídký porost 1 ks, středně hustý 3 ks, hustý přes 3 ks), prořezávka porostů, výběr, prořezání a ponechání vytěženého nehroubí na místě, spálení odstraněných křovin, přihrnování křovin, očištění spáleniště, uložení popela a zbytků na hromadu, odstranění pařezů pojezdem traktoru s frézou na pařezy, nutné přemístění a uložení na hromady na vzdálenost do50 m nebo naložení na dopravní prostředek do sklonu terénu 1 : 5.
+
+Sejmutí ornice nebo lesní půdy s vodorovným přemístěním na hromady v místě upotřebení nebo na dočasné či trvalé skládky se složením.
+
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34225" Typ="K" Cislo="16710" Nazev="Nakládání, skládání, překládání neulehlého výkopku">
+						<ZATRIDENI PolozkaZatrideniUID="34376" Typ="P" Cislo="167101" Nazev="nakládání výkopku ">
+							<ZPOPIS>nakládání výkopku
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34319" Typ="K" Cislo="1322011" Nazev="Hloubení rýh šířky do 60 cm v hornině 3">
+						<ZPOPIS>Hloubení rýh zapažených i nezapažených s urovnáním dna do předepsaného profilu a spádu, s přehozením výkopku na přilehlém terénu na vzdálenost do 3 m od podélné osy rýhy nebo s naložením výkopku na dopravní prostředek.
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34320" Typ="K" Cislo="1741011" Nazev="Zásyp sypaninou se zhutněním">
+						<ZPOPIS>z jakékoliv horniny s uložením výkopku po vrstvách</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34371" Typ="K" Cislo="13210" Nazev="Hloubení rýh šířky do 60 cm">
+						<ZPOPIS>zapažených i nezapažených s urovnáním dna do předepsaného profilu a spádu, s přehozením výkopku na přilehlém terénu na vzdálenost do 3 m od podélné osy rýhy nebo s naložením výkopku na dopravní prostředek</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34372" Typ="P" Cislo="132104" Nazev="v hornině 4 ">
+							<ZATRIDENI PolozkaZatrideniUID="34373" Typ="P" Cislo="1321041" Nazev="příplatek k cenám"/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34374" Typ="K" Cislo="13220" Nazev="Hloubení rýh šířky přes 60 do 200 cm">
+						<ZPOPIS>zapažených i nezapažených, s urovnáním dna do předepsaného profilu a spádu, s případně nutným přehozením výkopku na vzdálenost do 3 m ve výkopišti, s přehozením výkopku na přilehlém terénu na vzdálenost do 5 m od podélné osy rýhy nebo s naložením výkopku na dopravní prostředek.</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34375" Typ="P" Cislo="132203" Nazev="v hornině 3"/>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-8383" Typ="C" Cislo="800-3" Nazev="Lešení-dočasné jeřábové dráhy">
+					<ZATRIDENI PolozkaZatrideniUID="34226" Typ="K" Cislo="941941" Nazev="Montáž lešení lehkého pracovního řadového s podlahami">
+						<ZATRIDENI PolozkaZatrideniUID="34418" Typ="P" Cislo="9419419" Nazev="příplatek k ceně za každý další i započatý měsíc použití lešení ">
+							<ZPOPIS>příplatek k ceně za každý další i započatý měsíc použití lešení
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34227" Typ="K" Cislo="9419418" Nazev="Demontáž lešení lehkého řadového s podlahami"/>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-9946" Typ="C" Cislo="801-1" Nazev="Běžné stavební práce">
+					<ZATRIDENI PolozkaZatrideniUID="34270" Typ="K" Cislo="27331" Nazev="Beton základových desek prostý">
+						<ZATRIDENI PolozkaZatrideniUID="34333" Typ="P" Cislo="273313" Nazev="prostý"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34271" Typ="K" Cislo="27332" Nazev="Beton základových desek železový">
+						<ZPOPIS>Beton základových desek železový bez dodávky a uložení výztuže
+prostý ze síranovzdorného cementu
+
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34272" Typ="K" Cislo="27335" Nazev="Bednění stěn základových desek">
+						<ZPOPIS>Bednění svislé nebo šikmé (odkloněné) , půdorysně přímé nebo zalomené, stěn základových desek ve volných nebo zapažených jámách, rýhách, šachtách, včetně případných vzpěr
+
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34273" Typ="K" Cislo="27336" Nazev="Výztuž základových desek">
+						<ZPOPIS>Výztuž základových desek rovných nebo s náběhy nebo hřibových nebo upnutých do žeber včetně výztuže těchto žeber
+z betonářské oceli 
+ze svařovaných sítí
+
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34334" Typ="P" Cislo="273361" Nazev="z betonářské oceli"/>
+						<ZATRIDENI PolozkaZatrideniUID="34335" Typ="P" Cislo="273362" Nazev="ze svařovaných sítí"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34274" Typ="K" Cislo="27431" Nazev="Beton základových pasů prostý">
+						<ZATRIDENI PolozkaZatrideniUID="34336" Typ="P" Cislo="274313" Nazev="prostý"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34275" Typ="K" Cislo="27435" Nazev="Bednění stěn základových pasů">
+						<ZPOPIS>Bednění svislé nebo šikmé (odkloněné), půdorysně přímé nebo zalomené, stěn základových pasů ve volných nebo zapažených jámách, rýhách, šachtách, včetně případných vzpěr.
+
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34276" Typ="K" Cislo="31110" Nazev="Vytvoření prostupů ve zdech monolitických">
+						<ZPOPIS>vytvoření prostupů nebo suchých kanálků vodorovných, šikmých, obloukových, zalomených i svislých v nosných, výplňových, obkladových, půdních apod. zdech z monolitického betonu nebo železobetonu, trvale osazených, vložkami nasraz z dutinových tvarovek, trub, prefabrikovaných dílců (rozlišení položek je podle jejich průřezové plochy) apod., bez jejich dodání, včetně polohového zajištění v bednění při betonáži
+
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34277" Typ="K" Cislo="31123" Nazev="Zdivo nosné z cihel a tvarovek pálených">
+						<ZATRIDENI PolozkaZatrideniUID="34337" Typ="P" Cislo="311238" Nazev="akusticky tlumivé"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34278" Typ="K" Cislo="31132" Nazev="Beton nadzákladových zdí železový">
+						<ZPOPIS>železobeton nadzákladových zdí nosných, výplňových, obkladových, půdních, štítových, poprsních apod. (bez výztuže)</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34279" Typ="K" Cislo="31135" Nazev="Bednění nadzákladových zdí">
+						<ZPOPIS>Bednění svislé nebo šikmé (odkloněné), půdorysně přímé nebo zalomené nadzákladových zdí nosných, výplňových, obkladových, půdních, štítových, poprsních apod. ve volném prostranství, ve volných nebo zapažených jámách, rýhách, šachtách, včetně případných vzpěr.
+
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34340" Typ="P" Cislo="311352" Nazev="oboustranné za každou stranu"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34280" Typ="K" Cislo="31136" Nazev="Výztuž nadzákladových zdí">
+						<ZATRIDENI PolozkaZatrideniUID="34341" Typ="P" Cislo="311361" Nazev="z betonářské oceli"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34281" Typ="K" Cislo="317321" Nazev="Beton překladů železový"/>
+					<ZATRIDENI PolozkaZatrideniUID="34282" Typ="K" Cislo="31735" Nazev="Bednění překladů, říms a klenbových pásů">
+						<ZATRIDENI PolozkaZatrideniUID="34342" Typ="P" Cislo="3173513" Nazev="překladů včetně podpěrné konstrukce ve výšce 4 m neproměnného nebo proměnného průřezu nebo při tvaru zalomeném půdorysně nebo nárysně ">
+							<ZPOPIS>překladů včetně podpěrné konstrukce ve výšce 4 m neproměnného nebo proměnného průřezu nebo při tvaru zalomeném půdorysně nebo nárysně
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34283" Typ="K" Cislo="31736" Nazev="Výztuž překladů, říms a klenbových pásů">
+						<ZATRIDENI PolozkaZatrideniUID="34343" Typ="P" Cislo="317361" Nazev="z betonářské oceli"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34284" Typ="K" Cislo="31794" Nazev="Osazení ocelových válcovaných nosníků na zdivu">
+						<ZPOPIS>osazení ocelových válcovaných nosníků (na zdivu), profilu I nebo IE nebo U nebo UE nebo L
+
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34285" Typ="K" Cislo="34224" Nazev="Příčky z tvárnic pálených">
+						<ZPOPIS>příčky jednoduché nebo příčky zděné do svislé dřevěné, cihelné, betonové nebo ocelové konstrukce na jakoukoliv maltu vápenocementovou (MVC) nebo cementovou (MC) 
+
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34328" Typ="P" Cislo="342241" Nazev="Příčky z tvárnic pálených"/>
+						<ZATRIDENI PolozkaZatrideniUID="34344" Typ="K" Cislo="3422443" Nazev="z cihel  290 mm, pálených plných nebo voštinových">
+							<ZATRIDENI PolozkaZatrideniUID="34345" Typ="P" Cislo="34224431" Nazev="P 15"/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34286" Typ="K" Cislo="34624438" Nazev="Plentování ocelových nosníků jednostranné">
+						<ZPOPIS>plentování ocelových válcovaných nosníků jednostranné jakýmikoliv cihlami na jakoukoliv maltu. Položky jsou odlišeny podle výšky stojiny.
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34287" Typ="K" Cislo="41132" Nazev="Beton stropů železový">
+						<ZATRIDENI PolozkaZatrideniUID="34348" Typ="P" Cislo="411321" Nazev="beton stropů deskových včetně desek s podlahovým topením, plochých střech, desek balkónových, desek hřibových stropů včetně hlavic hřibových sloupů, ž">
+							<ZPOPIS>beton stropů deskových včetně desek s podlahovým topením, plochých střech, desek balkónových, desek hřibových stropů včetně hlavic hřibových sloupů, železový (bez výztuže)</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34288" Typ="K" Cislo="411351" Nazev="Bednění stropů deskových">
+						<ZPOPIS>bez podpěrné konstrukce 
+
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34349" Typ="P" Cislo="4113511" Nazev="deskových, balkonových nebo plošných konzol plné, rovné, popř. s náběhy - vlastní"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34289" Typ="K" Cislo="41135417" Nazev="Podpěrná konstrukce bednění stropů">
+						<ZPOPIS>výšky do 4 m se zesílením dna bednění podle hodnoty zatížení betonovou směsí a výztuží</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34350" Typ="P" Cislo="411354176" Nazev="příplatek za podpěrnou konstrukci křížově zpevněnou pro výšku přes 4 do 6 m podle hodnoty zatížení betonovou směsí a výztuží"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34290" Typ="K" Cislo="411361" Nazev="Výztuž stropů">
+						<ZPOPIS>výztuž stropů prostě uložených, vetknutých i spojitých, deskových, trámových (žebrových, kazetových), s keramickými a jinými vložkami, konzolových nebo balkónových, hřibových včetně hlavic hřibových sloupů, plochých střech a pro zavěšení železobetonových podhledů
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34351" Typ="P" Cislo="4113611" Nazev="z betonářské oceli"/>
+						<ZATRIDENI PolozkaZatrideniUID="34352" Typ="P" Cislo="4113612" Nazev="ze svařovaných sítí"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34291" Typ="K" Cislo="61099" Nazev="Zakrývání výplní vnitřních otvorů, předmětů apod.">
+						<ZPOPIS>Zakrývání výplní vnitřních okenních otvorů, předmětů a konstrukcí, které se zřizují před úpravami povrchu, a obalení osazených dveřních zárubní před znečištěním při úpravách povrchu nástřikem plastických maltovin včetně pozdějšího odkrytí.</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34292" Typ="K" Cislo="611472" Nazev="Omítky stropu klasické">
+						<ZPOPIS>postřik a jádro míchané z písku, cementu a hydrátu, štuk z pytlované suché směsi</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34293" Typ="K" Cislo="611481" Nazev="Potažení stropů pletivem">
+						<ZPOPIS>potažení stropů rovných, trámových (žebrových) nebo zaoblených (kleneb) v ploše nebo pruzích na plném podkladě nebo na podkladě s dutinami (pod omítku)</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34355" Typ="P" Cislo="6114813" Nazev="výztužnou  tkaninou"/>
+						<ZATRIDENI PolozkaZatrideniUID="34356" Typ="P" Cislo="6114815" Nazev="pletivem včetně provizorního přichycení, bez nástřelů"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34294" Typ="K" Cislo="61247218" Nazev="Omítky stěn klasické, se štukem ze suché směsi">
+						<ZPOPIS>postřik a jádro míchané z písku, cementu a hydrátu, štuk z pytlované suché směsi
+
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34295" Typ="K" Cislo="6124731" Nazev="Omítky vnitřní zdiva ze suchých směsí">
+						<ZPOPIS>vnitřní omítka zdiva vápenocementová ze suchých směsí strojně nebo ručně nanášená v podlaží i ve schodišti na jakýkoliv druh podkladu,</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34357" Typ="P" Cislo="61247319" Nazev="příplatky"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34296" Typ="K" Cislo="6124811" Nazev="Potažení vnitřních stěn pletivem">
+						<ZPOPIS>potažení vnitřních stěn v ploše nebo pruzích na plném podkladě nebo na podkladě s dutinami (pod omítku)
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34358" Typ="P" Cislo="61248113" Nazev="výztužnou tkaninou"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34297" Typ="K" Cislo="62148" Nazev="Potažení vnějších podhledů">
+						<ZPOPIS>potažení vnějších podhledů pletivem v ploše nebo v pruzích na plném podkladě (pod omítku) 
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34362" Typ="P" Cislo="621482" Nazev="výztužnou  tkaninou ">
+							<ZPOPIS>výztužnou  tkaninou
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34298" Typ="K" Cislo="62241" Nazev="Barvení vnější omítky stěn">
+						<ZPOPIS>barvení vnější omítky stěn včetně podkladního pačokování do tří barev jakéhokoliv odstínu dvojnásobné</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34299" Typ="K" Cislo="6224213" Nazev="Zateplovací systémy na bázi polystyrenu">
+						<ZPOPIS>Nanesení lepicí stěrky na očištěný podklad nebo na izolační desky, nalepení tepelně izolačních fasádních desek, zajištění terčovými hmoždinkami, natažení podkladní stěrky, vtlačení výztužné sklolaminátové síťoviny a zahlazení, povrchová úprava omítkou. Vyztužení rohů lištami.</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34300" Typ="K" Cislo="62248111" Nazev="Potažení vnějších ploch pletivem">
+						<ZPOPIS>potažení vnějších stěn pletivem, v ploše nebo pruzích na plném podkladě (pod omítku)
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34364" Typ="P" Cislo="622481113" Nazev="výztužnou  tkaninou ">
+							<ZPOPIS>výztužnou  tkaninou
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34301" Typ="K" Cislo="63131" Nazev="Mazanina z betonu prostého">
+						<ZPOPIS>(z kameniva) hlazená dřevěným hladítkem</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34330" Typ="P" Cislo="631312" Nazev="tl. přes 50 do 80 mm"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34302" Typ="K" Cislo="632411" Nazev="Potěr ze suchých směsí">
+						<ZPOPIS>Položky obsahují rozmíchání suché směsi s vodou, rozprostření a uhlazení.
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34303" Typ="K" Cislo="64195" Nazev="Osazení rámů okenních dřevěných a osazovacích">
+						<ZPOPIS>osazování rámů na jakoukoliv cementovou maltu</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34365" Typ="P" Cislo="641952" Nazev="okenních dřevěných pro okna s křídly jednoduchými i zdvojenými, bez sdružených dveří nebo se sdruženými dveřmi ">
+							<ZPOPIS>okenních dřevěných pro okna s křídly jednoduchými i zdvojenými, bez sdružených dveří nebo se sdruženými dveřmi
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34304" Typ="K" Cislo="642941" Nazev="Stavební pouzdra pro posuvné dveře">
+						<ZPOPIS>Pouzdro pro posuvné dveře z pozinkovaného ocelového profilovaného plechu
+
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34366" Typ="P" Cislo="6429412" Nazev="osazené do sádrokartonové příčky ">
+							<ZPOPIS>osazené do sádrokartonové příčky
+							</ZPOPIS>
+							<ZATRIDENI PolozkaZatrideniUID="34367" Typ="P" Cislo="64294121" Nazev="jednostranné ">
+								<ZPOPIS>jednostranné
+								</ZPOPIS>
+							</ZATRIDENI>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34305" Typ="K" Cislo="642952" Nazev="Osazení zárubní dveřních dřevěných">
+						<ZPOPIS>osazení zárubní nebo rámů dveřních dřevěných hrubých, hoblovaných i leštěných, měkkých i tvrdých, na jakoukoliv cementovou maltu </ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34306" Typ="K" Cislo="95290" Nazev="Vyčištění budov a ostatních objektů">
+						<ZATRIDENI PolozkaZatrideniUID="34368" Typ="P" Cislo="9529011" Nazev="budov bytové nebo občanské výstavby - zametení a umytí podlah, dlažeb, obkladů, schodů v místnostech, chodbách a schodištích, vyčištění a umytí oken, ">
+							<ZPOPIS>budov bytové nebo občanské výstavby - zametení a umytí podlah, dlažeb, obkladů, schodů v místnostech, chodbách a schodištích, vyčištění a umytí oken, dveří s rámy, zárubněmi, umytí a vyčištění jiných zasklených a natíraných ploch a zařizovacích předmětů před předáním do užívání</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34307" Typ="K" Cislo="953943" Nazev="Osazování jiných kovových výrobků">
+						<ZPOPIS>osazování výrobků ostatních jinde neuvedených, bez dodání</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34369" Typ="P" Cislo="9539431" Nazev="do vynechaných nebo vysekaných kapes zdiva, se zajištěním polohy, se zalitím cementovou maltou ">
+							<ZPOPIS>do vynechaných nebo vysekaných kapes zdiva, se zajištěním polohy, se zalitím cementovou maltou
+							</ZPOPIS>
+						</ZATRIDENI>
+						<ZATRIDENI PolozkaZatrideniUID="34370" Typ="P" Cislo="9539432" Nazev="do betonu (např. kotev) se zajištěním polohy k bednění nebo k výztuži před zabetonováním ">
+							<ZPOPIS>do betonu (např. kotev) se zajištěním polohy k bednění nebo k výztuži před zabetonováním
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34316" Typ="K" Cislo="314251" Nazev="Univerzální třívrstvý komínový systém s klasickými komínovými vložkami"/>
+					<ZATRIDENI PolozkaZatrideniUID="34317" Typ="K" Cislo="314252" Nazev="Dvousložkový komínový systém s integrovanou tepelnou izolací v komínové tvárnici"/>
+					<ZATRIDENI PolozkaZatrideniUID="34318" Typ="K" Cislo="622472" Nazev="Omítky vnější stěn z hotových maltových směsí">
+						<ZATRIDENI PolozkaZatrideniUID="34363" Typ="P" Cislo="6224725" Nazev="silikonsilikátová z pastovité směsi ">
+							<ZPOPIS>silikonsilikátová z pastovité směsi
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34326" Typ="K" Cislo="31716" Nazev="Překlady keramické">
+						<ZATRIDENI PolozkaZatrideniUID="34327" Typ="P" Cislo="317161" Nazev="Překlady keramické"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34329" Typ="K" Cislo="6224713" Nazev="Nátěry a nástřiky vnějších stěn a pilířů základním a krycím nátěrem (nebo přestřikem povrchu)"/>
+					<ZATRIDENI PolozkaZatrideniUID="34331" Typ="K" Cislo="63131916" Nazev="Příplatek za přehlazení povrchu">
+						<ZPOPIS>betonové mazaniny min. B 10 ocelovým hladítkem s poprášením cementem pro konečnou úpravu mazaniny</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34332" Typ="K" Cislo="63131917" Nazev="Příplatek za stržení povrchu">
+						<ZPOPIS>spodní vrstvy mazaniny latí před vložením výztuže nebo pletiva pro tloušťku obou vrstev mazaniny</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34338" Typ="K" Cislo="31123112" Nazev="délky 250 mm">
+						<ZATRIDENI PolozkaZatrideniUID="34339" Typ="P" Cislo="311231125" Nazev="pevnost P 20 "/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34346" Typ="K" Cislo="34201" Nazev="Příčky z desek sádrokartonových">
+						<ZATRIDENI PolozkaZatrideniUID="34347" Typ="P" Cislo="3420131" Nazev="dvojité opláštění, jednoduchá konstrukce CW 50 "/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34353" Typ="K" Cislo="41602" Nazev="Podhledy na kovové konstrukci opláštěné deskami sádrokartonovými">
+						<ZATRIDENI PolozkaZatrideniUID="34354" Typ="P" Cislo="416021" Nazev="opláštění stropu, kovová konstrukce s přímým uchycením, profily CD "/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34359" Typ="K" Cislo="620992" Nazev="Zakrývání výplní vnějších otvorů">
+						<ZPOPIS>s rámy a zárubněmi, zábradlí, předmětů oplechování apod., které se zřizují ještě před úpravami povrchu, před jejich znečištěním při úpravách povrchu nástřikem plastických (lepivých) maltovin								
+
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34360" Typ="K" Cislo="621453" Nazev="Omítky vnější podhledů cementové">
+						<ZATRIDENI PolozkaZatrideniUID="34361" Typ="P" Cislo="6214532" Nazev="hladké"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34308" Typ="K" Cislo="99801100" Nazev="Přesun hmot pro budovy s nosnou konstrukcí zděnou">
+						<ZPOPIS>přesun hmot pro budovy občanské výstavby (JKSO 801), budovy pro bydlení (JKSO 803) budovy pro výrobu a služby (JKSO 812) s nosnou svislou konstrukcí zděnou z cihel nebo tvárnic nebo kovovou
+						</ZPOPIS>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-11172" Typ="C" Cislo="822-1" Nazev="Komunikace pozemní a letiště">
+					<ZATRIDENI PolozkaZatrideniUID="34309" Typ="K" Cislo="56112" Nazev="Zřízení podkladu z mechanicky zpevněné zeminy">
+						<ZPOPIS>Zřízení podkladu nebo ochranné vrsty vozovky z mechanicky zpevněné zeminy bez přidání pojiva nebo vylepšovacího materiálu, s rozprostřením, vlhčením, promísením a zhutněním</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34310" Typ="K" Cislo="5648" Nazev="Podklad ze štěrkodrti s rozprostřením a zhutněním"/>
+					<ZATRIDENI PolozkaZatrideniUID="34311" Typ="K" Cislo="5968" Nazev="Kladení dlažby z betonových nebo kamenin. dlaždic">
+						<ZPOPIS>komunikací pro pěší do velikosti dlaždic 0,25 m2 s provedením lože tl. do 3 cm, s vyplněním spár a se smetením přebytečného materiálu na vzdálenost do 3 m
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34312" Typ="K" Cislo="91771" Nazev="Osazení chodníkového obrubníku betonového">
+						<ZPOPIS>se zatřením lože, s vyplněním a zatřením spár cementovou maltou</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34377" Typ="P" Cislo="917711" Nazev="včetně dodávky betonovéího obrubníku ">
+							<ZPOPIS>včetně dodávky betonovéího obrubníku
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34313" Typ="K" Cislo="93511" Nazev="Osazení příkopového žlabu">
+						<ZPOPIS>Osazení příkopového žlabu s vyplněním a zatřením spár cementovou maltou, se zřízením lože tl. 10 cm </ZPOPIS>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-12197" Typ="C" Cislo="827-1" Nazev="Vedení trubní dálková - vodovody a kanalizace">
+					<ZATRIDENI PolozkaZatrideniUID="34314" Typ="K" Cislo="451" Nazev="Lože pod potrubí, stoky a drobné objekty">
+						<ZPOPIS>v otevřeném výkopu
+						</ZPOPIS>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-8449" Typ="C" Cislo="800-711" Nazev="Izolace proti vodě a povlakové krytiny">
+					<ZATRIDENI PolozkaZatrideniUID="34231" Typ="K" Cislo="998711" Nazev="Přesun hmot pro izolace proti vodě">
+						<ZATRIDENI PolozkaZatrideniUID="34379" Typ="P" Cislo="9987112" Nazev="výpočet z nákladů ">
+							<ZPOPIS>výpočet z nákladů
+							</ZPOPIS>
+							<ZATRIDENI PolozkaZatrideniUID="34380" Typ="P" Cislo="99871121" Nazev=""/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34233" Typ="K" Cislo="998712" Nazev="Přesun hmot pro povlakové krytiny">
+						<ZATRIDENI PolozkaZatrideniUID="34382" Typ="P" Cislo="9987122" Nazev="z nákladů">
+							<ZATRIDENI PolozkaZatrideniUID="34383" Typ="P" Cislo="99871221" Nazev="svislý"/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34228" Typ="K" Cislo="71121" Nazev="Izolace proti vlhkosti a tlak. vodě-nátěry, stěrky">
+						<ZATRIDENI PolozkaZatrideniUID="34378" Typ="P" Cislo="711212" Nazev="nátěr hydroizolační"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34229" Typ="K" Cislo="71147" Nazev="Izolace proti tlakové vodě termoplasty">
+						<ZPOPIS>Provedení izolace proti povrchové a podpovrchové tlakové vodě termoplasty</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34230" Typ="K" Cislo="71149" Nazev="Izolace proti tlakové vodě ostatní">
+						<ZPOPIS>Provedení izolace proti povrchové a podpovrchové tlakové vodě ostatní</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34232" Typ="K" Cislo="71239" Nazev="Povlakové krytiny střech do 10° ostatní">
+						<ZPOPIS>Provedení povlakové krytiny střech o sklonu do 10° ostatní
+
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34381" Typ="P" Cislo="712391" Nazev="textilie"/>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-8576" Typ="C" Cislo="800-713" Nazev="Izolace tepelné">
+					<ZATRIDENI PolozkaZatrideniUID="34239" Typ="K" Cislo="99871" Nazev="Přesun hmot pro izolace tepelné">
+						<ZATRIDENI PolozkaZatrideniUID="34384" Typ="P" Cislo="998712" Nazev="z nákladů ">
+							<ZPOPIS>z nákladů
+							</ZPOPIS>
+							<ZATRIDENI PolozkaZatrideniUID="34385" Typ="P" Cislo="9987121" Nazev=" "/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34234" Typ="K" Cislo="71311" Nazev="Montáž tepelné izolace stropů">
+						<ZPOPIS>Montáž tepelné izolace běžných stavebních konstrukcí stropů rohožemi, pásy, dílci, deskami a bloky
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34323" Typ="P" Cislo="713111" Nazev="Montáž tepelné izolace stropů"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34235" Typ="K" Cislo="71312" Nazev="Montáž tepelné izolace podlah na sucho">
+						<ZPOPIS>Montáž tepelné izolace běžných stavebních konstrukcí podlah rohožemi, pásy, dílci, deskami a bloky
+
+						</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34236" Typ="K" Cislo="71313" Nazev="Montáž tepelné izolace stěn">
+						<ZPOPIS>Montáž tepelné izolace běžných stavebních konstrukcí stěn rohožemi, pásy, dílci, deskami a bloky</ZPOPIS>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34237" Typ="K" Cislo="71314" Nazev="Montáž tepelné izolace střech na plný podklad">
+						<ZPOPIS>Montáž tepelné izolace běžných stavebních konstrukcí střech na plný podklad rohožemi, pásy, dílci, deskami a bloky </ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34324" Typ="P" Cislo="713141" Nazev="Montáž parozábrany na plný podklad"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34238" Typ="K" Cislo="71319" Nazev="Izolace tepelné běžných konstrukcí - doplňky">
+						<ZPOPIS>Izolace tepelné běžných stavebních konstrukcí - doplňky a konstrukční součásti </ZPOPIS>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-9186" Typ="C" Cislo="800-762" Nazev="Konstrukce tesařské">
+					<ZATRIDENI PolozkaZatrideniUID="34241" Typ="K" Cislo="99876" Nazev="Přesun hmot pro konstrukce tesařské">
+						<ZATRIDENI PolozkaZatrideniUID="34388" Typ="P" Cislo="998762" Nazev="z nákladů">
+							<ZATRIDENI PolozkaZatrideniUID="34389" Typ="P" Cislo="9987621" Nazev=""/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34240" Typ="K" Cislo="76234" Nazev="Bednění a laťování">
+						<ZATRIDENI PolozkaZatrideniUID="34386" Typ="P" Cislo="762341" Nazev="montáž ">
+							<ZPOPIS>montáž
+							</ZPOPIS>
+							<ZATRIDENI PolozkaZatrideniUID="34387" Typ="P" Cislo="7623411" Nazev="bednění ">
+								<ZPOPIS>bednění
+								</ZPOPIS>
+							</ZATRIDENI>
+						</ZATRIDENI>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-9261" Typ="C" Cislo="800-764" Nazev="Konstrukce klempířské">
+					<ZATRIDENI PolozkaZatrideniUID="34242" Typ="K" Cislo="998764" Nazev="Přesun hmot pro konstrukce klempířské">
+						<ZATRIDENI PolozkaZatrideniUID="34390" Typ="P" Cislo="9987642" Nazev="z nákladů ">
+							<ZPOPIS>z nákladů
+							</ZPOPIS>
+							<ZATRIDENI PolozkaZatrideniUID="34391" Typ="P" Cislo="99876421" Nazev=""/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34392" Typ="K" Cislo="7640513" Nazev="Lemování z titanzinkového plechu">
+						<ZATRIDENI PolozkaZatrideniUID="34393" Typ="P" Cislo="76405131" Nazev="výroba a montáž lemování zdí ">
+							<ZPOPIS>výroba a montáž lemování zdí
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34394" Typ="K" Cislo="7640521" Nazev="Oplechování parapetů z titanzinkového plechu">
+						<ZATRIDENI PolozkaZatrideniUID="34395" Typ="P" Cislo="76405211" Nazev="výroba a montáž včetně rohů ">
+							<ZPOPIS>výroba a montáž včetně rohů
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34396" Typ="K" Cislo="7640523" Nazev="Oplechování zdí a nadezdívek z titanzinkového plechu">
+						<ZATRIDENI PolozkaZatrideniUID="34397" Typ="P" Cislo="76405231" Nazev="výroba a montáž včetně rohů  ">
+							<ZPOPIS>výroba a montáž včetně rohů 
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-9447" Typ="C" Cislo="800-766" Nazev="Konstrukce truhlářské">
+					<ZATRIDENI PolozkaZatrideniUID="34246" Typ="K" Cislo="998766" Nazev="Přesun hmot pro konstrukce truhlářské">
+						<ZATRIDENI PolozkaZatrideniUID="34400" Typ="P" Cislo="9987662" Nazev="z nákladů">
+							<ZATRIDENI PolozkaZatrideniUID="34401" Typ="P" Cislo="99876621" Nazev="výpočet z hmotnosti"/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34243" Typ="K" Cislo="76612" Nazev="Montáž stěn kompletizovaných"/>
+					<ZATRIDENI PolozkaZatrideniUID="34244" Typ="K" Cislo="76666" Nazev="Montáž dveřních křídel kompletizovaných"/>
+					<ZATRIDENI PolozkaZatrideniUID="34245" Typ="K" Cislo="76669" Nazev="Ostatní">
+						<ZATRIDENI PolozkaZatrideniUID="34399" Typ="P" Cislo="7666917" Nazev="montáž prahů dveří ">
+							<ZPOPIS>montáž prahů dveří
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34315" Typ="K" Cislo="76667" Nazev="Montáž obložkové zárubně a dveřního křídla"/>
+					<ZATRIDENI PolozkaZatrideniUID="34398" Typ="K" Cislo="766624" Nazev="Montáž otvorových prvků plastových"/>
+					<ZATRIDENI PolozkaZatrideniUID="34419" Typ="K" Cislo="76644" Nazev="Montáž dřevěných podlah teras">
+						<ZPOPIS>položení podkladního roštu do štěrkového lože, nebo na rovný pevný povrch, položení palubek a upevnění nerezovými šrouby skrytým spojem. Bez povrchové úpravy nátěrem.</ZPOPIS>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-9479" Typ="C" Cislo="800-767" Nazev="Kovové stavební doplňkové konstrukce">
+					<ZATRIDENI PolozkaZatrideniUID="34247" Typ="K" Cislo="76713" Nazev="Montáž stěn a příček z plechu"/>
+					<ZATRIDENI PolozkaZatrideniUID="34248" Typ="K" Cislo="76759" Nazev="Montáž podlahových konstrukcí"/>
+					<ZATRIDENI PolozkaZatrideniUID="34249" Typ="K" Cislo="76771" Nazev="Montáž výkladců zapuštěných pevných"/>
+					<ZATRIDENI PolozkaZatrideniUID="34250" Typ="K" Cislo="76799" Nazev="Montáž ostatních atypických kovov. doplňků staveb"/>
+					<ZATRIDENI PolozkaZatrideniUID="34402" Typ="K" Cislo="998767" Nazev="Přesun hmot pro kovové stavební doplňk. konstrukce">
+						<ZATRIDENI PolozkaZatrideniUID="34403" Typ="P" Cislo="9987672" Nazev="z nákladů ">
+							<ZPOPIS>z nákladů
+							</ZPOPIS>
+							<ZATRIDENI PolozkaZatrideniUID="34404" Typ="P" Cislo="99876721" Nazev="výpočet z hmotnosti ">
+								<ZPOPIS>výpočet z hmotnosti
+								</ZPOPIS>
+							</ZATRIDENI>
+						</ZATRIDENI>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-9583" Typ="C" Cislo="800-771" Nazev="Podlahy z dlaždic a obklady keramické">
+					<ZATRIDENI PolozkaZatrideniUID="34255" Typ="K" Cislo="998771" Nazev="Přesun hmot pro podlahy z dlaždic">
+						<ZATRIDENI PolozkaZatrideniUID="34405" Typ="P" Cislo="9987712" Nazev="z nákladů">
+							<ZATRIDENI PolozkaZatrideniUID="34406" Typ="P" Cislo="99877121" Nazev=""/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34257" Typ="K" Cislo="99878" Nazev="Přesun hmot pro obklady keramické">
+						<ZATRIDENI PolozkaZatrideniUID="34407" Typ="P" Cislo="998782" Nazev="z nákladů">
+							<ZATRIDENI PolozkaZatrideniUID="34408" Typ="P" Cislo="9987821" Nazev=" "/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34251" Typ="K" Cislo="771479" Nazev="Řezání dlaždic"/>
+					<ZATRIDENI PolozkaZatrideniUID="34252" Typ="K" Cislo="771575" Nazev="Montáž podlah z dlaždic keram. kladených do tmele"/>
+					<ZATRIDENI PolozkaZatrideniUID="34253" Typ="K" Cislo="771578" Nazev="Zvláštní úpravy spár"/>
+					<ZATRIDENI PolozkaZatrideniUID="34254" Typ="K" Cislo="771579" Nazev="Příplatky k položkám montáže podlah keramických"/>
+					<ZATRIDENI PolozkaZatrideniUID="34256" Typ="K" Cislo="78141" Nazev="Montáž obkladů vnitřních z obkládaček pórovinových">
+						<ZATRIDENI PolozkaZatrideniUID="34322" Typ="P" Cislo="781419" Nazev="příplatky k položkám montáže obkladů vnitřních z obkladaček pórovinových"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34258" Typ="K" Cislo="77111" Nazev="Doplňkové práce při kladení dlažeb"/>
+					<ZATRIDENI PolozkaZatrideniUID="34259" Typ="K" Cislo="78111" Nazev="Doplňkové práce při provádění obkladů"/>
+					<ZATRIDENI PolozkaZatrideniUID="34260" Typ="K" Cislo="78123" Nazev="Obkládání stěn vnitřních z obkladaček keramických">
+						<ZPOPIS>Obkládání stěn vnitřních z obkladaček keramických, hutných a polohutných, do tmele, kladených rovnoběžně s podlahou.</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34409" Typ="P" Cislo="781235" Nazev="do tmele"/>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-9699" Typ="C" Cislo="800-775" Nazev="Podlahy vlysové, parketové a povlakové">
+					<ZATRIDENI PolozkaZatrideniUID="34262" Typ="K" Cislo="998775" Nazev="Přesun hmot pro podlahy vlysové a parketové">
+						<ZATRIDENI PolozkaZatrideniUID="34411" Typ="P" Cislo="9987752" Nazev="z nákladů ">
+							<ZPOPIS>z nákladů
+							</ZPOPIS>
+							<ZATRIDENI PolozkaZatrideniUID="34412" Typ="P" Cislo="99877521" Nazev=""/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34265" Typ="K" Cislo="998776" Nazev="Přesun hmot pro podlahy povlakové">
+						<ZATRIDENI PolozkaZatrideniUID="34414" Typ="P" Cislo="9987762" Nazev="z nákladů ">
+							<ZPOPIS>z nákladů
+							</ZPOPIS>
+							<ZATRIDENI PolozkaZatrideniUID="34415" Typ="P" Cislo="99877621" Nazev=" "/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34261" Typ="K" Cislo="77553" Nazev="Podlahy parketové z tabulí lepených">
+						<ZATRIDENI PolozkaZatrideniUID="34410" Typ="P" Cislo="775532" Nazev="montáž - parkety ve specifikaci"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34263" Typ="K" Cislo="77643" Nazev="Montáž, lepení podlah. soklíků z kobercových pásů"/>
+					<ZATRIDENI PolozkaZatrideniUID="34264" Typ="K" Cislo="77657" Nazev="Položení povlakových podlah textilních">
+						<ZPOPIS>všívaných a vpichovaných
+						</ZPOPIS>
+						<ZATRIDENI PolozkaZatrideniUID="34413" Typ="P" Cislo="776572" Nazev="montáž - podlahová krytina textilní ve specifikaci ">
+							<ZPOPIS>montáž - podlahová krytina textilní ve specifikaci
+							</ZPOPIS>
+						</ZATRIDENI>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-9764" Typ="C" Cislo="800-783" Nazev="Nátěry">
+					<ZATRIDENI PolozkaZatrideniUID="34266" Typ="K" Cislo="78322" Nazev="Nátěry kov.stavebních doplňk.konstrukcí syntetické"/>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-9838" Typ="C" Cislo="800-784" Nazev="Malby - tapety">
+					<ZATRIDENI PolozkaZatrideniUID="34267" Typ="K" Cislo="78441" Nazev="Příprava povrchu">
+						<ZATRIDENI PolozkaZatrideniUID="34321" Typ="P" Cislo="784412" Nazev="Penetrace (napouštění) podkladu"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34268" Typ="K" Cislo="78445" Nazev="Malby z malířských směsí se začištěním"/>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-9886" Typ="C" Cislo="800-787" Nazev="Zasklívání">
+					<ZATRIDENI PolozkaZatrideniUID="34269" Typ="K" Cislo="998787" Nazev="Přesun hmot pro zasklívání">
+						<ZATRIDENI PolozkaZatrideniUID="34416" Typ="P" Cislo="9987872" Nazev="z nákladů ">
+							<ZPOPIS>z nákladů
+							</ZPOPIS>
+							<ZATRIDENI PolozkaZatrideniUID="34417" Typ="P" Cislo="99878721" Nazev=" "/>
+						</ZATRIDENI>
+					</ZATRIDENI>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-811" Typ="C" Cislo="800-2" Nazev="Ceník 800-2, část ">
+					<ZATRIDENI PolozkaZatrideniUID="34218" Typ="K" Cislo="289971" Nazev="Zřízení vrstvy z geotextilie na upraveném povrchu"/>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-2573" Typ="C" Cislo="801-1" Nazev="Ceník 801-1, část ">
+					<ZATRIDENI PolozkaZatrideniUID="34219" Typ="K" Cislo="3422661" Nazev="Obklad stěn sádrokartonem P 111, s izolací">
+						<ZATRIDENI PolozkaZatrideniUID="34325" Typ="P" Cislo="342266112" Nazev="předsazená stěna (obklad) P 111 ze sádrokartonových desek na dřevěnou konstrukci s vloženou tepelnou izolací Orsil tloušťky 5 cm"/>
+					</ZATRIDENI>
+					<ZATRIDENI PolozkaZatrideniUID="34220" Typ="K" Cislo="34294" Nazev="Kotvení příček ke konstrukcím"/>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-3695" Typ="C" Cislo="821-1" Nazev="Mosty">
+					<ZATRIDENI PolozkaZatrideniUID="34221" Typ="K" Cislo="62045" Nazev="Omítka cementová stěn a podhledů"/>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-4528" Typ="C" Cislo="825-3" Nazev="Objekty podzemní-podzemní stanice a tunely metra">
+					<ZATRIDENI PolozkaZatrideniUID="34222" Typ="K" Cislo="162.07" Nazev="Vodorovné přemístění výkopku"/>
+				</ZATRIDENI>
+				<ZATRIDENI PolozkaZatrideniUID="-5188" Typ="C" Cislo="832-1" Nazev="Hráze a úpravy na tocích-úpravy toků a kanály">
+					<ZATRIDENI PolozkaZatrideniUID="34223" Typ="K" Cislo="8" Nazev="Drenáže a trubky pro měřicí zařízení"/>
+				</ZATRIDENI>
+				<DIL Cislo="1" Nazev="Zemní práce" Typ="HSV">
+					<POLOZKA UID="P1076077" PoradoveCislo="1" Cislo="121101102R00" Typ="P" Nazev="Sejmutí ornice s přemístěním přes 50 do 100 m" MJ="m3" Mnozstvi="124.80000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34224" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076080" PoradoveCislo="4" Cislo="132301109R00" Typ="P" Nazev="Příplatek za lepivost - hloubení rýh 60 cm v hor.4" MJ="m3" Mnozstvi="8.78900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34373" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076078" PoradoveCislo="2" Cislo="132201101R00" Typ="P" Nazev="Hloubení rýh šířky do 60 cm v hor.3 do 100 m3" MJ="m3" Mnozstvi="16.70400" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34319" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076079" PoradoveCislo="3" Cislo="132201201R00" Typ="P" Nazev="Hloubení rýh šířky do 200 cm v hor.3 do 100 m3" MJ="m3" Mnozstvi="0.87300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34375" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076082" PoradoveCislo="6" Cislo="167101102R00" Typ="P" Nazev="Nakládání výkopku z hor.1-4 v množství nad 100 m3" MJ="m3" Mnozstvi="17.57700" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34376" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076083" PoradoveCislo="7" Cislo="174101101R00" Typ="P" Nazev="Zásyp jam, rýh, šachet se zhutněním" MJ="m3" Mnozstvi="93.36200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34320" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076084" PoradoveCislo="8" Cislo="174101102R00" Typ="P" Nazev="Zásyp v uzavřených prostorách se zhutěním" MJ="m3" Mnozstvi="30.23000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="277.00" Cena="8373.71" PolozkaZatrideniUID="34320" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Zásyp ruční se zhutněním</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076081" PoradoveCislo="5" Cislo="162207111R00" Typ="P" Nazev="Vodorovné přemístění výkopku hor. 1-4 do 50 m" MJ="m3" Mnozstvi="35.15400" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34222" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="27" Nazev="Základy" Typ="HSV">
+					<POLOZKA UID="P1076090" PoradoveCislo="11" Cislo="273313621R00" Typ="P" Nazev="Beton základových desek prostý C 20/25 (B 25)" MJ="m3" Mnozstvi="17.44500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="2875.00" Cena="50154.38" PolozkaZatrideniUID="34333" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076091" PoradoveCislo="12" Cislo="273321321R00" Typ="P" Nazev="Železobeton základových desek C 20/25 (B 25)" MJ="m3" Mnozstvi="42.43600" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="2875.00" Cena="122003.50" PolozkaZatrideniUID="34271" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076092" PoradoveCislo="13" Cislo="273351215R00" Typ="P" Nazev="Bednění stěn základových desek - zřízení" MJ="m2" Mnozstvi="17.93100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="517.00" Cena="9270.33" PolozkaZatrideniUID="34272" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076093" PoradoveCislo="14" Cislo="273351216R00" Typ="P" Nazev="Bednění stěn základových desek - odstranění" MJ="m2" Mnozstvi="17.93100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34272" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076094" PoradoveCislo="15" Cislo="273361821R00" Typ="P" Nazev="Výztuž základových desek z betonářské ocelí 10505" MJ="t" Mnozstvi="3.81900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="28440.00" Cena="108612.36" PolozkaZatrideniUID="34334" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076095" PoradoveCislo="16" Cislo="273361921RT5" Typ="P" Nazev="Výztuž základových desek ze svařovaných sítí svařovanou sítí - drát 6,0  oka 150/150" MJ="t" Mnozstvi="0.96800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="32050.00" Cena="31024.40" PolozkaZatrideniUID="34335" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Výztuž základových desek ze svařovaných sítí, svařovanou sítí - drát 6,0  oka 150/150</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076096" PoradoveCislo="17" Cislo="274313621R00" Typ="P" Nazev="Beton základových pasů prostý C 20/25 (B 25)" MJ="m3" Mnozstvi="17.57700" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="2875.00" Cena="50533.88" PolozkaZatrideniUID="34336" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076097" PoradoveCislo="18" Cislo="274351215R00" Typ="P" Nazev="Bednění stěn základových pasů - zřízení" MJ="m2" Mnozstvi="16.06200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="382.00" Cena="6135.68" PolozkaZatrideniUID="34275" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076098" PoradoveCislo="19" Cislo="274351216R00" Typ="P" Nazev="Bednění stěn základových pasů - odstranění" MJ="m2" Mnozstvi="16.06200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34275" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="1" Nazev="Zemní práce" Typ="HSV">
+					<POLOZKA UID="P1076088" PoradoveCislo="10" Cislo="10371500R" Typ="M" Nazev="Substrát zahradnický B  VL" MJ="m3" Mnozstvi="19.62600" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="769.00" Cena="15092.39" PolozkaZatrideniUID="34442" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076087" PoradoveCislo="9" Cislo="00572410R" Typ="M" Nazev="Směs travní parková II. mírná zátěž PROFI" MJ="kg" Mnozstvi="398.09300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="100.50" Cena="40008.35" PolozkaZatrideniUID="34443" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="28" Nazev="Zpevňování hornin a konstrukcí" Typ="HSV">
+					<POLOZKA UID="P1076099" PoradoveCislo="20" Cislo="289971211R00" Typ="P" Nazev="Zřízení vrstvy z geotextilie sklon do 1:5 š.do 3 m" MJ="m2" Mnozstvi="63.90000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="11.80" Cena="754.02" PolozkaZatrideniUID="34218" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076100" PoradoveCislo="21" Cislo="67390520R" Typ="M" Nazev="Textilie jutařská netkaná NETEX A PP/110 -110 g/m2" MJ="m2" Mnozstvi="73.48500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="11.10" Cena="815.68" PolozkaZatrideniUID="34428" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="31" Nazev="Zdi podpěrné a volné" Typ="HSV">
+					<POLOZKA UID="P1076101" PoradoveCislo="22" Cislo="311101213R00" Typ="P" Nazev="Vytvoření prostupů pl. do 0,10 m2 v nosných zdech" MJ="m" Mnozstvi="2.40000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34276" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076104" PoradoveCislo="25" Cislo="311238115R00" Typ="P" Nazev="Zdivo POROTHERM 30 P+D P10 na MVC 5, tl. 300 mm" MJ="m2" Mnozstvi="65.86900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="1113.00" Cena="73312.20" PolozkaZatrideniUID="34277" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076102" PoradoveCislo="23" Cislo="311231146R00" Typ="P" Nazev="Zdivo nosné cihelné z CP 25 P15M na MC 10" MJ="m3" Mnozstvi="0.33300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="5435.00" Cena="1809.86" PolozkaZatrideniUID="34339" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076103" PoradoveCislo="24" Cislo="311231149RT2" Typ="P" Nazev="Zdivo nosné cihelné z CP 25 P15M na MC 15 tloušťka zdiva 25 cm" MJ="m3" Mnozstvi="2.33600" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="5545.00" Cena="12953.12" PolozkaZatrideniUID="34339" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Zdivo nosné cihelné z CP 25 P15M na MC 15, tloušťka zdiva 25 cm</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076105" PoradoveCislo="26" Cislo="311238131R00" Typ="P" Nazev="Zdivo POROTHERM 25 AKU P+D P10 na MVC 5, tl.250 mm" MJ="m2" Mnozstvi="53.23800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="1377.00" Cena="73308.73" PolozkaZatrideniUID="34337" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076106" PoradoveCislo="27" Cislo="311321411R00" Typ="P" Nazev="Železobeton nadzákladových zdí C 25/30  (B 30)" MJ="m3" Mnozstvi="33.21800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="3215.00" Cena="106795.87" PolozkaZatrideniUID="34278" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076107" PoradoveCislo="28" Cislo="311351105R00" Typ="P" Nazev="Bednění nadzákladových zdí oboustranné - zřízení" MJ="m2" Mnozstvi="294.28800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="388.00" Cena="114183.74" PolozkaZatrideniUID="34340" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076108" PoradoveCislo="29" Cislo="311351106R00" Typ="P" Nazev="Bednění nadzákladových zdí oboustranné-odstranění" MJ="m2" Mnozstvi="294.28800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34340" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076109" PoradoveCislo="30" Cislo="311361821R00" Typ="P" Nazev="Výztuž nadzákladových zdí z betonářské ocelí 10505" MJ="t" Mnozstvi="2.99000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="28430.00" Cena="85005.70" PolozkaZatrideniUID="34341" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076111" PoradoveCislo="32" Cislo="314253105R00" Typ="P" Nazev="Komín Schiedel UNI***jednoprůduch., pata, DN 20 cm" MJ="kus" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="17770.00" Cena="35540.00" PolozkaZatrideniUID="34316" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076112" PoradoveCislo="33" Cislo="314253205R00" Typ="P" Nazev="Komín Schiedel UNI***jednoprůduch. střed, DN 20 cm" MJ="m" Mnozstvi="5.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="3455.00" Cena="17275.00" PolozkaZatrideniUID="34316" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076113" PoradoveCislo="34" Cislo="314253365R00" Typ="P" Nazev="Komín UNI*** jednoprůduch., plášť 200 cm, DN 20 cm" MJ="kus" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="22060.00" Cena="44120.00" PolozkaZatrideniUID="34316" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076114" PoradoveCislo="35" Cislo="314253515R00" Typ="P" Nazev="Komín. hlava UNI FINAL výška 1,12 m, pro DN 20" MJ="kus" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="14000.00" Cena="28000.00" PolozkaZatrideniUID="34316" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076115" PoradoveCislo="36" Cislo="314253605R00" Typ="P" Nazev="Komín UNI***,jednoprůduchový,obezdívka, DN 20 cm" MJ="m" Mnozstvi="5.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="4445.00" Cena="22225.00" PolozkaZatrideniUID="34316" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076110" PoradoveCislo="31" Cislo="314246041R00" Typ="P" Nazev="Statická souprava komínu Schiedel 2x3 m" MJ="kus" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="1131.00" Cena="2262.00" PolozkaZatrideniUID="34317" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076116" PoradoveCislo="37" Cislo="317168111R00" Typ="P" Nazev="Překlad POROTHERM plochý 115x71x1000 mm" MJ="kus" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="205.00" Cena="205.00" PolozkaZatrideniUID="34327" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076117" PoradoveCislo="38" Cislo="317168112R00" Typ="P" Nazev="Překlad POROTHERM plochý 115x71x1250 mm" MJ="kus" Mnozstvi="11.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="280.00" Cena="3080.00" PolozkaZatrideniUID="34327" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076118" PoradoveCislo="39" Cislo="317321411R00" Typ="P" Nazev="Beton překladů železový  C 25/30  (B 30)" MJ="m3" Mnozstvi="2.37600" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="3235.00" Cena="7686.36" PolozkaZatrideniUID="34281" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076119" PoradoveCislo="40" Cislo="317351107R00" Typ="P" Nazev="Bednění překladů - zřízení" MJ="m2" Mnozstvi="14.92100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="479.00" Cena="7147.16" PolozkaZatrideniUID="34342" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076120" PoradoveCislo="41" Cislo="317351108R00" Typ="P" Nazev="Bednění překladů - odstranění" MJ="m2" Mnozstvi="14.92100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34342" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076121" PoradoveCislo="42" Cislo="317361821R00" Typ="P" Nazev="Výztuž překladů a říms z betonářské ocelí 10505" MJ="t" Mnozstvi="0.28500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="27530.00" Cena="7846.05" PolozkaZatrideniUID="34343" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076122" PoradoveCislo="43" Cislo="317941121R00" Typ="P" Nazev="Osazení ocelových válcovaných nosníků do č.12" MJ="t" Mnozstvi="0.03300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="7960.00" Cena="262.68" PolozkaZatrideniUID="34284" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="34" Nazev="Stěny a příčky" Typ="HSV">
+					<POLOZKA UID="P1076134" PoradoveCislo="55" Cislo="34PC01" Typ="M" Nazev="Deska Cembonit tl.8mm, 1200x800, včetně uchycení k Cetris desce (před krb)" MJ="m2" Mnozstvi="0.96000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="1" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="31" Nazev="Zdi podpěrné a volné" Typ="HSV">
+					<POLOZKA UID="P1076123" PoradoveCislo="44" Cislo="13331752R" Typ="M" Nazev="Úhelník rovnoramenný L jakost 11375   65x 65x 8 mm" MJ="T" Mnozstvi="0.03300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="23030.00" Cena="759.99" PolozkaZatrideniUID="34440" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="34" Nazev="Stěny a příčky" Typ="HSV">
+					<POLOZKA UID="P1076128" PoradoveCislo="49" Cislo="342261211RT1" Typ="P" Nazev="Příčka sádrokarton. ocel.kce, 2x oplášť. tl.100 mm desky standard tl. 12,5 mm, izolace Orsil tl. 5, cm" MJ="m2" Mnozstvi="8.42000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="871.00" Cena="7333.82" PolozkaZatrideniUID="34347" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Příčka sádrokarton. ocel.kce, 2x oplášť. tl.100 mm, desky standard tl. 12,5 mm, izolace Orsil tl. 5 cm</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076129" PoradoveCislo="50" Cislo="342261211RT3" Typ="P" Nazev="Příčka sádrokarton. ocel.kce, 2x oplášť. tl.100 mm desky standard impreg. tl. 12,5 mm, Orsil 5 cm" MJ="m2" Mnozstvi="17.06800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="1016.00" Cena="17341.09" PolozkaZatrideniUID="34347" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Příčka sádrokarton. ocel.kce, 2x oplášť. tl.100 mm, desky standard impreg. tl. 12,5 mm, Orsil 5 cm</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076126" PoradoveCislo="47" Cislo="342248109R00" Typ="P" Nazev="Příčky POROTHERM 8 P+D na MVC 5, tl. 80 mm" MJ="m2" Mnozstvi="29.46000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="447.50" Cena="13183.35" PolozkaZatrideniUID="34328" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076127" PoradoveCislo="48" Cislo="342248112R00" Typ="P" Nazev="Příčky POROTHERM 11,5 P+D na MVC 5, tl. 115 mm" MJ="m2" Mnozstvi="95.20400" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="557.00" Cena="53028.63" PolozkaZatrideniUID="34328" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076124" PoradoveCislo="45" Cislo="342241161R00" Typ="P" Nazev="Příčky z cihel plných CP29  tl. 65 mm" MJ="m2" Mnozstvi="0.82500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="401.00" Cena="330.83" PolozkaZatrideniUID="34345" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076125" PoradoveCislo="46" Cislo="342241162R00" Typ="P" Nazev="Příčky z cihel plných CP29  tl. 140 mm" MJ="m2" Mnozstvi="16.41700" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="669.00" Cena="10982.97" PolozkaZatrideniUID="34345" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076133" PoradoveCislo="54" Cislo="346244382R00" Typ="P" Nazev="Plentování ocelových nosníků výšky 20 - 30 cm" MJ="m2" Mnozstvi="19.30500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="619.00" Cena="11949.80" PolozkaZatrideniUID="34286" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076130" PoradoveCislo="51" Cislo="342264051RT2" Typ="P" Nazev="Podhled sádrokartonový na zavěšenou ocel. konstr. desky protipožární tl. 12,5 mm, bez izolace" MJ="m2" Mnozstvi="14.09300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="521.00" Cena="7342.45" PolozkaZatrideniUID="34354" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Podhled sádrokartonový na zavěšenou ocel. konstr., desky protipožární tl. 12,5 mm, bez izolace</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076131" PoradoveCislo="52" Cislo="342264051RT3" Typ="P" Nazev="Podhled sádrokartonový na zavěšenou ocel. konstr. desky standard impreg. tl. 12,5 mm, bez izolace" MJ="m2" Mnozstvi="4.60000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="544.00" Cena="2502.40" PolozkaZatrideniUID="34354" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Podhled sádrokartonový na zavěšenou ocel. konstr., desky standard impreg. tl. 12,5 mm, bez izolace</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076135" PoradoveCislo="56" Cislo="342266112R00" Typ="P" Nazev="Obklad stěn sádrokartonem na dřevěnou konstrukci" MJ="m2" Mnozstvi="41.32100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="415.50" Cena="17168.88" PolozkaZatrideniUID="34325" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076132" PoradoveCislo="53" Cislo="342948112R00" Typ="P" Nazev="Ukotvení příček k beton.kcím přistřelenými kotvami" MJ="m" Mnozstvi="46.08000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="100.00" Cena="4608.00" PolozkaZatrideniUID="34220" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="371" Nazev="Krby" Typ="HSV">
+					<POLOZKA UID="P1076138" PoradoveCislo="59" Cislo="371PC01" Typ="P" Nazev="Krb vnitřní, včetně příslušenství dle výběru investora" MJ="kpl" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076139" PoradoveCislo="60" Cislo="371PC02" Typ="P" Nazev="Krb vnější, včetně příslušenství dle výběru investora" MJ="kpl" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="34" Nazev="Stěny a příčky" Typ="HSV">
+					<POLOZKA UID="P1076137" PoradoveCislo="58" Cislo="59590605R" Typ="M" Nazev="Deska fasádní CETRIS FINISH tl. 18 mm" MJ="m2" Mnozstvi="0.96000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="825.00" Cena="792.00" PolozkaZatrideniUID="34438" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076136" PoradoveCislo="57" Cislo="59597031R" Typ="M" Nazev="Deska FERMACELL FC 15 2000x1250x15 mm" MJ="m2" Mnozstvi="42.56100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="229.00" Cena="9746.47" PolozkaZatrideniUID="34439" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="41" Nazev="Stropy a stropní konstrukce" Typ="HSV">
+					<POLOZKA UID="P1076140" PoradoveCislo="61" Cislo="411321414R00" Typ="P" Nazev="Stropy deskové ze železobetonu C 25/30  (B 30)" MJ="m3" Mnozstvi="0.28200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="3140.00" Cena="885.48" PolozkaZatrideniUID="34348" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076141" PoradoveCislo="62" Cislo="411321515R00" Typ="P" Nazev="Stropy deskové ze železobetonu C 30/37  (B 37)" MJ="m3" Mnozstvi="83.15700" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="3205.00" Cena="266518.19" PolozkaZatrideniUID="34348" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076142" PoradoveCislo="63" Cislo="411351101R00" Typ="P" Nazev="Bednění stropů deskových, bednění vlastní -zřízení" MJ="m2" Mnozstvi="369.38800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="333.00" Cena="123006.20" PolozkaZatrideniUID="34349" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076143" PoradoveCislo="64" Cislo="411351102R00" Typ="P" Nazev="Bednění stropů deskových, vlastní - odstranění" MJ="m2" Mnozstvi="369.38800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34349" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076144" PoradoveCislo="65" Cislo="411354175R00" Typ="P" Nazev="Podpěrná konstr. stropů do 20 kPa - zřízení" MJ="m2" Mnozstvi="367.40300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="218.00" Cena="80093.85" PolozkaZatrideniUID="34289" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076145" PoradoveCislo="66" Cislo="411354186R00" Typ="P" Nazev="Příplatek k podpěr. konstr. stropů 20 kPa - odstr." MJ="m2" Mnozstvi="367.40300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34350" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076146" PoradoveCislo="67" Cislo="411361821R00" Typ="P" Nazev="Výztuž stropů z betonářské oceli 10505" MJ="t" Mnozstvi="7.48400" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="29210.00" Cena="218607.64" PolozkaZatrideniUID="34351" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076147" PoradoveCislo="68" Cislo="411361921RT9" Typ="P" Nazev="Výztuž stropů svařovanou sítí z drátů tažených svařovaná síť - drát 8,0 mm, oka 150 / 150 mm" MJ="t" Mnozstvi="0.01600" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="31860.00" Cena="509.76" PolozkaZatrideniUID="34352" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Výztuž stropů svařovanou sítí z drátů tažených, svařovaná síť - drát 8,0 mm, oka 150 / 150 mm</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076148" PoradoveCislo="69" Cislo="411361921RT9" Typ="P" Nazev="Výztuž stropů svařovanou sítí z drátů tažených svařovaná síť - drát 8,0 mm, oka 150 / 150 mm" MJ="t" Mnozstvi="1.39800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="31860.00" Cena="44540.28" PolozkaZatrideniUID="34352" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Výztuž stropů svařovanou sítí z drátů tažených, svařovaná síť - drát 8,0 mm, oka 150 / 150 mm</PPOPIS>
+					</POLOZKA>
+				</DIL>
+				<DIL Cislo="45" Nazev="Podkladní a vedlejší konstrukce" Typ="HSV">
+					<POLOZKA UID="P1076149" PoradoveCislo="70" Cislo="451541111R00" Typ="P" Nazev="Lože pod potrubí ze štěrkodrtě 0 - 63 mm" MJ="m3" Mnozstvi="40.05100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="954.00" Cena="38208.65" PolozkaZatrideniUID="34314" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="56" Nazev="Podkladní vrstvy komunikací a zpevněných ploch" Typ="HSV">
+					<POLOZKA UID="P1076150" PoradoveCislo="71" Cislo="561121112R00" Typ="P" Nazev="Podklad z mechanicky zpevněné zeminy tl. 20 cm" MJ="m2" Mnozstvi="48.01500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34309" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076151" PoradoveCislo="72" Cislo="564831112R00" Typ="P" Nazev="Podklad ze štěrkodrti po zhutnění tloušťky 11 cm" MJ="m2" Mnozstvi="48.22000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="103.50" Cena="4990.77" PolozkaZatrideniUID="34310" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076152" PoradoveCislo="73" Cislo="564851111R00" Typ="P" Nazev="Podklad ze štěrkodrti po zhutnění tloušťky 15 cm" MJ="m2" Mnozstvi="48.22000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="137.00" Cena="6606.14" PolozkaZatrideniUID="34310" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076153" PoradoveCislo="74" Cislo="564851113R00" Typ="P" Nazev="Podklad ze štěrkodrti po zhutnění tloušťky 17 cm" MJ="m2" Mnozstvi="48.22000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="153.00" Cena="7377.66" PolozkaZatrideniUID="34310" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076154" PoradoveCislo="75" Cislo="564871111R00" Typ="P" Nazev="Podklad ze štěrkodrti po zhutnění tloušťky 25 cm" MJ="m2" Mnozstvi="48.22000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="217.50" Cena="10487.85" PolozkaZatrideniUID="34310" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="59" Nazev="Dlažby a předlažby komunikací" Typ="HSV">
+					<POLOZKA UID="P1076155" PoradoveCislo="76" Cislo="596811111R00" Typ="P" Nazev="Kladení dlaždic kom.pro pěší, lože z kameniva těž." MJ="m2" Mnozstvi="10.26000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="129.00" Cena="1323.54" PolozkaZatrideniUID="34311" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076156" PoradoveCislo="77" Cislo="596811111R00" Typ="P" Nazev="Kladení dlaždic kom.pro pěší, lože z kameniva těž." MJ="m2" Mnozstvi="8.66200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="129.00" Cena="1117.40" PolozkaZatrideniUID="34311" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076157" PoradoveCislo="78" Cislo="59245315R" Typ="M" Nazev="Dlaždice betonová  HBB 30x30x5,5 cm šedá" MJ="m2" Mnozstvi="10.77300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="305.50" Cena="3291.15" PolozkaZatrideniUID="34447" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076158" PoradoveCislo="79" Cislo="59245329R" Typ="M" Nazev="Dlaždice betonová HBB 40x40x5 cm BEGA šedá" MJ="m2" Mnozstvi="9.28700" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="340.00" Cena="3157.58" PolozkaZatrideniUID="34447" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="61" Nazev="Upravy povrchů vnitřní" Typ="HSV">
+					<POLOZKA UID="P1076159" PoradoveCislo="80" Cislo="610991111R00" Typ="P" Nazev="Zakrývání výplní vnitřních otvorů" MJ="m2" Mnozstvi="53.59200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="34.10" Cena="1827.49" PolozkaZatrideniUID="34291" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076160" PoradoveCislo="81" Cislo="611472111R00" Typ="P" Nazev="Omítka stropu klasická, se štukem ze suché směsi" MJ="m2" Mnozstvi="152.33500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="418.00" Cena="63676.03" PolozkaZatrideniUID="34292" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076161" PoradoveCislo="82" Cislo="611481113R00" Typ="P" Nazev="Potažení stropů sklotextilní výztužnou síťkou" MJ="m2" Mnozstvi="152.33500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="141.00" Cena="21479.24" PolozkaZatrideniUID="34355" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076162" PoradoveCislo="83" Cislo="611481115R00" Typ="P" Nazev="Potažení nosníku rabicovým pletivem, přichycení" MJ="m2" Mnozstvi="19.30500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="95.10" Cena="1835.91" PolozkaZatrideniUID="34356" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Potažení stropů rabicovým pletivem, přichycení</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076163" PoradoveCislo="84" Cislo="612472181R00" Typ="P" Nazev="Omítka stěn, jádro míchané, štuk ze suché směsi" MJ="m2" Mnozstvi="293.37100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="280.00" Cena="82143.88" PolozkaZatrideniUID="34294" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076164" PoradoveCislo="85" Cislo="612473181R00" Typ="P" Nazev="Omítka vnitřního zdiva ze suché směsi, hladká" MJ="m2" Mnozstvi="53.06000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="198.00" Cena="10505.88" PolozkaZatrideniUID="34295" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076165" PoradoveCislo="86" Cislo="612473186R00" Typ="P" Nazev="Příplatek za zabudované rohovníky" MJ="m" Mnozstvi="49.33000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="59.60" Cena="2940.07" PolozkaZatrideniUID="34357" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076166" PoradoveCislo="87" Cislo="612481113R00" Typ="P" Nazev="Potažení vnitř. stěn sklotex. pletivem s vypnutím" MJ="m2" Mnozstvi="293.37100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="109.00" Cena="31977.44" PolozkaZatrideniUID="34358" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="62" Nazev="Úpravy povrchů vnější" Typ="HSV">
+					<POLOZKA UID="P1076173" PoradoveCislo="94" Cislo="622421306RZ1" Typ="P" Nazev="Zateplovací systém Baumit EPS - F tl. 100 mm bez omítky - jen zatepl. systém a stěrka" MJ="m2" Mnozstvi="141.51300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="451.00" Cena="63822.36" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Zateplovací systém Baumit EPS - F tl. 100 mm, bez omítky - jen zatepl. systém a stěrka</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076178" PoradoveCislo="99" Cislo="622421301R/1" Typ="P" Nazev="Zateplovací systém Baumit EPS - F tl. 20 mm se silikonovou omítkou 2,5 kg/m2" MJ="m2" Mnozstvi="12.50500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076168" PoradoveCislo="89" Cislo="620991121R00" Typ="P" Nazev="Zakrývání výplní vnějších otvorů z lešení" MJ="m2" Mnozstvi="53.59200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="34.20" Cena="1832.85" PolozkaZatrideniUID="34359" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076169" PoradoveCislo="90" Cislo="621451136R00" Typ="P" Nazev="Omítka vnější podhledů, MC, hladká, složitost 3" MJ="m2" Mnozstvi="58.83500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="538.00" Cena="31653.23" PolozkaZatrideniUID="34361" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076170" PoradoveCislo="91" Cislo="621481113R00" Typ="P" Nazev="Potaženi vnějších podhl. sklotex. pletivo, vypnutí" MJ="m2" Mnozstvi="58.83500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="180.00" Cena="10590.30" PolozkaZatrideniUID="34362" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076171" PoradoveCislo="92" Cislo="622411121R00" Typ="P" Nazev="Barvení vnější omítky stěn, 2 x, do složitosti 3" MJ="m2" Mnozstvi="178.32800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="50.40" Cena="8987.73" PolozkaZatrideniUID="34298" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076172" PoradoveCislo="93" Cislo="622421301RU5" Typ="P" Nazev="Zateplovací systém Baumit EPS - F tl. 40 mm se silikonovou omítkou 2,5 kg/m2" MJ="m2" Mnozstvi="4.76000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="738.00" Cena="3512.88" PolozkaZatrideniUID="34299" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Zateplovací systém Baumit EPS - F tl. 50 mm, se silikonovou omítkou 2,5 kg/m2</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076174" PoradoveCislo="95" Cislo="622421307RU5" Typ="P" Nazev="Zateplovací systém Baumit EPS - F tl. 140 mm se silikonovou omítkou  2,5 kg/m2" MJ="m2" Mnozstvi="99.92900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="830.00" Cena="82941.07" PolozkaZatrideniUID="34299" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Zateplovací systém Baumit EPS - F tl. 140 mm, se silikonovou omítkou  2,5 kg/m2</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076175" PoradoveCislo="96" Cislo="622471317R00" Typ="P" Nazev="Nátěr nebo nástřik stěn vnějších, složitost 1 - 2" MJ="m2" Mnozstvi="176.02900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="189.00" Cena="33269.48" PolozkaZatrideniUID="34329" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076176" PoradoveCislo="97" Cislo="622472152R00" Typ="P" Nazev="Omítka stěn vnější silikonsilikátová slož. II. ruč" MJ="m2" Mnozstvi="57.86500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="690.00" Cena="39926.85" PolozkaZatrideniUID="34363" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076177" PoradoveCislo="98" Cislo="622481113R00" Typ="P" Nazev="Potažení vnějších stěn sklotex. pletivem, vypnutí" MJ="m2" Mnozstvi="57.86500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="110.50" Cena="6394.08" PolozkaZatrideniUID="34364" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076167" PoradoveCislo="88" Cislo="620451111R00" Typ="P" Nazev="Omítka cementová stěn zatřená dř. hladítkem, hrubá" MJ="m2" Mnozstvi="27.09000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="139.00" Cena="3765.51" PolozkaZatrideniUID="34221" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="63" Nazev="Podlahy a podlahové konstrukce" Typ="HSV">
+					<POLOZKA UID="P1076179" PoradoveCislo="100" Cislo="631312611R00" Typ="P" Nazev="Mazanina betonová tl. 5 - 8 cm C 16/20  (B 20)" MJ="m3" Mnozstvi="10.78200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="3400.00" Cena="36658.80" PolozkaZatrideniUID="34330" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076180" PoradoveCislo="101" Cislo="631319161R00" Typ="P" Nazev="Příplatek za konečnou úpravu mazanin tl. 8 cm" MJ="m3" Mnozstvi="10.78200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="938.00" Cena="10113.52" PolozkaZatrideniUID="34331" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076181" PoradoveCislo="102" Cislo="631319171R00" Typ="P" Nazev="Příplatek za stržení povrchu mazaniny tl. 8 cm" MJ="m3" Mnozstvi="10.78200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34332" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076182" PoradoveCislo="103" Cislo="632415102RT5" Typ="P" Nazev="Potěr Morfico samonivelační ručně tl. 2 mm MFC Level 350 - pro podlahy s vytápěním" MJ="m2" Mnozstvi="165.88100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="183.00" Cena="30356.22" PolozkaZatrideniUID="34302" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Potěr Morfico samonivelační ručně tl. 2 mm, MFC Level 350 - pro podlahy s vytápěním</PPOPIS>
+					</POLOZKA>
+				</DIL>
+				<DIL Cislo="64" Nazev="Výplně otvorů" Typ="HSV">
+					<POLOZKA UID="P1076191" PoradoveCislo="111" Cislo="64PC01" Typ="M" Nazev="Obložková zárubeň tl.stěny 250mm - Sapeli Normal dýha javor EV 800/2020" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="1" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076192" PoradoveCislo="112" Cislo="64PC02" Typ="M" Nazev="Obložkova zárubeň tl.stěny 250 mm - Sapeli Normal dýha javor EV 900/2020" MJ="ks" Mnozstvi="4.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="1" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076193" PoradoveCislo="113" Cislo="64PC03" Typ="M" Nazev="Obložková zárubeň tl.stěny 115mm - Sapeli Normal dýha javor EV 900/2020" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="1" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076194" PoradoveCislo="114" Cislo="64PC04" Typ="M" Nazev="Obložková zárubeň tl.stěny 240mm - Sapeli Normal dýha javor EV 900/2020" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="1" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076195" PoradoveCislo="115" Cislo="64PC05" Typ="M" Nazev="Větrací hlimíková mřížka pro odvětrávíní komínu 200/150, ozn.OV.1" MJ="ks" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="1" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076196" PoradoveCislo="116" Cislo="64PC06" Typ="M" Nazev="Hliníková mřížka pro zakrytí vybíracího otvoru komínu 200/300, ozn.OV.2" MJ="ks" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="1" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076197" PoradoveCislo="117" Cislo="64PC07" Typ="M" Nazev="Int.větrací hliníková mřížka pro odvětrávání prostoru krbu 900/80, ozn. OV.2" MJ="ks" Mnozstvi="4.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="1" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076198" PoradoveCislo="118" Cislo="64PC08" Typ="M" Nazev="Ext.protidešťová AL žaluzie (pro nasávací otvor rekupirace) 250/250, ozn.OV.4" MJ="ks" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="1" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="63" Nazev="Podlahy a podlahové konstrukce" Typ="HSV">
+					<POLOZKA UID="P1076183" PoradoveCislo="104" Cislo="58333664R" Typ="M" Nazev="Kamenivo  těžené frakce 8-16 kačírek praný  VL" MJ="m3" Mnozstvi="8.79100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="850.00" Cena="7472.35" PolozkaZatrideniUID="34437" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="64" Nazev="Výplně otvorů" Typ="HSV">
+					<POLOZKA UID="P1076184" PoradoveCislo="105" Cislo="641952211R00" Typ="P" Nazev="Osazení rámů okenních dřevěných, plocha do 2,5 m2" MJ="kus" Mnozstvi="4.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="333.00" Cena="1332.00" PolozkaZatrideniUID="34365" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076185" PoradoveCislo="106" Cislo="641952451R00" Typ="P" Nazev="Osazení rámů okenních dřevěných, plocha do 10 m2" MJ="kus" Mnozstvi="3.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="582.00" Cena="1746.00" PolozkaZatrideniUID="34365" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076186" PoradoveCislo="107" Cislo="642941211RT2" Typ="P" Nazev="Pouzdro pro posuvné dveře jednostranné, do SDK jednostranné pouzdro 700/1970 mm" MJ="kus" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="6530.00" Cena="13060.00" PolozkaZatrideniUID="34367" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Pouzdro pro posuvné dveře jednostranné, do SDK, jednostranné pouzdro 700/1970 mm</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076187" PoradoveCislo="108" Cislo="642941211RT3" Typ="P" Nazev="Pouzdro pro posuvné dveře jednostranné, do SDK jednostranné pouzdro 800/1970 mm" MJ="kus" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="6930.00" Cena="6930.00" PolozkaZatrideniUID="34367" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Pouzdro pro posuvné dveře jednostranné, do SDK, jednostranné pouzdro 800/1970 mm</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076188" PoradoveCislo="109" Cislo="642941211RT6" Typ="P" Nazev="Pouzdro pro posuvné dveře jednostranné, do SDK jednostranné pouzdro 1100/1970 mm" MJ="kus" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="8150.00" Cena="8150.00" PolozkaZatrideniUID="34367" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Pouzdro pro posuvné dveře jednostranné, do SDK, jednostranné pouzdro 1100/1970 mm</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076189" PoradoveCislo="110" Cislo="642952110R00" Typ="P" Nazev="Osazení zárubní dveřních dřevěných, pl. do 2,5 m2" MJ="kus" Mnozstvi="10.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="200.50" Cena="2005.00" PolozkaZatrideniUID="34305" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="87" Nazev="Potrubí z trub z plastických hmot" Typ="HSV">
+					<POLOZKA UID="P1076200" PoradoveCislo="120" Cislo="87PC01" Typ="P" Nazev="Šachta plastová drenážní kontrolní" MJ="ks" Mnozstvi="4.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076199" PoradoveCislo="119" Cislo="871218211R00" Typ="P" Nazev="Drenáže pro měř.zařízení, z trub PP, DN 50 mm" MJ="m" Mnozstvi="53.25000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="169.00" Cena="8999.25" PolozkaZatrideniUID="34223" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="93" Nazev="Dokončovací práce inženýrskách staveb" Typ="HSV">
+					<POLOZKA UID="P1076206" PoradoveCislo="126" Cislo="941941041R00" Typ="P" Nazev="Montáž lešení leh.řad.s podlahami,š.1,2 m, H 10 m" MJ="m2" Mnozstvi="200.36000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="46.40" Cena="9296.70" PolozkaZatrideniUID="34226" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076207" PoradoveCislo="127" Cislo="941941291R00" Typ="P" Nazev="Příplatek za každý měsíc použití lešení k pol.1041" MJ="m2" Mnozstvi="400.72000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="35.30" Cena="14145.42" PolozkaZatrideniUID="34418" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076208" PoradoveCislo="128" Cislo="941941841R00" Typ="P" Nazev="Demontáž lešení leh.řad.s podlahami,š.1,2 m,H 10 m" MJ="m2" Mnozstvi="200.36000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34227" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="87" Nazev="Potrubí z trub z plastických hmot" Typ="HSV">
+					<POLOZKA UID="P1076201" PoradoveCislo="121" Cislo="28611223R" Typ="M" Nazev="Trubka PVC-U drenážní flexibilní DN 100 mm" MJ="m" Mnozstvi="55.91300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="29.90" Cena="1671.80" PolozkaZatrideniUID="34446" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="91" Nazev="Doplňující práce na komunikaci" Typ="HSV">
+					<POLOZKA UID="P1076202" PoradoveCislo="122" Cislo="917762111RT2" Typ="P" Nazev="Osazení ležat. obrub. bet. s opěrou, lože z B 12,5 včetně obrubníku ABO 25 - 6  100/6/25" MJ="m" Mnozstvi="31.60000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="334.50" Cena="10570.20" PolozkaZatrideniUID="34377" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Osazení ležat. obrub. bet. s opěrou, lože z B 12,5, včetně obrubníku ABO 25 - 6  100/6/25</PPOPIS>
+					</POLOZKA>
+				</DIL>
+				<DIL Cislo="93" Nazev="Dokončovací práce inženýrskách staveb" Typ="HSV">
+					<POLOZKA UID="P1076203" PoradoveCislo="123" Cislo="935111112R00" Typ="P" Nazev="Osazení přík. žlabu do štěrkopísku z bet. desek" MJ="m2" Mnozstvi="13.94000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="177.50" Cena="2474.35" PolozkaZatrideniUID="34313" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="95" Nazev="Dokončovací konstrukce na pozemních stavbách" Typ="HSV">
+					<POLOZKA UID="P1076212" PoradoveCislo="132" Cislo="95PC01" Typ="P" Nazev="Stupadla na komín z trubek pr.20, povrchová úprava žárový pozink, 500x200,včetně usazení" MJ="kpl" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076213" PoradoveCislo="133" Cislo="95PC02" Typ="P" Nazev="Kotvení proskleného zábradlí do schodiště šrouby M16 s nylonovýma podložkoma" MJ="ks" Mnozstvi="6.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076214" PoradoveCislo="134" Cislo="95PC03" Typ="P" Nazev="Atypické kovové konstrukce" MJ="kg" Mnozstvi="46.25000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="93" Nazev="Dokončovací práce inženýrskách staveb" Typ="HSV">
+					<POLOZKA UID="P1076204" PoradoveCislo="124" Cislo="59227513.AR" Typ="M" Nazev="Žlab odvodňovací TBZ  33/65/16" MJ="kus" Mnozstvi="17.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="86.50" Cena="1470.50" PolozkaZatrideniUID="34435" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076205" PoradoveCislo="125" Cislo="59227514.AR" Typ="M" Nazev="Žlab odvodňovací TBZ  50/110/33" MJ="kus" Mnozstvi="24.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="340.50" Cena="8172.00" PolozkaZatrideniUID="34435" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="95" Nazev="Dokončovací konstrukce na pozemních stavbách" Typ="HSV">
+					<POLOZKA UID="P1076209" PoradoveCislo="129" Cislo="952901111R00" Typ="P" Nazev="Vyčištění budov o výšce podlaží do 4 m" MJ="m2" Mnozstvi="283.40000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="72.80" Cena="20631.52" PolozkaZatrideniUID="34368" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076210" PoradoveCislo="130" Cislo="953943112R00" Typ="P" Nazev="Osazení kovových předmětů do zdiva, 5 kg / kus" MJ="kus" Mnozstvi="35.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="124.50" Cena="4357.50" PolozkaZatrideniUID="34369" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076211" PoradoveCislo="131" Cislo="953943123R00" Typ="P" Nazev="Osazení kovových předmětů do betonu, 15 kg / kus" MJ="kus" Mnozstvi="5.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="142.50" Cena="712.50" PolozkaZatrideniUID="34370" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="711" Nazev="Izolace proti vodě" Typ="PSV">
+					<POLOZKA UID="P1076216" PoradoveCislo="136" Cislo="711212001RX1" Typ="P" Nazev="Nátěr hydroizolační těsnicí hmotou Saniflex (fa Schömburg) 3 kg/m2 proti vlhkosti" MJ="m2" Mnozstvi="76.94300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="390.00" Cena="30007.77" PolozkaZatrideniUID="34378" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Nátěr hydroizolační těsnicí hmotou, Saniflex (fa Schömburg) 3 kg/m2 proti vlhkosti</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076217" PoradoveCislo="137" Cislo="711471051RT1" Typ="P" Nazev="Izolace, tlak. voda, vodorovná fólií PVC, volně materiál ve specifikaci" MJ="m2" Mnozstvi="380.26600" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="116.00" Cena="44110.86" PolozkaZatrideniUID="34229" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Izolace, tlak. voda, vodorovná fólií PVC, volně, materiál ve specifikaci</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076218" PoradoveCislo="138" Cislo="711471053R00" Typ="P" Nazev="Izolace, tlak. voda, vodorovná folií PE, volně" MJ="m2" Mnozstvi="302.55800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34229" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076219" PoradoveCislo="139" Cislo="711472051RT1" Typ="P" Nazev="Izolace, tlaková voda, svislá fólií PVC, volně materiál ve specifikaci" MJ="m2" Mnozstvi="232.90700" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="149.50" Cena="34819.60" PolozkaZatrideniUID="34229" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Izolace, tlaková voda, svislá fólií PVC, volně, materiál ve specifikaci</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076220" PoradoveCislo="140" Cislo="711491171RT1" Typ="P" Nazev="Izolace tlaková, podkladní textilie, vodorovná materiál ve specifikaci" MJ="m2" Mnozstvi="226.98000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="28.70" Cena="6514.33" PolozkaZatrideniUID="34230" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Izolace tlaková, podkladní textilie, vodorovná, materiál ve specifikaci</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076227" PoradoveCislo="147" Cislo="998711202R00" Typ="P" Nazev="Přesun hmot pro izolace proti vodě, výšky do 12 m" MJ="%" Mnozstvi="2437.66180" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="4.00" Cena="9750.65" PolozkaZatrideniUID="34380" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="99" Nazev="Staveništní přesun hmot" Typ="HSV">
+					<POLOZKA UID="P1076215" PoradoveCislo="135" Cislo="998011002R00" Typ="P" Nazev="Přesun hmot pro budovy zděné výšky do 12 m" MJ="t" Mnozstvi="0.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="251.50" Cena="0.00" PolozkaZatrideniUID="34308" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="711" Nazev="Izolace proti vodě" Typ="PSV">
+					<POLOZKA UID="P1076221" PoradoveCislo="141" Cislo="711PC01" Typ="P" Nazev="Drenážní a hydroakumulační vrstva profil. deska z recykl. polyst. DiaDrain-40 - 40 m" MJ="m2" Mnozstvi="231.12500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076222" PoradoveCislo="142" Cislo="711PC02" Typ="P" Nazev="Parozábrana ROOFTEK AL SPECIAL MINERAL" MJ="m2" Mnozstvi="347.94100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="712" Nazev="Živičné krytiny" Typ="PSV">
+					<POLOZKA UID="P1076229" PoradoveCislo="148" Cislo="712391171R00" Typ="P" Nazev="Povlaková krytina střech do 10°, podklad. textilie" MJ="m2" Mnozstvi="268.78400" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34381" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076230" PoradoveCislo="149" Cislo="712391172RT2" Typ="P" Nazev="Povlaková krytina střech do 10°, ochran. textilie 2 vrstvy - materiál ve specifikaci" MJ="m2" Mnozstvi="268.78400" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="82.20" Cena="22094.04" PolozkaZatrideniUID="34381" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Povlaková krytina střech do 10°, ochran. textilie, 2 vrstvy - materiál ve specifikaci</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076235" PoradoveCislo="154" Cislo="998712202R00" Typ="P" Nazev="Přesun hmot pro povlakové krytiny, výšky do 12 m" MJ="%" Mnozstvi="651.71900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="3.60" Cena="2346.19" PolozkaZatrideniUID="34383" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076231" PoradoveCislo="150" Cislo="712PC01" Typ="P" Nazev="D+M Hydroizolace DEKPLAN 77 tl.1,5mm" MJ="m2" Mnozstvi="344.97600" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="711" Nazev="Izolace proti vodě" Typ="PSV">
+					<POLOZKA UID="P1076226" PoradoveCislo="146" Cislo="69366199R" Typ="M" Nazev="Geotextilie FILTEK 500 g/m2 š. 200cm 100% PP" MJ="m2" Mnozstvi="528.87000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="40.10" Cena="21207.69" PolozkaZatrideniUID="34428" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076225" PoradoveCislo="145" Cislo="67352432R" Typ="M" Nazev="DEKTEN 135 fólie difúzní š. 1,5 m" MJ="m2" Mnozstvi="60.84400" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="45.70" Cena="2780.57" PolozkaZatrideniUID="34430" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076223" PoradoveCislo="143" Cislo="283220183R" Typ="M" Nazev="Fólie ALKORPLAN 35034 tl. 2,0 mm š. 2050 mm" MJ="m2" Mnozstvi="476.48700" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="207.00" Cena="98632.81" PolozkaZatrideniUID="34433" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076224" PoradoveCislo="144" Cislo="28323120R" Typ="M" Nazev="Fólie nopová DEKDREN N8 tl. 0,6 mm š. 4000 mm" MJ="m2" Mnozstvi="111.83800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="50.90" Cena="5692.55" PolozkaZatrideniUID="34433" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="713" Nazev="Izolace tepelné" Typ="PSV">
+					<POLOZKA UID="P1076236" PoradoveCislo="155" Cislo="713111125R00" Typ="P" Nazev="Izolace tepelné stropů rovných spodem, lepením" MJ="m2" Mnozstvi="58.53500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="129.00" Cena="7551.02" PolozkaZatrideniUID="34323" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076237" PoradoveCislo="156" Cislo="713121121RT1" Typ="P" Nazev="Izolace tepelná podlah na sucho, dvouvrstvá materiál ve specifikaci" MJ="m2" Mnozstvi="147.07100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="31.10" Cena="4573.91" PolozkaZatrideniUID="34235" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Izolace tepelná podlah na sucho, dvouvrstvá, materiál ve specifikaci</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076238" PoradoveCislo="157" Cislo="713131131R00" Typ="P" Nazev="Izolace tepelná stěn lepením" MJ="m2" Mnozstvi="179.10100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="93.40" Cena="16728.03" PolozkaZatrideniUID="34236" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076239" PoradoveCislo="158" Cislo="713141131R00" Typ="P" Nazev="Izolace tepelná střech plně lep.za studena,1vrstvá" MJ="m2" Mnozstvi="437.87000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="372.50" Cena="163106.58" PolozkaZatrideniUID="34237" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076240" PoradoveCislo="159" Cislo="713141221RP3" Typ="P" Nazev="Montáž parozábrany, ploché střechy, přelep. spojů Nicobar 105 - 105 g/m2" MJ="m2" Mnozstvi="287.63500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="63.10" Cena="18149.77" PolozkaZatrideniUID="34324" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Montáž parozábrany, ploché střechy, přelep. spojů, Nicobar 105 - 105 g/m2</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076241" PoradoveCislo="160" Cislo="713191100RT9" Typ="P" Nazev="Položení izolační fólie včetně dodávky fólie PE" MJ="m2" Mnozstvi="147.07100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="30.50" Cena="4485.67" PolozkaZatrideniUID="34238" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Položení izolační fólie, včetně dodávky fólie PE</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076254" PoradoveCislo="172" Cislo="998713202R00" Typ="P" Nazev="Přesun hmot pro izolace tepelné, výšky do 12 m" MJ="%" Mnozstvi="2557.66530" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="2.00" Cena="5115.33" PolozkaZatrideniUID="34385" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076243" PoradoveCislo="161" Cislo="713PC01" Typ="P" Nazev="Pěnový polystyrén EPS 100 S Stabil tl100mm" MJ="m2" Mnozstvi="302.96700" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076244" PoradoveCislo="162" Cislo="713PC02" Typ="P" Nazev="Pěnový polystyrén EPS 100 S Stabil tl.60mm" MJ="m2" Mnozstvi="151.48200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076245" PoradoveCislo="163" Cislo="713PC03" Typ="P" Nazev="Pěnový polystyrén EPS 100 S Stabil tl. 20mm" MJ="m2" Mnozstvi="11.78300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076246" PoradoveCislo="164" Cislo="713PC04" Typ="P" Nazev="Pěnový polystyrén EPS 100 S Stabil tl.50mm" MJ="m2" Mnozstvi="41.84700" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076247" PoradoveCislo="165" Cislo="713PC05" Typ="P" Nazev="TI - polystyren EPS 100 S stabil tl. 200 mm" MJ="m2" Mnozstvi="175.83200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076248" PoradoveCislo="166" Cislo="713PC06" Typ="P" Nazev="TI kamenná vlna AIROCK ND tl.50mm" MJ="m2" Mnozstvi="86.47700" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076249" PoradoveCislo="167" Cislo="713PC07" Typ="P" Nazev="TI kamenná vlna AIROCK ND tl. 80mm" MJ="m2" Mnozstvi="43.23900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076250" PoradoveCislo="168" Cislo="713PC08" Typ="P" Nazev="TI Foaglass tl.100mm" MJ="m2" Mnozstvi="5.19900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="712" Nazev="Živičné krytiny" Typ="PSV">
+					<POLOZKA UID="P1076233" PoradoveCislo="152" Cislo="69366197R" Typ="M" Nazev="Geotextilie FILTEK 200 g/m2 š. 200cm 100% PP" MJ="m2" Mnozstvi="279.99100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="18.50" Cena="5179.83" PolozkaZatrideniUID="34428" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076234" PoradoveCislo="153" Cislo="69366198R" Typ="M" Nazev="Geotextilie FILTEK 300 g/m2 š. 200cm 100% PP" MJ="m2" Mnozstvi="536.76200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="24.70" Cena="13258.02" PolozkaZatrideniUID="34428" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076232" PoradoveCislo="151" Cislo="67352440R" Typ="M" Nazev="DEKTEN METAL fólie separační a mikroventilační" MJ="m2" Mnozstvi="101.19100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="243.50" Cena="24640.01" PolozkaZatrideniUID="34430" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="720" Nazev="Zdravotechnická instalace" Typ="PSV">
+					<POLOZKA UID="P1076255" PoradoveCislo="173" Cislo="SPECIALISTA" Typ="P" Nazev="Zdravoinstalace - vloženo v samostatné složce specialisty" MJ="kpl" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="713" Nazev="Izolace tepelné" Typ="PSV">
+					<POLOZKA UID="P1076251" PoradoveCislo="169" Cislo="283754912" Typ="M" Nazev="Deska polystyrenová BACHL XPS 50 SF tl. 80 mm" MJ="m2" Mnozstvi="87.85900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34421" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076252" PoradoveCislo="170" Cislo="283754915" Typ="M" Nazev="Deska polystyrenová BACHL XPS 50 SF tl. 140 mm" MJ="m2" Mnozstvi="97.51400" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34421" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076253" PoradoveCislo="171" Cislo="28375971R" Typ="M" Nazev="Deska - klín spádový EPS 100 S Stabil" MJ="m3" Mnozstvi="14.57400" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="2825.00" Cena="41171.55" PolozkaZatrideniUID="34427" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="730" Nazev="Ústřední vytápění" Typ="PSV">
+					<POLOZKA UID="P1076256" PoradoveCislo="174" Cislo="SPECIALISTA" Typ="P" Nazev="Ústřední vytápění, vzdychotechnika - založeno v samostatné složce specialisty" MJ="kpl" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="762" Nazev="Konstrukce tesařské" Typ="PSV">
+					<POLOZKA UID="P1076257" PoradoveCislo="175" Cislo="762341210R00" Typ="P" Nazev="Montáž bednění střech rovných - OSB 3" MJ="m2" Mnozstvi="87.07900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="74.50" Cena="6487.39" PolozkaZatrideniUID="34387" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Montáž bednění střech rovných, prkna hrubá na sraz</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076260" PoradoveCislo="178" Cislo="998762202R00" Typ="P" Nazev="Přesun hmot pro tesařské konstrukce, výšky do 12 m" MJ="%" Mnozstvi="293.67190" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="6.80" Cena="1996.97" PolozkaZatrideniUID="34389" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076258" PoradoveCislo="176" Cislo="762PC01" Typ="P" Nazev="D+ M Dřevěný rošt tl.40mm" MJ="m2" Mnozstvi="89.90100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="764" Nazev="Konstrukce klempířské" Typ="PSV">
+					<POLOZKA UID="P1076269" PoradoveCislo="187" Cislo="998764202R00" Typ="P" Nazev="Přesun hmot pro klempířské konstr., výšky do 12 m" MJ="%" Mnozstvi="615.53240" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="1.95" Cena="1200.29" PolozkaZatrideniUID="34391" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076261" PoradoveCislo="179" Cislo="764232450R00" Typ="P" Nazev="LemováníTi Zn zdí, krycí pl. 2 díly, TK, rš 500 mm" MJ="m" Mnozstvi="9.10000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="351.50" Cena="3198.65" PolozkaZatrideniUID="34393" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076262" PoradoveCislo="180" Cislo="764232460R00" Typ="P" Nazev="LemováníTi Zn zdí, krycí pl. 2 díly, TK, rš 660 mm" MJ="m" Mnozstvi="13.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="438.00" Cena="5694.00" PolozkaZatrideniUID="34393" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076263" PoradoveCislo="181" Cislo="764510420R00" Typ="P" Nazev="Oplechování parapetů včetně rohů Ti Zn, rš 160 mm" MJ="m" Mnozstvi="10.16500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="334.50" Cena="3400.19" PolozkaZatrideniUID="34395" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076264" PoradoveCislo="182" Cislo="764510450R00" Typ="P" Nazev="Oplechování parapetů včetně rohů Ti Zn, rš 330 mm" MJ="m" Mnozstvi="2.50000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="435.00" Cena="1087.50" PolozkaZatrideniUID="34395" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076265" PoradoveCislo="183" Cislo="764530420R00" Typ="P" Nazev="Oplechování zdí z Ti Zn plechu, rš 330 mm" MJ="m" Mnozstvi="1.30000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="375.50" Cena="488.15" PolozkaZatrideniUID="34397" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076266" PoradoveCislo="184" Cislo="764530430R00" Typ="P" Nazev="Oplechování zdí z Ti Zn plechu, rš 400 mm" MJ="m" Mnozstvi="96.10000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="415.50" Cena="39929.55" PolozkaZatrideniUID="34397" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076267" PoradoveCislo="185" Cislo="764530450R00" Typ="P" Nazev="Oplechování zdí z Ti Zn plechu, rš 600 mm" MJ="m" Mnozstvi="13.10000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="592.00" Cena="7755.20" PolozkaZatrideniUID="34397" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076268" PoradoveCislo="186" Cislo="764PC01" Typ="P" Nazev="Kontrolní šachta, ozn.OV.8" MJ="ks" Mnozstvi="3.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="762" Nazev="Konstrukce tesařské" Typ="PSV">
+					<POLOZKA UID="P1076259" PoradoveCislo="177" Cislo="60725017R" Typ="M" Nazev="Deska dřevoštěpková OSB 3 N tl. 25 mm" MJ="m2" Mnozstvi="89.90100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="254.50" Cena="22879.80" PolozkaZatrideniUID="34426" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="766" Nazev="Konstrukce truhlářské" Typ="PSV">
+					<POLOZKA UID="P1076270" PoradoveCislo="188" Cislo="766121210R00" Typ="P" Nazev="Montáž stěn dřevěných s dveřmi prosklených" MJ="m2" Mnozstvi="11.19500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="142.50" Cena="1595.29" PolozkaZatrideniUID="34243" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Stěny komplet. plné s výplní, H do 2,75 m</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076271" PoradoveCislo="189" Cislo="766441111R00" Typ="P" Nazev="Položení dřevěné podlahy teras vč. podklad. roštu" MJ="m2" Mnozstvi="41.83900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="602.00" Cena="25187.08" PolozkaZatrideniUID="34419" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076272" PoradoveCislo="190" Cislo="766629301R00" Typ="P" Nazev="Montáž oken dřevěných plochy do 1,50 m2" MJ="kus" Mnozstvi="4.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="788.00" Cena="3152.00" PolozkaZatrideniUID="34398" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Montáž oken plastových plochy do 1,50 m2</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076273" PoradoveCislo="191" Cislo="766661112R00" Typ="P" Nazev="Montáž dveří do zárubně,otevíravých 1kř.do 0,8 m" MJ="kus" Mnozstvi="8.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34244" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076274" PoradoveCislo="192" Cislo="766670011R00" Typ="P" Nazev="Montáž obložkové zárubně a dřevěného křídla dveří" MJ="kus" Mnozstvi="12.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="1249.00" Cena="14988.00" PolozkaZatrideniUID="34315" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076275" PoradoveCislo="193" Cislo="766695213R00" Typ="P" Nazev="Montáž prahů dveří jednokřídlových š. nad 10 cm" MJ="kus" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="80.00" Cena="160.00" PolozkaZatrideniUID="34399" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076291" PoradoveCislo="209" Cislo="998766202R00" Typ="P" Nazev="Přesun hmot pro truhlářské konstr., výšky do 12 m" MJ="%" Mnozstvi="452.15170" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="1.45" Cena="655.62" PolozkaZatrideniUID="34401" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076276" PoradoveCislo="194" Cislo="766PC01" Typ="P" Nazev="Dveře vnitřní,700x1970, jednokřidl., plné, hladké s polodraž.,Sapeli Elegant, kování,ozn.D.03" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076277" PoradoveCislo="195" Cislo="766PC02" Typ="P" Nazev="Dveře vnitřní, 800x1970, jednokřidl.,plné,hladké s polodraž.,Sapeli Elegant, kování,ozn.D.04" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076278" PoradoveCislo="196" Cislo="766PC03" Typ="P" Nazev="Dveře vnitřní,800x1970, jednokřidl,plné, hladké s polodraž.,Sapeli Elegant, kování, ozn.D.05" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076279" PoradoveCislo="197" Cislo="766PC04" Typ="P" Nazev="Dveře vnitřní, 800x1970, jednokřidl.,plné, hladké s polodrážkou,Sapeli Elegant, kování, ozn.D.06" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076280" PoradoveCislo="198" Cislo="766PC05" Typ="P" Nazev="Dveře vnitřní 800x1970, jednokřídl.,plné, hladké s polodrážkou, Sapeli Elegant, kování, ozn.D.07" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076281" PoradoveCislo="199" Cislo="766PC06" Typ="P" Nazev="Dveře vnitřní 800x1970, jednokřidl., plné, hladké s polodrážkou, Sapeli Elegant, kování, ozn.D.08" MJ="ks" Mnozstvi="3.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076282" PoradoveCislo="200" Cislo="766PC07" Typ="P" Nazev="Dveře vnitřní 700x1970, jednokřídl, posuvné,hladké celoprosklené,Sapeli Elegant, kování, ozn.D.09" MJ="ks" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076283" PoradoveCislo="201" Cislo="766PC08" Typ="P" Nazev="Dveře vnitřní 800x1970, jednokřidl.,posuvné,hladké s polodražkou,plné,Sapeli Elegant,kování,ozn.D.10" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076284" PoradoveCislo="202" Cislo="766PC09" Typ="P" Nazev="Dveře vnitřní 1080x2200, jednokříd,posuvné,hladké s polodrážkou, Sapeli Elegant,kování, ozn.D.11" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076285" PoradoveCislo="203" Cislo="766PC10" Typ="P" Nazev="Okno atyp. dřev.875x2000,plastové, celoproskl., jednokřidl.,kování, ozn.O.04" MJ="ks" Mnozstvi="4.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076286" PoradoveCislo="204" Cislo="766PC11" Typ="P" Nazev="Celoprosklená stěna s oknem 1800x 2300,Europrofil izolační sklo, otočné, sklopné, ozn.O.02" MJ="ks" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076287" PoradoveCislo="205" Cislo="766PC12" Typ="P" Nazev="D + M dřevěné desky z modřínového dřeva tl.25mm včetně povrchové úpravy (nebo exotické dřevo)" MJ="m2" Mnozstvi="41.83900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076288" PoradoveCislo="206" Cislo="766PC13" Typ="P" Nazev="Dřevěný rošt z exotického dřeva 70/45" MJ="mb" Mnozstvi="94.52100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076289" PoradoveCislo="207" Cislo="766PC14" Typ="P" Nazev="Dřevěné schodiště včetně povrchové úpravy a nábytkových dveří pod schodištěm" MJ="kpl" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="767" Nazev="Konstrukce zámečnické" Typ="PSV">
+					<POLOZKA UID="P1076292" PoradoveCislo="210" Cislo="767131112R00" Typ="P" Nazev="Montáž stěn z plechu spojených svařováním" MJ="m2" Mnozstvi="66.80000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="288.00" Cena="19238.40" PolozkaZatrideniUID="34247" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076293" PoradoveCislo="211" Cislo="767590110R00" Typ="P" Nazev="Montáž podlahových roštů - svařováním" MJ="kg" Mnozstvi="275.66900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="23.70" Cena="6533.36" PolozkaZatrideniUID="34248" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076294" PoradoveCislo="212" Cislo="767711110R00" Typ="P" Nazev="Montáž výkladců zapuštěných pevných, pl.do 9 m2" MJ="m2" Mnozstvi="22.96400" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="541.00" Cena="12423.52" PolozkaZatrideniUID="34249" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076295" PoradoveCislo="213" Cislo="767711140R00" Typ="P" Nazev="Montáž výkladců zapuštěných pevných, pl.nad 16 m2" MJ="m2" Mnozstvi="29.59000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="435.50" Cena="12886.45" PolozkaZatrideniUID="34249" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076296" PoradoveCislo="214" Cislo="767995103R00" Typ="P" Nazev="Montáž kovových atypických konstrukcí do 20 kg" MJ="kg" Mnozstvi="113.77000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="75.00" Cena="8532.75" PolozkaZatrideniUID="34250" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076297" PoradoveCislo="215" Cislo="767995106R00" Typ="P" Nazev="Montáž kovových atypických konstrukcí do 250 kg" MJ="kg" Mnozstvi="780.97600" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="24.30" Cena="18977.72" PolozkaZatrideniUID="34250" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076305" PoradoveCislo="223" Cislo="998767202R00" Typ="P" Nazev="Přesun hmot pro zámečnické konstr., výšky do 12 m" MJ="%" Mnozstvi="785.92200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="1.90" Cena="1493.25" PolozkaZatrideniUID="34404" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076298" PoradoveCislo="216" Cislo="767PC01" Typ="P" Nazev="Atipycké kovové konstrukce" MJ="kg" Mnozstvi="1205.52900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076299" PoradoveCislo="217" Cislo="767PC02" Typ="P" Nazev="Dveře posuvné 3390x2320,plastové.,Europrofil, kování(ROTO Patio life),izolační sklo, ozn.D.02" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076300" PoradoveCislo="218" Cislo="767PC03" Typ="P" Nazev="Celoproskl.stěna s oknem 3625x2300, Euro profil, kování, izolační číré sklo, ozn.O.01" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076301" PoradoveCislo="219" Cislo="767PC04" Typ="P" Nazev="Celoproskl.stěna s oknem 2940x2300, Euro profil, kování, izolační čiré sklo, ozn.O.03" MJ="ks" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076302" PoradoveCislo="220" Cislo="767PC05" Typ="P" Nazev="AL atyp. předsazená celoproskl.fasáda , pevné zasklení, izol.čiré sklo, ozn.O.05 - O.07" MJ="kpl" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076303" PoradoveCislo="221" Cislo="767PC06" Typ="P" Nazev="Hliníková žaluzie, lamela 80mm, ovládání elektropohonom+dálkový ovládač,včetně uchycení" MJ="m2" Mnozstvi="37.11100" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076304" PoradoveCislo="222" Cislo="767PC07" Typ="P" Nazev="Oplechování Skyboxu TiZn tl.0,7mm" MJ="m2" Mnozstvi="66.80000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="766" Nazev="Konstrukce truhlářské" Typ="PSV">
+					<POLOZKA UID="P1076290" PoradoveCislo="208" Cislo="61187154R" Typ="M" Nazev="Prah dubový délka 80 cm šířka 8 cm tl. 2 cm" MJ="kus" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="66.40" Cena="132.80" PolozkaZatrideniUID="34445" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="771" Nazev="Podlahy z dlaždic a obklady" Typ="PSV">
+					<POLOZKA UID="P1076307" PoradoveCislo="225" Cislo="771479001R00" Typ="P" Nazev="Řezání dlaždic keramických pro soklíky" MJ="m" Mnozstvi="29.85000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34251" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076308" PoradoveCislo="226" Cislo="771575109RV2" Typ="P" Nazev="Montáž podlah keram.,hladké, tmel, 30x30 cm Soloflex (lepidlo), ASO-Flexfuge (spár.hmota)" MJ="m2" Mnozstvi="29.07300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="360.00" Cena="10466.28" PolozkaZatrideniUID="34252" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Montáž podlah keram.,hladké, tmel, 30x30 cm, Soloflex (lepidlo), ASO-Flexfuge (spár.hmota)</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076309" PoradoveCislo="227" Cislo="771578011RT3" Typ="P" Nazev="Spára podlaha - stěna, silikonem Mapesil AC (fa Mapei)" MJ="m" Mnozstvi="29.85000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="62.00" Cena="1850.70" PolozkaZatrideniUID="34253" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Spára podlaha - stěna, silikonem, Mapesil AC (fa Mapei)</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076310" PoradoveCislo="228" Cislo="771579791R00" Typ="P" Nazev="Příplatek za plochu podlah keram. do 5 m2 jednotl." MJ="m2" Mnozstvi="5.24800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34254" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076311" PoradoveCislo="229" Cislo="771579795RT2" Typ="P" Nazev="Příplatek za spárování vodotěsnou hmotou - plošně Aso-flexfuge (Schomburg)" MJ="m2" Mnozstvi="29.07300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="25.00" Cena="726.83" PolozkaZatrideniUID="34254" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Příplatek za spárování vodotěsnou hmotou - plošně, Aso-flexfuge (Schomburg)</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076314" PoradoveCislo="232" Cislo="998771202R00" Typ="P" Nazev="Přesun hmot pro podlahy z dlaždic, výšky do 12 m" MJ="%" Mnozstvi="130.43810" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="6.90" Cena="900.02" PolozkaZatrideniUID="34406" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076306" PoradoveCislo="224" Cislo="771111121R00" Typ="P" Nazev="Montáž podlahových lišt dilatačních" MJ="m" Mnozstvi="4.80000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34258" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076312" PoradoveCislo="230" Cislo="771PC01" Typ="P" Nazev="Dlažba dle výběru investora" MJ="m2" Mnozstvi="35.22800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="775" Nazev="Podlahy vlysové a parketové" Typ="PSV">
+					<POLOZKA UID="P1076316" PoradoveCislo="233" Cislo="775531210R00" Typ="P" Nazev="Montáž parketových tabulí, do lepidla, 30 x 30 cm" MJ="m2" Mnozstvi="79.45900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="370.50" Cena="29439.56" PolozkaZatrideniUID="34410" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076319" PoradoveCislo="236" Cislo="998775202R00" Typ="P" Nazev="Přesun hmot pro podlahy vlysové, výšky do 12 m" MJ="%" Mnozstvi="311.01800" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="1.55" Cena="482.08" PolozkaZatrideniUID="34412" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076317" PoradoveCislo="234" Cislo="775PC01" Typ="P" Nazev="Parketové dílce - dle výběru investora" MJ="m2" Mnozstvi="82.63700" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="771" Nazev="Podlahy z dlaždic a obklady" Typ="PSV">
+					<POLOZKA UID="P1076313" PoradoveCislo="231" Cislo="59760172.A" Typ="M" Nazev="Profil dilatační široký SchlŘter DILEX BWB h 10 mm" MJ="m" Mnozstvi="4.99200" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34423" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="776" Nazev="Podlahy povlakové" Typ="PSV">
+					<POLOZKA UID="P1076320" PoradoveCislo="237" Cislo="776431020R00" Typ="P" Nazev="Lepení podlahových soklíků z kobercových pásů" MJ="m" Mnozstvi="48.21500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="47.30" Cena="2280.57" PolozkaZatrideniUID="34263" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076321" PoradoveCislo="238" Cislo="776572100RT1" Typ="P" Nazev="Lepení povlakových podlah z pásů textilních pouze položení - koberec ve specifikaci" MJ="m2" Mnozstvi="48.21500" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="108.50" Cena="5231.33" PolozkaZatrideniUID="34413" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Lepení povlakových podlah z pásů textilních, pouze položení - koberec ve specifikaci</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076324" PoradoveCislo="241" Cislo="998776202R00" Typ="P" Nazev="Přesun hmot pro podlahy povlakové, výšky do 12 m" MJ="%" Mnozstvi="86.05020" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.82" Cena="70.56" PolozkaZatrideniUID="34415" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076322" PoradoveCislo="239" Cislo="776PC01" Typ="P" Nazev="Povlaková krytina (koberec) - dle výběru investora" MJ="m2" Mnozstvi="50.14300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="775" Nazev="Podlahy vlysové a parketové" Typ="PSV">
+					<POLOZKA UID="P1076318" PoradoveCislo="235" Cislo="61193652.AR" Typ="M" Nazev="Lišta soklová 20 x 40 mm MDF - CLASSEN dub" MJ="m" Mnozstvi="44.56400" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="37.30" Cena="1662.24" PolozkaZatrideniUID="34425" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="781" Nazev="Obklady keramické" Typ="PSV">
+					<POLOZKA UID="P1076327" PoradoveCislo="244" Cislo="781419706RT2" Typ="P" Nazev="Příplatek za spárovací vodotěsnou hmotu - plošně Aso-flexfuge (Schomburg)" MJ="m2" Mnozstvi="53.06000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="24.60" Cena="1305.28" PolozkaZatrideniUID="34322" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Příplatek za spárovací vodotěsnou hmotu - plošně, Aso-flexfuge (Schomburg)</PPOPIS>
+					</POLOZKA>
+					<POLOZKA UID="P1076328" PoradoveCislo="245" Cislo="781419711R00" Typ="P" Nazev="Příplatek k obkladu stěn za plochu do 10 m2 jedntl" MJ="m2" Mnozstvi="13.17000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34322" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076331" PoradoveCislo="248" Cislo="998781202R00" Typ="P" Nazev="Přesun hmot pro obklady keramické, výšky do 12 m" MJ="%" Mnozstvi="14.67390" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="3.80" Cena="55.76" PolozkaZatrideniUID="34408" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076325" PoradoveCislo="242" Cislo="781111121R00" Typ="P" Nazev="Montáž lišt rohových, vanových a dilatačních" MJ="m" Mnozstvi="7.25000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34259" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076326" PoradoveCislo="243" Cislo="781230131R00" Typ="P" Nazev="Obkládání stěn vnitř. keram. do tmele nad 300x300" MJ="m2" Mnozstvi="53.06000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="34409" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076329" PoradoveCislo="246" Cislo="781PC01" Typ="P" Nazev="Obklad dle výběru investora" MJ="m2" Mnozstvi="55.71300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="776" Nazev="Podlahy povlakové" Typ="PSV">
+					<POLOZKA UID="P1076323" PoradoveCislo="240" Cislo="69751003R" Typ="M" Nazev="Lišta kobercová Bolta 25387 TSL 55  6x55 mm" MJ="m" Mnozstvi="50.14300" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="21.80" Cena="1093.12" PolozkaZatrideniUID="34425" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="783" Nazev="Nátěry" Typ="PSV">
+					<POLOZKA UID="P1076332" PoradoveCislo="249" Cislo="783225600R00" Typ="P" Nazev="Nátěr syntetický kovových konstrukcí 2x email" MJ="m2" Mnozstvi="49.42900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="116.50" Cena="5758.48" PolozkaZatrideniUID="34266" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076333" PoradoveCislo="250" Cislo="783226100R00" Typ="P" Nazev="Nátěr syntetický kovových konstrukcí základní" MJ="m2" Mnozstvi="49.42900" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="45.20" Cena="2234.19" PolozkaZatrideniUID="34266" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="781" Nazev="Obklady keramické" Typ="PSV">
+					<POLOZKA UID="P1076330" PoradoveCislo="247" Cislo="59760104.AR" Typ="M" Nazev="Lišta rohová plastová na obklad ukončovací 10 mm" MJ="m" Mnozstvi="7.54000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="21.50" Cena="162.11" PolozkaZatrideniUID="34424" ObchNazev="" ObchNazevAN="1" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="784" Nazev="Malby" Typ="PSV">
+					<POLOZKA UID="P1076334" PoradoveCislo="251" Cislo="784111101R00" Typ="P" Nazev="Penetrace podkladu nátěrem Standard V1307 1 x" MJ="m2" Mnozstvi="445.70000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="18.30" Cena="8156.31" PolozkaZatrideniUID="34321" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+					<POLOZKA UID="P1076335" PoradoveCislo="252" Cislo="784452271RU8" Typ="P" Nazev="Malba směsí tekutou 2x, 1barva, místnost do 3,8 m Superlex C bílá, vhodná i na sádrokarton" MJ="m2" Mnozstvi="489.88000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="32.40" Cena="15872.11" PolozkaZatrideniUID="34268" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS">
+						<PPOPIS>Aktualizace - Název v DZ: Malba směsí tekutou 2x, 1barva, místnost do 3,8 m, Superlex C bílá, vhodná i na sádrokarton</PPOPIS>
+					</POLOZKA>
+				</DIL>
+				<DIL Cislo="787" Nazev="Zasklívání" Typ="PSV">
+					<POLOZKA UID="P1076338" PoradoveCislo="253" Cislo="787PC01" Typ="P" Nazev="Zasklení izolačním dvojsklem mléčným s bezpečnostní fólii 200x3000, včetně uchycení" MJ="ks" Mnozstvi="2.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076339" PoradoveCislo="254" Cislo="998787202R00" Typ="P" Nazev="Přesun hmot pro zasklívání, výšky do 12 m" MJ="%" Mnozstvi="0.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="2.20" Cena="0.00" PolozkaZatrideniUID="34417" ObchNazev="" ObchNazevAN="0" CenovaSoustava="RTS"/>
+				</DIL>
+				<DIL Cislo="M21" Nazev="Elektromontáže" Typ="MON">
+					<POLOZKA UID="P1076340" PoradoveCislo="255" Cislo="SPECIALISTA" Typ="P" Nazev="Vzduchotechnika samostatná složka specialisty" MJ="kpl" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="P1076341" PoradoveCislo="256" Cislo="SPECIALISTA" Typ="P" Nazev="Elektroinstalace samostatná složka specialisty" MJ="kpl" Mnozstvi="1.00000" JHmotnost="0.00000" JDemontazniHmotnost="0.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" PolozkaZatrideniUID="" ObchNazev="" ObchNazevAN="0" CenovaSoustava="Vlastní"/>
+				</DIL>
+			</SOUPIS>
+		</OBJEKT>
+		<OBJEKT Cislo="N01" Nazev="Vedlejší a ostatní náklady" Typ="VON" CisloJKSO="--" NazevJKSO="" Charakteristika="" DruhStavebniAkce="">
+			<SOUPIS Cislo="01" Nazev="Sousis vedlejších a ostatních nákladů">
+				<RPOPIS>XXX</RPOPIS>
+				<DIL Cislo="VN" Nazev="Vedlejší náklady" Typ="VN">
+					<POLOZKA UID="N102612" PoradoveCislo="5" Cislo="5" Typ="N" Nazev="Přesun stavebních kapacit" MJ="-" Mnozstvi="1.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="N102614" PoradoveCislo="7" Cislo="7" Typ="N" Nazev="Zařízení staveniště" MJ="-" Mnozstvi="1.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" CenovaSoustava="Vlastní"/>
+					<POLOZKA UID="N102610" PoradoveCislo="8" Cislo="8" Typ="N" Nazev="Ztížené výrobní podmínky" MJ="-" Mnozstvi="1.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" CenovaSoustava="Vlastní"/>
+				</DIL>
+				<DIL Cislo="ON" Nazev="Ostatní náklady" Typ="ON">
+					<POLOZKA UID="N102617" PoradoveCislo="6" Cislo="6" Typ="N" Nazev="Rezerva rozpočtu" MJ="-" Mnozstvi="1.00000" SazbaDPH="20.00" JCena="0.00" Cena="0.00" CenovaSoustava="Vlastní"/>
+				</DIL>
+			</SOUPIS>
+		</OBJEKT>
+	</STAVBA>
+</eSoupis>
