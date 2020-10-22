@@ -17,5 +17,6 @@ namespace ORF.Entities
         public IIfcNamedUnit TimeUnit { get => Units.OfType<IIfcNamedUnit>().FirstOrDefault(u => u.UnitType == IfcUnitEnum.TIMEUNIT); }
         public IIfcNamedUnit VolumeUnit { get => Units.OfType<IIfcNamedUnit>().FirstOrDefault(u => u.UnitType == IfcUnitEnum.VOLUMEUNIT); }
         public IIfcNamedUnit WeightUnit { get => Units.OfType<IIfcNamedUnit>().FirstOrDefault(u => u.UnitType == IfcUnitEnum.MASSUNIT); }
+        public IIfcMonetaryUnit MonetaryUnit { get => Units.OfType<IIfcMonetaryUnit>().FirstOrDefault(); }
     }
 }

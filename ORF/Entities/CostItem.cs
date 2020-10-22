@@ -20,6 +20,7 @@ namespace ORF.Entities
 
             _children = new HashSet<CostItem>(children);
             Quantities = new QuantityCollection(this);
+            Values = new ValuesCollection(this);
         }
 
         public string Identifier { get => Entity.Identification; set => Entity.Identification = value; }
@@ -50,6 +51,13 @@ namespace ORF.Entities
         public QuantityCollection Quantities { get; }
 
         public double TotalQuantity => Quantities.Sum(q => q.Value);
+
+        public ValuesCollection Values { get; }
+
+        public double TotalUnitValue => Values.Sum(q => q.Value ?? 0);
+
+        public double TotalCost => TotalQuantity * TotalUnitValue;
+
 
     }
 
@@ -149,6 +157,72 @@ namespace ORF.Entities
         public bool Remove(Quantity item)
         {
             if (_quantities.Remove(item))
+                return _native.Remove(item.Entity);
+            return false;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
+
+    public class ValuesCollection : ICollection<CostValue>
+    {
+        private readonly HashSet<CostValue> _values;
+        private readonly IList<IIfcCostValue> _native;
+        private readonly Create create;
+
+
+        internal ValuesCollection(CostItem item)
+        {
+            _values = new HashSet<CostValue>(item.Entity.CostValues
+                .Select(q => new CostValue(q)));
+            _native = item.Entity.CostValues;
+            create = new Create(item.Entity.Model);
+        }
+
+        public int Count => _values.Count;
+
+        public bool IsReadOnly => false;
+
+        public CostValue Add()
+        {
+            var value = new CostValue(create.CostValue());
+            Add(value);
+            return value;
+        }
+
+        public void Add(CostValue item)
+        {
+            if (_values.Add(item))
+                _native.Add(item.Entity);
+        }
+
+        public void Clear()
+        {
+            _values.Clear();
+            _native.Clear();
+        }
+
+        public bool Contains(CostValue item)
+        {
+            return _values.Contains(item);
+        }
+
+        public void CopyTo(CostValue[] array, int arrayIndex)
+        {
+            _values.CopyTo(array, arrayIndex);
+        }
+
+        public IEnumerator<CostValue> GetEnumerator()
+        {
+            return _values.GetEnumerator();
+        }
+
+        public bool Remove(CostValue item)
+        {
+            if (_values.Remove(item))
                 return _native.Remove(item.Entity);
             return false;
         }
