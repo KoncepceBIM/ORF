@@ -18,12 +18,12 @@ namespace ORF
     public sealed class CostModel: IDisposable
     {
         public IModel IFC { get; private set; }
-        internal Create Create { get; }
+        public Create Create { get; }
 
         public CostModel(string path, XbimEditorCredentials credentials = null)
         {
             var ext = Path.GetExtension(path);
-            if (ext.EndsWith("orf", StringComparison.OrdinalIgnoreCase))
+            if (ext.EndsWith(".orf", StringComparison.OrdinalIgnoreCase))
             {
                 using (var file = File.OpenRead(path))
                 using (var arch = new ZipArchive(file, ZipArchiveMode.Read))
@@ -71,14 +71,14 @@ namespace ORF
             }
         }
 
-        public CostModel(XbimEditorCredentials credentials = null)
+        public CostModel(XbimEditorCredentials credentials, string projectName)
         {
             IfcStore.ModelProviderFactory.UseMemoryModelProvider();
             IFC = IfcStore.Create(credentials, Xbim.Common.Step21.XbimSchemaVersion.Ifc4, XbimStoreType.InMemoryModel);
             Create = new Create(IFC);
             using (var txn = IFC.BeginTransaction("Project creation"))
             {
-                CreateProject();
+                CreateProject(projectName);
                 txn.Commit();
             }
         }
@@ -103,16 +103,19 @@ namespace ORF
             return schedule;
         }
 
-        private void CreateProject()
+        private void CreateProject(string projectName)
         {
             // there should only be one project in the model
             if (Project != null)
                 return;
 
-            Project = new Project(Create.Project(p => p.UnitsInContext = Create.UnitAssignment()));
+            Project = new Project(Create.Project(p => {
+                p.UnitsInContext = Create.UnitAssignment();
+                p.Name = projectName;
+            }));
         }
 
-        public ITransaction BeginTransaction => IFC.BeginTransaction("Modifications");
+        public ITransaction BeginTransaction() => IFC.BeginTransaction("Modifications");
 
         public void SaveAsIfc(string path)
         {
@@ -141,7 +144,6 @@ namespace ORF
                     }
                 }
             }
-            ((IfcStore)IFC).SaveAs(path);
         }
 
         public bool IsValid(out IEnumerable<ValidationResult> errors)

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using ORF.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,6 +92,21 @@ namespace ORF.Validation
                         IssueType = ValidationFlags.Properties,
                         IssueSource = "Same quantity type validation",
                         Message = $"Quantities must be of the same type. Types: {string.Join(", ", types)}"
+                    });
+                }
+
+                var noUnits = item.CostQuantities.OfType<IIfcPhysicalSimpleQuantity>()
+                    .Select(q => new Quantity(q))
+                    .Where(q => q.Unit == null && q.Type != QuantityTypeEnum.Count)
+                    .ToList();
+                if (noUnits.Any())
+                {
+                    err.AddDetail(new ValidationResult
+                    {
+                        Item = item,
+                        IssueType = ValidationFlags.Properties,
+                        IssueSource = "Quantity unit defined",
+                        Message = $"Quantities should have units either explicit or on the level of the project. Quantities: {string.Join(", ", noUnits.Select(q => q.Name))}"
                     });
                 }
 
