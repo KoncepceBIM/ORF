@@ -1,4 +1,5 @@
 ﻿using ORF.Entities;
+using ORF.Validation;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
@@ -6,6 +7,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using Xbim.Common;
+using Xbim.Common.ExpressValidation;
 using Xbim.Ifc;
 using Xbim.Ifc4.Interfaces;
 using Xbim.Ifc4.Kernel;
@@ -77,6 +79,7 @@ namespace ORF
             using (var txn = IFC.BeginTransaction("Project creation"))
             {
                 CreateProject();
+                txn.Commit();
             }
         }
 
@@ -88,11 +91,12 @@ namespace ORF
         private readonly HashSet<CostSchedule> _schedules = new HashSet<CostSchedule>();
         public IEnumerable<CostSchedule> Schedules => _schedules.ToList().AsReadOnly();
 
-        public CostSchedule CreateSchedule()
+        public CostSchedule CreateSchedule(string name)
         {
-            var native = Create.CostSchedule();
+            var native = Create.CostSchedule(s => s.Name = name);
             var schedule = new CostSchedule(native);
-            Declarations.RelatedDefinitions.Add(native);
+            if (IFC.SchemaVersion != Xbim.Common.Step21.XbimSchemaVersion.Ifc2X3)
+                Declarations.RelatedDefinitions.Add(native);
 
             _schedules.Add(schedule);
 
@@ -138,6 +142,14 @@ namespace ORF
                 }
             }
             ((IfcStore)IFC).SaveAs(path);
+        }
+
+        public bool IsValid(out IEnumerable<ValidationResult> errors)
+        {
+            var validator = new ModelValidator();
+            var result = validator.Check(IFC);
+            errors = validator.Errors;
+            return result;
         }
 
         public void Dispose()

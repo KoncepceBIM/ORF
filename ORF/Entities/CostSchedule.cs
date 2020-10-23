@@ -35,23 +35,24 @@ namespace ORF.Entities
                 if (value != null && value.Equals(_costSystem))
                     return;
 
-                if (RelDocuments.RelatedObjects.Contains(Entity))
+                if (_relDocs != null && _relDocs.RelatedObjects.Contains(Entity))
                 { 
-                    RelDocuments.RelatedObjects.Remove(Entity);
+                    _relDocs.RelatedObjects.Remove(Entity);
                     _relDocs = null;
                 }
 
                 _costSystem = value;
-                if (value != null)
-                    RelDocuments.RelatingDocument = value.Entity;
-                
+                if (value == null)
+                    return;
+
+                _relDocs = Create.RelAssociatesDocument(r => {
+                    r.RelatedObjects.Add(Entity);
+                    r.RelatingDocument = value.Entity;
+                });
             }
         }
 
         private IIfcRelAssociatesDocument _relDocs;
-        private IIfcRelAssociatesDocument RelDocuments => _relDocs ?? 
-            (_relDocs = Create.RelAssociatesDocument(r => r.RelatedObjects.Add(Entity)));
-
         private IIfcRelAssignsToControl _rel;
         private IIfcRelAssignsToControl Assignments => _rel ?? (_rel = Create.RelAssignsToControl(r => r.RelatingControl = Entity));
 
