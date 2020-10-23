@@ -10,16 +10,15 @@ using Xbim.Ifc;
 using Xbim.Ifc4.Interfaces;
 using Xbim.Ifc4.Kernel;
 using Xbim.IO;
-using Xbim.IO.Memory;
 
 namespace ORF
 {
-    public sealed class Model: IDisposable
+    public sealed class CostModel: IDisposable
     {
         public IModel IFC { get; private set; }
-        private Create Create { get; }
+        internal Create Create { get; }
 
-        public Model(string path, XbimEditorCredentials credentials = null)
+        public CostModel(string path, XbimEditorCredentials credentials = null)
         {
             var ext = Path.GetExtension(path);
             if (ext.EndsWith("orf", StringComparison.OrdinalIgnoreCase))
@@ -70,7 +69,7 @@ namespace ORF
             }
         }
 
-        public Model(XbimEditorCredentials credentials = null)
+        public CostModel(XbimEditorCredentials credentials = null)
         {
             IfcStore.ModelProviderFactory.UseMemoryModelProvider();
             IFC = IfcStore.Create(credentials, Xbim.Common.Step21.XbimSchemaVersion.Ifc4, XbimStoreType.InMemoryModel);
@@ -100,22 +99,46 @@ namespace ORF
             return schedule;
         }
 
-        public CostItem CreateCostItem()
-        {
-            return new CostItem(Create.CostItem());
-        }
-
-        public CostSystem CreateCostSystem()
-        {
-            return new CostSystem(Create.DocumentReference());
-        }
-
         private void CreateProject()
         {
+            // there should only be one project in the model
+            if (Project != null)
+                return;
+
             Project = new Project(Create.Project(p => p.UnitsInContext = Create.UnitAssignment()));
         }
 
         public ITransaction BeginTransaction => IFC.BeginTransaction("Modifications");
+
+        public void SaveAsIfc(string path)
+        {
+            path = Path.ChangeExtension(path, ".ifc");
+            ((IfcStore)IFC).SaveAs(path);
+        }
+
+        public void SaveAsIfcXml(string path)
+        {
+            path = Path.ChangeExtension(path, ".ifcxml");
+            ((IfcStore)IFC).SaveAs(path);
+        }
+
+        public void SaveAsORF(string path)
+        {
+            path = Path.ChangeExtension(path, ".orf");
+            using (var file = File.Create(path))
+            {
+                using (var archive = new ZipArchive(file, ZipArchiveMode.Create))
+                {
+                    var name = Path.GetFileNameWithoutExtension(path) + ".ifc";
+                    var entry = archive.CreateEntry(name);
+                    using (var stream = entry.Open())
+                    {
+                        ((IfcStore)IFC).SaveAsIfc(stream);
+                    }
+                }
+            }
+            ((IfcStore)IFC).SaveAs(path);
+        }
 
         public void Dispose()
         {

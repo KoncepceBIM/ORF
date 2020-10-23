@@ -4,7 +4,11 @@ namespace ORF.Entities
 {
     public class CostSystem : IfcWrapper<IIfcDocumentReference>, IEntity
     {
-        public CostSystem(IIfcDocumentReference entity) : base(entity)
+        internal CostSystem(IIfcDocumentReference entity) : base(entity)
+        {
+        }
+
+        public CostSystem(CostModel model) : base(model.Create.DocumentReference())
         {
         }
 

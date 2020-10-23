@@ -9,7 +9,7 @@ namespace ORF.Entities
 {
     public class CostItem : IfcRootWrapper<IIfcCostItem>, IEntity
     {
-        public CostItem(IIfcCostItem item) : base(item)
+        internal CostItem(IIfcCostItem item) : base(item)
         {
             var rels = item.IsNestedBy.ToList();
             _rel = rels.FirstOrDefault();
@@ -20,7 +20,13 @@ namespace ORF.Entities
 
             _children = new HashSet<CostItem>(children);
             Quantities = new QuantityCollection(this);
-            Values = new ValuesCollection(this);
+            UnitValues = new ValuesCollection(this);
+        }
+
+        public CostItem(CostModel model): base(model.Create.CostItem())
+        {
+            Quantities = new QuantityCollection(this);
+            UnitValues = new ValuesCollection(this);
         }
 
         public string Identifier { get => Entity.Identification; set => Entity.Identification = value; }
@@ -52,12 +58,11 @@ namespace ORF.Entities
 
         public double TotalQuantity => Quantities.Sum(q => q.Value);
 
-        public ValuesCollection Values { get; }
+        public ValuesCollection UnitValues { get; }
 
-        public double TotalUnitValue => Values.Sum(q => q.Value ?? 0);
+        public double TotalUnitValue => UnitValues.Sum(q => q.Value ?? 0);
 
         public double TotalCost => TotalQuantity * TotalUnitValue;
-
 
     }
 

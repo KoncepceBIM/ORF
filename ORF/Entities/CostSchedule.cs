@@ -72,5 +72,7 @@ namespace ORF.Entities
                     .ForEach(r => r.RelatedObjects.Remove(item.Entity));
             }
         }
+
+        public double TotalCost => _costItems.Sum(i => i.TotalCost);
     }
 }
