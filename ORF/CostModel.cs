@@ -1,6 +1,7 @@
 ﻿using ORF.Entities;
 using ORF.Validation;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.IO;
@@ -15,7 +16,7 @@ using Xbim.IO;
 
 namespace ORF
 {
-    public sealed class CostModel: IDisposable
+    public sealed class CostModel : IDisposable
     {
         public IModel IFC { get; private set; }
         public Create Create { get; }
@@ -29,7 +30,8 @@ namespace ORF
                 using (var arch = new ZipArchive(file, ZipArchiveMode.Read))
                 {
                     var type = StorageType.Invalid;
-                    var entry = arch.Entries.FirstOrDefault(e => { 
+                    var entry = arch.Entries.FirstOrDefault(e =>
+                    {
                         if (e.Name.EndsWith(".ifc", StringComparison.OrdinalIgnoreCase))
                         {
                             type = StorageType.Ifc;
@@ -52,22 +54,23 @@ namespace ORF
                 }
             }
             else
-            { 
+            {
                 IFC = IfcStore.Open(path, credentials);
             }
 
             Create = new Create(IFC);
             var project = IFC.Instances.FirstOrDefault<IIfcProject>();
             if (project != null)
-            { 
-                Project = new Project(project);
-                _declarations = Project.Entity.Declares.FirstOrDefault();
+            {
+                Project = new Project(project, true);
+
             }
 
             // optimization for inverse relationships
             using (IFC.BeginInverseCaching())
             {
-                _schedules = new HashSet<CostSchedule>(IFC.Instances.OfType<IIfcCostSchedule>().Select(s => new CostSchedule(s)));
+                Schedules = new SchedulesCollection(this);
+                Classifications = new ClassificationCollection(this);
             }
         }
 
@@ -81,27 +84,16 @@ namespace ORF
                 CreateProject(projectName);
                 txn.Commit();
             }
+
+            Schedules = new SchedulesCollection(this);
+            Classifications = new ClassificationCollection(this);
         }
+
+        public ClassificationCollection Classifications { get; }
+        public SchedulesCollection Schedules { get; }
 
         public Project Project { get; private set; }
-        private IIfcRelDeclares _declarations;
-        private IIfcRelDeclares Declarations => _declarations ?? 
-            (_declarations = IFC.Instances.New<IfcRelDeclares>(r => r.RelatingContext = Project.Entity as IfcProject));
 
-        private readonly HashSet<CostSchedule> _schedules = new HashSet<CostSchedule>();
-        public IEnumerable<CostSchedule> Schedules => _schedules.ToList().AsReadOnly();
-
-        public CostSchedule CreateSchedule(string name)
-        {
-            var native = Create.CostSchedule(s => s.Name = name);
-            var schedule = new CostSchedule(native);
-            if (IFC.SchemaVersion != Xbim.Common.Step21.XbimSchemaVersion.Ifc2X3)
-                Declarations.RelatedDefinitions.Add(native);
-
-            _schedules.Add(schedule);
-
-            return schedule;
-        }
 
         private void CreateProject(string projectName)
         {
@@ -109,10 +101,11 @@ namespace ORF
             if (Project != null)
                 return;
 
-            Project = new Project(Create.Project(p => {
+            Project = new Project(Create.Project(p =>
+            {
                 p.UnitsInContext = Create.UnitAssignment();
                 p.Name = projectName;
-            }));
+            }), false);
         }
 
         public ITransaction BeginTransaction() => IFC.BeginTransaction("Modifications");
@@ -158,6 +151,160 @@ namespace ORF
         {
             IFC.Dispose();
             IFC = null;
+        }
+    }
+
+    public class SchedulesCollection : ICollection<CostSchedule>
+    {
+        private readonly HashSet<CostSchedule> _inner = new HashSet<CostSchedule>();
+        private readonly List<IIfcRelDeclares> _declarations = new List<IIfcRelDeclares>();
+        private readonly CostModel model;
+
+        public SchedulesCollection(CostModel model)
+        {
+            this.model = model;
+
+            if (model.IFC.SchemaVersion != Xbim.Common.Step21.XbimSchemaVersion.Ifc2X3)
+            {
+                _declarations = model.Project.Entity.Declares
+                    .Where(r => r.RelatedDefinitions.Any(d => d is IIfcCostSchedule))
+                    .ToList();
+                _inner = new HashSet<CostSchedule>(_declarations
+                    .SelectMany(r => r.RelatedDefinitions.OfType<IIfcCostSchedule>())
+                    .Select(s => new CostSchedule(s, true)));
+            }
+            else
+            {
+                _inner = new HashSet<CostSchedule>(model.IFC.Instances.OfType<IIfcCostSchedule>()
+                    .Select(s => new CostSchedule(s, true)));
+            }
+        }
+
+        public int Count => _inner.Count;
+
+        public bool IsReadOnly => false;
+
+        public void Add(CostSchedule item)
+        {
+            if (!_inner.Add(item))
+                return;
+
+            if (model.IFC.SchemaVersion == Xbim.Common.Step21.XbimSchemaVersion.Ifc2X3)
+                return;
+            var rel = _declarations.FirstOrDefault();
+            if (rel == null)
+            {
+                rel = model.IFC.Instances.New<IfcRelDeclares>();
+                rel.RelatingContext = model.Project.Entity;
+                _declarations.Add(rel);
+            }
+
+            rel.RelatedDefinitions.Add(item.Entity);
+        }
+
+        public void Clear()
+        {
+            foreach (var d in _declarations)
+            {
+                foreach (var item in _inner)
+                {
+                    d.RelatedDefinitions.Remove(item.Entity);
+                }
+                if (!d.RelatedDefinitions.Any())
+                    model.IFC.Delete(d);
+            }
+            _inner.Clear();
+        }
+
+        public bool Contains(CostSchedule item)
+        {
+            return _inner.Contains(item);
+        }
+
+        public void CopyTo(CostSchedule[] array, int arrayIndex)
+        {
+            _inner.CopyTo(array, arrayIndex);
+        }
+
+        public IEnumerator<CostSchedule> GetEnumerator()
+        {
+            return _inner.GetEnumerator();
+        }
+
+        public bool Remove(CostSchedule item)
+        {
+            foreach (var d in _declarations)
+            {
+
+                d.RelatedDefinitions.Remove(item.Entity);
+                if (!d.RelatedDefinitions.Any())
+                    model.IFC.Delete(d);
+            }
+            return _inner.Remove(item);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _inner.GetEnumerator();
+        }
+    }
+
+    public class ClassificationCollection : ICollection<Classification>
+    {
+        private readonly HashSet<Classification> _inner = new HashSet<Classification>();
+        private readonly CostModel model;
+
+        public ClassificationCollection(CostModel model)
+        {
+            this.model = model;
+
+            _inner = new HashSet<Classification>(model.IFC.Instances.OfType<IIfcClassification>()
+                .Select(s => new Classification(s, true)));
+        }
+
+        public int Count => _inner.Count;
+
+        public bool IsReadOnly => false;
+
+        public void Add(Classification item)
+        {
+            if (!_inner.Add(item))
+                return;
+        }
+
+        public void Clear()
+        {
+            foreach (var c in _inner)
+            {
+                    model.IFC.Delete(c.Entity);
+            }
+            _inner.Clear();
+        }
+
+        public bool Contains(Classification item)
+        {
+            return _inner.Contains(item);
+        }
+
+        public void CopyTo(Classification[] array, int arrayIndex)
+        {
+            _inner.CopyTo(array, arrayIndex);
+        }
+
+        public IEnumerator<Classification> GetEnumerator()
+        {
+            return _inner.GetEnumerator();
+        }
+
+        public bool Remove(Classification item)
+        {
+            model.IFC.Delete(item.Entity);
+            return _inner.Remove(item);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _inner.GetEnumerator();
         }
     }
 }

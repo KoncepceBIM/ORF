@@ -2,30 +2,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Xbim.Common;
 using Xbim.Ifc4.Interfaces;
 
 namespace ORF.Entities
 {
-    public class CostItem : IfcRootWrapper<IIfcCostItem>, IEntity
+    public class CostItem : IfcObjectWrapper<IIfcCostItem>, IEntity
     {
-        internal CostItem(IIfcCostItem item) : base(item)
+        internal CostItem(IIfcCostItem item, bool init) : base(item, init)
         {
-            Children = new CostChildrenCollection(this, true);
+            Children = new CostChildrenCollection(this, init);
+            ClassificationItems = new ClassificationCollection(this, init);
             Quantities = new QuantityCollection(this);
             UnitValues = new ValuesCollection(this);
         }
 
-        public CostItem(CostModel model): base(model.Create.CostItem())
+        public CostItem(CostModel model): this(model.Create.CostItem(), false)
         {
-            Quantities = new QuantityCollection(this);
-            UnitValues = new ValuesCollection(this);
-            Children = new CostChildrenCollection(this, false);
+            
         }
 
         public string Identifier { get => Entity.Identification; set => Entity.Identification = value; }
 
         
+        public ClassificationCollection ClassificationItems { get; }
+
         public CostChildrenCollection Children { get; }
 
         public QuantityCollection Quantities { get; }
@@ -36,7 +36,7 @@ namespace ORF.Entities
 
         public double TotalUnitValue => UnitValues.Sum(q => q.Value ?? 0);
 
-        public double TotalCost => TotalQuantity * TotalUnitValue;
+        public double TotalCost => Quantities.Any() ? TotalQuantity * TotalUnitValue : TotalUnitValue;
 
     }
 
@@ -230,7 +230,7 @@ namespace ORF.Entities
             var rels = item.Entity.IsNestedBy.ToList();
             var children = rels.SelectMany(r => r.RelatedObjects)
                 .OfType<IIfcCostItem>()
-                .Select(i => new CostItem(i));
+                .Select(i => new CostItem(i, init));
 
             _children = new HashSet<CostItem>(children);
             _native = rels;
@@ -292,6 +292,88 @@ namespace ORF.Entities
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+    }
+
+    public class ClassificationCollection : ICollection<ClassificationItem>
+    {
+        private readonly HashSet<ClassificationItem> inner = new HashSet<ClassificationItem>();
+        private readonly List<IIfcRelAssociatesClassification> rels = new List<IIfcRelAssociatesClassification>();
+        private readonly CostItem costItem;
+
+        public ClassificationCollection(CostItem costItem, bool init)
+        {
+            this.costItem = costItem;
+
+            if (!init)
+                return;
+
+            rels = costItem.Entity.HasAssociations.OfType<IIfcRelAssociatesClassification>().ToList();
+            inner = new HashSet<ClassificationItem>(rels.Where(r => r.RelatingClassification is IIfcClassificationReference)
+                .Select(r => new ClassificationItem(r.RelatingClassification as IIfcClassificationReference, true)));
+        }
+
+        public int Count => inner.Count;
+
+        public bool IsReadOnly => false;
+
+        public void Add(ClassificationItem item)
+        {
+            if (!inner.Add(item))
+                return;
+
+            var rel = rels.FirstOrDefault();
+            if (rel == null)
+            { 
+                var create = new Create(item.Entity.Model);
+                create.RelAssociatesClassification(r => r.RelatingClassification = item.Entity);
+            }
+            rel.RelatedObjects.Add(costItem.Entity);
+        }
+
+        public void Clear()
+        {
+            foreach (var rel in rels)
+            {
+                rel.RelatedObjects.Remove(costItem.Entity);
+                if (!rel.RelatedObjects.Any())
+                    rel.Model.Delete(rel);
+            }
+            inner.Clear();
+        }
+
+        public bool Contains(ClassificationItem item)
+        {
+            return inner.Contains(item);
+        }
+
+        public void CopyTo(ClassificationItem[] array, int arrayIndex)
+        {
+            inner.CopyTo(array, arrayIndex);
+        }
+
+        public IEnumerator<ClassificationItem> GetEnumerator()
+        {
+            return inner.GetEnumerator();
+        }
+
+        public bool Remove(ClassificationItem item)
+        {
+            if (!inner.Remove(item))
+                return false;
+
+            foreach (var rel in rels.Where(r => r.RelatingClassification == item.Entity))
+            {
+                rel.RelatedObjects.Remove(costItem.Entity);
+                if (!rel.RelatedObjects.Any())
+                    rel.Model.Delete(rel);
+            }
+            return true;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return inner.GetEnumerator();
         }
     }
 }

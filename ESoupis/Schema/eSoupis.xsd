@@ -189,7 +189,7 @@
 	<xs:complexType name="TStavba">
 		<xs:sequence>
 			<xs:element name="SUBJEKT" type="TSubjekt" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="SPOPIS" minOccurs="0"/>
+			<xs:element name="SPOPIS" minOccurs="0" type="xs:string"/>
 			<xs:element name="OBJEKT" type="TObjekt" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="Cislo" type="TStrNumber" use="required"/>

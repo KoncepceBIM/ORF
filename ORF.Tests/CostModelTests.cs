@@ -61,7 +61,7 @@ namespace ORF.Tests
                     model.Project.Units.Add(timeUnit);
                     model.Project.Units.Add(costUnit);
 
-                    var schedule = model.CreateSchedule("Sample schedule");
+                    var schedule = new CostSchedule(model, "Sample schedule");
 
                     var rootA = new CostItem(model) { 
                         Name = "Superstructure",

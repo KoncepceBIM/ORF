@@ -10,8 +10,13 @@ namespace ORF.Entities
 {
     public class PropertySet : IfcWrapper<IIfcPropertySet>, IEntity
     {
-        public PropertySet(IIfcPropertySet entity) : base(entity)
+        internal PropertySet(IIfcPropertySet entity) : base(entity)
         {
+        }
+
+        public PropertySet(CostModel model, string name = null): base(model.Create.PropertySet(ps => ps.Name = name))
+        {
+
         }
 
         public string Name { get => Entity.Name; set => Entity.Name = value; }

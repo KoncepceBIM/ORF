@@ -307,7 +307,7 @@ namespace ESoupis
     {
         #region Private fields
         private List<TSubjekt> _sUBJEKT;
-        private object _sPOPIS;
+        private string _sPOPIS;
         private List<TObjekt> _oBJEKT;
         private string _cislo;
         private string _nazev;
@@ -334,7 +334,8 @@ namespace ESoupis
             }
         }
 
-        public object SPOPIS
+        [XmlElement("SPOPIS")]
+        public string SPOPIS
         {
             get
             {
@@ -1574,7 +1575,7 @@ namespace ESoupis
     public partial class TZatrideni
     {
         #region Private fields
-        private object _zPOPIS;
+        private string _zPOPIS;
         private List<TZatrideni> _zATRIDENI;
         private string _polozkaZatrideniUID;
         private TTypZatrideni _typ;
@@ -1588,7 +1589,8 @@ namespace ESoupis
             _zATRIDENI = new List<TZatrideni>();
         }
 
-        public object ZPOPIS
+        [XmlElement("ZPOPIS")]
+        public string ZPOPIS
         {
             get
             {
@@ -2153,7 +2155,7 @@ namespace ESoupis
     public partial class TPolozka
     {
         #region Private fields
-        private object _pPOPIS;
+        private string _pPOPIS;
         private List<TVymera> _vYMERA;
         private long _poradoveCislo;
         private string _uID;
@@ -2179,7 +2181,8 @@ namespace ESoupis
             _vYMERA = new List<TVymera>();
         }
 
-        public object PPOPIS
+        [XmlElement("PPOPIS")]
+        public string PPOPIS
         {
             get
             {

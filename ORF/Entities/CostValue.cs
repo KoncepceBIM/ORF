@@ -8,9 +8,15 @@ namespace ORF.Entities
 {
     public class CostValue : IfcWrapper<IIfcCostValue>, IEntity
     {
-        public CostValue(IIfcCostValue entity) : base(entity)
+        internal CostValue(IIfcCostValue entity) : base(entity)
         {
         }
+
+        public CostValue(CostModel model): this(model.Create.CostValue())
+        {
+
+        }
+
         public string Name { get => Entity.Name; set => Entity.Name = value; }
         public string Description { get => Entity.Description; set => Entity.Description = value; }
         public string Category { get => Entity.Category; set => Entity.Category = value; }
