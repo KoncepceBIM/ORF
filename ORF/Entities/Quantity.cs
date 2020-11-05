@@ -37,8 +37,6 @@ namespace ORF.Entities
                     case QuantityTypeEnum.Area:
                         if (value.UnitType != IfcUnitEnum.AREAUNIT) throw new ArgumentException("Incompatible unit type");
                         break;
-                    case QuantityTypeEnum.Count:
-                        throw new ArgumentException("Incompatible unit type");
                     case QuantityTypeEnum.Length:
                         if (value.UnitType != IfcUnitEnum.LENGTHUNIT) throw new ArgumentException("Incompatible unit type");
                         break;
@@ -52,7 +50,7 @@ namespace ORF.Entities
                         if (value.UnitType != IfcUnitEnum.MASSUNIT) throw new ArgumentException("Incompatible unit type");
                         break;
                     default:
-                        throw new NotSupportedException();
+                        break;
                 }
 
                 Entity.Unit = value;

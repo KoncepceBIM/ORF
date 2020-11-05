@@ -326,7 +326,8 @@ namespace ORF.Entities
             if (rel == null)
             { 
                 var create = new Create(item.Entity.Model);
-                create.RelAssociatesClassification(r => r.RelatingClassification = item.Entity);
+                rel = create.RelAssociatesClassification(r => r.RelatingClassification = item.Entity);
+                rels.Add(rel);
             }
             rel.RelatedObjects.Add(costItem.Entity);
         }
