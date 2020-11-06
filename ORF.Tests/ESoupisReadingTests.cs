@@ -25,7 +25,7 @@ namespace ORF.Tests
             using var file = File.OpenRead("Data/eSoupis.xml");
             var s = TeSoupis.Deserialize(file);
             Assert.IsNotNull(s);
-
+                
             using var model = Convertor.Convert(s);
             model.SaveAsIfc($"eSoupis.ifc");
             Assert.IsTrue(model.IsValid(out IEnumerable<ValidationResult> errs));

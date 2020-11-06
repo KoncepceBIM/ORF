@@ -41,6 +41,8 @@ namespace ESoupis
                 model.Project.LongName = stavba.SPOPIS;
                 model.Project.Address = model.Create.PostalAddress(a => a.AddressLines.Add(stavba.Misto));
 
+                var jkso = ProcessJKSO(model, soupis);
+
                 // process all sites
                 foreach (var s in soupis.STAVBA)
                 {
@@ -51,7 +53,7 @@ namespace ESoupis
                     ProcessActors(model, schedule, s.SUBJEKT);
 
                     // schedule items and classification
-                    ProcessObjects(model, schedule, s.OBJEKT);
+                    ProcessObjects(model, schedule, s.OBJEKT, jkso);
                 }
 
                 // commit changes
@@ -60,7 +62,36 @@ namespace ESoupis
             }
         }
 
-        private static void ProcessObjects(CostModel model, CostSchedule schedule, IEnumerable<TObjekt> objekty)
+        private static Dictionary<string, ClassificationItem> ProcessJKSO(CostModel model, TeSoupis soupis)
+        {
+            var result = new Dictionary<string, ClassificationItem>();
+            var items = (soupis.STAVBA ?? new List<TStavba>())
+                .SelectMany(s => s.OBJEKT ?? new List<TObjekt>())
+                .Where(o => !string.IsNullOrWhiteSpace(o.CisloJKSO))
+                .Select(o => new { Nazev = o.NazevJKSO, Cislo = o.CisloJKSO })
+                .ToList();
+
+            if (!items.Any())
+                return result;
+
+            var jkso = new Classification(model, "JKSO");
+            items.ForEach(i => {
+                if (!result.ContainsKey(i.Cislo))
+                    return;
+
+                var j = new ClassificationItem(model) {
+                    Name = i.Nazev,
+                    Identification = i.Cislo
+                };
+
+                jkso.Children.Add(j);
+                result.Add(i.Cislo, j);
+            });
+
+            return result;
+        }
+
+        private static void ProcessObjects(CostModel model, CostSchedule schedule, IEnumerable<TObjekt> objekty, Dictionary<string, ClassificationItem> jkso)
         {
             if (objekty == null || !objekty.Any())
                 return;
@@ -74,14 +105,18 @@ namespace ESoupis
                     Description = obj.OPOPIS,
                     Identifier = obj.Cislo
                 };
+                schedule.CostItemRoots.Add(rootItem);
 
                 // additional properties can be stored in custom property sets
                 rootItem["CZ_CostItem"] = new PropertySet(model);
-                rootItem["CZ_CostItem"]["CisloJKSO"] = new IfcIdentifier(obj.CisloJKSO);
-                rootItem["CZ_CostItem"]["NazevJKSO"] = new IfcIdentifier(obj.NazevJKSO);
                 rootItem["CZ_CostItem"]["Charakteristika"] = new IfcText(obj.Charakteristika);
                 rootItem["CZ_CostItem"]["DruhStavebniAkce"] = new IfcText(obj.DruhStavebniAkce);
-                schedule.CostItemRoots.Add(rootItem);
+
+                if (!string.IsNullOrWhiteSpace(obj.CisloJKSO))
+                {
+                    var jksoItem = jkso[obj.CisloJKSO];
+                    rootItem.ClassificationItems.Add(jksoItem);
+                }
 
                 foreach (var soup in obj.SOUPIS)
                 {
@@ -190,7 +225,8 @@ namespace ESoupis
                 {
                     Name = polozka.Nazev,
                     Identifier = polozka.Cislo,
-                    Description = polozka.PPOPIS
+                    Description = polozka.PPOPIS,
+                    Type = polozka.Typ.ToString()
                 };
 
                 // unit cost. There might be more than one or it can be modeled as a hierarchy with operators
@@ -203,8 +239,6 @@ namespace ESoupis
 
                 // additional properties can be stored in custom property sets
                 item["CZ_CostItem"] = new PropertySet(model);
-                item["CZ_CostItem"]["UID"] = new IfcIdentifier(polozka.UID);
-                item["CZ_CostItem"]["Typ"] = new IfcIdentifier(polozka.Typ.ToString());
                 item["CZ_CostItem"]["JHmotnost"] = new IfcMassMeasure(System.Convert.ToDouble(polozka.JHmotnost));
                 item["CZ_CostItem"]["JDemontazniHmotnost"] = new IfcMassMeasure(System.Convert.ToDouble(polozka.JDemontazniHmotnost));
                 item["CZ_CostItem"]["SazbaDPH"] = new IfcRatioMeasure(System.Convert.ToDouble(polozka.SazbaDPH) / 100);
@@ -212,6 +246,9 @@ namespace ESoupis
                 item["CZ_CostItem"]["ObchNazevAN"] = new IfcBoolean(polozka.ObchNazevAN);
                 item["CZ_CostItem"]["PoradoveCislo"] = new IfcInteger(polozka.PoradoveCislo);
                 parent.Children.Add(item);
+
+                // Deprecated: using IFC GlobalId
+                // item["CZ_CostItem"]["UID"] = new IfcIdentifier(polozka.UID);
 
                 // assign classification item if defined
                 if (
@@ -397,12 +434,12 @@ namespace ESoupis
                 {
                     Name = dil.Nazev,
                     Identifier = dil.Cislo,
-                    Description = dil.DPOPIS
+                    Description = dil.DPOPIS,
+                    Type = dil.Typ.ToString()
                 };
 
                 // additional properties can be stored in custom property sets
                 item["CZ_CostItem"] = new PropertySet(model);
-                item["CZ_CostItem"]["Typ"] = new IfcIdentifier(dil.Typ.ToString());
                 parent.Children.Add(item);
 
                 // leafs in the cost breakdown hierarchy

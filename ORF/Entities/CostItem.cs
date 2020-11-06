@@ -16,6 +16,18 @@ namespace ORF.Entities
             UnitValues = new ValuesCollection(this);
         }
 
+        public string Type { 
+            get => Entity.ObjectType; 
+            set 
+            {
+                Entity.ObjectType = value;
+                if (!string.IsNullOrWhiteSpace(value))
+                    Entity.PredefinedType = IfcCostItemTypeEnum.USERDEFINED;
+                else
+                    Entity.PredefinedType = IfcCostItemTypeEnum.NOTDEFINED;
+            } 
+        }
+
         public CostItem(CostModel model): this(model.Create.CostItem(), false)
         {
             
