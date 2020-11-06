@@ -3,9 +3,7 @@ using ORF.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime;
 using Xbim.Ifc;
-using Xbim.Ifc2x3.FacilitiesMgmtDomain;
 using Xbim.Ifc4.Interfaces;
 using Xbim.Ifc4.MeasureResource;
 
@@ -17,6 +15,8 @@ namespace ESoupis
         {
             unitCache.Clear();
 
+            // information about the application, person and organisation
+            // who created the file
             var credentials = new XbimEditorCredentials
             {
                 ApplicationDevelopersName = "Martin Cerny",
@@ -33,20 +33,28 @@ namespace ESoupis
             var model = new CostModel(credentials, stavba.Nazev);
             using (var txn = model.BeginTransaction())
             {
-                model.Project.LongName = stavba.SPOPIS;
-                model.Project.Address = model.Create.PostalAddress(a => a.AddressLines.Add(stavba.Misto));
-
                 // currency
                 var costUnit = model.Create.MonetaryUnit(u => u.Currency = soupis.Mena.ToString());
                 model.Project.Units.Add(costUnit);
 
-                var schedule = new CostSchedule(model, stavba.Cislo);
+                // project information
+                model.Project.LongName = stavba.SPOPIS;
+                model.Project.Address = model.Create.PostalAddress(a => a.AddressLines.Add(stavba.Misto));
 
-                // subjects
-                ProcessActors(model, schedule, stavba.SUBJEKT);
+                // process all sites
+                foreach (var s in soupis.STAVBA)
+                {
+                    // root element
+                    var schedule = new CostSchedule(model, s.Cislo);
 
-                ProcessObjects(model, schedule, stavba.OBJEKT);
+                    // subjects (client, supplier)
+                    ProcessActors(model, schedule, s.SUBJEKT);
 
+                    // schedule items and classification
+                    ProcessObjects(model, schedule, s.OBJEKT);
+                }
+
+                // commit changes
                 txn.Commit();
                 return model;
             }
@@ -59,12 +67,15 @@ namespace ESoupis
 
             foreach (var obj in objekty)
             {
+                // root element of the cost schedule
                 var rootItem = new CostItem(model)
                 {
                     Name = obj.Nazev,
                     Description = obj.OPOPIS,
                     Identifier = obj.Cislo
                 };
+
+                // additional properties can be stored in custom property sets
                 rootItem["CZ_CostItem"] = new PropertySet(model);
                 rootItem["CZ_CostItem"]["CisloJKSO"] = new IfcIdentifier(obj.CisloJKSO);
                 rootItem["CZ_CostItem"]["NazevJKSO"] = new IfcIdentifier(obj.NazevJKSO);
@@ -82,6 +93,7 @@ namespace ESoupis
                     };
                     rootItem.Children.Add(item);
 
+                    // classification hierarchy in IFC. Cost Items will be related to Classification Items
                     var classificationMap = new Dictionary<string, ClassificationItem>();
                     if (soup.ZATRIDENI != null && soup.ZATRIDENI.Any())
                     {
@@ -90,6 +102,7 @@ namespace ESoupis
                         classificationMap = ConvertClassification(model, soup.ZATRIDENI, rootClassification.Children);
                     }
 
+                    // next level of the cost breakdown structure
                     ProcessParts(model, soup.DIL, item, classificationMap);
                 }
             }
@@ -123,13 +136,22 @@ namespace ESoupis
 
             foreach (var subjekt in subjekty)
             {
+                // actor will be assigned to schedule through IfcRelAssignsToActor
                 var actor = new Actor(model, subjekt.Nazev);
-                schedule.Actors.Add(actor, GetRole(subjekt.Typ));
+                var role = GetRole(subjekt.Typ);
+                if (role != IfcRoleEnum.USERDEFINED)
+                    // prefered way is to use one of the predefined roles
+                    schedule.Actors.Add(actor, role);
+                else
+                    // extensibility allows to use any string as a role
+                    schedule.Actors.Add(actor, subjekt.Typ.ToString());
 
+                // actor can have person
                 var person = model.Create.Person(p =>
                 {
                     p.GivenName = subjekt.Kontakt;
                 });
+                // and organization
                 var organization = model.Create.Organization(o =>
                 {
                     o.Identification = subjekt.ICO;
@@ -152,6 +174,7 @@ namespace ESoupis
                     po.ThePerson = person;
                     po.TheOrganization = organization;
                 });
+                // additional information can be stored using custom property set(s)
                 actor["CZ_Actor"] = new PropertySet(model);
                 actor["CZ_Actor"]["DIC"] = new IfcIdentifier(subjekt.DIC);
             }
@@ -170,11 +193,15 @@ namespace ESoupis
                     Description = polozka.PPOPIS
                 };
 
-                var unitCost = item.UnitValues.Add();
-                unitCost.Value = System.Convert.ToDouble(polozka.JCena);
+                // unit cost. There might be more than one or it can be modeled as a hierarchy with operators
+                var unitCost = new CostValue(model) {  Value = System.Convert.ToDouble(polozka.JCena) };
+                // in the base case there is just one
+                item.UnitValues.Add(unitCost);
 
+                // Quantities have measure type and unit, if it is not cost
                 AddQuantity(model, item, polozka.MJ, System.Convert.ToDouble(polozka.Mnozstvi));
 
+                // additional properties can be stored in custom property sets
                 item["CZ_CostItem"] = new PropertySet(model);
                 item["CZ_CostItem"]["UID"] = new IfcIdentifier(polozka.UID);
                 item["CZ_CostItem"]["Typ"] = new IfcIdentifier(polozka.Typ.ToString());
@@ -186,8 +213,9 @@ namespace ESoupis
                 item["CZ_CostItem"]["PoradoveCislo"] = new IfcInteger(polozka.PoradoveCislo);
                 parent.Children.Add(item);
 
+                // assign classification item if defined
                 if (
-                    !string.IsNullOrWhiteSpace(polozka.PolozkaZatrideniUID) && 
+                    !string.IsNullOrWhiteSpace(polozka.PolozkaZatrideniUID) &&
                     map.TryGetValue(polozka.PolozkaZatrideniUID, out ClassificationItem ci))
                 {
                     item.ClassificationItems.Add(ci);
@@ -195,8 +223,17 @@ namespace ESoupis
             }
         }
 
+        /// <summary>
+        /// Ad quantity with specific measure type and unit
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="item"></param>
+        /// <param name="unitStr"></param>
+        /// <param name="value"></param>
         private static void AddQuantity(CostModel model, CostItem item, string unitStr, double value)
         {
+            // units are machine readable and all basic units are expresed using fixed enumerations related to SI (ISO/IEC 80000).
+            // Other units are expressed as conversion based units with exact relation to SI units
             var unit = GetUnit(model, unitStr);
             Quantity quantity;
             switch (unit?.UnitType)
@@ -226,6 +263,7 @@ namespace ESoupis
 
         private static IIfcNamedUnit GetUnit(CostModel model, string name)
         {
+            // minimal level of normalization
             name = name
                 .ToLowerInvariant()
                 .Replace(" ", "")
@@ -235,6 +273,7 @@ namespace ESoupis
             if (unitCache.TryGetValue(name, out IIfcNamedUnit result))
                 return result;
 
+            // units based on known string representations
             result = CreateUnit(model, name);
             if (result != null)
                 unitCache.Add(name, result);
@@ -242,6 +281,12 @@ namespace ESoupis
             return result;
         }
 
+        /// <summary>
+        /// Creates units based on known string representations
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
         private static IIfcNamedUnit CreateUnit(CostModel model, string name)
         {
             if (string.IsNullOrWhiteSpace(name))
@@ -250,48 +295,50 @@ namespace ESoupis
             var c = model.Create;
             switch (name)
             {
-                case "ks":
-                case "kus":
-                case "kpl":
-                case "%":
-                    return null;
                 case "m":
                 case "mb":
-                    return c.SIUnit(u => {
+                    return c.SIUnit(u =>
+                    {
                         u.UnitType = IfcUnitEnum.LENGTHUNIT;
                         u.Name = IfcSIUnitName.METRE;
                     });
                 case "mm":
-                    return c.SIUnit(u => {
+                    return c.SIUnit(u =>
+                    {
                         u.UnitType = IfcUnitEnum.LENGTHUNIT;
                         u.Name = IfcSIUnitName.METRE;
                         u.Prefix = IfcSIPrefix.MILLI;
                     });
                 case "km":
-                    return c.SIUnit(u => {
+                    return c.SIUnit(u =>
+                    {
                         u.UnitType = IfcUnitEnum.LENGTHUNIT;
                         u.Name = IfcSIUnitName.METRE;
                         u.Prefix = IfcSIPrefix.KILO;
                     });
                 case "m2":
-                    return c.SIUnit(u => {
+                    return c.SIUnit(u =>
+                    {
                         u.UnitType = IfcUnitEnum.AREAUNIT;
                         u.Name = IfcSIUnitName.SQUARE_METRE;
                     });
                 case "m3":
-                    return c.SIUnit(u => {
+                    return c.SIUnit(u =>
+                    {
                         u.UnitType = IfcUnitEnum.VOLUMEUNIT;
                         u.Name = IfcSIUnitName.CUBIC_METRE;
                     });
                 case "kg":
-                    return c.SIUnit(u => {
+                    return c.SIUnit(u =>
+                    {
                         u.UnitType = IfcUnitEnum.MASSUNIT;
                         u.Name = IfcSIUnitName.GRAM;
                         u.Prefix = IfcSIPrefix.KILO;
                     });
 
                 case "t":
-                    return c.ConversionBasedUnit(cu => {
+                    return c.ConversionBasedUnit(cu =>
+                    {
                         cu.Name = "t";
                         cu.ConversionFactor = c.MeasureWithUnit(mu =>
                         {
@@ -304,7 +351,8 @@ namespace ESoupis
                             mu.ValueComponent = new IfcReal(1000);
                         });
                         cu.UnitType = IfcUnitEnum.MASSUNIT;
-                        cu.Dimensions = c.DimensionalExponents(e => {
+                        cu.Dimensions = c.DimensionalExponents(e =>
+                        {
                             e.LengthExponent = 0;
                             e.MassExponent = 1;
                             e.TimeExponent = 0;
@@ -315,10 +363,12 @@ namespace ESoupis
                         });
                     });
                 default:
-                    return c.ContextDependentUnit(u => {
+                    return c.ContextDependentUnit(u =>
+                    {
                         u.UnitType = IfcUnitEnum.USERDEFINED;
                         u.Name = name;
-                        u.Dimensions = c.DimensionalExponents(e => {
+                        u.Dimensions = c.DimensionalExponents(e =>
+                        {
                             e.LengthExponent = 0;
                             e.MassExponent = 0;
                             e.TimeExponent = 0;
@@ -331,6 +381,9 @@ namespace ESoupis
             }
         }
 
+        /// <summary>
+        /// Cache of units
+        /// </summary>
         private static readonly Dictionary<string, IIfcNamedUnit> unitCache = new Dictionary<string, IIfcNamedUnit>();
 
         private static void ProcessParts(CostModel model, List<TDil> dily, CostItem parent, Dictionary<string, ClassificationItem> map)
@@ -339,6 +392,7 @@ namespace ESoupis
                 return;
             foreach (var dil in dily)
             {
+                // grouping level in the cost breakdown hierarchy
                 var item = new CostItem(model)
                 {
                     Name = dil.Nazev,
@@ -346,10 +400,12 @@ namespace ESoupis
                     Description = dil.DPOPIS
                 };
 
+                // additional properties can be stored in custom property sets
                 item["CZ_CostItem"] = new PropertySet(model);
                 item["CZ_CostItem"]["Typ"] = new IfcIdentifier(dil.Typ.ToString());
                 parent.Children.Add(item);
 
+                // leafs in the cost breakdown hierarchy
                 ProcessItems(model, dil.POLOZKA, item, map);
             }
         }
@@ -359,6 +415,8 @@ namespace ESoupis
             var result = new Dictionary<string, ClassificationItem>();
             foreach (var zatr in zatrideni)
             {
+                // classification items model classification hierarchy (breakdown structure)
+                // there might be several classifications in the model
                 var item = new ClassificationItem(model)
                 {
                     Sort = zatr.Typ.ToString(),
@@ -366,18 +424,27 @@ namespace ESoupis
                     Identification = zatr.Cislo,
                     Description = zatr.ZPOPIS
                 };
+
+                // nested level of classification breakdown
                 if (zatr.ZATRIDENI?.Any() == true)
                 {
                     var children = ConvertClassification(model, zatr.ZATRIDENI, item.Children);
                     foreach (var ch in children)
                         result.Add(ch.Key, ch.Value);
                 }
+
+                // keep key in the lookup for later use
                 if (!string.IsNullOrWhiteSpace(zatr.PolozkaZatrideniUID) && !result.ContainsKey(zatr.PolozkaZatrideniUID))
                     result.Add(zatr.PolozkaZatrideniUID, item);
             }
             return result;
         }
 
+        /// <summary>
+        /// Mapping roles between schemas
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
         private static IfcRoleEnum GetRole(TTypSubjektu type)
         {
             switch (type)
@@ -387,7 +454,7 @@ namespace ESoupis
                 case TTypSubjektu.DODAVATEL:
                     return IfcRoleEnum.SUPPLIER;
                 default:
-                    throw new ArgumentException();
+                    return IfcRoleEnum.USERDEFINED;
             }
         }
     }

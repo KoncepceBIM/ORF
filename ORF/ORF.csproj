@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xbim.Essentials" Version="5.1.317-develop" />
+    <PackageReference Include="Xbim.Essentials" Version="5.1.318-develop" />
   </ItemGroup>
 
 </Project>
