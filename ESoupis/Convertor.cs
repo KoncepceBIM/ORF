@@ -76,7 +76,7 @@ namespace ESoupis
 
             var jkso = new Classification(model, "JKSO");
             items.ForEach(i => {
-                if (!result.ContainsKey(i.Cislo))
+                if (result.ContainsKey(i.Cislo))
                     return;
 
                 var j = new ClassificationItem(model) {
