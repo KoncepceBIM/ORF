@@ -30,6 +30,8 @@ namespace ORF.Entities
             }
         }
 
+        public IEnumerable<PropertySet> PropertySets => _psets.Values;
+
         public PropertySet this[string psetName]
         {
             get

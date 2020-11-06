@@ -13,17 +13,6 @@ namespace ORF.Entities
         {
             CostItemRoots = new RootItemsCollection(this, init);
             Actors = new ActorsCollection(this, init);
-
-            if (!init)
-                return;
-
-            _relDocs = schedule.HasAssociations
-                .OfType<IIfcRelAssociatesDocument>()
-                .Where(r => r.RelatingDocument is IIfcDocumentReference)
-                .FirstOrDefault();
-            if (_relDocs != null)
-                _costSystem = new CostSystem(_relDocs.RelatingDocument as IIfcDocumentReference);
-
         }
 
         public CostSchedule(CostModel model, string name) : this(model.Create.CostSchedule(s => s.Name = name), false)
@@ -32,36 +21,6 @@ namespace ORF.Entities
         }
 
         public ActorsCollection Actors { get; }
-
-        private CostSystem _costSystem;
-        public CostSystem CostSystem
-        {
-            get => _costSystem;
-            set
-            {
-                if (value != null && value.Equals(_costSystem))
-                    return;
-
-                if (_relDocs != null && _relDocs.RelatedObjects.Contains(Entity))
-                {
-                    _relDocs.RelatedObjects.Remove(Entity);
-                    _relDocs = null;
-                }
-
-                _costSystem = value;
-                if (value == null)
-                    return;
-
-                _relDocs = Create.RelAssociatesDocument(r =>
-                {
-                    r.RelatedObjects.Add(Entity);
-                    r.RelatingDocument = value.Entity;
-                });
-            }
-        }
-
-        private IIfcRelAssociatesDocument _relDocs;
-
 
         public RootItemsCollection CostItemRoots { get; }
 

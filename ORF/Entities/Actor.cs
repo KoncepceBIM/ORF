@@ -15,5 +15,7 @@ namespace ORF.Entities
         {
             
         }
+
+        public IIfcActorSelect PersonAndOrganization { get => Entity.TheActor; set => Entity.TheActor = value; }
     }
 }
