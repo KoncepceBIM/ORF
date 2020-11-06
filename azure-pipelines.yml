@@ -87,7 +87,7 @@ steps:
     
 # Build and pack client library
 - script: dotnet pack ORF\ORF.csproj -c $(buildConfiguration) -o $(Build.BinariesDirectory) /p:PackageVersion=$(packageversion)
-  displayName: 'BCF - packing'
+  displayName: 'ORF - packing'
   
 
 # Delete Files
