@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ORF.Entities.CostItem">
-    <Position X="6.25" Y="3.25" Width="2" />
+    <Position X="7.5" Y="6.5" Width="2" />
     <Members>
       <Method Name="CostItem" Hidden="true" />
       <Property Name="TotalCost" Hidden="true" />
@@ -10,13 +10,14 @@
     </Members>
     <AssociationLine Name="Children" Type="ORF.Entities.CostItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="6.5" Y="3.25" />
-        <Point X="6.5" Y="2.214" />
-        <Point X="7.938" Y="2.214" />
-        <Point X="7.938" Y="3.25" />
+        <Point X="7.75" Y="7.925" />
+        <Point X="7.75" Y="8.3" />
+        <Point X="7.125" Y="8.3" />
+        <Point X="7.125" Y="7.437" />
+        <Point X="7.5" Y="7.437" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.354" Y="0.762" />
+        <Position X="0.239" Y="-0.819" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -32,7 +33,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.Entities.ClassificationItem">
-    <Position X="10.25" Y="3.25" Width="2" />
+    <Position X="11.5" Y="6.5" Width="2" />
     <Members>
       <Method Name="ClassificationItem" Hidden="true" />
       <Property Name="IClassificationParent.Entity" Hidden="true" />
@@ -40,13 +41,13 @@
     </Members>
     <AssociationLine Name="Children" Type="ORF.Entities.ClassificationItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="10.688" Y="5.06" />
-        <Point X="10.688" Y="5.637" />
-        <Point X="11.938" Y="5.637" />
-        <Point X="11.938" Y="5.06" />
+        <Point X="11.938" Y="8.31" />
+        <Point X="11.938" Y="9.143" />
+        <Point X="13.188" Y="9.143" />
+        <Point X="13.188" Y="8.31" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.223" Y="0.328" />
+        <Position X="0.211" Y="0.524" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -59,10 +60,18 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.Entities.CostSchedule">
-    <Position X="2.5" Y="3.25" Width="2" />
+    <Position X="3.75" Y="6.5" Width="2" />
     <Members>
       <Method Name="CostSchedule" Hidden="true" />
     </Members>
+    <InheritanceLine Type="ORF.Entities.IfcRootWrapper&lt;T&gt;" ManuallyRouted="true">
+      <Path>
+        <Point X="6.75" Y="3.617" />
+        <Point X="6.75" Y="4.137" />
+        <Point X="4.75" Y="4.137" />
+        <Point X="4.75" Y="6.5" />
+      </Path>
+    </InheritanceLine>
     <AssociationLine Name="CostItemRoots" Type="ORF.Entities.CostItem">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.312" Y="0.06" />
@@ -78,7 +87,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ORF.Entities.Quantity">
-    <Position X="6" Y="6.25" Width="1.5" />
+    <Position X="7.25" Y="9.5" Width="1.5" />
     <Members>
       <Method Name="Quantity" Hidden="true" />
     </Members>
@@ -87,8 +96,8 @@
       <FileName>Entities\Quantity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ORF.Entities.Actor">
-    <Position X="2.5" Y="5.5" Width="2" />
+  <Class Name="ORF.Entities.Actor" HideInheritanceLine="true">
+    <Position X="3.75" Y="8.5" Width="2" />
     <Members>
       <Method Name="Actor" Hidden="true" />
     </Members>
@@ -98,7 +107,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ORF.Entities.CostValue">
-    <Position X="8" Y="6.25" Width="1.5" />
+    <Position X="9.25" Y="9.5" Width="1.5" />
     <Members>
       <Method Name="CostValue" Hidden="true" />
     </Members>
@@ -109,7 +118,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.Entities.Project">
-    <Position X="0.5" Y="3.25" Width="1.5" />
+    <Position X="2.5" Y="2" Width="1.5" />
     <Members>
       <Field Name="_site" Hidden="true" />
       <Method Name="Project" Hidden="true" />
@@ -121,7 +130,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ORF.Entities.Classification">
-    <Position X="10.25" Y="0.5" Width="2" />
+    <Position X="11.5" Y="3.75" Width="2" />
     <Members>
       <Method Name="Classification" Hidden="true" />
       <Property Name="IClassificationParent.Entity" Hidden="true" />
@@ -136,7 +145,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.CostModel">
-    <Position X="2.5" Y="0.5" Width="2" />
+    <Position X="0.5" Y="10.5" Width="2" />
     <Members>
       <Method Name="BeginTransaction" Hidden="true" />
       <Method Name="CostModel" Hidden="true" />
@@ -148,6 +157,15 @@
       <Method Name="SaveAsIfcXml" Hidden="true" />
       <Method Name="SaveAsORF" Hidden="true" />
     </Members>
+    <AssociationLine Name="Classifications" Type="ORF.Entities.Classification" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.125" Y="11.603" />
+        <Point X="2.125" Y="11.978" />
+        <Point X="13.875" Y="11.978" />
+        <Point X="13.875" Y="4.688" />
+        <Point X="13.5" Y="4.688" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAACAAABACAAAAABAAwACAAAgEAAAEAAAAAAAAAACAA=</HashCode>
       <FileName>CostModel.cs</FileName>
@@ -160,6 +178,30 @@
       <Property Name="Classifications" />
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ORF.Entities.IfcRootWrapper&lt;T&gt;">
+    <Position X="6" Y="2" Width="1.5" />
+    <Members>
+      <Method Name="IfcRootWrapper" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\IfcRootWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ORF.Entities.IfcObjectWrapper&lt;T&gt;">
+    <Position X="7.5" Y="4.5" Width="2" />
+    <Members>
+      <Field Name="_psets" Hidden="true" />
+      <Field Name="_rels" Hidden="true" />
+      <Method Name="IfcObjectWrapper" Hidden="true" />
+      <Property Name="this" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAEAACAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Entities\IfcObjectWrapper.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
