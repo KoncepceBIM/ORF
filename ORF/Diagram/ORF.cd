@@ -12,8 +12,8 @@
       <Path>
         <Point X="7.75" Y="7.925" />
         <Point X="7.75" Y="8.3" />
-        <Point X="7.125" Y="8.3" />
-        <Point X="7.125" Y="7.437" />
+        <Point X="6.417" Y="8.3" />
+        <Point X="6.417" Y="7.437" />
         <Point X="7.5" Y="7.437" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
@@ -25,8 +25,8 @@
       <FileName>Entities\CostItem.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="Children" />
       <Property Name="ClassificationItems" />
+      <Property Name="Children" />
       <Property Name="Quantities" />
       <Property Name="UnitValues" />
     </ShowAsCollectionAssociation>
@@ -64,14 +64,6 @@
     <Members>
       <Method Name="CostSchedule" Hidden="true" />
     </Members>
-    <InheritanceLine Type="ORF.Entities.IfcRootWrapper&lt;T&gt;" ManuallyRouted="true">
-      <Path>
-        <Point X="6.75" Y="3.617" />
-        <Point X="6.75" Y="4.137" />
-        <Point X="4.75" Y="4.137" />
-        <Point X="4.75" Y="6.5" />
-      </Path>
-    </InheritanceLine>
     <AssociationLine Name="CostItemRoots" Type="ORF.Entities.CostItem">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.312" Y="0.06" />
@@ -82,8 +74,8 @@
       <FileName>Entities\CostSchedule.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="CostItemRoots" />
       <Property Name="Actors" />
+      <Property Name="CostItemRoots" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ORF.Entities.Quantity">
@@ -124,58 +116,36 @@
       <Method Name="Project" Hidden="true" />
       <Property Name="Site" Hidden="true" />
     </Members>
+    <AssociationLine Name="CostSchedules" Type="ORF.Entities.CostSchedule">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.037" Y="-0.284" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AACAAAAAAEEAgAAAAAAIAAAAEAAAAAAGEIAIAAAABEA=</HashCode>
+      <HashCode>AACAAAAAAEEAgAAAAAAYAAAAEAAAAAAGEIAIAAAABEA=</HashCode>
       <FileName>Entities\Project.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CostSchedules" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ORF.Entities.Classification">
-    <Position X="11.5" Y="3.75" Width="2" />
+    <Position X="11.5" Y="3" Width="2" />
     <Members>
       <Method Name="Classification" Hidden="true" />
       <Property Name="IClassificationParent.Entity" Hidden="true" />
     </Members>
+    <AssociationLine Name="Children" Type="ORF.Entities.ClassificationItem">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.817" Y="0.237" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAgAAAAAAIEAAQAAAAAQAAAAAAAQAAAAAA=</HashCode>
       <FileName>Entities\Classification.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Children" />
-    </ShowAsCollectionAssociation>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="ORF.CostModel">
-    <Position X="0.5" Y="10.5" Width="2" />
-    <Members>
-      <Method Name="BeginTransaction" Hidden="true" />
-      <Method Name="CostModel" Hidden="true" />
-      <Property Name="Create" Hidden="true" />
-      <Method Name="CreateProject" Hidden="true" />
-      <Method Name="Dispose" Hidden="true" />
-      <Method Name="IsValid" Hidden="true" />
-      <Method Name="SaveAsIfc" Hidden="true" />
-      <Method Name="SaveAsIfcXml" Hidden="true" />
-      <Method Name="SaveAsORF" Hidden="true" />
-    </Members>
-    <AssociationLine Name="Classifications" Type="ORF.Entities.Classification" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="2.125" Y="11.603" />
-        <Point X="2.125" Y="11.978" />
-        <Point X="13.875" Y="11.978" />
-        <Point X="13.875" Y="4.688" />
-        <Point X="13.5" Y="4.688" />
-      </Path>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAACAAABACAAAAABAAwACAAAgEAAAEAAAAAAAAAACAA=</HashCode>
-      <FileName>CostModel.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Project" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="Schedules" />
-      <Property Name="Classifications" />
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
@@ -191,7 +161,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.Entities.IfcObjectWrapper&lt;T&gt;">
-    <Position X="7.5" Y="4.5" Width="2" />
+    <Position X="5.75" Y="4.25" Width="2" />
     <Members>
       <Field Name="_psets" Hidden="true" />
       <Field Name="_rels" Hidden="true" />

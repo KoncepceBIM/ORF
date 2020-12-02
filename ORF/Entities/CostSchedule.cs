@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Xbim.Ifc4.Interfaces;
 
 namespace ORF.Entities
 {
-    public class CostSchedule : IfcRootWrapper<IIfcCostSchedule>
+    public class CostSchedule : IfcObjectWrapper<IIfcCostSchedule>
     {
 
-        internal CostSchedule(IIfcCostSchedule schedule, bool init) : base(schedule)
+        internal CostSchedule(IIfcCostSchedule schedule, bool init) : base(schedule, init)
         {
             CostItemRoots = new RootItemsCollection(this, init);
             Actors = new ActorsCollection(this, init);
@@ -17,7 +16,7 @@ namespace ORF.Entities
 
         public CostSchedule(CostModel model, string name) : this(model.Create.CostSchedule(s => s.Name = name), false)
         {
-            model.Schedules.Add(this);
+            model.Project.CostSchedules.Add(this);
         }
 
         public ActorsCollection Actors { get; }

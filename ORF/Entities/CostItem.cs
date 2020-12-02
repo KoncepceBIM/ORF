@@ -322,7 +322,33 @@ namespace ORF.Entities
 
             rels = costItem.Entity.HasAssociations.OfType<IIfcRelAssociatesClassification>().ToList();
             inner = new HashSet<ClassificationItem>(rels.Where(r => r.RelatingClassification is IIfcClassificationReference)
-                .Select(r => new ClassificationItem(r.RelatingClassification as IIfcClassificationReference, true)));
+                .Select(r => GetOrCreate(r.RelatingClassification as IIfcClassificationReference)));
+        }
+
+        private ClassificationItem GetOrCreate(IIfcClassificationReference item)
+        {
+            var model = costItem.CostModel;
+            foreach (var classification in model.Classifications)
+            {
+                var items = new Stack<ClassificationItem>(classification.Children);
+                while (items.Count != 0)
+                {
+                    var c = items.Pop();
+                    if (c.Entity.Equals(item))
+                        return c;
+
+                    if (c.Children.Count == 0)
+                        continue;
+
+                    foreach (var child in c.Children)
+                    {
+                        items.Push(child);
+                    }
+                }
+            }
+
+            // create new if it was not found
+            return new ClassificationItem(item, true);
         }
 
         public int Count => inner.Count;
@@ -350,7 +376,10 @@ namespace ORF.Entities
             {
                 rel.RelatedObjects.Remove(costItem.Entity);
                 if (!rel.RelatedObjects.Any())
+                { 
                     rel.Model.Delete(rel);
+                    rels.Remove(rel);
+                }
             }
             inner.Clear();
         }
@@ -379,7 +408,10 @@ namespace ORF.Entities
             {
                 rel.RelatedObjects.Remove(costItem.Entity);
                 if (!rel.RelatedObjects.Any())
+                { 
                     rel.Model.Delete(rel);
+                    rels.Remove(rel);
+                }
             }
             return true;
         }

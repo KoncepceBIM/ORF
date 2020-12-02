@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Xbim.Common;
 using Xbim.Ifc4.Interfaces;
 
 namespace ORF.Entities
 {
-    public abstract class IfcWrapper<T> where T: IPersistEntity
+    public abstract class IfcWrapper<T> where T : IPersistEntity
     {
         protected IfcWrapper(T entity)
         {
@@ -20,6 +18,8 @@ namespace ORF.Entities
         protected IModel Model => Entity.Model;
         protected Create Create { get; }
 
+        public CostModel CostModel => Model.Tag as CostModel;
+
         public override bool Equals(object obj)
         {
             if (!(obj is IfcWrapper<T> w))
@@ -31,6 +31,16 @@ namespace ORF.Entities
         public override int GetHashCode()
         {
             return Entity.EntityLabel;
+        }
+
+        public static bool operator ==(IfcWrapper<T> a, IfcWrapper<T> b) 
+        {
+            return a.Equals(b);
+        }
+
+        public static bool operator !=(IfcWrapper<T> a, IfcWrapper<T> b)
+        {
+            return !a.Equals(b);
         }
     }
 }
