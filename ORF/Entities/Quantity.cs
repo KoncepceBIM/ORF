@@ -4,7 +4,7 @@ using Xbim.Ifc4.Interfaces;
 
 namespace ORF.Entities
 {
-    public class Quantity : IfcWrapper<IIfcPhysicalSimpleQuantity>
+    public class Quantity : IfcWrapper<IIfcPhysicalSimpleQuantity>, IEntity
     {
         public Quantity(IIfcPhysicalSimpleQuantity entity) : base(entity)
         {

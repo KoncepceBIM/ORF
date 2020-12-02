@@ -10,7 +10,7 @@ namespace ORF.Entities
 
         internal CostSchedule(IIfcCostSchedule schedule, bool init) : base(schedule, init)
         {
-            CostItemRoots = new RootItemsCollection(this, init);
+            CostItems = new RootItemsCollection(this, init);
             Actors = new ActorsCollection(this, init);
         }
 
@@ -21,9 +21,9 @@ namespace ORF.Entities
 
         public ActorsCollection Actors { get; }
 
-        public RootItemsCollection CostItemRoots { get; }
+        public RootItemsCollection CostItems { get; }
 
-        public double TotalCost => CostItemRoots.Sum(i => i.TotalCost);
+        public double TotalCost => CostItems.Sum(i => i.TotalCost);
     }
 
     public class RootItemsCollection : ICollection<CostItem>

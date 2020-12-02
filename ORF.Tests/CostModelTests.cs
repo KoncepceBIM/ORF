@@ -76,8 +76,8 @@ namespace ORF.Tests
                         Description = "Description of substructure"
                     };
 
-                    schedule.CostItemRoots.Add(rootA);
-                    schedule.CostItemRoots.Add(rootB);
+                    schedule.CostItems.Add(rootA);
+                    schedule.CostItems.Add(rootB);
 
                     var walls = new CostItem(model)
                     {

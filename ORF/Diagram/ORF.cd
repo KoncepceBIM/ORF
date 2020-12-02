@@ -20,6 +20,16 @@
         <Position X="0.239" Y="-0.819" />
       </MemberNameLabel>
     </AssociationLine>
+    <AssociationLine Name="Quantities" Type="ORF.Entities.Quantity">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.869" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="UnitValues" Type="ORF.Entities.CostValue">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.994" Y="0.05" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>BABAAAgAAAAAAAABAAAEAAAAAAAAAAQAARAAQAAAAAA=</HashCode>
       <FileName>Entities\CostItem.cs</FileName>
@@ -30,7 +40,6 @@
       <Property Name="Quantities" />
       <Property Name="UnitValues" />
     </ShowAsCollectionAssociation>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.Entities.ClassificationItem">
     <Position X="11.5" Y="6.5" Width="2" />
@@ -64,18 +73,18 @@
     <Members>
       <Method Name="CostSchedule" Hidden="true" />
     </Members>
-    <AssociationLine Name="CostItemRoots" Type="ORF.Entities.CostItem">
+    <AssociationLine Name="CostItems" Type="ORF.Entities.CostItem">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.312" Y="0.06" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAABAAAAAAAAgAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAABAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>Entities\CostSchedule.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Actors" />
-      <Property Name="CostItemRoots" />
+      <Property Name="CostItems" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ORF.Entities.Quantity">
@@ -87,6 +96,7 @@
       <HashCode>AAAAAAAAAAAgAAAAIAAAAAQAAAAABAAAAQAgAAAAAAA=</HashCode>
       <FileName>Entities\Quantity.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.Entities.Actor" HideInheritanceLine="true">
     <Position X="3.75" Y="8.5" Width="2" />

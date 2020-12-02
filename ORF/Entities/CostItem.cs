@@ -6,7 +6,7 @@ using Xbim.Ifc4.Interfaces;
 
 namespace ORF.Entities
 {
-    public class CostItem : IfcObjectWrapper<IIfcCostItem>, IEntity
+    public class CostItem : IfcObjectWrapper<IIfcCostItem>
     {
         internal CostItem(IIfcCostItem item, bool init) : base(item, init)
         {

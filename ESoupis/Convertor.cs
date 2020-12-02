@@ -105,7 +105,7 @@ namespace ESoupis
                     Description = obj.OPOPIS,
                     Identifier = obj.Cislo
                 };
-                schedule.CostItemRoots.Add(rootItem);
+                schedule.CostItems.Add(rootItem);
 
                 // additional properties can be stored in custom property sets
                 rootItem["CZ_CostItem"] = new PropertySet(model);
@@ -182,12 +182,12 @@ namespace ESoupis
                     schedule.Actors.Add(actor, subjekt.Typ.ToString());
 
                 // actor can have person
-                var person = model.Create.Person(p =>
+                actor.Person = model.Create.Person(p =>
                 {
                     p.GivenName = subjekt.Kontakt;
                 });
                 // and organization
-                var organization = model.Create.Organization(o =>
+                actor.Organization = model.Create.Organization(o =>
                 {
                     o.Identification = subjekt.ICO;
                     o.Name = subjekt.Nazev;
@@ -203,11 +203,6 @@ namespace ESoupis
                         a.ElectronicMailAddresses.Add(subjekt.Email);
                         a.TelephoneNumbers.Add(subjekt.Telefon);
                     }));
-                });
-                actor.Entity.TheActor = model.Create.PersonAndOrganization(po =>
-                {
-                    po.ThePerson = person;
-                    po.TheOrganization = organization;
                 });
                 // additional information can be stored using custom property set(s)
                 actor["CZ_Actor"] = new PropertySet(model);
