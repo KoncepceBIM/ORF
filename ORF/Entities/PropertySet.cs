@@ -22,6 +22,8 @@ namespace ORF.Entities
         public string Name { get => Entity.Name; set => Entity.Name = value; }
         public string Description { get => Entity.Description; set => Entity.Description = value; }
 
+        public IList<IIfcProperty> Properties => Entity.HasProperties;
+
         public IIfcValue this[string property]
         {
             get

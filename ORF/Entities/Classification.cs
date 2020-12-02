@@ -6,7 +6,7 @@ using Xbim.Ifc4.Interfaces;
 
 namespace ORF.Entities
 {
-    public class Classification : IfcWrapper<IIfcClassification>, IEntity, IClassificationParent
+    public class Classification : IfcWrapper<IIfcClassification>, IClassificationParent
     {
         internal Classification(IIfcClassification entity, bool init) : base(entity)
         {

@@ -104,9 +104,13 @@
       <Method Name="Actor" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Entities\Actor.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Organization" />
+      <Property Name="Person" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ORF.Entities.CostValue">
     <Position X="9.25" Y="9.5" Width="1.5" />
@@ -123,8 +127,14 @@
     <Position X="2.5" Y="2" Width="1.5" />
     <Members>
       <Field Name="_site" Hidden="true" />
+      <Property Name="AreaUnit" Hidden="true" />
+      <Property Name="LengthUnit" Hidden="true" />
+      <Property Name="MonetaryUnit" Hidden="true" />
       <Method Name="Project" Hidden="true" />
       <Property Name="Site" Hidden="true" />
+      <Property Name="TimeUnit" Hidden="true" />
+      <Property Name="VolumeUnit" Hidden="true" />
+      <Property Name="WeightUnit" Hidden="true" />
     </Members>
     <AssociationLine Name="CostSchedules" Type="ORF.Entities.CostSchedule">
       <MemberNameLabel ManuallyPlaced="true">
@@ -183,5 +193,23 @@
       <FileName>Entities\IfcObjectWrapper.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="Xbim.Ifc4.Interfaces.IIfcOrganization" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="10" Width="1.5" />
+    <Members>
+      <Property Name="Engages" Hidden="true" />
+      <Property Name="IsRelatedBy" Hidden="true" />
+      <Property Name="Relates" Hidden="true" />
+      <Property Name="Roles" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Xbim.Ifc4.Interfaces.IIfcPerson" BaseTypeListCollapsed="true">
+    <Position X="5" Y="10" Width="1.5" />
+    <Members>
+      <Property Name="EngagedIn" Hidden="true" />
+      <Property Name="Roles" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
