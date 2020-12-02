@@ -21,7 +21,7 @@ namespace ORF.Entities
         public string Description { get => Entity.Description; set => Entity.Description = value; }
         public string Category { get => Entity.Category; set => Entity.Category = value; }
 
-        public IfcArithmeticOperatorEnum? Operator { get => Entity.ArithmeticOperator; set => Entity.ArithmeticOperator = value; }
+        // public IfcArithmeticOperatorEnum? Operator { get => Entity.ArithmeticOperator; set => Entity.ArithmeticOperator = value; }
 
         public double? Value
         {

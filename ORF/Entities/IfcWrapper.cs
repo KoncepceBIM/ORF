@@ -22,6 +22,9 @@ namespace ORF.Entities
 
         public override bool Equals(object obj)
         {
+            if (obj is IPersistEntity entity)
+                return entity.Equals(Entity);
+
             if (!(obj is IfcWrapper<T> w))
                 return false;
 

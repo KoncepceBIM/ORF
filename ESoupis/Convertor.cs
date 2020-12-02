@@ -432,10 +432,10 @@ namespace ESoupis
                     Description = dil.DPOPIS,
                     Type = dil.Typ.ToString()
                 };
+                parent.Children.Add(item);
 
                 // additional properties can be stored in custom property sets
-                item["CZ_CostItem"] = new PropertySet(model);
-                parent.Children.Add(item);
+                // item["CZ_CostItem"] = new PropertySet(model);
 
                 // leafs in the cost breakdown hierarchy
                 ProcessItems(model, dil.POLOZKA, item, map);

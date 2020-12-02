@@ -14,28 +14,31 @@ namespace ORF.Entities
             ClassificationItems = new ClassificationCollection(this, init);
             Quantities = new QuantityCollection(this);
             UnitValues = new ValuesCollection(this);
+            AssociatedElements = new AssociatedElementsCollection(this, init);
         }
 
-        public string Type { 
-            get => Entity.ObjectType; 
-            set 
+        public string Type
+        {
+            get => Entity.ObjectType;
+            set
             {
                 Entity.ObjectType = value;
                 if (!string.IsNullOrWhiteSpace(value))
                     Entity.PredefinedType = IfcCostItemTypeEnum.USERDEFINED;
                 else
                     Entity.PredefinedType = IfcCostItemTypeEnum.NOTDEFINED;
-            } 
+            }
         }
 
-        public CostItem(CostModel model): this(model.Create.CostItem(), false)
+        public CostItem(CostModel model) : this(model.Create.CostItem(), false)
         {
-            
+
         }
 
         public string Identifier { get => Entity.Identification; set => Entity.Identification = value; }
 
-        
+        public AssociatedElementsCollection AssociatedElements { get; }
+
         public ClassificationCollection ClassificationItems { get; }
 
         public CostChildrenCollection Children { get; }
@@ -258,7 +261,7 @@ namespace ORF.Entities
                 return;
 
             if (_native.Any())
-            { 
+            {
                 _native[0].RelatedObjects.Add(item.Entity);
                 return;
             }
@@ -362,7 +365,7 @@ namespace ORF.Entities
 
             var rel = rels.FirstOrDefault();
             if (rel == null)
-            { 
+            {
                 var create = new Create(item.Entity.Model);
                 rel = create.RelAssociatesClassification(r => r.RelatingClassification = item.Entity);
                 rels.Add(rel);
@@ -376,7 +379,7 @@ namespace ORF.Entities
             {
                 rel.RelatedObjects.Remove(costItem.Entity);
                 if (!rel.RelatedObjects.Any())
-                { 
+                {
                     rel.Model.Delete(rel);
                     rels.Remove(rel);
                 }
@@ -408,7 +411,91 @@ namespace ORF.Entities
             {
                 rel.RelatedObjects.Remove(costItem.Entity);
                 if (!rel.RelatedObjects.Any())
-                { 
+                {
+                    rel.Model.Delete(rel);
+                    rels.Remove(rel);
+                }
+            }
+            return true;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return inner.GetEnumerator();
+        }
+    }
+
+    public class AssociatedElementsCollection : ICollection<IIfcObjectDefinition>
+    {
+        private readonly HashSet<IIfcObjectDefinition> inner = new HashSet<IIfcObjectDefinition>();
+        private readonly List<IIfcRelAssignsToControl> rels = new List<IIfcRelAssignsToControl>();
+        private readonly CostItem costItem;
+
+        public AssociatedElementsCollection(CostItem costItem, bool init)
+        {
+            this.costItem = costItem;
+
+            if (!init)
+                return;
+
+            rels = costItem.Entity.Controls.ToList();
+            inner = new HashSet<IIfcObjectDefinition>(rels.SelectMany(r => r.RelatedObjects));
+        }
+
+        public int Count => inner.Count;
+
+        public bool IsReadOnly => false;
+
+        public void Add(IIfcObjectDefinition item)
+        {
+            if (!inner.Add(item))
+                return;
+
+            var rel = rels.FirstOrDefault();
+            if (rel == null)
+            {
+                var create = new Create(item.Model);
+                rel = create.RelAssignsToControl(r => r.RelatingControl = costItem.Entity);
+                rels.Add(rel);
+            }
+            rel.RelatedObjects.Add(costItem.Entity);
+        }
+
+        public void Clear()
+        {
+            foreach (var rel in rels)
+            {
+                rel.Model.Delete(rel);
+                rels.Remove(rel);
+            }
+            inner.Clear();
+        }
+
+        public bool Contains(IIfcObjectDefinition item)
+        {
+            return inner.Contains(item);
+        }
+
+        public void CopyTo(IIfcObjectDefinition[] array, int arrayIndex)
+        {
+            inner.CopyTo(array, arrayIndex);
+        }
+
+        public IEnumerator<IIfcObjectDefinition> GetEnumerator()
+        {
+            return inner.GetEnumerator();
+        }
+
+        public bool Remove(IIfcObjectDefinition item)
+        {
+            if (!inner.Remove(item))
+                return false;
+
+            foreach (var rel in rels)
+            {
+                rel.RelatedObjects.Remove(item);
+                if (!rel.RelatedObjects.Any())
+                {
                     rel.Model.Delete(rel);
                     rels.Remove(rel);
                 }

@@ -19,11 +19,11 @@ namespace ORF.Docs
 
         static void Main(string[] args)
         {
-            included = new HashSet<Type>(new[] { typeof(IIfcPerson), typeof(IIfcOrganization), typeof(IfcArithmeticOperatorEnum), typeof(IIfcAddress) });
+            included = new HashSet<Type>(new[] { typeof(IIfcPerson), typeof(IIfcOrganization), typeof(IfcArithmeticOperatorEnum), typeof(IIfcAddress), typeof(IIfcOwnerHistory) });
             assembly = typeof(CostModel).Assembly;
             processed = new HashSet<Type>();
 
-            var toProcess = new Stack<Type>(new[] { typeof(Project) });
+            var toProcess = new Stack<Type>(new[] { typeof(Project), typeof(Classification) });
             using var w = File.CreateText("types.txt");
             while (toProcess.Count > 0)
             {
@@ -32,11 +32,12 @@ namespace ORF.Docs
                     continue;
 
                 var typeName = GetName(type);
-                var typeLink = GetLink(typeName);
+                var typeLink = GetLink(type);
 
                 if (type.IsClass || type.IsInterface)
                 {
-                    w.WriteLine($"Třída: {typeName}\t\t{typeLink ?? ""}");
+                    var entityType = GetEntityType(type);
+                    w.WriteLine($"Třída: {typeName}\t{entityType}\t{typeLink ?? ""}");
 
                     // only get properties with get + set
                     var properties = type.GetProperties().Where(PropertyFilter);
@@ -73,6 +74,17 @@ namespace ORF.Docs
                     continue;
                 }
             }
+        }
+
+        private static string GetEntityType(Type type)
+        {
+            if (type.Assembly == assembly)
+            {
+                var entityProp = type.GetProperty("Entity");
+                if (entityProp != null)
+                    return GetName(entityProp.PropertyType);
+            }
+            return "";
         }
 
         private static List<PropertyInfo> Order(IEnumerable<PropertyInfo> properties)
@@ -163,6 +175,18 @@ namespace ORF.Docs
                 return "String";
 
             return typeName;
+        }
+
+        private static string GetLink(Type type)
+        {
+            if (type.Assembly == assembly)
+            {
+                var entityProp = type.GetProperty("Entity");
+                if (entityProp != null)
+                    return GetLink(GetName(entityProp.PropertyType));
+            }
+
+            return GetLink(GetName(type));
         }
 
         private static string GetLink(string typeName)

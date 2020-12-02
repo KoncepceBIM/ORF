@@ -1,23 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ORF.Entities.CostItem">
-    <Position X="7.5" Y="6.5" Width="2" />
+    <Position X="5.5" Y="6.5" Width="2" />
     <Members>
       <Method Name="CostItem" Hidden="true" />
       <Property Name="TotalCost" Hidden="true" />
       <Property Name="TotalQuantity" Hidden="true" />
       <Property Name="TotalUnitValue" Hidden="true" />
     </Members>
-    <AssociationLine Name="Children" Type="ORF.Entities.CostItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="Children" Type="ORF.Entities.CostItem" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="7.75" Y="7.925" />
-        <Point X="7.75" Y="8.3" />
-        <Point X="6.417" Y="8.3" />
-        <Point X="6.417" Y="7.437" />
-        <Point X="7.5" Y="7.437" />
+        <Point X="6.2" Y="7.925" />
+        <Point X="6.2" Y="8.175" />
+        <Point X="7.125" Y="8.175" />
+        <Point X="7.125" Y="7.925" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.239" Y="-0.819" />
+        <Position X="0.083" Y="0.348" />
       </MemberNameLabel>
     </AssociationLine>
     <AssociationLine Name="Quantities" Type="ORF.Entities.Quantity">
@@ -30,8 +29,13 @@
         <Position X="-0.994" Y="0.05" />
       </MemberNameLabel>
     </AssociationLine>
+    <AssociationLine Name="AssociatedElements" Type="Xbim.Ifc4.Interfaces.IIfcObjectDefinition">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.409" Y="0.079" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>BABAAAgAAAAAAAABAAAEAAAAAAAAAAQAARAAQAAAAAA=</HashCode>
+      <HashCode>BABAAAgAAAAAAAABAAAEAAAAAAAAAAQAARAAQAAEAAA=</HashCode>
       <FileName>Entities\CostItem.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -39,10 +43,11 @@
       <Property Name="Children" />
       <Property Name="Quantities" />
       <Property Name="UnitValues" />
+      <Property Name="AssociatedElements" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ORF.Entities.ClassificationItem">
-    <Position X="11.5" Y="6.5" Width="2" />
+    <Position X="9.5" Y="6.5" Width="2" />
     <Members>
       <Method Name="ClassificationItem" Hidden="true" />
       <Property Name="IClassificationParent.Entity" Hidden="true" />
@@ -50,10 +55,10 @@
     </Members>
     <AssociationLine Name="Children" Type="ORF.Entities.ClassificationItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11.938" Y="8.31" />
-        <Point X="11.938" Y="9.143" />
-        <Point X="13.188" Y="9.143" />
-        <Point X="13.188" Y="8.31" />
+        <Point X="9.938" Y="8.31" />
+        <Point X="9.938" Y="9.143" />
+        <Point X="11.188" Y="9.143" />
+        <Point X="11.188" Y="8.31" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.211" Y="0.524" />
@@ -69,7 +74,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.Entities.CostSchedule">
-    <Position X="3.75" Y="6.5" Width="2" />
+    <Position X="1.75" Y="6.5" Width="2" />
     <Members>
       <Method Name="CostSchedule" Hidden="true" />
     </Members>
@@ -88,7 +93,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ORF.Entities.Quantity">
-    <Position X="7.25" Y="9.5" Width="1.5" />
+    <Position X="5.25" Y="9.5" Width="1.5" />
     <Members>
       <Method Name="Quantity" Hidden="true" />
     </Members>
@@ -99,7 +104,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.Entities.Actor" HideInheritanceLine="true">
-    <Position X="3.75" Y="8.5" Width="2" />
+    <Position X="1.75" Y="8.5" Width="2" />
     <Members>
       <Method Name="Actor" Hidden="true" />
     </Members>
@@ -108,23 +113,23 @@
       <FileName>Entities\Actor.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Organization" />
       <Property Name="Person" />
+      <Property Name="Organization" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ORF.Entities.CostValue">
-    <Position X="9.25" Y="9.5" Width="1.5" />
+    <Position X="7.25" Y="9.5" Width="1.5" />
     <Members>
       <Method Name="CostValue" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAgAAAAKAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAgAAAACAA=</HashCode>
       <FileName>Entities\CostValue.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.Entities.Project">
-    <Position X="2.5" Y="2" Width="1.5" />
+    <Position X="0.5" Y="2" Width="1.5" />
     <Members>
       <Field Name="_site" Hidden="true" />
       <Property Name="AreaUnit" Hidden="true" />
@@ -150,7 +155,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ORF.Entities.Classification">
-    <Position X="11.5" Y="3" Width="2" />
+    <Position X="9.5" Y="3" Width="2" />
     <Members>
       <Method Name="Classification" Hidden="true" />
       <Property Name="IClassificationParent.Entity" Hidden="true" />
@@ -170,18 +175,18 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.Entities.IfcRootWrapper&lt;T&gt;">
-    <Position X="6" Y="2" Width="1.5" />
+    <Position X="4" Y="2" Width="1.5" />
     <Members>
       <Method Name="IfcRootWrapper" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAABAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entities\IfcRootWrapper.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="ORF.Entities.IfcObjectWrapper&lt;T&gt;">
-    <Position X="5.75" Y="4.25" Width="2" />
+    <Position X="3.75" Y="4.25" Width="2" />
     <Members>
       <Field Name="_psets" Hidden="true" />
       <Field Name="_rels" Hidden="true" />
@@ -194,7 +199,7 @@
     </TypeIdentifier>
   </Class>
   <Interface Name="Xbim.Ifc4.Interfaces.IIfcOrganization" BaseTypeListCollapsed="true">
-    <Position X="3.25" Y="10" Width="1.5" />
+    <Position X="1.25" Y="10" Width="1.5" />
     <Members>
       <Property Name="Engages" Hidden="true" />
       <Property Name="IsRelatedBy" Hidden="true" />
@@ -204,11 +209,15 @@
     <TypeIdentifier />
   </Interface>
   <Interface Name="Xbim.Ifc4.Interfaces.IIfcPerson" BaseTypeListCollapsed="true">
-    <Position X="5" Y="10" Width="1.5" />
+    <Position X="3" Y="10" Width="1.5" />
     <Members>
       <Property Name="EngagedIn" Hidden="true" />
       <Property Name="Roles" Hidden="true" />
     </Members>
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Xbim.Ifc4.Interfaces.IIfcObjectDefinition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="3" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Font Name="Segoe UI" Size="9" />

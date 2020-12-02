@@ -12,9 +12,10 @@ namespace ORF.Entities
 
         }
 
+        public Guid Id { get => Entity.GlobalId; set => Entity.GlobalId = value; }
         public string Name { get => Entity.Name; set => Entity.Name = value; }
         public string Description { get => Entity.Description; set => Entity.Description = value; }
-        public Guid Id { get => Entity.GlobalId; set => Entity.GlobalId = value; }
+        public IIfcOwnerHistory OwnerHistory { get => Entity.OwnerHistory; set => Entity.OwnerHistory = value; }
 
     }
 }

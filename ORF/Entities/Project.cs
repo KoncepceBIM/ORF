@@ -40,8 +40,8 @@ namespace ORF.Entities
         public IIfcNamedUnit WeightUnit { get => Units.OfType<IIfcNamedUnit>().FirstOrDefault(u => u.UnitType == IfcUnitEnum.MASSUNIT); }
         public IIfcMonetaryUnit MonetaryUnit { get => Units.OfType<IIfcMonetaryUnit>().FirstOrDefault(); }
 
-        public IfcCompoundPlaneAngleMeasure? Latitude { get => _site?.RefLatitude; set => Site.RefLatitude = value; }
-        public IfcCompoundPlaneAngleMeasure? Longitude { get => _site?.RefLongitude; set => Site.RefLongitude = value; }
+        public List<long> Latitude { get => _site?.RefLatitude; set => Site.RefLatitude = value; }
+        public List<long> Longitude { get => _site?.RefLongitude; set => Site.RefLongitude = value; }
         public IIfcPostalAddress Address { get => _site?.SiteAddress; set => Site.SiteAddress = value; }
 
         public string LongName { get => Entity.LongName; set => Entity.LongName = value; }
