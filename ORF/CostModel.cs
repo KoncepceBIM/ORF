@@ -61,6 +61,12 @@ namespace ORF
                 IFC = IfcStore.Open(path, credentials);
             }
 
+            // optimization for inverse relationships
+            using (IFC.BeginInverseCaching())
+            {
+                Classifications = new ClassificationCollection(this);
+            }
+
             Create = new Create(IFC);
             var project = IFC.Instances.FirstOrDefault<IIfcProject>();
             if (project != null)
@@ -76,11 +82,6 @@ namespace ORF
                 CreateProject("Default");
             }
 
-            // optimization for inverse relationships
-            using (IFC.BeginInverseCaching())
-            {
-                Classifications = new ClassificationCollection(this);
-            }
         }
 
         public CostModel(XbimEditorCredentials credentials, string projectName)

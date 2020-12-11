@@ -12,6 +12,7 @@ namespace ORF.Entities
         {
             CostItems = new RootItemsCollection(this, init);
             Actors = new ActorsCollection(this, init);
+            ClassificationItems = new ClassificationCollection(Entity, init);
         }
 
         public CostSchedule(CostModel model, string name) : this(model.Create.CostSchedule(s => s.Name = name), false)
@@ -20,7 +21,7 @@ namespace ORF.Entities
         }
 
         public ActorsCollection Actors { get; }
-
+        public ClassificationCollection ClassificationItems { get; }
         public RootItemsCollection CostItems { get; }
 
         public double TotalCost => CostItems.Sum(i => i.TotalCost);

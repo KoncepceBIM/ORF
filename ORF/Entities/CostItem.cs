@@ -11,7 +11,7 @@ namespace ORF.Entities
         internal CostItem(IIfcCostItem item, bool init) : base(item, init)
         {
             Children = new CostChildrenCollection(this, init);
-            ClassificationItems = new ClassificationCollection(this, init);
+            ClassificationItems = new ClassificationCollection(Entity, init);
             Quantities = new QuantityCollection(this);
             UnitValues = new ValuesCollection(this);
             AssociatedElements = new AssociatedElementsCollection(this, init);
@@ -314,23 +314,23 @@ namespace ORF.Entities
     {
         private readonly HashSet<ClassificationItem> inner = new HashSet<ClassificationItem>();
         private readonly List<IIfcRelAssociatesClassification> rels = new List<IIfcRelAssociatesClassification>();
-        private readonly CostItem costItem;
+        private readonly IIfcObjectDefinition entity;
 
-        public ClassificationCollection(CostItem costItem, bool init)
+        internal ClassificationCollection(IIfcObjectDefinition entity, bool init)
         {
-            this.costItem = costItem;
+            this.entity = entity;
 
             if (!init)
                 return;
 
-            rels = costItem.Entity.HasAssociations.OfType<IIfcRelAssociatesClassification>().ToList();
+            rels = entity.HasAssociations.OfType<IIfcRelAssociatesClassification>().ToList();
             inner = new HashSet<ClassificationItem>(rels.Where(r => r.RelatingClassification is IIfcClassificationReference)
                 .Select(r => GetOrCreate(r.RelatingClassification as IIfcClassificationReference)));
         }
 
         private ClassificationItem GetOrCreate(IIfcClassificationReference item)
         {
-            var model = costItem.CostModel;
+            var model = entity.Model.Tag as CostModel;
             foreach (var classification in model.Classifications)
             {
                 var items = new Stack<ClassificationItem>(classification.Children);
@@ -370,14 +370,14 @@ namespace ORF.Entities
                 rel = create.RelAssociatesClassification(r => r.RelatingClassification = item.Entity);
                 rels.Add(rel);
             }
-            rel.RelatedObjects.Add(costItem.Entity);
+            rel.RelatedObjects.Add(entity);
         }
 
         public void Clear()
         {
             foreach (var rel in rels)
             {
-                rel.RelatedObjects.Remove(costItem.Entity);
+                rel.RelatedObjects.Remove(entity);
                 if (!rel.RelatedObjects.Any())
                 {
                     rel.Model.Delete(rel);
@@ -409,7 +409,7 @@ namespace ORF.Entities
 
             foreach (var rel in rels.Where(r => r.RelatingClassification == item.Entity))
             {
-                rel.RelatedObjects.Remove(costItem.Entity);
+                rel.RelatedObjects.Remove(entity);
                 if (!rel.RelatedObjects.Any())
                 {
                     rel.Model.Delete(rel);
@@ -425,9 +425,9 @@ namespace ORF.Entities
         }
     }
 
-    public class AssociatedElementsCollection : ICollection<IIfcObjectDefinition>
+    public class AssociatedElementsCollection : ICollection<CostSubject>
     {
-        private readonly HashSet<IIfcObjectDefinition> inner = new HashSet<IIfcObjectDefinition>();
+        private readonly HashSet<CostSubject> inner = new HashSet<CostSubject>();
         private readonly List<IIfcRelAssignsToControl> rels = new List<IIfcRelAssignsToControl>();
         private readonly CostItem costItem;
 
@@ -439,14 +439,14 @@ namespace ORF.Entities
                 return;
 
             rels = costItem.Entity.Controls.ToList();
-            inner = new HashSet<IIfcObjectDefinition>(rels.SelectMany(r => r.RelatedObjects));
+            inner = new HashSet<CostSubject>(rels.SelectMany(r => r.RelatedObjects.OfType<IIfcObject>()).Select(o => new CostSubject(o, init)));
         }
 
         public int Count => inner.Count;
 
         public bool IsReadOnly => false;
 
-        public void Add(IIfcObjectDefinition item)
+        public void Add(CostSubject item)
         {
             if (!inner.Add(item))
                 return;
@@ -454,7 +454,7 @@ namespace ORF.Entities
             var rel = rels.FirstOrDefault();
             if (rel == null)
             {
-                var create = new Create(item.Model);
+                var create = new Create(item.Entity.Model);
                 rel = create.RelAssignsToControl(r => r.RelatingControl = costItem.Entity);
                 rels.Add(rel);
             }
@@ -471,29 +471,29 @@ namespace ORF.Entities
             inner.Clear();
         }
 
-        public bool Contains(IIfcObjectDefinition item)
+        public bool Contains(CostSubject item)
         {
             return inner.Contains(item);
         }
 
-        public void CopyTo(IIfcObjectDefinition[] array, int arrayIndex)
+        public void CopyTo(CostSubject[] array, int arrayIndex)
         {
             inner.CopyTo(array, arrayIndex);
         }
 
-        public IEnumerator<IIfcObjectDefinition> GetEnumerator()
+        public IEnumerator<CostSubject> GetEnumerator()
         {
             return inner.GetEnumerator();
         }
 
-        public bool Remove(IIfcObjectDefinition item)
+        public bool Remove(CostSubject item)
         {
             if (!inner.Remove(item))
                 return false;
 
             foreach (var rel in rels)
             {
-                rel.RelatedObjects.Remove(item);
+                rel.RelatedObjects.Remove(item.Entity);
                 if (!rel.RelatedObjects.Any())
                 {
                     rel.Model.Delete(rel);

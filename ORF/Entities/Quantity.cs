@@ -6,7 +6,7 @@ namespace ORF.Entities
 {
     public class Quantity : IfcWrapper<IIfcPhysicalSimpleQuantity>, IEntity
     {
-        public Quantity(IIfcPhysicalSimpleQuantity entity) : base(entity)
+        internal Quantity(IIfcPhysicalSimpleQuantity entity) : base(entity)
         {
             if (entity is IIfcQuantityArea) Type = QuantityTypeEnum.Area;
             if (entity is IIfcQuantityCount) Type = QuantityTypeEnum.Count;

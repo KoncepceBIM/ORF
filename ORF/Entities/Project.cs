@@ -23,6 +23,7 @@ namespace ORF.Entities
         internal Project(IIfcProject project, bool init) : base(project)
         {
             CostSchedules = new CostSchedulesCollection(this, init);
+            ClassificationItems = new ClassificationCollection(Entity, init);
 
             if (!init)
                 return;
@@ -47,6 +48,8 @@ namespace ORF.Entities
         public string LongName { get => Entity.LongName; set => Entity.LongName = value; }
 
         public CostSchedulesCollection CostSchedules { get; }
+
+        public ClassificationCollection ClassificationItems { get; }
     }
 
     public class CostSchedulesCollection : ICollection<CostSchedule>
