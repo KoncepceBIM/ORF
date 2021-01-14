@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ESoupis", "ESoupis\ESoupis.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORF.Tests", "ORF.Tests\ORF.Tests.csproj", "{1F470E54-C0AB-4116-872F-3360CD682BC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORF.Docs", "ORF.Docs\ORF.Docs.csproj", "{4101EFCA-D1FB-42E9-A036-33E97F21D914}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORF.Docs", "ORF.Docs\ORF.Docs.csproj", "{4101EFCA-D1FB-42E9-A036-33E97F21D914}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORF.XML", "ORF.XML\ORF.XML.csproj", "{49A226F3-DF43-45C5-BD1B-D5B664FD3C4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4101EFCA-D1FB-42E9-A036-33E97F21D914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4101EFCA-D1FB-42E9-A036-33E97F21D914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4101EFCA-D1FB-42E9-A036-33E97F21D914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49A226F3-DF43-45C5-BD1B-D5B664FD3C4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A226F3-DF43-45C5-BD1B-D5B664FD3C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A226F3-DF43-45C5-BD1B-D5B664FD3C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A226F3-DF43-45C5-BD1B-D5B664FD3C4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
