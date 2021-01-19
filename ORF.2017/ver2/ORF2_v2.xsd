@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by End User (free.org) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="sTyp_ZdrojovySW">
+		<xs:annotation>
+			<xs:documentation>Výčtový typ poskytovatelů rozpočtového SW</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EC"/>
+			<xs:enumeration value="KROS"/>
+			<xs:enumeration value="RTS"/>
+			<xs:enumeration value="ASPE"/>
+			<xs:enumeration value="IPOS"/>
+			<xs:enumeration value="JINY"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sTyp_RoleFirmy">
+		<xs:annotation>
+			<xs:documentation>Výčtový typ rolí firem (účastníků)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PROJEKTANT"/>
+			<xs:enumeration value="VYROBCE"/>
+			<xs:enumeration value="PODDODAVATEL"/>
+			<xs:enumeration value="INVESTOR"/>
+			<xs:enumeration value="PRODEJCE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="cTyp_DefiniceVolitelnehoUdaje">
+		<xs:annotation>
+			<xs:documentation>Typ elementu VOLITELNÝ ÚDAJ - definice</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="id_vu">
+				<xs:annotation>
+					<xs:documentation>Unikátní ID volitelného údaje</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zdrojovy_sw" type="sTyp_ZdrojovySW">
+				<xs:annotation>
+					<xs:documentation>Identifikátor SW systému, ze kterého údaj pochází</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid_vu" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Nepovinný GUID volitelného údaje</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nazev"/>
+			<xs:element name="popis" minOccurs="0"/>
+			<xs:element name="ciselnik_hodnot" type="cTyp_CiselnikHodnot" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_DefiniceVolitelnychUdaju">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce definic volitelných údajů</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="def_vol_udaje" type="cTyp_DefiniceVolitelnehoUdaje" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_PolozkaCiselniku">
+		<xs:annotation>
+			<xs:documentation>Typ elementu POLOŽKA ČÍSELNÍKU (obecný číselník)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kod"/>
+			<xs:element name="popis"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_CiselnikHodnot">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce číselníku hodnot</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="polozka_ciselniku" type="cTyp_PolozkaCiselniku"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_VolitelnyUdaj">
+		<xs:annotation>
+			<xs:documentation>Typ elementu VOLITELNÝ ÚDAJ - hodnota</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="id_vu" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="cTyp_VolitelneUdaje">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce hodnot volitelných údajů</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="vol_udaj" type="cTyp_VolitelnyUdaj" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_ZmenovyLog">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce modifikací dokumentu</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zmena_dokumentu" type="cTyp_ZmenaDokumentu" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_ZmenaDokumentu">
+		<xs:annotation>
+			<xs:documentation>Typ elementu pro zachycení modifikace dokumentu</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zdrojovy_sw" type="sTyp_ZdrojovySW"/>
+			<xs:element name="nazev_aplikace" minOccurs="0"/>
+			<xs:element name="verze_aplikace" minOccurs="0"/>
+			<xs:element name="datum_zmeny"/>
+			<xs:element name="typ_zmeny"/>
+			<xs:element name="popis_zmeny" minOccurs="0"/>
+			<xs:element name="poznamka" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Vychozi">
+		<xs:annotation>
+			<xs:documentation>Typ výchozího elementu s kontejnerem pro volitelné údaje</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="vol_udaje" type="cTyp_VolitelneUdaje" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Osoba">
+		<xs:annotation>
+			<xs:documentation>Typ elementu OSOBA (kontaktní osoba firmy)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cTyp_Vychozi">
+				<xs:sequence>
+					<xs:element name="jmeno" minOccurs="0"/>
+					<xs:element name="prijmeni"/>
+					<xs:element name="titul" minOccurs="0"/>
+					<xs:element name="pozice" minOccurs="0"/>
+					<xs:element name="telefon" minOccurs="0"/>
+					<xs:element name="mobil" minOccurs="0"/>
+					<xs:element name="email" minOccurs="0"/>
+					<xs:element name="poznamka" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Osoby">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce osob</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="osoba" type="cTyp_Osoba" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Firma">
+		<xs:annotation>
+			<xs:documentation>Typ elementu FIRMA (položka v adresáři firem)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cTyp_Vychozi">
+				<xs:sequence>
+					<xs:element name="id"/>
+					<xs:element name="nazev"/>
+					<xs:element name="ico" minOccurs="0"/>
+					<xs:element name="dic" minOccurs="0"/>
+					<xs:element name="adresa1" minOccurs="0"/>
+					<xs:element name="adresa2" minOccurs="0"/>
+					<xs:element name="mesto" minOccurs="0"/>
+					<xs:element name="psc" minOccurs="0"/>
+					<xs:element name="stat" minOccurs="0"/>
+					<xs:element name="telefon" minOccurs="0"/>
+					<xs:element name="fax" minOccurs="0"/>
+					<xs:element name="mobil" minOccurs="0"/>
+					<xs:element name="www" minOccurs="0"/>
+					<xs:element name="poznamka" minOccurs="0"/>
+					<xs:element name="osoby" type="cTyp_Osoby" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Firmy">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce firem (adresář firem)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="firma" type="cTyp_Firma" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Ucastnik">
+		<xs:annotation>
+			<xs:documentation>Typ elementu ÚČASTNÍK (firma na stavbě nebo objektu)</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="role" type="sTyp_RoleFirmy" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Ucastnici">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce účastníků</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ucastnik" type="cTyp_Ucastnik" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_SazbaDPH">
+		<xs:annotation>
+			<xs:documentation>Typ elementu SAZBA DPH (popis sazby, nikoliv hodnota)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kod"/>
+			<xs:element name="nazev"/>
+			<xs:element name="sazba"/>
+			<xs:element name="popis" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_SazbyDPH">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce sazeb DPH</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SazbaDPH" type="cTyp_SazbaDPH" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Milnik">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce MILNÍK pro zápis časové anotace (nesouvisí s harmonogramem !!)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cTyp_Vychozi">
+				<xs:sequence>
+					<xs:element name="nazev"/>
+					<xs:element name="datum"/>
+					<xs:element name="poznamka" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Milniky">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce milníků</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="milnik" type="cTyp_Milnik" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Obdobi">
+		<xs:annotation>
+			<xs:documentation>Typ elementu OBDOBÍ, které je odkazováno z elementu výkon</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cTyp_Vychozi">
+				<xs:sequence>
+					<xs:element name="kod"/>
+					<xs:element name="poradi" minOccurs="0"/>
+					<xs:element name="nazev"/>
+					<xs:element name="datum_od"/>
+					<xs:element name="datum_do"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cTyp_SoupisObdobi">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce časových období</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="obdobi" type="cTyp_Obdobi" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Vykon">
+		<xs:annotation>
+			<xs:documentation>Typ elementu VÝKON za konkrétní období</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cTyp_Vychozi">
+				<xs:sequence>
+					<xs:element name="kod_obdobi"/>
+					<xs:element name="vymera"/>
+					<xs:element name="poznamka" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cTyp_SoupisVykonu">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce soupisu výkonů u položky</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="vykon" type="cTyp_Vykon" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Polozka">
+		<xs:annotation>
+			<xs:documentation>Typ elementu POLOŽKA rozpočtu / soupisu prací</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cTyp_Vychozi">
+				<xs:sequence>
+					<xs:element name="id_polozky"/>
+					<xs:element name="kod_polozky"/>
+					<xs:element name="poradi" minOccurs="0"/>
+					<xs:element name="popis1"/>
+					<xs:element name="popis2" minOccurs="0"/>
+					<xs:element name="poznamka" minOccurs="0"/>
+					<xs:element name="merna_jednotka"/>
+					<xs:element name="vymera"/>
+					<xs:element name="jcena"/>
+					<xs:element name="jhmotnost" minOccurs="0"/>
+					<xs:element name="jsut" minOccurs="0"/>
+					<xs:element name="sazba_DPH"/>
+					<xs:element name="soupis_vykonu" type="cTyp_SoupisVykonu" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Polozky">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce položek</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="polozka" type="cTyp_Polozka" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Dil">
+		<xs:annotation>
+			<xs:documentation>Typ elementu STAVEBNÍ DÍL</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cTyp_Vychozi">
+				<xs:sequence>
+					<xs:element name="kod_dilu"/>
+					<xs:element name="nazev_dilu"/>
+					<xs:element name="typ_dilu"/>
+					<xs:element name="dily" type="cTyp_Dily" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="polozky" type="cTyp_Polozky" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Dily">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce stavebních dílů</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dil" type="cTyp_Dil" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Objekt">
+		<xs:annotation>
+			<xs:documentation>Typ elementu stavební OBJEKT</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cTyp_Vychozi">
+				<xs:sequence>
+					<xs:element name="kod_objektu"/>
+					<xs:element name="nazev_objektu"/>
+					<xs:element name="popis_objektu" minOccurs="0"/>
+					<xs:element name="lokalita" minOccurs="0"/>
+					<xs:element name="ucastnici" type="cTyp_Ucastnici" minOccurs="0"/>
+					<xs:element name="milniky" type="cTyp_Milniky" minOccurs="0"/>
+					<xs:element name="dily" type="cTyp_Dily" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="polozky" type="cTyp_Polozky" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="objekty" type="cTyp_Objekty" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Objekty">
+		<xs:annotation>
+			<xs:documentation>Typ kolekce stavebních objektů</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="objekt" type="cTyp_Objekt" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cTyp_Stavba">
+		<xs:annotation>
+			<xs:documentation>Typ hlavního zastřešujícího elementu STAVBA (vyskytuje se pouze jednou)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cTyp_Vychozi">
+				<xs:sequence>
+					<xs:element name="kod_stavby"/>
+					<xs:element name="nazev_stavby"/>
+					<xs:element name="popis_stavby" minOccurs="0"/>
+					<xs:element name="lokalita" minOccurs="0"/>
+					<xs:element name="menova_jednotka" minOccurs="0"/>
+					<xs:element name="sazba_DPH" minOccurs="0"/>
+					<xs:element name="ucastnici" type="cTyp_Ucastnici" minOccurs="0"/>
+					<xs:element name="sazby_DPH" type="cTyp_SazbyDPH" minOccurs="0"/>
+					<xs:element name="milniky" type="cTyp_Milniky" minOccurs="0"/>
+					<xs:element name="soupis_obdobi" type="cTyp_SoupisObdobi" minOccurs="0"/>
+					<xs:element name="objekty" type="cTyp_Objekty"/>
+					<xs:element name="firmy" type="cTyp_Firmy" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cTyp_ORF2">
+		<xs:annotation>
+			<xs:documentation>Typ kořenového elementu ORF2</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="cTyp_Vychozi">
+				<xs:sequence>
+					<xs:element name="zmenovy_log" type="cTyp_ZmenovyLog"/>
+					<xs:element name="def_vol_udaju" type="cTyp_DefiniceVolitelnychUdaju" minOccurs="0"/>
+					<xs:element name="stavba" type="cTyp_Stavba"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="orf2" type="cTyp_ORF2">
+		<xs:annotation>
+			<xs:documentation>Kořenový element dokumentu</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

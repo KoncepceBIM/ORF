@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orf2 xsi:noNamespaceSchemaLocation="ORF2_v2.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ec4="tempuri.org">
+  <!-- Volitelne udaje dokumentu v kontextu systemu euroCALC -->
+  <vol_udaje>
+		<vol_udaj id_vu="vu_docGuid">{FC50F69B-B9F2-4F19-B0E4-4FC5B505C942}</vol_udaj>
+		<vol_udaj id_vu="ec4_docext">
+    		  <ec4:kolekce>
+    		    <polozka>1</polozka>
+    		    <polozka>2</polozka>
+    		    <polozka>3</polozka>
+	    	  </ec4:kolekce>
+		</vol_udaj>
+	</vol_udaje>
+   <!-- Unikatni GUID a rozliseni typu dokumentu  -->
+  <guid_dokumentu>{635D2A1D-0528-4042-97C8-A37C5668A2D2}</guid_dokumentu>
+  <typ_dokumentu>SOUPIS_PRACI</typ_dokumentu>
+   <!-- Seznam modifikaci a zmen, kterymi dokument prosel -->
+	<zmenovy_log>
+		<zmena_dokumentu>
+			<zdrojovy_sw>EC</zdrojovy_sw>
+			<nazev_aplikace>ecClient.exe</nazev_aplikace>
+			<verze_aplikace>4.0.3.1847</verze_aplikace>
+			<datum_zmeny>2017-12-20T09-15-00</datum_zmeny>
+			<typ_zmeny>POPTAVKA.ODESLANI</typ_zmeny>
+		</zmena_dokumentu>
+		<zmena_dokumentu>
+			<zdrojovy_sw>EC</zdrojovy_sw>
+			<nazev_aplikace>ecOffer.exe</nazev_aplikace>
+			<verze_aplikace>4.0.1.1207</verze_aplikace>
+			<datum_zmeny>2018-01-15T09-15-00</datum_zmeny>
+			<typ_zmeny>NABIDKA.ODESLANI</typ_zmeny>
+		</zmena_dokumentu>
+	</zmenovy_log>
+   <!-- Definice vsech volitelnych udaju, ktere se v dokumentu vyskytuji -->
+	<def_vol_udaju>
+		<def_vol_udaje>
+			<id_vu>vu_docGuid</id_vu>
+			<zdrojovy_sw>EC</zdrojovy_sw>
+			<nazev>GUID dokumentu</nazev>
+		</def_vol_udaje>
+		<def_vol_udaje>
+			<id_vu>vu_proGuid</id_vu>
+			<zdrojovy_sw>EC</zdrojovy_sw>
+			<nazev>GUID zakázky</nazev>
+		</def_vol_udaje>
+		<def_vol_udaje>
+			<id_vu>vu_verID</id_vu>
+			<zdrojovy_sw>EC</zdrojovy_sw>
+			<nazev>ID verze zakázky</nazev>
+		</def_vol_udaje>
+		<def_vol_udaje>
+			<id_vu>vu_iteGuid</id_vu>
+			<zdrojovy_sw>EC</zdrojovy_sw>
+			<nazev>GUID položky</nazev>
+		</def_vol_udaje>
+	</def_vol_udaju>
+   <!-- Korenovy element stavby -->
+	<stavba>
+        <!-- Volitelne udaje stavby v kontextu systemu euroCALC -->
+		<vol_udaje>
+			<vol_udaj id_vu="vu_proGuid">{536C01D9-DFC4-4237-A783-DAD78C8EBACF}</vol_udaj>
+			<vol_udaj id_vu="vu_verID">1</vol_udaj>
+		</vol_udaje>
+		<kod_stavby>RD-0337</kod_stavby>
+		<nazev_stavby>DEMO Oprava kaple</nazev_stavby>
+		<popis_stavby>Stávající objekt kaple je jednopodlažní nepodsklepený se sedlovou střechou. Půdorysné rozměry jsou 4,10x4,35 m, zastavěná plocha 18 m2 a obestavěný prostor cca 50 m3. Obvodové zdivo je provedeno z pálených plných cihel v tl. 300 mm. Povrch zdiva je opatřen omítkou. Střešní krytina je provedena z vlnitého eternitu. Celý objekt se nachází ve značně zchátralém stavu.</popis_stavby>
+		<menova_jednotka>CZK</menova_jednotka>
+		<sazba_DPH>21</sazba_DPH>
+        <!-- Seznam firem, ktere na stavbe participuji -->
+		<ucastnici>
+			<ucastnik role="INVESTOR">CZ65415183</ucastnik>
+			<ucastnik role="VYROBCE">CLL0000011</ucastnik>
+		</ucastnici>
+        <!-- Definice sazeb DPH, ktere se v dokumentu pouzivaji -->
+		<sazby_DPH>
+			<SazbaDPH>
+				<kod>0</kod>
+				<nazev>Sazba neurčena nebo osvobozeno</nazev>
+				<sazba>0</sazba>
+			</SazbaDPH>
+			<SazbaDPH>
+				<kod>15</kod>
+				<nazev>Snížená sazba daně</nazev>
+				<sazba>15</sazba>
+			</SazbaDPH>
+			<SazbaDPH>
+				<kod>21</kod>
+				<nazev>Základní sazba daně</nazev>
+				<sazba>21</sazba>
+			</SazbaDPH>
+		</sazby_DPH>
+        <!-- Seznam casovych znamek, vyznamnych v prubehu realizace stavby -->
+		<milniky>
+			<milnik>
+				<nazev>Datum zahájení</nazev>
+				<datum>2018-07-01</datum>
+			</milnik>
+			<milnik>
+				<nazev>Datum dokončení</nazev>
+				<datum>2020-12-31</datum>
+			</milnik>
+		</milniky>
+        <!-- Vrchni element kolekce stavebnich objektu -->
+        <objekty>
+          <objekt>
+            <kod_objektu>K</kod_objektu>
+            <nazev_objektu>Kaplička</nazev_objektu>
+            <dily>
+              <dil>
+                <kod_dilu>006</kod_dilu>
+                <nazev_dilu>Úpravy povrchu</nazev_dilu>
+                <typ_dilu>HSV</typ_dilu>
+                <polozky>
+                  <polozka>
+                    <!-- Volitelne udaje polozky v kontextu systemu euroCALC -->
+                    <vol_udaje>
+					  <vol_udaj id_vu="vu_iteGuid">{43981354-3502-4ACF-A129-20D942762CAA}</vol_udaj>
+					</vol_udaje>
+                    <id_polozky>19564</id_polozky>
+                    <kod_polozky>332Eq4010-018</kod_polozky>
+                    <poradi>27</poradi>
+                    <popis1>Mazanina z betonu prostého, hlazená dřevěným hladítkem tloušťka kce přes 80 do 120 mm, třída B 20 (C 16/20)</popis1>
+                    <merna_jednotka>m3</merna_jednotka>
+                    <vymera>1.171</vymera>
+                    <jcena>2967.8</jcena>
+                    <jhmotnost>2.422</jhmotnost>
+                    <sazba_DPH>21</sazba_DPH>
+                  </polozka>
+                  <polozka>
+                    <!-- Volitelne udaje polozky v kontextu systemu euroCALC -->
+                    <vol_udaje>
+					  <vol_udaj id_vu="vu_iteGuid">{853D58DB-9BE6-4610-AE6A-57590959FEF5}</vol_udaj>
+					</vol_udaje>
+                    <id_polozky>19563</id_polozky>
+                    <kod_polozky>332Jh2010-004</kod_polozky>
+                    <poradi>29</poradi>
+                    <popis1>Výztuž mazanin z betonů (z kameniva) a z lehkých betonů svařované sítě - drát žebírkový</popis1>
+                    <merna_jednotka>t</merna_jednotka>
+                    <vymera>0.6</vymera>
+                    <jcena>31242.96</jcena>
+                    <jhmotnost>1.053</jhmotnost>
+                    <sazba_DPH>21</sazba_DPH>
+                  </polozka>
+                </polozky>
+              </dil>
+            </dily>
+          </objekt>
+      </objekty>
+      <!-- Adresar vsech firem, ktere jsou v dokumentu zminene -->
+      <firmy>
+		<firma>
+			<id>CLL0000011</id>
+			<nazev>DEMO - Kompletní stavby, a.s.</nazev>
+			<ico>00000011</ico>
+			<dic>CLL0000011</dic>
+			<adresa1>V Úžlabině 15</adresa1>
+			<mesto>Praha 10</mesto>
+			<psc>110 00</psc>
+			<mobil>777 000 011</mobil>
+			<www>http://www.kompletnistavby.cz</www>
+		</firma>
+		<firma>
+			<id>CZ65415183</id>
+			<nazev>CALLIDA, s.r.o.</nazev>
+			<ico>65415183</ico>
+			<dic>CZ65415183</dic>
+			<adresa1>Kloboučnická 24</adresa1>
+			<mesto>Praha 4</mesto>
+			<psc>140 00</psc>
+			<telefon>234 710 234</telefon>
+			<www>http://www.callida.cz</www>
+		</firma>
+	</firmy>
+  </stavba>
+</orf2>
