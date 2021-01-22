@@ -230,12 +230,18 @@
       <xs:pattern value="[^@]+@[^\.]+\..+"/>
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="TModelRozpoctu">
+  <xs:complexType name="TORF">
     <xs:sequence>
       <xs:element name="Projekt" type="TProjekt"/>
       <xs:element name="Rozpocet" type="TRozpocet"/>
-      <xs:element name="Klasifikace" type="TKlasifikace" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="CenovaSoustava" type="TCenovaSoustava" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Definice">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Klasifikace" type="TKlasifikace" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="CenovaSoustava" type="TCenovaSoustava" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:sequence>
     <xs:attribute name="Verze" type="TVerze" />
   </xs:complexType>
@@ -282,12 +288,10 @@
     <xs:attribute name="DlouhyNazev" type="xs:string" use="optional"/>
   </xs:complexType>
   <xs:complexType name="TExterniEntita">
-    <xs:complexContent>
-      <xs:extension base="TIdentita">
-        <xs:attribute name="Zdroj" type="xs:string" use="optional"/>
-        <xs:attribute name="Umisteni" type="TUrl" use="optional"/>
-      </xs:extension>
-    </xs:complexContent>
+    <xs:attribute name="Id" type="xs:string" use="required"/>
+    <xs:attribute name="Nazev" type="xs:string" use="optional"/>
+    <xs:attribute name="Zdroj" type="xs:string" use="optional"/>
+    <xs:attribute name="Umisteni" type="TUrl" use="optional"/>
   </xs:complexType>
   <xs:complexType name="TProjekt">
     <xs:complexContent>
@@ -374,12 +378,13 @@
               <xs:field xpath="@Ref"/>
             </xs:keyref>
           </xs:element>
-          <xs:element name="CenovaSoustavaRef" type="TCenovaSoustavaRef" minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="CenovaSoustava" type="TCenovaSoustavaRef" minOccurs="0" maxOccurs="unbounded">
             <xs:keyref name="CSRef" refer="CostingSourceKey">
               <xs:selector xpath="."/>
               <xs:field xpath="@Ref"/>
             </xs:keyref>
           </xs:element>
+          <xs:element name="SouvisejiciEntita" type="TExterniEntita" minOccurs="0" maxOccurs="unbounded"></xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -395,18 +400,18 @@
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:element name="ModelRozpoctu" type="TModelRozpoctu">
+  <xs:element name="ORF" type="TORF">
     <xs:annotation>
       <xs:documentation>
 
       </xs:documentation>
     </xs:annotation>
     <xs:key name="ClassKey">
-      <xs:selector xpath=".//Trida"/>
+      <xs:selector xpath="Definice//Trida"/>
       <xs:field xpath="@Id"/>
     </xs:key>
     <xs:key name="CostingSourceKey">
-      <xs:selector xpath=".//CenovaSoustava"/>
+      <xs:selector xpath="Definice/CenovaSoustava"/>
       <xs:field xpath="@Id"/>
     </xs:key>
   </xs:element>
