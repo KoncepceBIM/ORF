@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<orf verze="1.0">
+	<Projekt Id="{FBE1C08E-A04F-4EB7-AC1F-38D4F5FA0FAF}" Nazev="DEMO - RD Mnichovice" EvidencniCislo="OP-2018/02" Mena="CZK">
+		<Popis/>
+		<ExterniEntita/>
+		<Adresa/>
+	</Projekt>
+	<Rozpocet Id="{D675C3E0-034D-4340-8CA6-ED22C4DFFA45}" Nazev="Nabídka">
+		<Popis/>
+		<ExterniEntita/>
+		<Skupina Id="SO_01" Typ="1">
+			<Skupina Id="000" Typ="2">
+				<Polozka Kod="X971" Nazev="Vytýčení stavby geodetem" MJ="soubor" Vymera="2.000" JCena="15560.00"/>
+			</Skupina>
+			<Skupina Id="001" Typ="2">
+				<Polozka Kod="121101101" Nazev="Sejmutí ornice s přemístěním na vzdálenost do 50 m" MJ="m3" Vymera="81.222" JCena="31.30"/>
+			</Skupina>
+			<Skupina Id="002" Typ="2">
+				<Polozka Kod="213311113" Nazev="Polštáře zhutněné pod základy z kameniva drceného frakce 16 až 63 mm" MJ="m3" Vymera="15.610" JCena="1200.00"/>
+			</Skupina>
+			<Skupina Id="003" Typ="2">
+				<Polozka Kod="342351111" Nazev="Zřízení oboustranného bednění výplňových stěn a příček" MJ="m2" Vymera="161.019" JCena="3050.00"/>
+			</Skupina>
+			<Skupina Id="004" Typ="2">
+				<Polozka Kod="411321414" Nazev="Stropy deskové ze ŽB tř. C 25/30" MJ="m3" Vymera="62.706" JCena="383.00"/>
+			</Skupina>
+			<Skupina Id="005" Typ="2">
+				<Polozka Kod="591411111" Nazev="Kladení dlažby z mozaiky jednobarevné komunikací pro pěší lože z kameniva" MJ="m2" Vymera="49.365" JCena="516.00"/>
+			</Skupina>
+			<Skupina Id="006" Typ="2">
+				<Polozka Kod="612135101" Nazev="Hrubá výplň rýh ve stěnách maltou jakékoli šířky rýhy" MJ="m2" Vymera="137.740" JCena="343.00"/>
+			</Skupina>
+			<Skupina Id="009" Typ="2">
+				<Polozka Kod="952901111" Nazev="Vyčištění budov bytové a občanské výstavby při výšce podlaží do 4 m" MJ="m2" Vymera="258.010" JCena="85.30"/>
+			</Skupina>
+		</Skupina>
+		<Skupina Id="SO_02" Typ="1">
+			<Skupina Id="000" Typ="2">
+				<Polozka Kod="X971" Nazev="Vytýčení stavby geodetem" MJ="soubor" Vymera="2.000" JCena="15560.00"/>
+			</Skupina>
+			<Skupina Id="001" Typ="2">
+				<Polozka Kod="121101101" Nazev="Sejmutí ornice s přemístěním na vzdálenost do 50 m" MJ="m3" Vymera="81.222" JCena="31.30"/>
+			</Skupina>
+			<Skupina Id="002" Typ="2">
+				<Polozka Kod="213311113" Nazev="Polštáře zhutněné pod základy z kameniva drceného frakce 16 až 63 mm" MJ="m3" Vymera="15.610" JCena="1200.00"/>
+			</Skupina>
+			<Skupina Id="003" Typ="2">
+				<Polozka Kod="342351111" Nazev="Zřízení oboustranného bednění výplňových stěn a příček" MJ="m2" Vymera="161.019" JCena="3050.00"/>
+			</Skupina>
+			<Skupina Id="004" Typ="2">
+				<Polozka Kod="411321414" Nazev="Stropy deskové ze ŽB tř. C 25/30" MJ="m3" Vymera="62.706" JCena="383.00"/>
+			</Skupina>
+			<Skupina Id="005" Typ="2">
+				<Polozka Kod="591411111" Nazev="Kladení dlažby z mozaiky jednobarevné komunikací pro pěší lože z kameniva" MJ="m2" Vymera="49.365" JCena="516.00"/>
+			</Skupina>
+			<Skupina Id="006" Typ="2">
+				<Polozka Kod="612135101" Nazev="Hrubá výplň rýh ve stěnách maltou jakékoli šířky rýhy" MJ="m2" Vymera="137.740" JCena="343.00"/>
+			</Skupina>
+			<Skupina Id="009" Typ="2">
+				<Polozka Kod="952901111" Nazev="Vyčištění budov bytové a občanské výstavby při výšce podlaží do 4 m" MJ="m2" Vymera="258.010" JCena="85.30"/>
+			</Skupina>
+		</Skupina>
+		<Skupina Id="SO_03" Typ="1">
+			<Skupina Id="000" Typ="2">
+				<Polozka Kod="X971" Nazev="Vytýčení stavby geodetem" MJ="soubor" Vymera="2.000" JCena="15560.00"/>
+			</Skupina>
+			<Skupina Id="001" Typ="2">
+				<Polozka Kod="121101101" Nazev="Sejmutí ornice s přemístěním na vzdálenost do 50 m" MJ="m3" Vymera="81.222" JCena="31.30"/>
+			</Skupina>
+			<Skupina Id="002" Typ="2">
+				<Polozka Kod="213311113" Nazev="Polštáře zhutněné pod základy z kameniva drceného frakce 16 až 63 mm" MJ="m3" Vymera="15.610" JCena="1200.00"/>
+			</Skupina>
+			<Skupina Id="003" Typ="2">
+				<Polozka Kod="342351111" Nazev="Zřízení oboustranného bednění výplňových stěn a příček" MJ="m2" Vymera="161.019" JCena="3050.00"/>
+			</Skupina>
+			<Skupina Id="004" Typ="2">
+				<Polozka Kod="411321414" Nazev="Stropy deskové ze ŽB tř. C 25/30" MJ="m3" Vymera="62.706" JCena="383.00"/>
+			</Skupina>
+			<Skupina Id="005" Typ="2">
+				<Polozka Kod="591411111" Nazev="Kladení dlažby z mozaiky jednobarevné komunikací pro pěší lože z kameniva" MJ="m2" Vymera="49.365" JCena="516.00"/>
+			</Skupina>
+			<Skupina Id="006" Typ="2">
+				<Polozka Kod="612135101" Nazev="Hrubá výplň rýh ve stěnách maltou jakékoli šířky rýhy" MJ="m2" Vymera="137.740" JCena="343.00"/>
+			</Skupina>
+			<Skupina Id="009" Typ="2">
+				<Polozka Kod="952901111" Nazev="Vyčištění budov bytové a občanské výstavby při výšce podlaží do 4 m" MJ="m2" Vymera="258.010" JCena="85.30"/>
+			</Skupina>
+		</Skupina>
+	</Rozpocet>
+	<Definice>
+		<Klasifikace/>
+		<CenovaSoustava/>
+		<TypSkupiny Id="{CD56A01D-6D57-47F7-9978-8A87D3028BE9}" Nazev="Objekt" Typ="1">
+      <Skupina Id="SO_01" Nazev="Hlavní budova"/>  
+      <Skupina Id="SO_02" Nazev="Budova technického zázemí"/>  
+      <Skupina Id="SO_03" Nazev="Garáže a sklady"/>  
+    </TypSkupiny>
+		<TypSkupiny Id="{D29066CF-1660-46A3-B760-BD3FE158F922}" Nazev="Oddíl" Typ="2">
+			<Skupina Id="000" Nazev="Přípravné práce"/>
+			<Skupina Id="002" Nazev="Základy"/>
+			<Skupina Id="001" Nazev="Zemní práce"/>
+			<Skupina Id="003" Nazev="Svislé konstrukce"/>
+			<Skupina Id="004" Nazev="Vodorovné konstrukce"/>
+			<Skupina Id="005" Nazev="Komunikace"/>
+			<Skupina Id="006" Nazev="Úpravy povrchu"/>
+			<Skupina Id="009" Nazev="Ostatní konstrukce a práce"/>
+    </TypSkupiny>
+	</Definice>
+</orf>
