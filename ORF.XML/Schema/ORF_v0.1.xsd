@@ -230,6 +230,14 @@
       <xs:pattern value="[^@]+@[^\.]+\..+"/>
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="TTypPolozky">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HSV"></xs:enumeration>
+      <xs:enumeration value="PSV"></xs:enumeration>
+      <xs:enumeration value="M"></xs:enumeration>
+      <!--TODO: Nejake dalsi?-->
+    </xs:restriction>
+  </xs:simpleType>
   <xs:complexType name="TORF">
     <xs:sequence>
       <xs:element name="Projekt" type="TProjekt"/>
@@ -351,26 +359,29 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="TPolozkaHierarchieRozpoctu">
+  <xs:complexType name="TUzelRozpoctu">
     <xs:complexContent>
       <xs:extension base="TIdentita">
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:complexType name="TObjekt">
-    <xs:complexContent>
-      <xs:extension base="TPolozkaHierarchieRozpoctu">
         <xs:sequence>
-          <xs:element name="Objekt" type="TObjekt" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element name="Dil" type="TDil" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element name="Polozka" type="TPolozkaRozpoctu" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="TObjekt">
+    <xs:complexContent>
+      <xs:extension base="TUzelRozpoctu">
+        <xs:sequence>
+          <xs:element name="Objekt" type="TObjekt" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="Dil" type="TDil" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="JKSO"></xs:attribute> <!-- TODO -->
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="TPolozkaRozpoctu">
     <xs:complexContent>
-      <xs:extension base="TPolozkaHierarchieRozpoctu">
+      <xs:extension base="TIdentita">
         <xs:sequence>
           <xs:element name="Zatrideni" type="TTridaRef" minOccurs="0" maxOccurs="unbounded">
             <xs:keyref name="ClassKeyRef" refer="ClassKey">
@@ -384,17 +395,26 @@
               <xs:field xpath="@Ref"/>
             </xs:keyref>
           </xs:element>
+          <xs:element name="Mnozstvi" type="TMnozstvi" minOccurs="1"></xs:element>
           <xs:element name="SouvisejiciEntita" type="TExterniEntita" minOccurs="0" maxOccurs="unbounded"></xs:element>
+          <xs:element name="KomentarZadavatele" type="xs:string" minOccurs="0"></xs:element>
+          <xs:element name="KomentarUchazece" type="xs:string" minOccurs="0"></xs:element>
         </xs:sequence>
+        <xs:attribute name="Kod" type="xs:string" use="required"></xs:attribute>
+        <xs:attribute name="Typ" type="TTypPolozky" use="required"></xs:attribute>
+        <xs:attribute name="MernaJednotka" type="xs:string" use="required"></xs:attribute>
+        <xs:attribute name="JednotkovaCena" type="TCena" use="required"></xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:complexType name="TMnozstvi">
+    <!--TODO: Definovat-->
+  </xs:complexType>
   <xs:complexType name="TDil">
     <xs:complexContent>
-      <xs:extension base="TPolozkaHierarchieRozpoctu">
+      <xs:extension base="TUzelRozpoctu">
         <xs:sequence>
           <xs:element name="Dil" type="TDil" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element name="Polozka" type="TPolozkaRozpoctu" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
