@@ -407,7 +407,7 @@
       </xs:documentation>
     </xs:annotation>
     <xs:key name="ClassKey">
-      <xs:selector xpath="Definice//Trida"/>
+      <xs:selector xpath=".//Trida"/>
       <xs:field xpath="@Id"/>
     </xs:key>
     <xs:key name="CostingSourceKey">
