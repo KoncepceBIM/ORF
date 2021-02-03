@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="ORF.XML.TUnit" Collapsed="true">
+    <Position X="6.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORF.XML.TSIUnit">
+    <Position X="1.5" Y="3" Width="1.5" />
+    <Members>
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_prefix" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAQCAAAAAAAAQAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Name" />
+      <Property Name="Prefix" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ORF.XML.TMonetaryUnit">
+    <Position X="7.75" Y="3.25" Width="1.75" />
+    <Members>
+      <Field Name="_currency" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORF.XML.TDerivedUnitComponent">
+    <Position X="5" Y="5" Width="1.5" />
+    <Members>
+      <Field Name="_exponent" Hidden="true" />
+      <Field Name="_unit" Hidden="true" />
+      <Method Name="TDerivedUnitComponent" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAEAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORF.XML.TDerivedUnit">
+    <Position X="5" Y="3.25" Width="1.75" />
+    <Members>
+      <Field Name="_component" Hidden="true" />
+      <Method Name="TDerivedUnit" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Component" Type="ORF.XML.TDerivedUnitComponent">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.242" Y="0.048" Height="0.182" Width="1.133" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Component" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ORF.XML.TConversionUnit">
+    <Position X="10.25" Y="3.25" Width="1.75" />
+    <Members>
+      <Field Name="_baseUnit" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_offset" Hidden="true" />
+      <Field Name="_scale" Hidden="true" />
+      <Field Name="_symbol" Hidden="true" />
+      <Method Name="TConversionUnit" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAFAAAAAAIAIAAAQAAIAAAAAAAAAAAAAAiCA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORF.XML.TContextDependentUnit">
+    <Position X="12.75" Y="3.25" Width="2" />
+    <Members>
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_symbol" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ORF.XML.SIUnitPrefix">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAUACAAAAAgAwCAAAAAwEECAAEBAQAAkAAAAoA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ORF.XML.SIUnitName">
+    <Position X="2.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIQQAIAAQACIAgCAACxAQAAAiIIFACAIwBQAAAI=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
