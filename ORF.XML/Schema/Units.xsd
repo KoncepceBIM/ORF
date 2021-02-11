@@ -482,9 +482,17 @@
 
   </xs:complexType>
 
-  <xs:complexType name="TSIUnit">
+  <xs:complexType name="TNamedUnit" abstract="true">
     <xs:complexContent>
       <xs:extension base="TUnit">
+        
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="TSIUnit">
+    <xs:complexContent>
+      <xs:extension base="TNamedUnit">
         <xs:attribute name="Name" type="SIUnitName" use="required"/>
         <xs:attribute name="Prefix" type="SIUnitPrefix" use="optional"/>
       </xs:extension>
@@ -498,7 +506,7 @@
           <xs:element name="Component" minOccurs="1" maxOccurs="unbounded">
             <xs:complexType>
               <xs:sequence>
-                <xs:element name="Unit" type="TSIUnit" minOccurs="1"/>
+                <xs:element name="Unit" type="TNamedUnit" minOccurs="1"/>
               </xs:sequence>
               <xs:attribute name="Exponent" type="xs:integer" use="required"/>
             </xs:complexType>
@@ -510,9 +518,9 @@
 
   <xs:complexType name="TConversionUnit">
     <xs:complexContent>
-      <xs:extension base="TUnit">
+      <xs:extension base="TNamedUnit">
         <xs:sequence>
-          <xs:element name="BaseUnit" type="TUnit" minOccurs="1"/>
+          <xs:element name="BaseUnit" type="TSIUnit" minOccurs="1"/>
         </xs:sequence>
         <xs:attribute name="Name" type="xs:string" use="required"/>
         <xs:attribute name="Symbol" type="xs:string" use="required"/>
