@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="TPolozkaRozpoctu">
+    <Position X="5" Y="3.25" Width="4" />
+    <Members>
+      <Field Name="cenovaSoustavaField" Hidden="true" />
+      <Field Name="jednotkovaCenaField" Hidden="true" />
+      <Field Name="jednotkovaDemontazniHmotnostField" Hidden="true" />
+      <Field Name="jednotkovaDemontazniHmotnostFieldSpecified" Hidden="true" />
+      <Property Name="JednotkovaDemontazniHmotnostSpecified" Hidden="true" />
+      <Field Name="jednotkovaHmotnostField" Hidden="true" />
+      <Field Name="jednotkovaHmotnostFieldSpecified" Hidden="true" />
+      <Property Name="JednotkovaHmotnostSpecified" Hidden="true" />
+      <Field Name="kodField" Hidden="true" />
+      <Field Name="komentarField" Hidden="true" />
+      <Field Name="mnozstviField" Hidden="true" />
+      <Field Name="poradoveCisloField" Hidden="true" />
+      <Field Name="pouzeMaterialField" Hidden="true" />
+      <Field Name="pouzeMaterialFieldSpecified" Hidden="true" />
+      <Property Name="PouzeMaterialSpecified" Hidden="true" />
+      <Field Name="prenesenaDPHField" Hidden="true" />
+      <Field Name="prenesenaDPHFieldSpecified" Hidden="true" />
+      <Property Name="PrenesenaDPHSpecified" Hidden="true" />
+      <Field Name="sazbaDPHField" Hidden="true" />
+      <Field Name="sazbaDPHFieldSpecified" Hidden="true" />
+      <Property Name="SazbaDPHSpecified" Hidden="true" />
+      <Field Name="souvisejiciEntitaField" Hidden="true" />
+      <Field Name="typField" Hidden="true" />
+      <Field Name="variantaField" Hidden="true" />
+      <Field Name="zatrideniField" Hidden="true" />
+      <Field Name="zpusobilostField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gAAAGAEIAUAIBAgIAEQCAYUmAIUBCUAIAIACLAAgYIA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="JednotkovaCena" />
+      <Property Name="Mnozstvi" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="SouvisejiciEntita" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TExterniEntita">
+    <Position X="11.75" Y="7.25" Width="2.25" />
+    <Members>
+      <Field Name="idField" Hidden="true" />
+      <Field Name="nazevField" Hidden="true" />
+      <Field Name="umisteniField" Hidden="true" />
+      <Field Name="zdrojField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABCAQAAAAAAAAAAAAAAAgAAAAAAACEACAQAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TJednotkovaCena">
+    <Position X="11.75" Y="5.25" Width="2.25" />
+    <Members>
+      <Field Name="autorField" Hidden="true" />
+      <Field Name="cenaField" Hidden="true" />
+      <Field Name="datumField" Hidden="true" />
+      <Field Name="komentarField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAACAAwAAAAACAAAAABAgBAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TMnozstvi">
+    <Position X="11.75" Y="3.25" Width="2.25" />
+    <Members>
+      <Field Name="hodnotaField" Hidden="true" />
+      <Field Name="jednotkaField" Hidden="true" />
+      <Field Name="skupinaMereniField" Hidden="true" />
+      <Field Name="vymeraField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IAAAAABAAACAAAAQAAAFAAQAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

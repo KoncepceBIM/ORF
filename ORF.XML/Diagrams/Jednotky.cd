@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TJednotka" Collapsed="true">
+    <Position X="9.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TPenezniJednotka">
+    <Position X="5" Y="2" Width="2.5" />
+    <Members>
+      <Field Name="menaField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAABAAAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TJednotkaZavislaNaKontextu">
+    <Position X="8.25" Y="2" Width="2.25" />
+    <Members>
+      <Field Name="nazevField" Hidden="true" />
+      <Field Name="symbolField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TOdvozenaJednotka">
+    <Position X="11" Y="2" Width="2" />
+    <Members>
+      <Field Name="componentaField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Componenta" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TPojmenovanaJednotka" Collapsed="true">
+    <Position X="14.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TKonverzniJednotka">
+    <Position X="13.25" Y="3.75" Width="2" />
+    <Members>
+      <Field Name="meritkoField" Hidden="true" />
+      <Field Name="nazevField" Hidden="true" />
+      <Field Name="odsazeniField" Hidden="true" />
+      <Field Name="symbolField" Hidden="true" />
+      <Method Name="TKonverzniJednotka" Hidden="true" />
+      <Field Name="zakladniJednotkaField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AgAAAQBAEAAEAACAAAAAAAAAAAACAAAAAAQAAAAACAg=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TJednotkaSI">
+    <Position X="16.5" Y="3.75" Width="2.25" />
+    <Members>
+      <Field Name="nazevField" Hidden="true" />
+      <Field Name="predponaField" Hidden="true" />
+      <Field Name="predponaFieldSpecified" Hidden="true" />
+      <Property Name="PredponaSpecified" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AgAAAQAAAAAAAAAAAAAAAAAAACAAAAAAAAUAAAAAgAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Nazev" />
+      <Property Name="Predpona" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TOdvozenaJednotkaComponenta">
+    <Position X="9.75" Y="4.25" Width="2.5" />
+    <Members>
+      <Field Name="exponentField" Hidden="true" />
+      <Field Name="jednotkaField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAABAAQAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="TNazevJednotkySI">
+    <Position X="17.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIQQAIAAQACIAgCAACxAQAAAiIIFACAIwBQAAAI=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TPredponaSI">
+    <Position X="15.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAUACAAAAAgAwCAAAAAwEECAAEBAQAAkAAAAoA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

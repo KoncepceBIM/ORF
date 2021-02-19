@@ -749,6 +749,10 @@
 
     </xs:restriction>
   </xs:simpleType>
+
+  <xs:complexType name="TJednotkaRef">
+    <xs:attribute name="Ref" type="xs:IDREF"></xs:attribute>
+  </xs:complexType>
   <xs:complexType name="TJednotka" abstract="true">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Abstraktní datový typ pro všechny definice jednotek</xs:documentation>
@@ -831,7 +835,7 @@
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="TJednotka">
-        <xs:attribute name="Mena" type="TMena"/>
+        <xs:attribute name="Mena" type="TMena" use="required"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -853,14 +857,6 @@
         <xs:annotation>
           <xs:documentation xml:lang="cs">Rozpočet - struktura a položky rozpočtu</xs:documentation>
         </xs:annotation>
-        <xs:keyref name="InvestorKeyRef" refer="OrgKey">
-          <xs:selector xpath="."/>
-          <xs:field xpath="@Objednatel"/>
-        </xs:keyref>
-        <xs:keyref name="AuthorKeyRef" refer="OrgKey">
-          <xs:selector xpath="."/>
-          <xs:field xpath="@Autor"/>
-        </xs:keyref>
       </xs:element>
       <xs:element name="Definice" type="TDefinice" minOccurs="1" maxOccurs="1">
         <xs:annotation>
@@ -868,7 +864,7 @@
         </xs:annotation>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="Verze" type="TVerze">
+    <xs:attribute name="Verze" type="TVerze" use="required">
       <xs:annotation>
         <xs:documentation xml:lang="cs">Verze formátu ORF</xs:documentation>
       </xs:annotation>
@@ -910,13 +906,13 @@
     <xs:sequence>
       <xs:element name="Trida" type="TTrida" minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
-    <xs:attribute name="Id" type="xs:string" use="required"/>
+    <xs:attribute name="Id" type="xs:ID" use="required"/>
     <xs:attribute name="Kod" type="xs:string" use="required"/>
     <xs:attribute name="Nazev" type="xs:string" use="optional"/>
     <xs:attribute name="Popis" type="xs:string" use="optional"/>
   </xs:complexType>
   <xs:complexType name="TTridaRef">
-    <xs:attribute name="Ref" type="xs:string"/>
+    <xs:attribute name="Ref" type="xs:IDREF"/>
   </xs:complexType>
   <xs:complexType name="TIdentita" abstract="true">
     <xs:sequence>
@@ -977,15 +973,27 @@
     <xs:attribute name="Telefon" type="xs:string"/>
     <xs:attribute name="Email" type="TEmail"/>
   </xs:complexType>
+  <xs:complexType name="TOrganizaceRef">
+    <xs:attribute name="Ref" type="xs:IDREF"></xs:attribute>
+  </xs:complexType>
   <xs:complexType name="TRozpocet">
     <xs:complexContent>
       <xs:extension base="TIdentita">
         <xs:sequence>
           <xs:element name="Objekt" type="TObjekt" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element name="Polozka" type="TPolozkaRozpoctu" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="Objednatel" type="TOrganizaceRef">
+            <xs:keyref name="ObjednatelKeyRef" refer="OrgKey">
+              <xs:selector xpath="."/>
+              <xs:field xpath="@Ref"/>
+            </xs:keyref>
+          </xs:element>
+          <xs:element name="Autor" type="TOrganizaceRef">
+            <xs:keyref name="AutorKeyRef" refer="OrgKey">
+              <xs:selector xpath="."/>
+              <xs:field xpath="@Ref"/>
+            </xs:keyref>
+          </xs:element>
         </xs:sequence>
-        <xs:attribute name="Objednatel" type="xs:IDREF" use="required"></xs:attribute>
-        <xs:attribute name="Autor" type="xs:IDREF" use="optional"></xs:attribute>
         <xs:attribute name="Datum" type="xs:dateTime" use="required"></xs:attribute>
       </xs:extension>
     </xs:complexContent>
@@ -1000,6 +1008,7 @@
               <xs:field xpath="@Ref"/>
             </xs:keyref>
           </xs:element>
+          <xs:element name="UzelRozpoctu" type="TUzelRozpoctu" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element name="Polozka" type="TPolozkaRozpoctu" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="VlastniTyp" use="optional"></xs:attribute>
@@ -1010,10 +1019,6 @@
   <xs:complexType name="TObjekt">
     <xs:complexContent>
       <xs:extension base="TUzelRozpoctu">
-        <xs:sequence>
-          <xs:element name="Objekt" type="TObjekt" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element name="UzelRozpoctu" type="TUzelRozpoctu" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
         <!-- Povinne z vyhlasky -->
         <xs:attribute name="KSO" type="xs:string" use="required"></xs:attribute>
       </xs:extension>
@@ -1039,20 +1044,10 @@
             <xs:annotation>
               <xs:documentation xml:lang="cs">Informace o množství</xs:documentation>
             </xs:annotation>
-            <xs:keyref name="UnitRef" refer="UnitKey">
-              <xs:selector xpath="." />
-              <xs:field xpath="@MernaJednotka"/>
-            </xs:keyref>
           </xs:element>
           <xs:element name="SouvisejiciEntita" type="TExterniEntita" minOccurs="0" maxOccurs="unbounded"></xs:element>
-          <xs:element name="KomentarZadavatele" type="xs:string" minOccurs="0"></xs:element>
-          <xs:element name="KomentarUchazece" type="xs:string" minOccurs="0"></xs:element>
-
+          <xs:element name="Komentar" type="xs:string" minOccurs="0"></xs:element>
           <xs:element name="JednotkovaCena" type="TJednotkovaCena" minOccurs="0">
-            <xs:keyref name="UnitPriceAuthorRef" refer="OrgKey">
-              <xs:selector xpath="." />
-              <xs:field xpath="@Author"/>
-            </xs:keyref>
           </xs:element>
         </xs:sequence>
         <xs:attribute name="Kod" type="xs:string" use="required"></xs:attribute>
@@ -1096,6 +1091,12 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="Jednotka" type="TJednotkaRef">
+        <xs:keyref name="UnitRef" refer="UnitKey">
+          <xs:selector xpath="." />
+          <xs:field xpath="@Ref"/>
+        </xs:keyref>
+      </xs:element>
     </xs:sequence>
     <xs:attribute name="SkupinaMereni" type="xs:string" use="optional">
       <xs:annotation>
@@ -1105,12 +1106,19 @@
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="Hodnota" type="THodnotaMnozstvi" use="required"></xs:attribute>
-    <xs:attribute name="MernaJednotka" type="xs:IDREF" use="required"></xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="TJednotkovaCena">
+    <xs:sequence>
+      <xs:element name="Autor" type="TOrganizaceRef">
+        <xs:keyref name="JCAutorKeyRef" refer="OrgKey">
+          <xs:selector xpath="."/>
+          <xs:field xpath="@Ref"/>
+        </xs:keyref>
+      </xs:element>
+      <xs:element name="Komentar" type="xs:string" minOccurs="0"></xs:element>
+    </xs:sequence>
     <xs:attribute name="Cena" type="TCena" use="required"></xs:attribute>
-    <xs:attribute name="Autor" type="xs:IDREF" use="required"></xs:attribute>
     <xs:attribute name="Datum" type="xs:dateTime" use="required"></xs:attribute>
   </xs:complexType>
 
