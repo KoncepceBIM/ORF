@@ -6,6 +6,9 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
   <xs:simpleType name="TVerze">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Verze ORF - pro účely validace</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="v0.1"/>
     </xs:restriction>
@@ -13,7 +16,7 @@
   <xs:simpleType name="TMena">
     <xs:annotation>
       <xs:documentation>
-        ISO 4217
+        Enumerace měn podle ISO 4217
       </xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
@@ -199,6 +202,9 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TUrl">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">URL adresa</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:anyURI">
       <xs:pattern value="(http|https)://.+" />
     </xs:restriction>
@@ -214,23 +220,35 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TCena">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Cena jako desetinné číclo</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:decimal">
       <xs:totalDigits value="18"/>
       <xs:fractionDigits value="2"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="THodnotaMnozstvi">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Množství je desetinné číslo s 0-5 desetinami podle informace definice v ORF</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:decimal">
       <xs:pattern value="\d+\.\d{0-5}" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TZaokrouhleni">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Množství může být zaohrouhleno na 0-5 des. míst. Zaokrouhlení je jednotné pro celý soubor ORF</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:integer">
       <xs:minInclusive value="0"/>
       <xs:maxInclusive value="5"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TEmail">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Email</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:pattern value="[^@]+@[^\.]+\..+"/>
     </xs:restriction>
@@ -244,6 +262,9 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TTypKlasifikace">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Výčet nejčastěji používaných klasifikací v českém stavebnictví.</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="CC - CZ"></xs:enumeration>
       <xs:enumeration value="CPV"></xs:enumeration>
@@ -252,6 +273,9 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TNazevJednotkySI">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Názvy jednotek podle ISO 80000-1:2009</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="metre">
         <xs:annotation>
@@ -539,6 +563,9 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TPredponaSI">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Předpony jednotek podle ISO 80000-1:2009</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="yotta">
         <xs:annotation>
@@ -723,9 +750,15 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="TJednotka" abstract="true">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Abstraktní datový typ pro všechny definice jednotek</xs:documentation>
+    </xs:annotation>
     <xs:attribute name="Id" type="xs:ID"></xs:attribute>
   </xs:complexType>
   <xs:complexType name="TPojmenovanaJednotka" abstract="true">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Abstraktní datový typ pro jednotky, které mají název</xs:documentation>
+    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="TJednotka">
 
@@ -733,6 +766,9 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="TJednotkaSI">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Jednotky SI jsou dané svým názvem (enumerace) a předponou, která definuje jejich zlomek nebo násobek</xs:documentation>
+    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="TPojmenovanaJednotka">
         <xs:attribute name="Nazev" type="TNazevJednotkySI" use="required"/>
@@ -741,6 +777,9 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="TOdvozenaJednotka">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Jednotky je možné kombinovat do odvozených jednotek, například m · s⁻¹</xs:documentation>
+    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="TJednotka">
         <xs:sequence>
@@ -757,6 +796,9 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="TKonverzniJednotka">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Další jednotky je možné vyjádřit pomocí měřítka a odszení. Například h = 60 * s</xs:documentation>
+    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="TPojmenovanaJednotka">
         <xs:sequence>
@@ -770,6 +812,12 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="TJednotkaZavislaNaKontextu">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Vyjadřuje jednotky, které nejsou vztažené k jednotkám SI. Například "kus", "komplet" a pod.
+        Tento datový typ by se měl používat pouze v případě, že není možné jednotku vyjádřit pomocí jednotek SI, odvozených ani konverzních jednotek
+      </xs:documentation>
+    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="TJednotka">
         <xs:attribute name="Nazev" type="xs:string" use="required"/>
@@ -778,30 +826,63 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="TPenezniJednotka">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Jednotka pro cenu</xs:documentation>
+    </xs:annotation>
     <xs:complexContent>
       <xs:extension base="TJednotka">
         <xs:attribute name="Mena" type="TMena"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:complexType name="TORF">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Kořenový datový typ, který obsahuje projekt definující kontext, rozpočet a definiční sekci.
+        V definicích jsou definované datové objekty, na které se odkazují další datové entity ORF
+      </xs:documentation>
+    </xs:annotation>
     <xs:sequence>
-      <xs:element name="Projekt" type="TProjekt"/>
-      <xs:element name="Rozpocet" type="TRozpocet"/>
-      <xs:element name="Definice">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="Klasifikace" type="TKlasifikace" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="CenovaSoustava" type="TCenovaSoustava" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="Jednotka" type="TJednotka" minOccurs="0" maxOccurs="unbounded"/>
-          </xs:sequence>
-          <xs:attribute name="ZaokrouhleniMnozstviPolozky" type="TZaokrouhleni" use="required"/>
-          <xs:attribute name="PozadovanaSazbaDPH" type="xs:boolean" use="required"/>
-        </xs:complexType>
+      <xs:element name="Projekt" type="TProjekt">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Stavební (výstavbový) projekt, pro který se zpracovává rozpočet. Poskytuje širší kontext pro vlastní rozpočet.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Rozpocet" type="TRozpocet">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Rozpočet - struktura a položky rozpočtu</xs:documentation>
+        </xs:annotation>
+        <xs:keyref name="InvestorKeyRef" refer="OrgKey">
+          <xs:selector xpath="."/>
+          <xs:field xpath="@Objednatel"/>
+        </xs:keyref>
+        <xs:keyref name="AuthorKeyRef" refer="OrgKey">
+          <xs:selector xpath="."/>
+          <xs:field xpath="@Autor"/>
+        </xs:keyref>
+      </xs:element>
+      <xs:element name="Definice" type="TDefinice" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Definice datov7ch objektů, na které se odkazují jiné datové entity v modelu ORF</xs:documentation>
+        </xs:annotation>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="Verze" type="TVerze" />
+    <xs:attribute name="Verze" type="TVerze">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">Verze formátu ORF</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="TDefinice">
+    <xs:sequence>
+      <xs:element name="Organizace" type="TOrganizace" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="Klasifikace" type="TKlasifikace" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="CenovaSoustava" type="TCenovaSoustava" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Jednotka" type="TJednotka" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="ZaokrouhleniMnozstviPolozky" type="TZaokrouhleni" use="required"/>
+    <xs:attribute name="PozadovanaSazbaDPH" type="xs:boolean" use="required"/>
   </xs:complexType>
   <xs:complexType name="TCenovaSoustava">
     <xs:attribute name="Id" type="xs:string" use="required"/>
@@ -860,7 +941,7 @@
           <xs:element name="Umisteni" minOccurs="0" type="TPoloha"/>
         </xs:sequence>
 
-        
+
         <xs:attribute name="EvidencniCislo" type="xs:string" use="optional"/>
 
 
@@ -887,6 +968,7 @@
       <xs:element name="Adresa" type="xs:string" minOccurs="0"/>
       <xs:element name="Kontakt" type="TOsoba" minOccurs="0" />
     </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID" use="required"/>
     <xs:attribute name="Nazev" type="xs:string" use="required"/>
     <xs:attribute name="Stat" type="xs:string" use="required"/>
     <xs:attribute name="ICO" type="xs:string"/>
@@ -899,11 +981,12 @@
     <xs:complexContent>
       <xs:extension base="TIdentita">
         <xs:sequence>
-          <xs:element name="Objednatel" type="TOrganizace" minOccurs="0"/>
-          <xs:element name="Dodavatel" type="TOrganizace" minOccurs="0"/>
           <xs:element name="Objekt" type="TObjekt" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element name="Polozka" type="TPolozkaRozpoctu" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
+        <xs:attribute name="Objednatel" type="xs:IDREF" use="required"></xs:attribute>
+        <xs:attribute name="Autor" type="xs:IDREF" use="optional"></xs:attribute>
+        <xs:attribute name="Datum" type="xs:dateTime" use="required"></xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -923,7 +1006,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-    <!--Vyhláška, kořen hierarchie -->
+  <!--Kořen hierarchie podle vyhlášky-->
   <xs:complexType name="TObjekt">
     <xs:complexContent>
       <xs:extension base="TUzelRozpoctu">
@@ -931,9 +1014,8 @@
           <xs:element name="Objekt" type="TObjekt" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element name="UzelRozpoctu" type="TUzelRozpoctu" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
-        <!-- TODO: ClassRef? -->
         <!-- Povinne z vyhlasky -->
-        <xs:attribute name="KSO" type="xs:string"></xs:attribute>
+        <xs:attribute name="KSO" type="xs:string" use="required"></xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -954,6 +1036,9 @@
             </xs:keyref>
           </xs:element>
           <xs:element name="Mnozstvi" type="TMnozstvi" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation xml:lang="cs">Informace o množství</xs:documentation>
+            </xs:annotation>
             <xs:keyref name="UnitRef" refer="UnitKey">
               <xs:selector xpath="." />
               <xs:field xpath="@MernaJednotka"/>
@@ -962,19 +1047,27 @@
           <xs:element name="SouvisejiciEntita" type="TExterniEntita" minOccurs="0" maxOccurs="unbounded"></xs:element>
           <xs:element name="KomentarZadavatele" type="xs:string" minOccurs="0"></xs:element>
           <xs:element name="KomentarUchazece" type="xs:string" minOccurs="0"></xs:element>
+
+          <xs:element name="JednotkovaCena" type="TJednotkovaCena" minOccurs="0">
+            <xs:keyref name="UnitPriceAuthorRef" refer="OrgKey">
+              <xs:selector xpath="." />
+              <xs:field xpath="@Author"/>
+            </xs:keyref>
+          </xs:element>
         </xs:sequence>
         <xs:attribute name="Kod" type="xs:string" use="required"></xs:attribute>
         <xs:attribute name="PoradoveCislo" type="xs:positiveInteger" use="required"></xs:attribute>
-        
+
         <!-- TODO: Potvrdit HSV, PSV, M, ...? -->
         <xs:attribute name="Typ" type="TTypPolozky" use="required"></xs:attribute>
         <xs:attribute name="JednotkovaHmotnost" type="xs:double" use="optional"></xs:attribute>
         <xs:attribute name="JednotkovaDemontazniHmotnost" type="xs:double" use="optional"></xs:attribute>
-        <!--TODO: Odkazem na enumeraci v definicích?-->
+        <!--TODO: Odkazem na enumeraci v definicích? -->
+        <!--TODO: Kdo dodava sazbu DPH? Zadavatel, nebo uchazec? -->
         <xs:attribute name="SazbaDPH" type="xs:decimal" use="optional"></xs:attribute>
         <xs:attribute name="PrenesenaDPH" type="xs:boolean" use="optional"></xs:attribute>
         <xs:attribute name="PouzeMaterial" type="xs:boolean" use="optional"></xs:attribute>
-        
+
         <xs:attribute name="Varianta" type="xs:string" use="optional">
           <xs:annotation>
             <xs:documentation xml:lang="cs">
@@ -982,7 +1075,7 @@
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        
+
         <xs:attribute name="Zpusobilost" type="xs:string" use="optional">
           <xs:annotation>
             <xs:documentation xml:lang="cs">
@@ -990,10 +1083,6 @@
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>
-
-        <!--TODO: Změnit na element s definicí toho, kdo jednotkovou cenu dodal, jako samostatna datova vrstva/identita-->
-        <xs:attribute name="JednotkovaCena" type="TCena" use="required"></xs:attribute>
-        
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1015,8 +1104,14 @@
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute type="THodnotaMnozstvi" name="Hodnota" use="required"></xs:attribute>
+    <xs:attribute name="Hodnota" type="THodnotaMnozstvi" use="required"></xs:attribute>
     <xs:attribute name="MernaJednotka" type="xs:IDREF" use="required"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TJednotkovaCena">
+    <xs:attribute name="Cena" type="TCena" use="required"></xs:attribute>
+    <xs:attribute name="Autor" type="xs:IDREF" use="required"></xs:attribute>
+    <xs:attribute name="Datum" type="xs:dateTime" use="required"></xs:attribute>
   </xs:complexType>
 
   <xs:element name="ORF" type="TORF">
@@ -1034,7 +1129,11 @@
       <xs:field xpath="@Id"/>
     </xs:key>
     <xs:key name="UnitKey">
-      <xs:selector xpath="Definice/Unit"/>
+      <xs:selector xpath="Definice/Jednotka"/>
+      <xs:field xpath="@Id"/>
+    </xs:key>
+    <xs:key name="OrgKey">
+      <xs:selector xpath="Definice/Organizace"/>
       <xs:field xpath="@Id"/>
     </xs:key>
   </xs:element>
