@@ -931,13 +931,13 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-    <xs:element name="MetodikaMereni" type="TMetodikaMereni" minOccurs="0" maxOccurs="unbounded">
-      <xs:annotation>
+      <xs:element name="MetodikaMereni" type="TMetodikaMereni" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
           <xs:documentation xml:lang="cs">
             Metodiky měření, na které se mohou odkazovat jednotlivé položky rozpočtu
           </xs:documentation>
         </xs:annotation>
-    </xs:element>
+      </xs:element>
     </xs:sequence>
     <xs:attribute name="ZaokrouhleniMnozstviPolozky" type="TZaokrouhleni" use="required">
       <xs:annotation>
@@ -1300,6 +1300,17 @@
             Externí identity (například odpovídající, nebo související elementy v modelu stavby).
           </xs:documentation>
         </xs:annotation>
+      </xs:element>
+      <xs:element name="SkupinaVlastnosti" type="TSkupinaVlastnosti" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Volitelné další vlastnosti popisující danou datovou entitu
+          </xs:documentation>
+        </xs:annotation>
+        <xs:unique name="UniquePropertyName">
+          <xs:selector xpath="./Vlastnost"></xs:selector>
+          <xs:field xpath="@Nazev"></xs:field>
+        </xs:unique>
       </xs:element>
     </xs:sequence>
     <xs:attribute name="Id" type="TGuid" use="required">
@@ -1945,7 +1956,7 @@
           <xs:field xpath="@Ref"/>
         </xs:keyref>
       </xs:element>
-    <xs:element name="SkupinaMereni" type="TMetodikaMereniRef">
+      <xs:element name="SkupinaMereni" type="TMetodikaMereniRef">
         <xs:annotation>
           <xs:documentation xml:lang="cs">
             Odkaz na metodiku měření (např. https://www.sfdi.cz/soubory/obrazky-clanky/metodiky/2019_5_metodika_mereni.pdf)
@@ -1988,6 +1999,177 @@
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TSkupinaVlastnosti">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Element umožňující zachytit popisné vlastnosti sdružené do pojmenované skupiny
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Popis" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Popis skupiny vlastností
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Vlastnost" type="TVlastnost" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Vlastnosti v této skupině. Názvy vlastností musí být v rámci skupiny unikátní.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Nazev" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Název skupiny vlastností
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TVlastnost" abstract="true">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Element reprezentující popisnou vlastnost
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Popis" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Popis vlastnosti
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Nazev" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Název vlastnosti
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TVlastnostText">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Textová vlastnost
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="TVlastnost">
+        <xs:sequence>
+          <xs:element name="Hodnota" type="xs:string">
+            <xs:annotation>
+              <xs:documentation xml:lang="cs">
+                Hodnota vlastnosti jako text
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TVlastnostDecimal">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Vlastnost jako desetinne číslo
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="TVlastnost">
+        <xs:attribute name="Hodnota" type="xs:decimal">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">
+              Hodnota vlastnosti jako desetinné číslo
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TVlastnostReal">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Vlastnost s reálnou hodnotou
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="TVlastnost">
+        <xs:attribute name="Hodnota" type="xs:double">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">
+              Hodnota vlastnosti jako reálné číslo s plovoucí desetinnou čárkou
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TVlastnostIntegral">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Vlastnost s celočíselnou hodnotou
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="TVlastnost">
+        <xs:attribute name="Hodnota" type="xs:long">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">
+              Hodnota vlastnosti jako celé číslo
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TVlastnostBoolean">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Vlastnost s logickou hodnotou
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="TVlastnost">
+        <xs:attribute name="Hodnota" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">
+              Logická hodnota
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TVlastnostDatum">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Vlastnost reprezentující datum a čas
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="TVlastnost">
+        <xs:attribute name="Hodnota" type="xs:dateTime">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">
+              Hodnota datum a čas
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
 
   <xs:element name="ORF" type="TORF">
