@@ -2060,7 +2060,7 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="Jednotka" type="TJednotkaRef">
+      <xs:element name="Jednotka" type="TJednotkaRef" minOccurs="0">
         <xs:annotation>
           <xs:documentation xml:lang="cs">
             Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
