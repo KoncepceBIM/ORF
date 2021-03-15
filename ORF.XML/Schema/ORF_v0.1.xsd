@@ -757,18 +757,18 @@
     </xs:restriction>
   </xs:simpleType>
 
-  
+
   <xs:complexType name="TJednotkaRef">
     <xs:attribute name="Ref" type="xs:IDREF"></xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="TJednotka" abstract="true">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Abstraktní datový typ pro všechny definice jednotek</xs:documentation>
     </xs:annotation>
     <xs:attribute name="Id" type="xs:ID"></xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="TPojmenovanaJednotka" abstract="true">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Abstraktní datový typ pro jednotky, které mají název</xs:documentation>
@@ -779,7 +779,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-    
+
   <xs:complexType name="TJednotkaSI">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Jednotky SI jsou dané svým názvem (enumerace) a předponou, která definuje jejich zlomek nebo násobek</xs:documentation>
@@ -791,7 +791,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-    
+
   <xs:complexType name="TOdvozenaJednotka">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Jednotky je možné kombinovat do odvozených jednotek, například m · s⁻¹</xs:documentation>
@@ -811,7 +811,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-    
+
   <xs:complexType name="TKonverzniJednotka">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Další jednotky je možné vyjádřit pomocí měřítka a odszení. Například h = 60 * s</xs:documentation>
@@ -828,7 +828,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:complexType name="TJednotkaZavislaNaKontextu">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -843,7 +843,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-    
+
   <xs:complexType name="TPenezniJednotka">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Jednotka pro cenu</xs:documentation>
@@ -855,7 +855,7 @@
     </xs:complexContent>
   </xs:complexType>
 
-  
+
   <xs:complexType name="TORF">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -886,7 +886,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="TDefinice">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -931,6 +931,13 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
+    <xs:element name="MetodikaMereni" type="TMetodikaMereni" minOccurs="0" maxOccurs="unbounded">
+      <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Metodiky měření, na které se mohou odkazovat jednotlivé položky rozpočtu
+          </xs:documentation>
+        </xs:annotation>
+    </xs:element>
     </xs:sequence>
     <xs:attribute name="ZaokrouhleniMnozstviPolozky" type="TZaokrouhleni" use="required">
       <xs:annotation>
@@ -940,7 +947,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="TAdresa">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -990,7 +997,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="TCenovaSoustava">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1040,7 +1047,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-    
+
   <xs:complexType name="TCenovaSoustavaRef">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1055,7 +1062,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-    
+
   <xs:complexType name="TSazbaDPH">
     <xs:sequence>
       <xs:element name="Popis" minOccurs="0" maxOccurs="1">
@@ -1081,7 +1088,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="TSazbaDPHRef">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1091,12 +1098,12 @@
     <xs:attribute name="Ref" type="xs:IDREF">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
-          Reference. Musí existovat odpovídající element s tím to ID.
+          Reference. Musí existovat odpovídající element s tímto ID.
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="TKlasifikace">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1156,7 +1163,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="TTrida">
     <xs:sequence>
       <xs:element name="Trida" type="TTrida" minOccurs="0" maxOccurs="unbounded" />
@@ -1190,7 +1197,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-    
+
   <xs:complexType name="TTridaRef">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1200,12 +1207,76 @@
     <xs:attribute name="Ref" type="xs:IDREF">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
-          Reference. Musí existovat odpovídající element s tím to ID.
+          Reference. Musí existovat odpovídající element s tímto ID.
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-  
+
+  <xs:complexType name="TMetodikaMereni">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Element popisující metodiku měření
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MernaJednotka" type="TJednotkaRef">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Odkaz na strojově čitelnou fyzkální jednotku, nebo název jiné jednotky (například "komplet")
+          </xs:documentation>
+        </xs:annotation>
+        <xs:keyref name="MeasureUnitRef" refer="UnitKey">
+          <xs:selector xpath="." />
+          <xs:field xpath="@Ref"/>
+        </xs:keyref>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Lokální ID, které použijí další elementy v ORF pro odkaz na tuto metodiku měření
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Znacka" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Značka nebo kód metodiky měření
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Popis" use="optional" type="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Krátký popis metodiky měření
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="PodrobnyPopis" use="optional" type="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Podrobnější popis nebo kategorie metodiky měření
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TMetodikaMereniRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Odkaz na metodiku mereni
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="Ref" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Reference. Musí existovat odpovídající element s tímto ID.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
   <xs:complexType name="TIdentita" abstract="true">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1254,7 +1325,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="TIdentitaPolozky">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1310,7 +1381,7 @@
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:complexType name="TExterniEntita">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1350,7 +1421,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="TProjekt">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1406,7 +1477,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:complexType name="TPoloha">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1440,7 +1511,7 @@
       </xs:simpleType>
     </xs:attribute>
   </xs:complexType>
-    
+
   <xs:complexType name="TOsoba">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1478,7 +1549,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-    
+
   <xs:complexType name="TOrganizace">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1544,7 +1615,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-    
+
   <xs:complexType name="TOrganizaceRef">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1559,7 +1630,7 @@
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
-  
+
   <xs:complexType name="TRozpocet">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1618,7 +1689,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:complexType name="TUzelRozpoctu">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1673,7 +1744,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:complexType name="TObjekt">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1874,14 +1945,18 @@
           <xs:field xpath="@Ref"/>
         </xs:keyref>
       </xs:element>
+    <xs:element name="SkupinaMereni" type="TMetodikaMereniRef">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Odkaz na metodiku měření (např. https://www.sfdi.cz/soubory/obrazky-clanky/metodiky/2019_5_metodika_mereni.pdf)
+          </xs:documentation>
+        </xs:annotation>
+        <xs:keyref name="MeasureRef" refer="MeasureTypeKey">
+          <xs:selector xpath="." />
+          <xs:field xpath="@Ref"/>
+        </xs:keyref>
+      </xs:element>
     </xs:sequence>
-    <xs:attribute name="SkupinaMereni" type="xs:string" use="optional">
-      <xs:annotation>
-        <xs:documentation xml:lang="cs">
-          Odkaz na metodiku měření (např. https://www.sfdi.cz/soubory/obrazky-clanky/metodiky/2019_5_metodika_mereni.pdf)
-        </xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
     <xs:attribute name="Vymera" type="THodnotaMnozstvi" use="required">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
@@ -1939,6 +2014,10 @@
     </xs:key>
     <xs:key name="DPHKey">
       <xs:selector xpath="Definice/SazbaDPH"/>
+      <xs:field xpath="@Id"/>
+    </xs:key>
+    <xs:key name="MeasureTypeKey">
+      <xs:selector xpath="Definice/MetodikaMereni"/>
       <xs:field xpath="@Id"/>
     </xs:key>
   </xs:element>
