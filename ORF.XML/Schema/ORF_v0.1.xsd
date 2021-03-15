@@ -280,7 +280,7 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TTypHodnoty">
-     <xs:annotation>
+    <xs:annotation>
       <xs:documentation xml:lang="cs">Výčet základních datový typů</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
@@ -1358,53 +1358,60 @@
         má explicitně omezenou délku názvu.
       </xs:documentation>
     </xs:annotation>
-    <xs:complexContent>
-      <xs:restriction base="TIdentita">
-        <xs:sequence>
-          <xs:element name="Popis" type="xs:string" minOccurs="0">
-            <xs:annotation>
-              <xs:documentation xml:lang="cs">
-                Popis položky
-              </xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element name="ExterniEntita" type="TExterniEntita" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="cs">
-                Externí entity související s položkou rozpočtu (například elementy modelu stavby).
-              </xs:documentation>
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-        <xs:attribute name="Id" type="TGuid" use="required">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Unikátní ID (podle ISO/IEC 9834-8:2005). Tento identifikátor umožňuje spolehlivě zachovat kontinuitu dat
-              při jejich zpracování v různých izovolaných systémech. Umožňuje zachovat softwarovou identitu datové entity.
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="Nazev" use="required">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Název položky (maximálně 255 znaků)
-            </xs:documentation>
-          </xs:annotation>
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:maxLength value="255" />
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:attribute>
-        <xs:attribute name="DlouhyNazev" type="xs:string" use="optional">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Dlouhý název
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-      </xs:restriction>
-    </xs:complexContent>
+    <xs:sequence>
+      <xs:element name="Popis" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Popis položky
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExterniEntita" type="TExterniEntita" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Externí entity související s položkou rozpočtu (například elementy modelu stavby).
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SkupinaVlastnosti" type="TSkupinaVlastnosti" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Volitelné další vlastnosti popisující danou datovou entitu
+          </xs:documentation>
+        </xs:annotation>
+        <xs:unique name="UniquePropertyName2">
+          <xs:selector xpath="./Vlastnost"></xs:selector>
+          <xs:field xpath="@Nazev"></xs:field>
+        </xs:unique>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Id" type="TGuid" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Unikátní ID (podle ISO/IEC 9834-8:2005). Tento identifikátor umožňuje spolehlivě zachovat kontinuitu dat
+          při jejich zpracování v různých izovolaných systémech. Umožňuje zachovat softwarovou identitu datové entity.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Nazev" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Název položky (maximálně 255 znaků)
+        </xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="255" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="DlouhyNazev" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Dlouhý název
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="TExterniEntita">
