@@ -279,6 +279,20 @@
       <xs:enumeration value="Vlastni"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="TTypHodnoty">
+     <xs:annotation>
+      <xs:documentation xml:lang="cs">Výčet základních datový typů</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TEXT"/>
+      <xs:enumeration value="DECIMAL"/>
+      <xs:enumeration value="REAL"/>
+      <xs:enumeration value="INTEGER"/>
+      <xs:enumeration value="BOOLEAL"/>
+      <xs:enumeration value="DATUM_CAS"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="TNazevJednotkySI">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Názvy jednotek podle ISO 80000-1:2009</xs:documentation>
@@ -1223,7 +1237,7 @@
       <xs:element name="MernaJednotka" type="TJednotkaRef">
         <xs:annotation>
           <xs:documentation xml:lang="cs">
-            Odkaz na strojově čitelnou fyzkální jednotku, nebo název jiné jednotky (například "komplet")
+            Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
           </xs:documentation>
         </xs:annotation>
         <xs:keyref name="MeasureUnitRef" refer="UnitKey">
@@ -1948,7 +1962,7 @@
       <xs:element name="Jednotka" type="TJednotkaRef">
         <xs:annotation>
           <xs:documentation xml:lang="cs">
-            Odkaz na strojově čitelnou fyzkální jednotku, nebo název jiné jednotky (například "komplet")
+            Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
           </xs:documentation>
         </xs:annotation>
         <xs:keyref name="UnitRef" refer="UnitKey">
@@ -2045,6 +2059,17 @@
             Popis vlastnosti
           </xs:documentation>
         </xs:annotation>
+      </xs:element>
+      <xs:element name="Jednotka" type="TJednotkaRef">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
+          </xs:documentation>
+        </xs:annotation>
+        <xs:keyref name="UnitPropRef" refer="UnitKey">
+          <xs:selector xpath="." />
+          <xs:field xpath="@Ref"/>
+        </xs:keyref>
       </xs:element>
     </xs:sequence>
     <xs:attribute name="Nazev" use="required">
@@ -2170,6 +2195,50 @@
         </xs:attribute>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TPozadovanaVlastnost">
+    <xs:sequence>
+      <xs:element name="Popis" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Popis požadované vlastnosti
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Jednotka" type="TJednotkaRef">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
+          </xs:documentation>
+        </xs:annotation>
+        <xs:keyref name="UnitReqRef" refer="UnitKey">
+          <xs:selector xpath="." />
+          <xs:field xpath="@Ref"/>
+        </xs:keyref>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="SkupinaVlastnosti" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Název skupiny, ve které má být vlastnost umístěna
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Nazev" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Název požadované vlastnosti
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="TypHodnoty" type="TTypHodnoty" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Datový typ hodnoty požadované vlastnosti
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
 
   <xs:element name="ORF" type="TORF">
