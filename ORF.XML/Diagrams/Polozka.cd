@@ -15,35 +15,27 @@
       <Field Name="komentarField" Hidden="true" />
       <Field Name="mnozstviField" Hidden="true" />
       <Field Name="poradoveCisloField" Hidden="true" />
-      <Field Name="pouzeMaterialField" Hidden="true" />
-      <Field Name="pouzeMaterialFieldSpecified" Hidden="true" />
-      <Property Name="PouzeMaterialSpecified" Hidden="true" />
       <Field Name="prenesenaDPHField" Hidden="true" />
       <Field Name="prenesenaDPHFieldSpecified" Hidden="true" />
       <Property Name="PrenesenaDPHSpecified" Hidden="true" />
       <Field Name="sazbaDPHField" Hidden="true" />
-      <Field Name="sazbaDPHFieldSpecified" Hidden="true" />
-      <Property Name="SazbaDPHSpecified" Hidden="true" />
-      <Field Name="souvisejiciEntitaField" Hidden="true" />
       <Field Name="typField" Hidden="true" />
+      <Field Name="typFieldSpecified" Hidden="true" />
       <Field Name="variantaField" Hidden="true" />
       <Field Name="zatrideniField" Hidden="true" />
       <Field Name="zpusobilostField" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>gAAAGAEIAUAIBAgIAEQCAYUmAIUBCUAIAIACLAAgYIA=</HashCode>
+      <HashCode>gAAAGAEIAUAIAAAIAEUCAYUmAAUBCUAIAIACDAAgYIA=</HashCode>
       <FileName>Schema\ORF_v0_1.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="JednotkovaCena" />
       <Property Name="Mnozstvi" />
+      <Property Name="JednotkovaCena" />
     </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="SouvisejiciEntita" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="TExterniEntita">
-    <Position X="11.75" Y="7.25" Width="2.25" />
+    <Position X="11.75" Y="0.5" Width="2.25" />
     <Members>
       <Field Name="idField" Hidden="true" />
       <Field Name="nazevField" Hidden="true" />
@@ -58,28 +50,44 @@
   <Class Name="TJednotkovaCena">
     <Position X="11.75" Y="5.25" Width="2.25" />
     <Members>
-      <Field Name="autorField" Hidden="true" />
       <Field Name="cenaField" Hidden="true" />
-      <Field Name="datumField" Hidden="true" />
       <Field Name="komentarField" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAAAACAAwAAAAACAAAAABAgBAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAABAABAAAAAA=</HashCode>
       <FileName>Schema\ORF_v0_1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TMnozstvi">
     <Position X="11.75" Y="3.25" Width="2.25" />
     <Members>
-      <Field Name="hodnotaField" Hidden="true" />
       <Field Name="jednotkaField" Hidden="true" />
       <Field Name="skupinaMereniField" Hidden="true" />
+      <Field Name="vykazVymerField" Hidden="true" />
       <Field Name="vymeraField" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>IAAAAABAAACAAAAQAAAFAAQAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABAAAAAACCAAAQAAAFAAQAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Schema\ORF_v0_1.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="TIdentitaPolozky">
+    <Position X="5" Y="0.5" Width="4" />
+    <Members>
+      <Field Name="dlouhyNazevField" Hidden="true" />
+      <Field Name="externiEntitaField" Hidden="true" />
+      <Field Name="idField" Hidden="true" />
+      <Field Name="nazevField" Hidden="true" />
+      <Field Name="popisField" Hidden="true" />
+      <Field Name="skupinaVlastnostiField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAADAQAAAACAAEAAAAAAAQAACgAIACAAAAQAAAACAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ExterniEntita" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

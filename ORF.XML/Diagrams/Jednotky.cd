@@ -31,14 +31,14 @@
   <Class Name="TOdvozenaJednotka">
     <Position X="11" Y="2" Width="2" />
     <Members>
-      <Field Name="componentaField" Hidden="true" />
+      <Field Name="komponentaField" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Schema\ORF_v0_1.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="Componenta" />
+      <Property Name="Komponenta" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="TPojmenovanaJednotka" Collapsed="true">
@@ -80,8 +80,8 @@
       <Property Name="Predpona" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="TOdvozenaJednotkaComponenta">
-    <Position X="9.75" Y="4.25" Width="2.5" />
+  <Class Name="TKomponentaJednotky">
+    <Position X="10.5" Y="4.25" Width="2.5" />
     <Members>
       <Field Name="exponentField" Hidden="true" />
       <Field Name="jednotkaField" Hidden="true" />
@@ -94,14 +94,14 @@
   <Enum Name="TNazevJednotkySI">
     <Position X="17.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIQQAIAAQACIAgCAACxAQAAAiIIFACAIwBQAAAI=</HashCode>
+      <HashCode>AAAEQAAkoAgCIABCAogAIAAAAANkEIZAAAAAEAYAAIA=</HashCode>
       <FileName>Schema\ORF_v0_1.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="TPredponaSI">
     <Position X="15.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAUACAAAAAgAwCAAAAAwEECAAEBAQAAkAAAAoA=</HashCode>
+      <HashCode>CgcBAAQAEAAAgACAAAAAAAICQIABAQEACQAAABAAAAA=</HashCode>
       <FileName>Schema\ORF_v0_1.cs</FileName>
     </TypeIdentifier>
   </Enum>

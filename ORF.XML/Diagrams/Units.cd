@@ -30,7 +30,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ORF.XML.TDerivedUnitComponent">
-    <Position X="5" Y="5" Width="1.5" />
+    <Position X="5" Y="5" Width="2" />
     <Members>
       <Field Name="_exponent" Hidden="true" />
       <Field Name="_unit" Hidden="true" />
@@ -41,7 +41,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ORF.XML.TDerivedUnit">
-    <Position X="5" Y="3.25" Width="1.75" />
+    <Position X="5" Y="3.25" Width="2" />
     <Members>
       <Field Name="_component" Hidden="true" />
       <Method Name="TDerivedUnit" Hidden="true" />

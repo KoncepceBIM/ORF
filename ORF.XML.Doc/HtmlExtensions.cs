@@ -42,6 +42,20 @@ namespace ORF.XML.Doc
             w.WriteLine($"</tr>");
         }
 
+        public static void TH(this TextWriter w, IEnumerable<string> values) => TH(w, values.ToArray());
+
+        public static void TH(this TextWriter w, params string[] values)
+        {
+            w.WriteLine($"<tr>");
+            foreach (var item in values)
+            {
+                w.WriteLine($"<th>");
+                w.WriteLine(item);
+                w.WriteLine($"</th>");
+            }
+            w.WriteLine($"</tr>");
+        }
+
         public static void P(this TextWriter w, string text)
         {
             w.WriteLine("<p>");

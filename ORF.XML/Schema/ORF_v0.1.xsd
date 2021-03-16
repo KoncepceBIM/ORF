@@ -221,7 +221,7 @@
   </xs:simpleType>
   <xs:simpleType name="TCena">
     <xs:annotation>
-      <xs:documentation xml:lang="cs">Cena jako desetinné číclo</xs:documentation>
+      <xs:documentation xml:lang="cs">Cena jako desetinné číslo</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:decimal">
       <xs:totalDigits value="18"/>
@@ -238,7 +238,7 @@
   </xs:simpleType>
   <xs:simpleType name="TZaokrouhleni">
     <xs:annotation>
-      <xs:documentation xml:lang="cs">Množství může být zaohrouhleno na 0-5 des. míst. Zaokrouhlení je jednotné pro celý soubor ORF</xs:documentation>
+      <xs:documentation xml:lang="cs">Množství může být zaokrouhleno na 0-5 des. míst. Zaokrouhlení je jednotné pro celý soubor ORF</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:integer">
       <xs:minInclusive value="0"/>
@@ -292,291 +292,334 @@
       <xs:enumeration value="DATUM_CAS"/>
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="TNazevPolozky">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Název položky (maximálně 255 znaků)
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TKodPolozky">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Kód položky, maximálně 20 znaků
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TZemSirka">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Zeměpisná šířka
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:minInclusive value="-90"/>
+      <xs:maxInclusive value="90"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TZemDelka">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Zeměpisná délka
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double">
+      <xs:minInclusive value="-180"/>
+      <xs:maxInclusive value="180"/>
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:simpleType name="TNazevJednotkySI">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Názvy jednotek podle ISO 80000-1:2009</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:enumeration value="metre">
+      <xs:enumeration value="METRE">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: length
+          <xs:documentation xml:lang="cs">
+            Veličina: délka
             Symbol: m
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="kilogram">
+      <xs:enumeration value="KILOGRAM">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: mass
+          <xs:documentation xml:lang="cs">
+            Veličina: hmotnost
             Symbol: kg
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="second">
+      <xs:enumeration value="SECOND">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: time
+          <xs:documentation xml:lang="cs">
+            Veličina: čas
             Symbol: s
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="ampere">
+      <xs:enumeration value="AMPERE">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: electric current
+          <xs:documentation xml:lang="cs">
+            Veličina: elektrický proud
             Symbol: A
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="kelvin">
+      <xs:enumeration value="KELVIN">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: thermodynamic temperature
+          <xs:documentation xml:lang="cs">
+            Veličina: termodynamická teplota
             Symbol: K
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="mole">
+      <xs:enumeration value="MOLE">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: amount of substance
+          <xs:documentation xml:lang="cs">
+            Veličina: látkové množství
             Symbol: mol
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="candela">
+      <xs:enumeration value="CANDELA">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: luminous intensity
+          <xs:documentation xml:lang="cs">
+            Veličina: svítivost
             Symbol: cd
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="radian">
+      <xs:enumeration value="RADIAN">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: plane angle
+          <xs:documentation xml:lang="cs">
+            Veličina: rovinný úhel
             Symbol: rad
-            Expression: rad = m/m = 1
+            Výraz: rad = m/m = 1
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="steradian">
+      <xs:enumeration value="STERADIAN">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: solid angle
+          <xs:documentation xml:lang="cs">
+            Veličina: prostorový úhel
             Symbol: sr
-            Expression: sr = m2/m2 = 1
+            Výraz: sr = m2/m2 = 1
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="hertz">
+      <xs:enumeration value="HERTZ">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: frequency
+          <xs:documentation xml:lang="cs">
+            Veličina: frekvence
             Symbol: Hz
-            Expression: Hz = s−1
+            Výraz: Hz = s−1
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="newton">
+      <xs:enumeration value="NEWTON">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: force
+          <xs:documentation xml:lang="cs">
+            Veličina: síla
             Symbol: N
-            Expression: N = kg · m/s2
+            Výraz: N = kg · m/s2
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="pascal">
+      <xs:enumeration value="PASCAL">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: pressure
+          <xs:documentation xml:lang="cs">
+            Veličina: tlak
             Symbol: stress
-            Expression: Pa	Pa = N/m2
+            Výraz: Pa	Pa = N/m2
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="joule">
+      <xs:enumeration value="JOULE">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: energy
+          <xs:documentation xml:lang="cs">
+            Veličina: energie
             Symbol: J
-            Expression: J = N · m
+            Výraz: J = N · m
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="watt">
+      <xs:enumeration value="WATT">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: power
+          <xs:documentation xml:lang="cs">
+            Veličina: výkon
             Symbol: W
-            Expression: W = J/s
+            Výraz: W = J/s
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="coulomb">
+      <xs:enumeration value="COULOMB">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: electric charge
+          <xs:documentation xml:lang="cs">
+            Veličina: elektrický náboj
             Symbol: C
-            Expression: C = A · s
+            Výraz: C = A · s
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="volt">
+      <xs:enumeration value="VOLT">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: electric potential difference
+          <xs:documentation xml:lang="cs">
+            Veličina: rozdíl elektrického potenciálu
             Symbol: V
-            Expression: V = W/A
+            Výraz: V = W/A
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="farad">
+      <xs:enumeration value="FARAD">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: capacitance
+          <xs:documentation xml:lang="cs">
+            Veličina: elektrická kapacita
             Symbol: F
-            Expression: F = C/V
+            Výraz: F = C/V
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="ohm">
+      <xs:enumeration value="OHM">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: electric resistance
+          <xs:documentation xml:lang="cs">
+            Veličina: elektrický odpor
             Symbol: Ω
-            Expression: Ω = V/A
+            Výraz: Ω = V/A
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="siemens">
+      <xs:enumeration value="SIEMENS">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: electric conductance
+          <xs:documentation xml:lang="cs">
+            Veličina: elektrická vodivost
             Symbol: S
-            Expression: S = Ω−1
+            Výraz: S = Ω−1
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="weber">
+      <xs:enumeration value="WEBER">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: magnetic flux
+          <xs:documentation xml:lang="cs">
+            Veličina: magnetický tok
             Symbol: Wb
-            Expression: Wb = V · s
+            Výraz: Wb = V · s
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="tesla">
+      <xs:enumeration value="TESLA">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: magnetic flux density
+          <xs:documentation xml:lang="cs">
+            Veličina: magnetická indukce
             Symbol: T
-            Expression: T = Wb/m2
+            Výraz: T = Wb/m2
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="henry">
+      <xs:enumeration value="HENRY">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: inductance
+          <xs:documentation xml:lang="cs">
+            Veličina: indukčnost
             Symbol: H
-            Expression: H = Wb/A
+            Výraz: H = Wb/A
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="degree_Celsius">
+      <xs:enumeration value="DEGREE_CELSIUS">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: Celsius temperature
+          <xs:documentation xml:lang="cs">
+            Veličina: teplota ve stupních Celsia
             Symbol: ºC
-            Expression: ºC = K
+            Výraz: ºC = K
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="lumen">
+      <xs:enumeration value="LUMEN">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: luminous flux
+          <xs:documentation xml:lang="cs">
+            Veličina: světelný tok
             Symbol: lm
-            Expression: lm = cd · sr
+            Výraz: lm = cd · sr
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="lux">
+      <xs:enumeration value="LUX">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: illuminance
+          <xs:documentation xml:lang="cs">
+            Veličina: intenzita osvětlení
             Symbol: lx
-            Expression: lx = lm/m2
+            Výraz: lx = lm/m2
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="becquerel">
+      <xs:enumeration value="BECQUEREL">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: activity (of a radionuclide)
+          <xs:documentation xml:lang="cs">
+            Veličina: aktivita radionuklidu
             Symbol: Bq
-            Expression: Bq = s−1
+            Výraz: Bq = s−1
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="gray">
+      <xs:enumeration value="GRAY">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: absorbed dose
+          <xs:documentation xml:lang="cs">
+            Veličina: vstřebaná dávka
             Symbol: Gy
-            Expression: Gy = J/kg
+            Výraz: Gy = J/kg
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="sievert">
+      <xs:enumeration value="SIEVERT">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: dose equivalent
+          <xs:documentation xml:lang="cs">
+            Veličina: equivalentní dávka
             Symbol: Sv
-            Expression: Sv = J/kg
+            Výraz: Sv = J/kg
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="katal">
+      <xs:enumeration value="KATAL">
         <xs:annotation>
-          <xs:documentation xml:lang="en">
-            Quantity: catalytic activity
+          <xs:documentation xml:lang="cs">
+            Veličina: katalytická aktivita
             Symbol: kat
-            Expression: kat = mol/s
+            Výraz: kat = mol/s
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
@@ -588,181 +631,181 @@
       <xs:documentation xml:lang="cs">Předpony jednotek podle ISO 80000-1:2009</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:enumeration value="yotta">
+      <xs:enumeration value="YOTTA">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^24
+            Mocnina: 10^24
             Symbol: Y
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="zetta">
+      <xs:enumeration value="ZETTA">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^21
+            Mocnina: 10^21
             Symbol: Z
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="exa">
+      <xs:enumeration value="EXA">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^18
+            Mocnina: 10^18
             Symbol: E
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="peta">
+      <xs:enumeration value="PETA">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^15
+            Mocnina: 10^15
             Symbol: P
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="tera">
+      <xs:enumeration value="TERA">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^12
+            Mocnina: 10^12
             Symbol: T
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="giga">
+      <xs:enumeration value="GIGA">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^9
+            Mocnina: 10^9
             Symbol: G
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="mega">
+      <xs:enumeration value="MEGA">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^6
+            Mocnina: 10^6
             Symbol: M
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="kilo">
+      <xs:enumeration value="KILO">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^3
+            Mocnina: 10^3
             Symbol: k
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="hecto">
+      <xs:enumeration value="HECTO">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^2
+            Mocnina: 10^2
             Symbol: h
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="deca">
+      <xs:enumeration value="DECA">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^1 d
+            Mocnina: 10^1 d
             Symbol: a
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="deci">
+      <xs:enumeration value="DECI">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^−1
+            Mocnina: 10^−1
             Symbol: d
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="centi">
+      <xs:enumeration value="CENTI">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^−2
+            Mocnina: 10^−2
             Symbol: c
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="milli">
+      <xs:enumeration value="MILLI">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^−3
+            Mocnina: 10^−3
             Symbol: m
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="micro">
+      <xs:enumeration value="MICRO">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^−6
+            Mocnina: 10^−6
             Symbol: μ
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="nano">
+      <xs:enumeration value="NANO">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^−9
+            Mocnina: 10^−9
             Symbol: n
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="pico">
+      <xs:enumeration value="PICO">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^−12
+            Mocnina: 10^−12
             Symbol: p
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="femto">
+      <xs:enumeration value="FEMTO">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^−15
+            Mocnina: 10^−15
             Symbol: f
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="atto">
+      <xs:enumeration value="ATTO">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^−18
+            Mocnina: 10^−18
             Symbol: a
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="zepto">
+      <xs:enumeration value="ZEPTO">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^−21
+            Mocnina: 10^−21
             Symbol: z
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="yocto">
+      <xs:enumeration value="YOCTO">
         <xs:annotation>
           <xs:documentation xml:lang="en">
-            Power: 10^−24
+            Mocnina: 10^−24
             Symbol: y
           </xs:documentation>
         </xs:annotation>
@@ -813,17 +856,32 @@
     <xs:complexContent>
       <xs:extension base="TJednotka">
         <xs:sequence>
-          <xs:element name="Componenta" minOccurs="1" maxOccurs="unbounded">
-            <xs:complexType>
-              <xs:sequence>
-                <xs:element name="Jednotka" type="TPojmenovanaJednotka" minOccurs="1"/>
-              </xs:sequence>
-              <xs:attribute name="Exponent" type="xs:integer" use="required"/>
-            </xs:complexType>
+          <xs:element name="Komponenta" type="TKomponentaJednotky" minOccurs="1" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="cs">Komponenty odvozené jednotky</xs:documentation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TKomponentaJednotky">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Komponenta odvozené jednotky</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Jednotka" type="TPojmenovanaJednotka" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Základní jednotka</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Exponent" type="xs:integer" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">Exponent komponenty</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="TKonverzniJednotka">
@@ -968,45 +1026,52 @@
         Adresa podle vyhlášky č. 359/2011 Sb. § 6
       </xs:documentation>
     </xs:annotation>
-    <xs:attribute name="Ulice">
+    <xs:attribute name="Ulice" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Název ulice
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="CisloPopisne">
+    <xs:attribute name="CisloPopisne" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Číslo popisné nebo evidenční
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="CisloOrientacni">
+    <xs:attribute name="CisloOrientacni" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Orientační číslo včetně dodatku
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="CastObce">
+    <xs:attribute name="CastObce" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Část obce, v Praze název katastrálního území
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="Obec">
+    <xs:attribute name="Obec" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Název obce, v Praze se za názvem obce uvede číslo městského obvodu.
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="PSC">
+    <xs:attribute name="PSC" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Poštovní směrovací číslo
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Stat" type="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Stát
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -1079,7 +1144,7 @@
 
   <xs:complexType name="TSazbaDPH">
     <xs:sequence>
-      <xs:element name="Popis" minOccurs="0" maxOccurs="1">
+      <xs:element name="Popis" minOccurs="0" maxOccurs="1" type="xs:string">
         <xs:annotation>
           <xs:documentation xml:lang="cs">
             Popis sazby DPH
@@ -1136,7 +1201,7 @@
     <xs:attribute name="Typ" type="TTypKlasifikace" default="Vlastni">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
-          Typ plasifikačního systému, pokud se jedná o jeden z často používaných systémů.
+          Typ klasifikačního systému, pokud se jedná o jeden z často používaných systémů.
           Pokud se jedná o jiný klasifikační systém, použije se hodnota "Vlastní"
         </xs:documentation>
       </xs:annotation>
@@ -1279,7 +1344,7 @@
   <xs:complexType name="TMetodikaMereniRef">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
-        Odkaz na metodiku mereni
+        Odkaz na metodiku měření
       </xs:documentation>
     </xs:annotation>
     <xs:attribute name="Ref" type="xs:IDREF">
@@ -1331,7 +1396,7 @@
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Unikátní ID (podle ISO/IEC 9834-8:2005). Tento identifikátor umožňuje spolehlivě zachovat kontinuitu dat
-          při jejich zpracování v různých izovolaných systémech. Umožňuje zachovat softwarovou identitu datové entity.
+          při jejich zpracování v různých izolovaných systémech. Umožňuje zachovat softwarovou identitu datové entity.
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -1393,17 +1458,12 @@
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="Nazev" use="required">
+    <xs:attribute name="Nazev" use="required" type="TNazevPolozky">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Název položky (maximálně 255 znaků)
         </xs:documentation>
       </xs:annotation>
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:maxLength value="255" />
-        </xs:restriction>
-      </xs:simpleType>
     </xs:attribute>
     <xs:attribute name="DlouhyNazev" type="xs:string" use="optional">
       <xs:annotation>
@@ -1425,7 +1485,7 @@
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Identifikátor externí datové entity. Pokud se jedná o UUID odkazující do modelu IFC, bude toto UUID
-          reprezentováno stejně jako v sounorech IFC, tedy jako UUID v base64 kódování.
+          reprezentováno stejně jako v souborech IFC, tedy jako UUID v base64 kódování.
           (https://technical.buildingsmart.org/resources/ifcimplementationguidance/ifc-guid/).
         </xs:documentation>
       </xs:annotation>
@@ -1516,31 +1576,19 @@
         Poloha v souřadnicích WGS-84 (GPS souřadnice)
       </xs:documentation>
     </xs:annotation>
-    <xs:attribute name="ZemSirka" use="required">
+    <xs:attribute name="ZemSirka" use="required" type="TZemSirka">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Zeměpisná šířka
         </xs:documentation>
       </xs:annotation>
-      <xs:simpleType>
-        <xs:restriction base="xs:double">
-          <xs:minInclusive value="-90"/>
-          <xs:maxInclusive value="90"/>
-        </xs:restriction>
-      </xs:simpleType>
     </xs:attribute>
-    <xs:attribute name="ZemDelka" use="required">
+    <xs:attribute name="ZemDelka" use="required" type="TZemDelka">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Zeměpisná délka
         </xs:documentation>
       </xs:annotation>
-      <xs:simpleType>
-        <xs:restriction base="xs:double">
-          <xs:minInclusive value="-180"/>
-          <xs:maxInclusive value="180"/>
-        </xs:restriction>
-      </xs:simpleType>
     </xs:attribute>
   </xs:complexType>
 
@@ -1614,7 +1662,7 @@
     <xs:attribute name="Nazev" type="xs:string" use="required">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
-          Název orkanizace
+          Název organizace
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -1694,7 +1742,7 @@
           <xs:element name="Uchazec" type="TOrganizaceRef">
             <xs:annotation>
               <xs:documentation xml:lang="cs">
-                Uchazeč o stavebníé zakázku. Tato právní entita je autorem jednotkových cen
+                Uchazeč o stavební zakázku. Tato právní entita je autorem jednotkových cen
                 v ORF.
               </xs:documentation>
             </xs:annotation>
@@ -1714,7 +1762,7 @@
         <xs:attribute name="DatumOceneni" type="xs:dateTime" use="required">
           <xs:annotation>
             <xs:documentation xml:lang="cs">
-              Datum, kdy byly pro jednotlivé položky vyplňěny jednotkové ceny.
+              Datum, kdy byly pro jednotlivé položky vyplněny jednotkové ceny.
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>
@@ -1747,7 +1795,7 @@
           <xs:element name="UzelRozpoctu" type="TUzelRozpoctu" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="cs">
-                Podřízené uzly rozpočtu (nižsí stupeň hierarchie)
+                Podřízené uzly rozpočtu (nižší stupeň hierarchie)
               </xs:documentation>
             </xs:annotation>
           </xs:element>
@@ -1766,7 +1814,7 @@
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="VlastniTyp" use="optional">
+        <xs:attribute name="VlastniTyp" use="optional" type="xs:string">
           <xs:annotation>
             <xs:documentation xml:lang="cs">
               Název typu rozpočtu, pokud je Typ = 'VLASTNI'
@@ -1877,7 +1925,7 @@
           <xs:element name="SazbaDPH" type="TSazbaDPHRef" minOccurs="0">
             <xs:annotation>
               <xs:documentation xml:lang="cs">
-                Odkaz na saybu DPH
+                Odkaz na sazbu DPH
               </xs:documentation>
             </xs:annotation>
             <xs:keyref name="DPHRef" refer="DPHKey">
@@ -1886,17 +1934,12 @@
             </xs:keyref>
           </xs:element>
         </xs:sequence>
-        <xs:attribute name="Kod" use="required">
+        <xs:attribute name="Kod" use="required" type="TKodPolozky">
           <xs:annotation>
             <xs:documentation xml:lang="cs">
               Kód položky, maximálně 20 znaků
             </xs:documentation>
           </xs:annotation>
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:maxLength value="20"/>
-            </xs:restriction>
-          </xs:simpleType>
         </xs:attribute>
         <xs:attribute name="PoradoveCislo" type="xs:positiveInteger" use="required">
           <xs:annotation>
@@ -1929,7 +1972,7 @@
         <xs:attribute name="PrenesenaDPH" type="xs:boolean" use="optional">
           <xs:annotation>
             <xs:documentation xml:lang="cs">
-              Indikuje, zda se na tuto položku vztakuje přenesená daňová povinnost
+              Indikuje, zda se na tuto položku vztahuje přenesená daňová povinnost
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>
@@ -2044,7 +2087,7 @@
         </xs:annotation>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="Nazev" use="required">
+    <xs:attribute name="Nazev" use="required" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Název skupiny vlastností
@@ -2079,7 +2122,7 @@
         </xs:keyref>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="Nazev" use="required">
+    <xs:attribute name="Nazev" use="required" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Název vlastnosti
@@ -2112,7 +2155,7 @@
   <xs:complexType name="TVlastnostDecimal">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
-        Vlastnost jako desetinne číslo
+        Vlastnost jako desetinné číslo
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -2225,14 +2268,14 @@
         </xs:keyref>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="SkupinaVlastnosti" use="required">
+    <xs:attribute name="SkupinaVlastnosti" use="required" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Název skupiny, ve které má být vlastnost umístěna
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="Nazev" use="required">
+    <xs:attribute name="Nazev" use="required" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Název požadované vlastnosti

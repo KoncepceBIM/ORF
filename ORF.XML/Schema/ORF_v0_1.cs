@@ -82,7 +82,7 @@ public partial class TORF {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
 public partial class TProjekt : TIdentita {
     
-    private string adresaField;
+    private TAdresa adresaField;
     
     private TPoloha umisteniField;
     
@@ -99,7 +99,7 @@ public partial class TProjekt : TIdentita {
     private TMena menaField;
     
     /// <remarks/>
-    public string Adresa {
+    public TAdresa Adresa {
         get {
             return this.adresaField;
         }
@@ -191,33 +191,298 @@ public partial class TProjekt : TIdentita {
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public partial class TPoloha {
+public partial class TAdresa {
     
-    private double zemSirkaField;
+    private string uliceField;
     
-    private double zemDelkaField;
+    private string cisloPopisneField;
+    
+    private string cisloOrientacniField;
+    
+    private string castObceField;
+    
+    private string obecField;
+    
+    private string pSCField;
+    
+    private string statField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public double ZemSirka {
+    public string Ulice {
         get {
-            return this.zemSirkaField;
+            return this.uliceField;
         }
         set {
-            this.zemSirkaField = value;
+            this.uliceField = value;
         }
     }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public double ZemDelka {
+    public string CisloPopisne {
         get {
-            return this.zemDelkaField;
+            return this.cisloPopisneField;
         }
         set {
-            this.zemDelkaField = value;
+            this.cisloPopisneField = value;
         }
     }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string CisloOrientacni {
+        get {
+            return this.cisloOrientacniField;
+        }
+        set {
+            this.cisloOrientacniField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string CastObce {
+        get {
+            return this.castObceField;
+        }
+        set {
+            this.castObceField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Obec {
+        get {
+            return this.obecField;
+        }
+        set {
+            this.obecField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string PSC {
+        get {
+            return this.pSCField;
+        }
+        set {
+            this.pSCField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Stat {
+        get {
+            return this.statField;
+        }
+        set {
+            this.statField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TMetodikaMereni {
+    
+    private TJednotkaRef mernaJednotkaField;
+    
+    private string idField;
+    
+    private string znackaField;
+    
+    private string popisField;
+    
+    private string podrobnyPopisField;
+    
+    /// <remarks/>
+    public TJednotkaRef MernaJednotka {
+        get {
+            return this.mernaJednotkaField;
+        }
+        set {
+            this.mernaJednotkaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+    public string Id {
+        get {
+            return this.idField;
+        }
+        set {
+            this.idField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Znacka {
+        get {
+            return this.znackaField;
+        }
+        set {
+            this.znackaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Popis {
+        get {
+            return this.popisField;
+        }
+        set {
+            this.popisField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string PodrobnyPopis {
+        get {
+            return this.podrobnyPopisField;
+        }
+        set {
+            this.podrobnyPopisField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TJednotkaRef {
+    
+    private string refField;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+    public string Ref {
+        get {
+            return this.refField;
+        }
+        set {
+            this.refField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TSazbaDPH {
+    
+    private string popisField;
+    
+    private string idField;
+    
+    private decimal sazbaDPHField;
+    
+    private bool sazbaDPHFieldSpecified;
+    
+    /// <remarks/>
+    public string Popis {
+        get {
+            return this.popisField;
+        }
+        set {
+            this.popisField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="ID")]
+    public string Id {
+        get {
+            return this.idField;
+        }
+        set {
+            this.idField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public decimal SazbaDPH {
+        get {
+            return this.sazbaDPHField;
+        }
+        set {
+            this.sazbaDPHField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool SazbaDPHSpecified {
+        get {
+            return this.sazbaDPHFieldSpecified;
+        }
+        set {
+            this.sazbaDPHFieldSpecified = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TKomponentaJednotky {
+    
+    private TPojmenovanaJednotka jednotkaField;
+    
+    private string exponentField;
+    
+    /// <remarks/>
+    public TPojmenovanaJednotka Jednotka {
+        get {
+            return this.jednotkaField;
+        }
+        set {
+            this.jednotkaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="integer")]
+    public string Exponent {
+        get {
+            return this.exponentField;
+        }
+        set {
+            this.exponentField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TKonverzniJednotka))]
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TJednotkaSI))]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public abstract partial class TPojmenovanaJednotka : TJednotka {
 }
 
 /// <remarks/>
@@ -857,63 +1122,18 @@ public partial class TJednotkaZavislaNaKontextu : TJednotka {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
 public partial class TOdvozenaJednotka : TJednotka {
     
-    private TOdvozenaJednotkaComponenta[] componentaField;
+    private TKomponentaJednotky[] komponentaField;
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Componenta")]
-    public TOdvozenaJednotkaComponenta[] Componenta {
+    [System.Xml.Serialization.XmlElementAttribute("Komponenta")]
+    public TKomponentaJednotky[] Komponenta {
         get {
-            return this.componentaField;
+            return this.komponentaField;
         }
         set {
-            this.componentaField = value;
+            this.komponentaField = value;
         }
     }
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public partial class TOdvozenaJednotkaComponenta {
-    
-    private TPojmenovanaJednotka jednotkaField;
-    
-    private string exponentField;
-    
-    /// <remarks/>
-    public TPojmenovanaJednotka Jednotka {
-        get {
-            return this.jednotkaField;
-        }
-        set {
-            this.jednotkaField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType="integer")]
-    public string Exponent {
-        get {
-            return this.exponentField;
-        }
-        set {
-            this.exponentField = value;
-        }
-    }
-}
-
-/// <remarks/>
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TKonverzniJednotka))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TJednotkaSI))]
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public abstract partial class TPojmenovanaJednotka : TJednotka {
 }
 
 /// <remarks/>
@@ -1051,91 +1271,91 @@ public partial class TJednotkaSI : TPojmenovanaJednotka {
 public enum TNazevJednotkySI {
     
     /// <remarks/>
-    metre,
+    METRE,
     
     /// <remarks/>
-    kilogram,
+    KILOGRAM,
     
     /// <remarks/>
-    second,
+    SECOND,
     
     /// <remarks/>
-    ampere,
+    AMPERE,
     
     /// <remarks/>
-    kelvin,
+    KELVIN,
     
     /// <remarks/>
-    mole,
+    MOLE,
     
     /// <remarks/>
-    candela,
+    CANDELA,
     
     /// <remarks/>
-    radian,
+    RADIAN,
     
     /// <remarks/>
-    steradian,
+    STERADIAN,
     
     /// <remarks/>
-    hertz,
+    HERTZ,
     
     /// <remarks/>
-    newton,
+    NEWTON,
     
     /// <remarks/>
-    pascal,
+    PASCAL,
     
     /// <remarks/>
-    joule,
+    JOULE,
     
     /// <remarks/>
-    watt,
+    WATT,
     
     /// <remarks/>
-    coulomb,
+    COULOMB,
     
     /// <remarks/>
-    volt,
+    VOLT,
     
     /// <remarks/>
-    farad,
+    FARAD,
     
     /// <remarks/>
-    ohm,
+    OHM,
     
     /// <remarks/>
-    siemens,
+    SIEMENS,
     
     /// <remarks/>
-    weber,
+    WEBER,
     
     /// <remarks/>
-    tesla,
+    TESLA,
     
     /// <remarks/>
-    henry,
+    HENRY,
     
     /// <remarks/>
-    degree_Celsius,
+    DEGREE_CELSIUS,
     
     /// <remarks/>
-    lumen,
+    LUMEN,
     
     /// <remarks/>
-    lux,
+    LUX,
     
     /// <remarks/>
-    becquerel,
+    BECQUEREL,
     
     /// <remarks/>
-    gray,
+    GRAY,
     
     /// <remarks/>
-    sievert,
+    SIEVERT,
     
     /// <remarks/>
-    katal,
+    KATAL,
 }
 
 /// <remarks/>
@@ -1145,64 +1365,64 @@ public enum TNazevJednotkySI {
 public enum TPredponaSI {
     
     /// <remarks/>
-    yotta,
+    YOTTA,
     
     /// <remarks/>
-    zetta,
+    ZETTA,
     
     /// <remarks/>
-    exa,
+    EXA,
     
     /// <remarks/>
-    peta,
+    PETA,
     
     /// <remarks/>
-    tera,
+    TERA,
     
     /// <remarks/>
-    giga,
+    GIGA,
     
     /// <remarks/>
-    mega,
+    MEGA,
     
     /// <remarks/>
-    kilo,
+    KILO,
     
     /// <remarks/>
-    hecto,
+    HECTO,
     
     /// <remarks/>
-    deca,
+    DECA,
     
     /// <remarks/>
-    deci,
+    DECI,
     
     /// <remarks/>
-    centi,
+    CENTI,
     
     /// <remarks/>
-    milli,
+    MILLI,
     
     /// <remarks/>
-    micro,
+    MICRO,
     
     /// <remarks/>
-    nano,
+    NANO,
     
     /// <remarks/>
-    pico,
+    PICO,
     
     /// <remarks/>
-    femto,
+    FEMTO,
     
     /// <remarks/>
-    atto,
+    ATTO,
     
     /// <remarks/>
-    zepto,
+    ZEPTO,
     
     /// <remarks/>
-    yocto,
+    YOCTO,
 }
 
 /// <remarks/>
@@ -1478,7 +1698,7 @@ public partial class TKlasifikace {
 public enum TTypKlasifikace {
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("CC - CZ")]
+    [System.Xml.Serialization.XmlEnumAttribute("CC-CZ")]
     CCCZ,
     
     /// <remarks/>
@@ -1486,6 +1706,9 @@ public enum TTypKlasifikace {
     
     /// <remarks/>
     CPA,
+    
+    /// <remarks/>
+    CCI,
     
     /// <remarks/>
     Vlastni,
@@ -1499,14 +1722,16 @@ public enum TTypKlasifikace {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
 public partial class TOsoba {
     
-    private string adresaField;
+    private TAdresa adresaField;
     
     private string jmenoField;
+    
+    private string telefonField;
     
     private string emailField;
     
     /// <remarks/>
-    public string Adresa {
+    public TAdresa Adresa {
         get {
             return this.adresaField;
         }
@@ -1523,6 +1748,17 @@ public partial class TOsoba {
         }
         set {
             this.jmenoField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Telefon {
+        get {
+            return this.telefonField;
+        }
+        set {
+            this.telefonField = value;
         }
     }
     
@@ -1546,7 +1782,7 @@ public partial class TOsoba {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
 public partial class TOrganizace {
     
-    private string adresaField;
+    private TAdresa adresaField;
     
     private TOsoba kontaktField;
     
@@ -1554,20 +1790,16 @@ public partial class TOrganizace {
     
     private string nazevField;
     
-    private string statField;
-    
     private string iCOField;
     
     private string dICField;
-    
-    private string pSCField;
     
     private string telefonField;
     
     private string emailField;
     
     /// <remarks/>
-    public string Adresa {
+    public TAdresa Adresa {
         get {
             return this.adresaField;
         }
@@ -1610,17 +1842,6 @@ public partial class TOrganizace {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Stat {
-        get {
-            return this.statField;
-        }
-        set {
-            this.statField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
     public string ICO {
         get {
             return this.iCOField;
@@ -1638,17 +1859,6 @@ public partial class TOrganizace {
         }
         set {
             this.dICField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string PSC {
-        get {
-            return this.pSCField;
-        }
-        set {
-            this.pSCField = value;
         }
     }
     
@@ -1691,9 +1901,11 @@ public partial class TDefinice {
     
     private TJednotka[] jednotkaField;
     
-    private string zaokrouhleniMnozstviPolozkyField;
+    private TSazbaDPH[] sazbaDPHField;
     
-    private bool pozadovanaSazbaDPHField;
+    private TMetodikaMereni[] metodikaMereniField;
+    
+    private string zaokrouhleniMnozstviPolozkyField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Organizace")]
@@ -1740,6 +1952,28 @@ public partial class TDefinice {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("SazbaDPH")]
+    public TSazbaDPH[] SazbaDPH {
+        get {
+            return this.sazbaDPHField;
+        }
+        set {
+            this.sazbaDPHField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("MetodikaMereni")]
+    public TMetodikaMereni[] MetodikaMereni {
+        get {
+            return this.metodikaMereniField;
+        }
+        set {
+            this.metodikaMereniField = value;
+        }
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="integer")]
     public string ZaokrouhleniMnozstviPolozky {
         get {
@@ -1747,17 +1981,6 @@ public partial class TDefinice {
         }
         set {
             this.zaokrouhleniMnozstviPolozkyField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public bool PozadovanaSazbaDPH {
-        get {
-            return this.pozadovanaSazbaDPHField;
-        }
-        set {
-            this.pozadovanaSazbaDPHField = value;
         }
     }
 }
@@ -1790,25 +2013,33 @@ public partial class TOrganizaceRef {
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public partial class TJednotkovaCena {
+public partial class TSazbaDPHRef {
     
-    private TOrganizaceRef autorField;
+    private string refField;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+    public string Ref {
+        get {
+            return this.refField;
+        }
+        set {
+            this.refField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TJednotkovaCena {
     
     private string komentarField;
     
     private decimal cenaField;
-    
-    private System.DateTime datumField;
-    
-    /// <remarks/>
-    public TOrganizaceRef Autor {
-        get {
-            return this.autorField;
-        }
-        set {
-            this.autorField = value;
-        }
-    }
     
     /// <remarks/>
     public string Komentar {
@@ -1830,17 +2061,6 @@ public partial class TJednotkovaCena {
             this.cenaField = value;
         }
     }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public System.DateTime Datum {
-        get {
-            return this.datumField;
-        }
-        set {
-            this.datumField = value;
-        }
-    }
 }
 
 /// <remarks/>
@@ -1849,7 +2069,7 @@ public partial class TJednotkovaCena {
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public partial class TJednotkaRef {
+public partial class TMetodikaMereniRef {
     
     private string refField;
     
@@ -1873,21 +2093,21 @@ public partial class TJednotkaRef {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
 public partial class TMnozstvi {
     
-    private string vymeraField;
+    private string vykazVymerField;
     
     private TJednotkaRef jednotkaField;
     
-    private string skupinaMereniField;
+    private TMetodikaMereniRef skupinaMereniField;
     
-    private decimal hodnotaField;
+    private decimal vymeraField;
     
     /// <remarks/>
-    public string Vymera {
+    public string VykazVymer {
         get {
-            return this.vymeraField;
+            return this.vykazVymerField;
         }
         set {
-            this.vymeraField = value;
+            this.vykazVymerField = value;
         }
     }
     
@@ -1902,8 +2122,7 @@ public partial class TMnozstvi {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string SkupinaMereni {
+    public TMetodikaMereniRef SkupinaMereni {
         get {
             return this.skupinaMereniField;
         }
@@ -1914,12 +2133,12 @@ public partial class TMnozstvi {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public decimal Hodnota {
+    public decimal Vymera {
         get {
-            return this.hodnotaField;
+            return this.vymeraField;
         }
         set {
-            this.hodnotaField = value;
+            this.vymeraField = value;
         }
     }
 }
@@ -1935,7 +2154,7 @@ public partial class TCenovaSoustavaRef {
     private string refField;
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
     public string Ref {
         get {
             return this.refField;
@@ -1947,23 +2166,88 @@ public partial class TCenovaSoustavaRef {
 }
 
 /// <remarks/>
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TPolozkaRozpoctu))]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public partial class TTridaRef {
+public partial class TIdentitaPolozky {
     
-    private string refField;
+    private string popisField;
+    
+    private TExterniEntita[] externiEntitaField;
+    
+    private TSkupinaVlastnosti[] skupinaVlastnostiField;
+    
+    private string idField;
+    
+    private string nazevField;
+    
+    private string dlouhyNazevField;
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
-    public string Ref {
+    public string Popis {
         get {
-            return this.refField;
+            return this.popisField;
         }
         set {
-            this.refField = value;
+            this.popisField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("ExterniEntita")]
+    public TExterniEntita[] ExterniEntita {
+        get {
+            return this.externiEntitaField;
+        }
+        set {
+            this.externiEntitaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("SkupinaVlastnosti")]
+    public TSkupinaVlastnosti[] SkupinaVlastnosti {
+        get {
+            return this.skupinaVlastnostiField;
+        }
+        set {
+            this.skupinaVlastnostiField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Id {
+        get {
+            return this.idField;
+        }
+        set {
+            this.idField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Nazev {
+        get {
+            return this.nazevField;
+        }
+        set {
+            this.nazevField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string DlouhyNazev {
+        get {
+            return this.dlouhyNazevField;
+        }
+        set {
+            this.dlouhyNazevField = value;
         }
     }
 }
@@ -2030,27 +2314,18 @@ public partial class TExterniEntita {
 }
 
 /// <remarks/>
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TPolozkaRozpoctu))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TUzelRozpoctu))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TObjekt))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TRozpocet))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TProjekt))]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public abstract partial class TIdentita {
+public partial class TSkupinaVlastnosti {
     
     private string popisField;
     
-    private TExterniEntita[] externiEntitaField;
-    
-    private string idField;
+    private TVlastnost[] vlastnostField;
     
     private string nazevField;
-    
-    private string dlouhyNazevField;
     
     /// <remarks/>
     public string Popis {
@@ -2063,24 +2338,13 @@ public abstract partial class TIdentita {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ExterniEntita")]
-    public TExterniEntita[] ExterniEntita {
+    [System.Xml.Serialization.XmlElementAttribute("Vlastnost")]
+    public TVlastnost[] Vlastnost {
         get {
-            return this.externiEntitaField;
+            return this.vlastnostField;
         }
         set {
-            this.externiEntitaField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Id {
-        get {
-            return this.idField;
-        }
-        set {
-            this.idField = value;
+            this.vlastnostField = value;
         }
     }
     
@@ -2094,15 +2358,56 @@ public abstract partial class TIdentita {
             this.nazevField = value;
         }
     }
+}
+
+/// <remarks/>
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TVlastnostDatum))]
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TVlastnostBoolean))]
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TVlastnostIntegral))]
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TVlastnostReal))]
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TVlastnostDecimal))]
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TVlastnostText))]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public abstract partial class TVlastnost {
+    
+    private string popisField;
+    
+    private TJednotkaRef jednotkaField;
+    
+    private string nazevField;
+    
+    /// <remarks/>
+    public string Popis {
+        get {
+            return this.popisField;
+        }
+        set {
+            this.popisField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public TJednotkaRef Jednotka {
+        get {
+            return this.jednotkaField;
+        }
+        set {
+            this.jednotkaField = value;
+        }
+    }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string DlouhyNazev {
+    public string Nazev {
         get {
-            return this.dlouhyNazevField;
+            return this.nazevField;
         }
         set {
-            this.dlouhyNazevField = value;
+            this.nazevField = value;
         }
     }
 }
@@ -2113,7 +2418,203 @@ public abstract partial class TIdentita {
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public partial class TPolozkaRozpoctu : TIdentita {
+public partial class TVlastnostDatum : TVlastnost {
+    
+    private System.DateTime hodnotaField;
+    
+    private bool hodnotaFieldSpecified;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public System.DateTime Hodnota {
+        get {
+            return this.hodnotaField;
+        }
+        set {
+            this.hodnotaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool HodnotaSpecified {
+        get {
+            return this.hodnotaFieldSpecified;
+        }
+        set {
+            this.hodnotaFieldSpecified = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TVlastnostBoolean : TVlastnost {
+    
+    private bool hodnotaField;
+    
+    private bool hodnotaFieldSpecified;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public bool Hodnota {
+        get {
+            return this.hodnotaField;
+        }
+        set {
+            this.hodnotaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool HodnotaSpecified {
+        get {
+            return this.hodnotaFieldSpecified;
+        }
+        set {
+            this.hodnotaFieldSpecified = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TVlastnostIntegral : TVlastnost {
+    
+    private long hodnotaField;
+    
+    private bool hodnotaFieldSpecified;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public long Hodnota {
+        get {
+            return this.hodnotaField;
+        }
+        set {
+            this.hodnotaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool HodnotaSpecified {
+        get {
+            return this.hodnotaFieldSpecified;
+        }
+        set {
+            this.hodnotaFieldSpecified = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TVlastnostReal : TVlastnost {
+    
+    private double hodnotaField;
+    
+    private bool hodnotaFieldSpecified;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public double Hodnota {
+        get {
+            return this.hodnotaField;
+        }
+        set {
+            this.hodnotaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool HodnotaSpecified {
+        get {
+            return this.hodnotaFieldSpecified;
+        }
+        set {
+            this.hodnotaFieldSpecified = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TVlastnostDecimal : TVlastnost {
+    
+    private decimal hodnotaField;
+    
+    private bool hodnotaFieldSpecified;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public decimal Hodnota {
+        get {
+            return this.hodnotaField;
+        }
+        set {
+            this.hodnotaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool HodnotaSpecified {
+        get {
+            return this.hodnotaFieldSpecified;
+        }
+        set {
+            this.hodnotaFieldSpecified = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TVlastnostText : TVlastnost {
+    
+    private string hodnotaField;
+    
+    /// <remarks/>
+    public string Hodnota {
+        get {
+            return this.hodnotaField;
+        }
+        set {
+            this.hodnotaField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TPolozkaRozpoctu : TIdentitaPolozky {
     
     private TTridaRef[] zatrideniField;
     
@@ -2121,17 +2622,19 @@ public partial class TPolozkaRozpoctu : TIdentita {
     
     private TMnozstvi mnozstviField;
     
-    private TExterniEntita[] souvisejiciEntitaField;
-    
     private string komentarField;
     
     private TJednotkovaCena jednotkovaCenaField;
+    
+    private TSazbaDPHRef sazbaDPHField;
     
     private string kodField;
     
     private string poradoveCisloField;
     
     private TTypPolozky typField;
+    
+    private bool typFieldSpecified;
     
     private double jednotkovaHmotnostField;
     
@@ -2141,17 +2644,9 @@ public partial class TPolozkaRozpoctu : TIdentita {
     
     private bool jednotkovaDemontazniHmotnostFieldSpecified;
     
-    private decimal sazbaDPHField;
-    
-    private bool sazbaDPHFieldSpecified;
-    
     private bool prenesenaDPHField;
     
     private bool prenesenaDPHFieldSpecified;
-    
-    private bool pouzeMaterialField;
-    
-    private bool pouzeMaterialFieldSpecified;
     
     private string variantaField;
     
@@ -2189,17 +2684,6 @@ public partial class TPolozkaRozpoctu : TIdentita {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("SouvisejiciEntita")]
-    public TExterniEntita[] SouvisejiciEntita {
-        get {
-            return this.souvisejiciEntitaField;
-        }
-        set {
-            this.souvisejiciEntitaField = value;
-        }
-    }
-    
-    /// <remarks/>
     public string Komentar {
         get {
             return this.komentarField;
@@ -2216,6 +2700,16 @@ public partial class TPolozkaRozpoctu : TIdentita {
         }
         set {
             this.jednotkovaCenaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public TSazbaDPHRef SazbaDPH {
+        get {
+            return this.sazbaDPHField;
+        }
+        set {
+            this.sazbaDPHField = value;
         }
     }
     
@@ -2249,6 +2743,17 @@ public partial class TPolozkaRozpoctu : TIdentita {
         }
         set {
             this.typField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool TypSpecified {
+        get {
+            return this.typFieldSpecified;
+        }
+        set {
+            this.typFieldSpecified = value;
         }
     }
     
@@ -2298,28 +2803,6 @@ public partial class TPolozkaRozpoctu : TIdentita {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public decimal SazbaDPH {
-        get {
-            return this.sazbaDPHField;
-        }
-        set {
-            this.sazbaDPHField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public bool SazbaDPHSpecified {
-        get {
-            return this.sazbaDPHFieldSpecified;
-        }
-        set {
-            this.sazbaDPHFieldSpecified = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
     public bool PrenesenaDPH {
         get {
             return this.prenesenaDPHField;
@@ -2337,28 +2820,6 @@ public partial class TPolozkaRozpoctu : TIdentita {
         }
         set {
             this.prenesenaDPHFieldSpecified = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public bool PouzeMaterial {
-        get {
-            return this.pouzeMaterialField;
-        }
-        set {
-            this.pouzeMaterialField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public bool PouzeMaterialSpecified {
-        get {
-            return this.pouzeMaterialFieldSpecified;
-        }
-        set {
-            this.pouzeMaterialFieldSpecified = value;
         }
     }
     
@@ -2388,6 +2849,28 @@ public partial class TPolozkaRozpoctu : TIdentita {
 /// <remarks/>
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
 [System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TTridaRef {
+    
+    private string refField;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="IDREF")]
+    public string Ref {
+        get {
+            return this.refField;
+        }
+        set {
+            this.refField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
 public enum TTypPolozky {
     
@@ -2402,7 +2885,131 @@ public enum TTypPolozky {
 }
 
 /// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TPoloha {
+    
+    private double zemSirkaField;
+    
+    private double zemDelkaField;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public double ZemSirka {
+        get {
+            return this.zemSirkaField;
+        }
+        set {
+            this.zemSirkaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public double ZemDelka {
+        get {
+            return this.zemDelkaField;
+        }
+        set {
+            this.zemDelkaField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TUzelRozpoctu))]
 [System.Xml.Serialization.XmlIncludeAttribute(typeof(TObjekt))]
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TRozpocet))]
+[System.Xml.Serialization.XmlIncludeAttribute(typeof(TProjekt))]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public abstract partial class TIdentita {
+    
+    private string popisField;
+    
+    private TExterniEntita[] externiEntitaField;
+    
+    private TSkupinaVlastnosti[] skupinaVlastnostiField;
+    
+    private string idField;
+    
+    private string nazevField;
+    
+    private string dlouhyNazevField;
+    
+    /// <remarks/>
+    public string Popis {
+        get {
+            return this.popisField;
+        }
+        set {
+            this.popisField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("ExterniEntita")]
+    public TExterniEntita[] ExterniEntita {
+        get {
+            return this.externiEntitaField;
+        }
+        set {
+            this.externiEntitaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("SkupinaVlastnosti")]
+    public TSkupinaVlastnosti[] SkupinaVlastnosti {
+        get {
+            return this.skupinaVlastnostiField;
+        }
+        set {
+            this.skupinaVlastnostiField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Id {
+        get {
+            return this.idField;
+        }
+        set {
+            this.idField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Nazev {
+        get {
+            return this.nazevField;
+        }
+        set {
+            this.nazevField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string DlouhyNazev {
+        get {
+            return this.dlouhyNazevField;
+        }
+        set {
+            this.dlouhyNazevField = value;
+        }
+    }
+}
+
+/// <remarks/>
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2415,6 +3022,8 @@ public partial class TUzelRozpoctu : TIdentita {
     private TUzelRozpoctu[] uzelRozpoctuField;
     
     private TPolozkaRozpoctu[] polozkaField;
+    
+    private TTypUzlu typField;
     
     private string vlastniTypField;
     
@@ -2453,6 +3062,17 @@ public partial class TUzelRozpoctu : TIdentita {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
+    public TTypUzlu Typ {
+        get {
+            return this.typField;
+        }
+        set {
+            this.typField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
     public string VlastniTyp {
         get {
             return this.vlastniTypField;
@@ -2466,12 +3086,64 @@ public partial class TUzelRozpoctu : TIdentita {
 /// <remarks/>
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
 [System.SerializableAttribute()]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public enum TTypUzlu {
+    
+    /// <remarks/>
+    DIL,
+    
+    /// <remarks/>
+    VLASTNI,
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public partial class TObjekt : TUzelRozpoctu {
+public partial class TObjekt : TIdentita {
+    
+    private TTridaRef[] zatrideniField;
+    
+    private TUzelRozpoctu[] uzelRozpoctuField;
+    
+    private TPolozkaRozpoctu[] polozkaField;
     
     private string kSOField;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("Zatrideni")]
+    public TTridaRef[] Zatrideni {
+        get {
+            return this.zatrideniField;
+        }
+        set {
+            this.zatrideniField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("UzelRozpoctu")]
+    public TUzelRozpoctu[] UzelRozpoctu {
+        get {
+            return this.uzelRozpoctuField;
+        }
+        set {
+            this.uzelRozpoctuField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("Polozka")]
+    public TPolozkaRozpoctu[] Polozka {
+        get {
+            return this.polozkaField;
+        }
+        set {
+            this.polozkaField = value;
+        }
+    }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
@@ -2497,9 +3169,11 @@ public partial class TRozpocet : TIdentita {
     
     private TOrganizaceRef objednatelField;
     
-    private TOrganizaceRef autorField;
+    private TOrganizaceRef uchazecField;
     
-    private System.DateTime datumField;
+    private System.DateTime datumVytvoreniRozpoctuField;
+    
+    private System.DateTime datumOceneniField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Objekt")]
@@ -2523,23 +3197,34 @@ public partial class TRozpocet : TIdentita {
     }
     
     /// <remarks/>
-    public TOrganizaceRef Autor {
+    public TOrganizaceRef Uchazec {
         get {
-            return this.autorField;
+            return this.uchazecField;
         }
         set {
-            this.autorField = value;
+            this.uchazecField = value;
         }
     }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public System.DateTime Datum {
+    public System.DateTime DatumVytvoreniRozpoctu {
         get {
-            return this.datumField;
+            return this.datumVytvoreniRozpoctuField;
         }
         set {
-            this.datumField = value;
+            this.datumVytvoreniRozpoctuField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public System.DateTime DatumOceneni {
+        get {
+            return this.datumOceneniField;
+        }
+        set {
+            this.datumOceneniField = value;
         }
     }
 }

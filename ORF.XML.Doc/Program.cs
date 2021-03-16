@@ -16,6 +16,14 @@ namespace ORF.XML.Doc
 <html>
   <head>
     <meta charset='utf-8'>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
   </head>
   <body> 
 ");
@@ -25,14 +33,20 @@ namespace ORF.XML.Doc
                 Console.WriteLine(e.Message);
             });
 
-            foreach (var type in schema.Items.OfType<XmlSchemaComplexType>())
+            foreach (var type in schema.Items.OfType<XmlSchemaComplexType>().OrderBy(t => t.Name))
             {
                 doc.H3(type.Name);
+                var baseType = type.GetBase();
+                if (baseType != null)
+                {
+                    doc.P($"Element odvozený od {baseType.Name}.");
+                }
+
                 doc.P(type.Annotation());
 
                 var members = type.GetAllMembers().OrderBy(m => m.Name);
                 doc.TableOpen();
-                    doc.TR("Název", "Popis", "Povinný", "Typ");
+                doc.TH("Název", "Popis", "Povinný", "Typ");
                 foreach (var member in members)
                 {
                     var memberType = member.IsList ? $"{member.Type}[]" : member.Type;
@@ -41,7 +55,7 @@ namespace ORF.XML.Doc
                 doc.TableClose();
             }
 
-            foreach (var type in schema.Items.OfType<XmlSchemaSimpleType>())
+            foreach (var type in schema.Items.OfType<XmlSchemaSimpleType>().OrderBy(t => t.Name))
             {
                 doc.H3(type.Name);
                 doc.P(type.Annotation());
@@ -50,12 +64,20 @@ namespace ORF.XML.Doc
                 {
 
                     doc.P("Hodnoty enumerace:");
-                    doc.TableOpen();
-                    foreach (var e in type.GetEnum())
+                    var enums = type.GetEnum().ToList();
+                    if (enums.Count > 30)
                     {
-                        doc.TR(e.Value, e.Annotation());
+                        doc.P(string.Join(", ", enums.Select(e => e.Value)));
                     }
-                    doc.TableClose();
+                    else
+                    {
+                        doc.TableOpen();
+                        foreach (var e in enums)
+                        {
+                            doc.TR(e.Value, e.Annotation());
+                        }
+                        doc.TableClose();
+                    }
                 }
             }
 
