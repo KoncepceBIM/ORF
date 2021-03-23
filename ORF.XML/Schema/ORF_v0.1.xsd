@@ -255,10 +255,10 @@
   </xs:simpleType>
   <xs:simpleType name="TTypPolozky">
     <xs:restriction base="xs:string">
-      <!--TODO: Nejake dalsi? DC: revize-->
       <xs:enumeration value="HSV"></xs:enumeration>
       <xs:enumeration value="PSV"></xs:enumeration>
       <xs:enumeration value="M"></xs:enumeration>
+      <xs:enumeration value="OSTATNI"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TTypUzlu">
@@ -816,14 +816,28 @@
 
 
   <xs:complexType name="TJednotkaRef">
-    <xs:attribute name="Ref" type="xs:IDREF"></xs:attribute>
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Odkaz na jednotku</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="Ref" type="xs:IDREF" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">Identifikátor jednotky</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="TJednotka" abstract="true">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Abstraktní datový typ pro všechny definice jednotek</xs:documentation>
     </xs:annotation>
-    <xs:attribute name="Id" type="xs:ID"></xs:attribute>
+    <xs:attribute name="Id" type="xs:ID" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Lokální identifikátor jednotky v souboru ORF. Ostatní elementy v souboru se budou na
+          jednotku odkazovat pomocí tohoto identifikátoru.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="TPojmenovanaJednotka" abstract="true">
@@ -843,8 +857,16 @@
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="TPojmenovanaJednotka">
-        <xs:attribute name="Nazev" type="TNazevJednotkySI" use="required"/>
-        <xs:attribute name="Predpona" type="TPredponaSI" use="optional"/>
+        <xs:attribute name="Nazev" type="TNazevJednotkySI" use="required">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">Název jednotky podle ISO 80000-1</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="Predpona" type="TPredponaSI" use="optional">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">Předpona jednotky podle ISO 80000-1</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -910,8 +932,16 @@
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="TJednotka">
-        <xs:attribute name="Nazev" type="xs:string" use="required"/>
-        <xs:attribute name="Symbol" type="xs:string" use="required"/>
+        <xs:attribute name="Nazev" type="xs:string" use="required">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">Název jednotky</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="Symbol" type="xs:string" use="required">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">Krátký symbol pro uživatelské zobrazení</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1026,24 +1056,10 @@
         Adresa podle vyhlášky č. 359/2011 Sb. § 6
       </xs:documentation>
     </xs:annotation>
-    <xs:attribute name="Ulice" type="xs:string">
+    <xs:attribute name="UliceACislo" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
-          Název ulice
-        </xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="CisloPopisne" type="xs:string">
-      <xs:annotation>
-        <xs:documentation xml:lang="cs">
-          Číslo popisné nebo evidenční
-        </xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="CisloOrientacni" type="xs:string">
-      <xs:annotation>
-        <xs:documentation xml:lang="cs">
-          Orientační číslo včetně dodatku
+          Název ulice, číslo popisné nebo evidenční, orientační číslo včetně dodatku
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -1133,10 +1149,10 @@
         Odkaz na cenovou soustavu
       </xs:documentation>
     </xs:annotation>
-    <xs:attribute name="Ref" type="xs:IDREF">
+    <xs:attribute name="Ref" type="xs:IDREF" use="required">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
-          Reference. Musí existovat odpovídající element s tím to ID.
+          Reference. Musí existovat odpovídající element s tímto ID.
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -1174,7 +1190,7 @@
         Odkaz na sazbu DPH
       </xs:documentation>
     </xs:annotation>
-    <xs:attribute name="Ref" type="xs:IDREF">
+    <xs:attribute name="Ref" type="xs:IDREF"  use="required">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Reference. Musí existovat odpovídající element s tímto ID.
@@ -1283,7 +1299,7 @@
         Odkaz na klasifikační třídu
       </xs:documentation>
     </xs:annotation>
-    <xs:attribute name="Ref" type="xs:IDREF">
+    <xs:attribute name="Ref" type="xs:IDREF"  use="required">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Reference. Musí existovat odpovídající element s tímto ID.
@@ -1347,7 +1363,7 @@
         Odkaz na metodiku měření
       </xs:documentation>
     </xs:annotation>
-    <xs:attribute name="Ref" type="xs:IDREF">
+    <xs:attribute name="Ref" type="xs:IDREF"  use="required">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Reference. Musí existovat odpovídající element s tímto ID.
@@ -1361,7 +1377,7 @@
       <xs:documentation xml:lang="cs">
         Abstraktní element, ze kterého jsou odvozeny všechny elementy, které mají ze své podstaty
         vlastní softwarovou identitu. Proto mají unikátní ID (UUID) a uživatelsky srozumitelný
-        název, dlouhý název a popis. Zároveň se mohou odkazovat na externí identity (například odpovídající,
+        název a popis. Zároveň se mohou odkazovat na externí identity (například odpovídající,
         nebo související elementy v modelu stavby).
       </xs:documentation>
     </xs:annotation>
@@ -1407,71 +1423,6 @@
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="DlouhyNazev" type="xs:string" use="optional">
-      <xs:annotation>
-        <xs:documentation xml:lang="cs">
-          Dlouhý název
-        </xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-  </xs:complexType>
-
-  <xs:complexType name="TIdentitaPolozky">
-    <xs:annotation>
-      <xs:documentation xml:lang="cs">
-        Identita položky rozpočtu obsahuje dodatečná omezení proti obecní identitě. Především
-        má explicitně omezenou délku názvu.
-      </xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="Popis" type="xs:string" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation xml:lang="cs">
-            Popis položky
-          </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="ExterniEntita" type="TExterniEntita" minOccurs="0" maxOccurs="unbounded">
-        <xs:annotation>
-          <xs:documentation xml:lang="cs">
-            Externí entity související s položkou rozpočtu (například elementy modelu stavby).
-          </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="SkupinaVlastnosti" type="TSkupinaVlastnosti" minOccurs="0" maxOccurs="unbounded">
-        <xs:annotation>
-          <xs:documentation xml:lang="cs">
-            Volitelné další vlastnosti popisující danou datovou entitu
-          </xs:documentation>
-        </xs:annotation>
-        <xs:unique name="UniquePropertyName2">
-          <xs:selector xpath="./Vlastnost"></xs:selector>
-          <xs:field xpath="@Nazev"></xs:field>
-        </xs:unique>
-      </xs:element>
-    </xs:sequence>
-    <xs:attribute name="Id" type="TGuid" use="required">
-      <xs:annotation>
-        <xs:documentation xml:lang="cs">
-          Unikátní ID (podle ISO/IEC 9834-8:2005). Tento identifikátor umožňuje spolehlivě zachovat kontinuitu dat
-          při jejich zpracování v různých izovolaných systémech. Umožňuje zachovat softwarovou identitu datové entity.
-        </xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="Nazev" use="required" type="TNazevPolozky">
-      <xs:annotation>
-        <xs:documentation xml:lang="cs">
-          Název položky (maximálně 255 znaků)
-        </xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="DlouhyNazev" type="xs:string" use="optional">
-      <xs:annotation>
-        <xs:documentation xml:lang="cs">
-          Dlouhý název
-        </xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="TExterniEntita">
@@ -1493,7 +1444,8 @@
     <xs:attribute name="Nazev" type="xs:string" use="optional">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
-          Název externí entity. Slouží pro uživatelskou prezentaci a orientaci.
+          Název externí entity. Slouží pro uživatelskou prezentaci a orientaci. Pokud je externí entita z modelu IFC,
+          bude použita hodnota IfcRoot.Name.
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -1542,20 +1494,6 @@
           <xs:annotation>
             <xs:documentation xml:lang="cs">
               Evidenční číslo projektu
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="DatumZahajeniRealizace" type="xs:date" use="optional">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Datum plánovaného zahájení realizace projektu
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="DatumUkonceniRealizace" type="xs:date" use="optional">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Datum plánovaného ukončení realizace projektu
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>
@@ -1702,10 +1640,10 @@
         Odkaz na organizaci
       </xs:documentation>
     </xs:annotation>
-    <xs:attribute name="Ref" type="xs:IDREF">
+    <xs:attribute name="Ref" type="xs:IDREF"  use="required">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
-          Reference. Musí existovat odpovídající element s tím to ID.
+          Reference. Musí existovat odpovídající element s tímto ID.
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -1751,6 +1689,13 @@
               <xs:field xpath="@Ref"/>
             </xs:keyref>
           </xs:element>
+          <xs:element name="InformacniPozadavky" type="TInformacniPozadavky">
+            <xs:annotation>
+              <xs:documentation xml:lang="cs">
+                Informace požadované zadavatelem pro jednotlivé položky rozpočtu.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
         <xs:attribute name="DatumVytvoreniRozpoctu" type="xs:dateTime" use="required">
           <xs:annotation>
@@ -1763,6 +1708,14 @@
           <xs:annotation>
             <xs:documentation xml:lang="cs">
               Datum, kdy byly pro jednotlivé položky vyplněny jednotkové ceny.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="PovinnaSkupinaMereni" type="xs:boolean" use="required">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">
+              Pokud je tato hodnota "ANO", potom musí všechna množství deklarovat použitou
+              metodiku (skupinu) měření.
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>
@@ -1818,6 +1771,13 @@
           <xs:annotation>
             <xs:documentation xml:lang="cs">
               Název typu rozpočtu, pokud je Typ = 'VLASTNI'
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="Kod" type="xs:string" use="required">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">
+              Kód
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>
@@ -1878,120 +1838,156 @@
         Element reprezentující položku rozpočtu
       </xs:documentation>
     </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="TIdentitaPolozky">
-        <xs:sequence>
-          <xs:element name="Zatrideni" type="TTridaRef" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="cs">
-                Zařazení položky rozpočtu do vybraných klasifikací
-              </xs:documentation>
-            </xs:annotation>
-            <xs:keyref name="ClassKeyRef" refer="ClassKey">
-              <xs:selector xpath="."/>
-              <xs:field xpath="@Ref"/>
-            </xs:keyref>
-          </xs:element>
-          <xs:element name="CenovaSoustava" type="TCenovaSoustavaRef" minOccurs="0" maxOccurs="1">
-            <xs:annotation>
-              <xs:documentation xml:lang="cs">
-                Odkaz na použitou cenovou soustavu
-              </xs:documentation>
-            </xs:annotation>
-            <xs:keyref name="CSRef" refer="CostingSourceKey">
-              <xs:selector xpath="."/>
-              <xs:field xpath="@Ref"/>
-            </xs:keyref>
-          </xs:element>
-          <xs:element name="Mnozstvi" type="TMnozstvi" minOccurs="1" maxOccurs="1">
-            <xs:annotation>
-              <xs:documentation xml:lang="cs">Informace o množství</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element name="Komentar" type="xs:string" minOccurs="0">
-            <xs:annotation>
-              <xs:documentation xml:lang="cs">
-                Volitelný komentář položky. Slouží pro podrobnější specifikaci.
-              </xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element name="JednotkovaCena" type="TJednotkovaCena" minOccurs="0">
-            <xs:annotation>
-              <xs:documentation xml:lang="cs">
-                Jednotková cena
-              </xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element name="SazbaDPH" type="TSazbaDPHRef" minOccurs="0">
-            <xs:annotation>
-              <xs:documentation xml:lang="cs">
-                Odkaz na sazbu DPH
-              </xs:documentation>
-            </xs:annotation>
-            <xs:keyref name="DPHRef" refer="DPHKey">
-              <xs:selector xpath="."/>
-              <xs:field xpath="@Ref"/>
-            </xs:keyref>
-          </xs:element>
-        </xs:sequence>
-        <xs:attribute name="Kod" use="required" type="TKodPolozky">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Kód položky, maximálně 20 znaků
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="PoradoveCislo" type="xs:positiveInteger" use="required">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Pořadové číslo položky.
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="Typ" type="TTypPolozky" use="optional">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Typ položky
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="JednotkovaHmotnost" type="xs:double" use="optional">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Jednotková montážní hmotnost
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="JednotkovaDemontazniHmotnost" type="xs:double" use="optional">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Jednotková demontážní hmotnost
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="PrenesenaDPH" type="xs:boolean" use="optional">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Indikuje, zda se na tuto položku vztahuje přenesená daňová povinnost
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="Varianta" type="xs:string" use="optional">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Odlišení variace od cenové soustavy (především OTSKP)
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="Zpusobilost" type="xs:string" use="optional">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Způsobilost pro dotace. Tento údaj slouží především pro vyhodnocení oceněného rozpočtu zadavatelem.
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-      </xs:extension>
-    </xs:complexContent>
+    <xs:sequence>
+      <xs:element name="Popis" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Popis položky
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExterniEntita" type="TExterniEntita" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Externí entity související s položkou rozpočtu (například elementy modelu stavby).
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SkupinaVlastnosti" type="TSkupinaVlastnosti" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Volitelné další vlastnosti popisující danou datovou entitu
+          </xs:documentation>
+        </xs:annotation>
+        <xs:unique name="UniquePropertyName2">
+          <xs:selector xpath="./Vlastnost"></xs:selector>
+          <xs:field xpath="@Nazev"></xs:field>
+        </xs:unique>
+      </xs:element>
+      <xs:element name="Zatrideni" type="TTridaRef" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Zařazení položky rozpočtu do vybraných klasifikací
+          </xs:documentation>
+        </xs:annotation>
+        <xs:keyref name="ClassKeyRef" refer="ClassKey">
+          <xs:selector xpath="."/>
+          <xs:field xpath="@Ref"/>
+        </xs:keyref>
+      </xs:element>
+      <xs:element name="CenovaSoustava" type="TCenovaSoustavaRef" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Odkaz na použitou cenovou soustavu
+          </xs:documentation>
+        </xs:annotation>
+        <xs:keyref name="CSRef" refer="CostingSourceKey">
+          <xs:selector xpath="."/>
+          <xs:field xpath="@Ref"/>
+        </xs:keyref>
+      </xs:element>
+      <xs:element name="Mnozstvi" type="TMnozstvi" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Informace o množství</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Komentar" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Volitelný komentář položky. Slouží pro podrobnější specifikaci.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="JednotkovaCena" type="TJednotkovaCena" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Jednotková cena
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SazbaDPH" type="TSazbaDPHRef" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Odkaz na sazbu DPH
+          </xs:documentation>
+        </xs:annotation>
+        <xs:keyref name="DPHRef" refer="DPHKey">
+          <xs:selector xpath="."/>
+          <xs:field xpath="@Ref"/>
+        </xs:keyref>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Id" type="TGuid" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Unikátní ID (podle ISO/IEC 9834-8:2005). Tento identifikátor umožňuje spolehlivě zachovat kontinuitu dat
+          při jejich zpracování v různých izovolaných systémech. Umožňuje zachovat softwarovou identitu datové entity.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Nazev" use="required" type="TNazevPolozky">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Název položky (maximálně 255 znaků)
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Kod" use="required" type="TKodPolozky">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Kód položky, maximálně 20 znaků
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="PoradoveCislo" type="xs:positiveInteger" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Pořadové číslo položky.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Typ" type="TTypPolozky" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Typ položky
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="JednotkovaHmotnost" type="xs:double" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Jednotková montážní hmotnost
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="JednotkovaDemontazniHmotnost" type="xs:double" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Jednotková demontážní hmotnost
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="PrenesenaDPH" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Indikuje, zda se na tuto položku vztahuje přenesená daňová povinnost
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Varianta" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Odlišení variace od cenové soustavy (především OTSKP)
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Zpusobilost" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Způsobilost pro dotace. Tento údaj slouží především pro vyhodnocení oceněného rozpočtu zadavatelem.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="TMnozstvi">
@@ -2020,7 +2016,7 @@
           <xs:field xpath="@Ref"/>
         </xs:keyref>
       </xs:element>
-      <xs:element name="SkupinaMereni" type="TMetodikaMereniRef">
+      <xs:element name="SkupinaMereni" type="TMetodikaMereniRef" minOccurs="0">
         <xs:annotation>
           <xs:documentation xml:lang="cs">
             Odkaz na metodiku měření (např. https://www.sfdi.cz/soubory/obrazky-clanky/metodiky/2019_5_metodika_mereni.pdf)
@@ -2032,7 +2028,7 @@
         </xs:keyref>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="Vymera" type="THodnotaMnozstvi" use="required">
+    <xs:attribute name="Mnozstvi" type="THodnotaMnozstvi" use="required">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Hodnota výměry
@@ -2099,7 +2095,11 @@
   <xs:complexType name="TVlastnost" abstract="true">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
-        Element reprezentující popisnou vlastnost
+        Element reprezentující popisnou vlastnost. Vlastnost má atribut "IdentifikatorDSS", pomocí kterého se
+        může odkázat na definici z Datového standardu staveb. Atribut "OvlivnujeCenu" určuje, jestli se
+        jedná o interní informaci zadavatele, nebo jestli se jedná o informaci, která ovlivňuje cenu a účastník
+        se jí musí zabývat. Prostřednictvím elementu "Pozadavek" se může vlastnost odkazovat na informační požadavek,
+        na který odpovídá.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -2121,11 +2121,40 @@
           <xs:field xpath="@Ref"/>
         </xs:keyref>
       </xs:element>
+      <xs:element name="Pozadavek" type="TPozadovanaVlastnostRef" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
+          </xs:documentation>
+        </xs:annotation>
+        <xs:keyref name="PropertyRequirementRef" refer="PropertyRequirementKey">
+          <xs:selector xpath="." />
+          <xs:field xpath="@Ref"/>
+        </xs:keyref>
+      </xs:element>
     </xs:sequence>
     <xs:attribute name="Nazev" use="required" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Název vlastnosti
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="IdentifikatorDSS" use="optional" type="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Identifikátor vlastnosti v datovém standardu staveb. Pokud se jedná o data, která by
+          měla být použita pro výměnu informací mezi dvěma a více subjekty, měla bz definice
+          vlastnosti být založena na definici v DSS.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="OvlivnujeCenu" type="xs:boolean" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Tento příznak udává, jestli má tato vlastnost vliv na cenu. Pokud nemá vliv na cenu,
+          může ji například SW pro podání nabídky ignorovat na importu a nemusí ji zobrazit účastníku výběrového řízení.
+          Musí však zaručit, že bude tato vlastnost přítomna ve výstupním souboru (tzv. round-trip).
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -2268,6 +2297,14 @@
         </xs:keyref>
       </xs:element>
     </xs:sequence>
+    <xs:attribute name="Id" use="required" type="xs:ID">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Lokální identita požadavku (v rámci souboru ORF). Vlastnosti, které představují odpověď na tento
+          informační požadavek se na něj budou odkazovat pomocí tohoto ID.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
     <xs:attribute name="SkupinaVlastnosti" use="required" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
@@ -2289,6 +2326,47 @@
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
+    <xs:attribute name="IdentifikatorDSS" use="optional" type="xs:string">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Identifikátor vlastnosti v datovém standardu staveb. Pokud se jedná o data, která by
+          měla být použita pro výměnu informací mezi dvěma a více subjekty, měla bz definice
+          vlastnosti být založena na definici v DSS.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TPozadovanaVlastnostRef">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Odkaz na požadovanou vlastnost.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="Ref" type="xs:IDREF" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Reference. Musí existovat odpovídající element s tímto ID.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TInformacniPozadavky" abstract="true">
+    <xs:annotation>
+      <xs:documentation>
+        Skupina požadavků na informace.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Pozadavek" type="TPozadovanaVlastnost" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            Skupina požadavků na informace.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
   </xs:complexType>
 
   <xs:element name="ORF" type="TORF">
@@ -2319,6 +2397,10 @@
     </xs:key>
     <xs:key name="MeasureTypeKey">
       <xs:selector xpath="Definice/MetodikaMereni"/>
+      <xs:field xpath="@Id"/>
+    </xs:key>
+    <xs:key name="PropertyRequirementKey">
+      <xs:selector xpath="Rozpocet/InformacniPozadavky/Pozadavek"/>
       <xs:field xpath="@Id"/>
     </xs:key>
   </xs:element>
