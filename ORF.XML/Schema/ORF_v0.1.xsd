@@ -240,7 +240,7 @@
     <xs:annotation>
       <xs:documentation xml:lang="cs">Množství může být zaokrouhleno na 0-5 des. míst. Zaokrouhlení je jednotné pro celý soubor ORF</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="xs:integer">
+    <xs:restriction base="xs:int">
       <xs:minInclusive value="0"/>
       <xs:maxInclusive value="5"/>
     </xs:restriction>
@@ -350,11 +350,11 @@
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="KILOGRAM">
+      <xs:enumeration value="GRAM">
         <xs:annotation>
           <xs:documentation xml:lang="cs">
             Veličina: hmotnost
-            Symbol: kg
+            Symbol: g
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
@@ -899,7 +899,7 @@
         </xs:annotation>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="Exponent" type="xs:integer" use="required">
+    <xs:attribute name="Exponent" type="xs:int" use="required">
       <xs:annotation>
         <xs:documentation xml:lang="cs">Exponent komponenty</xs:documentation>
       </xs:annotation>

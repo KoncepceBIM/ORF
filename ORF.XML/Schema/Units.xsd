@@ -17,11 +17,11 @@
         </xs:annotation>
       </xs:enumeration>
 
-      <xs:enumeration value="kilogram">
+      <xs:enumeration value="gram">
         <xs:annotation>
           <xs:documentation xml:lang="en">
             Quantity: mass
-            Symbol: kg
+            Symbol: g
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
@@ -482,17 +482,9 @@
 
   </xs:complexType>
 
-  <xs:complexType name="TNamedUnit" abstract="true">
-    <xs:complexContent>
-      <xs:extension base="TUnit">
-        
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  
   <xs:complexType name="TSIUnit">
     <xs:complexContent>
-      <xs:extension base="TNamedUnit">
+      <xs:extension base="TUnit">
         <xs:attribute name="Name" type="SIUnitName" use="required"/>
         <xs:attribute name="Prefix" type="SIUnitPrefix" use="optional"/>
       </xs:extension>
@@ -506,9 +498,9 @@
           <xs:element name="Component" minOccurs="1" maxOccurs="unbounded">
             <xs:complexType>
               <xs:sequence>
-                <xs:element name="Unit" type="TNamedUnit" minOccurs="1"/>
+                <xs:element name="Unit" type="TUnit" minOccurs="1"/>
               </xs:sequence>
-              <xs:attribute name="Exponent" type="xs:integer" use="required"/>
+              <xs:attribute name="Exponent" type="xs:int" use="required"/>
             </xs:complexType>
           </xs:element>
         </xs:sequence>
@@ -518,7 +510,7 @@
 
   <xs:complexType name="TConversionUnit">
     <xs:complexContent>
-      <xs:extension base="TNamedUnit">
+      <xs:extension base="TUnit">
         <xs:sequence>
           <xs:element name="BaseUnit" type="TSIUnit" minOccurs="1"/>
         </xs:sequence>
@@ -546,4 +538,14 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+
+  <xs:complexType name="TUnitList">
+    <xs:sequence>
+      <xs:element name="Unit" type="TUnit" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Units" type="TUnitList">
+  </xs:element>
+  
 </xs:schema>
