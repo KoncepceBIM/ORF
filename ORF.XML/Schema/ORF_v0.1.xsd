@@ -10,7 +10,7 @@
       <xs:documentation xml:lang="cs">Verze ORF - pro účely validace</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:enumeration value="v0.1"/>
+      <xs:enumeration value="v1.0"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TMena">
@@ -840,23 +840,13 @@
     </xs:attribute>
   </xs:complexType>
 
-  <xs:complexType name="TPojmenovanaJednotka" abstract="true">
-    <xs:annotation>
-      <xs:documentation xml:lang="cs">Abstraktní datový typ pro jednotky, které mají název</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="TJednotka">
-
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
 
   <xs:complexType name="TJednotkaSI">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Jednotky SI jsou dané svým názvem (enumerace) a předponou, která definuje jejich zlomek nebo násobek</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="TPojmenovanaJednotka">
+      <xs:extension base="TJednotka">
         <xs:attribute name="Nazev" type="TNazevJednotkySI" use="required">
           <xs:annotation>
             <xs:documentation xml:lang="cs">Název jednotky podle ISO 80000-1</xs:documentation>
@@ -893,7 +883,7 @@
       <xs:documentation xml:lang="cs">Komponenta odvozené jednotky</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="Jednotka" type="TPojmenovanaJednotka" minOccurs="1">
+      <xs:element name="Jednotka" type="TJednotka" minOccurs="1">
         <xs:annotation>
           <xs:documentation xml:lang="cs">Základní jednotka</xs:documentation>
         </xs:annotation>
@@ -911,7 +901,7 @@
       <xs:documentation xml:lang="cs">Další jednotky je možné vyjádřit pomocí měřítka a odszení. Například h = 60 * s</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="TPojmenovanaJednotka">
+      <xs:extension base="TJednotka">
         <xs:sequence>
           <xs:element name="ZakladniJednotka" type="TJednotkaSI" minOccurs="1"/>
         </xs:sequence>

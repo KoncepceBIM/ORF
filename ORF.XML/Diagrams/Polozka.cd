@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="TPolozkaRozpoctu">
-    <Position X="5" Y="3.25" Width="4" />
+    <Position X="5" Y="1" Width="4" />
     <Members>
       <Field Name="cenovaSoustavaField" Hidden="true" />
+      <Field Name="externiEntitaField" Hidden="true" />
+      <Field Name="idField" Hidden="true" />
       <Field Name="jednotkovaCenaField" Hidden="true" />
       <Field Name="jednotkovaDemontazniHmotnostField" Hidden="true" />
       <Field Name="jednotkovaDemontazniHmotnostFieldSpecified" Hidden="true" />
@@ -14,11 +16,14 @@
       <Field Name="kodField" Hidden="true" />
       <Field Name="komentarField" Hidden="true" />
       <Field Name="mnozstviField" Hidden="true" />
+      <Field Name="nazevField" Hidden="true" />
+      <Field Name="popisField" Hidden="true" />
       <Field Name="poradoveCisloField" Hidden="true" />
       <Field Name="prenesenaDPHField" Hidden="true" />
       <Field Name="prenesenaDPHFieldSpecified" Hidden="true" />
       <Property Name="PrenesenaDPHSpecified" Hidden="true" />
       <Field Name="sazbaDPHField" Hidden="true" />
+      <Field Name="skupinaVlastnostiField" Hidden="true" />
       <Field Name="typField" Hidden="true" />
       <Field Name="typFieldSpecified" Hidden="true" />
       <Field Name="variantaField" Hidden="true" />
@@ -26,13 +31,16 @@
       <Field Name="zpusobilostField" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>gAAAGAEIAUAIAAAIAEUCAYUmAAUBCUAIAIACDAAgYIA=</HashCode>
+      <HashCode>gAADGQEIAUCIAEAIAEUCAYUmAAUJCWAIAIQCDAAiYIA=</HashCode>
       <FileName>Schema\ORF_v0_1.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Mnozstvi" />
       <Property Name="JednotkovaCena" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ExterniEntita" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="TExterniEntita">
     <Position X="11.75" Y="0.5" Width="2.25" />
@@ -48,7 +56,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TJednotkovaCena">
-    <Position X="11.75" Y="5.25" Width="2.25" />
+    <Position X="11.75" Y="4.5" Width="2.25" />
     <Members>
       <Field Name="cenaField" Hidden="true" />
       <Field Name="komentarField" Hidden="true" />
@@ -59,35 +67,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TMnozstvi">
-    <Position X="11.75" Y="3.25" Width="2.25" />
+    <Position X="11.75" Y="2.5" Width="2.25" />
     <Members>
       <Field Name="jednotkaField" Hidden="true" />
+      <Field Name="mnozstviField" Hidden="true" />
       <Field Name="skupinaMereniField" Hidden="true" />
       <Field Name="vykazVymerField" Hidden="true" />
-      <Field Name="vymeraField" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAABAAAAAACCAAAQAAAFAAQAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>gAABAAAAAACCAAAAAAAFAAQAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Schema\ORF_v0_1.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="TIdentitaPolozky">
-    <Position X="5" Y="0.5" Width="4" />
-    <Members>
-      <Field Name="dlouhyNazevField" Hidden="true" />
-      <Field Name="externiEntitaField" Hidden="true" />
-      <Field Name="idField" Hidden="true" />
-      <Field Name="nazevField" Hidden="true" />
-      <Field Name="popisField" Hidden="true" />
-      <Field Name="skupinaVlastnostiField" Hidden="true" />
-    </Members>
-    <TypeIdentifier>
-      <HashCode>AAADAQAAAACAAEAAAAAAAQAACgAIACAAAAQAAAACAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="ExterniEntita" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

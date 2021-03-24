@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TMonetaryUnit">
-    <Position X="1.25" Y="1.75" Width="1.5" />
+    <Position X="1.25" Y="1.75" Width="1.75" />
     <Members>
       <Field Name="currencyField" Hidden="true" />
     </Members>
@@ -18,7 +18,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TContextDependentUnit">
-    <Position X="3.5" Y="1.75" Width="1.5" />
+    <Position X="3.25" Y="1.75" Width="2" />
     <Members>
       <Field Name="nameField" Hidden="true" />
       <Field Name="symbolField" Hidden="true" />
@@ -29,7 +29,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TConversionUnit">
-    <Position X="7.75" Y="1.75" Width="1.5" />
+    <Position X="7.75" Y="1.75" Width="1.75" />
     <Members>
       <Field Name="baseUnitField" Hidden="true" />
       <Field Name="nameField" Hidden="true" />
@@ -64,14 +64,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="TDerivedUnitComponent">
-    <Position X="5.75" Y="4.25" Width="1.5" />
+    <Position X="5.5" Y="4.25" Width="2" />
     <Members>
       <Field Name="exponentField" Hidden="true" />
       <Field Name="unitField" Hidden="true" />
     </Members>
     <AssociationLine Name="Unit" Type="TUnit" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="5.75" Y="4.802" />
+        <Point X="5.5" Y="4.802" />
         <Point X="1.115" Y="4.802" />
         <Point X="1.115" Y="0.688" />
         <Point X="4.5" Y="0.688" />
