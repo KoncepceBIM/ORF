@@ -19,6 +19,9 @@
       <Field Name="nazevField" Hidden="true" />
       <Field Name="popisField" Hidden="true" />
       <Field Name="poradoveCisloField" Hidden="true" />
+      <Field Name="pouzeMaterialField" Hidden="true" />
+      <Field Name="pouzeMaterialFieldSpecified" Hidden="true" />
+      <Property Name="PouzeMaterialSpecified" Hidden="true" />
       <Field Name="prenesenaDPHField" Hidden="true" />
       <Field Name="prenesenaDPHFieldSpecified" Hidden="true" />
       <Property Name="PrenesenaDPHSpecified" Hidden="true" />
@@ -31,7 +34,7 @@
       <Field Name="zpusobilostField" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>gAADGQEIAUCIAEAIAEUCAYUmAAUJCWAIAIQCDAAiYIA=</HashCode>
+      <HashCode>gAADGQEIAUCIAEgIAEUCAYUmAAUJCWAIAIQCDAAiYIA=</HashCode>
       <FileName>Schema\ORF_v0_1.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

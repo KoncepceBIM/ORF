@@ -212,7 +212,7 @@
   <xs:simpleType name="TGuid">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
-        Globálně unikátní ID (ISO/IEC 9834-8:2005)
+        Globálně unikátní ID (ISO/IEC 9834-8:2014)
       </xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
@@ -255,10 +255,26 @@
   </xs:simpleType>
   <xs:simpleType name="TTypPolozky">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="HSV"></xs:enumeration>
-      <xs:enumeration value="PSV"></xs:enumeration>
-      <xs:enumeration value="M"></xs:enumeration>
-      <xs:enumeration value="OSTATNI"></xs:enumeration>
+      <xs:enumeration value="HSV">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Hlavní stavební výroba</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PSV">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Přidružená stavební výroba</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="M">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Montáže technických zařízení</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OSTATNI">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Ostatní, jiné</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TTypUzlu">
@@ -272,10 +288,15 @@
       <xs:documentation xml:lang="cs">Výčet nejčastěji používaných klasifikací v českém stavebnictví.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:enumeration value="CC-CZ"></xs:enumeration>
+      <xs:enumeration value="CZ-CC"></xs:enumeration>
       <xs:enumeration value="CPV"></xs:enumeration>
       <xs:enumeration value="CPA"></xs:enumeration>
-      <xs:enumeration value="CCI"></xs:enumeration>
+      <xs:enumeration value="CCI_STAVEBNI_ENTITY"></xs:enumeration>
+      <xs:enumeration value="CCI_VYBUDOVANE_PROSTORY"></xs:enumeration>
+      <xs:enumeration value="CCI_FUNKCNI_SYSTEMY"></xs:enumeration>
+      <xs:enumeration value="CCI_KONSTRUKCNI_SYSTEMY"></xs:enumeration>
+      <xs:enumeration value="CCI_KOMPONENTY"></xs:enumeration>
+      <xs:enumeration value="CCI_KOMPLEXY"></xs:enumeration>
       <xs:enumeration value="Vlastni"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
@@ -1932,7 +1953,7 @@
     <xs:attribute name="PoradoveCislo" type="xs:positiveInteger" use="required">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
-          Pořadové číslo položky.
+          Pořadové číslo položky. Unikátní v rámci stavebního objektu nejvyšší úrovně hierarchie rozpočtu
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -1940,6 +1961,13 @@
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Typ položky
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="PouzeMaterial" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Indikuje, jestli je tato položka pouze pro materiál
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -2114,7 +2142,7 @@
       <xs:element name="Pozadavek" type="TPozadovanaVlastnostRef" minOccurs="0">
         <xs:annotation>
           <xs:documentation xml:lang="cs">
-            Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
+            Pokud je tato vlastnost odpověď na určitý datový požadavek, je tento element odkazem na tento požadavek.
           </xs:documentation>
         </xs:annotation>
         <xs:keyref name="PropertyRequirementRef" refer="PropertyRequirementKey">
@@ -2316,12 +2344,12 @@
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="IdentifikatorDSS" use="optional" type="xs:string">
+    <xs:attribute name="DatovyProfil" use="optional" type="xs:string">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
-          Identifikátor vlastnosti v datovém standardu staveb. Pokud se jedná o data, která by
-          měla být použita pro výměnu informací mezi dvěma a více subjekty, měla bz definice
-          vlastnosti být založena na definici v DSS.
+          Identifikátor vlastnosti v datovém profilu ORF. Pokud se jedná o data, která by
+          měla být použita pro výměnu informací mezi dvěma a více subjekty, měla by definice
+          vlastnosti být založena na definici publikované ČAS ve formě datového profilu ORF.
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>

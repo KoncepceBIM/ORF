@@ -1608,8 +1608,8 @@ public partial class TKlasifikace {
 public enum TTypKlasifikace {
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("CC-CZ")]
-    CCCZ,
+    [System.Xml.Serialization.XmlEnumAttribute("CZ-CC")]
+    CZCC,
     
     /// <remarks/>
     CPV,
@@ -1618,7 +1618,22 @@ public enum TTypKlasifikace {
     CPA,
     
     /// <remarks/>
-    CCI,
+    CCI_STAVEBNI_ENTITY,
+    
+    /// <remarks/>
+    CCI_VYBUDOVANE_PROSTORY,
+    
+    /// <remarks/>
+    CCI_FUNKCNI_SYSTEMY,
+    
+    /// <remarks/>
+    CCI_KONSTRUKCNI_SYSTEMY,
+    
+    /// <remarks/>
+    CCI_KOMPONENTY,
+    
+    /// <remarks/>
+    CCI_KOMPLEXY,
     
     /// <remarks/>
     Vlastni,
@@ -1915,7 +1930,7 @@ public partial class TPozadovanaVlastnost {
     
     private TTypHodnoty typHodnotyField;
     
-    private string identifikatorDSSField;
+    private string datovyProfilField;
     
     /// <remarks/>
     public string Popis {
@@ -1983,12 +1998,12 @@ public partial class TPozadovanaVlastnost {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string IdentifikatorDSS {
+    public string DatovyProfil {
         get {
-            return this.identifikatorDSSField;
+            return this.datovyProfilField;
         }
         set {
-            this.identifikatorDSSField = value;
+            this.datovyProfilField = value;
         }
     }
 }
@@ -2236,6 +2251,10 @@ public partial class TPolozkaRozpoctu {
     
     private bool typFieldSpecified;
     
+    private bool pouzeMaterialField;
+    
+    private bool pouzeMaterialFieldSpecified;
+    
     private double jednotkovaHmotnostField;
     
     private bool jednotkovaHmotnostFieldSpecified;
@@ -2408,6 +2427,28 @@ public partial class TPolozkaRozpoctu {
         }
         set {
             this.typFieldSpecified = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public bool PouzeMaterial {
+        get {
+            return this.pouzeMaterialField;
+        }
+        set {
+            this.pouzeMaterialField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    public bool PouzeMaterialSpecified {
+        get {
+            return this.pouzeMaterialFieldSpecified;
+        }
+        set {
+            this.pouzeMaterialFieldSpecified = value;
         }
     }
     

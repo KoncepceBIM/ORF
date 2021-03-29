@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="TIdentita" Collapsed="true">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <Members>
+      <Field Name="externiEntitaField" Hidden="true" />
+      <Field Name="idField" Hidden="true" />
+      <Field Name="nazevField" Hidden="true" />
+      <Field Name="popisField" Hidden="true" />
+      <Field Name="skupinaVlastnostiField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAADAQAAAACAAEAAAAAAAQAAAAAIACAAAAQAAAACAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="SkupinaVlastnosti" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TPolozkaRozpoctu" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.75" />
+    <Members>
+      <Field Name="cenovaSoustavaField" Hidden="true" />
+      <Field Name="externiEntitaField" Hidden="true" />
+      <Field Name="idField" Hidden="true" />
+      <Field Name="jednotkovaCenaField" Hidden="true" />
+      <Field Name="jednotkovaDemontazniHmotnostField" Hidden="true" />
+      <Field Name="jednotkovaDemontazniHmotnostFieldSpecified" Hidden="true" />
+      <Field Name="jednotkovaHmotnostField" Hidden="true" />
+      <Field Name="jednotkovaHmotnostFieldSpecified" Hidden="true" />
+      <Field Name="kodField" Hidden="true" />
+      <Field Name="komentarField" Hidden="true" />
+      <Field Name="mnozstviField" Hidden="true" />
+      <Field Name="nazevField" Hidden="true" />
+      <Field Name="popisField" Hidden="true" />
+      <Field Name="poradoveCisloField" Hidden="true" />
+      <Field Name="prenesenaDPHField" Hidden="true" />
+      <Field Name="prenesenaDPHFieldSpecified" Hidden="true" />
+      <Field Name="sazbaDPHField" Hidden="true" />
+      <Field Name="skupinaVlastnostiField" Hidden="true" />
+      <Field Name="typField" Hidden="true" />
+      <Field Name="typFieldSpecified" Hidden="true" />
+      <Field Name="variantaField" Hidden="true" />
+      <Field Name="zatrideniField" Hidden="true" />
+      <Field Name="zpusobilostField" Hidden="true" />
+    </Members>
+    <AssociationLine Name="SkupinaVlastnosti" Type="TSkupinaVlastnosti">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.058" Y="0.331" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAADGQEIAUCIAEgIAEUCAYUmAAUJCWAIAIQCDAAiYIA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="SkupinaVlastnosti" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TSkupinaVlastnosti">
+    <Position X="3.25" Y="5" Width="2" />
+    <Members>
+      <Field Name="nazevField" Hidden="true" />
+      <Field Name="popisField" Hidden="true" />
+      <Field Name="vlastnostField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAgAQAAAACAAAAAAAAAAAAAAAAIAAAAAAQQAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Vlastnost" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TProjekt" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABQAAAAAAAAAAAEAAAAAAAAAAgAAIEABAAAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TUzelRozpoctu" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAQAIAAAACAAgAMACAAABAQAAAUAAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TObjekt" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAgAAACAAAAAQAAAUAAAAAAIBA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TRozpocet" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABIEAgCAAIAAAAAAABABAAAACAAAQQRAgAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TVlastnost">
+    <Position X="7" Y="4.25" Width="2" />
+    <Members>
+      <Field Name="identifikatorDSSField" Hidden="true" />
+      <Field Name="jednotkaField" Hidden="true" />
+      <Field Name="nazevField" Hidden="true" />
+      <Field Name="ovlivnujeCenuField" Hidden="true" />
+      <Field Name="popisField" Hidden="true" />
+      <Field Name="pozadavekField" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEAAASAAAACBAAAAAAABAAQAAAIIAACAQAQAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Jednotka" />
+      <Property Name="Pozadavek" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TVlastnostDatum" Collapsed="true">
+    <Position X="2" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TVlastnostBoolean" Collapsed="true">
+    <Position X="3.75" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TVlastnostIntegral" Collapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TVlastnostReal" Collapsed="true">
+    <Position X="7.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TVlastnostDecimal" Collapsed="true">
+    <Position X="9.5" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAABAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TVlastnostText" Collapsed="true">
+    <Position X="11.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TPozadovanaVlastnostRef" Collapsed="true">
+    <Position X="10.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TJednotkaRef" Collapsed="true">
+    <Position X="10.25" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

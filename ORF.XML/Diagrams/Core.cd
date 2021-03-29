@@ -164,7 +164,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="TPolozkaRozpoctu">
-    <Position X="9.5" Y="8.75" Width="3.25" />
+    <Position X="9.5" Y="8.75" Width="3.5" />
     <Members>
       <Field Name="cenovaSoustavaField" Hidden="true" />
       <Field Name="externiEntitaField" Hidden="true" />
@@ -182,6 +182,9 @@
       <Field Name="nazevField" Hidden="true" />
       <Field Name="popisField" Hidden="true" />
       <Field Name="poradoveCisloField" Hidden="true" />
+      <Field Name="pouzeMaterialField" Hidden="true" />
+      <Field Name="pouzeMaterialFieldSpecified" Hidden="true" />
+      <Property Name="PouzeMaterialSpecified" Hidden="true" />
       <Field Name="prenesenaDPHField" Hidden="true" />
       <Field Name="prenesenaDPHFieldSpecified" Hidden="true" />
       <Property Name="PrenesenaDPHSpecified" Hidden="true" />
@@ -194,7 +197,7 @@
       <Field Name="zpusobilostField" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>gAADGQEIAUCIAEAIAEUCAYUmAAUJCWAIAIQCDAAiYIA=</HashCode>
+      <HashCode>gAADGQEIAUCIAEgIAEUCAYUmAAUJCWAIAIQCDAAiYIA=</HashCode>
       <FileName>Schema\ORF_v0_1.cs</FileName>
     </TypeIdentifier>
   </Class>
