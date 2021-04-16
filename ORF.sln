@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORF.XML", "ORF.XML\ORF.XML.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORF.XML.Doc", "ORF.XML.Doc\ORF.XML.Doc.csproj", "{EB5AB7C3-F1FE-4732-AB19-5F533D92FABE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORF.XML.Examples", "ORF.XML.Examples\ORF.XML.Examples.csproj", "{5437A79F-EF9B-48A0-88CA-B0C2B39A498C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ORF.XML.Examples", "ORF.XML.Examples\ORF.XML.Examples.csproj", "{5437A79F-EF9B-48A0-88CA-B0C2B39A498C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ORF.XML.Classification", "ORF.XML.Classification\ORF.XML.Classification.csproj", "{F43417F5-7F69-42EE-B219-0631AA357A36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{5437A79F-EF9B-48A0-88CA-B0C2B39A498C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5437A79F-EF9B-48A0-88CA-B0C2B39A498C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5437A79F-EF9B-48A0-88CA-B0C2B39A498C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F43417F5-7F69-42EE-B219-0631AA357A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F43417F5-7F69-42EE-B219-0631AA357A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F43417F5-7F69-42EE-B219-0631AA357A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F43417F5-7F69-42EE-B219-0631AA357A36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

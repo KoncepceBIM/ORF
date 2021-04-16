@@ -1502,149 +1502,6 @@ public partial class TTrida {
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public partial class TKlasifikace {
-    
-    private TTrida[] tridaField;
-    
-    private TTypKlasifikace typField;
-    
-    private string nazevField;
-    
-    private string popisField;
-    
-    private string zdrojField;
-    
-    private string umisteniField;
-    
-    private string ediceField;
-    
-    public TKlasifikace() {
-        this.typField = TTypKlasifikace.Vlastni;
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Trida")]
-    public TTrida[] Trida {
-        get {
-            return this.tridaField;
-        }
-        set {
-            this.tridaField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    [System.ComponentModel.DefaultValueAttribute(TTypKlasifikace.Vlastni)]
-    public TTypKlasifikace Typ {
-        get {
-            return this.typField;
-        }
-        set {
-            this.typField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Nazev {
-        get {
-            return this.nazevField;
-        }
-        set {
-            this.nazevField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Popis {
-        get {
-            return this.popisField;
-        }
-        set {
-            this.popisField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Zdroj {
-        get {
-            return this.zdrojField;
-        }
-        set {
-            this.zdrojField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
-    public string Umisteni {
-        get {
-            return this.umisteniField;
-        }
-        set {
-            this.umisteniField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Edice {
-        get {
-            return this.ediceField;
-        }
-        set {
-            this.ediceField = value;
-        }
-    }
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public enum TTypKlasifikace {
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("CZ-CC")]
-    CZCC,
-    
-    /// <remarks/>
-    CPV,
-    
-    /// <remarks/>
-    CPA,
-    
-    /// <remarks/>
-    CCI_STAVEBNI_ENTITY,
-    
-    /// <remarks/>
-    CCI_VYBUDOVANE_PROSTORY,
-    
-    /// <remarks/>
-    CCI_FUNKCNI_SYSTEMY,
-    
-    /// <remarks/>
-    CCI_KONSTRUKCNI_SYSTEMY,
-    
-    /// <remarks/>
-    CCI_KOMPONENTY,
-    
-    /// <remarks/>
-    CCI_KOMPLEXY,
-    
-    /// <remarks/>
-    Vlastni,
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
 public partial class TOsoba {
     
     private TAdresa adresaField;
@@ -1908,6 +1765,150 @@ public partial class TDefinice {
             this.zaokrouhleniMnozstviPolozkyField = value;
         }
     }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+[System.Xml.Serialization.XmlRootAttribute("Klasifikace", Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd", IsNullable=false)]
+public partial class TKlasifikace {
+    
+    private TTrida[] tridaField;
+    
+    private TTypKlasifikace typField;
+    
+    private string nazevField;
+    
+    private string popisField;
+    
+    private string zdrojField;
+    
+    private string umisteniField;
+    
+    private string ediceField;
+    
+    public TKlasifikace() {
+        this.typField = TTypKlasifikace.Vlastni;
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("Trida")]
+    public TTrida[] Trida {
+        get {
+            return this.tridaField;
+        }
+        set {
+            this.tridaField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    [System.ComponentModel.DefaultValueAttribute(TTypKlasifikace.Vlastni)]
+    public TTypKlasifikace Typ {
+        get {
+            return this.typField;
+        }
+        set {
+            this.typField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Nazev {
+        get {
+            return this.nazevField;
+        }
+        set {
+            this.nazevField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Popis {
+        get {
+            return this.popisField;
+        }
+        set {
+            this.popisField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Zdroj {
+        get {
+            return this.zdrojField;
+        }
+        set {
+            this.zdrojField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+    public string Umisteni {
+        get {
+            return this.umisteniField;
+        }
+        set {
+            this.umisteniField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Edice {
+        get {
+            return this.ediceField;
+        }
+        set {
+            this.ediceField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public enum TTypKlasifikace {
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlEnumAttribute("CZ-CC")]
+    CZCC,
+    
+    /// <remarks/>
+    CPV,
+    
+    /// <remarks/>
+    CPA,
+    
+    /// <remarks/>
+    CCI_STAVEBNI_ENTITY,
+    
+    /// <remarks/>
+    CCI_VYBUDOVANE_PROSTORY,
+    
+    /// <remarks/>
+    CCI_FUNKCNI_SYSTEMY,
+    
+    /// <remarks/>
+    CCI_KONSTRUKCNI_SYSTEMY,
+    
+    /// <remarks/>
+    CCI_KOMPONENTY,
+    
+    /// <remarks/>
+    CCI_KOMPLEXY,
+    
+    /// <remarks/>
+    Vlastni,
 }
 
 /// <remarks/>

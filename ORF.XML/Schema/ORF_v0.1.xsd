@@ -2422,4 +2422,7 @@
       <xs:field xpath="@Id"/>
     </xs:key>
   </xs:element>
+  <xs:element name="Klasifikace" type="TKlasifikace">
+    
+  </xs:element>
 </xs:schema>

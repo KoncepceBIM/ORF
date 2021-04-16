@@ -1,0 +1,221 @@
+﻿Úroveň 1,Úroveň 2,Úroveň 3,Název (ČJ),Vysvětlení (ČJ),Příklady (ČJ),Term (EN),Explanation (EN),,,,,,,,,,
+A??,,,Objekty pro lidské potřeby a činnosti,objekt kde se lidé zdržují a vykonávají aktivity,,Building for human needs and human activity,construction entity designed for human dwelling and activity,,,,,,,,,,Objekty pro lidské potřeby a činnosti
+,AA?,,Obytné objekty,"objekt kde se lidé zdržují a vykonávají aktivity, které z převážné většiny zahrnují bytové jednotky pro trvalé nebo dočasné bydlení",,Residential building,building for human needs and human acitivity designed for permanent occupation,,,,,,,,,,Obytné objekty
+,,AAA,Rodinné domy,obytný objekt pro jednu rodinu,"rodiný dům, chata, hausbot, řadový dům, fara, zámeček",Single-family house,residential building designed for one household,,,,,,,,,,rodinné domy
+,,AAB,Bytové domy,obytný objekt pro několik rodin se samostatným zázemím,"vícegenerační dům, bytový dům, studentské koleje",House for multiple occupation,residential building designed for several households with individual facilities,,,,,,,,,,Bytové domy
+,,AAC,Bytové domy se společným zázemím,obytný objekt pro několik rodin se společným zázemím,"domov důchodců, komunitní bydlení, dům s pečovatelskou službou",Housing complex,residential building designed for several households with shared facilities,,,,,,,,,,Bytové domy se společným zázemím
+,AB?,,Hotelové a restaurační budovy,budovy pro lidské potřeby a aktivity konstruované pro dočasné bydlení a stravování,,Hotel and restaurant building,"building for human needs and human acitivity, designed for temporary occupation and eating",,,,,,,,,,Hotelové a restaurační budovy
+,,ABA,Hotel,hotelová a restaurační budova s individuálním bydlením,"motel, hotel",Hotel building,hotel and restaurant building with individual residential facilities,,,,,,,,,,Hotel
+,,ABB,Hostel,hotelová a restaurační budova se sdíleným bydlením,"hostel, noclehárna",Youth hostel building,hotel and restaurant building with shared residential facilities,,,,,,,,,,Hostel
+,,ABC,Restaurace,hotelová a restaurační budova se sdílenými prostory pro stravování,"restaurace, rychlé občerstvení, pizzerie",Restaurant building,hotel and restaurant building with shared eating facilities,,,,,,,,,,Restaurace
+,AC?,,Sanitární objekty,budova pro lidské potřeby a aktivity související s osobní hygienou,,Hygiene building,building for human needs and human acitivity designed to achieve personal hygiene,,,,,,,,,,Sanitární objekty
+,,ACA,Toalety (wc),sanitární budova určená k provedení osobní hygieny a vykonání potřeby,"toalety, suchý záchod",Toilet building,hygiene building designed for persons to relieve themselves,,,,,,,,,,Toalety (WC)
+,,ACB,Veřejné lázně,sanitární budova určená k umytí a případně k vykonání potřeby,lázně,Baths building,hygiene building designed to enable persons to wash and possibly relieve themselves,,,,,,,,,,Veřejné lázně
+,,ACC,Sauny,sanitární budova určená k provedení hygieny formou horké sauny,sauna,Sauna building,hygiene building designed for one or more persons to take a sweat-inducing bath,,,,,,,,,,Sauny
+,,ACD,Šatny,sanitární budova určená k převlékání jedné či více osob,"šatny, převlékací kóje",Changing building,hygiene building designed for one or more persons to change clothing,,,,,,,,,,Šatny
+,AD?,,Ochranné stavby,budovy určené k ochranně či izolaci osob a majetku,,Isolation building,building for human needs and human acitivity designed to cut off persons from their surroundings,,,,,,,,,,Ochranné stavby
+,,ADA,Ochranné budovy,ochranná stavba k ochraně osob v nebezpečných situacích ,"bunkr, protiletecký kryt",Shelter building,isolation building designed to isolate persons from dangerous situations,,,,,,,,,,Ochranné budovy
+,,ADB,Věznice,ochranná stavba sloužící k izolaci osob od  ostatních osob,"věznice, vazba, nápravné zařízení",Prison building,isolation building designed to isolate persons from other persons,,,,,,,,,,Věznice
+,AE?,,Administrativní budovy,budova určená k vykonávání lidských potřeb a aktivit jejichž výsledkem je nehmotná výroba,,Administration building,building for human needs and human acitivity designed to produce an immaterial result,,,,,,,,,,Administrativní budovy
+,,AEA,Kancelářské budovy,administrativní budova určena k tvorbě nebo interpretaci informací,"administrativní budova, ambasáda, radnice, kancelářská budova",Office building,administration building designed for production or interpretation of information,,,,,,,,,,Kancelářské budovy
+,,AEB,Budovy služeb,administrativní budova pro služby,"banka, čerpací stanice, pošta",Service building,administration building designed for services,,,,,,,,,,Budovy služeb
+,,AEC,Laboratoře,administrativní budova pro výzkum a vývoj,vědecké pracoviště,Emergency services building,administration building designed for acute assistance,,,,,,,,,,Laboratoře
+,AF?,,Výrobní prostory,budova určená k vykonávání lidských potřeb a aktivit jejichž výsledkem je produkce hmotných výrobků,,Production building,building for human needs and human acitivity designed to produce a material result,,,,,,,,,,Výrobní prostory
+,,AFA,Průmyslové budovy,výrobní prostory pro velkoprodukci produktů nebo surovin,"pekařství, továrna, rafinerie, pila, řeznictví, pivovar",Fabrication building,production building designed for mass production of products or raw materials,,,,,,,,,,Průmyslové budovy
+,,AFB,Dílny,výrobní prostory pro drobnou výrobu nebo opravu produktů,"autodílna, hala, klempířská dílna, prádelna, truhlářská dílna",Workshop building,production building designed for fabrication or repair of products,,,,,,,,,,Dílny
+,AG?,,Obchodní budovy,budova určená k lidským potřebám a aktivitám jejichž výsledkem je prodej,,Trading building,building for human needs and human acitivity designed for trading,,,,,,,,,,Obchodní budovy
+,,AGA,Prodejny,menší obchodní budova pro prodej zboží,"prodejna aut, kiosk, obchodní dům, tržnice",Shop building,small trading building designed for sale of goods,,,,,,,,,,Prodejny
+,,AGB,Nákupní centra,větší obchodní budova pro prodej zboží,nákupní centrum,Shopping centre,large trading building designed for sale of goods,,,,,,,,,,Nákupní centra
+,,AGC,Nákupní galerie,menší obchodní budova k vystavování zboží,nákupní galerie,Gallery,small trading building designed for display of goods,,,,,,,,,,Nákupní galerie
+,,AGD,Výstaviště,větší obchodní budova k vystavování zboží,výstaviště,Exhibition hall,large trading building designed for display of goods,,,,,,,,,,Výstaviště
+,AH?,,Vzdělávací budovy,budova určená k lidským potřebám a aktivitám které se zabývají šíření znalostí a dovedností,,Teaching building,building for human needs and human acitivity designed for transmission of knowledge and competencies,,,,,,,,,,Vzdělávací budovy
+,,AHA,Školy,vzdělávací budova pro výuku základních škol a gymnázií,"základní škola, gymnázium, střední škola",School building,teaching building designed for basic education,,,,,,,,,,Školy
+,,AHB,Univerzity,vzdělávací budova pro vysokoškolské vzdělávání,"vysoká škola, univerzita",University building,teaching building designed for further education,,,,,,,,,,Univerzity
+,,AHC,Výuková střediska,vzdělávací budova k výuce kurzů,tábor,Course centre building,teaching building designed for courses,,,,,,,,,,Výuková střediska
+,AJ?,,Pečovatelské objekty,budova pro lidské potřeby a aktivity související s péčí o zdraví a další péčí o osoby,,Care facility,building for human needs and human acitivity designed for health-related and other treatment and care of individuals,,,,,,,,,,Pečovatelské objekty
+,,AJA,Jesle,pečovatelský objekt denní péče o děti,"školka, jesle",Children's institution building,care facility designed for care of children,,,,,,,,,,Jesle
+,,AJB,Nemocnice,pečovatelský objekt zdravotní péče osob,nemocnice,Hospital building,care facility designed for treatment of persons,,,,,,,,,,Nemocnice
+,,AJC,Dům s pečovatelskou službou,pečovatelský objekt s péčí o staré osoby,dům s pečovatelskou službou,Care home building,care facility designed for care of elderly persons,,,,,,,,,,Dům s pečovatelskou službou
+,AK?,,Volnočasová objekty,stavby pro lidské účely a činnosti navržené k odpočinku a rekreaci,,Leisure facility,building for human needs and human acitivity designed for relaxation or recreation,,,,,,,,,,Volnočasová objekty
+,,AKA,Chata,volnočasové objekty umístěné v oblasti určené pro rekreační zástavbu,chata,Summer house,leisure facility located in an area designated for holiday house development,,,,,,,,,,Chata
+,,AKB,Chatka v zahr. kolonii,volnočasové objekty uístěné v zahrádkářské kolonii,chatka v zahr. kolonii,Allotment hut,leisure facility located on an allotment site,,,,,,,,,,Chatka v zahr. kolonii
+,,AKC,Altán,volnočasové objekty umístěné v zahradě nebo parku,altán,Gazebo,leisure facility located in a garden or park,,,,,,,,,,Altán
+,,AKD,Zimní zahrada,volnočasové objekty jako přístavba k hlavní budově,"zimní zahrada, oranžerie",Conservatory,leisure facility forming an extension to a building,,,,,,,,,,Zimní zahrada
+,AL?,,Sportovní objekty,budovy pro lidské potřeby a acitivity utvořené pro konkrétní sportovní činnosti,,Sports building,building for human needs and human acitivity designed for a particular sporting activity,,,,,,,,,,Sportovní objekty
+,,ALA,Sportovní hala,sportovní objekt pro sportovní aktivity,"aréna, multifunkční hala, sportovní hala, tenisová hala",Sports hall,sports building designed for sporting activities,,,,,,,,,,Sportovní hala
+,,ALB,Tribuna,sportovní objekt pro diváky,tribuna,Stand,sports building designed for spectators,,,,,,,,,,Tribuna
+,,ALC,Plavecký bazén,sportovní objekt pro plavání,bazén,Swimming hall,sports building designed for swimming,,,,,,,,,,Plavecký bazén
+,,ALD,Jízdárna,sportovní objekt pro jízdu na koni,jezdecká hala,Riding school,sports building designed for riding,,,,,,,,,,Jízdárna
+,,ALE,Skokanská věž,sportovní objekt pro skoky do vody,skokanská věž,Diving tower,sports building designed for diving,,,,,,,,,,Skokanská věž
+,,ALF,Bowling,sportovní objekt pro bowling,bowlingová hala,Bowling hall,sports building designed for bowling,,,,,,,,,,Bowling
+,AM?,,Kulturní budovy,budovy pro lidské potřeby a acitivity určené ke kulturní činnosti,,Cultural building,building for human needs and human acitivity designed for a particular cultural activity,,,,,,,,,,Kulturní budovy
+,,AMA,Divadlo,kulturní budovy pro divadelní představení nebo hry,divadlo,Theatre building,cultural building designed for theatre performances or plays,,,,,,,,,,Divadlo
+,,AMB,Koncertní sál,kulturní budovy pro hudební vystoupení,koncertní dům,Concert building,cultural building designed for performance of music,,,,,,,,,,Koncertní sál
+,,AMC,Budova určená k výstavám,kulturní budovy pro vystavování objektů,"galerie, muzeum",Exhibition building,cultural building designed for displaying objects,,,,,,,,,,Budova určená k výstavám
+,,AMD,Planetárium,kulturní budovy pro zobrazení noční oblohy,"planetárium, hvězdárna",Planetarium,cultural building designed for displaying the night sky,,,,,,,,,,Planetárium
+,,AME,Kino,kulturní budovy pro promítání filmů,kino,Cinema building,cultural building for displaying films,,,,,,,,,,Kino
+,,AMF,Knihovna,kulturní budovy pro půjčování knih a dalších médií,knihovna,Library building,cultural building designed for loaning books and other media,,,,,,,,,,Knihovna
+,,AMG,Víceúčelová budova,kulturní budovy zahrnující více kulturních aktivit,"kulturní centrum, multiaréna",Multi-functional building,cultural building designed for several purposes in a shared building complex,,,,,,,,,,Víceúčelová budova
+,AN?,,Auly,budovy pro lidské potřeby a acitivity určení k setkávání většího počtu osob,,Assembly hall,building for human needs and human acitivity designed for assemblies of large groups of persons,,,,,,,,,,Auly
+,,ANA,Sál pro společné aktivity,auly pro společné aktivity,"dům dětí a mládeže, denní centrum, družina",Residents' hall,assembly hall designed for a residents' association,,,,,,,,,,Sál pro společné aktivity
+,,ANB,Společenská místnost,auly pro setkávání skupin lidí,"farní klubovna, kulturní dům",Local hall,assembly hall designed for a local association,,,,,,,,,,Společenská místnost
+,,ANC,Klubovna,auly pro zájmová združení,skautská klubovna,Clubhouse,assembly hall designed for a club,,,,,,,,,,Klubovna
+,,AND,Obřadní budova,auly pro setkávání náboženských nebo ceremoniálních skupin osob,"kostel, kaple, mešita, synagoga",Religious building,assembly hall designed for a religious community,,,,,,,,,,Obřadní budova
+,AP?,,Skladovací prostory,"budovy pro lidské potřeby a akitivity určené ke skladování materiálů, vybavení a organismů",,Storage building,"building for human needs and human acitivity designed for storage of materials, equipment and organisms",,,,,,,,,,Skladovací prostory
+,,APA,Sklad,skladovací prostory pro materiály a vybavení,"sklep, sklad, zrojnice",Materials store,storage building designed for resources,,,,,,,,,,Sklad
+,,APB,Garáž,skladovací prostory pro vozidla,"garáž, hangár, parkovací dům, vozovna, loděnice",Equipment building (garage),storage building designed for moveable technical equipment,,,,,,,,,,Garáž
+,,APC,Stáje,skladovací prostory pro zvířata,stáj,Animal house,storage building designed for animals,,,,,,,,,,Stáje
+,,APD,Skleník,skladovací prostor pro rostliny,skleník,Greenhouse,storage building designed for plants,,,,,,,,,,Skleník
+,,APE,Márnice,skladovací prostory pro mrtvá těla za účelem dočasného uskladnění,márnice,Mortuary,storage building designed for dead bodies,,,,,,,,,,Márnice
+,AQ?,,Přístupový objekt,"budova pro lidské potřeby a akitivity, která umožňuje přístup do jiných budov",,Access building,building for human needs and human acitivity designed to give access to other buildings,,,,,,,,,,Přístupový objekt
+,,AQA,Průchod,přístupový objekt tvořící horizontální přístup mezi dvěma nebo více budovami,spojovací chodba,Passageway,access building designed to create horizontal access between two or more buildings,,,,,,,,,,Průchod
+,,AQB,Schodiště,přístupový objekt tvořící  nemotorizovaný vertikální přístup mezi dvěma nebo více podlažími,schodiště,Staircase tower,access building designed to create non-automated vertical access between two or more storeys,,,,,,,,,,Schodiště
+,,AQC,Výtah,přístupový objekt tvořící motorizovaný vertikální přístup mezi dvěma nebo více podlažími,výtah,Lift tower,access building designed to create automated vertical access between two or more levels,,,,,,,,,,Výtah
+,,AQD,Vstupní prostory,přístupový objekt spojující dvě nebo více budov společným vchodem,vstupní hala,Gatehouse,access building designed to create a link between two buildings by passing through a building,,,,,,,,,,Vstupní prostory
+B??,,,Technické objekty,Budova určená pro aktivní technické vybavení,,Plant room,construction entity designed for active technical equipment,,,,,,,,,,Technické objekty
+,BA?,,Výrobní závod,technický objekt pro výrobu energie nebo surovin,,Production plant,plant room designed for production of energy or raw materials,,,,,,,,,,Výrobní závod
+,,BAA,Elektrárna,výrobní závod na výrobu energie spalováním,"kogenerační jednotka, tepelná elektrárna, kotelna",Combined heat and power station,production plant designed for production of energy,,,,,,,,,,Elektrárna
+,,BAB,Úpravna vody,výrobní závod pro úpravu vody na pitnou,úpravna vody,Water treatment works,production plant designed for production of drinking water,,,,,,,,,,Úpravna vody
+,,BAC,Závod na výrobu surovin,výrobní závod na výrobu surovin,"ocelárna, pila, cukrovar",Raw material plant,production plant designed for production of raw material,,,,,,,,,,Závod na výrobu surovin
+,BB?,,Propojovací objekty,zařízení určená k propojování různých technických systémů nebo lidí,,Linking equipment,technical equipment designed to link technical systems,,,,,,,,,,Propojovací objekty
+,,BBA,Vysílač,propojovací objekt pro elektromagnetické signály,"telefoní vysílač, radiovysílač",Signalling equipment,wireless linking equipment designed for electromagnetic signals,,,,,,,,,,Vysílač
+,,BBB,Vzdušné vedení,propojovací objekt pro přenos elektrické energie a signálů nad zemí,kabelové vedení vzduchem,Transmission mast,linking equipment designed for electrical power and signals suspended above ground,,,,,,,,,,Vzdušné vedení
+,,BBC,Vedení pod zemí,propojovací objekt pro přenos elektrické energie a signálů pod zemí,"kabelové vedení optiky, telefonu, vysokého napětí pod zemí",Cabling,buried cabled linking equipment designed for electrical power and signals,,,,,,,,,,Vedení pod zemí
+,,BBD,Potrubní vedení,"propojovací objekt pro přenos plynu, vzduchu a kapalin","teplovod, kanalizace, vodovod",Piped network,"linking equipment designed for gas, air and liquids",,,,,,,,,,Potrubní vedení
+,,BBE,Přepojovací zařízení,propojovací objekt pro přepojení nebo transformaci elektrických zařízení,"trafostanice, rozvodna, transformátorovna, měnírna",Coupling equipment,linking equipment designed for coupling or transforming in electrical installations,,,,,,,,,,Přepojovací zařízení
+,BC?,,Odvodní systémy,systémy pro odvod odpadních produktů,,Disposal systems,technical equipment designed for disposal of waste products,,,,,,,,,,Odvodní systémy
+,,BCA,Komínová zařízení,"odvodní systém pro odvod vzduchu, páry nebo kouře",chladící věž,Chimney system,"disposal systems designed to remove air, steam or flue gas",,,,,,,,,,komínová zařízení
+,,BCB,Kanalizace,odvodní systémy pro odvod odpadních vod,kanalizace,Sewer system,disposal systems designed to remove wastewater,,,,,,,,,,Kanalizace
+,BD?,,Přepravní systémy,technické vybavení pro pohyb osob nebo vybavení,,Transport system,technical equipment designed to move persons or equipment,,,,,,,,,,Přepravní systémy
+,,BDA,Jeřáb,přepravní systém pro pohyb materiálu na krátké vzdálenosti,portálový jeřáb,Crane equipment,transport system designed to move materials over short distances,,,,,,,,,,Jeřáb
+,,BDB,Přepravní zařízení,přepravní systém pro pohyb materiálu na větší vzdálenosti,,Transporter system,transport system designed to move materials over larger distances,,,,,,,,,,Přepravní zařízení
+,,BDC,Lanovka,přepravní systém pro pohyb lidí na větší vzdálenosti,lanovka,Ropeway,transport system designed to move people over larger distances,,,,,,,,,,Lanovka
+,BE?,,Skladové objekty,technické objekty pro ukládání informací nebo materiálů,,Storage equipment,technical equipment designed to store information or materials,,,,,,,,,,Skladové objekty
+,,BEA,Monitorovací stanice,skladový objekt pro měřená data,monitorovací stanice,Measuring station,storage equipment designed for measurement data,,,,,,,,,,monitorovací stanice
+,,BEB,Skládka,skladový objekt pro skladování odpadu,skládka,Landfill site,storage designed for refuse,,,,,,,,,,Skládka
+,,BEC,Prostor pro kontejner,skladový objekt pro kontejnery,prostor pro kontejner,Container space,storage facility designed for containers,,,,,,,,,,Prostor pro kontejner
+,,BED,Tank,"skladový objekt pro uchovávání kapaliny, plynu nebo jiných hmot v uzavřených jednotkách","plynová nádrž, cisterna, rezervoár, silo, vodárna",Tank farm,"storage facility designed for liquid, gas or other masses in sealed units",,,,,,,,,,Tank
+,,BEE,Bazén,skladový objekt pro uchovávání kapaliny nebo jiné hmoty v otevřených jednotkách,bazén,Pool,storage facility designed for liquids or other masses in open units,,,,,,,,,,Bazén
+,BF?,,Objekt pro zpracování,technická budova pro proces zpracování médií nebo materiálů,,Process plant,technical equipment designed to treat media or materials in a process,,,,,,,,,,Objekt pro zpracování
+,,BFA,Čerpací stanice,objekt pro zpracování pomocí čerpání,"odpadní čerpadlo, čerpadlo splaškové kanalizace, převaděče",Pumping station,process plant designed to increase pressure,,,,,,,,,,Čerpací stanice
+,,BFB,Čistička,"objekt pro zpracování, čištění odpadních vod",čistička odpadních vod,Treatment pond,process plant designed to treat water,,,,,,,,,,Čistička
+,,BFC,Odkalovací zařízení,"objekt pro zpracování, odkalení",odkalovací zařízení,Sludge treatment plant,process plant designed to treat sludge,,,,,,,,,,Odkalovací zařízení
+,BG?,,Zábavní objekty,technické objekty pro zábavu,,Entertainment system,technical equipment designed for entertainment,,,,,,,,,,Zábavní objekty
+,,BGA,Horská dráha,zábavní objekt určený k rychlému a různorodému pohybu,horská dráha,Roller-coaster,entertainment system designed for quick and varied movement,,,,,,,,,,Horská dráha
+,,BGB,Kolotoč,zábavní objekt určený ke  kruhovému horizontálnímu pohybu,kolotoč,Merry-go-round,entertainment system designed for circular horizontal movement,,,,,,,,,,Kolotoč
+,,BGC,Ruské kolo,zábavní objekt určený ke kruhovému vertikálnímu pohybu,ruské kolo,Ferris wheel,entertainment system designed for circular vertical movement,,,,,,,,,,Ruské kolo
+,,BGD,Fontána,zábavní objekt navržený pro tok vody,fontána,Flume,entertainment system designed for flow of water,,,,,,,,,,Vodotrysk
+C??,,,Infrastruktura,"konstrukční entita pro provoz vozidel, plavidel nebo osob, pro přesun v rámci a mezi růzými typy dopravy a za účelem parkování a kotvení vozidel",,Infrastructure facility,construction entity designed to create physical or technical linkage,,,,,,,,,,Infrastruktura
+,CA?,,Dopravní systémy,"infrastruktura pro pohyb vozidel, plavidel nebo osob po určených trasách",,Traffic facility,traffic system designed for traffic to cross over an obstruction,,,,,,,,,,Dopravní systémy
+,,CAA,Most,dopravní systém pro dopravu přes překážku,"mosty pro pěší, železniční most, ekodukt, silniční most, podjezd",Bridge,traffic system designed for traffic to cross over an obstruction,,,,,,,,,,Most
+,,CAB,Tunel,dopravní systém pro dopravu pod nebo skrz překážku,"tunel pro pěší, železniční tunel, silniční tunel, trubkový most",Tunnel,traffic system designed for traffic to cross under an obstruction,,,,,,,,,,Tunel
+,,CAC,Vodní kanál,dopravní systém v podobě uměle vytvořené vodní cesty,vodní kanál,Transport canal,traffic system designed for water-borne traffic,,,,,,,,,,Vodní kanál
+,,CAD,Železnice,dopravní systém pro dopravu po trati odděleně od silničních vozidel,železnice,Rail network,traffic system designed for traffic on rails,,,,,,,,,,Železnice
+,,CAE,Silnice,dopravní systém v podobě uprovené cesty pro automobilovou dopravu,"silnice, ulice, dálnice",Road,traffic system designed for vehicular traffic,,,,,,,,,,Silnice
+,,CAF,Cesta pro pěší,dopravní systém v podobě upravené cesty pro chodce,"cesta pro pěší, chodník",Footpath,traffic system designed for pedestrian traffic,,,,,,,,,,Cesta pro pěší
+,,CAG,Cyklostezka,dopravní systém v podobě upravené cesty pro cyklisty a chodce,cyklostezka,Path,traffic system designed for bicycle and pedestrian traffic,,,,,,,,,,Cyklostezka
+,CB?,,Terminál,Infrastruktura určená k propojení,,Terminus,infrastructure facility designed for connections,,,,,,,,,,Terminál
+,,CBA,Přístaviště,terminál určený k propojení lodní a ostatní dopravy,"kontejnerový terminál, nákladní terminál",Quay,terminus designed for connection between water-borne and other traffic,,,,,,,,,,Přístaviště
+,,CBB,Nástupiště,terminál určený k propojení pěší a železniční dopravy,nástupiště,Platform,terminus designed for connection between railway and other traffic,,,,,,,,,,Nástupiště
+,,CBC,Křižovatka,terminál k propojení cest nebo kolejí,"kruhový objezd, křižovatka, mimoúrovňové křížení, železniční přejezd",Crossroads,terminus designed for connection between road and other traffic,,,,,,,,,,Křižovatka
+,,CBD,Železniční terminál,terminál určený k propojení železniční dopravy s ostatní dopravou,"železniční stanice, stanice metra, nádraží",Rail terminus,terminus designed for connection with rail transport,,,,,,,,,,Železniční terminál
+,,CBE,Letištní terminál,terminál určený ke spojení letecké dopravy s ostatní dopravou,terminál,Airport terminal,terminus designed for connection with air transport,,,,,,,,,,Letištní terminál
+,,CBF,Autobusový terminál,terminál určený pro spojení s autobusovou dopravou,"autobusová zastávka, autobusové nádraží",Bus terminus,terminus designed for connection with bus transport,,,,,,,,,,Autobusový terminál
+,,CBG,Lodní terminál,terminál pro lodní a ostatní dopravu,přístaviště trajektů,Ferry terminal,terminus designed for connection with ferry transport,,,,,,,,,,Lodní terminál
+,CC?,,Parkovací plochy,infrastruktura určená k parkování vozidel,,Parking equipment,infrastructure facility designed for parking vehicles,,,,,,,,,,Parkovací plochy
+,,CCA,Parkování kol,parkovací plochaí pro jízdní kola,parkoviště pro kola,Cycle park,parking equipment designed for bicycles,,,,,,,,,,Parkování kol
+,,CCB,Parkoviště,parkovací plochaí pro motorová vozidla,parkoviště,Car park,parking equipment designed for motor vehicles,,,,,,,,,,Parkoviště
+,,CCC,Seřazovací nádraží,parkovací plocha pro vlaky,seřazovací nádraží,Sidings system,parking equipment designed for trains,,,,,,,,,,Seřazovací nádraží
+,,CCD,Letiště,parkovací plocha pro letadla,stanoviště letadel,Airfield,parking equipment designed for aeroplanes,,,,,,,,,,Letiště
+,CD?,,Komunikační stavby,infrastruktura umožňující komunikaci mezi lidmi nebo systémy,,Communication building,infrastructure facility designed to provide communication between people or systems,,,,,,,,,,Komunikační stavby
+,,CDA,Kontrolní věž,"komunikační stavba tvořená za účelem kontroly, regulace a dohledu",kontrolní věž,Control tower,"communications building designed for control, regulation and monitoring",,,,,,,,,,Kontrolní věž
+,,CDB,Vysílač,komunikační stavba pro elektromagnetické vlny,vysílač,Aerial mast,communications building designed for electromagnetic waves,,,,,,,,,,Vysílač
+,,CDC,Maják,komunikační stavba vydávající světelná znamení,maják,Lighthouse,communications building designed to emit optical signals,,,,,,,,,,Maják
+,,CDD,Zvonice,komunikační stavba vydávající zvuková znamení,zvonice,Bell tower,communications building designed to emit audio signals,,,,,,,,,,Zvonice
+,CE?,,Vodohospodářský objekt,infrastruktura sloužící k regulaci velkého množství vody,,Water control facility,infrastructure facility designed for masses of water,,,,,,,,,,Vodohospodářský objekt
+,,CEA,Přehrada,vodohospodářský objekt určený k zadržení vody,přehrada,Dam,water control facility designed to retain a water level,,,,,,,,,,Přehrada
+,,CEB,Průplav,vodohospodářský objekt určený k řízenému přesunu vody,průplav,Canal,water control facility designed for guided transport of water,,,,,,,,,,Průplav
+,,CEC,Hráz,vodohospodářský objekt s odtokem sloužící k zadržení vody,hráz,Barrage,water control facility designed to retain a water level with an overflow,,,,,,,,,,Hráz
+,,CED,Zdymadla,vodohospodářský objekt určený k úpravě výše vodní hladiny,zdymadlo,Sluice system,water control facility designed to adjust water level,,,,,,,,,,Zdymadla
+,,CEE,Přístavní hráz,vodohospodářský objekt určený k ochraně přístavu před vlnami,přístavní hráz,Mole,water control facility designed to protect a harbour from wave effects,,,,,,,,,,Přístavní hráz
+D??,,,Krajina,stavební entita určená k vymezení přírody,,Landscape,construction entity designed to delimit nature,,,,,,,,,,Krajina
+,DA?,,Přírodní oblasti,krajina určená k poznávání přírody,,Natural area,open shaped landscape designed for experiencing and exploiting nature,,,,,,,,,,Přírodní oblasti
+,,DAA,Pobřeží,přírodní oblast tvořená pískem nebo kameny s přístupem k vodě,"pobřeží, pláž",Beach,natural area consisting of sand or stone providing access to water,,,,,,,,,,Pobřeží
+,,DAB,Duny,přírodní oblast tvořená kopci písku,duna,Dunes,natural area in consisting of hills of sand,,,,,,,,,,Duny
+,,DAC,Jezero,přírodní obast tvořená klidnou vodní plochou,jezero,Lake,natural area consisting of a body of standing water,,,,,,,,,,Jezero
+,,DAD,Louka,přírodní oblast tvořená travnatou plochou,louka,Meadow,natural area consisting of a moist low-lying area of grass,,,,,,,,,,Louka
+,,DAE,Mokřady,přírodní oblast tvořená mělkou vodou nebo velmi vlhkým prostředím,mokřad,Wetland,natural area consisting of shallow water or a very moist area,,,,,,,,,,Mokřady
+,,DAF,Potok,přírodní oblast tvořená tekoucí vodou,potok,Watercourse,natural area consisting of a body of running water,,,,,,,,,,Potok
+,DB?,,Rekreační oblasti,krajina pro odpočinek a relaxaci,,Recreational area,landscape designed for rest and relaxation,,,,,,,,,,Rekreační oblasti
+,,DBA,Zahrada,rekreační oblast pro soukromé použití,zahrada,Garden,recreational area designed for private use,,,,,,,,,,Zahrada
+,,DBB,Park,Rekreační oblast pro veřejnost,městský park,Park,recreational area designed for public use,,,,,,,,,,Park
+,,DBC,Kemp,rekreační oblast pro dočasné bydlení bez stálého ubytování,kemp,Campsite,recreational area designed for public use allowing for overnight accommodation,,,,,,,,,,Kemp
+,DC?,,Veřejná místa,místo pro setkání většího počtu lidí,,Assembly area,landscape designed for assemblies of large groups of persons,,,,,,,,,,Veřejná místa
+,,DCA,Náměstí,veřejné místo pro setkávání a společné aktivity,náměstí,Meeting place,assembly area designed for several people to hold a meeting,,,,,,,,,,Náměstí
+,,DCB,Tržiště,veřejné místo pro prodej,tržiště,Market square,assembly area designed for trade,,,,,,,,,,Tržiště
+,,DCC,Cvičiště,veřejné místo pro trénink dovedností,"střelnice, cvičiště",Training site,assembly area designed for practicing competencies,,,,,,,,,,Cvičiště
+,,DCD,Školní dvůr,veřejné místo pro školu,školní dvůr,Playground,assembly area designed for children,,,,,,,,,,Školní dvůr
+,DD?,,Výrobní oblasti,prostory pro výrobu materiálů,,Production area,landscape designed for production of materials,,,,,,,,,,Výrobní oblasti
+,,DDA,Staveniště,výrobní oblast pro výstavbu budovy,staveniště,Plot,production area designed for construction of a building,,,,,,,,,,Staveniště
+,,DDB,Lom,výrobní oblast pro těžbu surovin,lom,Quarry,production area designed for quarrying raw materials,,,,,,,,,,Lom
+,,DDC,Štěrkovna,výrobní oblast pro sběr surovin,štěrkovna,Pit,production area designed for excavation of raw materials,,,,,,,,,,Štěrkovna
+,,DDD,Produkční les,výrobní oblast pro těžbu dřeva,produkční les,Woodland,production area designed for timber,,,,,,,,,,Produkční les
+,,DDE,Pole,výrobní oblast pro zemědělství,"pole, sad, lesní školka",Field,production area designed for crops,,,,,,,,,,Pole
+,DE?,,Sportovní prostory,místa pro sportovní aktivity,,Sports field,landscape designed for sporting activities,,,,,,,,,,Sportovní prostory
+,,DEA,Hřiště,sportovní prostory pro míčové hry,"fotbalové hřiště, tenisový kurt, basebolové hřiště",Playing field,sports field designed for ball games,,,,,,,,,,Hřiště
+,,DEB,Závodní dráha,sportovní prostory pro rychlostní soutěže,"dostihové závodiště, motokrosové závodiště",Race track,sports field designed for racing competitions,,,,,,,,,,Závodní dráha
+,,DEC,Stadion,sportovní prostory pro atletiku,stadion,Athletics track,sports field designed for athletics,,,,,,,,,,Stadion
+,,DED,Plavecký bazén,sportovní prostory pro plavání,plavecký bazén,Swimming pool,sports field designed for swimming,,,,,,,,,,Plavecký bazén
+E??,,,Pámátné stavby,stavební entita vybudovaná za účelem připomenutí významné události nebo osoby,,Monument,construction entity established to remind people of a person or an event,,,,,,,,,,Pámátné stavby
+,EA?,,Památka,památná stavba určená k historické ochranně,,Memorial,memorial designed for historical preservation,,,,,,,,,,Památka
+,,EAA,Kulturní památky,památka kulturního významu,,Cultural monument,memorial designed to preserve culture,,,,,,,,,,kulturní památky
+,,EAB,Historické památky,památka historického významu,,Ancient monument,memorial designed to preserve ancient history,,,,,,,,,,historické památky
+Z??,,,Nedefinovaný,Konstrukční entita bez stanoveného použití,,Undefined,construction entity with no defined use,,,,,,,,,,nedefinovaný
+,ZZ?,,Nedefinovaný,Konstrukční entita bez stanoveného použití,,Undefined,construction entity with no defined use,,,,,,,,,,nedefinovaný
+,,ZZZ,Nedefinovaný,Konstrukční entita bez stanoveného použití,,Undefined,construction entity with no defined use,,,,,,,,,,nedefinovaný
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,

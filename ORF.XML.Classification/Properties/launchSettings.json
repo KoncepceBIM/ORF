@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ORF.XML.Classification": {
+      "commandName": "Project",
+      "commandLineArgs": "Data"
+    }
+  }
+}

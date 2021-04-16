@@ -1,0 +1,176 @@
+﻿Úroveň 1,Úroveň 2,Úroveň 3,Název (ČJ),Vysvětlení (ČJ),Příklady (ČJ),Term (EN),Explanation (EN),,,,,,,,,,
+A??,,,Prostor pro přebývání lidí,prostor určený pro lidské obydlí a s ním související činnosti,,Space for human dwelling,space designed for human dwelling and related activities,,,,,,,,,,Prostor pro přebývání lidí
+,AA?,,Rezidenční prostor,"prostor pro lidské obydlí, odpočinek, relaxaci, rekreaci nebo čekání",,Occupiable space,"space for human dwelling for rest, relaxation, recreation or waiting",,,,,,,,,,rezidenční prostor
+,,AAA,Pokoj,rezidenční prostor pro osobní potřebu,"dětský pokoj, hotelový pokoj, ložnice, pokoj pro návštěvy, odpočívárna, noclehárna",Room,occupiable space for human dwelling,,,,,,,,,,pokoj
+,,AAB,Obytný prostor,rezidenční prostor pro společné užívání,"obývací pokoj, denní pokoj, sborovna, studovna, společenská místnost",residential space,occupiable space for common use,,,,,,,,,,obytný prostor
+,,AAC,Čekárna,rezidenční prostor pro čekání,"foajé, čekárna",Waiting space,occupiable space for waiting,,,,,,,,,,čekárna
+,,AAD,Dvorek,rezidenční prostor venku zcela nebo částečně obklopen budovami,"altán, atrium, střešní terasa, domovní dvůr, terasa, veranda",Courtyard,occupiable space outdoors entirely or partly surrounded by buildings,,,,,,,,,,dvorek
+,AB?,,Prostor pro osobní hygienu,prostor v lidském obydlí využívaný pro osobní hygienu,,Personal hygiene space,space for human dwelling for personal hygiene use,,,,,,,,,,prostor pro osobní hygienu
+,,ABA,Koupelna,"prostor pro osobní hygienu umožňující osobám se umýt, případně si ulevit",koupelna,Bathroom,personal hygiene space enabling persons to wash and possibly relieve themselves,,,,,,,,,,koupelna
+,,ABB,Toaleta,prostor pro osobní hygienu umožňující osobám ulevit si,"toaleta, suché WC, pisoár",Toilet,personal hygiene space enabling persons to relieve themselves,,,,,,,,,,toaleta
+,,ABC,Přebalovací místnost,prostor pro osobní hygienu umožňující hygienickou péči o kojence,přebalovací místnost,Baby changing room,personal hygiene space for young children,,,,,,,,,,přebalovací místnost
+,,ABD,Šatna,prostor pro osobní hygienu umožňující převlékání,"šatna, zkušební kabinka, sákristie",Changing room,personal hygiene space for changing clothes,,,,,,,,,,šatna
+,,ABE,Sprcha,prostor pro osobní hygienu umožňující osobám osprchovat se,sprcha,Shower,personal hygiene space enabling persons to wash themselves,,,,,,,,,,sprcha
+,,ABF,Sauna,"prostor pro osobní hygienu, ve kterém je vyvoláváno pocení",sauna,Sauna,personal hygiene space enabling persons to take a sweat-inducing bath,,,,,,,,,,sauna
+,AC?,,Izolační prostor,prostor pro lidské obydlí určený k izolaci osob,,Isolation space,space for human dwelling for isolating persons,,,,,,,,,,izolační prostor
+,,ACA,Kryt,izolační prostor určený k ochraně osob před nebezpečnou situací,kryt,Shelter,isolation space to protect persons from hazardous of dangerous situations,,,,,,,,,,kryt
+,,ACB,Cela,izolační prostor pro separaci osoby od ostatních osob,cela,Cell,isolation space to separate persons from other persons,,,,,,,,,,cela
+B??,,,Prostor pro lidskou činnost,prostor určený k produktivním aktivitám člověka,,Space for human activity,space designed for humans’ leisure and business activities,,,,,,,,,,prostor pro lidskou činnost
+,,BAA,Kancelář,"pracovní prostor pro výrobu, zpracování a interpretaci informací","pracovna, kancelář, kancelářská buňka, expedice, sborovna, sákristie, sesterna",Office,"workspace for the production, processing and interpretation of information",,,,,,,,,,kancelář
+,,BAB,Zasedací místnost,pracovní prostor pro jednání,"konferenční místnost, zasedací místnost, výslechová místnost",Meeting space,workspace for meetings,,,,,,,,,,zasedací místnost
+,,BAC,Recepce,pracovní prostor pro příjem hostů a zboží,recepce,Reception,workspace for receiving guests and goods,,,,,,,,,,recepce
+,,BAD,Prodejní plocha,pracovní prostor pro prodej zboží a služeb,"lékárna, aukční síň, prodejna, galerie",Sales area,workspace for selling goods and services,,,,,,,,,,prodejní plocha
+,,BAE,Výukový prostor,pracovní prostor pro zprostředkování znalostí a kompetencí,"aula, počítačová místnost, přednášková místnost, simulátor, studio, výuková kuchyň, učebna, třída",Teaching space,workspace conveying knowledge and competencies,,,,,,,,,,výukový prostor
+,,BAF,Studovna,pracovní prostor pro čtení nebo zkoušky,"čítárna, studovna",Study,workspace for reading,,,,,,,,,,studovna
+,,BAG,Prádelna,pracovní prostor pro čištění oděvů,"prádelna, sušárna, dezinfekční místnost, myčka na auta, sanační místnost",Laundry,workspace for laundering clothes and linen,,,,,,,,,,prádelna
+,,BAH,Ordinace,pracovní prostor pro léčbu a péči o jednotlivce,"ordinace lékaře, ordinace veterináře, fyzioterapie, operační sál, porodní sál, solárium, pokoj pro pacienty",Treatment space,workspace for health-related and other treatment and care of individuals,,,,,,,,,,ordinace
+,,BAJ,Vyšetřovací místnost,pracovní prostor pro diagnostiku,"CT, rentgen, vyšetřovací místnost, pitevna",Examining space,workspace for diagnosis,,,,,,,,,,vyšetřovací místnost
+,,BAK,Sledovací místnost,pracovní prostor pro sledování jednotlivců,"izolační místnost, inkubační místnost, pokoj intenzivní péče, observační místnost",Observation space,workspace for monitoring individuals,,,,,,,,,,sledovací místnost
+,,BAL,Pozorovací místnost,pracovní prostor pro pozorování procesů a osob v přilehlém prostoru,"pozorovací místnost, kontrolní místnost, kontrolní stanoviště",Viewing space,workspace for observing processes and persons in adjacent space,,,,,,,,,,pozorovací místnost
+,,BAM,Mediální studio,Pracovní prostor pro záznam a editaci médií,"filmové studio, nahrávací studio, střihací místnost, temná komora",Media workshop,workspace for recording and editing media,,,,,,,,,,mediální studio
+,BB?,,Výrobní prostory,prostor pro lidskou činnost za účelem výroby materiálních výsledků,,Production space,space for human activity for producing a material result,,,,,,,,,,výrobní prostory
+,,BBA,Kuchyně,výrobní prostory pro práci s potravinami,"pekárna, kuchyně, přípravna jídel, závodní kuchyně",Kitchen,production space for working with foodstuffs,,,,,,,,,,kuchyně
+,,BBB,Dílna,výrobní prostory pro práci s materiály,"sklárna, keramička, klempířství, pila, výroba obuvi, kovárna",Materials workshop,production space for working with materials,,,,,,,,,,dílna
+,,BBC,Opravna,výrobní prostory pro práci se stroji a zařízením,"autoopravna, opravna počítačů",Machine shop,production space for working with machinery and equipment,,,,,,,,,,opravna
+,,BBD,Umělecká dílna,výrobní prostory pro práci na umění a řemeslu,"atelijér, fotostudio, hudební studio, obrazové studio",Studio,production space for working on art and crafts,,,,,,,,,,umělecká dílna
+,,BBE,Prostor pro balení,výrobní prostory pro třídění a balení objektů,centrum příjmu pošty,Packing space,production space for sorting and packing objects,,,,,,,,,,prostor pro balení
+,BC?,,Laboratoř,prostor pro lidské činnosti k provedení analýzy a testů,,Laboratory,space for human activity for performing analyses and tests,,,,,,,,,,laboratoř
+,,BCA,Technická laboratoř,laboratoř pro technické analýzy,"chemická laboratoř, laboratoř akustiky",Technical laboratory,laboratory for technical analyses,,,,,,,,,,technická laboratoř
+,,BCB,Laboratoř materiálů,laboratoř pro studium materiálů,aerodynamický tunel,Materials laboratory,laboratory for studying materials,,,,,,,,,,laboratoř materiálů
+,,BCC,Biologická laboratoř,laboratoř pro biologickou analýzu,biologická laboratoř,Biology laboratory,laboratory for biological analysis,,,,,,,,,,biologická laboratoř
+,BD?,,Prostory určené k aktivitám,"prostor pro lidské činnosti, sport nebo kulturu",,Practice space,space for human activity of sport or culture,,,,,,,,,,prostory určené k aktivitám
+,,BDA,Sportovní prostor,prostor určený k aktivitám,"koupaliště, krytý bazén, tenisový kurt, kluziště, tělocvična, jízdárna, běžecká dráha, atletický stadion, hřiště na basket",Sports hall,practice space for sports,,,,,,,,,,sportovní prostor
+,,BDB,Cvičebna,"prostor určený k aktivitám, pro posilování, kondici a rovnováhu","skatepark, střelnice, posilovna, běžecká trasa",Training room,"practice space for training strength, condition and balance",,,,,,,,,,cvičebna
+,,BDC,Zkušebna,"prostor určený k aktivitám, pro nácvik uměleckých kompetencí",zkušebna,Rehearsal room,practice space for practicing artistic competencies,,,,,,,,,,zkušebna
+,,BDD,Podium,"prostor určený k aktivitám, pro výkonávání uměleckých představení","podium, orchestřiště",Stage,practice space for performance artistic works,,,,,,,,,,podium
+,,BDE,Hrací místnost,"prostor určený k aktivitám, pro dětské hry","taneční sál, diskotéka, hřiště",Playroom,practice space for children,,,,,,,,,,hrací místnost
+,BE?,,Shromažďovací prostor,prostor určený ke shromažďování osob/skupin,,Assembly space,space for human activity for mass assemblies of people/persons,,,,,,,,,,shromažďovací prostor
+,,BEA,Jídelna,shromažďovací prostor pro konzumaci potravin,"jídelna, kavárna, restaurace, bar, místnost pro kojení, cukrárna",Dining space,assembly space for consumption of food,,,,,,,,,,jídelna
+,,BEB,Aula,shromažďovací prostor pro společenské akce,"aula, promítací sál, konferenční sál, koncertní sál, tribuna, salón, divadelní sál, prostor pro posluchače, prostor pro diváky",Dining space,assembly space for consumption of food,,,,,,,,,,aula
+,,BEC,Galerie,shromažďovací prostor pro předvedení objektů,"výstavní prostor, galerie, výstavní sál, rozlučková místnost",Gallery,assembly space for displaying objects,,,,,,,,,,galerie
+,,BED,Obřadní prostor,shromažďovací prostor pro ceremoniální nebo náboženské aktivity,"kaple, modlitebna, ceremoniální síň",Religious faith space,assembly space for religious activities,,,,,,,,,,obřadní prostor
+C??,,,Skladovací prostory,Prostor určený pro skladování,,Storage space,"space designed for storage of materials, equipment and organisms",,,,,,,,,,Skladovací prostory
+,CA?,,Sklad materiálů,Skladovací prostor pro zdroje,,Material storage space,storage space for resources,,,,,,,,,,Sklad materiálů
+,,CAA,Recyklační místnost,sklad materiálu pro odpady,"prostor pro popelnice, prostor pro tříděný odpad",Refuse storage space,material storage space for refused and rejected materials or objects,,,,,,,,,,recyklační místnost
+,,CAB,Sklad chemikálií,sklad materiálu pro chemikálie,sklad chemikálií,Chemicals storage space,material storage space for chemicals,,,,,,,,,,sklad chemikálií
+,,CAC,Sklad léčiv,sklad materiálu pro léky,sklad léčiv,Medicine storage space,material storage space for medicines,,,,,,,,,,sklad léčiv
+,,CAD,Archiv,sklad materiálu pro informace,"archiv, knihovna, sklad knih",Archive storage space,material storage space for physical documents or media,,,,,,,,,,archiv
+,,CAE,Sklad tekutin,sklad materiálu pro tekutiny,"bazén, olejová nádrž, palivová nádrž",Fluid storage space,material storage space for fluid,,,,,,,,,,sklad tekutin
+,,CAF,Sklad surovin,sklad materiálu pro suroviny využitelné ve výrobních procesech,deponie dřeva,Raw materials storage space,material storage space for substances or materials for use in production processes,,,,,,,,,,sklad surovin
+,,CAG,Sklad potravin,sklad materiálu pro potraviny a nápoje,"chladící místnost, mrazírna, pivní sklep, spižírna",Food storage space,material storage space for food and drinks,,,,,,,,,,sklad potravin
+,,CAH,Sklad cenností,sklad materiálu pro cenné předměty,bezpečnostní schránky,Secure storage space,material storage space for valuable objects,,,,,,,,,,sklad cenností
+,,CAJ,Sklad balíků,sklad materiálu pro balení,poštovní sklady,Packaging storage space,material storage space of materials for packaging,,,,,,,,,,sklad balíků
+,,CAK,Sklad látek,sklad materiálu pro textil,"šatna, sklad oděvů, sklad látek",Clothes storage space,"material storage space for clothing, shoes and linen",,,,,,,,,,sklad látek
+,,CAL,Sklad stavebnin,sklad materiálu pro stavební materiály,sklad stavebnin,Building materials storage space,material storage space for building materials,,,,,,,,,,sklad stavebnin
+,CB?,,Sklad vybavení,úložný prostor pro vybavení,,Equipment storage space,storage space for moveable technical equipment,,,,,,,,,,Sklad vybavení
+,,CBA,Sklad nábytku,sklad vybavení nábytku,"sklad nábytku, půdní prostory",Furniture storage space,equipment storage space of objects for fitting out (of spaces),,,,,,,,,,sklad nábytku
+,,CBB,Sklad nářadí,sklad vybavení pro nářadí,"úklidová místnost, sklad nářadí",Tool storage space,equipment storage space for tools,,,,,,,,,,sklad nářadí
+,,CBC,Sklad nástrojů,sklad vybavení pro technické nástroje,sklad nástrojů,Instrument storage space,equipment storage space for technical instruments,,,,,,,,,,sklad nástrojů
+,,CBD,Sklad vozidel,sklad vybavení pro vozidla a plavidla,"garáž, kolárna, kočárkárna, depo",Vehicle storage space,equipment storage space for modes of transport,,,,,,,,,,sklad vozidel
+,CC?,,Prostory pro chov zvířat,prostor pro zvířata,,Animal enclosure,storage space for enclosing animals,,,,,,,,,,Prostory pro chov zvířat
+,,CCA,Klec,"prostory pro chov zvířat, kde jsou zvířata uzamčena","klec pro ptáky, terárium",Cage,animal enclosure for keeping animals locked up,,,,,,,,,,klec
+,,CCB,Kóje,"prostor pro chov zvířat, kde jsou zvířata v uzavřeném prostoru","box, stání",Stall,animal enclosure for keeping animals fenced in,,,,,,,,,,kóje
+,,CCC,Přístřešek,"prostor pro chov zvířat, kde se zvířata mohou schovat před nepřízní počasí",přístřešek,Stable,animal enclosure for providing shelter,,,,,,,,,,přístřešek
+,,CCD,Akvárium,prostor pro chov zvířat žijících ve vodě,"akvárium, klec pro chov ryb, jezírko",Water enclosure,animal enclosure for keeping animals in water,,,,,,,,,,akvárium
+,CD?,,Prostory pro pěstování,prostor pro uchování rostlin,,Planting space,storage space for plants,,,,,,,,,,Prostory pro pěstování
+,,CDA,Vnitřní prostory pro pěstování,prostor pro pěstování rostlin uvnitř,"skleník, oranžérie",Indoor planting space,planting space for growing plants indoor,,,,,,,,,,vnitřní prostory pro pěstování
+,,CDB,Venkovní prostory pro pěstování,prostor pro pěstování rostlin venku,"záhon, sad",Outdoor planting space,planting space for growing plants outdoor,,,,,,,,,,venkovní prostory pro pěstování
+,CE?,,Uchovávání mrtvých těl,prostor pro uchování mrtvých těl,,Dead body storage,storage space for dead bodies,,,,,,,,,,uchovávání mrtvých těl
+,,CEA,Márnice,prostor pro dočasné skladování mrtvých těl,márnice,Chapel of rest,dead body storage for interim storage,,,,,,,,,,márnice
+,,CEB,Krypta,prostor pro trvalé skladování mrtvých těl,"krypta, kolumbárium, mausoleum",Crypt,dead body storage for permanent storage,,,,,,,,,,krypta
+D??,,,Prostor pro technické systémy,Prostor určený pro aktivní technické vybavení,,Space for technical systems,space designed for active technical equipment,,,,,,,,,,Prostor pro technické systémy
+,DA?,,Instalační prostor,"Prostor pro technické systémy, které podporují funkci stavebních subjektů",,Installation space,space for technical systems which support the function of construction entities,,,,,,,,,,Instalační prostor
+,,DAA,Elektroinstalační prostor,instalační prostor pro elektrická zařízení,"reaktorová hala, elektrická centrála, akumulátorové místnosti, prostory vysokého napětí, turbínová hala, prostor pro transformátor",Electric installation space,installation space for stationary electric equipment,,,,,,,,,,elektroinstalační prostor
+,,DAB,Prostor pro informační technologie,instalační prostor pro elektronická zařízení,"servrovna, technická místnost, telefoní centrála, telefoní ústředna",Information technology (IT) equipment space,installation space for stationary electronic equipment,,,,,,,,,,prostor pro informační technologie
+,,DAC,Strojovna,instalační prostor pro mechanická zařízení,"strojovna, výtahová strojovna, prostor potrubní pošty",Mechanical installation space,installation space for stationary mechanical equipment,,,,,,,,,,strojovna
+,,DAD,Společný instalační prostor,instalační prostor pro různé druhy technického vybavení,"hodinová věž, technická místnost, kotelna, kompresorovna, rozvodna",Shared installation space,installation space for stationary technical equipment,,,,,,,,,,společný instalační prostor
+,DB?,,Technické zázemí,"prostor pro technické systémy, které podporují lidské činnosti",,Equipment space,space for technical systems which support human activities,,,,,,,,,,Technické zázemí
+,,DBA,Kontrolní prostor,"technické zázemí pro regulaci, řízení a monitorování","řídící centrála, promítací místnost biografu, monitorovací stanoviště, řídící stanoviště",Control equipment space,"equipment space of controlling, regulating and monitoring",,,,,,,,,,kontrolní prostor
+,,DBB,Výrobní prostor,technické zázemí výroby a úpravy produktů,"tiskárna, výrobní hala, mlékárna",Production plant space,equipment space of fabricating and preparing products,,,,,,,,,,výrobní prostor
+,,DBC,Servisní prostor,technické zázemí servisních funkcí,"prádelna, elektrotechnická místnost, počítačová místnost",Service equipment space,equipment space of service functions,,,,,,,,,,servisní prostor
+,,DBD,Prostor pro analytické vybavení,technické zázemí pro analýzy,"CT, magnetická rezonance, rentgen",Analysis equipment space,equipment space of analyses,,,,,,,,,,prostor pro analytické vybavení
+,DC?,,Operační prostor strojů,"prostor pro technické systémy, které poskytuje prostor k provozu strojů",,Equipment operation space,space for technical systems which provides space for equipment operation,,,,,,,,,,Operační prostor strojů
+,,DCA,Dosah strojů,operační prostor stroje pro pohyb stroje,pracovní rozsah strojů,Work envelope,equipment operation space providing equipment movement space,,,,,,,,,,dosah strojů
+,,DCB,Manipulační prostor,operační prostor stroje poskytující volný prostor kolem zařízení,"bezpečnostní zóna, prostor stroje",Clearance space,equipment operation space providing clearance around equipment,,,,,,,,,,manipulační prostor
+E??,,,Komunikační prostor,prostor určený k vytvoření vazby mezi jednotlivými prostory,,Space for infrastructure,space designed to create links between activity spaces,,,,,,,,,,Komunikační prostor
+,EA?,,Propojovací prostor,komunikační prostor poskytující zpřístupnění,,Circulation space,space for infrastructure providing access,,,,,,,,,,Propojovací prostor
+,,EAA,Vestibul,propojovací prostor mezi venkovními a vnitřními prostory,"vstupní hala, hlavní vchod, vestibul",Vestibule,circulation space between outdoor and indoor spaces,,,,,,,,,,vestibul
+,,EAB,Přechodný prostor,propojovací prostor pro regulovaný průchod mezi prostory,"předsíň, dvorana, zádveří",Air lock,circulation space for regulating passage between spaces,,,,,,,,,,přechodný prostor
+,,EAC,Chodba,propojovací prostor horizontálně mezi  prostory,"propojovací chodba, předpokoj, průchod, chodba, podchod",Corridor,circulation space horizontally between two or more spaces,,,,,,,,,,chodba
+,,EAD,Schodiště,propojovací prostor vertikálně propojující dvě nebo více pater bez užití motoru,schodiště,Stairwell,circulation space vertically and non-automated between two or more storeys or levels,,,,,,,,,,schodiště
+,,EAE,Výtahová šachta,propojující prostor vertikálně propojující dvě nebo více pater za pomoci motoru,"výtahová šachta, eskalátory",Lift space,circulation space vertically and automated between two or more levels,,,,,,,,,,výtahová šachta
+,,EAF,Průchod,spojovací prostor skrz budovu,"průjezd, průchod",Portico,circulation space through a building,,,,,,,,,,průchod
+,EB?,,Průchodný prostor,prostor pro distribuci technických služeb nebo médií,,Services space,space for infrastructure for distributing technical services or media,,,,,,,,,,průchodný prostor
+,,EBA,Servisní průchod,průchodný prostor s horizontálním přístupem pro osoby,"podchod, servisní průchod, servisní tunel, technický podchod, sklepní chodba",Services tunnel,services space with horizontal access for persons,,,,,,,,,,servisní průchod
+,,EBB,Šachta,průchodový prostor s vertikálním přístupem pro osoby,"odpadní šachta, shozová šachta, výtahová šachta, instalační šachta, shoz, ventilační šachta",Shaft,services space with vertical access for persons,,,,,,,,,,šachta
+,,EBC,Údržbový kanál,průchodový prostor který je součástí instalace,"komín, přívod vzduchu, ventilace, vyrovnávací šachta",Duct,services space without access for persons,,,,,,,,,,údržbový kanál
+F??,,,Dopravní prostor,provozní prostor,,Traffic space,space for traffic,,,,,,,,,,dopravní prostor
+,FA?,,Prostor pro provoz vozidel,dopravní prostor pro vozidla,,Vehicle traffic space,traffic space for vehicles,,,,,,,,,,prostor pro provoz vozidel
+,,FAA,Vozovka,"prostor pro provoz vozidel, který je součástí silnice nebo ulice určené pro vozidla","vozovka, AGV dráha",Carriageway,vehicle traffic space intended for vehicles,,,,,,,,,,vozovka
+,,FAB,Jízdní pruh,prostor pro provoz vozidel v jednom směru,jízdní pruh,Traffic lane,vehicle traffic space for one line of traffic,,,,,,,,,,jízdní pruh
+,,FAC,Krajnice,"prostor pro provoz vozidel podél vozovky, určený pro nouzovou jízdu",krajnice,Shoulder,vehicle traffic space along a carriageway for emergency and intermediate use,,,,,,,,,,krajnice
+,,FAD,Odstavný pruh,prostor pro provoz vozidel určený k parkování či odstavení vozidla ,"odstavný pruh, autobusová zastávka, parkovací záliv",Lay-by out lane,vehicle traffic space for stopping of vehicles,,,,,,,,,,odstavný pruh
+,,FAE,Výhybna,"prostor pro provoz vozidel, který je širší na úzké silnici, kde slouží pro průjezd dvou proti sobě jedoucích vozidel",výhybna,Passing place,vehicle traffic space for meeting of vehicles,,,,,,,,,,výhybna
+,,FAF,Točna,prostor pro provoz vozidel určený k otáčení vozidel,točna,Turning place,vehicle traffic space for turning of vehicles,,,,,,,,,,točna
+,FB?,,Prostor pro pěší a/nebo cyklisty,"dopravní prostor pro osoby, zvířata nebo jízdní kola",,Active transportation space,"traffic space for persons, animals or bicycles",,,,,,,,,,Prostor pro pěší a/nebo cyklisty
+,,FBA,Chodník,dopravní prostor pro chodce,"chodník, pěší zóna",Walkway,active transportation spaces for pedestrians,,,,,,,,,,chodník
+,,FBB,Cyklostezka,dopravní prostor pro jízdní kola,cyklostezka,Cycle path,active transportation space for bicycles,,,,,,,,,,cyklostezka
+,,FBC,Pěší a cyklistická stezka,dopravní prostor pro jízdní kola a chodce,stezka pro cyklisty a pěší,Cycle- and footpath,active transportation space for bicycles and pedestrians,,,,,,,,,,pěší a cyklistická stezka
+,FC?,,Prostor pro letecký provoz,dopravní prostor pro letadla,,,,,,,,,,,,,Prostor pro letecký provoz
+,,FCA,Přistávací dráha,dopravní prostor pro vzlet a přistání letadel,přistávací dráha,Runway,aircraft traffic space for take-off and landing,,,,,,,,,,přistávací dráha
+,FD?,,Železniční prostor,dopravní prostor pro železniční objekty,,Track space,traffic space for track bound objects,,,,,,,,,,Železniční prostor
+,,FDA,Koleje,"železniční prostor, který není určený ke křižování",koleje,Rail track,track space not intended for crossing,,,,,,,,,,koleje
+,,FDB,Kolejová křížení,železniční prostor určený ke křižování,železniční přejezd,Railway crossing,track space intended for crossing,,,,,,,,,,kolejová křížení
+,FE?,,Plavební prostor,dopravní prostor pro plavidla,,Vessel traffic space,traffic space for vessels,,,,,,,,,,Plavební prostor
+,,FEA,Plavební dráha,plavební prostor pro horizontální provoz,plavební dráha,Fairway,vessel track space for horizontal traffic,,,,,,,,,,plavební dráha
+,,FEB,Zdymadlo,plavební prostor pro vertikální dopravu,zdymadlo,Sluice,vessel track space for vertical traffic,,,,,,,,,,zdymadlo
+,FF?,,Prostor pro řízení provozu,dopravní prostor pro separaci a řízení,,Traffic management space,traffic space for separation and management,,,,,,,,,,Prostor pro řízení provozu
+,,FFA,Dělící pruh,prostor pro řízení provozu oddělující vozovky a chodníky nebo cyklostezky,dělící pruh,Dividing strip,traffic management space separating traffic spaces,,,,,,,,,,dělící pruh
+,,FFB,Nástupiště,prostor pro řízení provozu pro změnu způsobu dopravy,"nástupiště, autobusová zastávka",Platform space,traffic management space for change of transport mode,,,,,,,,,,nástupiště
+,,FFC,Prostor pro dopravní informace,prostor pro řízení provozu s informacemi pro účastníky silniční dopravy,odjezdová tabule,Traffic information space,traffic management space providing information,,,,,,,,,,prostor pro dopravní informace
+,,FFD,Silniční ochranné pásmo,prostor pro řízení provozu poskytující volnou vzdálenost od ostatních objektů,silniční ochranné pásmo,Clearance profile,traffic management space providing clearance to other objects,,,,,,,,,,silniční ochranné pásmo
+,,FFE,Zakázaný prostor,"prostor pro řízení dopravy, který je součástí silnice nebo ulice, ale není určen pro provoz vozidel",zakázaný prostor jízdního pruhu,Prohibited area,traffic management space being part of read or street not meant for vehicle traffic,,,,,,,,,,zakázaný prostor
+P??,,,Prostor pro fyzikální jevy,prostor určený pro výskyt fyzikálních jevů,,Physical phenomenon space,space designed for the occurrence of physical phenomena,,,,,,,,,,Prostor pro fyzikální jevy
+,PA?,,Prostor pro tok hmoty,prostor pro fyzikální jevy pro tok nebo výskyt hmoty,,Matter flow space,physical phenomenon space for flow or occurrence of matter,,,,,,,,,,prostor pro tok hmoty
+,,PAA,Prostor pro tok objektů,prostor pro tok objektů,potrubní pošta,Debris sapce,matter flow space for objects,,,,,,,,,,prostor pro tok objektů
+,,PAB,Prostor pro tok pevných látek,prostor pro tok pevných látek,"shoz stavební suti, dopravník štěrku",Soild material flow space,matter flow space for soild materials,,,,,,,,,,prostor pro tok pevných látek
+,,PAC,Prostor pro tok plynů,prostor pro tok plynu,komín,Gas flow spaces,matter flow space for gas,,,,,,,,,,prostor pro tok plynů
+,,PAD,Prostor pro tok kapalin,prostor pro proudění kapaliny,"vodovod, kanalizace",Liquid flow spaces,matter flow space for liquid,,,,,,,,,,prostor pro tok kapalin
+,,PAE,Prostor pro tok plazmy,prostor pro tok plazmatického materiálu,jádro fúzního reaktoru,Plasma flow space,matter flow space for plasma,,,,,,,,,,prostor pro tok plazmy
+,,PAF,Prostor s výskytem kouře,prostor pro tok různých hmot,,Smoke occurrence space,matter flow space for multiple matter kinds,,,,,,,,,,prostor s výskytem kouře
+,PB?,,Prostor pro tok energie,prostor pro fyzikální jevy pro tok energie,,Energy flow space,physical phenomenon space for flow of energy,,,,,,,,,,Prostor pro tok energie
+,,PBA,Prostor pro tok elektrické energie,prostor pro tok elektrické energie,vodič,Electrical energy flow space,energy flow spaces for electrical energy,,,,,,,,,,prostor pro tok elektrické energie
+,,PBB,Prostor pro tok tepelné energie,prostor pro tok tepelné energie,topení,Thermal energy flow space,energy flow spaces for thermal energy,,,,,,,,,,prostor pro tok tepelné energie
+,,PBC,Prostor pro tok mechanické energie,prostor pro tok mechanické energie,"páka, transmisní pás",Mechanical energy flow space,energy flow spaces for mechanical energy,,,,,,,,,,prostor pro tok mechanické energie
+,,PBD,Prostor výbuchu,prostor pro tok energie exploze,střelnice,Explosion space,energy flow spaces for explosion,,,,,,,,,,prostor výbuchu
+,,PBE,Prostor pro spalování,prostor pro tok energie spalování,motor,Fire zone,energy flow spaces for combustion,,,,,,,,,,prostor pro spalování
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,

@@ -1,0 +1,1058 @@
+﻿Úroveň 1,Úroveň 2,Úroveň 3,Název (ČJ),Vysvětlení (ČJ),Příklady (ČJ),Term (EN),Explanation (EN),,,,,,,,,,
+B??,,,Snímače,"objekt, který získává informace a prezentuje je ve výstupu",,Sensing object,object for picking up information and providing a representation,,,,,,,,,,Snímače
+,BA?,,Snímač elektrického potenciálu,snímač pro elektrický potenciál,,Electric potential sensing object,sensing object for electric potential,,,,,,,,,,Snímač elektrického potenciálu
+,,BAA,Transformátor potenciálu,snímač elektrického potenciálu s výstupem v booleovských hodnotách,transformátor potenciálu,Voltage transformer,"electric potential sensing object, with Boolean output",,,,,,,,,,transformátor potenciálu
+,,BAB,Střídač potenciálu,snímač elektrického potenciálu s varabilním výstupem,střídač potenciálu,Voltage relay,"electric potential sensing object, with scalar output",,,,,,,,,,střídač potenciálu
+,BB?,,Snímač odporu,snímač určený pro snímání odporu,,Resistivity Sensing Object,sensing object for resistivity or conductivity,,,,,,,,,,Snímač odporu
+,,BBA,Detektor elektrického odporu,snímač odporu elektrické energie s variabilním výstupem,"ohmmetr, wheatstoneův můstek",Electric resistivity sensor,"resistivity sensing object for electric current flow, with scalar output",,,,,,,,,,detektor elektrického odporu
+,,BBB,Senzor elektrického odporu,snímač odporu elektrické energie s výstupem v booleovských hodnotách,senzor elektrického odporu,Electric resistivity detector,"resistivity sensing object for electric current flow, with Boolean output",,,,,,,,,,senzor elektrického odporu
+,,BBC,Senzor temického odporu,snímač termického odporu s variabilním výstupem,senzor termického odporu,Thermal resistivity sensor,"resistivity sensing object for thermal current flow, with scalar output",,,,,,,,,,senzor temického odporu
+,,BBD,Detektor termického odporu,snímač termického odporu s výstupem v booleovských hodnotách,detektor termického odporu,Thermal resistivity detector,"resistivity sensing object for thermal current flow, with Boolean output",,,,,,,,,,detektor termického odporu
+,BC?,,Snímač elektrického proudu,snímač určený k měření elektrického proudu,,Electric current sensing object,sensing object for electric current,,,,,,,,,,snímač elektrického proudu
+,,BCA,Transformátor proudu,snímač elektrickho proudu s výstupem v booleovských hodnotách,převodník,Current transformer,"electric current sensing object, with scalar output",,,,,,,,,,transformátor proudu
+,,BCB,Střídač proudu,snímač elektrického proudu s variabilním výstupem,"kolejové obvody, styk kolejnice, ochrana proti přetížení",Current relay,"electric current sensing object, with Boolean output",,,,,,,,,,střídač proudu
+,BD?,,Snímače hustoty,snímač určený k měření hustoty,,Density sensing object,sensing object for density,,,,,,,,,,snímače hustoty
+,,BDA,Detektor hustoty,snímač hustoty s výstupem v booleovských hodnotách,detektor hustoty,Density transmitter,"density sensing object, with Boolean output",,,,,,,,,,detektor hustoty
+,,BDB,Sensor hustoty,snímač hustoty s varabilním výstupem,senzor hustoty,Density switch,"density sensing object, with scalar output",,,,,,,,,,sensor hustoty
+,BE?,,Snímače pole,snímač určený k měření pole,,Field sensing object,sensing object for field,,,,,,,,,,snímače pole
+,,BEA,Detektor elektrického pole,snímač pole určený k měření elektrického pole s výstupem v booleovských hodnotách,detektor elektrického pole,Electric field detector,"field sensing object for electric field, with scalar output",,,,,,,,,,detektor elektrického pole
+,,BEB,Senzor elektrického pole,snímač pole určený k měření elektrického pole s variabilním výstupem,senzor elektrického pole,Electric field sensor,"field sensing object for electric field, with Boolean output",,,,,,,,,,senzor elektrického pole
+,,BEC,Detektor magnetického pole,snímač pole určený k měření magnetického pole s výstupem v booleovských hodnotách,"indukční snímač, počítač náprav, detektor kovu, jazýčkové relé",Magnetic field detector,"field sensing object for magnetic field, with scalar output",,,,,,,,,,detektor magnetického pole
+,,BED,Senzor magnetického pole,snímač pole určený k měření magnetického pole s variabilním výstupem,indukční senzor,Magnetic field sensor,"field sensing object for magnetic field, with Boolean output",,,,,,,,,,senzor magnetického pole
+,BF?,,Snímač průtoku,snímač určený k měření průtoku,,Flow sensing object,sensing object for flow,,,,,,,,,,snímač průtoku
+,,BFA,Detektor průtoku,snímač průtoku s výstupem v booleovských hodnotách,detektor průtoku,Flow detector,"flow sensing object, with scalar output",,,,,,,,,,detektor průtoku
+,,BFB,Senzor průtoku,snímač průtoku s variabilním výstupem,"průtokoměr, vodoměr, kapalinové měřidlo",Flow sensor,"flow sensing object, with Boolean output",,,,,,,,,,senzor průtoku
+,BG?,,Snímač fyzických rozměrů,snímač určený k měření prostorového rozměru a / nebo polohy,,Physical dimension sensing object,sensing object of spatial dimensions and/or position,,,,,,,,,,snímač fyzických rozměrů
+,,BGA,Detektor polohy,snímač fyzických rozměrů polohy s výstupem v booleovských hodnotách ,"fotobuňka, koncový spínač, magnetický kontakt, indikátor směru pohybu",Position transmitter,"physical dimension sensing object of position, with scalar output",,,,,,,,,,detektor polohy
+,,BGB,Senzor polohy,snímač fyzických rozměrů polohy s variabilním výstupem,snímač polohy,Position switch,"physical dimension sensing object of position, with Boolean output",,,,,,,,,,senzor polohy
+,,BGC,Detektor délky,snímač fyzických rozměrů délky s výstupem v booleovských hodnotách,detektor délky,Distance transmitter,"physical dimension sensing object of length, with scalar output",,,,,,,,,,detektor délky
+,,BGD,Senzor délky,snímač fyzických rozměrů délky s variabilním výstupem,senzor délky,Distance switch,"physical dimension sensing object of length, with Boolean output",,,,,,,,,,senzor délky
+,,BGE,Detektor úhlu,snímač fyzických rozměrů úhlu s výstupem v booleovských hodnotách,detektor úhlu,Angle transmitter,"physical dimension sensing object of angle of direction, with scalar output",,,,,,,,,,detektor úhlu
+,,BGF,Senzor úhlu,snímač fyzických rozměrů úhlu nebo směru s variabilním výstupem,"indikátor směru větru, větrný rukáv",Angle xwitch,"physical dimension sensing object of angle or direction, with Boolean output",,,,,,,,,,senzor úhlu
+,,BGG,Skener objektů,snímač fyzických rozměrů fyzických objektů,"3d-skener, skener, laserový skener",Object Scanner,physical dimension sensing object of physical object,,,,,,,,,,skener objektů
+,BH?,,Snímač energie,snímač určený k měření energie,,Energy sensing object,sensing object for energy,,,,,,,,,,snímač energie
+,,BHA,Snímač průtoku energie,snímač energie měřící průtok se známou energetickou hustotou,plynoměr,Flow energy meter,energy sensing object of flow with defined energy density,,,,,,,,,,snímač průtoku energie
+,,BHB,Snímač tepelné energie,snímač energie měřící průtok se známou tepelnou kapacitou,snímač tepelné energie,Thermal energy meter,energy sensing object of thermal flow with defined heat capacity,,,,,,,,,,snímač tepelné energie
+,,BHC,Elektroměr,snímač energie měřící průtok elektrické energie,elektroměr,Electric energy meter,energy sensing object of electricity flow,,,,,,,,,,elektroměr
+,BJ?,,Snímač výkonu,snímač určený k měření výkonu,,Power sensing object,sensing object for power,,,,,,,,,,snímač výkonu
+,,BJA,Detektor výkonu,snímač výkonu s výstupem v booleovských hodnotách,detektor výkonu,Power meter,"power sensing object, with scalar output",,,,,,,,,,detektor výkonu
+,,BJB,Senzor výkonu,snímač výkonu s varabilním výstupem,siloměr,Power Limit Switch,"power sensing object, with boolean output",,,,,,,,,,senzor výkonu
+,BK?,,Snímač času,snímač určený k měření času,,Time sensing object,sensing object for time,,,,,,,,,,snímač času
+,,BKA,Spínací hodiny,snímač času s výstupem v booleovských hodnotách,"timer, spínací hodiny",Time switch,"time sensing object, with scalar output",,,,,,,,,,spínací hodiny
+,,BKB,Časový senzor,snímač času s vyriabilním výstupem,"hodiny, stopky",Timer sensor,"time sensing object, with Boolean output",,,,,,,,,,časový senzor
+,BL?,,Snímače úrovně,snímač určený k měření úrovně,,Level sensing object,sensing object for level,,,,,,,,,,snímače úrovně
+,,BLA,Detektor úrovně,snímač úrovně s výstupem v booleovských hodnotách,detektor úrovně,Level transmitter,"level sensing object, with scalar output",,,,,,,,,,detektor úrovně
+,,BLB,Senzor úrovně,snímač úrovně s variabilním výstupem,"sonda pro měření hladiny podzemních vod, ukazatel hladiny, výškoměr",Level switch,"level sensing object, with Boolean output",,,,,,,,,,senzor úrovně
+,BM?,,Snímače vlhkosti,snímač určený k měření vlhkosti,,Humidity sensing object,sensing object for humidity,,,,,,,,,,snímače vlhkosti
+,,BMA,Detektor vlhkosti,snímač vlhkosti s výstupem v booleovských hodnotách,"detektor sněhu, hlídač hlvkosti",Humidity transmitter,"humidity sensing object,t with scalar output",,,,,,,,,,detektor vlhkosti
+,,BMB,Senzor vlhkosti,snímač vlhkosti s variabilním výstupem,"vlhkoměr, měřič vzdušné vlhkosti",Humidity switch,"humidity sensing object, with Boolean output",,,,,,,,,,senzor vlhkosti
+,BP?,,Snímač tlaku,snímač určený k měření tlaku,,Pressure sensing object,sensing object for pressure,,,,,,,,,,snímač tlaku
+,,BPA,Detektor tlaku,snímač tlaku pro naměřený nebo absolutní tlak s výstupem v booleovských hodnotách,"hlídač tlaku, detektor poškození kol, nášlapný detektor",Absolute pressure transmitter,"pressure sensing object utilizing one port for absolute pressure sensing, with scalar output",,,,,,,,,,detektor tlaku
+,,BPB,Senzor tlaku,snímač tlaku pro naměřený nebo absolutní tlak s variabilním výstupem,"manometr, tlakové čidlo, měřič tlaku, barometr",Absolute Pressure Switch,"pressure sensing object utilizing one port for absolute pressure sensing, with boolean output",,,,,,,,,,senzor tlaku
+,,BPC,Detektor rozdílu tlaků,snímač tlaku pro měření tlakového rozdílu s výstupem v booleovských hodnotách,detektor rozdílů tlaku,Differential pressure transmitter,"pressure sensing object utilizing two ports for differential pressure sensing, with scalar output",,,,,,,,,,detektor rozdílu tlaků
+,,BPD,Senzor rozdílu tlaků,snímač tlaku pro měření tlakového rozdílu s variabilním výstupem,senzor rozdílu tlaku,Differential pressure switch,"pressure sensing object utilizing two ports for differential pressure sensing, with Boolean output",,,,,,,,,,senzor rozdílu tlaků
+,BQ?,,Snímač koncentrace,snímač určený k měření koncentrace látek,,Concentration sensing object,sensing object for substance concentration,,,,,,,,,,snímač koncentrace
+,,BQA,Detektor plynů,snímač koncentrace plynu s výstupem v booleovských hodnotách,detektor plynu,Gas sensor,"concentration sensing object of a gas, with scalar output",,,,,,,,,,detektor plynů
+,,BQB,Plynový senzor,snímač koncentrace plynu s variabilním výstupem,snímač CO,Gas detector,"concentration sensing object of a gas, with Boolean output",,,,,,,,,,plynový senzor
+,,BQC,Detektor kapalin,snímač koncentrace kapaliny s výstupem v booleovských hodnotách,"detektor mlhy, detektor viditelnosti",Liquid sensor,"concentration sensing object liquid with, scalar output",,,,,,,,,,detektor kapalin
+,,BQD,Senzor kapalin,snímač koncentrace kapaliny s variabilním výstupem,"snímač mlhy, průhledové čidlo",Liquid detector,"concentration sensing object of liquid, with Boolean output",,,,,,,,,,senzor kapalin
+,,BQE,Detektor pevných látek,snímač koncentrace pevných látek s výstupem v booleovských hodnotách,"hlásič kouře, detektor zákalu, hlásič požáru",Solid matter sensor,"concentration sensing object of solid matter, with scalar output",,,,,,,,,,detektor pevných látek
+,,BQF,Senzor pevných látek,snímač koncentrace pevných látek s variabilním výstupem,"emise prachu, měřič zákalu",Solid matter detector,"concentration sensing object of solid matter, with Boolean output",,,,,,,,,,senzor pevných látek
+,BR?,,Snímač záření,snímač určený k měření záření,,Radiation sensing object,sensing object for radiation,,,,,,,,,,snímač záření
+,,BRA,Světelný senzor,snímač záření pro viditelné elektromagnetické vlnění s variabilním výstupem,"luxmetr, senzor intenzity světla, senzor svítivosti",Light sensor,"radiation sensing object of visible electromagnetic waves, with scalar output",,,,,,,,,,světelný senzor
+,,BRB,Detektor světla,snímač záření pro viditelné elektromagnetické vlnění s výstupem v booleovských hodnotách,"detektor světelného oblouku, detektor plamene, fotobuňka",Light detector,"radiation sensing object of visible electromagnetic waves, with Boolean output",,,,,,,,,,detektor světla
+,,BRC,Senzor elektromagnetického vlnění,snímač záření pro neviditelné elektromagnetické vlnění s výstupem v booleovských hodnotách,senzor elektromagnetického vlnění,Electromagnetic wave sensor,"radiation sensing object for non-visible electromagnetic waves, with scalar output",,,,,,,,,,senzor elektromagnetického vlnění
+,,BRD,Detektor elektromagnetického vlnění,snímač záření pro neviditelné elektromagentické vlnění s variabilním výstupem,"detektor rentgenového záření, detektor HF",Electromagnetic wave detector,"radiation sensing object for non-visible electromagnetic waves, with Boolean output",,,,,,,,,,detektor elektromagnetického vlnění
+,,BRE,Senzor nukleárního záření,snímač záření pro nukleární částice s variabilním výstupem,"Geigerův počítač, měřič radiace, senzor radiace",Radiation counter,"radiation sensing object of nuclear particles, with scalar output",,,,,,,,,,senzor nukleárního záření
+,,BRF,Detektor nukleárního záření,snímač záření pro nukleární částice s výstupem v booleovských hodnotách,detektor radiace,Radiation detector,"radiation sensing object of nuclear particles, with Boolean output",,,,,,,,,,detektor nukleárního záření
+,BS?,,Snímač tempa,snímač určený k měření tempa,,Time-rating object,sensing object for time-rate,,,,,,,,,,snímač tempa
+,,BSA,Detektor frekvence,snímač tempa pro neopakující se cykly s výstupem v booleovských hodnotách,detektor frekvence,Cycle rate transmitter,"time-rating object of non-rotational cycles, with scalar output",,,,,,,,,,detektor frekvence
+,,BSB,Senzor frekvence,snímač tempa pro neopakující se cykly s variabilním výstupem,přístroj pro měření frekvence,Cycle rate detecting switch,"time-rating object of non-rotational cycles, with Boolean output",,,,,,,,,,senzor frekvence
+,,BSC,Detektor rychlosti,snímač tempa pro vzdálenost s výstupem v booleovských hodnotách,detektor pohybu,Speed sensing transmitter,"time-rating object of distance, with scalar output",,,,,,,,,,detektor rychlosti
+,,BSD,Senzor rychlosti,snímač tempa pro vzdálenost s výstupem ve skalárních hodnotách,"rychloměr, tachometr",Speed detecting switch,"time-rating object of distance, with Boolean output",,,,,,,,,,senzor rychlosti
+,,BSE,Detektor rotace,snímač tempa pro rotaci s výstupem v booleovských hodnotách,detektor rotace,Tachometer,"time-rating object of rotation, with scalar output",,,,,,,,,,detektor rotace
+,,BSF,Senzor rotace,snímač tempa pro rotaci s výstupem ve skalárních hodnotách,otáčkoměr,Rotation speed relay,"time-rating object of rotation, with Boolean output",,,,,,,,,,senzor rotace
+,,BSG,Detektor vibrací,snímač tempa pro rychlost s výstupem v booleovských hodnotách,"detektor poškození kola, detektor prahové hodnoty zrychlení",Accelerometer transmitter,"time-rating object of speed, with scalar output",,,,,,,,,,detektor vibrací
+,,BSH,Senzor vibrací,snímač tempa pro rychlost s výstupem ve skalárnich hodnotách,"senzor zrychlení, brzdový stav, seismický snímač",Accelerometer relay,"time-rating object of speed, with Boolean output",,,,,,,,,,senzor vibrací
+,BT?,,Snímače teploty,snímač určený pro měření teploty,,Temperature sensing object,sensing object for temperature,,,,,,,,,,snímače teploty
+,,BTA,Teplotní senzor,snímač teploty s výstupem ve skalárních hodnotách,"snímač venkovní teploty, teploměr, snímač teploty kolejnice",Temperature transmitter,"temperature sensing object, with scalar output",,,,,,,,,,teplotní senzor
+,,BTB,Detektor teploty,snímač teploty s výstupem v booleovských hodnotách,"detektor tepla, detektor požáru",Temperature switch,"temperature sensing object, with Boolean output",,,,,,,,,,detektor teploty
+,BU?,,Multifunkční snímače,snímač určený k měření několika veličin,,Multi-quantity sensing object,sensing object for multiple quantities,,,,,,,,,,multifunkční snímače
+,,BUA,Víceúčelový senzor,multifunkční snímače s výstupy ve skalárních hodnotách,"multimetr, kombidetektor, dálkově řízenné ochranné prvky",Multi-sensor,"multi-quantity sensing object, with scalar output(s)",,,,,,,,,,víceúčelový senzor
+,,BUB,Víceúčelový detektor,multifunkční snímače s výstupy v booleovských hodnotách,"buchholzovo relé, multidetektor",Multi-detector,"multi-quantity sensing object, with Boolean output(s)",,,,,,,,,,víceúčelový detektor
+,BW?,,Snímače sil,"snímač určený k měření hmotnosti, síly nebo točivého momentu",,Force sensing object,"sensing object for weight, force or torque",,,,,,,,,,snímače sil
+,,BWA,Senzor váhy,snímač sil pro hmotnost s výstupem ve skalárních hodnotách,"váha, autováha",Weight transmitter,"force sensing object of weight, with scalar output",,,,,,,,,,senzor váhy
+,,BWB,Detektor váhy,snímač sil pro hmotnost s výstupem v booleovských hodnotách,detektor váhy,Weight detecting switch,"force sensing object of weight, with Boolean output",,,,,,,,,,detektor váhy
+,,BWC,Senzor síly,snímač sil pro sílu s výstupem ve skalárních hodnotách,senzor síly,Force value transmitter,"force sensing object of force, with scalar output",,,,,,,,,,senzor síly
+,,BWD,Detektor síly,snímač sil pro sílu s výstupem v booleovských hodnotách,detektor síly,Force detecting switch,"force sensing object of force, with Boolean output",,,,,,,,,,detektor síly
+,,BWE,Senzor točivého momentu,snímač sil pro točivý moment s výstupem ve skalárních hodnotách,senzor točivého momentu,Torque value transmitter,"force sensing object of torque, with scalar output",,,,,,,,,,senzor točivého momentu
+,,BWF,Detektor točivého momentu,snímač sil pro točivý moment s výstupem v booleovských hodnotách,detektor točivého momentu,Torque switch,"force sensing object of torque, with Boolean output",,,,,,,,,,detektor točivého momentu
+,BX?,,Audio-vizuální snímač,snímač určený k rozeznání zvukového nebo vizuálního obrazu,,Audio-visual sensing object,sensing object of sound and/or visual appearance,,,,,,,,,,audio-vizuální snímač
+,,BXB,Akustický detektor,audio-vizuální snímač zvuku s výstupem v booleovských hodnotách,"zvukoměr, mikrofon",Acoustic sensor,"audio-visual sensing object of sound, with scalar output",,,,,,,,,,akustický detektor
+,,BXB,Akustický senzor,audio-vizuální snímač zvuku s výstupem ve skalárních hodnotách,"detektor rozbíjeného skla, detektor kavitace, zvukový alarm",Acoustic sensor,"audio-visual sensing object of sound, with scalar output",,,,,,,,,,akustický senzor
+,,BXC,Detektor obrazu,audio-vizuální snímač obrazu s výstupem v booleovských hodnotách,"snímač otisku prstů, snímač čočky, snímač k rozpoznání obličeje",Image sensor,"audio-visual sensing object of visual appearance, with scalar output",,,,,,,,,,detektor obrazu
+,,BXD,Kamera,audio-vizuální snímač obrazu s výstupem ve skalárních hodnotách,"kamera, hlídací kamera, skener, dopravní kamera",Image detector,"audio-visual sensing object of visual appearance, with Boolean output",,,,,,,,,,kamera
+,BY?,,Informační snímač,snímače určené pro uložené informace,,Information sensing object,sensing object of stored information,,,,,,,,,,informační snímač
+,,BYA,Čtečka čipů,informační snímač na základě elektrického spojení,čtečka karet,Chip reader,information sensing object by electrical connection,,,,,,,,,,čtečka čipů
+,,BYB,Elektromagnetická čtečka,informační snímač na základě elektromagnetického pole,"čtečka karet, čtečka vstupenek, čtečka magnetických karet",Electromagnetic reader,information sensing object by electromagnetic field,,,,,,,,,,elektromagnetická čtečka
+,,BYC,Optická čtečka,informační snímač na základě světla,"čtečka QR-kódů, čtečka čárových kódů",Optical reader,information sensing object by light,,,,,,,,,,optická čtečka
+,BZ?,,Snímač situací,snímače zaznamenávající události nebo částky,,Incident sensing object,sensing object for incidents or amounts,,,,,,,,,,snímač situací
+,,BZA,Senzor množství,snímač situací pro rozpoznání události s výstupem ve skalárních hodnotách,"počítadlo, otáčkoměr",Counter,"incident sensing object detecting the number of incidents, with scalar output",,,,,,,,,,senzor množství
+,,BZB,Detektor množství,snímač situací pro rozpoznání události s výstupem v booleovských hodnotách,detektor prahové hodnoty,Threshold detector,"incident sensing object detecting the number of incidents, with Boolean output",,,,,,,,,,detektor množství
+,,BZC,Detektor osob,snímač situací pro rozpoznání přítomnosti osob s výstupem v booleovských hodnotách,"detektor průchodu, prezenční čidlo, detektor pohybu",Person detector,"incident sensing object detecting the presence of humans, with Boolean output",,,,,,,,,,detektor osob
+,,BZD,Detektor materiálů,snímač situací pro rozpoznání přítomnosti materiálů s výstupem v booleovských hodnotách,"počitadlo kol, dopravní čítač",Matter detector,"incident sensing object detecting the presence of matters, with Boolean output",,,,,,,,,,detektor materiálů
+C??,,,Objekt pro ukládání,objekt sloužící k uložení za účelem pozdějšího získání,,Storing object,object for storing for subsequent retrieval,,,,,,,,,,objekt pro ukládání
+,CA?,,Objekt ukládání kapacity,objekt pro ukládání elektrické energie do elektrostatického pole,,Capacitive storing object,storing object for electric energy within an electrostatic field,,,,,,,,,,objekt ukládání kapacity
+,,CAA,Kondenzátor,objekt ukládání kapacity pro elektrické nabíjení,"spínač, zapalovač, roznětka",Capacitor,capacitive storing object for electric charge,,,,,,,,,,kondenzátor
+,CB?,,Objekt ukládající indukcí,objekt pro ukládání elektrické energie do elektromagnetického pole,,Inductive storing object,storing object for electric energy within an electromagnetic field,,,,,,,,,,objekt ukládající indukcí
+,,CBA,Induktor,objekt ukládající indukcí pro indukční nabíjení,induktor,Inductor,inductive storing object for inductive charge,,,,,,,,,,induktor
+,CC?,,Objekt ukládající elektrochemicky,objekt pro ukládání elektrickou energii v podobě elektrochomické substance,,Electrochemical storing object,storing object for electric energy within an electrochemical substance,,,,,,,,,,objekt ukládající elektrochemicky
+,,CCA,Dobíjecí baterie,objekt ukládající elektrochemicky pomocí reverzibilní reakce,"akumulátor, elektrolytický kondenzátor",Rechargeable battery,electrochemical storing object by reversible reactions,,,,,,,,,,dobíjecí baterie
+,CF?,,Objekt ukládající informace,objekt pro ukládání informací,,Information storing object,storing object for information,,,,,,,,,,objekt ukládající informace
+,,CFA,Medium ukládající informace,objekt ukládající informace na médium,"CD, disketa, flashdrive, paměťová karta, pevný disk, uložiště, usb-paměť, ssd-paměť, magnetická páska ",Information storing media,information storing object on a carrier medium,,,,,,,,,,medium ukládající informace
+,CL?,,Otevřený stacionární objekt sloužící k uložení,objekt pro ukládání hmoty nebo lidí v částečně uzavřených prostorách,,Open stationary storing object,storing object for matters or persons within a stationary open enclosure,,,,,,,,,,otevřený stacionární objekt sloužící k uložení
+,,CLA,Káď,otevřený stacionární objekt sloužící k uložení tekutin,"vana, bazén, magazín, nádoba, otevřená nádrž",Pool,open stationary enclosure storing object for fluids,,,,,,,,,,káď
+,,CLB,Police,otevřený stacionární objekt sloužící k uložení pevných objektů,"police na knihy, botník, okení parapet, regál",Shelf,open stationary storing object for solid objects,,,,,,,,,,police
+,,CLC,Sedadlo,otevřený stacionární objekt sloužící pro osoby,"lavička, lehátko, divan, křeslo, stolička, pohovka, židle, postel",Seat,open stationary storing object for persons,,,,,,,,,,sedadlo
+,CM?,,Uzavřený stacionární objekt sloužící k uložení,objekt pro ukládání hmoty v uzavřeném prostoru,,Enclosed stationary storing object,storing object for matters within a stationary closed enclosure,,,,,,,,,,uzavřený stacionární objekt sloužící k uložení
+,,CMA,Nádrž,uzavřený stacionární objekt sloužící k uložení kapaliny nebo plynu,"hydrofor, hydropres, nádrž na chladící médium, latrina, odpadní nádrž",Tank,enclosed stationary storing object for fluids,,,,,,,,,,nádrž
+,,CMB,Skříň,uzavřený stacionární objekt sloužící k uložení pevných látek,"úložná skříň, šatní skříň, úklidová skříň, trezor",Box,enclosed stationary storing object for solid matters,,,,,,,,,,skříň
+,CN?,,Přesouvatelný úložný objekt,"objekt pro ukládání věcí nebo osob v prostoru, který je možné přesunout",,Moveable storing object,storing object for matters or persons within a moveable closed enclosure,,,,,,,,,,přesouvatelný úložný objekt
+,,CNA,Kontejner,přesouvatelný úložný objekt pro pevné látky nebo osoby,"nádrž, kontejner, výtahová kabina, nádoba na výsadbu, popelnice, krabice, komoda, koš",Container,moveable storing object for solid matters or persons,,,,,,,,,,kontejner
+,,CNB,Plynová láhev,přesouvatelný úložný objekt pro plyny,plynová láhev,Gas cylinder,moveable storing object for gas,,,,,,,,,,plynová láhev
+,,CNC,Sud,přesouvatelný úložný objekt pro tekutiny,"sud, lahev",Drum,moveable storing object for liquid,,,,,,,,,,sud
+,CP?,,Objekt pro uložení termické energie,objekt pro ukládání termické energie,,Thermal energy storing object,storing object of thermal energy,,,,,,,,,,objekt pro uložení termické energie
+,,CPA,Nádrž na teplou vodu,objekt pro uložení termické energie určený pro tekutiny,akumulační nádrž,Liquid Tank,thermal energy storing object of liquid,,,,,,,,,,nádrž na teplou vodu
+,,CPB,Plynová nádrž,objekt pro uložení termické energie určený pro plyny,plynová nádrž,Gas tank,thermal energy storing object of gas,,,,,,,,,,plynová nádrž
+,,CPC,Tepelný akumulátor z pevné hmoty,objekt pro uložení termické energie určený pro pevné látky,tepelný akumulátor z pevné hmoty,Matter tank,thermal energy storing object of solid matter,,,,,,,,,,tepelný akumulátor z pevné hmoty
+,,CPD,Nádrž pro materiál fázového posunu,objekt pro uložení termické energie určený pro materiály měnící fáze,nádrž pro materiál fázového posunu,Crystalline tank,thermal energy storing object of state changing material,,,,,,,,,,nádrž pro materiál fázového posunu
+,CQ?,,Objekt pro uožení mechanické energie,objekt pro ukládání mechanické energie,,Mechanical energy storing object,storing object of mechanical energy,,,,,,,,,,objekt pro uožení mechanické energie
+,,CQA,Setrvačník,objekt pro uložení mechanické energie v podobě pohybu,setrvačník,Flywheel,mechanical energy storing object in the form of kinetic energy,,,,,,,,,,setrvačník
+,,CQB,Pružina,objekt pro uložení mechanické energie v podobě pružení,"pružina, gumička",Spring,mechanical energy storing object in the form of elastic energy,,,,,,,,,,pružina
+,,CQC,Protiváha,objekt pro uložení mechanické energie v podobě polohové energie,protiváha,Counterweight,mechanical energy storing object in the form of gravitational energy,,,,,,,,,,protiváha
+E??,,,Objekt záření,objekt vydávající záření,,Emitting object,object for emitting,,,,,,,,,,objekt záření
+,EA?,,Zdroj světla,objekt záření světla,,Light object,emitting object of light,,,,,,,,,,zdroj světla
+,,EAA,Elektrická lampa,zdroj světla pomocí elektrické energie,"oblouková lampa, žárovka, halogenová žárovka, led-lampa, zářivka",Electric lamp,light object by electricity,,,,,,,,,,elektrická lampa
+,,EAB,Plynová lampa,zdroj světla pomocí spalování plynu,plynová lampa,Gas lamp,light object by gas combustion,,,,,,,,,,plynová lampa
+,,EAC,Olejová lampa,zdroj světla pomocí spalování tekutiny,petrolejová lampa,Liqiud lamp,light object by liquid combustion,,,,,,,,,,olejová lampa
+,EB?,,Elektrický objekt vydávající tepelnou energii,objekt záření elektřinou generovaného tepla,,Electric heating object,emitting object of heat provided by electric energy,,,,,,,,,,elektrický objekt vydávající tepelnou energii
+,,EBA,Bojler,elektrický objekt vydávající tepelnou energii přes kapalinu,"ponorný ohřívač, fritéza, elektrický bojler, průtokový ohřívač, varná konvice",Electric boiler,electric heating object delivered by fluid,,,,,,,,,,bojler
+,,EBB,Elektrická topná deska,elektrický objekt vydávající tepelnou energii přes otevřenou plochu,"radiátor, podlahové topení, konvektor, sporák",Electric heating surface,electric heating object delivered by a surface,,,,,,,,,,elektrická topná deska
+,,EBC,Elektrický topný kabel,elektrický objekt vydávající tepelnou energii přes kabel,"topný žebřík, trubková ochrana proti mrazu",Heating cable,electric heating object delivered by a cable,,,,,,,,,,elektrický topný kabel
+,,EBD,Elektrický ventilátor teplého vzduchu,elektrický objekt vydávající tepelnou energii foukáním vzduchu,"elektrický konvektor, ohřívač vzduchu, aerotemper, průmyslová horkovzdušná topná tělesa, topný ventilátor",Electric hot air blower,electric heating object delivered by forced air,,,,,,,,,,elektrický ventilátor teplého vzduchu
+,,EBE,Elektrický topný oblouk,elektrický objekt vydávající tepelnou energii přes elektrický oblouk,elektrický topný oblouk,Arc heating object,electric heating object delivered by an electric arc,,,,,,,,,,elektrický topný oblouk
+,,EBF,Indukční ohřívač,elektrický objekt vydávající tepelnou energii průtokem proudu přes ohřívaný objekt,"indukční deska, indukční trouba",Induction heater,electric heating object delivered by a current flow,,,,,,,,,,indukční ohřívač
+,,EBG,Elektrické infračervené topidlo,elektrický objekt vydávající tepelnou energii pomocí infračerveného záření,"elektrický gril, vytápění sauny, topinkovač, topná lampa",Infrared heater,electric heating object delivered by infrared radiation,,,,,,,,,,elektrické infračervené topidlo
+,,EBH,Elektrická trouba,elektrický objekt vydávající tepelnou energii přes uzavřené rozehřáté plochy,"horkovzdušná trouba, sklenářská pec, ohřevné zásuvky",Electric oven,electric heating object delivered by surrounding surfaces,,,,,,,,,,elektrická trouba
+,EC?,,Objekt elektrického chlazení,objekt záření elektřinou generovaného chladu,,Electric cooling object,emitting object of coldness provided by electric energy,,,,,,,,,,objekt elektrického chlazení
+,,ECA,Elektrický chladící povrch,objekt elektrického chlazení pomocí chladící povrch,"chladící pult, chladící deska",Electric cooling surface,electric cooling object applying a cooling surface,,,,,,,,,,elektrický chladící povrch
+,,ECB,Elektrický vetilátor chladného vzduchu,objekt elektrického chlazení prouděním chladného vzduchu,klimatizace,Electric cold air blower,electric cooling object applying forced air,,,,,,,,,,elektrický vetilátor chladného vzduchu
+,,ECC,Kompresní chladič,objekt elektrického chlazení změnou fáze,kompresní chladič,Compression chiller,electric cooling object utilizing phase changing,,,,,,,,,,kompresní chladič
+,EE?,,Objekt vydávající energii bezdrátově,objekt záření pomocí bezdrátové energie,,Wireless power object,emitting object of wireless power,,,,,,,,,,objekt vydávající energii bezdrátově
+,,EEA,Indukční objekt vydávající energii,objekt vydávající energii bezdrátově pomocí indukce,"bezdrátová nabíječka, qi nabíjecí podložka",Inductive power antenna,wireless power object utilizing inductive coupling,,,,,,,,,,indukční objekt vydávající energii
+,,EEB,Mikrovlnná trouba,objekt vydávající energii bezdrátově pomocí mikro vln,mikrovlnná trouba,Magnetron,wireless power object utilizing microwaves,,,,,,,,,,mikrovlnná trouba
+,,EEC,Rentgenový zdroj,objekt vydávající energii bezdrátově pomocí rentgenového záření,rentgen,X-ray source,wireless power object utilizing x-rays,,,,,,,,,,rentgenový zdroj
+,,EED,Zdroj gamazáření,objekt vydávající energii bezdrátově pomocí gama záření,zdroj gamazáření,Gamma ray source,wireless power object utilizing gamma rays,,,,,,,,,,zdroj gamazáření
+,,EEE,Kapacitátor,objekt vydávající energii bezdrátově pomocí uchovaného elektrického náboje,kapacitátor,Capacitive coupler,wireless power object utilizing capacitive coupling,,,,,,,,,,kapacitátor
+,EG?,,Objekt přenášející tepelnou energii,objekt záření pro teplo a chlad pomocí přenosu termické energie,,Thermal energy transfer object,emitting object of heat and coldness provided by transfer of thermal energy,,,,,,,,,,objekt přenášející tepelnou energii
+,,EGA,Tepelné čerpadlo,objekt přenášející tepelnou energii pomocí změny fází,"mrazák, mrazící pult, skříňový rozmrazovač, chladnička, chladící zařízení",Heat pump,thermal energy transfer object utilizing phase changing,,,,,,,,,,tepelné čerpadlo
+,,EGB,Peltierův článek,objekt přenášející tepelnou energii pomocí peltierova článku,chladící deska,Peltier element,thermal energy transfer object utilizing Peltier effect,,,,,,,,,,Peltierův článek
+,,EGC,Tepelný výměník,objekt přenášející tepelnou energii mezi toky pomocí vloženého materiálu,"rotační tepelný výměník, deskový výměník tepla, tepelný výměník vzduch/voda, kotoučový výměník tepla,  ",Heat exchanger,thermal energy transfer object between flows by means of an intermediate material,,,,,,,,,,tepelný výměník
+,EM?,,Objekt zahřívající spalováním,objekt záření tepla pomocí spalování,,Combustion heating object,emitting object of heat provided by combustion,,,,,,,,,,objekt zahřívající spalováním
+,,EMA,Spalovací kotel,objekt zahřívající spalováním tekutinu,"elektrický kotel, naftová kamna, peletový kotel, kotel na dřevo",Stove,combustion heating object for heating of space,,,,,,,,,,spalovací kotel
+,,EMB,Pec,objekt zahřívající spalováním vnitřní prostor,"sklenářská pec, hrnčířská pec, pec na pizzu",Combustion boiler,combustion heating object for heating of fluid,,,,,,,,,,pec
+,,EMC,Hořák,objekt zahřívající spalováním pevné látky,"gril na uhlí, plynový gril",Burner,combustion heating object for heating of solid matter,,,,,,,,,,hořák
+,EP?,,Objekt termického ohřevu,objekt záření tepla pomocí termické energie,,Thermal heating object,emitting object of heat provided by thermal energy,,,,,,,,,,objekt termického ohřevu
+,,EPA,Topná trubka,objekt termického ohřevu pomocí horké vody,konvektor,Heating tube,thermal heating object delivered by a permeable heated surface,,,,,,,,,,topná trubka
+,,EPB,Topná deka,objekt termického ohřevu pomocí prodyšné zahřáté plochy,topná deka,Heating surface,thermal heating object delivered by heated fluid,,,,,,,,,,topná deka
+,,EPC,Topení,objekt termického ohřevu pomocí neprodyšné zahřáté plochy,"radiátor, deskové topné těleso, kondenzátor",Heating panel,thermal heating object delivered by a non-permeable heated surface,,,,,,,,,,topení
+,,EPD,Horkovzdušný agragát,objekt termického ohřevu pomocí foukání vzduchu,"konvektor, horkovzdušný agregát",Hot air blower,thermal heating object delivered by forced air,,,,,,,,,,horkovzdušný agragát
+,EQ?,,Objekt termického chlazení,objekt záření chladu pomocí termické energie,,Thermal cooling object,emitting object of coldness provided by thermal energy,,,,,,,,,,objekt termického chlazení
+,,EQA,Chladič kapalin,objekt termického chlazení kapalin,"chladící věž, chladící jednotka",Cooling surface,thermal cooling object applying a permeable cold surface,,,,,,,,,,chladič kapalin
+,,EQB,Chladící deka,objekt termického chlazení pomocí prodyšné chladné plochy,chladící deka,Cooling panel,thermal cooling object applying a non-permeable cold surface,,,,,,,,,,chladící deka
+,,EQC,Chladící zařízení,objekt termického chlazení pomocí neprodyšné chladné plochy,"výparník, chladící deska, chladič",Chiller,thermal cooling object applying forced air,,,,,,,,,,chladící zařízení
+,,EQD,Chladící trubka,objekt termického chlazení pomocí chlazené kapaliny v trubce,chladící spirála,Cooler,thermal cooling object providing cold fluid,,,,,,,,,,chladící trubka
+,,EQE,Chladič vzduchu,objekt termického chlazení pomocí foukání vzduchu,"ventilátorový konvektor, chladící ventilátor, chladící sušič",Cooling tube,thermal cooling object applying chilled liquid in tubes,,,,,,,,,,chladič vzduchu
+,ET?,,Objekt ohřevu jadernou energií,objekt záření tepla pomocí jaderného štěpení,,Nuclear powered heating object,emitting object of heat provided by nuclear fission,,,,,,,,,,objekt ohřevu jadernou energií
+,,ETA,Varný reaktor,objekt ohřevu jadernou energii pro horkou vodu,varný reaktor,Boiling water reactor,nuclear powered heating object providing hot water,,,,,,,,,,varný reaktor
+,,ETB,Tlakovodní reaktor,objekt ohřevu jadernou energii pro páru,tlakovodní reaktor,Pressurized water reactor,nuclear powered heating object providing steam fluid,,,,,,,,,,tlakovodní reaktor
+,,ETC,Reaktor chlazený plynem,objekt ohřevu jadernou energii pro plyn,reaktor chlazený plynem,High-temperature gas-cooled reactor,nuclear powered heating object providing hot gas,,,,,,,,,,reaktor chlazený plynem
+,EU?,,Objekt emitující částice,objekt záření pro subatomární částice,,Particle emitting object,emitting object of sub-atomic particles,,,,,,,,,,objekt emitující částice
+,,EUA,Plazmový generátor,objekt emitující částice pro ionizované částice,plazmový generátor,Plasma generator,particle emitting object being ionized,,,,,,,,,,plazmový generátor
+,,EUB,Generátor částic,objekt emitující částice pro neionizované částice,generátor částic,Particle generator,particle emitting object being non-ionized,,,,,,,,,,generátor částic
+,EV?,,Objekt emitující zvuk,objekt záření pro akustické vlny,,Acoustic wave emitting object,emitting object of acoustic waves,,,,,,,,,,objekt emitující zvuk
+,,EVA,Sonar,objekt emitující zvuk v podobě ultrazvuku,sonar,Sonar,acoustic wave emitting object utilizing ultrasonic frequencies,,,,,,,,,,sonar
+,,EVB,Protihlukový reproduktor,objekt emitující zvuk ve slyšitelných frekvencích za účelem snížení hlukového znečištění,protihlukový reproduktor,Anti-noise loudspeaker,acoustic wave emitting object utilizing audible frequencies for noise cancellation,,,,,,,,,,protihlukový reproduktor
+F??,,,Ochranný objekt,objekt pro ochranu proti vlivu nebezpečných nebo nežádoucích podmínek,,Protecting object,object for protecting against the effects of dangerous or undesirable conditions,,,,,,,,,,ochranný objekt
+,FA?,,Přepěťová ochrana,ochranný objekt proti přepětí,,Overvoltage protecting object,protecting object related to overvoltages,,,,,,,,,,Přepěťová ochrana
+,,FAA,Jiskřiště,přepěťová ochrana pomocí jiskřiště,ochranné jiskřiště,Spark gap surge arrester,overvoltage protecting object by a spark gap,,,,,,,,,,jiskřiště
+,,FAB,Varistor,přepěťová ochrana pomocí varistoru,varistor,Varistor surge arrester,overvoltage protecting object by a varistor,,,,,,,,,,varistor
+,,FAC,Zenerova dioda,přepěťová ochrana pomocí zenerovy diody,zenerova bariéra,Zener diode,overvoltage protecting object by a zener diode,,,,,,,,,,Zenerova dioda
+,,FAD,Svodič přepětí,přepěťová ochrana pomocí absorpce krátkodobého přepětí,svodič přepětí,Surge protector,overvoltage protecting object by surge absorption,,,,,,,,,,svodič přepětí
+,FB?,,Objekt proudové ochrany,ochranný objekt proti svodovému proudu,,Earth fault current protecting object,protecting object related to earth fault currents,,,,,,,,,,objekt proudové ochrany
+,,FBA,Proudový chránič,"objekt proudové ochrany, který hlídá elektrickou síť a v případě zemního spojení vypne proud",proudový chránič,Residual current device,earth fault current protecting object that monitors an electric network and switches off in the event of earth fault currents,,,,,,,,,,proudový chránič
+,,FBB,Uzel transformátoru,"objekt proudové ochrany, který omezuje sílu zemního spojení",uzel transformátoru,Neutral earthing limiter,earth fault current protecting object that limits the value of an earth fault current,,,,,,,,,,uzel transformátoru
+,FC?,,Objekt nadproudové ochrany,ochranný objekt proti proudovému přetížení,,Overcurrent protecting object,protecting object related to overcurrents,,,,,,,,,,objekt nadproudové ochrany
+,,FCA,Pojistka,"objekt nadproudové ochrany, který pomocí jističe přeruší okruh do kterého je zapojen, a to v případě, že proud přesáhne danou limitní hodnotu po dostatečně dlouho dobu","miniaturní pojistky, závitová pojistka, pojistka",Fuse,overcurrent protecting object that by fusing opens the circuit in which it is inserted by breaking the current when this exceeds a given value for a sufficient time,,,,,,,,,,pojistka
+,,FCB,Jistič,"objekt nadproudové ochrany, který pomocí jističe přeruší okruh do kterého je zapojen, a to v případě, že proud přesáhne danou limitní hodnotu po dostatečně dlouhou dobu a může být opět navrácen do původního stavu.
+
+Poznámka: tato třída je určena pro takové jističe, které splňují IEC 60898",jistič,Miniature circuit-breaker,"overcurrent protecting object capable of making, carrying and braking currents under normal circuit conditions and also making, carrying for a specified time, and automatically breaking currents under specified abnormal circuit conditions
+NOTE this class is intended for circuit-breakers such as those defined in accordance with IEC 60898 series. ",,,,,,,,,,jistič
+,,FCC,Bimetalový jistič,"objekt nadproudové ochrany, který přeruší okruh do kterého je zapojen, a to v případě, že proud dosáhne stanovené hodnoty po dostatečně dlouhou dobu",chránič motoru,Bimetal,overcurrent protecting object that opens the circuit in which it is inserted by interrupting the current when this exceeds a given value for a sufficient time,,,,,,,,,,bimetalový jistič
+,FE?,,Objekt stínící pole,chránící objekt proti elektrickým a / nebo magnetickým polím,,Field protecting object,protecting object related to electric and/or magnetic fields,,,,,,,,,,objekt stínící pole
+,,FEA,Stínění elektrického pole,objekt stínící elektrické pole,stínění elektrického pole,Electric field shield,field protecting object of electric fields,,,,,,,,,,stínění elektrického pole
+,,FEB,Stínění magnetického pole,objekt stínící magnetické pole,stínění magnetického pole,Magnetic field shield,field protecting object of magnetic fields,,,,,,,,,,stínění magnetického pole
+,,FEC,Stínění elektromagnetického pole,objekt stínící elektromagnetické pole,faradayova klec,Electromagnetic field shield,field protecting object of electromagnetic fields,,,,,,,,,,stínění elektromagnetického pole
+,FL?,,Objekt chránící proti tlaku,chránící objekt proti tlaku,,Pressure protecting object,protecting object related to pressure,,,,,,,,,,objekt chránící proti tlaku
+,,FLA,Bezpečnostní ventil,"objekt chránící proti tlaku, který vypouští páru nebo kapalinu v případě, že tlak překročí stanovenou mezní hodnotu","odvzdušňovací ventil, redukční ventil, přetlakový ventil",Safety valve,pressure protecting object releasing steam or liquid when the pressure exceeds a set limit value,,,,,,,,,,bezpečnostní ventil
+,,FLB,Bezpečnostní klapka,"objekt chránící proti tlaku, který otevře nebo zavře proud vzduchu v případě, že tlak překročí stanovenou mezní hodnotu",přetlaková klapka,Safety damper,pressure protecting object opening or closing an air flow when the pressure is above or below a set limit value,,,,,,,,,,bezpečnostní klapka
+,,FLC,Podtlakový přerušovač,"objekt chránící proti tlaku, který zamezuje vzniku vakuua",podtlakový přerušovač,Vacuum breaker,pressure protecting object preventing vacuum,,,,,,,,,,podtlakový přerušovač
+,,FLD,Pojistná membrána,"objekt chránící proti tlaku, který se nevratně zlomí v případě, že je překročena mezní hodnota tlaku",pojistná membrána,Rupture disc,pressure protecting object that breaks open irreversibly in the event of excessive pressure difference,,,,,,,,,,pojistná membrána
+,,FLE,Expanzní nádoba,objekt chránící proti tlaku pomocí expanze objemu,expanzní nádoba,Expansion tank,pressure protecting object provided by a volume expansion,,,,,,,,,,expanzní nádoba
+,FM?,,Objekt chránící proti požáru,chránící objekt proti ohni,,Fire protecting object,protecting object related to fire,,,,,,,,,,objekt chránící proti požáru
+,,FMA,Požární klapka,"objekt chránící proti požáru, který v případě zjištění požáru uzavře přívod vzduchu","kouřová klapka, přetlaková klapka",Fire damper,fire protecting object closing an air flow on detection of fire,,,,,,,,,,požární klapka
+,,FMB,Kouřový ventil,"objekt chránící proti požáru, který v případě zjištění kouře otevře nebo uzavře přívod vzduchu","kouřová klapka, přetlaková klapka, kontrolní kouřová klapka, kontrolní požární klapka",Flue damper,fire protecting object opening or closing an air flow on detection of smoke,,,,,,,,,,kouřový ventil
+,,FMC,Kombinovaná požární klapka/kouřový ventil,"objekt chránící proti požáru, který v případě zjištění kouře a/nebo požáru uzavře přívod vzduchu",požární- a kouřová klapka,Fire-and-flue damper,fire protecting object closing an air flow on detection of smoke and/or fire,,,,,,,,,,kombinovaná požární klapka/kouřový ventil
+,,FMD,Protipožární dveře,"objekt chránící proti požáru, který uzavře průchod tak, aby zamezil šíření kouře a/nebo požáru",protipožární dveře,Fire extinguisher,fire protecting object for manual operation,,,,,,,,,,protipožární dveře
+,,FME,Požární opona,"objekt chránící proti požáru, který rozděluje prostor do požárních zón",požární roleta,Fire blind,fire protecting object closing a passage for preventing spread of smoke and/or fire,,,,,,,,,,požární opona
+,,FMF,Požární těsnění,"objekt chránící proti požáru, který uzavírá otvor aby zamezil šíření požáru","ohnivzdorná těsnící hmota, protipožární pásky, protipožární trubkový rukáv",Smoke curtain,fire protecting object dividing an area into smoke zones,,,,,,,,,,požární těsnění
+,,FMG,Hasicí přístroj,objekt chránící proti požáru pro manuální použití,"ruční hasicí přístroj, hasicí deka",Smoke closure,fire protecting object closing a hole for preventing spread of fire,,,,,,,,,,hasicí přístroj
+,,FMH,Protipožární izolace,objekt chránící proti požáru pomocí zakrytí,"protipožární obložení, protipožární panel, protipožární stříkaný beton",Fire insulation,fire protecting object by a surface cover,,,,,,,,,,protipožární izolace
+,,FMJ,Protipožární nátěry,objekt chránící proti požáru pomocí nátěru,protipožární nátěr,Fire retardant coating,fire protecting object by a surface coating,,,,,,,,,,protipožární nátěry
+,,FMK,Protipožární impregnace,objekt chránící proti požáru pomocí impregnace,impregnace vodním sklem,Fire impregnation,fire protecting object by impregnation,,,,,,,,,,protipožární impregnace
+,FN?,,Objekt chránící proti mechanické síle,chránící objekt proti mechanické síle,,Mechanical force protecting object,protecting object related to mechanical force,,,,,,,,,,objekt chránící proti mechanické síle
+,,FNA,Bezpečnostní spojka,"objekt chránící proti mechanické síle, který způsobí odpojení v případě, že točivý moment přesáhne určitou hodnotu ","kluzná spojka, bezpečnostní spojka",Safety clutch,mechanical force protecting object providing an disconnection when a torque become too high,,,,,,,,,,bezpečnostní spojka
+,,FNB,Ochrana proti nárazům,objekt chránící proti mechanické síle pomocí absorpce síly nárazu,"chrániče rohů, kabelové chrániče, zásyp, ochranný kryt, ochrana stromů, ochranná trubka, ochranný sloupek, ochranný plech, lemování ",Impact protection,mechanical force protecting object absorbing impact,,,,,,,,,,ochrana proti nárazům
+,FQ?,,Objekt preventivní ochrany,chránící objekt pomocí bariéry nebo překážky,,Preventive protecting object,protecting object by barrier or obstacle,,,,,,,,,,objekt preventivní ochrany
+,,FQA,Ochranná síť,objekt preventivní ochrany proti procházejícím objektům,"síť proti pádu kamení, ochrana proti pádu, vtokové uzávěry, síto, ventilační mříž, výpustná mříž, ochranná střecha",Protective mesh,preventive protecting object against objects passing,,,,,,,,,,ochranná síť
+,,FQB,Protiskluzová ochrana,objekt preventivní ochrany proti klouzajícím nebo hnaným předmětům,"protiskluzová ochrana, zábrany proti sesuvu sněhu, střešní zarážky",Glide protection,preventive protecting object against objects or matter sliding or drifting,,,,,,,,,,protiskluzová ochrana
+,,FQC,Madlo,objekt preventivní ochrany proti pádu,"úchopové madlo, opěrné madlo",Protective rod,preventive protecting object against falling,,,,,,,,,,madlo
+,,FQD,Zábradlí,objekt preventivní ochrany proti pádu nebo kolizi,"balkónové zábradlí, balustráda, mostní zábradlí, lano proti pádu, zábradlí zabrňující pádu, okopová lišta, ochrana kmene stromu, svodidla, ochrana před nárazem",Protective rail,preventive protecting object against falling out or colliding,,,,,,,,,,zábradlí
+,,FQE,Ochranná látka,objekt preventivní ochrany proti proniknutí ,textílie proti plevelům,Protective fabric,preventive protecting object against physical penetration,,,,,,,,,,ochranná látka
+,,FQF,Ochrana proti oslnění,objekt preventivní ochrany proti oslnění,ochrana proti oslnění,Glare protection,preventive protecting object against glare,,,,,,,,,,ochrana proti oslnění
+,,FQG,Ochrana proti postříkání,objekt preventivní ochrany proti potřísnění,"sprchová kabina, ochrana proti postříkání na mostě, ochrana proti postříkání na svodidlech",Splatter protection,preventive protecting object against splatter,,,,,,,,,,ochrana proti postříkání
+,,FQH,Ochrana proti zlomení,objekt preventivní ochrany proti manuálnímu zlomení,ochrana proti zlomění,Break protection,preventive protecting object against manual breakage,,,,,,,,,,ochrana proti zlomení
+,,FQJ,Ochrana zámku,objekt preventivní ochrany proti manuálnímu odemčení,kryt zámku,Lock hatch cover,preventive protecting object against manual unlocking,,,,,,,,,,ochrana zámku
+,FR?,,Objekt chránící proti opotřebení,chránící objekt proti opotřebení,,Wear protection object,protecting object related to material erosion,,,,,,,,,,objekt chránící proti opotřebení
+,,FRA,Mazivo,objekt chránící proti opotřebení pomocí maziva mezi objekty,mazací olej,Lubrication object,wear protection object providing liquid material between objects,,,,,,,,,,mazivo
+,,FRB,Ochrana proti opotřebení,"objekt chránící proti opotřebení, který poskytuje pevnou vrstvu oddělující materiály","ochrana proti erozi, lazura, ochranná fólie, ochrana svahu, vyztužení břehu, ochranné obložení",Wear pad,wear protection object providing a solid separating material between objects,,,,,,,,,,ochrana proti opotřebení
+,FS?,,Objekt chránící proti okolnímu prostředí,chránící objekt proti vlivům okolního prostředí,,Environment protecting object,protecting object related to the local environment,,,,,,,,,,objekt chránící proti okolnímu prostředí
+,,FSA,Omítka,"objekt chránící proti okolnímu prostředí pomocí zatvrdlé omítky, která pokrývá jiný objekt","fládrování, omítka zdi, omítka stropu",Plaster,environment protecting object in the form of a solidified paste layer covering another object,,,,,,,,,,omítka
+,,FSB,Nátěr,objekt chránící proti okolnímu prostředí pomocí zatvrdlé tenké vrstvy na povrchu jiného objektu,"protikorozní nátěr, ochranný nátěr",Paint,environment protecting object in the form of a hardened liquid film on the surface of another object,,,,,,,,,,nátěr
+,,FSC,Impregnace,"objekt chránící proti okolonímu prostředí pomocí aplikované nebo injektované tekutině, která objektu dodá větší odolnost proti vnějšmu prostředí","injektáž podloží, uzavření, ochranný povlak proti graffiti, injektážní hmota",Impregnation,environment protecting object in the form of an applied or induced liquid making the object resistant to externally induced decay or destruction,,,,,,,,,,impregnace
+,,FSD,Přístřešek,objekt chránící proti okolonímu prostředí pomocí ochrany proti povětrnostním vlivům,přístřešek,Shelter,environment protecting object providing shelter against climatic effects,,,,,,,,,,přístřešek
+,,FSE,Tlumič vibrací,objekt chránící proti okolnímu prostředí tlumením vibrací,"gumové těsnění, prvky ochrany proti zemětřesení, tlumič rázu",Seismic vibration control device,environment protecting object in the form of vibration control,,,,,,,,,,tlumič vibrací
+,,FSF,Protikorozní ochrana,objekt chránící proti okolnímu prostředí oxidací kovu,"eloxování, katodová ochrana, obětovaná anoda",Corrosion protection,environment protection object in the form of oxidation of metal,,,,,,,,,,protikorozní ochrana
+,,FSG,Izolace,objekt chránící proti okolnímu prostředí pomocí nepropustné vrstvy na povrchu jiného objektu,"izolace proti vlhkosti, parotěsná izolace, difuzní membrána",Protective seal,environment protecting object in the form of a seal on the surface of another object,,,,,,,,,,izolace
+,,FSH,Vrstva přerušující kapilární vzlínání,objekt chránící proti okolnímu prostředí pomocí vrstvy narušující kapilární vzlínání,vrstva přerušující kapilární vzlínání,Material separating layer,environment protecting object in the form of a capillary action breaking layer,,,,,,,,,,vrstva přerušující kapilární vzlínání
+G??,,,Generující objekt,"objekt, který slouží k poskytování kontrolovaného toku",,Generating object,object for providing a controllable flow,,,,,,,,,,generující objekt
+,GA?,,Objekt mechanicky generující elektrickou energii,generující objekt pro elektrickou energii poháněný mechanickou energií,,Mechanical to electrical energy generating object,generating object of electric energy powered by mechanical energy,,,,,,,,,,objekt mechanicky generující elektrickou energii
+,,GAA,Alternátor,objekt mechanicky generující elektrickou energii pro střídavý proud,"nouzový agregát, pomocná pohonná jednotka",AC generator,mechanical to electrical energy generating object of alternating current,,,,,,,,,,alternátor
+,,GAB,Generátor stejnosměrného proudu,objekt mechanicky generující elektrickou energii pro stejnosměrný proud,generátor stejnosměrného proudu,DC generator,mechanical to electrical energy generating object of direct current,,,,,,,,,,generátor stejnosměrného proudu
+,GB?,,Objekt chemicky generující elektrickou energii,generující objekt pro elektrickou energii poháněný chemickou reakcí,,Chemical to electrical energy generating object,generating object of electric energy powered by chemical reaction,,,,,,,,,,objekt chemicky generující elektrickou energii
+,,GBA,Baterie,objekt chemicky generující elektrickou energii z neobnovitelného zdroje,baterie,Electric battery,Chemical to electrical energy generating object from a non-renewable source,,,,,,,,,,baterie
+,,GBB,Palivový článek,"objekt chemicky generující elektrickou energii, který je průběžně zásobován palivem a oxidantem",palivový článek,Fuel cell,Chemical to electrical energy generating object continuously fed by fuel and oxidant,,,,,,,,,,palivový článek
+,GC?,,Objekt generující elektrickou energií ze sluneční,generující objekt pro elektrickou energii poháněný solární energií,,Solar to electrical energy generating object,generating object of electric energy from solar energy,,,,,,,,,,objekt generující elektrickou energií ze sluneční
+,,GCA,Krystalický fotovoltaický panel,"objekt generující elektrickou energii ze sluneční, který využívá polovodivé materiály na křemíkových plochách",krystalický fotovoltaický panel,Crystalline photovoltaic module,Solar to electrical energy generating object utilizing wafer based semiconducting material,,,,,,,,,,krystalický fotovoltaický panel
+,,GCB,Tenkovrstvý fotovoltaický panel,"objekt generující elektrickou energii ze sluneční, který využívá tenkovrstvé materiály","solární panel, solární článek",Thin film photovoltaic module,Solar to electrical energy generating object utilizing thin film material,,,,,,,,,,tenkovrstvý fotovoltaický panel
+,GF?,,Objekt generující signál,generující objekt pro signály nesoucí informace,,Signal generating object,generating object of signals for carrier of information,,,,,,,,,,objekt generující signál
+,,GFA,Vysílač,objekt generující signál pomocí elektromagnetických vln,"vysílač impulzů, rádiový vysílač, vysílač rádiových vln, televizní vysílač",Solar panel,Solar to thermal energy generating object into a fluid thermal flow,,,,,,,,,,vysílač
+,,GFB,Mechanický vysílač signálu,objekt generující signál skrze dráty,mechanický vysílač signálu,Signal generator,signal generating object by wires,,,,,,,,,,mechanický vysílač signálu
+,GL?,,Objekt umožňující plynulý přesun nákladu a osob,generující objekt pro plynulý přesun nákladu a osob,,Continuous transfer object,generating object continuously of items,,,,,,,,,,objekt umožňující plynulý přesun nákladu a osob
+,,GLA,Pásový dopravník,objekt umožňující plynulý přesun nákladu a osob po pásu,"zavazadlový pás, pásový dopravník, pohyblivý chodník, pás na podnosy, pokladní pás",Belt conveyer,continuous transfer object on a belt,,,,,,,,,,pásový dopravník
+,,GLB,Řetězový dopravník,objekt umožňující plynulý přesun nákladu po řetězu,řetězový dopravník,Chain conveyer,continuous transfer object on a chain,,,,,,,,,,řetězový dopravník
+,,GLC,Válečkové dráhy,objekt umožňující plynulý přesun nákladu po válečcích,válečkový dopravník,Roller conveyer,continuous transfer object on rollers,,,,,,,,,,válečkové dráhy
+,,GLD,Šnekový dopravník,objekt umožňující plynulý přesun nákladu pomocí šneku,šnekový dopravník,Screw conveyer,continuous transfer object propelled by a screw,,,,,,,,,,šnekový dopravník
+,,GLE,Eskalátor,objekt umožňující plynulý přesun osob po sérii schodů,"eskalátor, nášlapné řetězy",Escalator,continuous transfer object consisting of a chain of steps,,,,,,,,,,eskalátor
+,,GLF,Paternoster,objekt umožňující plynulý přesun nákladu pomocí několika kabin,paternoster,Paternoster,continuous transfer object consisting of chain of containers,,,,,,,,,,Paternoster
+,,GLG,Vibrační dopravník,objekt umožňující plynulý přesun nákladu po vibrující ploše,vibrační dopravník,Vibrating conveyor,continuous transfer object consisting on a vibrating surface,,,,,,,,,,vibrační dopravník
+,GM?,,Objekt umožňující přesun nákladu a osob,generující objekt pro nespojitý přesun nákladu a osob,,Discontinuous transfer object,generating object discontinuously of items,,,,,,,,,,objekt umožňující přesun nákladu a osob
+,,GMA,Vůz,objekt umožňující přesun nákladu horizontálně,vozík,Wagon,discontinuous transfer object horizontally,,,,,,,,,,vůz
+,,GMB,Zdvihadlo,objekt umožňující přesun nákladu vertikálně,zdvihadlo,Elevator,discontinuous transfer object vertically,,,,,,,,,,Zdvihadlo
+,,GMC,Zdvižné zařízení,"objekt umožňující přesun nákladu a osob, který zvedá a přesouvá objekty vertikálně a/nebo horizontálně","jeřáb, výtah, zdvižné stoly, schodišťový výtah, mostový jeřáb, nůžkový zvedák",Crane,discontinuous transfer object lifting and moving objects vertically and/or horizontally,,,,,,,,,,jeřáb
+,,GMD,Stohovací stroj,"objekt umožňující přesun nákladu, který objekty sdružuje",stohovací stroj,Palletizer,discontinuous transfer object placing objects together,,,,,,,,,,stohovací stroj
+,,GME,Točna,"objekt umožňující přesun nákladu, který otáčí příchozí tok",točna,Turntable,discontinuous transfer object turning a conveyed flow,,,,,,,,,,točna
+,,GMF,Vibrační podavač,objekt umožňující přesun nákladu v lineárním toku pomocí vibrace,vibrační podavač,Vibrating feeder,discontinuous transfer object moving objects in a linear flow by vibrating,,,,,,,,,,vibrační podavač
+,GP?,,Objekt generující tok kapalin,generující objekt pro tok kapalin,,Liquid flow generating object,generating object of liquid,,,,,,,,,,objekt generující tok kapalin
+,,GPA,Objemové čerpadlo,"objekt generující tok kapalin tak, že kapalinu v uzavřené nádobě vnutí do výstupu","ruční pumpa, dávkovací pumpa, odběrné čerpadlo",Positive displacement pump,liquid flow generating object by forcing trapped liquid to the discharge side,,,,,,,,,,Objemové čerpadlo
+,,GPB,Dynamické čerpadlo,objekt generující tok kapalin pomocí zvýšení rychlosti toku pomocí mechanického pohybu,"cirkulační čerpado, rotodynamické čerpado, dotlačovací kompresor",Liquid velocity pump,liquid flow generating object by increasing the flow velocity through mechanical motion,,,,,,,,,,Dynamické čerpadlo
+,,GPC,Proudové čerpadlo,objekt generující tok kapalin pomocí přenosu energie pohybu od vstupu k výstupu,"trkač, ejektor",Hydraulic ram pump,liquid flow generating object by transferring the kinetic energy of an input flow to an output flow,,,,,,,,,,Proudové čerpadlo
+,,GPD,Mazivo,objekt generující tok kapalin pomocí převodu polohové energie na energii pohybu za pomoci gravitace,kolejnicový mazník,Lubricator,liquid flow generating object by converting potential energy to kinetic energy by gravity,,,,,,,,,,Mazivo
+,GQ?,,Objekt generující tok plynů,generující objekt pro tok plynu,,Gaseous flow generating object,generating object of gas,,,,,,,,,,Objekt generující tok plynů
+,,GQA,Plynový kompresor,"objekt generující tok plynů tak, že plyn v uzavřené nádobě vnutí do výstupu","pístový kompressor, pneumatický válec, šroubový kompresor",Gas compressor,gaseous flow generating object by forcing trapped gas to the discharge side,,,,,,,,,,plynový kompresor
+,,GQB,Ventilátor,objekt generující tok plynů pomocí zvýšení rychlosti toku pomocí mechanického pohybu,"digestoř, chladící ventilátor, axiální ventilátor, požární větrák, osový ventilátor, centrální vysavač, oběhový ventilátor",Mechanical fan,gaseous flow generating object by increasing the flow velocity through mechanical motion ,,,,,,,,,,ventilátor
+,,GQC,Plynový ejektor,objekt generující tok plynů pomocí převodu energie pohybu od vstupu k výstupu,"proudové čerpadlo, parní injektor, parní proudový ventilátor ",Gas ejector,gaseous flow generating object by transferring the kinetic energy of an input flow to an output flow ,,,,,,,,,,plynový ejektor
+,GR?,,Objekt zachycující teplo ze slunce,generující objekt pro termickou energii ze slunečního záření,,Solar to thermal energy generating object,generating object of thermal energy from solar energy,,,,,,,,,,Objekt zachycující teplo ze slunce
+,,GRA,Solární panel,objekt zachacující teplo ze slunce do průtoku,solární panel,Solar Panel,,,,,,,,,,,solární panel
+,,GRB,Solární věž,"objekt zachycující teplo ze slunce, které generuje tok",solární věž,Solar tower,Solar to thermal energy generating object generating a fluid flow,,,,,,,,,,solární věž
+H??,,,Objekt zpracující materiál,objekty pro zpracovávání materiálu,,Matter processing object,object for treating matter,,,,,,,,,,Objekt zpracující materiál
+,HJ?,,Objekt pro primární tvarování,objekt zpracující materiál pomocí formování originálu,,Primary forming object,matter processing object by primary forming,,,,,,,,,,Objekt pro primární tvarování
+,,HJA,Nástroje a stroje pro lití,objekt pro primární tvarování z hmoty v tekuté podobě,3D-tiskárna,Casting tool,primary forming object from liquid initial material state,,,,,,,,,,nástroje a stroje pro lití
+,,HJB,Lis,objekt pro primární tvarování z pevné hmoty,"3D-tiskárna, práškový lis",Press,primary forming object from solid matter initial material state,,,,,,,,,,Lis
+,HK?,,Objekt pro povrchovou úpravu,objekt zpracující materiál pomocí úpravy povrchu,,Surface treatment object,matter processing object for surface treatment,,,,,,,,,,Objekt pro povrchovou úpravu
+,,HKA,Stroj na přípravu povrchu,objekt pro povrchovou úpravu pro přípravu,"autokláv, dezinfekční stroj, myčka nádobí, vysokotlaká myčka, pračka, ultrazvukový čistič, parní čistič",Surface preparation machine,surface treatment object by preparation,,,,,,,,,,Stroj na přípravu povrchu
+,,HKB,Stroj na úpravu povrchu,objekt pro povrchovou úpravu pomocí modifikace,"otryskávací stroj, leštící stroj, bruska",Surface modification machine,surface treatment object by modification,,,,,,,,,,Stroj na úpravu povrchu
+,,HKC,Stroj na pokrytí povrchu,objekt pro povrchovou úpravu pomocí překrytí,"anodizační stroj, stroj na nástřik barvy",Surface coating machine,surface treatment object by coating,,,,,,,,,,Stroj na pokrytí povrchu
+,HL?,,Montážní objekt,objekt zpracující materiál pomocí spárování nebo spojení,,Assembling object,matter processing object by joining or assembling,,,,,,,,,,Montážní objekt
+,,HLA,Montážní robot,montážní objekt pro fyzické spojování,"průmyslový robot, montážní linka",Assembly robot,assembling object by physical assembly,,,,,,,,,,montážní robot
+,,HLB,Mechanické spojovací stroje,montážní objekt pro mechanické spojování,"skládací stroj, vroubkovací stroj, obrubovací stroj, stroj pro tlakové svařování",Mechanical joining machine,assembling object by mechanical joining,,,,,,,,,,mechanické spojovací stroje
+,,HLC,Stroje pro tavné svařování,montážní objekt pro tepelné spojování,"oblouková svářečka, laserová svářečka, svařovací stroj, plynová svářečka, bodová svářečka",Thermal welding machine,assembling object by thermal joining,,,,,,,,,,stroje pro tavné svařování
+,,HLD,Stroje pro lepení,montážní objekt pro chemické spojování,stoj pro lepení,Chemical joining machine,assembling object by chemical joining,,,,,,,,,,stroje pro lepení
+,HM?,,Objekt pro silové oddělování,objekt zpracující materiál pomocí silové separace smíšených produktů,,Force separating object,matter processing object by separating mixed substances by force,,,,,,,,,,Objekt pro silové oddělování
+,,HMA,Usazovací nádrž,objekt pro silové oddělování částic pomocí gravitace,"odlučovač oleje, lapač písku, odpadní šachta, odlučovač sádry, odlučovač kalů, usazovací jímka",Settling tank,force separating object of particles by gravity,,,,,,,,,,usazovací nádrž
+,,HMB,Odstředivka,objekt pro silové oddělování substancí pomocí centrifugace v rotující nádobě,odstředivka,Centrifuge,force separating object of substances by rotation in a rotating chamber,,,,,,,,,,odstředivka
+,,HMC,Cyklón,objekt pro silové oddělování substancí pomocí rotace ve statické nádobě,hydrocyklón,Cyclone,force separating object of substances by rotation in a fixed chamber,,,,,,,,,,cyklón
+,HP?,,Objekt pro termické oddělování,objekt zpracující materiál pomocí termické separace smíchaných substancí,,Thermal separating object,matter processing object by thermally separating mixed substances,,,,,,,,,,Objekt pro termické oddělování
+,,HPA,Sušička,"objekt pro termické oddělování, který odstraňuje vlhkost","sušicí skříň, sušička, odpařovač, odvlhčovač vzduchu",Dryer,thermal separating object removing moisture,,,,,,,,,,sušička
+,,HPB,Destilační kolona,"objekt pro termické oddělování, který z tekutiny odvádí plyn",destilační kolona,Distillation column,thermal separating object generating the vaporized aggregation of a liquid,,,,,,,,,,destilační kolona
+,HQ?,,Objekt pro mechanické oddělování,objekt zpracující materiál pomocí mechanické separace smíchaných substancí,,Mechanical separating object,matter processing object by mechanically separating mixed substances,,,,,,,,,,Objekt pro mechanické oddělování
+,,HQA,Separační rošt,objekt pro mechanické oddělování částic na základě jejich velikosti a/nebo tvaru,"vzduchový filtr, lapač listí, mechanický filtr, česlo, pískový filtr, vodní filtr, ventilační filtr",Separation grate,mechanical separating object by removing substance from the surface of a liquid,,,,,,,,,,separační rošt
+,,HQB,Skimmer,objekt pro mechanické oddělování olejů pomocí skimmeru,olejový skimmer,Skimmer,mechanical separating object of particles based on their size and/or shape,,,,,,,,,,Skimmer
+,HR?,,Objekt pro elektrické nebo magnetické oddělení,objekt zpracující materiál pomocí elektromagnetické separace smíchaných substancí,,Electric or magnetic separating object,matter processing object by electromagnetically separating mixed substances,,,,,,,,,,Objekt pro elektrické nebo magnetické oddělení
+,,HRA,Elektrostatický odlučovač,objekt pro elektrické nebo magnetické oddělení pomocí elektrického pole,elektrostatický odlučovač,Electrostatic separator,electric or magnetic separating object utilising an electric field,,,,,,,,,,elektrostatický odlučovač
+,,HRB,Magnetický separátor,objekt pro elektrické nebo magnetické oddělení pomocí magnetického pole,magnetický separátor,Magnetic separator,electric or magnetic separating object separating object utilising a magnetic field,,,,,,,,,,magnetický separátor
+,HS?,,Objekt pro chemické oddělování,objekt zpracující materiál pomocí chemické separace smíchaných substancí,,Chemical separating object,matter processing object by chemically separating mixed substances,,,,,,,,,,Objekt pro chemické oddělování
+,,HSA,Iontoměnič,objekt pro chemické oddělování pomocí výměny iontů,Iontoměnič,Ion exchanger,chemical separating object utilising exchange of ions,,,,,,,,,,iontoměnič
+,,HSB,Absorbent,objekt pro chemické oddělování pomocí absorpce,absorpční filtr,Absorber,chemical separating object utilising absorption,,,,,,,,,,absorbent
+,,HSC,Adsorbent,"objekt po chemické oddělování, který na sebe váže látky","uhlíkový filtr, adsorpční filtr",Adsorber,chemical separating object utilising adsorption,,,,,,,,,,adsorbent
+,HU?,,Objekt pro mechanické dělení,"objekt zpracující materiál, který tvoří menší tvary z pevných materiálů",,Grinding and crushing object,matter processing object providing smaller forms of solid material,,,,,,,,,,Objekt pro mechanické dělení
+,,HUA,Kráječ,"objekt pro mechanické dělení měkých, středně tvrdých, vláknitých a tuhých materiálů ","potravinový mlýnek, mlýnek na maso, drtič odpadu, rotační kutr",Cutter,"grinding and crushing object for soft, medium-hard, fibrous and tough matter",,,,,,,,,,kráječ
+,,HUB,Mlýn,objekt pro mechanické dělení za účelem zpracování na specifické velikosti a tvary,"pila na maso, pila na potraviny, pila, řezací stroj",Mill,grinding and crushing object for machining parts into precise sizes and shapes,,,,,,,,,,mlýn
+,,HUC,Drtička,objekt pro mechanické dělení minerálů,drtič kamene,Crusher,grinding and crushing object of rock kind,,,,,,,,,,drtička
+,HV?,,Objekt pro agregaci,"objekt zpracující materiál, který tvoří větší ze substancí větší tvary",,Agglomerating object,matter processing object providing larger forms of substances,,,,,,,,,,Objekt pro agregaci
+,,HVA,Peletizátor,"objekt pro agregaci, který komprimuje nebo tvaruje materiál do tvaru pelet",peletizátor,Pelletizer,agglomerating object compressing or moulding a material into the shape of a pellet,,,,,,,,,,peletizátor
+,,HVB,Koloidizační zařízení,"objekt pro agregaci, který umožňuje proces vzniku kolloidů z tekutin",zahušťovač,Flocculator,agglomerating object enabling (a process wherein) colloids to come out of suspension in the form of floc or flake,,,,,,,,,,koloidizační zařízení
+,HW?,,Objekt pro směšování,"objekt zpracující materiál, který tvoří nové materiály smícháním různých substancí",,Mixing object,matter processing object mixing different substances,,,,,,,,,,Objekt pro směšování
+,,HWA,Mixer,"objekt pro směšování, který tvoří nové vlastnosti substance smícháním různých substancí","míchací stroj, kávovar, zmrzlinovač, mixer, šlehač",Mixer,mixing object that provides a new property substance from different substances.,,,,,,,,,,mixer
+,,HWB,Zvlhčovač,"objekt pro směšování, který tvoří zvlhčený plyn",zvlhčovač vzduchu,Humidifier,mixing object providing humid gaseous substance,,,,,,,,,,zvlhčovač
+,HX?,,Reagující objekt,"objekt zpracující materiál, který tvoří nové materiály pomocí chemické nebo biologické reakce",,Reacting object,matter processing object providing new material by chemical or biological reaction,,,,,,,,,,Reagující objekt
+,,HXA,Chemický reaktor,"reagující objekt, který umožňuje a kontroluje chemickou reakci","změkčovač vody, odsolovací filtr, zplynovací zařízení",Chemical reactor,reacting object enabling and controlling a chemical reaction,,,,,,,,,,chemický reaktor
+,,HXB,Fermentor,"reagující objekt, který umožňuje a kontroluje biologickou reakci",fermentor,Fermenter,reacting object enabling and controlling a biological reaction,,,,,,,,,,fermentor
+K??,,,Objekt zpracující informace,objekt pro zpracování vstupních signálů za účelem poskytnutí vhodného výstupu,,Information processing object,object for treating input signals and providing an appropriate output,,,,,,,,,,Objekt zpracující informace
+,KE?,,Objekt zpracující elektrický signál,objekt zpracující informace určený ke zpracování elektrických signálů,,Electric signal processing object,information processing object for processing electric signals,,,,,,,,,,Objekt zpracující elektrický signál
+,,KEA,Počítač,objekt zpracující informace s lidským faktorem,"počítač, notebook, modem, čtečka, server, překladač",Computer,electric signal processing object with human intervention,,,,,,,,,,počítač
+,,KEB,Řídící jednotka,objekt zpracující informace bez zahrnutí lidského faktoru určený ke kontrole vybavení,"řídící jednotka, centrální jednotka, příjem hlášení, centrála chybováho hlášení, telefoní ústředna",Control unit,electric signal processing object without human intervention for control of devices,,,,,,,,,,řídící jednotka
+,,KEC,Komunikační zařízení,objekt zpracující informace bez zahrnutí lidského faktoru pro vstup/výstup vybavení,"usb-karta, síťová karta, firewire-karta",Communication device,electric signal processing object without human intervention providing input/output to devices,,,,,,,,,,komunikační zařízení
+,,KED,Router,objekt zpracující informace bez zahrnutí lidského faktoru pro předávání signálů mezi datovými sítěmi,"gateway, firewall",Router,electric signal processing object without human intervention forwarding signals between data networks,,,,,,,,,,router
+,,KEE,Zapisovač karet,objekt zpracující informace bez zahrnutí lidského faktoru pro ukládání vstupů na úložné médium,"kazetový přehrávač, CD vypalovačka",Card writer,electric signal processing object without human intervention saving the information provided by the input on a storage device,,,,,,,,,,zapisovač karet
+,KF?,,Objekt rozdělující elektrický signál,objekt zpracující informace určený k předání elektrických signálů,,Electric signal relaying object,information processing object for relaying electric signals,,,,,,,,,,Objekt rozdělující elektrický signál
+,,KFA,Relé,objekt rozdělující elektrický signál pro předání elektrického signálu bez prodlevy,"výkonové relé, frekvenční relé, pomocné relé, signální relé, proudové relé, napěťové relé",Relay,electric signal relaying object by forwarding without delay,,,,,,,,,,relé
+,,KFB,Časové relé,objekt rozdělující elektrický signál pro předání elektrického signálu s prodlevou,časové relé,Time relay,electric signal relaying object by forwarding with delay,,,,,,,,,,časové relé
+,,KFC,Opakovač,"objekt rozdělující elektrický signál, který opakuje vstupní signál za účelem zlepšit výstupní signál",opakovač,Repeater,electric signal relaying object by repeating the input signal as an improved output signal,,,,,,,,,,opakovač
+,,KFD,Síťový most,"objekt rozdělující elektrický signál, který přemosťuje několik síťových segmentů",síťový most,Electric network bridge,electric signal relaying object by bridging multiple data network segments,,,,,,,,,,síťový most
+,,KFE,Elektrický síťový přepínač,"objekt rozdělující elektrický signál, který předává signál specifickému zařízení v síti",elektrický síťový přepínač,Electric network switch,electric signal relaying object by forwarding the input to specific devices within a data network,,,,,,,,,,elektrický síťový přepínač
+,KG?,,Objekt zpracující optický signál,objekt zpracující informace určený pro optické signály,,Optical signalling object,information processing object of optical signals,,,,,,,,,,Objekt zpracující optický signál
+,,KGA,Optický síťový přepínač,"objekt zpracující optický signál, který aktivně předává vstup na specifická zařízení v optické síti",optický přepínač,Optical network switch,optical signalling object actively by forwarding the input to specific devices within an optical network,,,,,,,,,,optický síťový přepínač
+,,KGB,Optický router,"objekt zpracující optický signál, který předává soubory dat mezi sítěmi",optický router,Optical router,optical signalling object forwarding data packages between computer networks,,,,,,,,,,optický router
+,,KGC,Optický opakovač,"objekt zpracující optický signál, který opakuje vstupní signál za účelem zlepšení výstupního signálu",optický zesilovač,Optical repeater,optical signalling object by repeating the input signal as an improved output signal,,,,,,,,,,optický opakovač
+,KH?,,Objekt zpracující signál tekutin,objekt zpracující informace určený pro signály toku,,Fluid signalling object,information processing object of fluid signals,,,,,,,,,,Objekt zpracující signál tekutin
+,,KHA,Regulátor tekutin,objekt zpracující signál tekutin za účelem zpětné kontroly ,regulátor tekutin,Fluid controller,fluid signalling object for feedback control,,,,,,,,,,regulátor tekutin
+,,KHB,Řídící ventil,"objekt zpracující signál tekutin, který předává signály",řídící ventil,Pilot valve,fluid signalling object relaying signals,,,,,,,,,,řídící ventil
+,KJ?,,Objekt zpracující mechanický signál,objekt zpracující informace určený pro mechanické signály,,Mechanical signalling object,information processing object of mechanical signals,,,,,,,,,,Objekt zpracující mechanický signál
+,,KJA,Mechanický regulátor,objekt zpracující mechanický signál určený k úpravě toku plynu nebo kapaliny,mechanický regulátor,Mechanical regulator,mechanical signalling object adjusting an air or fluid flow,,,,,,,,,,mechanický regulátor
+,,KJB,Vložka zámku,"objekt zpracující mechanický signál, který zamyká/odemyká zámkový mechanismus",vložka zámku,Locking cylinder,mechanical signalling object for locking/unlocking of a locking mechanism,,,,,,,,,,vložka zámku
+,,KJC,Kódový zámek,"objekt zpracující mechanický signál, který způsobuje u mechanismu binární stav",kódový zámek,Key coded device,mechanical signalling object providing a binary state of a mechanical device,,,,,,,,,,kódový zámek
+,KZ?,,Několikdílný objekt rozdělující signál,objekt zpracující informace několika typů signálů,,Multiple kind signalling object,information processing object of signals of multiple kinds,,,,,,,,,,Několikdílný objekt rozdělující signál
+,,KZA,Multiswitch,"několikadílný objekt rozdělující signál, který předává vstup na specifická zařízení",multiswitch,Multiple kind switch,multiple kind signalling object forwarding the input to specific devices,,,,,,,,,,multiswitch
+M??,,,Hnací objekt,"objekt, který tvoří mechanický pohyb nebo sílu",,Driving object,object for providing mechanical movement or force,,,,,,,,,,Hnací objekt
+,MA?,,Objekt elektromagnetického rotačního pohonu,"hnací objekt ve formě točivého momentu, poháněn elektromagnetickou silou",,Electromagnetic rotational driving object,"driving object in the form of rotational torque, powered by electromagnetic force",,,,,,,,,,Objekt elektromagnetického rotačního pohonu
+,,MAA,Elektromotor,"objekt elektromagnetického rotačního pohonu, který tvoří nepřetržitou rotaci","pohon, ovladač",Electric motor,electromagnetic rotational driving object providing a continuous movement,,,,,,,,,,elektromotor
+,,MAB,Krokový motor,"objekt elektromagnetického rotačního pohonu, který tvoří diskrétní rotační stupně",krokový motor,Stepper motor,electromagnetic rotational driving object providing discrete steps,,,,,,,,,,krokový motor
+,MB?,,Objekt elektromagnetického lineárního pohonu,"hnací objekt ve formě lineární síly, poháněn elektromagnetickou silou",,Electromagnetic linear driving object,"driving object in the form of linear force, powered by electromagnetic force",,,,,,,,,,Objekt elektromagnetického lineárního pohonu
+,,MBA,Lineární motor,"objekt elektromagnetického lineárního pohonu, který tvoří nepřetržitý pohyb",lineární motor,Linear motor,electromagnetic linear driving object providing a continuous movement ,,,,,,,,,,lineární motor
+,,MBB,Solenoid,"objekt elektromagentického lineárního pohonu, který tvoří diskrétní lineární stupně","elektromagnet, ovladač, hnací ústrojí výhybky",Electromagnet,electromagnetic linear driving object providing discrete steps,,,,,,,,,,solenoid
+,MC?,,Objekt magnetického pohonu,hnací objekt poháněn magnetickou silou,,Magnetic force driving object,driving object powered by magnetic force,,,,,,,,,,Objekt magnetického pohonu
+,,MCA,Permanentní magnet,objekt magnetického pohonu pomocí permanentního magnetu,permanentní magnet,Permanent magnet,magnetic force driving object by permanent magnet,,,,,,,,,,permanentní magnet
+,MD?,,Objekt plezoelektrického pohonu,hnací objekt poháněn piezoelektrickou silou,,Piezoelectric driving object,driving object powered by piezoelectric force,,,,,,,,,,Objekt plezoelektrického pohonu
+,,MDA,Piezoelektrický motor,objekt plezoelektrického pohonu pomocí plezoelektrického kristalu,piezoelektrický motor,Piezoelectric motor,piezoelectric driving object by piezoelectric crystal,,,,,,,,,,piezoelektrický motor
+,ML?,,Objekt pohonu mechanickou silou,hnací objekt poháněn mechanickou energií,,Mechanical energy driving object,driving object powered by mechanical energy,,,,,,,,,,Objekt pohonu mechanickou silou
+,,MLA,Gravitační pohon,objekt pohonu mechanickou silou pomocí uvolnění gravitační energie,gravitační pohon,Gravity energy drive,mechanical energy driving object releasing gravitational energy,,,,,,,,,,gravitační pohon
+,,MLB,Pružinový pohon,objekt pohonu mechanickou silou uvolněním elastické energie,omläggningsanordning,Elastic energy drive,mechanical energy driving object releasing elastic energy,,,,,,,,,,pružinový pohon
+,,MLC,Větrná turbína,objekt pohonu mechaniskou silou pomocí kinetické energie větru,větrná turbína,Wind turbine,mechanical energy driving object in the form of kinetic energy in blowing air,,,,,,,,,,větrná turbína
+,,MLD,Vodní turbína,objekt pohonu mechanickou silou pomocí kinetické energie vody,vodní turbína,Water turbine,mechanical energy driving object in the form of kinetic energy in streaming water,,,,,,,,,,vodní turbína
+,,MLE,Plynová turbína,objekt pohonu mechanickou silou pomocí kinetické a reaktivní energie v proudícím a/nebo expandujícím plynu,plynová turbína,Gas turbine,mechanical energy driving object in the form of kinetic energy and reaction force in streaming and/or expanding gases,,,,,,,,,,plynová turbína
+,MM?,,Tokem poháněný hnací objekt,hnací objekt využívající přesun nebo tlak tekutin,,Fluid powered driving object,driving object powered by fluid displacement or pressure,,,,,,,,,,Tokem poháněný hnací objekt
+,,MMA,Hydraulický válec,"tokem poháněný hnací objekt, který způsobí pohyb odpovídající objemu tekutiny",zdvihací válec,Hydraulic cylinder,fluid powered driving object providing movement corresponding to a liquid volume,,,,,,,,,,hydraulický válec
+,,MMB,Pneumatický válec,"tokem poháněný hnací objekt, který způsobí pohyb na základě tlaku plynu",pneumatický válec,Pneumatic cylinder,fluid powered driving object providing movement to end positions depending on the gaseous pressure,,,,,,,,,,pneumatický válec
+,,MMC,Hydraulický motor,"tokem poháněný hnací objekt, který způsobí rotaci pomocí proudící kapaliny",hydraulický motor,Hydraulic motor,fluid powered driving object providing rotation by a flowing liquid,,,,,,,,,,hydraulický motor
+,,MMD,Pneumatický motor,"tokem poháněný hnací objekt, který způsobí rotaci pomocí stlačeného plynu",pneumatický motor,Pneumatic motor,fluid powered driving object providing rotation by a pressurized gas,,,,,,,,,,pneumatický motor
+,MS?,,Spalovací motor,hnací objekt na základě spalování paliva,,Combustion engine,driving object powered by combustion of fuels,,,,,,,,,,Spalovací motor
+,,MSA,Zážehový motor,"spalovací motor s písty, které jsou uvedeny do pohybu pomocí spalování zažehnutého jiskrou",zážehový motor,Otto cycle engine,combustion engine in cylinders with pistons powered by spark ignited combustion,,,,,,,,,,zážehový motor
+,,MSB,Dieselový motor,"spalovací motor s písty, které jsou uvedeny do pohybu pomocí spalování zažehnutého kompresí",dieselový motor,Diesel cycle engine,combustion engine in cylinders with pistons powered by compressed ignited combustion,,,,,,,,,,dieselový motor
+,,MSC,Wankelův motor,spalovací motor s excentricky se otáčejícím pístem umístěným v kruhovém pozdře poháněný pomocí spalování zažehnutého jiskrou,wankelův motor,Wankel engine,combustion engine in circular compartment with eccentric rotary piston powered by spark ignited combustion,,,,,,,,,,Wankelův motor
+,MT?,,Tepelný motor,hnací objekt poháněný externím zdrojem tepla,,Heat engine,driving object powered by an external heat source,,,,,,,,,,Tepelný motor
+,,MTA,Parní stroj,tepelný motor využívající expanzi par působící na píst,parní turbína,Steam engine,heat engine utilizing expanding steam acting on one piston,,,,,,,,,,Parní stroj
+,,MTB,Stirlingův motor,tepelný motor s dvěma písty ve válci s jedním rozehřátým dílem a druhým chlazeným dílem,stirlingmotor,Stirling Engine,heat engine utilizing two pistons within one heated and one cooled cylinder or cylinder part,,,,,,,,,,Stirlingův motor
+N??,,,Krycí objekt,objekt pro úplné nebo částečné obalení jiného objektu,,Covering object,object for enclosing partly or fully another object,,,,,,,,,,Krycí objekt
+,NA?,,Objekt vyplňující otvor,krycí objekt na základě vyplnění otvoru,,Infilling object,covering object by filling an opening,,,,,,,,,,Objekt vyplňující otvor
+,,NAA,Skleněná tabulka,"objekt vyplňující otvor, který propouští světlo",okení tabulka,Pane,infilling object permitting light entry,,,,,,,,,,skleněná tabulka
+,,NAB,Panel,"objekt vyplňující otvor, který nepropouští světlo ani pevné objekty","dřevěné panely, dřevěné čepy, střešní panely",Panel,infilling object preventing entry of light and solid objects,,,,,,,,,,panel
+,,NAC,Mříž,"objekt vyplňující otvor, který propouští kapaliny","okení mříž, mříž na šachtu, mřížové zábradlí",Grating,infilling object permitting fluid entry,,,,,,,,,,mříž
+,,NAD,Těsnící materiál,"objekt vyplňující otvor, který brání průchodu kapalin","dilatační výplň, těsnění, spárovací páska, izolační lišta",Sealing joint,infilling object preventing fluid entry,,,,,,,,,,těsnící materiál
+,NB?,,Uzavírací objekt,krycí objekt na základě uzavření otvoru,,Closure object,covering object by closing an opening,,,,,,,,,,Uzavírací objekt
+,,NBA,Dveřní křídlo,uzavírací objekt ve dveřích,dveřní křídlo,Door leaf,closure object in a door,,,,,,,,,,Dveřní křídlo
+,,NBB,Křídlo vrat,uzavírací objekt ve vratech,"garážová vrata, hangárová vrata",Leaf of large door,closure object in a large door,,,,,,,,,,Křídlo vrat
+,,NBC,Dveře skříně,uzavírací objekt pro uzavřený prostor,dveře skříně,Cabinet door,closure object in an enclosure,,,,,,,,,,dveře skříně
+,,NBD,Křídlo brány,uzavírací objekt pro otvor v plotu nebo hrazení,křídlo brány,Gate leaf,closure object in a gate,,,,,,,,,,křídlo brány
+,,NBE,Poklop,uzavírací objekt v průchodu,"poklop šachty, krycí deska, překrytí",Hatch cover,closure object in a hatch,,,,,,,,,,poklop
+,NC?,,Objekt pro obložení,krycí objekt na základě obložení konstrukcí,,Finishing object,covering object by finishing structures,,,,,,,,,,Objekt pro obložení
+,,NCA,Dláždění,objekt pro obložení pevné plochy,"dláždění, obrusná vrstva vozovky, pojezdová deska",Paving,finishing object of a pavement,,,,,,,,,,dláždění
+,,NCB,Obložení stěn,objekt pro obložení zdi,"fasáda, kachličky, panel, betonové obložení, obložení tunelu",Wall covering,finishing object of a wall,,,,,,,,,,obložení stěn
+,,NCC,Podlahové krytiny,objekt pro obložení podlahy,"podlahová deska, svrchní podlaha, palubky",Flooring,finishing object of a floor,,,,,,,,,,podlahové krytiny
+,,NCD,Krytí stropů,objekt pro obložení stropů,stropní panely,Ceiling finish,finishing object of a ceiling,,,,,,,,,,krytí stropů
+,,NCE,Zastřešení,objekt pro obložení střech,"střešní krytina, vegetační střecha",Roofing,finishing object of a roof,,,,,,,,,,zastřešení
+,,NCF,Parapet,objekt pro obložení otvoru,"okení parapet, obložení dveří, krycí lišta",Window Sill,finishing object in an opening,,,,,,,,,,parapet
+,,NCG,Rostlinný koberec,objekt pro obložení vegetační plochy,"trávník, hydroosev, vegetační střecha, vegetační rohože",Plant mat,finishing object of a vegetation area,,,,,,,,,,rostlinný koberec
+,,NCH,Objekt tvarující povrch,"objekt pro obložení, který určuje vnější tvar objektu",karoserie,Surface forming object,finishing object by forming the outer shape of an object,,,,,,,,,,objekt tvarující povrch
+,ND?,,Zakončovací objekt,"krycí objekt, který zakončuje jiné objekty",,Terminating object,covering object by terminating another object,,,,,,,,,,zakončovací objekt
+,,NDA,Obrubník,zakončující objekt pevného povrchu nebo vegetace,obrubník,Curb,terminating object delimiting an edge of pavement or vegetation area,,,,,,,,,,obrubník
+,,NDB,Koruna,zakončující objekt hrany koruny,"zakrytí, hlavice sloupů, vrcholová vaznice, stropní překlad, hřebenáč, krytí komínu",Crown,terminating object delimiting an edge of a wall,,,,,,,,,,koruna
+,,NDC,Hranová lišta,zakončující objekt zvýšené hrany podlahy,hranová lišta,Raised floor edge,terminating object delimiting an edge of a floor,,,,,,,,,,hranová lišta
+,,NDD,Ukončení vnitřních stropů,zakončující objekt hrany vnitřních stropů,ukončení vrchních stropů,Ceiling edge,terminating object delimiting an edge of a ceiling,,,,,,,,,,ukončení vnitřních stropů
+,,NDE,Střešní zakončení,zakončující objekt hrany střechy,"podnožka, římsa, okřídlí",Fascia,terminating object delimiting an edge of a roof,,,,,,,,,,střešní zakončení
+,NE?,,Zakrývající objekty,"krycí objekt, který zakrývá spáry a přechody",,Hiding object,covering object by hiding joints and transitions,,,,,,,,,,Zakrývající objekty
+,,NEA,Stropní lišty,zakrývající objekt mezi zdí a stropem,stropní lišty,Ceiling lining,hiding object between a wall and a ceiling,,,,,,,,,,stropní lišty
+,,NEB,Podlahové lišty,zakrývající objekt mezi zdí a podlahou,"podlahová lišta, ukončovací lišta",Skirting board,hiding object between a wall and a floor,,,,,,,,,,podlahové lišty
+,,NEC,Rohová lišta,zakrývající objekt mezi dvěmi zdmi,"rohová deska, ochrana hrany schodu, ochrana nárožního roubení, prahové lišty",Wall corner lining,hiding object between two walls,,,,,,,,,,rohová lišta
+,,NED,Střešní oplechování,zakrývající objekt na střeše,"štítové lemování, hřebenová lať, hřebenáč, hřebenový plech",Flashing,hiding object on a roof,,,,,,,,,,střešní oplechování
+,,NEE,Výplň,zakrývající objekt okolo otvoru,"obložení dveří, obložení okna, štít zámku",Reveal liner,hiding object around an opening,,,,,,,,,,výplň
+P??,,,Prezentující objekt,objekt poskytující znatelnou informaci,,Presenting object,object for providing perceptible information,,,,,,,,,,prezentující objekt
+,PF?,,Vizuální ukazatel stavu,prezentující objekt ve formě viditelného stavu nebo polohy,,Visible state indicator,presenting object in visible form of discrete states,,,,,,,,,,vizuální ukazatel stavu
+,,PFA,Signální světlo,vizuální ukazatel stavu pomocí světla ,"světelná signalizace, mostní světlo, světelná tabule",Signal lamp,visible state indicator by light,,,,,,,,,,signální světlo
+,,PFB,Semafor,vizuální ukazatel stavu pomocí mechanických pozic,návěstidlo,Semaphore,visible state indicator by mechanical positions,,,,,,,,,,semafor
+,PG?,,Objekt zobrazující naměřenou hodnotu,prezentující objekt v podobě viditelné měřené hodnoty,,Scalar display,presenting object in a visible form of a single scalar variable,,,,,,,,,,Objekt zobrazující naměřenou hodnotu
+,,PGA,Voltmetr,objekt zobrazující naměřenou hodnotu elektrického napětí,voltmetr,Voltmeter,scalar display representing electric voltage,,,,,,,,,,voltmetr
+,,PGB,Indikátor odporu,objekt zobrazující naměřenou hodnotu vodivosti,indikátor odporu,Resistivity indicator,scalar display representing resistivity or conductivity,,,,,,,,,,indikátor odporu
+,,PGC,Ampér metr,objekt zobrazující naměřenou hodnotu elektrického proudu,ampér metr,Ampere meter,scalar display representing electric current,,,,,,,,,,ampér metr
+,,PGD,Denzitometr,objekt zobrazující naměřenou hodnotu hustoty,denzitometr,Density indicator,scalar display representing density,,,,,,,,,,denzitometr
+,,PGE,Indikátor pole,objekt zobrazující naměřenou hodnotu pole,indikátor pole,Field indicator,scalar display representing field,,,,,,,,,,indikátor pole
+,,PGF,Průtokoměr,objekt zobrazující naměřenou hodnotu toku,průtokoměr,Flow meter,scalar display representing flow,,,,,,,,,,průtokoměr
+,,PGG,Indikátor rozměru,objekt zobrazující naměřenou hodnotu rozměrů prostoru a/nebo poloh,"úhelník, ukazatel pozice",Dimension indicator,scalar display representing spatial dimension and/or position,,,,,,,,,,indikátor rozměru
+,,PGH,Elektroměr,objekt zobrazující naměřenou hodnotu energie,elektroměr,Energy meter,scalar display representing energy,,,,,,,,,,elektroměr
+,,PGJ,Wattmetr,objekt zobrazující naměřenou hodnotu elektrické síly,wattmetr,Wattmeter,scalar display representing electric power,,,,,,,,,,wattmetr
+,,PGK,Hodiny,objekt zobrazující naměřenou hodnotu času,"hodiny, hodinky",Clock,scalar display representing time,,,,,,,,,,hodiny
+,,PGL,Indikátor hladiny,objekt zobrazující naměřenou hodnotu hladiny,indikátor hladiny,Humidity indicator,scalar display representing humidity,,,,,,,,,,indikátor hladiny
+,,PGM,Indikátor vlhkosti,objekt zobrazující naměřenou hodnotu vlhkosti,vlhkoměr,Humidity indicator,scalar display representing humidity,,,,,,,,,,indikátor vlhkosti
+,,PGP,Indikátor tlaku,objekt zobrazující naměřenou hodnotu tlaku,indikátor tlaku,Pressure indicator,scalar display representing pressure,,,,,,,,,,indikátor tlaku
+,,PGQ,Indikátor koncentrace,objekt zobrazující naměřenou hodnotu koncentrace substance,ukazatel průhlednosti,Concentration indicator,scalar display representing substance concentration,,,,,,,,,,indikátor koncentrace
+,,PGR,Indikátor elektromagnetického pole,objekt zobrazující naměřenou hodnotu záření,indikátor elektromagnetického pole,Electromagnetic wave indicator,scalar display representing radiation,,,,,,,,,,Indikátor elektromagnetického pole
+,,PGS,Měřič kmitočtu,objekt zobrazující naměřenou hodnotu kmitočtu,otáčkoměr,Frequency meter,scalar display representing time-rate,,,,,,,,,,měřič kmitočtu
+,,PGT,Teploměr,objekt zobrazující naměřenou hodnotu teploty,teploměr,Temperature indicator,scalar display representing temperature,,,,,,,,,,teploměr
+,,PGV,Ukazatel účinnosti,objekt zobrazující naměřenou hodnotu rozdílu mezi aktivní a reaktivní silou,účiník,power factor meter,scalar display representing the offset between active power and reactive power,,,,,,,,,,ukazatel účinnosti
+,,PGW,Indikátor síly,"objekt zobrazující naměřenou hodnotu váhy, síly nebo točivého momentu",indikátor síly,Force indicator,"scalar display representing weight, force to torque",,,,,,,,,,indikátor síly
+,,PGX,Audio spektrometr,objekt zobrazující naměřenou hodnotu zvuku,audio spektrometr,Audio spectrometer,scalar display representing sound,,,,,,,,,,audio spektrometr
+,,PGZ,Indikátor množství,objekt zobrazující naměřenou hodnotu počtu událostí,indikátor množství,Quantity meter,scalar display representing number of incidents,,,,,,,,,,indikátor množství
+,PH?,,Objekt grafického zobrazení,"prezentující objekt ve viditelné podobě obrazu, symbolu nebo textu",,Graphical display,"presenting object in visible form by pictures, symbols, text or physical characteristics",,,,,,,,,,Objekt grafického zobrazení
+,,PHA,Display,objekt grafického zobrazení dynamicky na svém povrchu,"obrazovka, světelná tabule, monitor, křídová tabule, bílá tabule, promítací plátno",Display,graphical display dynamically on its surface,,,,,,,,,,display
+,,PHB,Projektor,objekt grafického zobrazení dynamicky na zvoleném povrchu,projektor,Projector,graphical display dynamically on another surface,,,,,,,,,,projektor
+,,PHC,Tiskárna,objekt grafického zobrazení na tištěné médium,"tiskárna, kopírka",Printer,graphical display on a printed media,,,,,,,,,,tiskárna
+,,PHD,Cedule,objekt grafického zobrazení staticky na plochu objektu,"zákazová značka, světelný signál, označovací tabule, směrovka, dodatková tabule, piktogram, dopravní značka, tabule",Marking,graphical display statically on the surface of another object,,,,,,,,,,cedule
+,,PHE,Značení,objekt grafického zobrazení staticky na plochu jiného objektu,"vodorovné dopravní značení, značení pro sport a hry",Sign,graphical display statically on its surface,,,,,,,,,,značení
+,,PHF,Sloup značení,objekt grafického zobrazení pomocí své fyzické povahy,"směrové sloupky, kotevní pilíř, bóje, signalizační sloupek inženýrských sítí, měřičský bod, body pro kontrolu svislosti",Marking post,graphical display statically by its physical characteristics,,,,,,,,,,sloup značení
+,PJ?,,Objekt zvukové signalizace,prezentující objekt ve zvukové podobě,,Acoustic device,presenting object in audible form,,,,,,,,,,Objekt zvukové signalizace
+,,PJA,Reproduktor,objekt zvukové signalizace pohybem membrány,reproduktor,Loudspeaker,acoustic device provided by the movement of a membrane,,,,,,,,,,reproduktor
+,,PJB,Siréna,objekt zvukové signalizace proudem vzduchu,"místní rozhlas, siréna, houkačka",Horn,acoustic device provided by the stream of air,,,,,,,,,,siréna
+,,PJC,Zvonek,objekt zvukové signalizace mechanickou excitací daného objektu,"zvonek u dveří, poplachové zařízení",Bell,acoustic device provided by mechanical excitation of the object,,,,,,,,,,zvonek
+,PK?,,Objekt dotykové signalizace,prezentující objekt v dotykové podobě,,Tactile device,presenting object in tactile form,,,,,,,,,,Objekt dotykové signalizace
+,,PKA,Vibrátor,objekt dotykové signalizace diskrétních stavů pomocí vibrace,taktilní poplachové zařízení,Vibrator,tactile device of discrete states by vibration,,,,,,,,,,vibrátor
+,,PKB,Dotykové značení,objekt dotykové signalizace diskrétních stavů pomocí vibrace,"hlukový pás, naváděcí cesta, značení pro nevidomé",Braille text sign,tactile device of static information,,,,,,,,,,dotykové značení
+,,PKC,Varování o průjezdové výšce,objekt dotykové signalizace pro překážky shora,varování o průjezdové výšce,Free height warning,tactile device for suprajacent obstacles,,,,,,,,,,varování o průjezdové výšce
+,PL?,,Zdobný objekt,prezentující objekty pro zkrášlení nebo umělecké účely,,Ornamental object,presenting object in an ornamental form,,,,,,,,,,Zdobný objekt
+,,PLA,Římsa,zdobný objekt oddělení mezi dvěmi oblastmi,"římsa, lišta",Cornice,ornamental object as a separation between two areas,,,,,,,,,,římsa
+,,PLB,Socha,zdobný objekt prezentace v prostoru,socha,Figure,ornamental object as a spatial representation of something,,,,,,,,,,socha
+,,PLC,Frízy,zdobný objekt vystupujících postav a/nebo dekoračních prvků na zdi,"sloup, pilastr, štukatura",Frieze,ornamental object as protruding figures and/or decorative elements on a wall,,,,,,,,,,vlys
+,,PLD,Obrázek,"zdobný objekt reprezentující, ilustrující nebo reprodukující něco na ploše","obraz, malba na zdi",Picture,"ornamental object representing, illustrating or reproducing something visibly on a surface",,,,,,,,,,obrázek
+,,PLE,Koberec,"zdobný objekt v podobě textilu, který kryje část jiného objektu","přehoz, tapiserie",Carpet,ornamental object by a fabric covering part of another object,,,,,,,,,,koberec
+,PZ?,,Objekt s několika ukazateli,prezentující objekt v několika formách,,Multiple form presenting object,presenting object in multiple forms,,,,,,,,,,Objekt s několika ukazateli
+,,PZA,Audio-vizuální alarm,objekt s několika ukazateli pro diskrétní stavy,audio-vizuální alarm,Audio-visual alarm,multiple form presenting object for discrete states,,,,,,,,,,audio-vizuální alarm
+,,PZB,Televizor,objekt s několika ukazateli pro několik informací,"televizor, obrazovka s reproduktory",Television set,multiple form presenting object for multiple information,,,,,,,,,,Televizor
+Q??,,,Řídící nebo regulační objekt,Objekt pro řízení přístupu nebo průtoku,,Controlling object,object for controlling access or flow,,,,,,,,,,Řídící nebo regulační objekt
+,QA?,,Objekt přerušující elektrický proud,řídící objekt pro elektrický proud v obvodu,,Electric controlling object,controlling object of electric current in an electric circuit,,,,,,,,,,objekt přerušující elektrický proud
+,,QAA,Jistič,objekt přerušující elektrický proud mechanicky v běžných nebo nestandardních podmínkách,"hlavní vypínač, nouzový vypínač, vypínač, magnetický kontakt, spouštěč motoru, přerušovač na ochranu motoru, magnetické vypínače elektrických obvodů",Circuit breaker,electric controlling object mechanically under normal and abnormal service conditions,,,,,,,,,,jistič
+,,QAB,Stykač,objekt přerušující elektrický proud mechanicky pouze v běžných podmínkách,"relé, aktor, vysokonapěťový stykač ",Contactor,electric controlling object mechanically under normal service conditions only,,,,,,,,,,stykač
+,,QAC,Elektronický vypínač,objekt přerušující elektrický proud elektronicky,"defibrilátor, elektrický termostat, přepínač řídícího obvodu, termostat",Electronic power switch,electric controlling object electronically,,,,,,,,,,Elektronický vypínač
+,QB?,,Objekt oddělující elektrickou energii,řídící objekt pro oddělení elektrických obvodů,,Electric separating object,controlling object by separating electric circuits,,,,,,,,,,Objekt oddělující elektrickou energii
+,,QBA,Odpojovač,objekt oddělující elektrickou energii mechanickou izolací v obvodu,"jistič, odpínač, zařízení pro nouzové zastavení, bezpečnostní vypínač",Fuseless disconnector,electric separating object by mechanically isolating the downstream circuit from the upstream circuit only,,,,,,,,,,odpojovač
+,,QBB,Pojistkový odpínač,objekt oddělující elektrickou energii mechanickou izolací v obvodu se zabudovanou pojistkou,pojistkový odpínač,Fused disconnector,electric separating object by mechanically isolating the downstream circuit from the upstream circuit and with a built-in fuse,,,,,,,,,,pojistkový spínačový odpojovač
+,QC?,,Zemnící objekt,řídící objekt pro uzemnění elektrických obvodů,,Electric earthing object,controlling object by earthing electric circuits,,,,,,,,,,Zemnící objekt
+,,QCA,Uzemňovač,zemnící objekt který spojuje elektrický obvod se zemí,uzemňovač,Earthing switch,electric earthing object connecting electric circuits to earth,,,,,,,,,,uzemňovač
+,QM?,,Řídící objekt uzavřeného toku tekutin,řídící objekt toku tekutin zapnuto/vypnuto v uzavřeném prostoru,,Sealed fluid switching object,controlling object of fluids on/off in sealed enclosures,,,,,,,,,,Řídící objekt uzavřeného toku tekutin
+,,QMA,Kapalinový uzavírací ventil,řídící objekt uzavřeného toku tekutin pro kapalinu,"uzavírací zařízení, uzavírací ventil, výpustné zařízení, směšovací baterie, sprchová armatura, kuchyňský kohoutek, pítko, trojcestný ventil",Liquid shutoff valve,sealed fluid switching object of a liquid flow,,,,,,,,,,kapalinový uzavírací ventil
+,,QMB,Plynový uzavírací ventil,řídící objekt uzavřeného toku tekutin pro plyn,"odvzdušňovací ventil, ventil, provzdušňovací zařízení",Gas shutoff valve,sealed fluid switching object of a gas flow,,,,,,,,,,plynový uzavírací ventil
+,QN?,,Regulační objekt uzavřeného toku tekutin,řídící objekt pro variaci toku tekutin vuzavřeném prostoru,,Sealed fluid varying object,controlling object for varying the flow of fluids in sealed enclosures,,,,,,,,,,Regulační objekt uzavřeného toku tekutin
+,,QNA,Regulační ventil kapalin,regulační objekt uzavřeného toku tekutin pro kapalinu,"zařízení k regulaci toku, obtokový ventil, řídící ventil",Liquid control valve,sealed fluid varying object of a liquid flow,,,,,,,,,,regulační ventil kapalin
+,,QNB,Regulační ventil plynu,regulační objekt uzavřeného toku tekutin pro plyn,"směsné zařízení, regulátor plynu, zařízení ma konstantní průtok, škrtící klapka",Gas control valve,sealed fluid varying object of a gas flow,,,,,,,,,,regulační ventil plynu
+,QP?,,Řídící objekt otevřeného toku,řídící objekt pro tekutiny v otevřeném prostředí,,Open fluid controlling object,controlling object of fluids in open enclosures,,,,,,,,,,Řídící objekt otevřeného toku
+,,QPA,Stavidlo,řídící objekt otevřeného toku pro variaci nebo zapnutí a vypnutí,"výpusť, stavidlo, jez",Lock gate,open fluid controlling object for varying or switching on/off,,,,,,,,,,stavidlo
+,,QPB,Vortex generátor,řídící objekt otevřeného toku pro řízení toku pevnou cestou,vortex generátor,Vortex generator,open fluid controlling object for directing a flow by a fixed means,,,,,,,,,,vortex generátor
+,,QPC,Kormidlo,řídící objekt otevřeného toku pro řízení toku variabilní cestou,kormidlo,Rudder,open fluid controlling object for directing a flow by a variable means,,,,,,,,,,kormidlo
+,QQ?,,Objekt pro přístup do prostor,řídící objekt pro přístup do prostor,,Space access object,controlling object to a space,,,,,,,,,,Objekt pro přístup do prostor
+,,QQA,Okno,objekt pro přístup do prostor pouze pro světlo,"okno, střešní okno",Window,space access object for light entry only,,,,,,,,,,okno
+,,QQB,Prosklení,objekt pro přístup do prostor pro světlo a osoby,"okení křídlo, vchodové prosklení, prosklená zeď",Window unit,space access object for entry of light and persons,,,,,,,,,,okení křídlo
+,,QQC,Dveře,objekt pro přístup do prostor pro vzpřímený vstup osob,"dveře, otočné dveře, karuselové dveře, posuvné dveře, křídlové dveře",Door,space access object for upright passage by persons,,,,,,,,,,dveře
+,,QQD,Poklop,objekt pro přístup do prostor pro vstup osob a věcí,"odklápěcí dvířka pro kočky, kontrolní poklop, shozový poklop, čistící poklop, větrací poklop",Hatch,space access object of restricted size for passage of persons and goods,,,,,,,,,,poklop
+,,QQE,Vrata,objekt pro přístup do prostor pro přesun objektů,"garážová vrata, roletová vrata, sklápěcí vrata",Large door,space access object of extended size for transfer of objects,,,,,,,,,,vrata
+,,QQF,Brána,objekt pro přístup do prostor s částečnou funkcí,"branka, závora, brána",Gate,space access object partially,,,,,,,,,,brána
+,,QQG,Zarážkové bloky,objekt pro přístup do prostor pomocí blokace přístupu na kolej,zarážkové bloky,Rail scotch block,space access object by blocking entrance to a track,,,,,,,,,,zarážkové bloky
+,QR?,,Řídící objekt toku věcí,řídící objekt pro tok věcí,,Solid substance flow varying object,controlling object of solid substance,,,,,,,,,,Řídící objekt toku věcí
+,,QRA,Rotační komora,řídící objekt toku věcí s rotující komorou,"dávkovací stroj, rotační vyprázdnění nákladu, ústředna potrubní pošty",Rotary air lock valve,solid substance flow varying object with rotating chambers,,,,,,,,,,rotační komora
+,,QRB,Iris ventil,řídící objekt toku věcí s iris ventilem,dávkovací stroj s iris ventilem,Iris valve,solid substance flow varying object with an iris opening,,,,,,,,,,iris ventil
+,,QRC,Klapkový ventil,řídící objekt toku věcí s loubovou klapkou nebo deskou,dávkovací stroj s klapkovým ventilem,Flap gate valve,solid substance flow varying object with a hinged flap or disc,,,,,,,,,,klapkový ventil
+,QS?,,Řídící objekt mechanického pohybu,řídící objekt pro mechanický pohyb,,Mechanical movement controlling object,controlling object for mechanical movement,,,,,,,,,,Řídící objekt mechanického pohybu
+,,QSA,Zámek,řídící objekt mechanického pohybu pomocí blokace,"elektrický zámek, magnetický zámek, střelkový zámek, zamykací a kontrolní zařízení, visací zámek, petlice",Lock,mechanical movement controlling object by blocking,,,,,,,,,,zámek
+,,QSB,Výhybka,řídící objekt mechanického pohybu pomocí změny koleje,výhybka,Track switch,mechanical movement controlling object by switching between different tracks,,,,,,,,,,výhybka
+,QZ?,,Vícečetný řídící objekt,řídící objekt v elektrických obvodech s různými metodami,,Multiple measure controlling object,controlling object in electrical circuits utilising different measures,,,,,,,,,,Vícečetný řídící objekt
+,,QZA,Zemnící spínač,vícečetný řídící objekt pro uzemnění nebo oddělení,zemnící spínač,Earthing and disconnecting switch,multiple measure controlling object for earthing or separating electrical circuit,,,,,,,,,,zemnící spínač
+R??,,,Omezující objekt,objekt pro omezení nebo stabilizaci,,Restricting object,object for restricting or stabilising,,,,,,,,,,Omezující objekt
+,RA?,,Objekt omezující elektrickou energii,omezující objekt pomocí omezení toku elektrické energie,,Electricity restricting object,restricting object by restricting a flow of electric energy,,,,,,,,,,Objekt omezující elektrickou energii
+,,RAA,Dioda,objekt omezující elektrickou energii blokací proudu energie  jedním směrem,dioda,Diode,electricity restricting object by blocking current flow in one direction,,,,,,,,,,dioda
+,,RAB,Induktor,objekt omezující elektrickou energii indukcí v obvodu,induktor,Reactor,electricity restricting object by providing an inductance in a circuit,,,,,,,,,,induktor
+,,RAC,Odpor,objekt omezující elektrickou energii odporem v obvodu,"elektronický předřadník, rezistor, potenciometr",Resistor,electricity restricting object by providing a resistance in a circuit,,,,,,,,,,odpor
+,RB?,,Objekty stabilizující elektrický proud,omezující objekt pomocí stabilizace toku elektrické energie,,Electricity stabilising object,restricting object by stabilising a flow of electric energy,,,,,,,,,,Objekty stabilizující elektrický proud
+,,RBA,Nepřerušitelný zdroj napájení (ups),"objekt stabilizující elektrický proud, který zaručuje stálý zdroj napájení",nepřerušitelný zdroj napájení (ups),Uninterrupted power supply,electricity stabilising object ensuring a continuous power supply,,,,,,,,,,nepřerušitelný zdroj napájení (UPS)
+,,RBB,Filtr elektrické energie,objekt stabilizující elektrický proud potlačením určitého frekvenčního rozsahu,filtr elektrické energie,Power filter,electricity stabilising object suppressing a defined frequency range within the flow,,,,,,,,,,filtr elektrické energie
+,,RBC,Ekvalizér elektrické energie,objekt stabilizující elektrický proud potlačením nebo zesílením několika frekvenčních rozsahů,ekvalizér elektrické energie,Power equaliser,electricity stabilising object suppressing or amplifying multiple frequency ranges within the flow,,,,,,,,,,ekvalizér elektrické energie
+,,RBD,Fázový kompenzátor,"objekt stabilizující elektrický proud, který dodává reaktivní energii",fázový kompenzátor,Phase compensator,electricity stabilising object providing reactive power,,,,,,,,,,fázový kompenzátor
+,RF?,,Objekty stabilizující signál,omezující objekt pomocí stabilizace signálu,,Signal stabilising object,restricting object by stabilising a signal,,,,,,,,,,Objekty stabilizující signál
+,,RFA,Ekvalizér,"objekt stabilizující signál, který potlačuje nebo zesiluje několik frekvenčních rozsahů",ekvalizér,Signal equaliser,signal stabilising object suppressing or amplifying multiple frequency ranges of the signal,,,,,,,,,,ekvalizér
+,,RFB,Signálový filtr,"objekt stabilizující signál, který potlačuje určitý frekvenční rozsah",signálový filtr,Signal filter,signal stabilising object suppressing a defined frequency range of the signal,,,,,,,,,,signálový filtr
+,RL?,,Objekt omezující pohyb,omezující objekt pomocí omezení pohybu,,Movement restricting object,restricting object by restricting movements,,,,,,,,,,Objekt omezující pohyb
+,,RLA,Řetězový zámek,objekt omezující pohyb pomocí omezení pohyblivosti objektu,"řetízek na dveře, bezpečnostní řetěz",Security chain,movement restricting object by limiting movement of an object,,,,,,,,,,řetězový zámek
+,,RLB,Tlumič,objekt omezující pohyb pomocí srovnání a snížení pohybu objektu,"vyrovnávací koš, protiváha",Shock absorber,movement restricting object by settling and damping movements of an object,,,,,,,,,,tlumič
+,,RLC,Brzda,objekt omezující pohyb pomocí snížení rychlosti a zastavení jiného objektu,"dveřní brzda, plynová pružina, traťový retardér",Brake,movement restricting object by preventing high speed of another object,,,,,,,,,,brzda
+,,RLD,Retardér,objekt omezující pohyb zamezením vysoké rychlosti jiného objektu,retardér,Speed bump,movement restricting object by preventing high speed of another object,,,,,,,,,,retardér
+,RM?,,Objekt omezující zpětný tok,omezující objekt pomocí omezení zpětného toku hmoty,,Return flow restricting object,restricting object by restricting a return flow of matter,,,,,,,,,,Objekt omezující zpětný tok
+,,RMA,Zpětný ventil,objekt omezující zpětný tok kapalin,"zpětný uzávěr, zařízení bránící zpětnému toku",Non-return valve,return flow restricting object of liquids,,,,,,,,,,zpětný ventil
+,,RMB,Zpětná klapka,objekt omezující zpětný tok plynu,zpětná klapka,Check damper,return flow restricting object of gas,,,,,,,,,,zpětná klapka
+,,RMC,Zamezení zpětného chodu,objekt omezující zpětný tok pevných látek,zamezení zpětného chodu,Flap,return flow restricting object of solid substances,,,,,,,,,,zamezení zpětného chodu
+,,RMD,Sifon,objekt omezující zpětný tok zápachu,sifon,Stench trap,return flow restricting object of odour,,,,,,,,,,sifon
+,RN?,,Objekt omezující průtok,omezující objekt pomocí omezení řízeného toku hmoty,,Flow restrictor,restricting object by restricting a guided flow of matter,,,,,,,,,,Objekt omezující průtok
+,,RNA,Regulační ventil,nastavitelný objekt omezující průtok kapalin,"redukční ventil, řídící ventil, seřizovací ventil",Regulating valve,flow restrictor of liquids by an adjustable means,,,,,,,,,,regulační ventil
+,,RNB,Regulační klapka,nastavitelný objekt omezující průtok plynu,"odvzdušňovací zařízení, přívod čerstvého vzduchu, zařízení pro stálý tok vzduchu",Regulating damper,flow restrictor of gas by an adjustable means,,,,,,,,,,regulační klapka
+,,RNC,Omezovač průchodu pevných látek,nastavitelný objekt omezující průtok pevných látek,omezovač průchodu pevných látek,Soilds regulating valve,flow restrictor of soilds substances by an adjustable means ,,,,,,,,,,omezovač průchodu pevných látek
+,,RND,Omezovač průtoku kapalin,pevný objekt omezující průtok kapalin,"sprchová hlavice, tryska, clona, venturiho trubice, rozprašovač",Diffuser,flow restrictor by a fixed means,,,,,,,,,,omezovač průtoku kapalin
+,RQ?,,Objekty stabilizující lokální prostředí,omezující objekt pro lokální prostředí,,Local climate stabilising object,restricting object of the local environment,,,,,,,,,,Objekty stabilizující lokální prostředí
+,,RQA,Izolace,objekt stabilizující lokální prostředí zamezením termického nebo zvukového přenosu,"izolace proti promrzání, zvuková izolace, izolace proti kročejovému hluku, izolace trubek, izolační deska, termická izolace",Insulation,local climate stabilising object by restricting a thermal or sound transmission,,,,,,,,,,izolace
+,,RQB,Stabilizující vrstva,"objekt stabilizující lokální prostředí stabilizací toku kapaliny, vlhkosti, větru nebo materiálu","netkaná textílie, geomembrána, vrstva oddělující materiály, kondenzační vrstva, retenční nádrž, parozábrana",Stabilizing layer,"local climate stabilising object by stabilising a flow of liquids, moisture, wind or material",,,,,,,,,,membrána
+,,RQC,Protihluková stěna,objekt stabilizující lokální prostředí omezením šíření zvuku,"protihluková stěna, zvuk tlumící materiál",Noise barrier,local climate stabilising object by stabilising the propagation of sound,,,,,,,,,,protihluková stěna
+,,RQD,Opláštění,"objekt stabilizující lokální prostředí omezující vítr, srážky nebo záření","markýza, stínící fólie, sloneční clona, větrolam",Screen,"local climate stabilising object by restricting wind, precipitation or radiation",,,,,,,,,,opláštění
+,,RQE,Závěs,"objekt stabilizující lokální prostředí, který omezuje průchod světla pomocí tkaniny","závěs, opona, roleta",Curtain,local climate stabilising object by restricting transmission of light using textiles,,,,,,,,,,závěs
+,,RQF,Žaluzie,"objekt stabilizující lokální prostředí, který omezuje průchod světla pomocí tenkých upravitelných žaluzií",žaluzie,Louvered blind,local climate stabilising object by restricting transmission of light using narrow adjustable louvers,,,,,,,,,,žaluzie
+,,RQG,Okenice,"objekt stabilizující lokální prostředí, který omezuje průchod světla pomocí vnějšího odstínění",okenice,Shutter,local climate stabilising object by restricting transmission of light using an external panel,,,,,,,,,,okenice
+,,RQH,Ochrana proti plevelům,"objekt stabilizující lokální prostředí, který zabraňuje prorůstání plevelů",ochrana proti plevelům,Weed control fabric,local climate stabilising object preventing weed growth,,,,,,,,,,ochrana proti plevelům
+,,RQJ,Zástěna,"objekt stabilizující lokální prostředí, který zabraňuje průhledu a tlumí přenos zvuku","balkónová zástěna, monter, dělící příčka, boční kryt, clona proti průhledu ",Screen wall,local climate stabilising object by restricting vision and sound,,,,,,,,,,zástěna
+,RU?,,Objekty omezující přístup,omezující objekt pro vstup,,Access restricting object,restricting object by restricting access to an area,,,,,,,,,,Objekty omezující přístup
+,,RUA,Plot,objekt omezující přístup pomocí horizontální bariéry s vertikálním rozsahem,"zeď, plot, plaňky, hrazení, oplocení proti zvěři",Fence,access restricting object by a horizontal elongated barrier with a vertical extent,,,,,,,,,,plot
+,,RUB,Pohyblivá bariéra,objekt omezující přístup pomocí horizontální závory,závora,Movable barrier,access restriction object by a movable horizontal bar,,,,,,,,,,pohyblivá bariéra
+,,RUC,Turniket,objekt omezující přístup pomocí rotující zábrany ,"turniket, otočné dveře",Turnstile,access restricting object by a rotational barrier,,,,,,,,,,turniket
+,,RUD,Zahrazovací sloupek,objekt omezující přístup pomocí bariéry s omezeným horizontální a vertikální rozsahem,zahrazovací sloupek,Bollard,access restricting object by a barrier with limited horizontal and vertical extent,,,,,,,,,,zahrazovací sloupek
+,,RUE,Pevný zátaras,objekt omezující přístup pomocí tvarování jízdní dráhy,"rošt, zábrana průchodu, bariéry proti krysám",Rodent barrier,access restricting object by shaping a path,,,,,,,,,,pevný zátaras
+,,RUF,Síťový zátaras,objekt omezující přístup pomocí sítě,"sítě proti ptákům, sítě proti okusu, pletivo, mříže",Bird mesh,access restricting object by a mesh,,,,,,,,,,síťový zátaras
+S??,,,Objekt pro lidskou interakci,objekt detekující lidské konání a poskytující adekvátní odpověď,,Human interacting object,object for detecting a human action and providing an appropriate response,,,,,,,,,,Objekt pro lidskou interakci
+,SF?,,Zařízení pro ovládání pomocí obličeje,objekt pro lidskou interakci pomocí obličeje,,Face interaction object,human interaction object by facial interaction,,,,,,,,,,Zařízení pro ovládání pomocí obličeje
+,,SFA,Detektor sítnice,zařízení pro ovládání pomocí obličeje zjišťující aktivitu obličeje,detektor sítnice,Eye focus reader,face interaction device by sensing of facial activity ,,,,,,,,,,detektor sítnice
+,,SFB,Detektor obličeje,zařízení pro ovládání pomocí obličeje pomocí rozpoznání obličeje,detektor obličeje,Face recognition device,face interaction device by face recognition,,,,,,,,,,detektor obličeje
+,SG?,,Zařízení pro ovládání pomocí ruky,objekt pro lidskou interakci rukou,,Hand interaction device,human interacting object to a hand action,,,,,,,,,,Zařízení pro ovládání pomocí ruky
+,,SGA,Otočné zařízení,zařízení pro ovládání pomocí ruky otáčením,"dveřní koule, otočný zámek, kulová okení klika",Turn handle,hand interaction device by turning,,,,,,,,,,otočné zařízení
+,,SGB,Úchytové zařízení,zařízení pro ovládání pomocí ruky uchopením,"táhlo, madlo, rukojeť",Grip handle,hand interaction device by gripping,,,,,,,,,,úchytové zařízení
+,,SGC,Tlačné zařízení,zařízení pro ovládání pomocí ruky zatlačením,nouzový vypínač,Push handle,hand interaction device by pushing,,,,,,,,,,tlačné zařízení
+,,SGD,Klika,zařízení pro ovládání pomocí ruky klikou,"klika, výhybkový přestavník",Lever handle,hand interaction device by lever,,,,,,,,,,klika
+,,SGE,Tažné zařízení,zařízení pro ovládání pomocí ruky tažením,tažné lanko,Pull handle,hand interaction device by pulling,,,,,,,,,,tažné zařízení
+,,SGF,Klíč,zařízení pro ovládání pomocí ruky otočením správného zámku nebo zámkového mechanismu,klíč,Key,hand interaction device to turn a matching locking cylinder or locking mechanism,,,,,,,,,,klíč
+,SH?,,Zařízení pro ovládání pomocí nohy,objekt pro lidskou interakci pro pohyb nohy,,Foot interaction device,human interaction object to a foot position,,,,,,,,,,Zařízení pro ovládání pomocí nohy
+,,SHA,Pedál,zařízení pro ovládání pomocí nohy sešlápnutím,"pedál, nášlapný alarm",Pedal switch,foot interaction device by pressing by the foot,,,,,,,,,,pedál
+,SJ?,,Zařízení pro ovládání pomocí prstu,objekt pro lidskou interakci pro pohyb prstů,,Finger interaction device,human interacting object by finger operation,,,,,,,,,,Zařízení pro ovládání pomocí prstu
+,,SJA,Páčkový vypínač,zařízení pro ovládání pomocí prstu s použitím páky,páčkové zařízení,Flip switch,finger interaction device by lever operation,,,,,,,,,,páčkový vypínač
+,,SJB,Tlačítko,zařízení pro ovládání pomocí prstu stlačením,"tlačítko alarmu, tlačítko uzavření požárních dveří, klávesnice",Pushbutton,finger interaction device by pressing,,,,,,,,,,tlačítko
+,,SJC,Dotykový vypínač,zařízení pro ovládání pomocí prstu dotykem,"ukazovací zařízení, touchpad, trackpad",Touch actuator,finger interaction device by a touching,,,,,,,,,,dotykový vypínač
+,,SJD,Otočný vypínač,zařízení pro ovládání pomocí prstu otočením,otočný vypínač,Turning wheel,finger interaction device by advancing/reversing a wheel,,,,,,,,,,otočný vypínač
+,SK?,,Zařízení ovládané pohybem,objekt pro lidskou interakci pomocí pohybu nebo pozice,,Movement interaction device ,manual interacting object by its movement or positioning,,,,,,,,,,Zařízení ovládané pohybem
+,,SKA,Joystick,zařízení ovládané pohybem pomocí omezených pozičních a volitelných operací,"joystick, válečková myš",Joystick,movement interaction device by restricted positioning and selecting operations,,,,,,,,,,joystick
+,,SKB,Myš,zařízení ovládané pohybem pomocí omezených pozičních a volitelných operací,"myš, světelné ukazovátko",Mouse,movement interaction device  by unrestricted positioning and selecting operations,,,,,,,,,,myš
+,SZ?,,Víceúčelové ovládací zařízení,objekt pro lidskou interakci pomocí několika interaktivních metod,,Multi-interaction device,human interaction object with multiple kinds of interacting means,,,,,,,,,,Víceúčelové ovládací zařízení
+,,SZA,Ovládací panel,víceúčelové ovládací zařízení pro manuální metody,"servisní panel, ovládací panel, řídící panel",Operating panel,multi-interactinog device involving manual means,,,,,,,,,,ovládací panel
+T??,,,Objekty pro transformaci,objekt pro transformaci,,Transforming object,object for transforming,,,,,,,,,,Objekty pro transformaci
+,TA?,,Objekt transformující elektrickou energii,objekt pro transformaci elektrické energie beze změny mezi stejnosměrným a střídavým proudem,,Electric energy transforming object,transforming object of electric energy while retaining AC or DC,,,,,,,,,,Objekt transformující elektrickou energii
+,,TAA,Transformátor,objekt transformující elektrickou energii ze střídavého na střídavý proud beze změny frekvence,"olejový transformátor, oddělovací transformátor, Teslův transformátor, distribuční transformátor, napájecí transformátor",Transformer,electric energy transforming object from AC to AC without change of the frequency,,,,,,,,,,transformátor
+,,TAB,Měnič stejnosměrného proudu,objekt transformující elektrickou energii ze stejnosměrného na stejnosměrný proud,měnič stejnosměrného proudu,DC/DC converter,electric energy transforming object from DC to DC,,,,,,,,,,měnič stejnosměrného proudu
+,,TAC,Frekvenční měnič,objekt transformující elektrickou energii ze střídavého na střídavý proud se změnou frekvence,frekvenční měnič,Frequency converter,electric energy transforming object from AC to AC while changing the frequency,,,,,,,,,,frekvenční měnič
+,,TAD,Fázový měnič,objekt transformující elektrickou energii ze střídavého na střídavý proud se změnou úhlu mezi napětím a silou proudu,fázový měnič,Phase shifter,electric energy transforming object from AC to AC while shifting the angle between voltages and currents,,,,,,,,,,fázový měnič
+,TB?,,Objekt konvertující elektrickou energii,objekt pro transformaci elektrické energie mezi stejnosměrným a střídavým proudem,,Electric energy converting object,transforming object of electric energy changing between AC and DC,,,,,,,,,,Objekt konvertující elektrickou energii
+,,TBA,Usměrňovač,objekt konvertující elektrickou energii ze střídavého na stejnosměrný proud,usměrňovač,Rectifier,electric energy converting object converting from AC to DC,,,,,,,,,,usměrňovač
+,,TBB,Střídač,objekt konvertující elektrickou energii ze stejnosměrného na střídavý proud,střídač,Inverter,electric energy converting object converting from DC to AC,,,,,,,,,,střídač
+,,TBC,Obousměrný převodník,objekt konvertující elektrickou energii ze střídavého na stejnosměrný proud nebo ze stejnosměrného na střídavý proud,obousměrný převodník,Bidirectional converter,electric energy converting object converting from AC to DC or DC to AC,,,,,,,,,,obousměrný převodník
+,TC?,,Univerzální zdroj napájení,objekt pro transformaci elektrické energie ze stejnosměrného a střídavého proudu na stejnosměrný nebo střídavý proud,,Universal power supply,transforming object of electric energy from AC and DC to AC or DC,,,,,,,,,,univerzální zdroj napájení
+,,TCA,Univerzální napájení pro střídavý proud,univerzální zdroj napájení pro střídavý proud,"zdroj napájení, síťový zdroj napájení",Universal AC power supply,universal power supply providing AC,,,,,,,,,,univerzální napájení pro střídavý proud
+,,TCB,Univerzální napájení pro stejnosměrný proud,univerzální zdroj napájení pro stejnosměrný proud,"nabíječka, síťový zdroj napájení",Universal DC power supply,universal power supply providing DC,,,,,,,,,,univerzální napájení pro stejnosměrný proud
+,TF?,,Objekty konvertující signál,objekt pro transformaci signálu,,Signal converting object,transforming object of signal,,,,,,,,,,Objekty konvertující signál
+,,TFA,Zesilovač,"objekt konvertující signál, který ponechává formu signálu",zesilovač,Amplifier,signal converting object maintaining the signal form,,,,,,,,,,zesilovač
+,,TFB,Anténa,objekt konvertující signál mezi vedenou a bezdrátovou formou přenosu,"pevná anténa, parabolická anténa, balíza",Signal antenna,signal converting object between a wired and wireless form,,,,,,,,,,anténa
+,,TFC,Převodník,objekt konvertující signál mezi vedenými formami,"dekodér, modem, dsp, baluny",Signal converter,signal converting object between wired forms,,,,,,,,,,převodník
+,,TFD,Optický přijímač / vysílač,objekt konvertující signál mezi elektrickou a optickou formou,média konvertor,Optical receiver/transmiter,matter reshaping object by rolling or spinning,,,,,,,,,,optický přijímač / vysílač
+,,TFF,Telefon,objekt konvertující signál mezi zvukovými vlnami a elektrickým signálem,"telefon, výtahový telefon, nouzový telefon, mobilní telefon, radiový přijímač, radiový vysílač, interní telefon",Telephone,signal converting object between acoustic waves and electrical signals,,,,,,,,,,telefon
+,TL?,,Objekt mechanické transformace energie,objekt pro transformaci mechanické energie,,Mechanical energy transforming object,transforming object of mechanical energy,,,,,,,,,,Objekt mechanické transformace energie
+,,TLA,Převod,objekt mechanické transformace energie rychlosti,"výhybka, převodovka",Gear,mechanical energy transforming object modifying velocity,,,,,,,,,,Převod
+,,TLB,Měnič točivého momentu,objekt mechanické transformace energie točivého momentu,měnič točivého momentu,Torque converter,mechanical energy transforming object modifying torque,,,,,,,,,,měnič točivého momentu
+,,TLC,Páka,objekt mechanické transformace energie síly,páka,Lever,mechanical energy transforming object modifying force,,,,,,,,,,páka
+,TM?,,Objekt ubírající hmotu,objekt pro transformaci tvaru pomocí redukce hmoty,,Mass reduction object,transforming object of matter by mass reduction,,,,,,,,,,Objekt ubírající hmotu
+,,TMA,Mechanický ubírací objekt,objekt ubírající hmotu mechanicky,"vrtačka, hoblovačka, fréza, pila, úhlová bruska, děrovačka, bruska",Drilling machine,mass reduction object by a mechanical process,,,,,,,,,,vrtačka
+,,TMB,Tepelná řezačka,objekt ubírající hmotu termickým procesem,autogen,Thermal cutter,mass reduction object by a thermal process,,,,,,,,,,tepelná řezačka
+,,TMC,Leptací stroje,objekt ubírající hmotu chemickým procesem,leptací stroj,Etching machine,mass reduction object by a chemical process,,,,,,,,,,leptací stroje
+,TP?,,Objekt pro přetvoření materiálu,objekt pro transformaci tvaru pomocí přetvoření,,Matter reshaping object,transforming object of matter by shape reforming,,,,,,,,,,Objekt pro přetvoření materiálu
+,,TPA,Kovací stroj,objekt pro přetvoření materiálu kováním,kovací stroj,Forging machine,matter reshaping object by forging,,,,,,,,,,kovací stroj
+,,TPB,Vytlačovací stroj,objekt pro přetvoření materiálu vytlačováním,vytlačovací stroj,Extruder,matter reshaping object by extruding,,,,,,,,,,vytlačovací stroj
+,,TPC,Napínací stroj,objekt pro přetvoření materiálu natahováním,napínač drátu,Wire drawing machine,matter reshaping object by drawing,,,,,,,,,,napínací stroj
+,,TPD,Válcovací stroj,objekt pro přetvoření materiálu válcováním,"mandl, válcovací stroj",Rolling machine,,,,,,,,,,,Válcovací stroj
+,,TPE,Ohýbací stroj,objekt pro přetvoření materiálu ohýbáním,ohýbací stroj,Bending machine,matter reshaping object by bending,,,,,,,,,,Ohýbací stroj
+,,TPF,Elektromagnetický stroj pro tvarování,objekt pro přetvoření materiálu aplikací vysoké energie,elektromagnetický stroj pro tvarování,Electromagnetic forming machine,matter reshaping object by high energy rate forming,,,,,,,,,,elektromagnetický stroj pro tvarování
+,TR?,,Rostlina,transformující objekt záření pomocí fotosyntézy,,Organic plant,transforming object of radiation by photosynthesis,,,,,,,,,,Rostlina
+,,TRA,Strom,rostlina s dřevitým hlavním kmenem a která dosahuje většinou výšky minimálně 5m,"jehličnatý strom, listnatý strom, ovocný strom",Tree,organic plant with a single woody stem,,,,,,,,,,strom
+,,TRB,Keř,rostlina u které se dřevitý kmen u země dělí na několik stejně silných kmenů,"jehličnatý keř, ovocný keř, sazenice živého plotu, listnatý keř, okrasný keř",Shrub,organic plant with several woody stems,,,,,,,,,,keř
+,,TRC,Popínavá rostlina,"rostlina s dlouhými často měkkými šlahouny, které se šplhají vzhůru za světlem","popínavá rostlina, plazivá rostlina, liána",Climber,organic plant with long shoots with climbing organs,,,,,,,,,,popínavá rostlina
+,,TRD,Bylina,rostlina která nemá zdřevnatělou část nebo i má jen částečně,"letnička, travina, cibulovina, hlíznatá rostlina, trvalka",Herb,organic plant that is not woody or is insignificantly woody,,,,,,,,,,bylina
+U??,,,Objekt pro držení,Objekt pro lokalizaci jiných objektů,,Holding object,object for localising other objects,,,,,,,,,,Objekt pro držení
+,UA?,,Objekt pro umístění,objekt pro držení fixací na přesné pozici,,Positioning object,holding object by fixing at a defined position,,,,,,,,,,Objekt pro umístění
+,,UAA,Osvětlovací zařízení,objekt pro umístění zdroje světla,"armatura, lampa, stropní svítidlo, podlahové osvětlení, bodové osvětlení, parkové osvětlení, stolní lampa, osvětlení směrových sloupků",Light fixture,positioning object for conductor,,,,,,,,,,osvětlovací zařízení
+,,UAB,Průchodky,objekt pro umístění kabelů,"kabelová průchodka, hrdlo těsnění, průchodka pro potrubí",Cable gland,positioning object for cable,,,,,,,,,,Průchodky
+,,UAC,Izolátor,objekt pro umístění vodičů,izolátor,Isolator,positioning object for light source,,,,,,,,,,izolátor
+,,UAD,Bočnice schodiště,objekt pro umístění schodů,bočnice schodiště,Stair stringer,positioning object for tread,,,,,,,,,,bočnice schodiště
+,,UAE,Uchycení pláště,objekt pro umístění krycího objektu,"latě, hřeb, hřebenová lať, podomítková armovací mřížka, opěrné latě, kramle, profil podhledového stropu ",Batten,positioning object for cover,,,,,,,,,,uchycení pláště
+,,UAF,Opora rostlin,objekt pro umístění rostlin,"pergola, treláž, opora pro stromky",Stake,positioning object for plant,,,,,,,,,,opora rostlin
+,,UAG,Rozchodnice,objekt pro umístění vzdáleností mezi kolejnicemi,rozchodnice,Rail gauge,positioning object for rail spacing,,,,,,,,,,rozchodnice
+,,UAH ,Svorka,objekt pro umístění nářadí nebo díla,svorka,Clamp,positioning object for tool or work piece,,,,,,,,,,svorka
+,,UAJ,Stojan na kola,objekt pro umístění vozidla,stojan na kola,Vehicle stand,positioning object for vehicle,,,,,,,,,,stojan na kola
+,UB?,,Nosné předměty,objekt pro držení nebo oporu,,Carrying object,holding object by carrying,,,,,,,,,,Nosné předměty
+,,UBA,Konzola,nosný předmět mezi diskrétními pozicemi,"elektroinstalační podlahový kanál, kabelový žlab, nástěnná lišta, spojovací deska",Cable tray,carrying object between discrete positions,,,,,,,,,,konzola
+,,UBB,Závěs,nosný předmět v diskrétním bodu pomocí vertikální tažné síly,"mostní lano, nosné lano, závěs na ručníky, háček, řetěz, závěsné lano, držák na okapový žlab",Hanger,carrying object at a discrete position by vertical pulling,,,,,,,,,,závěs
+,,UBC,Schod,nosný předmět v diskrétním bodu pomocí schodů,schodnice,Tread,carrying object at a discrete position by steps,,,,,,,,,,schod
+,,UBD,Sloup,nosný předmět v diskrétním bodu pomocí vertikální tlakové síly,"sloup pouličního osvětlení, stožár, sloup elektrického vedení, pylon, stativ, schodišťové vřeteno",Mast,carrying object at a discrete position by vertical pushing,,,,,,,,,,sloup
+,,UBE,Stůl,nosný předmět na jisté úrovni pomocí zdvihu,"pracovní stůl, operační stůl, recepce, rýsovací prkno, pult",Table,carrying object at a discrete plane by pushing,,,,,,,,,,stůl
+,,UBF,Portál,nosný předmět mezi diskrétními pozicemi na určené úrovni,"portál, stožár trolejového vedení",Portal,carrying object between discrete positions at a defined level ,,,,,,,,,,portál
+,UC?,,Obklopující objekt,objekt pro držení pomocí obklopení,,Enclosing object,holding object by enclosing,,,,,,,,,,Obklopující objekt
+,,UCA,Přístrojové schránky,obklopující objekt aparátů,"přípojná skříň, přístrojová skříňka, instalační skříň, revizní skříň, rozvaděč, datová skříňka",Cubicle,enclosing object for devices,,,,,,,,,,přístrojové schránky
+,,UCB,Půda pro rostliny,obklopující objekt pro kořeny rostlin,půda pro rostliny,Plant soil,enclosing object for plant roots,,,,,,,,,,půda pro rostliny
+,,UCC,Kryty ventilačních zařízení,obklopující objekt pro bodovou ventilaci,"odvěrávací kryty, kuchyňská digestoř, laratorní skříňová digestoř",Cooker hood,enclosing object for spot ventilation,,,,,,,,,,kryty ventilačních zařízení
+,UL?,,Konstrukční objekt,"objekt pro držení, které formuje strukturální oporu",,Structural supporting object,holding object by forming a structural support,,,,,,,,,,Konstrukční objekt
+,,ULA,Nosná vrstva,konstrukční objekt v podobě agregované vrstvy materiálu,"lože pro vedení, výsadbové lože, štěrkové lože (železnice)",Base course,structural supporting object in form of an aggregate material layer  ,,,,,,,,,,nosná vrstva
+,,ULB,Konzola,"konstrukční objekt ve vyčnívající podobě, která tvoří oporu konstrukci nad ní",mostní konzola,Console,structural supporting object in form of a projection supporting an overlying structure,,,,,,,,,,konzola
+,,ULC,Základy,"konstrukční objekt v zakřivené nebo rovné lineární podobě, který přenáší tlaky na okolní médium","základ, podstavec, piloty",Pile,structural supporting object in a curved or straight linear form transferring compressing forces to surrounding media,,,,,,,,,,základy
+,,ULD,Sloup,"konstrukční objekt v zakřvené nebo rovné lineární podobě, který přenáší tlaky na další konstrukční objekty","sloup, pilíř, opěrná noha",Column,structural supporting object in a curved or straight linear form transferring compressing forces to other structural objects ,,,,,,,,,,sloup
+,,ULE,Trám,"konstrukční objekt v rovné lineární podobě, který odolá ohnutí","stropní nosník, základový trám, pražec, traverza",Beam,structural supporting object in a straight linear form withstanding bending moments,,,,,,,,,,trám
+,,ULF,Táhlo,"konstrukční objekt v rovné lineární podobě, který odolá tahové síle","nosné lano, upínací výztuha",Tension brace,structural supporting object in a straight linear form withstanding tensile forces ,,,,,,,,,,táhlo
+,,ULG,Zdicí prvky,konstrukční objekt v podobě bloku,"cihla, stěnový panel, pórobetonová tvárnice",Block,structural supporting object in form of a block ,,,,,,,,,,zdicí prvky
+,,ULH,Nosný oblouk,"konstrukční objekt v zakřivené linieární podobě, který odolá ohnutí",nosný oblouk,Arch,structural supporting object in a curved linear form withstanding bending moments ,,,,,,,,,,nosný oblouk
+,,ULJ,Nosná zeď,"konstrukční objekty v rovné nebo zakřivené ploše, který odolá tlaku a ohnutí","nosná zeď, sklepní zaklenutí, uložení mostních ložisek",Abutment,structural supporting object in a plane or curved surface form withstanding compression forces and bending moment,,,,,,,,,,nosná zeď
+,,ULK,Nosná deska,"konstrukční objekt v horizontální rovné ploše, který odolá ohnutí","balkonová deska, mostní deska, rozdělovací deska, základová deska",Slab plate,structural supporting object in laying a plane surface form withstanding bending moments,,,,,,,,,,nosná deska
+,,ULL,Opěrná zeď,"konstrukční objekt ve svislé poloze nebo zakřivené podobě, který odolá ohnutí","opěrná zeď, gabion, štětovnice, pažení",Retaining wall plate,"structural supporting object in a standing plane or curved surface form withstanding bending moments
+",,,,,,,,,,opěrná zeď
+,,ULM,Jádro zdi,"konstrukční objekt v ploše nebo zakřivené podobě, který odolá tlaku","základová stěna, zdivo",Wall plate,structural supporting object in a plane or curved surface form withstanding compression forces,,,,,,,,,,jádro zdi
+,,ULN,Plášť,"konstrukční objekt v ploše nebo zakřivené podobě, který odolá tažným silám",karoserie,Shell,structural supporting object a plane or curved surface form withstanding tensile forces,,,,,,,,,,plášť
+,,ULP,Klenba,"konstrukční objekt v zakřivené podobě, který odolá ohnutí","kupole, potrubní most",Continuous arch,structural supporting object in a curved surface form withstanding bending moments ,,,,,,,,,,klenba
+,,ULQ,Opěrná deska,"konstrukční objekt v ploše, který rozkládá váhu ve spojích","strojní fundament, tlaková deska, ložiskový práh",Bearing plate,structural supporting object a flat surface form distributing loads in joints ,,,,,,,,,,opěrná deska
+,,ULR,Nosné lano,"konstrukční objekt v zalomené linii, který odolá tažným silám",nosné lano,Catenary,structural supporting object in a curved linear form withstanding tensile forces,,,,,,,,,,nosné lano
+,UM?,,Objekt zesílení,objekt pro držení pomocí zesílení,,Reinforcing object,holding object by reinforcement,,,,,,,,,,Objekt zesílení
+,,UMA,Armovací tyče,objekt zesílení v podobě vsazené tyče,"armovací tyč, armovací železo, kotvící šroub, šrouby do země, vyztužovací půdní hřeby, předpjatá výztuž",Reinforcing rod,reinforcing object as an embedded rod,,,,,,,,,,armovací tyče
+,,UMB,Armovací sítě,objekt zesílení v podobě vsazené sítě nebo plátna,"geosíť, armovací tkanina, síť",Reinforcing mesh,reinforcing object as an embedded mesh or fabric,,,,,,,,,,armovací sítě
+,,UMC,Zesilující vrstvy,objekt zesílení v podobě vrstvy hmoty,"spodní asfaltová vrstva, roznášecí vrstva",Reinforcing mass layer,reinforcing object as a mass layer,,,,,,,,,,zesilující vrstvy
+,,UMD,Injektovaná hmota,objekt zesílení v podobě vsazeného materiálu,"injektáž, povrchová stabilizace, vápenocementová pilota, kamená pilota, injektáž penetrace",Reinforcing matter,reinforcing object as an embedded matter,,,,,,,,,,injektovaná hmota
+,,UME,Krycí plechy,objekt zesílení v podobě krycího plechu,krycí plech,Security strike plate,reinforcing object as a lock latch,,,,,,,,,,krycí plechy
+,,UMF,Přechodové klíny,objekt zesílení v podobě sanace podloží,přechodový klín,Splice,reinforcing object as an intermediate filling,,,,,,,,,,přechodové klíny
+,,UMG,Vertikální drenáž,objekt zesílení v podobě vertikální drenážní vrstvy,vertikální drenáž,Soil vertical drain,reinforcing object by vertical draining,,,,,,,,,,vertikální drenáž
+,,UMH,Nástřik betonu,objekt zesílení v podobě nástřiku betonu,nástřik betonu,Concrete spurting,reinforcing object by concrete spurting,,,,,,,,,,nástřik betonu
+,,UMJ,Betonové těsnění,objekt zesílení v podobě betonového těsnění,betonové těsnění,Concrete lining,reinforcing object by concrete lining,,,,,,,,,,betonové těsnění
+,,UMK,Výztuha,objekt zesílení v podobě výztuhy,"opěrný systém, převázka pažení",Stiffener,reinforcing object by stiffener,,,,,,,,,,výztuha
+,,UML,Diagonální vazba,objekt zesílení v podobě siagonální vazby,"příčný nosník, zavětrovací pás",Diagonal bonding,reinforcing object by diagonal bonding,,,,,,,,,,diagonální vazba
+,,UMM,Stabilizační kabel,objekt zesílení v podobě kabeláže,"kabel, kotevní lano",Stabilizing cable,reinforcing object as cables,,,,,,,,,,stabilizační kabel
+,,UMN,Vodorovná lišta,objekt zesílení v podobě horizontálního spojení,příčka dřevostavby,Horizontal rail,reinforcing object as a horizontal rail,,,,,,,,,,vodorovná lišta
+,,UMP,Tlakový val,"objekt zesílení, který svou protiváhou udržuje zvýšenou stabilitu půdy",tlakový val,Earth pressure embankment,reinforcing object which by its counterweight stabilizes soil,,,,,,,,,,tlakový val
+,UN?,,Rámující objekt,objekt pro držení pomocí orámování,,Framing object,holding object by framing other objects,,,,,,,,,,Rámující objekt
+,,UNA,Pevný rám,rámující objekt s pevným rámem,"dveřní zárubeň, okenní rám, obruba, okenní středová příčka",Fixed frame,framing object with a fixed frame,,,,,,,,,,pevný rám
+,,UNB,Práh,rámující objekt v nejnižší části dveřního otvoru,práh,Threshold,framing object with the lowest part of gate abutting,,,,,,,,,,práh
+,,UNC,Pohyblivý rám,rámující objekt s pohyblivým rámem,okenní křídlo,Movable frame,framing object with a moveable frame,,,,,,,,,,pohyblivý rám
+,,UND,Příčka,"rámující objekt, který dělí jiný objekt",okenní kříž,Glazing bar frame,framing object dividing a sash or door,,,,,,,,,,příčka
+,UP?,,Spojovací objekt,objekt pro držení pomocí nestatického spoje,,Jointing object,holding object by non-static jointing,,,,,,,,,,Spojovací objekt
+,,UPA,Ložisko,spojovací objekt polocí ložiska,"kuličkové ložisko, nápravové ložisko, stavební ložisko, válečkové ložisko, kluzné ložisko",Bearing,jointing object by bearing,,,,,,,,,,ložisko
+,,UPB,Pohyblivý spoj,Spojovací objekt pohyblivým mechanickým spojem,"pant, dilatační zařízení, pohyblivá spára, spojovací destička, kulový kloub",Hinge,jointing object by mechanical joint,,,,,,,,,,pant
+,,UPC,Chemický spoj,Spojovací objekt chemickou vazbou,"stavební silikon, cementový tmel, spárovací pěna, spárovací hmota",Chemical joint,jointing object by chemical bonding,,,,,,,,,,chemický spoj
+,UQ?,,Upevňovací objekt,objekt pro držení pomocí statického spoje,,Fastening object,holding object by static jointing,,,,,,,,,,Upevňovací objekt
+,,UQA,Pevné upevnění,upevňovací objekt permanentními pevnými mechanickými prostředky,"šroub, spojovací kolík, nýt, hřebík, slepý nýt",Fixed fastening,fastening object by rigid and permanent mechanical means,,,,,,,,,,pevné upevnění
+,,UQB,Odstranitelné upevnění,upevňovací objekt pevnými a vratnými mechanickými prostředky,"kramle, nosná kotva, montážní lišta, roznášecí podložka, matka",Removable fastening,fastening object by rigid and reversible mechanically means,,,,,,,,,,odstranitelné upevnění
+,,UQC,Chemická vazba,upevňovací objekt chemickou vazbou,"cementový tmel, spárovací pěna, chemická kotva, lepený spoj, malta, svařovaný spoj, pájený spoj",Chemical bond,fastening object by chemical bonding,,,,,,,,,,chemická vazba
+,UT?,,Nivelační objekt,objekt pro držení pomocí nivelace,,Levelling object,holding object for levelling,,,,,,,,,,Nivelační objekt
+,,UTA,Výplň,"nivelační objekt, který dává ploše určitý profil pomocí doplnění materiálu","výplň, násep, lehčená výplň, zásyp, tmel",Filling,levelling object providing a defined profiled surface of plane by adding material,,,,,,,,,,výplň
+,,UTB,Výkopový materiál,"nivelační objekt, který dává ploše určitý profil pomocí odstranění materiálu","výkop v zemině, výkop ve skále",Excavation,levelling object providing a defined profiled surface of plane by removing material,,,,,,,,,,výkopový materiál
+,UU?,,Stávající terén,objekt pro držení pomocí stávajícího terénu,,Existing ground,holding object being existing ground,,,,,,,,,,Stávající terén
+,,UUA,Skála,stávající terén tvořen skálou,skála,Rock,existing ground of rock,,,,,,,,,,Skála
+,,UUB,Pohyblivá zemina,stávající terén tvořen pohyblivou zeminou,"štěrk, písek",Friction soil,existing ground of friction soil,,,,,,,,,,pohyblivá zemina
+,,UUC,Soudržná zemina,stávající terén tvořen soudržnou zeminou,jíl,Cohesive soil,existing ground of cohesive soil,,,,,,,,,,soudržná zemina
+,,UUD,Organická zemina,stávající terén tvořen organickou zeminou,rašelina,Organic soil,existing ground of organic soil,,,,,,,,,,organická zemina
+,,UUE,Plnící materiál,stávající terén tvořen plnícím materiálem,plnící materiál,Filled material,existing ground of filled material,,,,,,,,,,plnící materiál
+W??,,,Vodicí objekt,objekt určený k vedení z jednoho místa na druhé,,Guiding object,object for leading from one place to another,,,,,,,,,,Vodicí objekt
+,WB?,,Objekt pro vedení vysokého napětí,vodící objekt pro vysoké napětí,,High voltage electric energy guiding object,guiding object of high voltage electric energy,,,,,,,,,,Objekt pro vedení vysokého napětí
+,,WBA,Sběrnice pro vysoké napětí,objekt pro vedení vysokého napětí ve sběrnici,"napájecí kolejnice, závěs trolejového vedení, kabelový žlab",High voltage busbar,high voltage electric energy guiding object by a busbar,,,,,,,,,,sběrnice pro vysoké napětí
+,,WBB,Kabel vysokého napětí,objekt pro vedení vysokého napětí izolovaným vedením,"elektrický kabel, elektrické vedení",High voltage cable,high voltage electric energy guiding object by a cable,,,,,,,,,,Kabel vysokého napětí
+,,WBC,Otevřené vedení vysokého napětí,objekt pro vedení vysokého napětí neizolovaným vedením,zesilovací vedení,High voltage wire,high voltage electric energy guiding object by a wire,,,,,,,,,,otevřené vedení vysokého napětí
+,,WBD,Průchodka pro vysoké napětí,"objekt pro vedení vysokého napětí přes uzavřený prostor, zeď nebo bariéru",průchodka pro vysoké napětí,High voltage bushing,"high voltage electric energy guiding object through an enclosure, wall or barrier",,,,,,,,,,průchodka pro vysoké napětí
+,WD?,,Objekt pro vedení nízkého napětí,vodící objekt nízkého napětí,,Low voltage electric energy guiding object,guiding object of low voltage electric energy,,,,,,,,,,Objekt pro vedení nízkého napětí
+,,WDA,Sběrnice pro nízké napětí,objekt pro vedení nízkého napětí ve sběrnici,"závěs pro vedení nízkého napětí, kabelový žlab",Low voltage busbar,low voltage electric energy guiding object by a busbar,,,,,,,,,,sběrnice pro nízké napětí
+,,WDB,Kabel nízkého napětí,objekt pro vedení nízkého napětí izolovaným vedením,"elektrický kabel, elektrické vedení, kabel, distribuční kabel",Low voltage cable,low voltage electric energy guiding object by a cable,,,,,,,,,,kabel nízkého napětí
+,,WDC,Otevřené vedení nízkého napětí,objekt pro vedení nízkého napětí neizolovaným vedením,otevřené vedení nízkého napětí,Low voltage wire,low voltage electric energy guiding object by a wire,,,,,,,,,,otevřené vedení nízkého napětí
+,,WDD,Průchodka pro nízké napětí,"objekt pro vedení nízkého napětí přes uzavřený prostor, zeď nebo bariéru",průchodka pro nízké napětí,Low voltage bushing,"low voltage electric energy guiding object through an enclosure, wall or barrier",,,,,,,,,,průchodka pro nízké napětí
+,WE?,,Objekt pro vedení referenčního potenciálu,vodící objekt referenčního potenciálu,,Reference potential guiding object,guiding object of a reference potential,,,,,,,,,,Objekt pro vedení referenčního potenciálu
+,,WEA,Zemnící pásek,objekt pro vedení referenčního potenciálu do země sběrnicí,zemnící pásek,Earthing rail,reference potential guiding object of earth by a busbar,,,,,,,,,,zemnící pásek
+,,WEB,Zemnící vodič,objekt pro vedení referenčního potenciálu do země vedením,zemnící vodič,Earthing cable,reference potential guiding object of earth by a cable,,,,,,,,,,zemnící vodič
+,,WEC,Referenční pásek,objekt pro vedení referenčního potenciálu sběrnicí,referenční pásek,Equipotential bonding rail,reference potential guiding object by a busbar,,,,,,,,,,referenční pásek
+,,WED,Referenční vodič,objekt pro vedení referenčního potenciálu vedením,referenční vodič,Equipotential bonding cable,reference potential guiding object by a cable,,,,,,,,,,referenční vodič
+,WG?,,Objekt pro vedení elektrického signálu,vodicí objekt pro elektrické signály,,Electric signal guiding object,guiding object for electric signals,,,,,,,,,,Objekt pro vedení elektrického signálu
+,,WGA,Ovládací kabel,objekt pro vedení elektrického signálu za účelem kontroly a měření,"kabel požárního hlášení, řídící kabel, ovládací kabel",Control cable,electric signal guiding object for controlling and measuring,,,,,,,,,,ovládací kabel
+,,WGB,Datový kabel,objekt pro vedení elektrického signálu za účelem přenosu dat,"sběrnicový kabel (BUS kabel), datový kabel, signální kabel, KNX kabel",Data cable,electric signal guiding object for data transmission,,,,,,,,,,datový kabel
+,,WGC,Datová průchodka,objekt pro vedení elektrického signálu přes uzavřený prostor nebo zeď,datová průchodka,Electric signal bushing,electric signal guiding object through an enclosure or wall,,,,,,,,,,datová průchodka
+,WH?,,Objekt pro vedení světla,vodící objekt pro světlo,,Light guiding object,guiding object for light,,,,,,,,,,Objekt pro vedení světla
+,,WHA,Optický kabel,objekt pro vedení světla za účelem přenosu signálu,optický kabel,Fibre optical cable,light guiding object for signal transmission,,,,,,,,,,optický kabel
+,,WHB,Optický světelný kabel,objekt pro vedení světla za účelem přenosu světla,optické vlákno,Optical light fibre,light guiding object for light transmission,,,,,,,,,,optický světelný kabel
+,,WHC,Čočka,objekt pro vedení světla s určitým lomením světla,čočka,Lens,light guiding object for defined light refraction,,,,,,,,,,čočka
+,,WHD,Zrcadlo,objekt pro vedení světla s určitým odrazem světla,zrcadlo,Mirror,light guiding object for defined light reflexion,,,,,,,,,,zrcadlo
+,WJ?,,Objekt pro vedení zvuku,vodící objekt pro zvuk,,Sound guiding object,guiding object for sound,,,,,,,,,,Objekt pro vedení zvuku
+,,WJA,Reflektor zvuku,objekt pro vedení zvuku pomocí odrazu,akustická deska,Sound reflector,sound guiding object by reflection,,,,,,,,,,reflektor zvuku
+,WL?,,Objekt pro vedení pevné látky,vodící objekt pro pevné látky,,Solid matter guiding object,guiding object of solid matter in open enclosure,,,,,,,,,,Objekt pro vedení pevné látky
+,,WLA,Válečkový dopravník,objekt pro vedení pevné látky přes válečky,válečkový dopravník,Roller table,solid matter guiding object by rolling,,,,,,,,,,válečkový dopravník
+,,WLB,Skluzavka,objekt pro vedení pevné látky přes nakloněnou rovinu,skluzavka,Chute,solid matter guiding object by sliding,,,,,,,,,,skluzavka
+,WM?,,Objekt otevřeného vedení,vodící objekt pro tekutiny v otevřeném vedení,,Open enclosure guiding object,guiding object of fluid flow in open enclosure,,,,,,,,,,Objekt otevřeného vedení
+,,WMA,Drenážní vrstva,objekt otevřeného vedení ve vrstvě,"drenážní koberec, drenážní deska, zasakovací vrstva",Drainage layer,open enclosure guiding object in a layer,,,,,,,,,,drenážní vrstva
+,,WMB,Žlab,objekt otevřeného vedení kapaliny ve žlabu,"žlab, odvodňovací příkop, podlahový žlab, odtokový žlab, okap",Gutter,open enclosure guiding object for liquid in open conduit,,,,,,,,,,žlab
+,,WMC,Lemování,objekt otevřeného vedení kapaliny na otevřené ploše,"okení parapet, oplechování",Drain liquid flashing,open enclosure guiding object for liquid with an open surface,,,,,,,,,,lemování
+,,WMD,Okap,objekt otevřeného vedení kapaliny přes převis,okapový plech,Drip nose,open enclosure guiding object for liquid by projection,,,,,,,,,,okap
+,,WME,Žlábek,objekt otevřeného vedení kapalin do žlabu přes profil,žlábek,Gutter drip,open enclosure guiding object for liquid by liquid-draining profile,,,,,,,,,,žlábek
+,,WMF,Drenážní trubka,objekt otevřeného vedení preforovanou trubkou,"drenážní trubka, vsakovací trubka, odvzdušňovací trubky",Drainpipe,open enclosure guiding object by perforated pipe,,,,,,,,,,drenážní trubka
+,,WMG,Vsakovací šachta,objekt otevřeného vedení otevřenou šachtou,"odvětrávací šachta, zasakovací šachta",Infiltration chamber,open enclosure guiding object in a chamber,,,,,,,,,,vsakovací šachta
+,WP?,,Objekt uzavřeného vedení,vodicí objekt proudění hmoty v uzavřeném prostoru,,Closed enclosure guiding object,guiding object of matter flow in closed enclosure,,,,,,,,,,Objekt uzavřeného vedení
+,,WPA,Trubka,objekt uzavřeného vedení v kruhovém pevném tvaru,"kanalizační potrubí, vláknité trubky, odtokové potrubí, servisní vedení, propustek, vzduchovod ",Pipe,closed enclosure guiding object in a circular rigid form,,,,,,,,,,trubka
+,,WPB,Roura,objekt uzavřeného vedení v nekruhovém pevném tvaru,"spalinovod, výfukové potrubí, vzduchovod, komín",Duct,closed enclosure guiding object in a non-circular rigid form,,,,,,,,,,roura
+,,WPC,Hadice,objekt uzavřeného vedení ve flexibilním tvaru,"hadice na vzduch, hadice na vodu, ventilační hadice, přepadová trubka",Hose,closed enclosure guiding object in a flexible form,,,,,,,,,,hadice
+,WQ?,,Mechanický objekt pro vedení energie,vodící objekt pro mechanickou energii,,Mechanical energy guiding object,guiding object of mechanical energy,,,,,,,,,,Mechanický objekt pro vedení energie
+,,WQA,Hnací hřídel,mechanický objekt pro vedení energie pomocí ramene,hnací hřídel,Drive axle,mechanical energy guiding object by a shaft,,,,,,,,,,hnací hřídel
+,,WQB,Řemen,mechanický objekt pro vedení energie pomocí řemenu,"klínový řemen, ozubený řemen, lano, ocelový pás, ocelové lano",Drive belt,mechanical energy guiding object by a belt,,,,,,,,,,řemen
+,,WQC,Řetěz,mechanický objekt pro vedení energie pomocí řetězu,řetěz,Drive chain,mechanical energy guiding object by a chain,,,,,,,,,,řetěz
+,,WQD,Spojka,mechanický objekt pro vedení energie pomocí spojky,spojka,Drive link,mechanical energy guiding object by a linkage,,,,,,,,,,spojka
+,,WQE,Kolo,mechanický objekt pro vedení energie pomocí kola,"kladka, řetězové kolo, ozubené kolo, lanový kotouč, řemenice",Wheel,mechanical energy guiding object by a wheel,,,,,,,,,,kolo
+,,WQF,Ozubená tyč,mechanický objekt pro vedení energie pomocí ozubené tyče,ozubená tyč,Toothed bar,mechanical energy guiding object by a toothed bar,,,,,,,,,,ozubená tyč
+,,WQG,Hydraulická hadice,mechanický objekt pro vedení energie pomocí spojení tekutinou,"hydraulická hadice, tlakovzdušná hadice",Hydraulic hose,mechanical energy guiding object by a fluid link,,,,,,,,,,hydraulická hadice
+,WR?,,Kolejový objekt,vodící objekt pro objekty na kolejích,,Rail object,guiding object for track bound objects,,,,,,,,,,Kolejový objekt
+,,WRA,Koleje,kolejový objekt poskytující vedenou cestu,"přídržnice, pojížděná hrana, vedoucí hrana, kluzná kolejnice, žlábkové kolejnice",Track,rail object providing a directed path,,,,,,,,,,koleje
+,,WRB,Kolejové křížení,kolejový objekt pro křížení,kolejové křížení,Track crossing,rail object providing a crossing,,,,,,,,,,kolejové křížení
+,WV?,,Objekt pro vedení tepelné energie,vodicí objekt pro tepelnou energii,,Thermal energy guiding object,guiding object for thermal energy,,,,,,,,,,Objekt pro vedení tepelné energie
+,,WVA,Teplonosná hmota,objekt pro vedení tepelné energie pomocí pevné hmoty,parafín,Thermal conductor,thermal energy guiding object by a solid mass,,,,,,,,,,teplonosná hmota
+,,WVB,Teplonosné médium,objekt pro vedení tepelné energie pomocí statické kapaliny,"olej, voda",Thermal paste,thermal energy guiding object by a static fluid mass,,,,,,,,,,teplonosné médium
+,WZ?,,Objekt vedoucí více typů toků,vodící objekt pro více typů toku,,Multiple flow guiding object,guiding object with multiple kinds of flows,,,,,,,,,,Objekt vedoucí více typů toků
+,,WZA,Hybridní kabel,"objekt vedoucí více typů toků pro elektrickou energii, elektrické signály, optické signály, mechanickou energii a/nebo tekutinu",hybridní kabel,Umbilical cable,"multiple flow guiding object of electrical energy, mechanical energy, electrical signal, optical signals and/or fluid",,,,,,,,,,hybridní kabel
+X??,,,Propojující objekt,Objekt pro propojení objektu,,Interfacing object,object for interfacing an object,,,,,,,,,,Propojující objekt
+,XB?,,Přípojný objekt pro vysoké napětí,propojující objekt pro vysoké napětí,,High voltage connecting object,interfacing object for high voltage electric power,,,,,,,,,,Přípojný objekt pro vysoké napětí
+,,XBA,Svorkovnice pro vysoké napětí,přípojný objekt pro vysoké napětí pro jedno připojení,svorkovnice pro vysoké napětí,High voltage terminal,high voltage connecting object for a single connection,,,,,,,,,,svorkovnice pro vysoké napětí
+,,XBB,Spojení pro vysoké napětí,přípojný objekt pro vysoké napětí pro několik vidlicových připojení,spojení pro vysoké napětí,High voltage socket,high voltage connecting object for pluggable connections,,,,,,,,,,spojení pro vysoké napětí
+,,XBC,Rozvodnice pro vysoké napětí,přípojný objekt pro vysoké napětí pro několik pevných připojení,rozvodnice pro vysoké napětí,High voltage terminal box,high voltage connecting object for multiple fixed connections,,,,,,,,,,rozvodnice pro vysoké napětí
+,XD?,,Přípojný objekt pro nízké napětí,propojující objekt pro nízké napětí,,Low voltage connecting object,interfacing object for low voltage electric power,,,,,,,,,,Přípojný objekt pro nízké napětí
+,,XDA,Elektrické spoje,přípojný objekt pro nízké napětí pro jedno pevné připojení,"napájecí terminál, stožárová svorkovnice",Electric terminal,low voltage connecting object for a single connection,,,,,,,,,,elektrické spoje
+,,XDB,Zásuvka,přípojný objekt pro nízké napětí pro vidlicové připojení,"nabíjecí box, podlahová zásuvka, zásuvka na osvětlení, nabíjecí stanice",Low voltage power socket,low voltage connecting object for pluggable connections,,,,,,,,,,zásuvka
+,,XDC,Rozvodnice,přípojný objekt pro nízké napětí pro několik pevných připojení,"rozvodnice, rozvodný blok",Terminal box,low voltage connecting object for multiple fixed connections,,,,,,,,,,rozvodnice
+,,XDD,Elektrické zapojení,přípojný objekt pro nízké napětí pro pevné připojení jednoho flexibilního kabelu pro elektrické přístroje,"přípojková skříň, pevné zapojení, nástěná skříň",Power outlet,low voltage connecting object for fixed connection of a flexible cable for a current-using equipment,,,,,,,,,,elektrické zapojení
+,,XDE,Rozdělovač,přípojný objekt pro nízké napětí pro několik vidlicově připojených elektrických přístrojů,"rozdělovač pro osvětlení, podlahový rozdělovač, rozvodna, nabíjecí stanice",Power distributer,low voltage connecting object of multiple pluggable current-using equipment,,,,,,,,,,rozdělovač
+,XE?,,Přípojný objekt pro potenciál,propojující objekt pro zemnění nebo referenční potenciál,,Potential connecting object,interfacing object for earth or reference potential,,,,,,,,,,Přípojný objekt pro potenciál
+,,XEA,Zemnící svorka,přípojný objekt pro potenciál pro uzemění,"zemnící svorka, zemnící šroub",PE terminal,potential connecting object for connecting to PE-conductors,,,,,,,,,,zemnící svorka
+,,XEB,Svorkovnice pro vyrovnání potenciálu,přípojný objekt pro potenciál k vyrovnání potenciálu,svorkovnice pro vyrovnání potenciálu,PB terminal,potential connecting object for connecting to PB conductors,,,,,,,,,,svorkovnice pro vyrovnání potenciálu
+,,XEC,Funkční uzemnění,přípojný objekt pro potenciál k funkčnímu uzemnění,funkční uzemnění,FE terminal,potential connecting object for connecting to FE-conductors,,,,,,,,,,funkční uzemnění
+,,XED,Funkční vyrovnání potenciálu,přípojný objekt pro potenciál k funkčnímu spojení,funkční vyrovnání potenciálu,FB terminal,potential connecting object for connecting to FB conductors,,,,,,,,,,funkční vyrovnání potenciálu
+,,XEE,Zemnič,"přípojný objekt pro potenciál, který poskytuje elektrické spojení se zemí","zemnící tyč, zemnící deska, hloubkový zemnič",Earth electrode,potential connecting object providing electrical contact with earth,,,,,,,,,,zemnič
+,,XEF,Hromosvod,"přípojný objekt pro potenciál, který spojuje blesk s elektrickým obvodem",hromosvod,Collector,potential connecting object connecting lightning to an electrical circuit,,,,,,,,,,hromosvod
+,XG?,,Přípojný objekt elektrického signálu,propojující objekt pro elektrické signály,,Electric signal connecting object,interfacing object for electric signals,,,,,,,,,,Přípojný objekt elektrického signálu
+,,XGA,Signálové propojení,přípojný objekt elektrického signálu pro jeden spojovací bod,"svorka, šroubová svorkovnice, pájená svorkovnice",Signal socket,electric signal connecting object for single pluggable interconnections,,,,,,,,,,signálové propojení
+,,XGB,Signálová zásuvka,přípojný objekt elektrického signálu pro jeden přípojný bod,"datová zásuvka, signálová zásuvka, telefoní zásuvka, zásuvka",Terminal,electric signal connecting object for a single interconnection,,,,,,,,,,signálová zásuvka
+,,XGC,Rozdělovač,přípojný objekt elektrického signálu pro několik přípojných bodů,"rozbočovač, ústředna",Patch panel,electric signal connecting object for multiple pluggable interconnections,,,,,,,,,,rozdělovač
+,,XGD,Patch panel,přípojný objekt elektrického signálu pro několik linek,patch panel,Signal distributor,electric signal connecting object among several lines,,,,,,,,,,patch panel
+,XH?,,Přípojný objekt pro světlo,propojující objekt pro optické kabely,,Light connecting object,interfacing object of optical fibres,,,,,,,,,,Přípojný objekt pro světlo
+,,XHA,Zásuvka optického vedení,přípojný objekt pro světlo s jedním nebo více přípojnými body,zásuvka optického vedení,Fixed light fibre socket,light connecting object for pluggable connections,,,,,,,,,,zásuvka optického vedení
+,XK?,,Objekt spojující tok,propojující objekt na počátku řízeného toku,,Collecting interfacing object,interfacing object collecting for feeding into a flow,,,,,,,,,,Objekt spojující tok
+,,XKA,Dřez,objekt spojující tok pro odpadní vodu,"bidet, umyvadlo, kuchyňský dřez, nádoba na mytí, umývací koryto",Sink,collecting interfacing object of wastewater,,,,,,,,,,dřez
+,,XKB,Toaleta,objekt spojující tok pro výkaly a moč,toaleta,Toilet,collecting interfacing object of faeces and urine,,,,,,,,,,toaleta
+,,XKC,Pisoár,objekt spojující tok pro moč,pisoár,Urinal,collecting interfacing object of urine only,,,,,,,,,,pisoár
+,,XKD,Záchytné nádoby,objekt spojující tok pro přebytečnou tekutinu z technického systému,"tácek, nádoba na vodu",Drip cup,collecting interfacing object of surplus liquid from technical system,,,,,,,,,,záchytné nádoby
+,,XKE,Podlahová vpusť,objekt spojující tok pro přebytek,"podlahová vpusť, palubní odtok, odtok kanalizace",Floor drain,collecting interfacing object of surplus,,,,,,,,,,podlahová vpusť
+,XM?,,Přípojný objekt pro uzavřený tok,propojující objekt pro uzavřený tok hmoty,,Sealed flow connecting object,Interfacing object for sealed material flow,,,,,,,,,,Přípojný objekt pro uzavřený tok
+,,XMA,Snímatelná trubková spojka,snímatelný přípojný objekt pro uzavřený tok,"nátrubek, hadicová spojka, spojka Banjo, rychlospojka",Tube flange,sealed flow connecting object by reversible form,,,,,,,,,,snímatelná trubková spojka
+,,XMB,Pevná trubková spojka,pevný přípojný objekt pro uzavřený tok,"pájený spoj, přírubový spoj",Tube fitting ,sealed flow connecting object by an inrreversible form,,,,,,,,,,pevná trubková spojka
+,XN?,,Pevný spoj,propojující objekt pro pevné přenesení mechanických sil,,Non-detachable coupling,interfacing object for continuous transfer of mechanical forces,,,,,,,,,,pevný spoj
+,,XNA,Přírubová spojka,pevný spoj ramen pomocí několika přírub,přírubový spoj,Flange coupler,non-detachable coupling of shafts by a pair of flanges,,,,,,,,,,přírubová spojka
+,,XNB,Hrdlový spoj,pevný spoj ramen pomocí děleného nátrubku,hrdlový spoj,Split-muff coupler,non-detachable coupling of shafts by a splitted sleeve,,,,,,,,,,hrdlový spoj
+,,XNC,Spojení tvarovým stykem,pevný spoj mezi rameny pomocí do sebe zapadajících zubů a drážek,hirth,Hirth coupler,non-detachable coupling between parallel shafts by teeth and grooves meshing together,,,,,,,,,,spojení tvarovým stykem
+,,XND,Kardanový kloub,pevný spoj mezi neparalelními rameny,kardanový kloub,Cardan joint,non-detachable coupling for transmitting power of misaligned shafts,,,,,,,,,,kardanový kloub
+,,XNE,Táhlové ústrojí,"pevný spoj, který zachycuje a spojuje dva pohyblivé objekty",spřáhlo,Buffer-and-chain coupler,non-detachable coupling to catch and connect two moving objects,,,,,,,,,,táhlové ústrojí
+,,XNF,Šroubový spoj,pevný spoj pro fixaci mezi dvěma pohyblivýmy objekty,šroubový spoj,Link-and pin coupler,non-detachable coupling to fix two moving objects.,,,,,,,,,,šroubový spoj
+,XP?,,Snímatelná spojka,propojující objekt pro nekontinuelní přenášení mechanických sil,,Detachable coupling,interfacing object for discontinuous transfer of mechanical forces,,,,,,,,,,Snímatelná spojka
+,,XPA,Třecí spojka,snímatelná spojka pomocí tření,"hydraulická spojka, odstředivá spojka",Friction clutch,detachable coupling for power transmission by means of frictional forces,,,,,,,,,,třecí spojka
+,,XPB,Hydraulická spojka,snímatelná spojka pomocí hdrodynamického efektu,hydraulická spojka,Fluid coupling,detachable coupling for power transmission by means of hydrodynamic effect.,,,,,,,,,,Hydraulická spojka
+,,XPC,Volnoběžné spojky,snímatelná spojka pomocí vzájemného uzamčení,"pružinová volnoběžka, jehlová volnoběžka, blokovací volnoběžka",Overrunning clutch,detachable coupling for power transmission by interlocking means,,,,,,,,,,volnoběžné spojky
+,,XPD,Magnetický spoj,snímatelná spojka pomocí magnetické síly,"dvěřní magnet, magnetický zámek",Magnetic hoist,detachable coupling for load by means of magnetic force,,,,,,,,,,magnetický spoj
+,XS?,,Objekt propojující úrovně,propojující objekt mezi dvěmi úrovněmi,,Level connecting component,interfacing object connecting levels,,,,,,,,,,Objekt propojující úrovně
+,,XSA,Podesta,objekt propojující úrovně v podobě horizontální plochy spojené se schodištěm,schodištní podesta,Landing,level connecting object in the form of a horizontal plane connected to a flight of stairs,,,,,,,,,,podesta
+,,XSB,Schodiště,objekt propojující úrovně v podobě několika schodů,"rovné schodiště, točité schodiště, schůdky",Flight of stairs,level connecting object in the form of sequential steps,,,,,,,,,,schodiště
+,,XSC,Žebřík,objekt propojující úrovně pomocí série nášlapných příček,"fasádní žebřík, střešní žebřík",Ladder,level connecting object in the form of sequential rungs or bars,,,,,,,,,,žebřík
+,,XSD,Rampa,objekt propojující úrovně v podobě nakloněné roviny,"rampa pro bezbariérový přístup, člunová rampa",Ramp,level connecting object in the form of an inclined plane,,,,,,,,,,rampa
+,,XSE,Požární tyč,objekt propojující úrovně v podobě vertikální tyče,požární tyč,Fireman’s pole,level connecting object in the form of a vertical pole,,,,,,,,,,požární tyč
+,XT?,,Objekt propojující prostory,propojující objekt mezi prostory,,Space linking object,interfacing object linking space,,,,,,,,,,Objekt propojující prostory
+,,XTA,Otvor,objekt propojující prostory v podobě průchodu,"otvor, vhoz poštovní schránky, tunel, otvor pro schodiště",Hole,space linking object in the form of penetration,,,,,,,,,,otvor
+,,XTB,Dutina,objekt propojující prostory v podobě dutiny,"jáma, vrtaná dutina, výklenek, kaverna",Box-out,space linking object in the form of cavity,,,,,,,,,,dutina
+,XZ?,,Přípojný objekt pro několik typů toku,propojující objekt pro několik typů toku,,Multiple flow connector object,interfacing object with multiple kinds of flows,,,,,,,,,,Přípojný objekt pro několik typů toku
+,,XZA,Hybridní konektor,"přípojný objekt pro několik typů toku pro elektrickou energii, elektrické signály, optické signály a/nebo kapalinu",hybridní konektor,Multi connector,"multiple flow connector object of electric energy, electrical signal, optical signals and/or fluid",,,,,,,,,,hybridní konektor
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
