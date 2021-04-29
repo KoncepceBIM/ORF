@@ -270,6 +270,11 @@
           <xs:documentation xml:lang="cs">Montáže technických zařízení</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="VN">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Vedlejší náklady</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="OSTATNI">
         <xs:annotation>
           <xs:documentation xml:lang="cs">Ostatní, jiné</xs:documentation>
@@ -323,6 +328,20 @@
       <xs:maxLength value="255" />
     </xs:restriction>
   </xs:simpleType>
+
+  <xs:simpleType name="THodnotaSazbyDPH">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Hodnota sazby DPH jako desetinné číslo v intervalu 0.0 - 1.0, kdy například 15% je zapsáno jako 0.15
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0.0"/>
+      <xs:maxInclusive value="1.0"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
   <xs:simpleType name="TKodPolozky">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1174,7 +1193,7 @@
       <xs:element name="Popis" minOccurs="0" maxOccurs="1" type="xs:string">
         <xs:annotation>
           <xs:documentation xml:lang="cs">
-            Popis sazby DPH
+            Popis sazby DPH („Základní“, „Snížená“, „Nulová“)
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -1186,7 +1205,7 @@
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="SazbaDPH" type="xs:decimal">
+    <xs:attribute name="SazbaDPH" type="THodnotaSazbyDPH">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Sazba DPH
