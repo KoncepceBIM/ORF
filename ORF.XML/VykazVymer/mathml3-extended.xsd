@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Vykaz"
+    targetNamespace="http://www.w3.org/1998/Math/MathML"
+    elementFormDefault="qualified"
+    xmlns="http://www.koncepcebim.cz/Vykaz.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+>
+  <xs:redefine schemaLocation="mathml3-complete.xsd">
+    <!--Extended with model related values-->
+    <xs:group name="ContExp">
+      <xs:choice>
+        <xs:group ref="m:ContExp"></xs:group>
+        <xs:element name="cmn" type="m:model-number.content"/>
+        <xs:element name="cmc" type="m:model-count.content"/>
+        <xs:element name="cmm" type="m:model-measure.content"/>
+      </xs:choice>
+    </xs:group>
+    <!--Removed presentation content-->
+    <xs:complexType name="cn.content" mixed="true">
+      <xs:complexContent>
+        <xs:restriction base="m:cn.content">
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="m:mglyph"/>
+            <xs:element ref="m:sep"/>
+          </xs:choice>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+    <!--Removed presentation content-->
+    <xs:complexType name="ci.content" mixed="true">
+      <xs:complexContent>
+        <xs:restriction base="m:ci.content">
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="m:mglyph"/>
+          </xs:choice>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+    <!--Removed presentation content-->
+    <xs:complexType name="csymbol.content" mixed="true">
+      <xs:complexContent>
+        <xs:restriction base="m:csymbol.content">
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="m:mglyph"/>
+          </xs:choice>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+    <!--Empty deprecated attributes-->
+    <xs:attributeGroup name="mglyph.deprecatedattributes">
+    </xs:attributeGroup>
+  </xs:redefine>
+
+  <!--Content model measure-->
+  <xs:complexType name="model-measure.content">
+    <xs:complexContent>
+      <xs:extension base="m:model-takeoff.base">
+        <xs:sequence>
+          <xs:element name="entity" minOccurs="0" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:attributeGroup ref="m:model-entity-identity"></xs:attributeGroup>
+            </xs:complexType>
+          </xs:element>
+          <xs:group ref="m:geometry" minOccurs="0" maxOccurs="1">
+          </xs:group>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!--Content model number-->
+  <xs:complexType name="model-number.content">
+    <xs:complexContent>
+      <xs:extension base="m:model-takeoff.base">
+        <xs:attributeGroup ref="m:model-entity-identity"></xs:attributeGroup>
+        <xs:attribute name="property_set" use="optional"></xs:attribute>
+        <xs:attribute name="property" use="required"></xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!--Content model count-->
+  <xs:complexType name="model-count.content">
+    <xs:complexContent>
+      <xs:extension base="m:model-takeoff.base">
+        <xs:sequence>
+          <xs:element name="entity" minOccurs="1" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:attributeGroup ref="m:model-entity-identity"></xs:attributeGroup>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!--Base type for model related values-->
+  <xs:complexType name="model-takeoff.base">
+    <xs:sequence>
+      <xs:element name="description" minOccurs="0" maxOccurs="1"></xs:element>
+    </xs:sequence>
+    <xs:attributeGroup ref="m:CommonAtt"/>
+    <xs:attribute name="value" type="xs:decimal" use="required"></xs:attribute>
+  </xs:complexType>
+
+  <xs:attributeGroup name="model-entity-identity">
+    <xs:attribute name="model_path" use="optional" type="xs:anyURI"></xs:attribute>
+    <xs:attribute name="entity_id" use="required" type="xs:string"></xs:attribute>
+  </xs:attributeGroup>
+
+  <!--Measure Geometry-->
+  <xs:complexType name="point">
+    <xs:attribute name="x" use="required" type="xs:double"/>
+    <xs:attribute name="y" use="required" type="xs:double"/>
+    <xs:attribute name="z" use="required" type="xs:double"/>
+  </xs:complexType>
+
+  <xs:element name="pt" type="m:point"></xs:element>
+
+  <xs:complexType name="line">
+    <xs:sequence>
+      <xs:element ref="m:pt" minOccurs="2" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="line" type="m:line"></xs:element>
+
+  <xs:complexType name="multi-line">
+    <xs:sequence>
+      <xs:element ref="m:line" minOccurs="1" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="multi-line" type="m:multi-line"></xs:element>
+
+  <xs:complexType name="polygon">
+    <xs:sequence>
+      <xs:element ref="m:pt" minOccurs="2" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="polygon" type="m:polygon"></xs:element>
+
+  <xs:complexType name="multi-polygon">
+    <xs:sequence>
+      <xs:element ref="m:polygon" minOccurs="1" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="multi-polygon" type="m:multi-polygon"></xs:element>
+
+  <xs:complexType name="polyhedron">
+    <xs:sequence>
+      <xs:element ref="m:polygon" minOccurs="1" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="polyhedron" type="m:polyhedron"></xs:element>
+
+  <xs:group name="geometry">
+    <xs:choice>
+      <xs:element ref="m:pt"></xs:element>
+      <xs:element ref="m:line"></xs:element>
+      <xs:element ref="m:multi-line"></xs:element>
+      <xs:element ref="m:polygon"></xs:element>
+      <xs:element ref="m:multi-polygon"></xs:element>
+      <xs:element ref="m:polyhedron"></xs:element>
+    </xs:choice>
+  </xs:group>
+
+</xs:schema>
