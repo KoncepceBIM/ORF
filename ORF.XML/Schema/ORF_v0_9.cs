@@ -2996,6 +2996,9 @@ public enum TTypPolozky {
     M,
     
     /// <remarks/>
+    VN,
+    
+    /// <remarks/>
     OSTATNI,
 }
 
