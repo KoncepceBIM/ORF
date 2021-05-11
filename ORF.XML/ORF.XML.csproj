@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Schema\ORF_v0.1.xsd">
+    <None Update="Schema\ORF_v0.9.xsd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="VykazVymer\mathml3-complete.xsd">
