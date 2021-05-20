@@ -1032,7 +1032,7 @@ public partial class TJednotkaZavislaNaKontextu : TJednotka {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
 public partial class TKonverzniJednotka : TJednotka {
     
-    private TJednotkaSI zakladniJednotkaField;
+    private TJednotka zakladniJednotkaField;
     
     private string nazevField;
     
@@ -1048,7 +1048,7 @@ public partial class TKonverzniJednotka : TJednotka {
     }
     
     /// <remarks/>
-    public TJednotkaSI ZakladniJednotka {
+    public TJednotka ZakladniJednotka {
         get {
             return this.zakladniJednotkaField;
         }
@@ -1100,6 +1100,28 @@ public partial class TKonverzniJednotka : TJednotka {
         }
         set {
             this.odsazeniField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+public partial class TOdvozenaJednotka : TJednotka {
+    
+    private TKomponentaJednotky[] komponentaField;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("Komponenta")]
+    public TKomponentaJednotky[] Komponenta {
+        get {
+            return this.komponentaField;
+        }
+        set {
+            this.komponentaField = value;
         }
     }
 }
@@ -1311,28 +1333,6 @@ public enum TPredponaSI {
     
     /// <remarks/>
     YOCTO,
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-public partial class TOdvozenaJednotka : TJednotka {
-    
-    private TKomponentaJednotky[] komponentaField;
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Komponenta")]
-    public TKomponentaJednotky[] Komponenta {
-        get {
-            return this.komponentaField;
-        }
-        set {
-            this.komponentaField = value;
-        }
-    }
 }
 
 /// <remarks/>
@@ -3382,4 +3382,27 @@ public enum TVerze {
     /// <remarks/>
     [System.Xml.Serialization.XmlEnumAttribute("v1.0")]
     v10,
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+[System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.koncepcebim.cz/ORF_v0.1.xsd", IsNullable=false)]
+public partial class Jednotky {
+    
+    private TJednotka[] jednotkaField;
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("Jednotka")]
+    public TJednotka[] Jednotka {
+        get {
+            return this.jednotkaField;
+        }
+        set {
+            this.jednotkaField = value;
+        }
+    }
 }

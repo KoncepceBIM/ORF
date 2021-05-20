@@ -6,6 +6,7 @@ namespace ORF.XML.Examples
     {
         static void Main(string[] args)
         {
+            PredefinedUnits.Run();
             UnitsExample.Run();
         }
     }

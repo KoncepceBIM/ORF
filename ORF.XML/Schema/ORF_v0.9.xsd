@@ -870,7 +870,7 @@
     <xs:annotation>
       <xs:documentation xml:lang="cs">Abstraktní datový typ pro všechny definice jednotek</xs:documentation>
     </xs:annotation>
-    <xs:attribute name="Id" type="xs:ID" use="required">
+    <xs:attribute name="Id" type="xs:ID" use="optional">
       <xs:annotation>
         <xs:documentation xml:lang="cs">
           Lokální identifikátor jednotky v souboru ORF. Ostatní elementy v souboru se budou na
@@ -943,7 +943,7 @@
     <xs:complexContent>
       <xs:extension base="TJednotka">
         <xs:sequence>
-          <xs:element name="ZakladniJednotka" type="TJednotkaSI" minOccurs="1"/>
+          <xs:element name="ZakladniJednotka" type="TJednotka" minOccurs="1"/>
         </xs:sequence>
         <xs:attribute name="Nazev" type="xs:string" use="required"/>
         <xs:attribute name="Symbol" type="xs:string" use="required"/>
@@ -2441,7 +2441,15 @@
       <xs:field xpath="@Id"/>
     </xs:key>
   </xs:element>
+  
   <xs:element name="Klasifikace" type="TKlasifikace">
-    
+  </xs:element>
+  
+  <xs:element name="Jednotky">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Jednotka" type="TJednotka" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
   </xs:element>
 </xs:schema>
