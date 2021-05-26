@@ -1753,12 +1753,10 @@
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:complexType name="TUzelRozpoctu">
+  <xs:complexType name="TUzel" abstract="true">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
-        Element reprezentující uzel v hierarchii rozpočtu. Nejběžnější typ uzlu je "Díl". Hloubka struktury uzlů
-        není v ORF omezena. Každý uzel může zároveň obsahovat přímo položky rozpočtu. Ceny položek rozpočtu se
-        sčítají v této hierarchii až na výslednou cenu na úrovni stavebního objektu a následně celého rozpočtu.
+        Element reprezentující uzel v hierarchii rozpočtu.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -1775,7 +1773,7 @@
               <xs:field xpath="@Ref"/>
             </xs:keyref>
           </xs:element>
-          <xs:element name="UzelRozpoctu" type="TUzelRozpoctu" minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="UzelRozpoctu" type="TUzel" minOccurs="0" maxOccurs="unbounded">
             <xs:annotation>
               <xs:documentation xml:lang="cs">
                 Podřízené uzly rozpočtu (nižší stupeň hierarchie)
@@ -1790,6 +1788,20 @@
             </xs:annotation>
           </xs:element>
         </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="TUzelRozpoctu">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">
+        Element reprezentující uzel v hierarchii rozpočtu. Nejběžnější typ uzlu je "Díl". Hloubka struktury uzlů
+        není v ORF omezena. Každý uzel může zároveň obsahovat přímo položky rozpočtu. Ceny položek rozpočtu se
+        sčítají v této hierarchii až na výslednou cenu na úrovni stavebního objektu a následně celého rozpočtu.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="TUzel">
         <xs:attribute name="Typ" type="TTypUzlu" use="required">
           <xs:annotation>
             <xs:documentation xml:lang="cs">
@@ -1822,34 +1834,7 @@
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="TIdentita">
-        <xs:sequence>
-          <xs:element name="Zatrideni" type="TTridaRef" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="cs">
-                Zařazení stavebního objektu do vybrané klasifikace
-              </xs:documentation>
-            </xs:annotation>
-            <xs:keyref name="ObjClassKeyRef" refer="ClassKey">
-              <xs:selector xpath="."/>
-              <xs:field xpath="@Ref"/>
-            </xs:keyref>
-          </xs:element>
-          <xs:element name="UzelRozpoctu" type="TUzelRozpoctu" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="cs">
-                Podřízené uzly rozpočtu (nižsí stupeň hierarchie)
-              </xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element name="Polozka" type="TPolozkaRozpoctu" minOccurs="0" maxOccurs="unbounded">
-            <xs:annotation>
-              <xs:documentation xml:lang="cs">
-                Položky rozpočtu
-              </xs:documentation>
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
+      <xs:extension base="TUzel">
         <!-- Povinne z vyhlasky -->
         <xs:attribute name="KSO" type="xs:string" use="required">
           <xs:annotation>
