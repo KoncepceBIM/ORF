@@ -26,8 +26,8 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-    [XmlRootAttribute("ORF", Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd", IsNullable = false)]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("ORF", Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd", IsNullable = false)]
     public partial class TORF
     {
         #region Private fields
@@ -155,7 +155,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TProjekt")]
     public partial class TProjekt : TIdentita
     {
@@ -173,6 +173,7 @@ namespace ORF.XML
         {
             _umisteni = new TPoloha();
             _adresa = new TAdresa();
+            _mena = TMena.CZK;
         }
 
         /// <summary>
@@ -227,6 +228,7 @@ namespace ORF.XML
         /// Měna pro informace týkající se ceny
         /// </summary>
         [XmlAttribute(AttributeName = "Mena")]
+        [DefaultValue(TMena.CZK)]
         public TMena Mena
         {
             get
@@ -283,7 +285,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TAdresa")]
     public partial class TAdresa
     {
@@ -428,7 +430,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TMetodikaMereni")]
     public partial class TMetodikaMereni
     {
@@ -581,7 +583,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TJednotkaRef")]
     public partial class TJednotkaRef
     {
@@ -619,7 +621,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TSazbaDPH")]
     public partial class TSazbaDPH
     {
@@ -717,7 +719,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TKomponentaJednotky")]
     public partial class TKomponentaJednotky
     {
@@ -789,7 +791,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TJednotka")]
     public abstract partial class TJednotka
     {
@@ -831,7 +833,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TPenezniJednotka")]
     public partial class TPenezniJednotka : TJednotka
     {
@@ -867,7 +869,7 @@ namespace ORF.XML
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TMena")]
     public enum TMena
     {
@@ -1060,7 +1062,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TJednotkaZavislaNaKontextu")]
     public partial class TJednotkaZavislaNaKontextu : TJednotka
     {
@@ -1127,7 +1129,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TKonverzniJednotka")]
     public partial class TKonverzniJednotka : TJednotka
     {
@@ -1268,7 +1270,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TOdvozenaJednotka")]
     public partial class TOdvozenaJednotka : TJednotka
     {
@@ -1317,7 +1319,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TJednotkaSI")]
     public partial class TJednotkaSI : TJednotka
     {
@@ -1387,7 +1389,7 @@ namespace ORF.XML
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TNazevJednotkySI")]
     public enum TNazevJednotkySI
     {
@@ -1565,7 +1567,7 @@ namespace ORF.XML
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TPredponaSI")]
     public enum TPredponaSI
     {
@@ -1678,7 +1680,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TCenovaSoustava")]
     public partial class TCenovaSoustava
     {
@@ -1846,7 +1848,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TTrida")]
     public partial class TTrida
     {
@@ -1996,8 +1998,8 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-    [XmlRootAttribute("Klasifikace", Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd", IsNullable = false)]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("Klasifikace", Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd", IsNullable = false)]
     public partial class TKlasifikace
     {
         #region Private fields
@@ -2202,7 +2204,7 @@ namespace ORF.XML
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TTypKlasifikace")]
     public enum TTypKlasifikace
     {
@@ -2226,7 +2228,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TOsoba")]
     public partial class TOsoba
     {
@@ -2353,7 +2355,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TOrganizace")]
     public partial class TOrganizace
     {
@@ -2585,7 +2587,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TDefinice")]
     public partial class TDefinice
     {
@@ -2794,7 +2796,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TPozadovanaVlastnost")]
     public partial class TPozadovanaVlastnost
     {
@@ -3000,7 +3002,7 @@ namespace ORF.XML
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TTypHodnoty")]
     public enum TTypHodnoty
     {
@@ -3019,7 +3021,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TOrganizaceRef")]
     public partial class TOrganizaceRef
     {
@@ -3060,7 +3062,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TSazbaDPHRef")]
     public partial class TSazbaDPHRef
     {
@@ -3101,7 +3103,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TJednotkovaCena")]
     public partial class TJednotkovaCena
     {
@@ -3168,7 +3170,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TMetodikaMereniRef")]
     public partial class TMetodikaMereniRef
     {
@@ -3880,6 +3882,7 @@ namespace ORF.XML
     /// <summary>
     /// Number
     /// </summary>
+    [XmlIncludeAttribute(typeof(ValueFromModel))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
@@ -4027,6 +4030,110 @@ namespace ORF.XML
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("ValueFromModel")]
+    public partial class ValueFromModel : Cn
+    {
+        #region Private fields
+        private string _modelpath;
+        private string _entityid;
+        private string _propertyset;
+        private string _property;
+        #endregion
+
+        [XmlAttribute(DataType = "anyURI", AttributeName = "modelpath")]
+        public string Modelpath
+        {
+            get
+            {
+                return _modelpath;
+            }
+            set
+            {
+                _modelpath = value;
+            }
+        }
+
+        [XmlAttribute(AttributeName = "entityid")]
+        public string Entityid
+        {
+            get
+            {
+                return _entityid;
+            }
+            set
+            {
+                _entityid = value;
+            }
+        }
+
+        [XmlAttribute(AttributeName = "propertyset")]
+        public string Propertyset
+        {
+            get
+            {
+                return _propertyset;
+            }
+            set
+            {
+                _propertyset = value;
+            }
+        }
+
+        [XmlAttribute(AttributeName = "property")]
+        public string Property
+        {
+            get
+            {
+                return _property;
+            }
+            set
+            {
+                _property = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ModelpathSpecified
+        {
+            get
+            {
+                return (Equals(_modelpath, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool EntityidSpecified
+        {
+            get
+            {
+                return (Equals(_entityid, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PropertysetSpecified
+        {
+            get
+            {
+                return (Equals(_propertyset, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PropertySpecified
+        {
+            get
+            {
+                return (Equals(_property, null) != true);
+            }
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
     [XmlTypeAttribute(Namespace = "http://www.w3.org/1998/Math/MathML", IncludeInSchema = false)]
     [XmlRootAttribute("ItemsChoiceType")]
     public enum ItemsChoiceType
@@ -4138,7 +4245,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TMnozstvi")]
     public partial class TMnozstvi
     {
@@ -4267,7 +4374,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TCenovaSoustavaRef")]
     public partial class TCenovaSoustavaRef
     {
@@ -4308,7 +4415,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TPolozkaRozpoctu")]
     public partial class TPolozkaRozpoctu
     {
@@ -4911,7 +5018,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TExterniEntita")]
     public partial class TExterniEntita
     {
@@ -5034,7 +5141,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TSkupinaVlastnosti")]
     public partial class TSkupinaVlastnosti
     {
@@ -5145,7 +5252,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TVlastnost")]
     public abstract partial class TVlastnost
     {
@@ -5329,7 +5436,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TPozadovanaVlastnostRef")]
     public partial class TPozadovanaVlastnostRef
     {
@@ -5370,7 +5477,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TVlastnostDatum")]
     public partial class TVlastnostDatum : TVlastnost
     {
@@ -5416,7 +5523,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TVlastnostBoolean")]
     public partial class TVlastnostBoolean : TVlastnost
     {
@@ -5462,7 +5569,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TVlastnostIntegral")]
     public partial class TVlastnostIntegral : TVlastnost
     {
@@ -5508,7 +5615,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TVlastnostReal")]
     public partial class TVlastnostReal : TVlastnost
     {
@@ -5554,7 +5661,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TVlastnostDecimal")]
     public partial class TVlastnostDecimal : TVlastnost
     {
@@ -5600,7 +5707,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TVlastnostText")]
     public partial class TVlastnostText : TVlastnost
     {
@@ -5641,7 +5748,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TTridaRef")]
     public partial class TTridaRef
     {
@@ -5677,7 +5784,7 @@ namespace ORF.XML
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TTypPolozky")]
     public enum TTypPolozky
     {
@@ -5710,7 +5817,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TPoloha")]
     public partial class TPoloha
     {
@@ -5785,7 +5892,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TIdentita")]
     public abstract partial class TIdentita
     {
@@ -5942,7 +6049,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TUzel")]
     public abstract partial class TUzel : TIdentita
     {
@@ -6071,7 +6178,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TObjekt")]
     public partial class TObjekt : TUzel
     {
@@ -6114,7 +6221,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TUzelRozpoctu")]
     public partial class TUzelRozpoctu : TUzel
     {
@@ -6176,7 +6283,7 @@ namespace ORF.XML
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TTypUzlu")]
     public enum TTypUzlu
     {
@@ -6192,7 +6299,7 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TRozpocet")]
     public partial class TRozpocet : TIdentita
     {
@@ -6400,7 +6507,7 @@ namespace ORF.XML
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("TVerze")]
     public enum TVerze
     {
@@ -6412,8 +6519,8 @@ namespace ORF.XML
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd")]
-    [XmlRootAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v0.1.xsd", IsNullable = false)]
+    [XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd", IsNullable = false)]
     public partial class Jednotky
     {
         #region Private fields

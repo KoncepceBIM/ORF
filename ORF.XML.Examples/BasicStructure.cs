@@ -29,6 +29,12 @@ namespace ORF.XML.Examples
                                 Predpona = TPredponaSI.KILO,
                                 PredponaSpecified = true
                             }
+                        },
+                        new TJednotkaZavislaNaKontextu
+                        {
+                            Id = "u_16",
+                            Nazev = "Kus",
+                            Symbol = "ks"
                         }
                     }
                 },
@@ -93,8 +99,20 @@ namespace ORF.XML.Examples
 
                                                                                                 Items = new object[]
                                                                                                 {
-                                                                                                    new Cn { Value = 1.8 },
-                                                                                                    new Cn { Value = 3.8 }
+                                                                                                    new ValueFromModel { 
+                                                                                                        Value = 1.8, 
+                                                                                                        Modelpath = "ABC_456_Model.ifc",
+                                                                                                        Entityid = "0ma8jNZV9AnwbYak9012AW",
+                                                                                                        Propertyset = "CZ_Base_Quantities",
+                                                                                                        Property = "Length"
+                                                                                                    },
+                                                                                                    new ValueFromModel { 
+                                                                                                        Value = 3.8 ,
+                                                                                                        Modelpath = "ABC_456_Model.ifc",
+                                                                                                        Entityid = "1iQXL_8d1BdQHrPU$IKgI4",
+                                                                                                        Propertyset = "CZ_Base_Quantities",
+                                                                                                        Property = "Length"
+                                                                                                    }
                                                                                                 },
                                                                                                 ItemsElementName = new ItemsChoiceType[] {
                                                                                                     ItemsChoiceType.cn,
@@ -108,9 +126,27 @@ namespace ORF.XML.Examples
 
                                                                                                 Items = new object[]
                                                                                                 {
-                                                                                                    new Cn { Value = 2 },
-                                                                                                    new Cn { Value = 1.5 },
-                                                                                                    new Cn { Value = 200 }
+                                                                                                    new ValueFromModel { 
+                                                                                                        Value = 2,
+                                                                                                        Modelpath = "ABC_456_Model.ifc",
+                                                                                                        Entityid = "1iQXL_8d1BdQHrPU$IKgI4",
+                                                                                                        Propertyset = "CZ_Base_Quantities",
+                                                                                                        Property = "Height"
+                                                                                                    },
+                                                                                                    new ValueFromModel { 
+                                                                                                        Value = 1.5,
+                                                                                                        Modelpath = "ABC_456_Model.ifc",
+                                                                                                        Entityid = "1iQXL_8d1BdQHrPU$IKgI4",
+                                                                                                        Propertyset = "CZ_Base_Quantities",
+                                                                                                        Property = "Width"
+                                                                                                    },
+                                                                                                    new ValueFromModel { 
+                                                                                                        Value = 200,
+                                                                                                        Modelpath = "ABC_456_Model.ifc",
+                                                                                                        Entityid = "1iQXL_8d1BdQHrPU$IKgI4",
+                                                                                                        Propertyset = "CZ_Base_Quantities",
+                                                                                                        Property = "Depth"
+                                                                                                    }
                                                                                                 },
                                                                                                 ItemsElementName = new ItemsChoiceType[] {
                                                                                                     ItemsChoiceType.cn,
@@ -124,7 +160,7 @@ namespace ORF.XML.Examples
                                                                                             ItemsChoiceType.apply
                                                                                         }
                                                                                     },
-                                                                                    new Ci { Type = CiType.real, TypeSpecified = true, Value = "A" }
+                                                                                    new Ci { Type = CiType.real, Value = "A" }
                                                                                 },
                                                                                 ItemsElementName = new ItemsChoiceType[]{ 
                                                                                     ItemsChoiceType.apply,
@@ -132,11 +168,223 @@ namespace ORF.XML.Examples
                                                                                 }
                                                                             } 
                                                                         }
+                                                                    },
+                                                                    new Mrow
+                                                                    {
+                                                                        ItemElementName = ItemChoiceType2.semantics,
+                                                                        Item = new Semantics {
+                                                                            Annotation = "Odečet trub a odečet vozovky:",
+                                                                            ItemElementName = ItemChoiceType1.apply,
+                                                                            Item = new Apply {
+                                                                                Item = new Csymbol(),
+                                                                                ItemElementName = ItemChoiceType.eq,
+
+                                                                                Items = new object [] {
+                                                                                    new Apply
+                                                                                    {
+                                                                                        Item = new Csymbol(),
+                                                                                        ItemElementName = ItemChoiceType.sum,
+
+                                                                                        Items = new object []
+                                                                                        {
+                                                                                            new Cn { Value = -113.1 },
+                                                                                            new Cn { Value = -226.68 }
+                                                                                        },
+                                                                                        ItemsElementName = new ItemsChoiceType[] {
+                                                                                            ItemsChoiceType.cn,
+                                                                                            ItemsChoiceType.cn
+                                                                                        }
+                                                                                    },
+                                                                                    new Ci { Type = CiType.real, Value = "B" }
+                                                                                },
+                                                                                ItemsElementName = new ItemsChoiceType[]{
+                                                                                    ItemsChoiceType.apply,
+                                                                                    ItemsChoiceType.ci
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    new Mrow
+                                                                    {
+                                                                        ItemElementName = ItemChoiceType2.semantics,
+                                                                        Item = new Semantics {
+                                                                            Annotation = "Výkop rýh pro betonové prahy:",
+                                                                            ItemElementName = ItemChoiceType1.apply,
+                                                                            Item = new Apply {
+                                                                                Item = new Csymbol(),
+                                                                                ItemElementName = ItemChoiceType.eq,
+
+                                                                                Items = new object [] {
+                                                                                    new Apply
+                                                                                    {
+                                                                                        Item = new Csymbol(),
+                                                                                        ItemElementName = ItemChoiceType.times,
+
+                                                                                        Items = new object []
+                                                                                        {
+                                                                                            new Cn { Value = 10.0 },
+                                                                                            new Cn { Value = 2.0 },
+                                                                                            new Cn { Value = 0.5 },
+                                                                                            new Cn { Value = 0.7 },
+                                                                                            new Cn { Value = 1.0 }
+                                                                                        },
+                                                                                        ItemsElementName = new ItemsChoiceType[] {
+                                                                                            ItemsChoiceType.cn,
+                                                                                            ItemsChoiceType.cn,
+                                                                                            ItemsChoiceType.cn,
+                                                                                            ItemsChoiceType.cn,
+                                                                                            ItemsChoiceType.cn
+                                                                                        }
+                                                                                    },
+                                                                                    new Ci { Type = CiType.real, Value = "C" }
+                                                                                },
+                                                                                ItemsElementName = new ItemsChoiceType[]{
+                                                                                    ItemsChoiceType.apply,
+                                                                                    ItemsChoiceType.ci
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    new Mrow
+                                                                    {
+                                                                        ItemElementName = ItemChoiceType2.semantics,
+                                                                        Item = new Semantics {
+                                                                            Annotation = "Odečet trub a odečet vozovky:",
+                                                                            ItemElementName = ItemChoiceType1.apply,
+                                                                            Item = new Apply {
+                                                                                Item = new Csymbol(),
+                                                                                ItemElementName = ItemChoiceType.eq,
+
+                                                                                Items = new object [] {
+                                                                                    new Apply
+                                                                                    {
+                                                                                        Item = new Csymbol(),
+                                                                                        ItemElementName = ItemChoiceType.sum,
+
+                                                                                        Items = new object []
+                                                                                        {
+                                                                                            new Cn { Value = -113.1 },
+                                                                                            new Cn { Value = -226.68 }
+                                                                                        },
+                                                                                        ItemsElementName = new ItemsChoiceType[] {
+                                                                                            ItemsChoiceType.cn,
+                                                                                            ItemsChoiceType.cn
+                                                                                        }
+                                                                                    },
+                                                                                    new Ci { Type = CiType.real, Value = "B" }
+                                                                                },
+                                                                                ItemsElementName = new ItemsChoiceType[]{
+                                                                                    ItemsChoiceType.apply,
+                                                                                    ItemsChoiceType.ci
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    new Mrow
+                                                                    {
+                                                                        ItemElementName = ItemChoiceType2.semantics,
+                                                                        Item = new Semantics {
+                                                                            Annotation = "Celkem:",
+                                                                            ItemElementName = ItemChoiceType1.apply,
+                                                                            Item = new Apply {
+                                                                                Item = new Csymbol(),
+                                                                                ItemElementName = ItemChoiceType.eq,
+
+                                                                                Items = new object [] {
+                                                                                    new Apply
+                                                                                    {
+                                                                                        Item = new Csymbol(),
+                                                                                        ItemElementName = ItemChoiceType.sum,
+
+                                                                                        Items = new object []
+                                                                                        {
+                                                                                            new Ci {Value = "A"},
+                                                                                            new Ci {Value = "B"},
+                                                                                            new Ci {Value = "C"}
+                                                                                        },
+                                                                                        ItemsElementName = new ItemsChoiceType[] {
+                                                                                            ItemsChoiceType.ci,
+                                                                                            ItemsChoiceType.ci,
+                                                                                            ItemsChoiceType.ci
+                                                                                        }
+                                                                                    },
+                                                                                    new Ci { Type = CiType.real, Value = "D" }
+                                                                                },
+                                                                                ItemsElementName = new ItemsChoiceType[]{
+                                                                                    ItemsChoiceType.apply,
+                                                                                    ItemsChoiceType.ci
+                                                                                }
+                                                                            }
+                                                                        }
                                                                     }
                                                                 }
                                                             },
 
                                                         }
+                                                    , new TPolozkaRozpoctu {
+                                                        Id = GetId(),
+                                                        Typ = TTypPolozky.HSV,
+                                                        TypSpecified = true,
+                                                        Nazev = "Počet kusů potrubí",
+                                                        Popis = "Počet kusů potrubí",
+                                                        Mnozstvi = new TMnozstvi
+                                                        {
+                                                            Mnozstvi = 5,
+                                                            Jednotka = new TJednotkaRef{ Ref = "u_16"},
+                                                            VykazVymer = new List<Mrow>
+                                                            {
+                                                                new Mrow
+                                                                {
+                                                                    Item = new Apply {
+                                                                        Item = new Csymbol(),
+                                                                        ItemElementName = ItemChoiceType.sum,
+
+                                                                        Items = new object[]{ 
+                                                                            new ValueFromModel
+                                                                            {
+                                                                                Value = 1,
+                                                                                Entityid =  PseudoIFCGuid(),
+                                                                                Modelpath = "ABC_456_Model.ifc"
+                                                                            },
+                                                                            new ValueFromModel
+                                                                            {
+                                                                                Value = 1,
+                                                                                Entityid = PseudoIFCGuid(),
+                                                                                Modelpath = "ABC_456_Model.ifc"
+                                                                            },
+                                                                            new ValueFromModel
+                                                                            {
+                                                                                Value = 1,
+                                                                                Entityid = PseudoIFCGuid(),
+                                                                                Modelpath = "ABC_456_Model.ifc"
+                                                                            },
+                                                                            new ValueFromModel
+                                                                            {
+                                                                                Value = 1,
+                                                                                Entityid = PseudoIFCGuid(),
+                                                                                Modelpath = "ABC_456_Model.ifc"
+                                                                            },
+                                                                            new ValueFromModel
+                                                                            {
+                                                                                Value = 1,
+                                                                                Entityid = PseudoIFCGuid(),
+                                                                                Modelpath = "ABC_456_Model.ifc"
+                                                                            }
+                                                                        },
+                                                                        ItemsElementName = new ItemsChoiceType[]{ 
+                                                                            ItemsChoiceType.cn,
+                                                                            ItemsChoiceType.cn,
+                                                                            ItemsChoiceType.cn,
+                                                                            ItemsChoiceType.cn,
+                                                                            ItemsChoiceType.cn,
+                                                                        }
+
+                                                                    },
+                                                                    ItemElementName = ItemChoiceType2.apply
+                                                                }
+                                                            }
+                                                        }
+                                                    }
                                                     }
                                                 }
                                             }
@@ -153,11 +401,21 @@ namespace ORF.XML.Examples
             using (var w = File.CreateText("orf_test.xml"))
             using (var xml = XmlWriter.Create(w, new XmlWriterSettings { Indent = true, IndentChars = "  "}))
             {
-                serializer.Serialize(xml, orf);
+                var ns = new XmlSerializerNamespaces();
+                ns.Add("o", "http://www.koncepcebim.cz/ORF_v1.0.xsd");
+                ns.Add("m", "http://www.w3.org/1998/Math/MathML");
+                ns.Add("xs", "http://www.w3.org/2001/XMLSchema-instance");
+
+                serializer.Serialize(xml, orf, ns);
             }
         }
 
         private static int counter = 1000;
         private static string GetId() => $"i{counter++}";
+
+        private static string PseudoIFCGuid()
+        {
+            return Convert.ToBase64String(Guid.NewGuid().ToByteArray()).Replace("/", "-").Replace("+", "_").Replace("=", "");
+        }
     }
 }
