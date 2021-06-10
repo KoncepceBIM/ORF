@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:m="http://www.w3.org/1998/Math/MathML"
+           elementFormDefault="qualified"
+           targetNamespace="http://www.w3.org/1998/Math/MathML">
+  <xs:complexType name="math">
+    <xs:sequence>
+      <xs:element ref="m:mrow" minOccurs="0" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="math" type="m:math"/>
+
+  <xs:complexType name="mrow">
+    <xs:choice>
+      <xs:element ref="m:apply"/>
+      <xs:element ref="m:ci"/>
+      <xs:element ref="m:cn"/>
+      <xs:element ref="m:semantics"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="mrow" type="m:mrow" />
+
+  <xs:complexType name="cn">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Number</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:double">
+        <xs:attributeGroup ref="m:CommonAtt"/>
+        <xs:attribute name="type" default="double">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="double"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="cn" type="m:cn" />
+
+  <xs:complexType name="ci">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Content Identifier</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attributeGroup ref="m:CommonAtt"/>
+        <xs:attribute name="type" default="real">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="integer"/>
+              <xs:enumeration value="real"/>
+              <xs:enumeration value="constant"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="ci" type="m:ci" />
+
+  <xs:complexType name="csymbol">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Content Symbol</xs:documentation>
+    </xs:annotation>
+    <xs:attributeGroup ref="m:CommonAtt"/>
+  </xs:complexType>
+  <xs:element name="csymbol" type="m:csymbol" />
+
+  <xs:complexType name="apply">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Applies function to a list of arguments</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="m:csymbol"></xs:element>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="m:apply"/>
+        <xs:element ref="m:ci"/>
+        <xs:element ref="m:cn"/>
+        <xs:element ref="m:semantics"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attributeGroup ref="m:CommonAtt"/>
+  </xs:complexType>
+  <xs:element name="apply" type="m:apply"/>
+
+  <xs:complexType name="semantics">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        Content elements can be annotated with additional information via the semantics element. MathML uses the semantics element
+        to wrap the annotated element and the annotation-xml and annotation elements used for representing the annotations themselves.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element ref="m:apply"/>
+        <xs:element ref="m:ci"/>
+        <xs:element ref="m:cn"/>
+        <xs:element ref="m:semantics"/>
+      </xs:choice>
+      <xs:element name="annotation" type="xs:string"/>
+      <!--<xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="annotation"/>
+        <xs:element ref="m:annotation-xml"/>
+      </xs:choice>-->
+    </xs:sequence>
+    <xs:attributeGroup ref="m:CommonAtt"/>
+  </xs:complexType>
+  <xs:element name="semantics" type="m:semantics"/>
+
+  <!--<xs:group name="ContExp">
+    <xs:choice>
+      <xs:element ref="m:apply"/>
+      <xs:element ref="m:ci"/>
+      <xs:element ref="m:cn"/>
+      <xs:element ref="m:semantics"/>
+    </xs:choice>
+  </xs:group>-->
+
+  <xs:attributeGroup name="CommonAtt">
+    <xs:attribute name="id" type="xs:ID"/>
+    <xs:attribute name="xref"/>
+    <xs:attribute name="href" type="xs:anyURI"/>
+  </xs:attributeGroup>
+
+  <!--Assignment-->
+  <xs:element name="eq" substitutionGroup="m:csymbol"/>
+
+  <!--Operators from a non-strict MathML-->
+  <xs:element name="ln" substitutionGroup="m:csymbol"/>
+  <xs:element name="log" substitutionGroup="m:csymbol"/>
+  <xs:element name="quotient" substitutionGroup="m:csymbol"/>
+  <xs:element name="divide" substitutionGroup="m:csymbol"/>
+  <xs:element name="minus" substitutionGroup="m:csymbol"/>
+  <xs:element name="power" substitutionGroup="m:csymbol"/>
+  <xs:element name="rem" substitutionGroup="m:csymbol"/>
+  <xs:element name="root" substitutionGroup="m:csymbol"/>
+  <xs:element name="abs" substitutionGroup="m:csymbol"/>
+  <xs:element name="floor" substitutionGroup="m:csymbol"/>
+  <xs:element name="ceiling" substitutionGroup="m:csymbol"/>
+  <xs:element name="exp" substitutionGroup="m:csymbol"/>
+  <xs:element name="max" substitutionGroup="m:csymbol"/>
+  <xs:element name="min" substitutionGroup="m:csymbol"/>
+  <xs:element name="plus" substitutionGroup="m:csymbol"/>
+  <xs:element name="times" substitutionGroup="m:csymbol"/>
+  <xs:element name="gcd" substitutionGroup="m:csymbol"/>
+  <xs:element name="lcm" substitutionGroup="m:csymbol"/>
+  <xs:element name="sum" substitutionGroup="m:csymbol"/>
+
+  <!--Goniometric functions-->
+  <xs:element name="sin" substitutionGroup="m:csymbol"/>
+  <xs:element name="cos" substitutionGroup="m:csymbol"/>
+  <xs:element name="tan" substitutionGroup="m:csymbol"/>
+  <xs:element name="sec" substitutionGroup="m:csymbol"/>
+  <xs:element name="csc" substitutionGroup="m:csymbol"/>
+  <xs:element name="cot" substitutionGroup="m:csymbol"/>
+  <xs:element name="sinh" substitutionGroup="m:csymbol"/>
+  <xs:element name="cosh" substitutionGroup="m:csymbol"/>
+  <xs:element name="tanh" substitutionGroup="m:csymbol"/>
+  <xs:element name="sech" substitutionGroup="m:csymbol"/>
+  <xs:element name="csch" substitutionGroup="m:csymbol"/>
+  <xs:element name="coth" substitutionGroup="m:csymbol"/>
+  <xs:element name="arcsin" substitutionGroup="m:csymbol"/>
+  <xs:element name="arccos" substitutionGroup="m:csymbol"/>
+  <xs:element name="arctan" substitutionGroup="m:csymbol"/>
+  <xs:element name="arccosh" substitutionGroup="m:csymbol"/>
+  <xs:element name="arccot" substitutionGroup="m:csymbol"/>
+  <xs:element name="arccoth" substitutionGroup="m:csymbol"/>
+  <xs:element name="arccsc" substitutionGroup="m:csymbol"/>
+  <xs:element name="arccsch" substitutionGroup="m:csymbol"/>
+  <xs:element name="arcsec" substitutionGroup="m:csymbol"/>
+  <xs:element name="arcsech" substitutionGroup="m:csymbol"/>
+  <xs:element name="arcsinh" substitutionGroup="m:csymbol"/>
+  <xs:element name="arctanh" substitutionGroup="m:csymbol"/>
+
+  <!--Constants-->
+  <xs:element name="pi" substitutionGroup="m:ci"/>
+  <xs:element name="eulergamma" substitutionGroup="m:ci"/>
+</xs:schema>

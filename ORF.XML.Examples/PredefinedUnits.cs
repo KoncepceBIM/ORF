@@ -52,7 +52,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_01",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky{
                         Exponent = 1,
                         Jednotka = ks
@@ -81,7 +81,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_04",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky{
                         Exponent = 2,
                         Jednotka = new TJednotkaSI
@@ -95,7 +95,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_05",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky{
                         Exponent = 3,
                         Jednotka = new TJednotkaSI
@@ -117,7 +117,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_07",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky{
                         Exponent = 2,
                         Jednotka = new TJednotkaSI
@@ -139,7 +139,7 @@ namespace ORF.XML.Examples
                 Odsazeni = 0,
                 ZakladniJednotka = new TOdvozenaJednotka
                 {
-                    Komponenta = new TKomponentaJednotky[] {
+                    Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky{
                         Exponent = 2,
                         Jednotka = new TJednotkaSI
@@ -231,7 +231,7 @@ namespace ORF.XML.Examples
                 Symbol = "ha",
                 ZakladniJednotka = new TOdvozenaJednotka
                 {
-                    Komponenta = new TKomponentaJednotky[] {
+                    Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky{
                         Exponent = 2,
                         Jednotka = new TJednotkaSI
@@ -259,7 +259,7 @@ namespace ORF.XML.Examples
                 Symbol = "l",
                 ZakladniJednotka = new TOdvozenaJednotka
                 {
-                    Komponenta = new TKomponentaJednotky[] {
+                    Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky{
                         Exponent = 3,
                         Jednotka = new TJednotkaSI
@@ -292,7 +292,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_20",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 2,
                         Jednotka = new TJednotkaSI
@@ -314,7 +314,7 @@ namespace ORF.XML.Examples
                 Symbol = "ml",
                 ZakladniJednotka = new TOdvozenaJednotka
                 {
-                    Komponenta = new TKomponentaJednotky[] {
+                    Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky{
                         Exponent = 3,
                         Jednotka = new TJednotkaSI
@@ -377,7 +377,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_26",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 3,
                         Jednotka = new TJednotkaSI
@@ -431,7 +431,7 @@ namespace ORF.XML.Examples
                 Symbol = "100 m²",
                 ZakladniJednotka = new TOdvozenaJednotka
                 {
-                    Komponenta = new TKomponentaJednotky[] {
+                    Komponenta = new List<TKomponentaJednotky> {
                         new TKomponentaJednotky{
                             Exponent = 2,
                             Jednotka = new TJednotkaSI { Nazev = TNazevJednotkySI.METRE }
@@ -457,7 +457,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_33",
-                Komponenta = new TKomponentaJednotky[]
+                Komponenta = new List<TKomponentaJednotky>
                 {
                     new TKomponentaJednotky {
                         Exponent = 1,
@@ -488,7 +488,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_36",
-                Komponenta = new TKomponentaJednotky[]
+                Komponenta = new List<TKomponentaJednotky>
                {
                     new TKomponentaJednotky {
                         Exponent = 1,
@@ -547,7 +547,7 @@ namespace ORF.XML.Examples
                 Symbol = "hl",
                 ZakladniJednotka = new TOdvozenaJednotka
                 {
-                    Komponenta = new TKomponentaJednotky[] {
+                    Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky{
                         Exponent = 3,
                         Jednotka = new TJednotkaSI
@@ -571,7 +571,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_42",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = new TJednotkaZavislaNaKontextu
@@ -636,7 +636,7 @@ namespace ORF.XML.Examples
                 Symbol = "prm",
                 ZakladniJednotka = new TOdvozenaJednotka
                 {
-                    Komponenta = new TKomponentaJednotky[] {
+                    Komponenta = new List<TKomponentaJednotky> {
                         new TKomponentaJednotky{
                             Exponent = 3,
                             Jednotka = new TJednotkaSI { Nazev = TNazevJednotkySI.METRE }
@@ -654,7 +654,7 @@ namespace ORF.XML.Examples
                 Symbol = "plm",
                 ZakladniJednotka = new TOdvozenaJednotka
                 {
-                    Komponenta = new TKomponentaJednotky[] {
+                    Komponenta = new List<TKomponentaJednotky> {
                         new TKomponentaJednotky{
                             Exponent = 3,
                             Jednotka = new TJednotkaSI { Nazev = TNazevJednotkySI.METRE }
@@ -672,7 +672,7 @@ namespace ORF.XML.Examples
                 Symbol = "sh",
                 ZakladniJednotka = new TOdvozenaJednotka
                 {
-                    Komponenta = new TKomponentaJednotky[] {
+                    Komponenta = new List<TKomponentaJednotky> {
                         new TKomponentaJednotky{
                             Exponent = 3,
                             Jednotka = new TJednotkaSI { Nazev = TNazevJednotkySI.SECOND }
@@ -690,7 +690,7 @@ namespace ORF.XML.Examples
                 Symbol = "nh",
                 ZakladniJednotka = new TOdvozenaJednotka
                 {
-                    Komponenta = new TKomponentaJednotky[] {
+                    Komponenta = new List<TKomponentaJednotky> {
                         new TKomponentaJednotky{
                             Exponent = 3,
                             Jednotka = new TJednotkaSI { Nazev = TNazevJednotkySI.SECOND }
@@ -714,7 +714,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_70",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = new TJednotkaSI
@@ -734,7 +734,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_71",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = new TJednotkaSI
@@ -759,7 +759,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_72",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = new TJednotkaSI
@@ -779,7 +779,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_73",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = new TJednotkaSI
@@ -804,7 +804,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_74",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = new TJednotkaSI
@@ -824,7 +824,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_75",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = new TJednotkaSI
@@ -849,7 +849,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_76",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = new TJednotkaSI
@@ -869,7 +869,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_77",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = new TJednotkaZavislaNaKontextu { Nazev = "Komplet", Symbol = "kpl"}
@@ -884,7 +884,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_78",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = ks
@@ -905,7 +905,7 @@ namespace ORF.XML.Examples
                 Symbol = "m³ OP",
                 ZakladniJednotka = new TOdvozenaJednotka
                 {
-                    Komponenta = new TKomponentaJednotky[] {
+                    Komponenta = new List<TKomponentaJednotky> {
                         new TKomponentaJednotky{
                             Exponent = 3,
                             Jednotka = new TJednotkaSI { Nazev = TNazevJednotkySI.METRE }
@@ -917,12 +917,12 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_80",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = new TOdvozenaJednotka
                         {
-                            Komponenta = new TKomponentaJednotky[] {
+                            Komponenta = new List<TKomponentaJednotky> {
                                 new TKomponentaJednotky{
                                     Exponent = 3,
                                     Jednotka = new TJednotkaSI { Nazev = TNazevJednotkySI.METRE }
@@ -945,7 +945,7 @@ namespace ORF.XML.Examples
             units.Add(new TOdvozenaJednotka
             {
                 Id = "u_81",
-                Komponenta = new TKomponentaJednotky[] {
+                Komponenta = new List<TKomponentaJednotky> {
                     new TKomponentaJednotky {
                         Exponent = 1,
                         Jednotka = new TJednotkaSI { Nazev = TNazevJednotkySI.METRE }
@@ -974,7 +974,7 @@ namespace ORF.XML.Examples
 
             serializer.Serialize(xml, new Jednotky
             {
-                Jednotka = units.OrderBy(u => u.Id).ToArray()
+                Jednotka = units.OrderBy(u => u.Id).ToList()
             });
         }
     }

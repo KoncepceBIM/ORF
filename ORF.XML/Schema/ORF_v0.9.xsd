@@ -4,7 +4,11 @@
     elementFormDefault="qualified"
     xmlns="http://www.koncepcebim.cz/ORF_v0.1.xsd"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
 >
+  <xs:import namespace="http://www.w3.org/1998/Math/MathML"
+           schemaLocation="ORF_MathML3.xsd"/>
+  
   <xs:simpleType name="TVerze">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Verze ORF - pro účely validace</xs:documentation>
@@ -1460,6 +1464,7 @@
       <xs:documentation xml:lang="cs">
         Externí identita představuje odkaz na softwarovou identitu, která existuje v jiném datovém modelu a
         která je jednoznačně adresovatelná svým unikátním ID. Zároveň může mít název pro uživatelskou interakci.
+        Typicky bude použito pro vazbu na datové entity v IFC, nebo v nativním modelu.
       </xs:documentation>
     </xs:annotation>
     <xs:attribute name="Id" type="xs:string" use="required">
@@ -1788,6 +1793,13 @@
             </xs:annotation>
           </xs:element>
         </xs:sequence>
+        <xs:attribute name="Kod" type="xs:string" use="required">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">
+              Kód
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1813,13 +1825,6 @@
           <xs:annotation>
             <xs:documentation xml:lang="cs">
               Název typu rozpočtu, pokud je Typ = 'VLASTNI'
-            </xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="Kod" type="xs:string" use="required">
-          <xs:annotation>
-            <xs:documentation xml:lang="cs">
-              Kód
             </xs:documentation>
           </xs:annotation>
         </xs:attribute>
@@ -1858,6 +1863,13 @@
         <xs:annotation>
           <xs:documentation xml:lang="cs">
             Popis položky
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Specifikace" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Podrobná technická specifikace položky, zpravidla vycházející z cenové soustavy
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -2019,11 +2031,10 @@
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="VykazVymer" type="xs:string">
+      <xs:element name="VykazVymer" type="m:math">
         <xs:annotation>
           <xs:documentation xml:lang="cs">
-            Výkaz výměr: Lidsky čitelný vzorec, který vedl k výslednému množství. Není ambicí této verze ORF definovat neutrální formát vzorce.
-            Pokud vzorec obsahuje konstanty (figury), měly by být buď substituovány, nebo uvedeny na začátku výpočtového vzorce.
+            Strojově čitelný zápis výkazu výměr s možnou vazbou na model
           </xs:documentation>
         </xs:annotation>
       </xs:element>

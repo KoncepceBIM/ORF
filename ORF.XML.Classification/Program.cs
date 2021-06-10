@@ -99,24 +99,20 @@ namespace ORF.XML.Classification
         private static void Add(TKlasifikace parent, TTrida child)
         {
             if (parent.Trida == null)
-                parent.Trida = new[] { child };
+                parent.Trida = new List<TTrida> { child };
             else
             {
-                var children = parent.Trida.ToList();
-                children.Add(child);
-                parent.Trida = children.ToArray();
+                parent.Trida.Add(child);
             }
         }
 
         private static void Add(TTrida parent, TTrida child)
         {
             if (parent.Trida == null)
-                parent.Trida = new[] { child };
+                parent.Trida = new List<TTrida> { child };
             else
             {
-                var children = parent.Trida.ToList();
-                children.Add(child);
-                parent.Trida = children.ToArray();
+                parent.Trida.Add(child);
             }
         }
     }
