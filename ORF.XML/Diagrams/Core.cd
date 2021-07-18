@@ -1,16 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
-  <Class Name="TORF">
+  <Class Name="ORF.XML.TORF">
     <Position X="9.75" Y="2" Width="2.75" />
     <Members>
-      <Field Name="definiceField" Hidden="true" />
-      <Field Name="projektField" Hidden="true" />
-      <Field Name="rozpocetField" Hidden="true" />
-      <Field Name="verzeField" Hidden="true" />
+      <Field Name="_definice" Hidden="true" />
+      <Field Name="_projekt" Hidden="true" />
+      <Field Name="_rozpocet" Hidden="true" />
+      <Field Name="_verze" Hidden="true" />
+      <Property Name="DefiniceSpecified" Hidden="true" />
+      <Property Name="ProjektSpecified" Hidden="true" />
+      <Property Name="RozpocetSpecified" Hidden="true" />
+      <Method Name="TORF" Hidden="true" />
+      <Property Name="VerzeSpecified" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>ACAAAAAAAAAEAAAABAAQCAACAAAAAAAAAAAABAAAABA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>AAAAAAAAAAAEIAAABAAgCAASEAAAIAAAAAAAIAAIAIA=</HashCode>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Projekt" />
@@ -18,202 +22,277 @@
       <Property Name="Definice" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="TDefinice">
+  <Class Name="ORF.XML.TDefinice">
     <Position X="13.5" Y="2" Width="2.75" />
     <Members>
-      <Field Name="cenovaSoustavaField" Hidden="true" />
-      <Field Name="jednotkaField" Hidden="true" />
-      <Field Name="klasifikaceField" Hidden="true" />
-      <Field Name="metodikaMereniField" Hidden="true" />
-      <Field Name="organizaceField" Hidden="true" />
-      <Field Name="sazbaDPHField" Hidden="true" />
-      <Field Name="zaokrouhleniMnozstviPolozkyField" Hidden="true" />
+      <Field Name="_cenovaSoustava" Hidden="true" />
+      <Field Name="_jednotka" Hidden="true" />
+      <Field Name="_klasifikace" Hidden="true" />
+      <Field Name="_metodikaMereni" Hidden="true" />
+      <Field Name="_organizace" Hidden="true" />
+      <Field Name="_sazbaDPH" Hidden="true" />
+      <Field Name="_skupinyZmen" Hidden="true" />
+      <Field Name="_zaokrouhleniMnozstviPolozky" Hidden="true" />
+      <Property Name="CenovaSoustavaSpecified" Hidden="true" />
+      <Property Name="JednotkaSpecified" Hidden="true" />
+      <Property Name="KlasifikaceSpecified" Hidden="true" />
+      <Property Name="MetodikaMereniSpecified" Hidden="true" />
+      <Property Name="OrganizaceSpecified" Hidden="true" />
+      <Property Name="SazbaDPHSpecified" Hidden="true" />
+      <Property Name="SkupinyZmenSpecified" Hidden="true" />
+      <Method Name="TDefinice" Hidden="true" />
+      <Property Name="ZaokrouhleniMnozstviPolozkySpecified" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AQACKAAAIgAAAAAIAAATAAYAAAAAAAAACAAAAAAAAIA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>AEAAKRAABAEABAAMAEERIjIAAAAQAAABCAQCAAAAAAA=</HashCode>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Klasifikace" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="TProjekt">
-    <Position X="4.75" Y="2" Width="2.5" />
+  <Class Name="ORF.XML.TProjekt">
+    <Position X="4.5" Y="2" Width="3" />
     <Members>
-      <Field Name="adresaField" Hidden="true" />
-      <Field Name="evidencniCisloField" Hidden="true" />
-      <Field Name="menaField" Hidden="true" />
-      <Field Name="umisteniField" Hidden="true" />
+      <Field Name="_adresa" Hidden="true" />
+      <Field Name="_evidencniCislo" Hidden="true" />
+      <Field Name="_mena" Hidden="true" />
+      <Field Name="_umisteni" Hidden="true" />
+      <Property Name="AdresaSpecified" Hidden="true" />
+      <Property Name="EvidencniCisloSpecified" Hidden="true" />
+      <Property Name="MenaSpecified" Hidden="true" />
+      <Method Name="TProjekt" Hidden="true" />
+      <Property Name="UmisteniSpecified" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>BABQAAAAAAAAAAAEAAAAAAAAAAgAAIEABAAAAAAAAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>BgBAAAAAAAAAAAAABAAAAACAAAgAAKAAAACEAAAAAgA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="TRozpocet">
-    <Position X="9.75" Y="3.75" Width="2.75" />
+  <Class Name="ORF.XML.TRozpocet">
+    <Position X="9.75" Y="4.75" Width="2.75" />
     <Members>
-      <Field Name="datumOceneniField" Hidden="true" />
-      <Field Name="datumVytvoreniRozpoctuField" Hidden="true" />
-      <Field Name="informacniPozadavkyField" Hidden="true" />
-      <Field Name="objednatelField" Hidden="true" />
-      <Field Name="objektField" Hidden="true" />
-      <Field Name="povinnaSkupinaMereniField" Hidden="true" />
-      <Field Name="uchazecField" Hidden="true" />
+      <Field Name="_datumOceneni" Hidden="true" />
+      <Field Name="_datumVytvoreniRozpoctu" Hidden="true" />
+      <Field Name="_dodatky" Hidden="true" />
+      <Field Name="_informacniPozadavky" Hidden="true" />
+      <Field Name="_objednatel" Hidden="true" />
+      <Field Name="_objekt" Hidden="true" />
+      <Field Name="_povinnaSkupinaMereni" Hidden="true" />
+      <Field Name="_uchazec" Hidden="true" />
+      <Property Name="DatumOceneniSpecified" Hidden="true" />
+      <Property Name="DatumVytvoreniRozpoctuSpecified" Hidden="true" />
+      <Property Name="DodatkySpecified" Hidden="true" />
+      <Property Name="InformacniPozadavkySpecified" Hidden="true" />
+      <Property Name="ObjednatelSpecified" Hidden="true" />
+      <Property Name="ObjektSpecified" Hidden="true" />
+      <Property Name="PovinnaSkupinaMereniSpecified" Hidden="true" />
+      <Method Name="TRozpocet" Hidden="true" />
+      <Property Name="UchazecSpecified" Hidden="true" />
     </Members>
+    <AssociationLine Name="Objekt" Type="ORF.XML.TObjekt" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="7.137" />
+        <Point X="11" Y="8.25" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAABIEAgCAAIAAAAAAABABAAAACAAAQQRAgAAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>AgAAAAAgIkAASAQAAAAAQBAAEBQCAAAAAYIQRCCAIAA=</HashCode>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Objekt" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="TObjekt">
-    <Position X="9.75" Y="6.5" Width="2.75" />
+  <Class Name="ORF.XML.TObjekt">
+    <Position X="9.75" Y="8.25" Width="2.75" />
     <Members>
-      <Field Name="kSOField" Hidden="true" />
-      <Field Name="polozkaField" Hidden="true" />
-      <Field Name="uzelRozpoctuField" Hidden="true" />
-      <Field Name="zatrideniField" Hidden="true" />
+      <Field Name="_kSO" Hidden="true" />
+      <Property Name="KSOSpecified" Hidden="true" />
     </Members>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACAAgAAACAAAAAQAAAUAAAAAAIBA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="UzelRozpoctu" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="TUzelRozpoctu">
-    <Position X="4.5" Y="7.75" Width="3" />
-    <Members>
-      <Field Name="kodField" Hidden="true" />
-      <Field Name="polozkaField" Hidden="true" />
-      <Field Name="typField" Hidden="true" />
-      <Field Name="uzelRozpoctuField" Hidden="true" />
-      <Field Name="vlastniTypField" Hidden="true" />
-      <Field Name="zatrideniField" Hidden="true" />
-    </Members>
-    <AssociationLine Name="UzelRozpoctu" Type="TUzelRozpoctu" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <InheritanceLine Type="ORF.XML.TUzel" ManuallyRouted="true" FixedFromPoint="true">
       <Path>
-        <Point X="4.938" Y="9.56" />
-        <Point X="4.938" Y="10.174" />
-        <Point X="6.875" Y="10.174" />
-        <Point X="6.875" Y="9.56" />
+        <Point X="7.5" Y="9.125" />
+        <Point X="8.424" Y="9.125" />
+        <Point X="8.424" Y="8.688" />
+        <Point X="9.75" Y="8.688" />
       </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.078" Y="0.706" />
-      </MemberNameLabel>
-    </AssociationLine>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAQAIAAAACAAgAMACAAABAQAAAUAAAAAAAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAACABA=</HashCode>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="UzelRozpoctu" />
-      <Property Name="Polozka" />
-    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="TKlasifikace">
-    <Position X="13.5" Y="4.25" Width="2.75" />
+  <Class Name="ORF.XML.TUzelRozpoctu">
+    <Position X="9.75" Y="10" Width="2.75" />
     <Members>
-      <Field Name="ediceField" Hidden="true" />
-      <Field Name="nazevField" Hidden="true" />
-      <Field Name="popisField" Hidden="true" />
+      <Field Name="_typ" Hidden="true" />
+      <Field Name="_vlastniTyp" Hidden="true" />
+      <Property Name="TypSpecified" Hidden="true" />
+      <Property Name="VlastniTypSpecified" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="ORF.XML.TUzel" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="7.5" Y="9.125" />
+        <Point X="8.466" Y="9.125" />
+        <Point X="8.466" Y="10.713" />
+        <Point X="9.75" Y="10.713" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAKQAAAAAGAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ORF.XML.TKlasifikace">
+    <Position X="13.5" Y="5.25" Width="2.75" />
+    <Members>
+      <Field Name="_edice" Hidden="true" />
+      <Field Name="_nazev" Hidden="true" />
+      <Field Name="_popis" Hidden="true" />
+      <Field Name="_trida" Hidden="true" />
+      <Field Name="_typ" Hidden="true" />
+      <Field Name="_umisteni" Hidden="true" />
+      <Field Name="_zdroj" Hidden="true" />
+      <Property Name="EdiceSpecified" Hidden="true" />
+      <Property Name="NazevSpecified" Hidden="true" />
+      <Property Name="PopisSpecified" Hidden="true" />
       <Method Name="TKlasifikace" Hidden="true" />
-      <Field Name="tridaField" Hidden="true" />
-      <Field Name="typField" Hidden="true" />
-      <Field Name="umisteniField" Hidden="true" />
-      <Field Name="zdrojField" Hidden="true" />
+      <Property Name="TridaSpecified" Hidden="true" />
+      <Property Name="TypSpecified" Hidden="true" />
+      <Property Name="UmisteniSpecified" Hidden="true" />
+      <Property Name="ZdrojSpecified" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AABIAQAAAQCIAAAAAAAAAgAAgAAIAAEACAQAAAgAAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>QEBAEQAAAACKAEBBAAEACgAAgAAAACAAAACAAAgAAAA=</HashCode>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Trida" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="TTrida">
-    <Position X="13.5" Y="7.25" Width="2.75" />
+  <Class Name="ORF.XML.TTrida">
+    <Position X="13.5" Y="8" Width="2.75" />
     <Members>
-      <Field Name="idField" Hidden="true" />
-      <Field Name="kodField" Hidden="true" />
-      <Field Name="nazevField" Hidden="true" />
-      <Field Name="popisField" Hidden="true" />
-      <Field Name="tridaField" Hidden="true" />
+      <Field Name="_id" Hidden="true" />
+      <Field Name="_kod" Hidden="true" />
+      <Field Name="_nazev" Hidden="true" />
+      <Field Name="_popis" Hidden="true" />
+      <Field Name="_trida" Hidden="true" />
+      <Method Name="TTrida" Hidden="true" />
     </Members>
-    <AssociationLine Name="Trida" Type="TTrida" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="14.125" Y="8.93" />
-        <Point X="14.125" Y="9.545" />
-        <Point X="15.75" Y="9.545" />
-        <Point X="15.75" Y="8.93" />
-      </Path>
+    <AssociationLine Name="Trida" Type="ORF.XML.TTrida">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.287" Y="0.352" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAQAAAACAAAAAAAAAAIAAgAAJACAAAAQAAAgAAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>QEACEQAAAACAAEBQAABACAAAAAABAAAAIAAAAAgAAAA=</HashCode>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Trida" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="TPolozkaRozpoctu">
-    <Position X="9.5" Y="8.75" Width="3.5" />
+  <Class Name="ORF.XML.TPolozkaRozpoctu">
+    <Position X="4.5" Y="11" Width="3" />
     <Members>
-      <Field Name="cenovaSoustavaField" Hidden="true" />
-      <Field Name="externiEntitaField" Hidden="true" />
-      <Field Name="idField" Hidden="true" />
-      <Field Name="jednotkovaCenaField" Hidden="true" />
-      <Field Name="jednotkovaDemontazniHmotnostField" Hidden="true" />
+      <Field Name="_cenovaSoustava" Hidden="true" />
+      <Field Name="_dodatkyMnozstvi" Hidden="true" />
+      <Field Name="_externiEntita" Hidden="true" />
+      <Field Name="_id" Hidden="true" />
+      <Field Name="_jednotkovaCena" Hidden="true" />
+      <Field Name="_jednotkovaDemontazniHmotnost" Hidden="true" />
+      <Field Name="_jednotkovaHmotnost" Hidden="true" />
+      <Field Name="_kod" Hidden="true" />
+      <Field Name="_komentar" Hidden="true" />
+      <Field Name="_mnozstvi" Hidden="true" />
+      <Field Name="_mnozstviPuvodni" Hidden="true" />
+      <Field Name="_nazev" Hidden="true" />
+      <Field Name="_popis" Hidden="true" />
+      <Field Name="_poradoveCislo" Hidden="true" />
+      <Field Name="_pouzeMaterial" Hidden="true" />
+      <Field Name="_prenesenaDPH" Hidden="true" />
+      <Field Name="_sazbaDPH" Hidden="true" />
+      <Field Name="_skupinaVlastnosti" Hidden="true" />
+      <Field Name="_specifikace" Hidden="true" />
+      <Field Name="_typ" Hidden="true" />
+      <Field Name="_varianta" Hidden="true" />
+      <Field Name="_zatrideni" Hidden="true" />
+      <Field Name="_zpusobilost" Hidden="true" />
+      <Property Name="CenovaSoustavaSpecified" Hidden="true" />
+      <Property Name="DodatkyMnozstviSpecified" Hidden="true" />
+      <Property Name="ExterniEntitaSpecified" Hidden="true" />
+      <Property Name="IdSpecified" Hidden="true" />
+      <Property Name="JednotkovaCenaSpecified" Hidden="true" />
       <Field Name="jednotkovaDemontazniHmotnostFieldSpecified" Hidden="true" />
       <Property Name="JednotkovaDemontazniHmotnostSpecified" Hidden="true" />
-      <Field Name="jednotkovaHmotnostField" Hidden="true" />
       <Field Name="jednotkovaHmotnostFieldSpecified" Hidden="true" />
       <Property Name="JednotkovaHmotnostSpecified" Hidden="true" />
-      <Field Name="kodField" Hidden="true" />
-      <Field Name="komentarField" Hidden="true" />
-      <Field Name="mnozstviField" Hidden="true" />
-      <Field Name="nazevField" Hidden="true" />
-      <Field Name="popisField" Hidden="true" />
-      <Field Name="poradoveCisloField" Hidden="true" />
-      <Field Name="pouzeMaterialField" Hidden="true" />
+      <Property Name="KodSpecified" Hidden="true" />
+      <Property Name="KomentarSpecified" Hidden="true" />
+      <Property Name="MnozstviPuvodniSpecified" Hidden="true" />
+      <Property Name="MnozstviSpecified" Hidden="true" />
+      <Property Name="NazevSpecified" Hidden="true" />
+      <Property Name="PopisSpecified" Hidden="true" />
+      <Property Name="PoradoveCisloSpecified" Hidden="true" />
       <Field Name="pouzeMaterialFieldSpecified" Hidden="true" />
       <Property Name="PouzeMaterialSpecified" Hidden="true" />
-      <Field Name="prenesenaDPHField" Hidden="true" />
       <Field Name="prenesenaDPHFieldSpecified" Hidden="true" />
       <Property Name="PrenesenaDPHSpecified" Hidden="true" />
-      <Field Name="sazbaDPHField" Hidden="true" />
-      <Field Name="skupinaVlastnostiField" Hidden="true" />
-      <Field Name="typField" Hidden="true" />
+      <Property Name="SazbaDPHSpecified" Hidden="true" />
+      <Property Name="SkupinaVlastnostiSpecified" Hidden="true" />
+      <Property Name="SpecifikaceSpecified" Hidden="true" />
+      <Method Name="TPolozkaRozpoctu" Hidden="true" />
       <Field Name="typFieldSpecified" Hidden="true" />
-      <Field Name="variantaField" Hidden="true" />
-      <Field Name="zatrideniField" Hidden="true" />
-      <Field Name="zpusobilostField" Hidden="true" />
+      <Property Name="TypSpecified" Hidden="true" />
+      <Property Name="VariantaSpecified" Hidden="true" />
+      <Property Name="ZatrideniSpecified" Hidden="true" />
+      <Property Name="ZpusobilostSpecified" Hidden="true" />
     </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
-      <HashCode>gAADGQEIAUCIAEgIAEUCAYUmAAUJCWAIAIQCDAAiYIA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>wVQDOQEMIEeKlmkcAE1ACQU2AASRCEDAoIACAABMRBE=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="TIdentita">
+  <Class Name="ORF.XML.TIdentita">
     <Position X="4.5" Y="5" Width="3" />
     <Members>
-      <Field Name="externiEntitaField" Hidden="true" />
-      <Field Name="idField" Hidden="true" />
-      <Field Name="nazevField" Hidden="true" />
-      <Field Name="popisField" Hidden="true" />
-      <Field Name="skupinaVlastnostiField" Hidden="true" />
+      <Field Name="_externiEntita" Hidden="true" />
+      <Field Name="_id" Hidden="true" />
+      <Field Name="_nazev" Hidden="true" />
+      <Field Name="_popis" Hidden="true" />
+      <Field Name="_skupinaVlastnosti" Hidden="true" />
+      <Property Name="ExterniEntitaSpecified" Hidden="true" />
+      <Property Name="IdSpecified" Hidden="true" />
+      <Property Name="NazevSpecified" Hidden="true" />
+      <Property Name="PopisSpecified" Hidden="true" />
+      <Property Name="SkupinaVlastnostiSpecified" Hidden="true" />
+      <Method Name="TIdentita" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAADAQAAAACAAEAAAAAAAQAAAAAIACAAAAQAAAACAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>QEADAQAAAACAgkAAAABACQAAAAABAAAAAAAAAAAEAAA=</HashCode>
     </TypeIdentifier>
+  </Class>
+  <Class Name="ORF.XML.TUzel">
+    <Position X="4.5" Y="8.25" Width="3" />
+    <Members>
+      <Field Name="_kod" Hidden="true" />
+      <Field Name="_polozka" Hidden="true" />
+      <Field Name="_uzelRozpoctu" Hidden="true" />
+      <Field Name="_zatrideni" Hidden="true" />
+      <Property Name="KodSpecified" Hidden="true" />
+      <Property Name="PolozkaSpecified" Hidden="true" />
+      <Method Name="TUzel" Hidden="true" />
+      <Property Name="UzelRozpoctuSpecified" Hidden="true" />
+      <Property Name="ZatrideniSpecified" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Polozka" Type="ORF.XML.TPolozkaRozpoctu">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.88" Y="0.31" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAQAAAgAAASAAAhAAAgMEAAAAAIAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Polozka" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

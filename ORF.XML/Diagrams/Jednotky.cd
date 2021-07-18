@@ -1,112 +1,105 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="TJednotka" Collapsed="true">
+  <Class Name="ORF.XML.TJednotka" Collapsed="true">
     <Position X="9.5" Y="0.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>AEACAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="TPenezniJednotka">
+  <Class Name="ORF.XML.TPenezniJednotka">
     <Position X="5" Y="2" Width="2.5" />
     <Members>
-      <Field Name="menaField" Hidden="true" />
+      <Field Name="_mena" Hidden="true" />
+      <Property Name="MenaSpecified" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAABAAAAAAAAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="TJednotkaZavislaNaKontextu">
+  <Class Name="ORF.XML.TJednotkaZavislaNaKontextu">
     <Position X="8.25" Y="2" Width="2.25" />
     <Members>
-      <Field Name="nazevField" Hidden="true" />
-      <Field Name="symbolField" Hidden="true" />
+      <Field Name="_nazev" Hidden="true" />
+      <Field Name="_symbol" Hidden="true" />
+      <Property Name="NazevSpecified" Hidden="true" />
+      <Property Name="SymbolSpecified" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>QAAAAQAAAAAAAAABAAAACAAAAIAAAAAAAAAAAAAACAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="TOdvozenaJednotka">
+  <Class Name="ORF.XML.TOdvozenaJednotka">
     <Position X="11" Y="2" Width="2" />
     <Members>
-      <Field Name="komponentaField" Hidden="true" />
+      <Field Name="_komponenta" Hidden="true" />
+      <Property Name="KomponentaSpecified" Hidden="true" />
+      <Method Name="TOdvozenaJednotka" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Komponenta" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="TKonverzniJednotka">
+  <Class Name="ORF.XML.TKonverzniJednotka">
     <Position X="13.25" Y="2" Width="2" />
     <Members>
-      <Field Name="meritkoField" Hidden="true" />
-      <Field Name="nazevField" Hidden="true" />
-      <Field Name="odsazeniField" Hidden="true" />
-      <Field Name="symbolField" Hidden="true" />
+      <Field Name="_meritko" Hidden="true" />
+      <Field Name="_nazev" Hidden="true" />
+      <Field Name="_odsazeni" Hidden="true" />
+      <Field Name="_symbol" Hidden="true" />
+      <Field Name="_zakladniJednotka" Hidden="true" />
+      <Property Name="MeritkoSpecified" Hidden="true" />
+      <Property Name="NazevSpecified" Hidden="true" />
+      <Property Name="OdsazeniSpecified" Hidden="true" />
+      <Property Name="SymbolSpecified" Hidden="true" />
       <Method Name="TKonverzniJednotka" Hidden="true" />
-      <Field Name="zakladniJednotkaField" Hidden="true" />
+      <Property Name="ZakladniJednotkaSpecified" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AgAAAQBAEAAEAACAAAAAAAAAAAACAAAAAAQAAAAACAg=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>QAAAAQBEAAAEAACBBAAACAAFAIAAAAAAAAIACAAACAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="TJednotkaSI">
+  <Class Name="ORF.XML.TJednotkaSI">
     <Position X="16" Y="2" Width="2.25" />
     <Members>
-      <Field Name="nazevField" Hidden="true" />
-      <Field Name="predponaField" Hidden="true" />
+      <Field Name="_nazev" Hidden="true" />
+      <Field Name="_predpona" Hidden="true" />
+      <Property Name="NazevSpecified" Hidden="true" />
       <Field Name="predponaFieldSpecified" Hidden="true" />
       <Property Name="PredponaSpecified" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AgAAAQAAAAAAAAAAAAAAAAAAACAAAAAAAAUAAAAAgAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>QAAAAQAAIAAAAAAAAAAACAAAACAAAAAAAAEAAAAAgAA=</HashCode>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Nazev" />
       <Property Name="Predpona" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="TKomponentaJednotky">
-    <Position X="10.5" Y="4.25" Width="2.5" />
+  <Class Name="ORF.XML.TKomponentaJednotky">
+    <Position X="11" Y="4.25" Width="2" />
     <Members>
-      <Field Name="exponentField" Hidden="true" />
-      <Field Name="jednotkaField" Hidden="true" />
+      <Field Name="_exponent" Hidden="true" />
+      <Field Name="_jednotka" Hidden="true" />
+      <Property Name="ExponentSpecified" Hidden="true" />
+      <Property Name="JednotkaSpecified" Hidden="true" />
     </Members>
-    <AssociationLine Name="Jednotka" Type="TJednotka" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="10.5" Y="4.75" />
-        <Point X="4.635" Y="4.75" />
-        <Point X="4.635" Y="1.062" />
-        <Point X="9.5" Y="1.062" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAEAAAAABAAQAAAAAAAAAEAAAAAAAAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+      <HashCode>AAAAABAAAAAIAAAAAAABIAAAAAAAABAAEAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Jednotka" />
-    </ShowAsAssociation>
   </Class>
-  <Enum Name="TNazevJednotkySI">
-    <Position X="17.75" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAEQAAkoAgCIABCAogAIAAAAANgEIZAAAAAEAYAAIA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="TPredponaSI">
-    <Position X="15.5" Y="3.75" Width="1.5" />
+  <Enum Name="ORF.XML.TPredponaSI">
+    <Position X="15.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CgcBAAQAEAAAgACAAAAAAAICQIABAQEACQAAABAAAAA=</HashCode>
-      <FileName>Schema\ORF_v0_1.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ORF.XML.TNazevJednotkySI">
+    <Position X="17.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEQAAkoAgCIABCAogAIAAAAANgEIZAAAAAEAYAAIA=</HashCode>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />
