@@ -322,6 +322,21 @@
       <xs:enumeration value="DATUM_CAS"/>
     </xs:restriction>
   </xs:simpleType>
+
+  <xs:simpleType name="TTypZmeny">
+    <xs:annotation>
+      <xs:documentation> Typ změn během výstavby </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VYHRAZENA"/>
+      <xs:enumeration value="ZAMENA_POLOZEK"/>
+      <xs:enumeration value="NEPREDVIDANA"/>
+      <xs:enumeration value="NEZBYTNA"/>
+      <xs:enumeration value="NEMENICI_CELK_POVAHU"/>
+      <xs:enumeration value="JINA"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="TNazevPolozky">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -1074,6 +1089,11 @@
           </xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="SkupinyZmen" type="TSkupinyZmen" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation> Seznam skupin změn během výstavby </xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:sequence>
     <xs:attribute name="ZaokrouhleniMnozstviPolozky" type="TZaokrouhleni" use="required">
       <xs:annotation>
@@ -1731,6 +1751,11 @@
               </xs:documentation>
             </xs:annotation>
           </xs:element>
+          <xs:element name="Dodatky" type="TDodatky">
+            <xs:annotation>
+              <xs:documentation> Seznam dodatků k rozpočtu </xs:documentation>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
         <xs:attribute name="DatumVytvoreniRozpoctu" type="xs:dateTime" use="required">
           <xs:annotation>
@@ -1916,6 +1941,16 @@
       <xs:element name="Mnozstvi" type="TMnozstvi" minOccurs="1" maxOccurs="1">
         <xs:annotation>
           <xs:documentation xml:lang="cs">Informace o množství</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MnozstviPuvodni" type="TMnozstvi" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Informace o množství před aplikací dodatků</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DodatkyMnozstvi" type="TDodatkyMnozstvi" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Dodatky množství rozdělené podle skupin (typu) změn a jednotlivých změnových řízení</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Komentar" type="xs:string" minOccurs="0">
@@ -2563,6 +2598,162 @@
       <xs:element name="CerpaniPolozky" type="TCerpaniPolozky" minOccurs="0" maxOccurs="unbounded">
         <xs:annotation>
           <xs:documentation> Záznam čerpání položky </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TDodatek">
+    <xs:annotation>
+      <xs:documentation> Dodatek k rozpočtu </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Popis" type="xs:string" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation> Popis změn v tomto dodatku </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID" use="required">
+      <xs:annotation>
+        <xs:documentation> ID dodatku k rozpočtu </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Znacka" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation> Značka nebo kód dodatku </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Nazev" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation> Název dodatku </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Uzavren" type="xs:boolean" use="required">
+      <xs:annotation>
+        <xs:documentation> Stav dodatku (true = uzavřen, false = otevřen) </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TDodatky">
+    <xs:annotation>
+      <xs:documentation> Seznam dodatků k rozpočtu </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Dodatek" type="TDodatek" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation> Dodatek k rozpočtu </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TSkupinaZmen">
+    <xs:annotation>
+      <xs:documentation> Identifikace druhu skupiny změn během výstavby </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="ID" type="xs:ID" use="required">
+      <xs:annotation>
+        <xs:documentation> Id skupiny změn během výstavby </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Nazev" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation> Název skupiny změn během výstavby </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Typ" type="TTypZmeny" use="required">
+      <xs:annotation>
+        <xs:documentation> Typ změny </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TSkupinyZmen">
+    <xs:annotation>
+      <xs:documentation> Seznam skupin změn během výstavby </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SkupinaZmen" type="TSkupinaZmen" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation> Identifikace druhu skupiny změn během výstavby </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TDodatkyMnozstvi">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Dodatky množství rozdělené podle skupin (typu) změn a jednotlivých změnových řízení</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DodatekMnozstvi" type="TDodatekMnozstvi" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">Dodatek množství rozdělený podle skupin (typu), s odkazem na dané změnové řízení</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TDodatekMnozstvi">
+    <xs:annotation>
+      <xs:documentation xml:lang="cs">Dodatek množství rozdělený podle skupin (typu), s odkazem na dané změnové řízení</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Mnozstvi" type="TMnozstvi">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Element popisující množství, včetně metody měření, jednotky měření a dalších aspektů.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SkupinyZmen" type="TSkupinyZmenPolozek">
+        <xs:annotation>
+          <xs:documentation> Skupiny změn položek zachycují rozložení hodnoty změny mezi jednotlivé skupiny změn </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:IDREF" use="required">
+      <xs:annotation>
+        <xs:documentation> Odkaz (reference) na dodatek rozpočtu </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Zpusobile" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation> Indikuje, zda je tento dodatek způsobilý k financování z fondů </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TSkupinaZmenPolozky">
+    <xs:annotation>
+      <xs:documentation> Skupina změn položky zachycuje část hodnoty změny v jedné skupině změn </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Mnozstvi" type="TMnozstvi" maxOccurs="1" minOccurs="1">
+        <xs:annotation>
+          <xs:documentation xml:lang="cs">
+            Element popisující množství, včetně metody měření, jednotky měření a dalších aspektů.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Skupina" type="xs:IDREF" use="required">
+      <xs:annotation>
+        <xs:documentation> Odkaz (reference) na skupinu změn v definicích </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TSkupinyZmenPolozek">
+    <xs:annotation>
+      <xs:documentation> Skupiny změn položek zachycují rozložení hodnoty změny mezi jednotlivé skupiny změn </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SkupinaZmen" type="TSkupinaZmenPolozky" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation> Skupina změn položky zachycuje část hodnoty změny v jedné skupině změn </xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>

@@ -424,6 +424,107 @@ namespace ORF.XML
     }
 
     /// <summary>
+    /// Identifikace druhu skupiny změn během výstavby
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TSkupinaZmen")]
+    public partial class TSkupinaZmen
+    {
+        #region Private fields
+        private string _id;
+        private string _nazev;
+        private TTypZmeny _typ;
+        #endregion
+
+        /// <summary>
+        /// Id skupiny změn během výstavby
+        /// </summary>
+        [XmlAttribute(DataType = "ID", AttributeName = "ID")]
+        public string ID
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        /// <summary>
+        /// Název skupiny změn během výstavby
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Typ změny
+        /// </summary>
+        [XmlAttribute(AttributeName = "Typ")]
+        public TTypZmeny Typ
+        {
+            get
+            {
+                return _typ;
+            }
+            set
+            {
+                _typ = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool TypSpecified
+        {
+            get
+            {
+                return (Equals(_typ, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Typ změn během výstavby
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TTypZmeny")]
+    public enum TTypZmeny
+    {
+        VYHRAZENA,
+        ZAMENA_POLOZEK,
+        NEPREDVIDANA,
+        NEZBYTNA,
+        NEMENICI_CELK_POVAHU,
+        JINA,
+    }
+
+    /// <summary>
     /// Element popisující metodiku měření
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
@@ -2598,6 +2699,7 @@ namespace ORF.XML
         private List<TJednotka> _jednotka;
         private List<TSazbaDPH> _sazbaDPH;
         private List<TMetodikaMereni> _metodikaMereni;
+        private List<TSkupinaZmen> _skupinyZmen;
         private int _zaokrouhleniMnozstviPolozky;
         #endregion
 
@@ -2606,6 +2708,7 @@ namespace ORF.XML
         /// </summary>
         public TDefinice()
         {
+            _skupinyZmen = new List<TSkupinaZmen>();
             _metodikaMereni = new List<TMetodikaMereni>();
             _sazbaDPH = new List<TSazbaDPH>();
             _jednotka = new List<TJednotka>();
@@ -2713,6 +2816,22 @@ namespace ORF.XML
         }
 
         /// <summary>
+        /// Seznam skupin změn během výstavby
+        /// </summary>
+        [XmlArrayItemAttribute("SkupinaZmen", IsNullable = false)]
+        public List<TSkupinaZmen> SkupinyZmen
+        {
+            get
+            {
+                return _skupinyZmen;
+            }
+            set
+            {
+                _skupinyZmen = value;
+            }
+        }
+
+        /// <summary>
         /// Počet platných desetinných míst pro zaohrouhlování množství
         /// </summary>
         [XmlAttribute(AttributeName = "ZaokrouhleniMnozstviPolozky")]
@@ -2783,11 +2902,156 @@ namespace ORF.XML
         }
 
         [XmlIgnore()]
+        public bool SkupinyZmenSpecified
+        {
+            get
+            {
+                return (Equals(_skupinyZmen, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
         public bool ZaokrouhleniMnozstviPolozkySpecified
         {
             get
             {
                 return (Equals(_zaokrouhleniMnozstviPolozky, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Dodatek k rozpočtu
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TDodatek")]
+    public partial class TDodatek
+    {
+        #region Private fields
+        private string _popis;
+        private string _id;
+        private string _znacka;
+        private string _nazev;
+        private bool _uzavren;
+        #endregion
+
+        /// <summary>
+        /// Popis změn v tomto dodatku
+        /// </summary>
+        [XmlElement("Popis")]
+        public string Popis
+        {
+            get
+            {
+                return _popis;
+            }
+            set
+            {
+                _popis = value;
+            }
+        }
+
+        /// <summary>
+        /// ID dodatku k rozpočtu
+        /// </summary>
+        [XmlAttribute(DataType = "ID", AttributeName = "ID")]
+        public string ID
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        /// <summary>
+        /// Značka nebo kód dodatku
+        /// </summary>
+        [XmlAttribute(AttributeName = "Znacka")]
+        public string Znacka
+        {
+            get
+            {
+                return _znacka;
+            }
+            set
+            {
+                _znacka = value;
+            }
+        }
+
+        /// <summary>
+        /// Název dodatku
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Stav dodatku (true = uzavřen, false = otevřen)
+        /// </summary>
+        [XmlAttribute(AttributeName = "Uzavren")]
+        public bool Uzavren
+        {
+            get
+            {
+                return _uzavren;
+            }
+            set
+            {
+                _uzavren = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PopisSpecified
+        {
+            get
+            {
+                return (Equals(_popis, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ZnackaSpecified
+        {
+            get
+            {
+                return (Equals(_znacka, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool UzavrenSpecified
+        {
+            get
+            {
+                return (Equals(_uzavren, null) != true);
             }
         }
     }
@@ -3164,65 +3428,220 @@ namespace ORF.XML
     }
 
     /// <summary>
-    /// Odkaz na metodiku měření
+    /// Skupina změn položky zachycuje část hodnoty změny v jedné skupině změn
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TMetodikaMereniRef")]
-    public partial class TMetodikaMereniRef
+    [XmlRootAttribute("TSkupinaZmenPolozky")]
+    public partial class TSkupinaZmenPolozky
     {
         #region Private fields
-        private string _ref;
+        private TMnozstvi _mnozstvi;
+        private string _skupina;
         #endregion
 
         /// <summary>
-        /// Reference. Musí existovat odpovídající element s tímto ID.
+        /// TSkupinaZmenPolozky class constructor
         /// </summary>
-        [XmlAttribute(DataType = "IDREF", AttributeName = "Ref")]
-        public string Ref
+        public TSkupinaZmenPolozky()
+        {
+            _mnozstvi = new TMnozstvi();
+        }
+
+        /// <summary>
+        /// Element popisující množství, včetně metody měření, jednotky měření a dalších aspektů.
+        /// </summary>
+        [XmlElement("Mnozstvi")]
+        public TMnozstvi Mnozstvi
         {
             get
             {
-                return _ref;
+                return _mnozstvi;
             }
             set
             {
-                _ref = value;
+                _mnozstvi = value;
+            }
+        }
+
+        /// <summary>
+        /// Odkaz (reference) na skupinu změn v definicích
+        /// </summary>
+        [XmlAttribute(DataType = "IDREF", AttributeName = "Skupina")]
+        public string Skupina
+        {
+            get
+            {
+                return _skupina;
+            }
+            set
+            {
+                _skupina = value;
             }
         }
 
         [XmlIgnore()]
-        public bool RefSpecified
+        public bool MnozstviSpecified
         {
             get
             {
-                return (Equals(_ref, null) != true);
+                return (Equals(_mnozstvi, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool SkupinaSpecified
+        {
+            get
+            {
+                return (Equals(_skupina, null) != true);
             }
         }
     }
 
     /// <summary>
-    /// Content elements can be annotated with additional information via the semantics element. MathML uses the semantics element
-    /// to wrap the annotated element and the annotation-xml and annotation elements used for representing the annotations themselves.
+    /// Element popisující množství, včetně metody měření, jednotky měření a dalších aspektů.
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.w3.org/1998/Math/MathML", TypeName = "semantics")]
-    [XmlRootAttribute("semantics")]
-    public partial class Semantics
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TMnozstvi")]
+    public partial class TMnozstvi
+    {
+        #region Private fields
+        private List<Mrow> _vykazVymer;
+        private TJednotkaRef _jednotka;
+        private TMetodikaMereniRef _skupinaMereni;
+        private decimal _mnozstvi;
+        #endregion
+
+        /// <summary>
+        /// TMnozstvi class constructor
+        /// </summary>
+        public TMnozstvi()
+        {
+            _skupinaMereni = new TMetodikaMereniRef();
+            _jednotka = new TJednotkaRef();
+            _vykazVymer = new List<Mrow>();
+        }
+
+        /// <summary>
+        /// Strojově čitelný zápis výkazu výměr s možnou vazbou na model
+        /// </summary>
+        [XmlArrayItemAttribute(Namespace = "http://www.w3.org/1998/Math/MathML", IsNullable = false)]
+        public List<Mrow> VykazVymer
+        {
+            get
+            {
+                return _vykazVymer;
+            }
+            set
+            {
+                _vykazVymer = value;
+            }
+        }
+
+        /// <summary>
+        /// Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
+        /// </summary>
+        [XmlElement("Jednotka")]
+        public TJednotkaRef Jednotka
+        {
+            get
+            {
+                return _jednotka;
+            }
+            set
+            {
+                _jednotka = value;
+            }
+        }
+
+        /// <summary>
+        /// Odkaz na metodiku měření (např. https://www.sfdi.cz/soubory/obrazky-clanky/metodiky/2019_5_metodika_mereni.pdf)
+        /// </summary>
+        [XmlElement("SkupinaMereni")]
+        public TMetodikaMereniRef SkupinaMereni
+        {
+            get
+            {
+                return _skupinaMereni;
+            }
+            set
+            {
+                _skupinaMereni = value;
+            }
+        }
+
+        /// <summary>
+        /// Hodnota výměry
+        /// </summary>
+        [XmlAttribute(AttributeName = "Mnozstvi")]
+        public decimal Mnozstvi
+        {
+            get
+            {
+                return _mnozstvi;
+            }
+            set
+            {
+                _mnozstvi = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool VykazVymerSpecified
+        {
+            get
+            {
+                return (Equals(_vykazVymer, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool JednotkaSpecified
+        {
+            get
+            {
+                return (Equals(_jednotka, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool SkupinaMereniSpecified
+        {
+            get
+            {
+                return (Equals(_skupinaMereni, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool MnozstviSpecified
+        {
+            get
+            {
+                return (Equals(_mnozstvi, null) != true);
+            }
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.w3.org/1998/Math/MathML", TypeName = "mrow")]
+    [XmlRootAttribute("mrow")]
+    public partial class Mrow
     {
         #region Private fields
         private object _item;
-        private ItemChoiceType1 _itemElementName;
-        private string _annotation;
-        private string _id;
-        private string _xref;
-        private string _href;
+        private ItemChoiceType2 _itemElementName;
         #endregion
 
         [XmlElement("apply", typeof(Apply))]
@@ -3245,7 +3664,7 @@ namespace ORF.XML
         }
 
         [XmlIgnore]
-        public ItemChoiceType1 ItemElementName
+        public ItemChoiceType2 ItemElementName
         {
             get
             {
@@ -3254,58 +3673,6 @@ namespace ORF.XML
             set
             {
                 _itemElementName = value;
-            }
-        }
-
-        [XmlElement("annotation")]
-        public string Annotation
-        {
-            get
-            {
-                return _annotation;
-            }
-            set
-            {
-                _annotation = value;
-            }
-        }
-
-        [XmlAttribute(DataType = "ID", AttributeName = "id")]
-        public string Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        [XmlAttribute(AttributeName = "xref")]
-        public string Xref
-        {
-            get
-            {
-                return _xref;
-            }
-            set
-            {
-                _xref = value;
-            }
-        }
-
-        [XmlAttribute(DataType = "anyURI", AttributeName = "href")]
-        public string Href
-        {
-            get
-            {
-                return _href;
-            }
-            set
-            {
-                _href = value;
             }
         }
 
@@ -3324,42 +3691,6 @@ namespace ORF.XML
             get
             {
                 return (Equals(_itemElementName, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool AnnotationSpecified
-        {
-            get
-            {
-                return (Equals(_annotation, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool IdSpecified
-        {
-            get
-            {
-                return (Equals(_id, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool XrefSpecified
-        {
-            get
-            {
-                return (Equals(_xref, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool HrefSpecified
-        {
-            get
-            {
-                return (Equals(_href, null) != true);
             }
         }
     }
@@ -4132,45 +4463,25 @@ namespace ORF.XML
         }
     }
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.w3.org/1998/Math/MathML", IncludeInSchema = false)]
-    [XmlRootAttribute("ItemsChoiceType")]
-    public enum ItemsChoiceType
-    {
-        apply,
-        ci,
-        cn,
-        eulergamma,
-        pi,
-        semantics,
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.w3.org/1998/Math/MathML", IncludeInSchema = false)]
-    [XmlRootAttribute("ItemChoiceType1")]
-    public enum ItemChoiceType1
-    {
-        apply,
-        ci,
-        cn,
-        eulergamma,
-        pi,
-        semantics,
-    }
-
+    /// <summary>
+    /// Content elements can be annotated with additional information via the semantics element. MathML uses the semantics element
+    /// to wrap the annotated element and the annotation-xml and annotation elements used for representing the annotations themselves.
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.w3.org/1998/Math/MathML", TypeName = "mrow")]
-    [XmlRootAttribute("mrow")]
-    public partial class Mrow
+    [XmlTypeAttribute(Namespace = "http://www.w3.org/1998/Math/MathML", TypeName = "semantics")]
+    [XmlRootAttribute("semantics")]
+    public partial class Semantics
     {
         #region Private fields
         private object _item;
-        private ItemChoiceType2 _itemElementName;
+        private ItemChoiceType1 _itemElementName;
+        private string _annotation;
+        private string _id;
+        private string _xref;
+        private string _href;
         #endregion
 
         [XmlElement("apply", typeof(Apply))]
@@ -4193,7 +4504,7 @@ namespace ORF.XML
         }
 
         [XmlIgnore]
-        public ItemChoiceType2 ItemElementName
+        public ItemChoiceType1 ItemElementName
         {
             get
             {
@@ -4202,6 +4513,58 @@ namespace ORF.XML
             set
             {
                 _itemElementName = value;
+            }
+        }
+
+        [XmlElement("annotation")]
+        public string Annotation
+        {
+            get
+            {
+                return _annotation;
+            }
+            set
+            {
+                _annotation = value;
+            }
+        }
+
+        [XmlAttribute(DataType = "ID", AttributeName = "id")]
+        public string Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        [XmlAttribute(AttributeName = "xref")]
+        public string Xref
+        {
+            get
+            {
+                return _xref;
+            }
+            set
+            {
+                _xref = value;
+            }
+        }
+
+        [XmlAttribute(DataType = "anyURI", AttributeName = "href")]
+        public string Href
+        {
+            get
+            {
+                return _href;
+            }
+            set
+            {
+                _href = value;
             }
         }
 
@@ -4222,6 +4585,70 @@ namespace ORF.XML
                 return (Equals(_itemElementName, null) != true);
             }
         }
+
+        [XmlIgnore()]
+        public bool AnnotationSpecified
+        {
+            get
+            {
+                return (Equals(_annotation, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool IdSpecified
+        {
+            get
+            {
+                return (Equals(_id, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool XrefSpecified
+        {
+            get
+            {
+                return (Equals(_xref, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool HrefSpecified
+        {
+            get
+            {
+                return (Equals(_href, null) != true);
+            }
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [XmlTypeAttribute(Namespace = "http://www.w3.org/1998/Math/MathML", IncludeInSchema = false)]
+    [XmlRootAttribute("ItemChoiceType1")]
+    public enum ItemChoiceType1
+    {
+        apply,
+        ci,
+        cn,
+        eulergamma,
+        pi,
+        semantics,
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [XmlTypeAttribute(Namespace = "http://www.w3.org/1998/Math/MathML", IncludeInSchema = false)]
+    [XmlRootAttribute("ItemsChoiceType")]
+    public enum ItemsChoiceType
+    {
+        apply,
+        ci,
+        cn,
+        eulergamma,
+        pi,
+        semantics,
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
@@ -4239,86 +4666,79 @@ namespace ORF.XML
     }
 
     /// <summary>
-    /// Element popisující množství, včetně metody měření, jednotky měření a dalších aspektů.
+    /// Odkaz na metodiku měření
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TMnozstvi")]
-    public partial class TMnozstvi
+    [XmlRootAttribute("TMetodikaMereniRef")]
+    public partial class TMetodikaMereniRef
     {
         #region Private fields
-        private List<Mrow> _vykazVymer;
-        private TJednotkaRef _jednotka;
-        private TMetodikaMereniRef _skupinaMereni;
-        private decimal _mnozstvi;
+        private string _ref;
         #endregion
 
         /// <summary>
-        /// TMnozstvi class constructor
+        /// Reference. Musí existovat odpovídající element s tímto ID.
         /// </summary>
-        public TMnozstvi()
-        {
-            _skupinaMereni = new TMetodikaMereniRef();
-            _jednotka = new TJednotkaRef();
-            _vykazVymer = new List<Mrow>();
-        }
-
-        /// <summary>
-        /// Strojově čitelný zápis výkazu výměr s možnou vazbou na model
-        /// </summary>
-        [XmlArrayItemAttribute(Namespace = "http://www.w3.org/1998/Math/MathML", IsNullable = false)]
-        public List<Mrow> VykazVymer
+        [XmlAttribute(DataType = "IDREF", AttributeName = "Ref")]
+        public string Ref
         {
             get
             {
-                return _vykazVymer;
+                return _ref;
             }
             set
             {
-                _vykazVymer = value;
+                _ref = value;
             }
         }
 
-        /// <summary>
-        /// Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
-        /// </summary>
-        [XmlElement("Jednotka")]
-        public TJednotkaRef Jednotka
+        [XmlIgnore()]
+        public bool RefSpecified
         {
             get
             {
-                return _jednotka;
-            }
-            set
-            {
-                _jednotka = value;
+                return (Equals(_ref, null) != true);
             }
         }
+    }
+
+    /// <summary>
+    /// Dodatek množství rozdělený podle skupin (typu), s odkazem na dané změnové řízení
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TDodatekMnozstvi")]
+    public partial class TDodatekMnozstvi
+    {
+        #region Private fields
+        private TMnozstvi _mnozstvi;
+        private List<TSkupinaZmenPolozky> _skupinyZmen;
+        private string _id;
+        private bool _zpusobile;
+        private bool zpusobileFieldSpecified;
+        #endregion
 
         /// <summary>
-        /// Odkaz na metodiku měření (např. https://www.sfdi.cz/soubory/obrazky-clanky/metodiky/2019_5_metodika_mereni.pdf)
+        /// TDodatekMnozstvi class constructor
         /// </summary>
-        [XmlElement("SkupinaMereni")]
-        public TMetodikaMereniRef SkupinaMereni
+        public TDodatekMnozstvi()
         {
-            get
-            {
-                return _skupinaMereni;
-            }
-            set
-            {
-                _skupinaMereni = value;
-            }
+            _skupinyZmen = new List<TSkupinaZmenPolozky>();
+            _mnozstvi = new TMnozstvi();
         }
 
         /// <summary>
-        /// Hodnota výměry
+        /// Element popisující množství, včetně metody měření, jednotky měření a dalších aspektů.
         /// </summary>
-        [XmlAttribute(AttributeName = "Mnozstvi")]
-        public decimal Mnozstvi
+        [XmlElement("Mnozstvi")]
+        public TMnozstvi Mnozstvi
         {
             get
             {
@@ -4330,30 +4750,64 @@ namespace ORF.XML
             }
         }
 
-        [XmlIgnore()]
-        public bool VykazVymerSpecified
+        /// <summary>
+        /// Skupiny změn položek zachycují rozložení hodnoty změny mezi jednotlivé skupiny změn
+        /// </summary>
+        [XmlArrayItemAttribute("SkupinaZmen", IsNullable = false)]
+        public List<TSkupinaZmenPolozky> SkupinyZmen
         {
             get
             {
-                return (Equals(_vykazVymer, null) != true);
+                return _skupinyZmen;
+            }
+            set
+            {
+                _skupinyZmen = value;
             }
         }
 
-        [XmlIgnore()]
-        public bool JednotkaSpecified
+        /// <summary>
+        /// Odkaz (reference) na dodatek rozpočtu
+        /// </summary>
+        [XmlAttribute(DataType = "IDREF", AttributeName = "ID")]
+        public string ID
         {
             get
             {
-                return (Equals(_jednotka, null) != true);
+                return _id;
+            }
+            set
+            {
+                _id = value;
             }
         }
 
-        [XmlIgnore()]
-        public bool SkupinaMereniSpecified
+        /// <summary>
+        /// Indikuje, zda je tento dodatek způsobilý k financování z fondů
+        /// </summary>
+        [XmlAttribute(AttributeName = "Zpusobile")]
+        public bool Zpusobile
         {
             get
             {
-                return (Equals(_skupinaMereni, null) != true);
+                return _zpusobile;
+            }
+            set
+            {
+                _zpusobile = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ZpusobileSpecified
+        {
+            get
+            {
+                return zpusobileFieldSpecified;
+            }
+            set
+            {
+                zpusobileFieldSpecified = value;
             }
         }
 
@@ -4363,6 +4817,15 @@ namespace ORF.XML
             get
             {
                 return (Equals(_mnozstvi, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool SkupinyZmenSpecified
+        {
+            get
+            {
+                return (Equals(_skupinyZmen, null) != true);
             }
         }
     }
@@ -4427,6 +4890,8 @@ namespace ORF.XML
         private List<TTridaRef> _zatrideni;
         private TCenovaSoustavaRef _cenovaSoustava;
         private TMnozstvi _mnozstvi;
+        private TMnozstvi _mnozstviPuvodni;
+        private List<TDodatekMnozstvi> _dodatkyMnozstvi;
         private string _komentar;
         private TJednotkovaCena _jednotkovaCena;
         private TSazbaDPHRef _sazbaDPH;
@@ -4455,6 +4920,8 @@ namespace ORF.XML
         {
             _sazbaDPH = new TSazbaDPHRef();
             _jednotkovaCena = new TJednotkovaCena();
+            _dodatkyMnozstvi = new List<TDodatekMnozstvi>();
+            _mnozstviPuvodni = new TMnozstvi();
             _mnozstvi = new TMnozstvi();
             _cenovaSoustava = new TCenovaSoustavaRef();
             _zatrideni = new List<TTridaRef>();
@@ -4571,6 +5038,38 @@ namespace ORF.XML
             set
             {
                 _mnozstvi = value;
+            }
+        }
+
+        /// <summary>
+        /// Informace o množství před aplikací dodatků
+        /// </summary>
+        [XmlElement("MnozstviPuvodni")]
+        public TMnozstvi MnozstviPuvodni
+        {
+            get
+            {
+                return _mnozstviPuvodni;
+            }
+            set
+            {
+                _mnozstviPuvodni = value;
+            }
+        }
+
+        /// <summary>
+        /// Dodatky množství rozdělené podle skupin (typu) změn a jednotlivých změnových řízení
+        /// </summary>
+        [XmlArrayItemAttribute("DodatekMnozstvi", IsNullable = false)]
+        public List<TDodatekMnozstvi> DodatkyMnozstvi
+        {
+            get
+            {
+                return _dodatkyMnozstvi;
+            }
+            set
+            {
+                _dodatkyMnozstvi = value;
             }
         }
 
@@ -4924,6 +5423,24 @@ namespace ORF.XML
             get
             {
                 return (Equals(_mnozstvi, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool MnozstviPuvodniSpecified
+        {
+            get
+            {
+                return (Equals(_mnozstviPuvodni, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool DodatkyMnozstviSpecified
+        {
+            get
+            {
+                return (Equals(_dodatkyMnozstvi, null) != true);
             }
         }
 
@@ -6308,6 +6825,7 @@ namespace ORF.XML
         private TOrganizaceRef _objednatel;
         private TOrganizaceRef _uchazec;
         private List<TPozadovanaVlastnost> _informacniPozadavky;
+        private List<TDodatek> _dodatky;
         private System.DateTime _datumVytvoreniRozpoctu;
         private System.DateTime _datumOceneni;
         private bool _povinnaSkupinaMereni;
@@ -6318,6 +6836,7 @@ namespace ORF.XML
         /// </summary>
         public TRozpocet()
         {
+            _dodatky = new List<TDodatek>();
             _informacniPozadavky = new List<TPozadovanaVlastnost>();
             _uchazec = new TOrganizaceRef();
             _objednatel = new TOrganizaceRef();
@@ -6386,6 +6905,22 @@ namespace ORF.XML
             set
             {
                 _informacniPozadavky = value;
+            }
+        }
+
+        /// <summary>
+        /// Seznam dodatků k rozpočtu
+        /// </summary>
+        [XmlArrayItemAttribute("Dodatek", IsNullable = false)]
+        public List<TDodatek> Dodatky
+        {
+            get
+            {
+                return _dodatky;
+            }
+            set
+            {
+                _dodatky = value;
             }
         }
 
@@ -6471,6 +7006,15 @@ namespace ORF.XML
             get
             {
                 return (Equals(_informacniPozadavky, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool DodatkySpecified
+        {
+            get
+            {
+                return (Equals(_dodatky, null) != true);
             }
         }
 
