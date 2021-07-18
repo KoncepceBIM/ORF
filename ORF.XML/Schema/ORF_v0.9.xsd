@@ -8,7 +8,7 @@
 >
   <xs:import namespace="http://www.w3.org/1998/Math/MathML"
            schemaLocation="ORF_MathML3.xsd"/>
-  
+
   <xs:simpleType name="TVerze">
     <xs:annotation>
       <xs:documentation xml:lang="cs">Verze ORF - pro účely validace</xs:documentation>
@@ -1803,7 +1803,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  
+
   <xs:complexType name="TUzelRozpoctu">
     <xs:annotation>
       <xs:documentation xml:lang="cs">
@@ -2079,7 +2079,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  
+
   <xs:attributeGroup name="model-entity-identity">
     <xs:attribute name="modelpath" use="optional" type="xs:anyURI"></xs:attribute>
     <xs:attribute name="entityid" use="required" type="xs:string"></xs:attribute>
@@ -2417,6 +2417,157 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="TRealizace">
+    <xs:annotation>
+      <xs:documentation>
+        Záznam realizace stavby v návaznosti na čas, jednotlivé položky rozpočtu a dodatky
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SeznamObdobi" minOccurs="1" maxOccurs="1" type="TSeznamObdobi">
+        <xs:annotation>
+          <xs:documentation>
+            Seznam období realizace
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="CerpaniDodatku" use="required" type="xs:boolean"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TObdobi">
+    <xs:annotation>
+      <xs:documentation>  Období realizace </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SazbyDPH" type="TSazbyDPH">
+        <xs:annotation>
+          <xs:documentation>  Sazby DPH v období </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ZjistovaciProtokoly" type="TZjistovaciProtokoly" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation> Seznam zjišťovacích protokolů </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Znacka" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>  Značka nebo kód období </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Od" type="xs:date" use="required">
+      <xs:annotation>
+        <xs:documentation>  Datum začátku období </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Do" type="xs:date" use="required">
+      <xs:annotation>
+        <xs:documentation>  Datum konce období </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TSazbyDPH">
+    <xs:annotation>
+      <xs:documentation> Seznam sazeb DPH</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SazbaDPH" type="TSazbaDPH">
+        <xs:annotation>
+          <xs:documentation> Sazba DPH</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TSeznamObdobi">
+    <xs:annotation>
+      <xs:documentation>
+        Seznam období realizace
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Obdobi" type="TObdobi" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation> Období realizace </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TZjistovaciProtokol">
+    <xs:annotation>
+      <xs:documentation> Zjišťovací protokol </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CerpaniPolozek" type="TCerpaniPolozek" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation> Seznam záznamů čerpání položek </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:ID" use="required">
+      <xs:annotation>
+        <xs:documentation> ID zjišťovacího protokolu </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Znacka" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation> Značka nebo kód zjišťovacího protokolu </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="DatumCerpani" type="xs:date" use="required">
+      <xs:annotation>
+        <xs:documentation> Datum čerpání položek </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TZjistovaciProtokoly">
+    <xs:annotation>
+      <xs:documentation> Seznam zjišťovacích protokolů </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ZjistovaciProtokol" type="TZjistovaciProtokol" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation> Zjišťovací protokol </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TCerpaniPolozky">
+    <xs:annotation>
+      <xs:documentation> Záznam čerpání položky </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="Polozka" type="xs:IDREF">
+      <xs:annotation>
+        <xs:documentation> ID položky, která je čerpána </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="Mnozstvi" type="THodnotaMnozstvi" use="required">
+      <xs:annotation>
+        <xs:documentation xml:lang="cs">
+          Hodnota čerpaného množství
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TCerpaniPolozek">
+    <xs:annotation>
+      <xs:documentation> Seznam záznamů čerpání položek </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CerpaniPolozky" type="TCerpaniPolozky" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation> Záznam čerpání položky </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:element name="ORF" type="TORF">
     <xs:annotation>
       <xs:documentation>
@@ -2452,10 +2603,10 @@
       <xs:field xpath="@Id"/>
     </xs:key>
   </xs:element>
-  
+
   <xs:element name="Klasifikace" type="TKlasifikace">
   </xs:element>
-  
+
   <xs:element name="Jednotky">
     <xs:complexType>
       <xs:sequence>
