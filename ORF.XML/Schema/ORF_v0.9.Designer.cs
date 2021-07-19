@@ -18,6 +18,307 @@ namespace ORF.XML
     using System.Collections.Generic;
 
 
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("Bod", Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd", IsNullable = false)]
+    public partial class TBod
+    {
+        #region Private fields
+        private double _x;
+        private double _y;
+        private double _z;
+        private bool zFieldSpecified;
+        #endregion
+
+        [XmlAttribute(AttributeName = "x")]
+        public double X
+        {
+            get
+            {
+                return _x;
+            }
+            set
+            {
+                _x = value;
+            }
+        }
+
+        [XmlAttribute(AttributeName = "y")]
+        public double Y
+        {
+            get
+            {
+                return _y;
+            }
+            set
+            {
+                _y = value;
+            }
+        }
+
+        [XmlAttribute(AttributeName = "z")]
+        public double Z
+        {
+            get
+            {
+                return _z;
+            }
+            set
+            {
+                _z = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ZSpecified
+        {
+            get
+            {
+                return zFieldSpecified;
+            }
+            set
+            {
+                zFieldSpecified = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool XSpecified
+        {
+            get
+            {
+                return (Equals(_x, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool YSpecified
+        {
+            get
+            {
+                return (Equals(_y, null) != true);
+            }
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("Linie", Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd", IsNullable = false)]
+    public partial class TLinie
+    {
+        #region Private fields
+        private List<TBod> _bod;
+        #endregion
+
+        /// <summary>
+        /// TLinie class constructor
+        /// </summary>
+        public TLinie()
+        {
+            _bod = new List<TBod>();
+        }
+
+        [XmlElement("Bod")]
+        public List<TBod> Bod
+        {
+            get
+            {
+                return _bod;
+            }
+            set
+            {
+                _bod = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool BodSpecified
+        {
+            get
+            {
+                return (Equals(_bod, null) != true);
+            }
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("PolyLinie", Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd", IsNullable = false)]
+    public partial class TPolyLinie
+    {
+        #region Private fields
+        private List<TBod> _linie;
+        #endregion
+
+        /// <summary>
+        /// TPolyLinie class constructor
+        /// </summary>
+        public TPolyLinie()
+        {
+            _linie = new List<TBod>();
+        }
+
+        [XmlArrayItemAttribute("Bod", typeof(TBod), IsNullable = false)]
+        public List<TBod> Linie
+        {
+            get
+            {
+                return _linie;
+            }
+            set
+            {
+                _linie = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool LinieSpecified
+        {
+            get
+            {
+                return (Equals(_linie, null) != true);
+            }
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("Polygon", Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd", IsNullable = false)]
+    public partial class TPolygon
+    {
+        #region Private fields
+        private List<TBod> _bod;
+        #endregion
+
+        /// <summary>
+        /// TPolygon class constructor
+        /// </summary>
+        public TPolygon()
+        {
+            _bod = new List<TBod>();
+        }
+
+        [XmlElement("Bod")]
+        public List<TBod> Bod
+        {
+            get
+            {
+                return _bod;
+            }
+            set
+            {
+                _bod = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool BodSpecified
+        {
+            get
+            {
+                return (Equals(_bod, null) != true);
+            }
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("MultiPolygon", Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd", IsNullable = false)]
+    public partial class TMultiPolygon
+    {
+        #region Private fields
+        private List<TBod> _polygon;
+        #endregion
+
+        /// <summary>
+        /// TMultiPolygon class constructor
+        /// </summary>
+        public TMultiPolygon()
+        {
+            _polygon = new List<TBod>();
+        }
+
+        [XmlArrayItemAttribute("Bod", typeof(TBod), IsNullable = false)]
+        public List<TBod> Polygon
+        {
+            get
+            {
+                return _polygon;
+            }
+            set
+            {
+                _polygon = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PolygonSpecified
+        {
+            get
+            {
+                return (Equals(_polygon, null) != true);
+            }
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("Polyhedron", Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd", IsNullable = false)]
+    public partial class TPolyhedron
+    {
+        #region Private fields
+        private List<TBod> _polygon;
+        #endregion
+
+        /// <summary>
+        /// TPolyhedron class constructor
+        /// </summary>
+        public TPolyhedron()
+        {
+            _polygon = new List<TBod>();
+        }
+
+        [XmlArrayItemAttribute("Bod", typeof(TBod), IsNullable = false)]
+        public List<TBod> Polygon
+        {
+            get
+            {
+                return _polygon;
+            }
+            set
+            {
+                _polygon = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PolygonSpecified
+        {
+            get
+            {
+                return (Equals(_polygon, null) != true);
+            }
+        }
+    }
+
     /// <summary>
     /// Kořenový datový typ, který obsahuje projekt definující kontext, rozpočet a definiční sekci.
     /// V definicích jsou definované datové objekty, na které se odkazují další datové entity ORF
@@ -34,6 +335,7 @@ namespace ORF.XML
         private TProjekt _projekt;
         private TRozpocet _rozpocet;
         private TDefinice _definice;
+        private List<TMerenaGeometrie> _mereni;
         private TVerze _verze;
         #endregion
 
@@ -42,6 +344,7 @@ namespace ORF.XML
         /// </summary>
         public TORF()
         {
+            _mereni = new List<TMerenaGeometrie>();
             _definice = new TDefinice();
             _rozpocet = new TRozpocet();
             _projekt = new TProjekt();
@@ -96,6 +399,22 @@ namespace ORF.XML
         }
 
         /// <summary>
+        /// Záznamy geometrií, které vznikly měřením v prostředí BIM modelu, nebo CAD výkresu. Výkaz výměr se může odkazovat na tato měření
+        /// </summary>
+        [XmlArrayItemAttribute("Geometrie", IsNullable = false)]
+        public List<TMerenaGeometrie> Mereni
+        {
+            get
+            {
+                return _mereni;
+            }
+            set
+            {
+                _mereni = value;
+            }
+        }
+
+        /// <summary>
         /// Verze formátu ORF
         /// </summary>
         [XmlAttribute(AttributeName = "Verze")]
@@ -135,6 +454,15 @@ namespace ORF.XML
             get
             {
                 return (Equals(_definice, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool MereniSpecified
+        {
+            get
+            {
+                return (Equals(_mereni, null) != true);
             }
         }
 
@@ -424,543 +752,68 @@ namespace ORF.XML
     }
 
     /// <summary>
-    /// Identifikace druhu skupiny změn během výstavby
+    /// Poloha v souřadnicích WGS-84 (GPS souřadnice)
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TSkupinaZmen")]
-    public partial class TSkupinaZmen
+    [XmlRootAttribute("TPoloha")]
+    public partial class TPoloha
     {
         #region Private fields
-        private string _id;
-        private string _nazev;
-        private TTypZmeny _typ;
+        private double _zemSirka;
+        private double _zemDelka;
         #endregion
 
         /// <summary>
-        /// Id skupiny změn během výstavby
+        /// Zeměpisná šířka
         /// </summary>
-        [XmlAttribute(DataType = "ID", AttributeName = "ID")]
-        public string ID
+        [XmlAttribute(AttributeName = "ZemSirka")]
+        public double ZemSirka
         {
             get
             {
-                return _id;
+                return _zemSirka;
             }
             set
             {
-                _id = value;
+                _zemSirka = value;
             }
         }
 
         /// <summary>
-        /// Název skupiny změn během výstavby
+        /// Zeměpisná délka
         /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
+        [XmlAttribute(AttributeName = "ZemDelka")]
+        public double ZemDelka
         {
             get
             {
-                return _nazev;
+                return _zemDelka;
             }
             set
             {
-                _nazev = value;
-            }
-        }
-
-        /// <summary>
-        /// Typ změny
-        /// </summary>
-        [XmlAttribute(AttributeName = "Typ")]
-        public TTypZmeny Typ
-        {
-            get
-            {
-                return _typ;
-            }
-            set
-            {
-                _typ = value;
+                _zemDelka = value;
             }
         }
 
         [XmlIgnore()]
-        public bool NazevSpecified
+        public bool ZemSirkaSpecified
         {
             get
             {
-                return (Equals(_nazev, null) != true);
+                return (Equals(_zemSirka, null) != true);
             }
         }
 
         [XmlIgnore()]
-        public bool TypSpecified
+        public bool ZemDelkaSpecified
         {
             get
             {
-                return (Equals(_typ, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Typ změn během výstavby
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TTypZmeny")]
-    public enum TTypZmeny
-    {
-        VYHRAZENA,
-        ZAMENA_POLOZEK,
-        NEPREDVIDANA,
-        NEZBYTNA,
-        NEMENICI_CELK_POVAHU,
-        JINA,
-    }
-
-    /// <summary>
-    /// Element popisující metodiku měření
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TMetodikaMereni")]
-    public partial class TMetodikaMereni
-    {
-        #region Private fields
-        private TJednotkaRef _mernaJednotka;
-        private string _id;
-        private string _znacka;
-        private string _popis;
-        private string _podrobnyPopis;
-        #endregion
-
-        /// <summary>
-        /// TMetodikaMereni class constructor
-        /// </summary>
-        public TMetodikaMereni()
-        {
-            _mernaJednotka = new TJednotkaRef();
-        }
-
-        /// <summary>
-        /// Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
-        /// </summary>
-        [XmlElement("MernaJednotka")]
-        public TJednotkaRef MernaJednotka
-        {
-            get
-            {
-                return _mernaJednotka;
-            }
-            set
-            {
-                _mernaJednotka = value;
-            }
-        }
-
-        /// <summary>
-        /// Lokální ID, které použijí další elementy v ORF pro odkaz na tuto metodiku měření
-        /// </summary>
-        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
-        public string Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        /// <summary>
-        /// Značka nebo kód metodiky měření
-        /// </summary>
-        [XmlAttribute(AttributeName = "Znacka")]
-        public string Znacka
-        {
-            get
-            {
-                return _znacka;
-            }
-            set
-            {
-                _znacka = value;
-            }
-        }
-
-        /// <summary>
-        /// Krátký popis metodiky měření
-        /// </summary>
-        [XmlAttribute(AttributeName = "Popis")]
-        public string Popis
-        {
-            get
-            {
-                return _popis;
-            }
-            set
-            {
-                _popis = value;
-            }
-        }
-
-        /// <summary>
-        /// Podrobnější popis nebo kategorie metodiky měření
-        /// </summary>
-        [XmlAttribute(AttributeName = "PodrobnyPopis")]
-        public string PodrobnyPopis
-        {
-            get
-            {
-                return _podrobnyPopis;
-            }
-            set
-            {
-                _podrobnyPopis = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool MernaJednotkaSpecified
-        {
-            get
-            {
-                return (Equals(_mernaJednotka, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool IdSpecified
-        {
-            get
-            {
-                return (Equals(_id, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZnackaSpecified
-        {
-            get
-            {
-                return (Equals(_znacka, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PopisSpecified
-        {
-            get
-            {
-                return (Equals(_popis, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PodrobnyPopisSpecified
-        {
-            get
-            {
-                return (Equals(_podrobnyPopis, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Odkaz na jednotku
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TJednotkaRef")]
-    public partial class TJednotkaRef
-    {
-        #region Private fields
-        private string _ref;
-        #endregion
-
-        /// <summary>
-        /// Identifikátor jednotky
-        /// </summary>
-        [XmlAttribute(DataType = "IDREF", AttributeName = "Ref")]
-        public string Ref
-        {
-            get
-            {
-                return _ref;
-            }
-            set
-            {
-                _ref = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool RefSpecified
-        {
-            get
-            {
-                return (Equals(_ref, null) != true);
-            }
-        }
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TSazbaDPH")]
-    public partial class TSazbaDPH
-    {
-        #region Private fields
-        private string _popis;
-        private string _id;
-        private decimal _sazbaDPH;
-        private bool sazbaDPHFieldSpecified;
-        #endregion
-
-        /// <summary>
-        /// Popis sazby DPH („Základní“, „Snížená“, „Nulová“)
-        /// </summary>
-        [XmlElement("Popis")]
-        public string Popis
-        {
-            get
-            {
-                return _popis;
-            }
-            set
-            {
-                _popis = value;
-            }
-        }
-
-        /// <summary>
-        /// Identifikátor sazby DPH
-        /// </summary>
-        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
-        public string Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        /// <summary>
-        /// Sazba DPH
-        /// </summary>
-        [XmlAttribute(AttributeName = "SazbaDPH")]
-        public decimal SazbaDPH
-        {
-            get
-            {
-                return _sazbaDPH;
-            }
-            set
-            {
-                _sazbaDPH = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool SazbaDPHSpecified
-        {
-            get
-            {
-                return sazbaDPHFieldSpecified;
-            }
-            set
-            {
-                sazbaDPHFieldSpecified = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PopisSpecified
-        {
-            get
-            {
-                return (Equals(_popis, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool IdSpecified
-        {
-            get
-            {
-                return (Equals(_id, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Komponenta odvozené jednotky
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TKomponentaJednotky")]
-    public partial class TKomponentaJednotky
-    {
-        #region Private fields
-        private TJednotka _jednotka;
-        private int _exponent;
-        #endregion
-
-        /// <summary>
-        /// Základní jednotka
-        /// </summary>
-        [XmlElement("Jednotka")]
-        public TJednotka Jednotka
-        {
-            get
-            {
-                return _jednotka;
-            }
-            set
-            {
-                _jednotka = value;
-            }
-        }
-
-        /// <summary>
-        /// Exponent komponenty
-        /// </summary>
-        [XmlAttribute(AttributeName = "Exponent")]
-        public int Exponent
-        {
-            get
-            {
-                return _exponent;
-            }
-            set
-            {
-                _exponent = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool JednotkaSpecified
-        {
-            get
-            {
-                return (Equals(_jednotka, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ExponentSpecified
-        {
-            get
-            {
-                return (Equals(_exponent, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Abstraktní datový typ pro všechny definice jednotek
-    /// </summary>
-    [XmlIncludeAttribute(typeof(TPenezniJednotka))]
-    [XmlIncludeAttribute(typeof(TJednotkaZavislaNaKontextu))]
-    [XmlIncludeAttribute(typeof(TKonverzniJednotka))]
-    [XmlIncludeAttribute(typeof(TOdvozenaJednotka))]
-    [XmlIncludeAttribute(typeof(TJednotkaSI))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TJednotka")]
-    public abstract partial class TJednotka
-    {
-        #region Private fields
-        private string _id;
-        #endregion
-
-        /// <summary>
-        /// Lokální identifikátor jednotky v souboru ORF. Ostatní elementy v souboru se budou na
-        /// jednotku odkazovat pomocí tohoto identifikátoru.
-        /// </summary>
-        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
-        public string Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool IdSpecified
-        {
-            get
-            {
-                return (Equals(_id, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Jednotka pro cenu
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TPenezniJednotka")]
-    public partial class TPenezniJednotka : TJednotka
-    {
-        #region Private fields
-        private TMena _mena;
-        #endregion
-
-        [XmlAttribute(AttributeName = "Mena")]
-        public TMena Mena
-        {
-            get
-            {
-                return _mena;
-            }
-            set
-            {
-                _mena = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool MenaSpecified
-        {
-            get
-            {
-                return (Equals(_mena, null) != true);
+                return (Equals(_zemDelka, null) != true);
             }
         }
     }
@@ -1156,1791 +1009,43 @@ namespace ORF.XML
     }
 
     /// <summary>
-    /// Vyjadřuje jednotky, které nejsou vztažené k jednotkám SI. Například "kus", "komplet" a pod.
-    /// Tento datový typ by se měl používat pouze v případě, že není možné jednotku vyjádřit pomocí jednotek SI, odvozených ani konverzních jednotek
+    /// Abstraktní element, ze kterého jsou odvozeny všechny elementy, které mají ze své podstaty
+    /// vlastní softwarovou identitu. Proto mají unikátní ID (UUID) a uživatelsky srozumitelný
+    /// název a popis. Zároveň se mohou odkazovat na externí identity (například odpovídající,
+    /// nebo související elementy v modelu stavby).
     /// </summary>
+    [XmlIncludeAttribute(typeof(TUzel))]
+    [XmlIncludeAttribute(typeof(TObjekt))]
+    [XmlIncludeAttribute(typeof(TUzelRozpoctu))]
+    [XmlIncludeAttribute(typeof(TRozpocet))]
+    [XmlIncludeAttribute(typeof(TProjekt))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TJednotkaZavislaNaKontextu")]
-    public partial class TJednotkaZavislaNaKontextu : TJednotka
-    {
-        #region Private fields
-        private string _nazev;
-        private string _symbol;
-        #endregion
-
-        /// <summary>
-        /// Název jednotky
-        /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        /// <summary>
-        /// Krátký symbol pro uživatelské zobrazení
-        /// </summary>
-        [XmlAttribute(AttributeName = "Symbol")]
-        public string Symbol
-        {
-            get
-            {
-                return _symbol;
-            }
-            set
-            {
-                _symbol = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool SymbolSpecified
-        {
-            get
-            {
-                return (Equals(_symbol, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Další jednotky je možné vyjádřit pomocí měřítka a odszení. Například h = 60 * s
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TKonverzniJednotka")]
-    public partial class TKonverzniJednotka : TJednotka
-    {
-        #region Private fields
-        private TJednotka _zakladniJednotka;
-        private string _nazev;
-        private string _symbol;
-        private double _meritko;
-        private double _odsazeni;
-        #endregion
-
-        /// <summary>
-        /// TKonverzniJednotka class constructor
-        /// </summary>
-        public TKonverzniJednotka()
-        {
-            _meritko = 1D;
-            _odsazeni = 0D;
-        }
-
-        [XmlElement("ZakladniJednotka")]
-        public TJednotka ZakladniJednotka
-        {
-            get
-            {
-                return _zakladniJednotka;
-            }
-            set
-            {
-                _zakladniJednotka = value;
-            }
-        }
-
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        [XmlAttribute(AttributeName = "Symbol")]
-        public string Symbol
-        {
-            get
-            {
-                return _symbol;
-            }
-            set
-            {
-                _symbol = value;
-            }
-        }
-
-        [XmlAttribute(AttributeName = "Meritko")]
-        [DefaultValue(1D)]
-        public double Meritko
-        {
-            get
-            {
-                return _meritko;
-            }
-            set
-            {
-                _meritko = value;
-            }
-        }
-
-        [XmlAttribute(AttributeName = "Odsazeni")]
-        [DefaultValue(0D)]
-        public double Odsazeni
-        {
-            get
-            {
-                return _odsazeni;
-            }
-            set
-            {
-                _odsazeni = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZakladniJednotkaSpecified
-        {
-            get
-            {
-                return (Equals(_zakladniJednotka, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool SymbolSpecified
-        {
-            get
-            {
-                return (Equals(_symbol, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool MeritkoSpecified
-        {
-            get
-            {
-                return (Equals(_meritko, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool OdsazeniSpecified
-        {
-            get
-            {
-                return (Equals(_odsazeni, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Jednotky je možné kombinovat do odvozených jednotek, například m · s⁻¹
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TOdvozenaJednotka")]
-    public partial class TOdvozenaJednotka : TJednotka
-    {
-        #region Private fields
-        private List<TKomponentaJednotky> _komponenta;
-        #endregion
-
-        /// <summary>
-        /// TOdvozenaJednotka class constructor
-        /// </summary>
-        public TOdvozenaJednotka()
-        {
-            _komponenta = new List<TKomponentaJednotky>();
-        }
-
-        /// <summary>
-        /// Komponenty odvozené jednotky
-        /// </summary>
-        [XmlElement("Komponenta")]
-        public List<TKomponentaJednotky> Komponenta
-        {
-            get
-            {
-                return _komponenta;
-            }
-            set
-            {
-                _komponenta = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool KomponentaSpecified
-        {
-            get
-            {
-                return (Equals(_komponenta, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Jednotky SI jsou dané svým názvem (enumerace) a předponou, která definuje jejich zlomek nebo násobek
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TJednotkaSI")]
-    public partial class TJednotkaSI : TJednotka
-    {
-        #region Private fields
-        private TNazevJednotkySI _nazev;
-        private TPredponaSI _predpona;
-        private bool predponaFieldSpecified;
-        #endregion
-
-        /// <summary>
-        /// Název jednotky podle ISO 80000-1
-        /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public TNazevJednotkySI Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        /// <summary>
-        /// Předpona jednotky podle ISO 80000-1
-        /// </summary>
-        [XmlAttribute(AttributeName = "Predpona")]
-        public TPredponaSI Predpona
-        {
-            get
-            {
-                return _predpona;
-            }
-            set
-            {
-                _predpona = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool PredponaSpecified
-        {
-            get
-            {
-                return predponaFieldSpecified;
-            }
-            set
-            {
-                predponaFieldSpecified = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Názvy jednotek podle ISO 80000-1:2009
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TNazevJednotkySI")]
-    public enum TNazevJednotkySI
-    {
-        /// <summary>
-        /// Veličina: délka
-        /// Symbol: m
-        /// </summary>
-        METRE,
-        /// <summary>
-        /// Veličina: hmotnost
-        /// Symbol: g
-        /// </summary>
-        GRAM,
-        /// <summary>
-        /// Veličina: čas
-        /// Symbol: s
-        /// </summary>
-        SECOND,
-        /// <summary>
-        /// Veličina: elektrický proud
-        /// Symbol: A
-        /// </summary>
-        AMPERE,
-        /// <summary>
-        /// Veličina: termodynamická teplota
-        /// Symbol: K
-        /// </summary>
-        KELVIN,
-        /// <summary>
-        /// Veličina: látkové množství
-        /// Symbol: mol
-        /// </summary>
-        MOLE,
-        /// <summary>
-        /// Veličina: svítivost
-        /// Symbol: cd
-        /// </summary>
-        CANDELA,
-        /// <summary>
-        /// Veličina: rovinný úhel
-        /// Symbol: rad
-        /// Výraz: rad = m/m = 1
-        /// </summary>
-        RADIAN,
-        /// <summary>
-        /// Veličina: prostorový úhel
-        /// Symbol: sr
-        /// Výraz: sr = m2/m2 = 1
-        /// </summary>
-        STERADIAN,
-        /// <summary>
-        /// Veličina: frekvence
-        /// Symbol: Hz
-        /// Výraz: Hz = s−1
-        /// </summary>
-        HERTZ,
-        /// <summary>
-        /// Veličina: síla
-        /// Symbol: N
-        /// Výraz: N = kg · m/s2
-        /// </summary>
-        NEWTON,
-        /// <summary>
-        /// Veličina: tlak
-        /// Symbol: stress
-        /// Výraz: Pa	Pa = N/m2
-        /// </summary>
-        PASCAL,
-        /// <summary>
-        /// Veličina: energie
-        /// Symbol: J
-        /// Výraz: J = N · m
-        /// </summary>
-        JOULE,
-        /// <summary>
-        /// Veličina: výkon
-        /// Symbol: W
-        /// Výraz: W = J/s
-        /// </summary>
-        WATT,
-        /// <summary>
-        /// Veličina: elektrický náboj
-        /// Symbol: C
-        /// Výraz: C = A · s
-        /// </summary>
-        COULOMB,
-        /// <summary>
-        /// Veličina: rozdíl elektrického potenciálu
-        /// Symbol: V
-        /// Výraz: V = W/A
-        /// </summary>
-        VOLT,
-        /// <summary>
-        /// Veličina: elektrická kapacita
-        /// Symbol: F
-        /// Výraz: F = C/V
-        /// </summary>
-        FARAD,
-        /// <summary>
-        /// Veličina: elektrický odpor
-        /// Symbol: Ω
-        /// Výraz: Ω = V/A
-        /// </summary>
-        OHM,
-        /// <summary>
-        /// Veličina: elektrická vodivost
-        /// Symbol: S
-        /// Výraz: S = Ω−1
-        /// </summary>
-        SIEMENS,
-        /// <summary>
-        /// Veličina: magnetický tok
-        /// Symbol: Wb
-        /// Výraz: Wb = V · s
-        /// </summary>
-        WEBER,
-        /// <summary>
-        /// Veličina: magnetická indukce
-        /// Symbol: T
-        /// Výraz: T = Wb/m2
-        /// </summary>
-        TESLA,
-        /// <summary>
-        /// Veličina: indukčnost
-        /// Symbol: H
-        /// Výraz: H = Wb/A
-        /// </summary>
-        HENRY,
-        /// <summary>
-        /// Veličina: teplota ve stupních Celsia
-        /// Symbol: ºC
-        /// Výraz: ºC = K
-        /// </summary>
-        DEGREE_CELSIUS,
-        /// <summary>
-        /// Veličina: světelný tok
-        /// Symbol: lm
-        /// Výraz: lm = cd · sr
-        /// </summary>
-        LUMEN,
-        /// <summary>
-        /// Veličina: intenzita osvětlení
-        /// Symbol: lx
-        /// Výraz: lx = lm/m2
-        /// </summary>
-        LUX,
-        /// <summary>
-        /// Veličina: aktivita radionuklidu
-        /// Symbol: Bq
-        /// Výraz: Bq = s−1
-        /// </summary>
-        BECQUEREL,
-        /// <summary>
-        /// Veličina: vstřebaná dávka
-        /// Symbol: Gy
-        /// Výraz: Gy = J/kg
-        /// </summary>
-        GRAY,
-        /// <summary>
-        /// Veličina: equivalentní dávka
-        /// Symbol: Sv
-        /// Výraz: Sv = J/kg
-        /// </summary>
-        SIEVERT,
-        /// <summary>
-        /// Veličina: katalytická aktivita
-        /// Symbol: kat
-        /// Výraz: kat = mol/s
-        /// </summary>
-        KATAL,
-    }
-
-    /// <summary>
-    /// Předpony jednotek podle ISO 80000-1:2009
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TPredponaSI")]
-    public enum TPredponaSI
-    {
-        /// <summary>
-        /// Mocnina: 10^24
-        /// Symbol: Y
-        /// </summary>
-        YOTTA,
-        /// <summary>
-        /// Mocnina: 10^21
-        /// Symbol: Z
-        /// </summary>
-        ZETTA,
-        /// <summary>
-        /// Mocnina: 10^18
-        /// Symbol: E
-        /// </summary>
-        EXA,
-        /// <summary>
-        /// Mocnina: 10^15
-        /// Symbol: P
-        /// </summary>
-        PETA,
-        /// <summary>
-        /// Mocnina: 10^12
-        /// Symbol: T
-        /// </summary>
-        TERA,
-        /// <summary>
-        /// Mocnina: 10^9
-        /// Symbol: G
-        /// </summary>
-        GIGA,
-        /// <summary>
-        /// Mocnina: 10^6
-        /// Symbol: M
-        /// </summary>
-        MEGA,
-        /// <summary>
-        /// Mocnina: 10^3
-        /// Symbol: k
-        /// </summary>
-        KILO,
-        /// <summary>
-        /// Mocnina: 10^2
-        /// Symbol: h
-        /// </summary>
-        HECTO,
-        /// <summary>
-        /// Mocnina: 10^1 d
-        /// Symbol: a
-        /// </summary>
-        DECA,
-        /// <summary>
-        /// Mocnina: 10^−1
-        /// Symbol: d
-        /// </summary>
-        DECI,
-        /// <summary>
-        /// Mocnina: 10^−2
-        /// Symbol: c
-        /// </summary>
-        CENTI,
-        /// <summary>
-        /// Mocnina: 10^−3
-        /// Symbol: m
-        /// </summary>
-        MILLI,
-        /// <summary>
-        /// Mocnina: 10^−6
-        /// Symbol: μ
-        /// </summary>
-        MICRO,
-        /// <summary>
-        /// Mocnina: 10^−9
-        /// Symbol: n
-        /// </summary>
-        NANO,
-        /// <summary>
-        /// Mocnina: 10^−12
-        /// Symbol: p
-        /// </summary>
-        PICO,
-        /// <summary>
-        /// Mocnina: 10^−15
-        /// Symbol: f
-        /// </summary>
-        FEMTO,
-        /// <summary>
-        /// Mocnina: 10^−18
-        /// Symbol: a
-        /// </summary>
-        ATTO,
-        /// <summary>
-        /// Mocnina: 10^−21
-        /// Symbol: z
-        /// </summary>
-        ZEPTO,
-        /// <summary>
-        /// Mocnina: 10^−24
-        /// Symbol: y
-        /// </summary>
-        YOCTO,
-    }
-
-    /// <summary>
-    /// Informace o cenové soustavě
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TCenovaSoustava")]
-    public partial class TCenovaSoustava
-    {
-        #region Private fields
-        private string _id;
-        private string _nazev;
-        private string _popis;
-        private string _zdroj;
-        private string _umisteni;
-        private string _edice;
-        #endregion
-
-        /// <summary>
-        /// Reference v rámci dokumentu ORF
-        /// </summary>
-        [XmlAttribute(AttributeName = "Id")]
-        public string Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        /// <summary>
-        /// Název cenové soustavy
-        /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        /// <summary>
-        /// Popis cenové soustavy
-        /// </summary>
-        [XmlAttribute(AttributeName = "Popis")]
-        public string Popis
-        {
-            get
-            {
-                return _popis;
-            }
-            set
-            {
-                _popis = value;
-            }
-        }
-
-        /// <summary>
-        /// Zdroj cenové soustavy (například organizace, předpis a pod.)
-        /// </summary>
-        [XmlAttribute(AttributeName = "Zdroj")]
-        public string Zdroj
-        {
-            get
-            {
-                return _zdroj;
-            }
-            set
-            {
-                _zdroj = value;
-            }
-        }
-
-        /// <summary>
-        /// Odkaz na umístění cenové soustavy na webu (pokud je dostupná online)
-        /// </summary>
-        [XmlAttribute(DataType = "anyURI", AttributeName = "Umisteni")]
-        public string Umisteni
-        {
-            get
-            {
-                return _umisteni;
-            }
-            set
-            {
-                _umisteni = value;
-            }
-        }
-
-        /// <summary>
-        /// Označení edice cenové soustavy (verze, rok a pod.)
-        /// </summary>
-        [XmlAttribute(AttributeName = "Edice")]
-        public string Edice
-        {
-            get
-            {
-                return _edice;
-            }
-            set
-            {
-                _edice = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool IdSpecified
-        {
-            get
-            {
-                return (Equals(_id, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PopisSpecified
-        {
-            get
-            {
-                return (Equals(_popis, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZdrojSpecified
-        {
-            get
-            {
-                return (Equals(_zdroj, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool UmisteniSpecified
-        {
-            get
-            {
-                return (Equals(_umisteni, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool EdiceSpecified
-        {
-            get
-            {
-                return (Equals(_edice, null) != true);
-            }
-        }
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TTrida")]
-    public partial class TTrida
-    {
-        #region Private fields
-        private List<TTrida> _trida;
-        private string _id;
-        private string _kod;
-        private string _nazev;
-        private string _popis;
-        #endregion
-
-        /// <summary>
-        /// TTrida class constructor
-        /// </summary>
-        public TTrida()
-        {
-            _trida = new List<TTrida>();
-        }
-
-        [XmlElement("Trida")]
-        public List<TTrida> Trida
-        {
-            get
-            {
-                return _trida;
-            }
-            set
-            {
-                _trida = value;
-            }
-        }
-
-        /// <summary>
-        /// Reference v rámci dokumentu ORF
-        /// </summary>
-        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
-        public string Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        /// <summary>
-        /// Kód klasifikační třídy
-        /// </summary>
-        [XmlAttribute(AttributeName = "Kod")]
-        public string Kod
-        {
-            get
-            {
-                return _kod;
-            }
-            set
-            {
-                _kod = value;
-            }
-        }
-
-        /// <summary>
-        /// Název klasifikační třídy
-        /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        /// <summary>
-        /// Popis klasifikační třídy
-        /// </summary>
-        [XmlAttribute(AttributeName = "Popis")]
-        public string Popis
-        {
-            get
-            {
-                return _popis;
-            }
-            set
-            {
-                _popis = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool TridaSpecified
-        {
-            get
-            {
-                return (Equals(_trida, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool IdSpecified
-        {
-            get
-            {
-                return (Equals(_id, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool KodSpecified
-        {
-            get
-            {
-                return (Equals(_kod, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PopisSpecified
-        {
-            get
-            {
-                return (Equals(_popis, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Element obsahující definici klasifikačního systému
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("Klasifikace", Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd", IsNullable = false)]
-    public partial class TKlasifikace
-    {
-        #region Private fields
-        private List<TTrida> _trida;
-        private TTypKlasifikace _typ;
-        private string _nazev;
-        private string _popis;
-        private string _zdroj;
-        private string _umisteni;
-        private string _edice;
-        #endregion
-
-        /// <summary>
-        /// TKlasifikace class constructor
-        /// </summary>
-        public TKlasifikace()
-        {
-            _trida = new List<TTrida>();
-            _typ = TTypKlasifikace.Vlastni;
-        }
-
-        /// <summary>
-        /// Třídy klasifikačního systému
-        /// </summary>
-        [XmlElement("Trida")]
-        public List<TTrida> Trida
-        {
-            get
-            {
-                return _trida;
-            }
-            set
-            {
-                _trida = value;
-            }
-        }
-
-        /// <summary>
-        /// Typ klasifikačního systému, pokud se jedná o jeden z často používaných systémů.
-        /// Pokud se jedná o jiný klasifikační systém, použije se hodnota "Vlastní"
-        /// </summary>
-        [XmlAttribute(AttributeName = "Typ")]
-        [DefaultValue(TTypKlasifikace.Vlastni)]
-        public TTypKlasifikace Typ
-        {
-            get
-            {
-                return _typ;
-            }
-            set
-            {
-                _typ = value;
-            }
-        }
-
-        /// <summary>
-        /// Název klasifikačního systému
-        /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        /// <summary>
-        /// Popis klasifikačního systému
-        /// </summary>
-        [XmlAttribute(AttributeName = "Popis")]
-        public string Popis
-        {
-            get
-            {
-                return _popis;
-            }
-            set
-            {
-                _popis = value;
-            }
-        }
-
-        /// <summary>
-        /// Zdroj klasifikačního systému (například organizace, předpis a pod.)
-        /// </summary>
-        [XmlAttribute(AttributeName = "Zdroj")]
-        public string Zdroj
-        {
-            get
-            {
-                return _zdroj;
-            }
-            set
-            {
-                _zdroj = value;
-            }
-        }
-
-        /// <summary>
-        /// Odkaz na umístění klasifikačního systému na webu (pokud je dostupná online)
-        /// </summary>
-        [XmlAttribute(DataType = "anyURI", AttributeName = "Umisteni")]
-        public string Umisteni
-        {
-            get
-            {
-                return _umisteni;
-            }
-            set
-            {
-                _umisteni = value;
-            }
-        }
-
-        /// <summary>
-        /// Označení edice klasifikačního systému (verze, rok a pod.)
-        /// </summary>
-        [XmlAttribute(AttributeName = "Edice")]
-        public string Edice
-        {
-            get
-            {
-                return _edice;
-            }
-            set
-            {
-                _edice = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool TridaSpecified
-        {
-            get
-            {
-                return (Equals(_trida, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool TypSpecified
-        {
-            get
-            {
-                return (Equals(_typ, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PopisSpecified
-        {
-            get
-            {
-                return (Equals(_popis, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZdrojSpecified
-        {
-            get
-            {
-                return (Equals(_zdroj, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool UmisteniSpecified
-        {
-            get
-            {
-                return (Equals(_umisteni, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool EdiceSpecified
-        {
-            get
-            {
-                return (Equals(_edice, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Výčet nejčastěji používaných klasifikací v českém stavebnictví.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TTypKlasifikace")]
-    public enum TTypKlasifikace
-    {
-        [XmlEnumAttribute("CZ-CC")]
-        CZCC,
-        CPV,
-        CPA,
-        CCI_STAVEBNI_ENTITY,
-        CCI_VYBUDOVANE_PROSTORY,
-        CCI_FUNKCNI_SYSTEMY,
-        CCI_KONSTRUKCNI_SYSTEMY,
-        CCI_KOMPONENTY,
-        CCI_KOMPLEXY,
-        Vlastni,
-    }
-
-    /// <summary>
-    /// Element popisující osobu
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TOsoba")]
-    public partial class TOsoba
-    {
-        #region Private fields
-        private TAdresa _adresa;
-        private string _jmeno;
-        private string _telefon;
-        private string _email;
-        #endregion
-
-        /// <summary>
-        /// TOsoba class constructor
-        /// </summary>
-        public TOsoba()
-        {
-            _adresa = new TAdresa();
-        }
-
-        /// <summary>
-        /// Poštovní adresa
-        /// </summary>
-        [XmlElement("Adresa")]
-        public TAdresa Adresa
-        {
-            get
-            {
-                return _adresa;
-            }
-            set
-            {
-                _adresa = value;
-            }
-        }
-
-        /// <summary>
-        /// Jméno a příjmení, případně včetně titulů.
-        /// </summary>
-        [XmlAttribute(AttributeName = "Jmeno")]
-        public string Jmeno
-        {
-            get
-            {
-                return _jmeno;
-            }
-            set
-            {
-                _jmeno = value;
-            }
-        }
-
-        /// <summary>
-        /// Telefonní číslo osoby
-        /// </summary>
-        [XmlAttribute(AttributeName = "Telefon")]
-        public string Telefon
-        {
-            get
-            {
-                return _telefon;
-            }
-            set
-            {
-                _telefon = value;
-            }
-        }
-
-        /// <summary>
-        /// Email osoby
-        /// </summary>
-        [XmlAttribute(AttributeName = "Email")]
-        public string Email
-        {
-            get
-            {
-                return _email;
-            }
-            set
-            {
-                _email = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool AdresaSpecified
-        {
-            get
-            {
-                return (Equals(_adresa, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool JmenoSpecified
-        {
-            get
-            {
-                return (Equals(_jmeno, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool TelefonSpecified
-        {
-            get
-            {
-                return (Equals(_telefon, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool EmailSpecified
-        {
-            get
-            {
-                return (Equals(_email, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Element popisující organizaci
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TOrganizace")]
-    public partial class TOrganizace
-    {
-        #region Private fields
-        private TAdresa _adresa;
-        private TOsoba _kontakt;
-        private string _id;
-        private string _nazev;
-        private string _iCO;
-        private string _dIC;
-        private string _telefon;
-        private string _email;
-        #endregion
-
-        /// <summary>
-        /// TOrganizace class constructor
-        /// </summary>
-        public TOrganizace()
-        {
-            _kontakt = new TOsoba();
-            _adresa = new TAdresa();
-        }
-
-        /// <summary>
-        /// Poštovní adresa
-        /// </summary>
-        [XmlElement("Adresa")]
-        public TAdresa Adresa
-        {
-            get
-            {
-                return _adresa;
-            }
-            set
-            {
-                _adresa = value;
-            }
-        }
-
-        /// <summary>
-        /// Kontaktní osoba
-        /// </summary>
-        [XmlElement("Kontakt")]
-        public TOsoba Kontakt
-        {
-            get
-            {
-                return _kontakt;
-            }
-            set
-            {
-                _kontakt = value;
-            }
-        }
-
-        /// <summary>
-        /// Reference v rámci dokumentu ORF
-        /// </summary>
-        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
-        public string Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        /// <summary>
-        /// Název organizace
-        /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        /// <summary>
-        /// Identifikační číslo organizace
-        /// </summary>
-        [XmlAttribute(AttributeName = "ICO")]
-        public string ICO
-        {
-            get
-            {
-                return _iCO;
-            }
-            set
-            {
-                _iCO = value;
-            }
-        }
-
-        /// <summary>
-        /// Daňové identifikační číslo organizace
-        /// </summary>
-        [XmlAttribute(AttributeName = "DIC")]
-        public string DIC
-        {
-            get
-            {
-                return _dIC;
-            }
-            set
-            {
-                _dIC = value;
-            }
-        }
-
-        /// <summary>
-        /// Telefonní číslo organizace
-        /// </summary>
-        [XmlAttribute(AttributeName = "Telefon")]
-        public string Telefon
-        {
-            get
-            {
-                return _telefon;
-            }
-            set
-            {
-                _telefon = value;
-            }
-        }
-
-        /// <summary>
-        /// Email organizace
-        /// </summary>
-        [XmlAttribute(AttributeName = "Email")]
-        public string Email
-        {
-            get
-            {
-                return _email;
-            }
-            set
-            {
-                _email = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool AdresaSpecified
-        {
-            get
-            {
-                return (Equals(_adresa, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool KontaktSpecified
-        {
-            get
-            {
-                return (Equals(_kontakt, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool IdSpecified
-        {
-            get
-            {
-                return (Equals(_id, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ICOSpecified
-        {
-            get
-            {
-                return (Equals(_iCO, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool DICSpecified
-        {
-            get
-            {
-                return (Equals(_dIC, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool TelefonSpecified
-        {
-            get
-            {
-                return (Equals(_telefon, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool EmailSpecified
-        {
-            get
-            {
-                return (Equals(_email, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Sekce definic, na které se pomocí ID odkazují další objekty v datovém modelu
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TDefinice")]
-    public partial class TDefinice
-    {
-        #region Private fields
-        private List<TOrganizace> _organizace;
-        private List<TKlasifikace> _klasifikace;
-        private List<TCenovaSoustava> _cenovaSoustava;
-        private List<TJednotka> _jednotka;
-        private List<TSazbaDPH> _sazbaDPH;
-        private List<TMetodikaMereni> _metodikaMereni;
-        private List<TSkupinaZmen> _skupinyZmen;
-        private int _zaokrouhleniMnozstviPolozky;
-        #endregion
-
-        /// <summary>
-        /// TDefinice class constructor
-        /// </summary>
-        public TDefinice()
-        {
-            _skupinyZmen = new List<TSkupinaZmen>();
-            _metodikaMereni = new List<TMetodikaMereni>();
-            _sazbaDPH = new List<TSazbaDPH>();
-            _jednotka = new List<TJednotka>();
-            _cenovaSoustava = new List<TCenovaSoustava>();
-            _klasifikace = new List<TKlasifikace>();
-            _organizace = new List<TOrganizace>();
-        }
-
-        /// <summary>
-        /// Seznam organizací
-        /// </summary>
-        [XmlElement("Organizace")]
-        public List<TOrganizace> Organizace
-        {
-            get
-            {
-                return _organizace;
-            }
-            set
-            {
-                _organizace = value;
-            }
-        }
-
-        /// <summary>
-        /// Seznam klasifikací včetně klasifikační hierarchie. Jednotlivé elementy hierarchie rozpočtu se
-        /// mohou odkazovat na několik klasifikačních tříd.
-        /// </summary>
-        [XmlElement("Klasifikace")]
-        public List<TKlasifikace> Klasifikace
-        {
-            get
-            {
-                return _klasifikace;
-            }
-            set
-            {
-                _klasifikace = value;
-            }
-        }
-
-        /// <summary>
-        /// Informace o použité cenové soustavě. Položky rozpočtu se na cenovou soustavu odkazují.
-        /// </summary>
-        [XmlElement("CenovaSoustava")]
-        public List<TCenovaSoustava> CenovaSoustava
-        {
-            get
-            {
-                return _cenovaSoustava;
-            }
-            set
-            {
-                _cenovaSoustava = value;
-            }
-        }
-
-        /// <summary>
-        /// Seznam jednotek. Fyzikální jednotky jsou popsány strojově čitelnou formou, ostatní prostým
-        /// textovým popisem. Položky rozpočtu se na tyto jednotky odkazují.
-        /// </summary>
-        [XmlElement("Jednotka")]
-        public List<TJednotka> Jednotka
-        {
-            get
-            {
-                return _jednotka;
-            }
-            set
-            {
-                _jednotka = value;
-            }
-        }
-
-        /// <summary>
-        /// Sazby DPH použité v dokumentu ORF
-        /// </summary>
-        [XmlElement("SazbaDPH")]
-        public List<TSazbaDPH> SazbaDPH
-        {
-            get
-            {
-                return _sazbaDPH;
-            }
-            set
-            {
-                _sazbaDPH = value;
-            }
-        }
-
-        /// <summary>
-        /// Metodiky měření, na které se mohou odkazovat jednotlivé položky rozpočtu
-        /// </summary>
-        [XmlElement("MetodikaMereni")]
-        public List<TMetodikaMereni> MetodikaMereni
-        {
-            get
-            {
-                return _metodikaMereni;
-            }
-            set
-            {
-                _metodikaMereni = value;
-            }
-        }
-
-        /// <summary>
-        /// Seznam skupin změn během výstavby
-        /// </summary>
-        [XmlArrayItemAttribute("SkupinaZmen", IsNullable = false)]
-        public List<TSkupinaZmen> SkupinyZmen
-        {
-            get
-            {
-                return _skupinyZmen;
-            }
-            set
-            {
-                _skupinyZmen = value;
-            }
-        }
-
-        /// <summary>
-        /// Počet platných desetinných míst pro zaohrouhlování množství
-        /// </summary>
-        [XmlAttribute(AttributeName = "ZaokrouhleniMnozstviPolozky")]
-        public int ZaokrouhleniMnozstviPolozky
-        {
-            get
-            {
-                return _zaokrouhleniMnozstviPolozky;
-            }
-            set
-            {
-                _zaokrouhleniMnozstviPolozky = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool OrganizaceSpecified
-        {
-            get
-            {
-                return (Equals(_organizace, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool KlasifikaceSpecified
-        {
-            get
-            {
-                return (Equals(_klasifikace, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool CenovaSoustavaSpecified
-        {
-            get
-            {
-                return (Equals(_cenovaSoustava, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool JednotkaSpecified
-        {
-            get
-            {
-                return (Equals(_jednotka, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool SazbaDPHSpecified
-        {
-            get
-            {
-                return (Equals(_sazbaDPH, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool MetodikaMereniSpecified
-        {
-            get
-            {
-                return (Equals(_metodikaMereni, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool SkupinyZmenSpecified
-        {
-            get
-            {
-                return (Equals(_skupinyZmen, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZaokrouhleniMnozstviPolozkySpecified
-        {
-            get
-            {
-                return (Equals(_zaokrouhleniMnozstviPolozky, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Dodatek k rozpočtu
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TDodatek")]
-    public partial class TDodatek
+    [XmlRootAttribute("TIdentita")]
+    public abstract partial class TIdentita
     {
         #region Private fields
         private string _popis;
+        private List<TExterniEntita> _externiEntita;
+        private List<TSkupinaVlastnosti> _skupinaVlastnosti;
         private string _id;
-        private string _znacka;
         private string _nazev;
-        private bool _uzavren;
         #endregion
 
         /// <summary>
-        /// Popis změn v tomto dodatku
+        /// TIdentita class constructor
+        /// </summary>
+        public TIdentita()
+        {
+            _skupinaVlastnosti = new List<TSkupinaVlastnosti>();
+            _externiEntita = new List<TExterniEntita>();
+        }
+
+        /// <summary>
+        /// Popis
         /// </summary>
         [XmlElement("Popis")]
         public string Popis
@@ -2956,10 +1061,43 @@ namespace ORF.XML
         }
 
         /// <summary>
-        /// ID dodatku k rozpočtu
+        /// Externí identity (například odpovídající, nebo související elementy v modelu stavby).
         /// </summary>
-        [XmlAttribute(DataType = "ID", AttributeName = "ID")]
-        public string ID
+        [XmlElement("ExterniEntita")]
+        public List<TExterniEntita> ExterniEntita
+        {
+            get
+            {
+                return _externiEntita;
+            }
+            set
+            {
+                _externiEntita = value;
+            }
+        }
+
+        /// <summary>
+        /// Volitelné další vlastnosti popisující danou datovou entitu
+        /// </summary>
+        [XmlElement("SkupinaVlastnosti")]
+        public List<TSkupinaVlastnosti> SkupinaVlastnosti
+        {
+            get
+            {
+                return _skupinaVlastnosti;
+            }
+            set
+            {
+                _skupinaVlastnosti = value;
+            }
+        }
+
+        /// <summary>
+        /// Unikátní ID (podle ISO/IEC 9834-8:2005). Tento identifikátor umožňuje spolehlivě zachovat kontinuitu dat
+        /// při jejich zpracování v různých izolovaných systémech. Umožňuje zachovat softwarovou identitu datové entity.
+        /// </summary>
+        [XmlAttribute(AttributeName = "Id")]
+        public string Id
         {
             get
             {
@@ -2972,23 +1110,108 @@ namespace ORF.XML
         }
 
         /// <summary>
-        /// Značka nebo kód dodatku
+        /// Krátký název, který lze spolehlivě prezentovat uživateli
         /// </summary>
-        [XmlAttribute(AttributeName = "Znacka")]
-        public string Znacka
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
         {
             get
             {
-                return _znacka;
+                return _nazev;
             }
             set
             {
-                _znacka = value;
+                _nazev = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PopisSpecified
+        {
+            get
+            {
+                return (Equals(_popis, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ExterniEntitaSpecified
+        {
+            get
+            {
+                return (Equals(_externiEntita, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool SkupinaVlastnostiSpecified
+        {
+            get
+            {
+                return (Equals(_skupinaVlastnosti, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool IdSpecified
+        {
+            get
+            {
+                return (Equals(_id, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Externí identita představuje odkaz na softwarovou identitu, která existuje v jiném datovém modelu a
+    /// která je jednoznačně adresovatelná svým unikátním ID. Zároveň může mít název pro uživatelskou interakci.
+    /// Typicky bude použito pro vazbu na datové entity v IFC, nebo v nativním modelu.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TExterniEntita")]
+    public partial class TExterniEntita
+    {
+        #region Private fields
+        private string _id;
+        private string _nazev;
+        private string _zdroj;
+        private string _umisteni;
+        #endregion
+
+        /// <summary>
+        /// Identifikátor externí datové entity. Pokud se jedná o UUID odkazující do modelu IFC, bude toto UUID
+        /// reprezentováno stejně jako v souborech IFC, tedy jako UUID v base64 kódování.
+        /// (https://technical.buildingsmart.org/resources/ifcimplementationguidance/ifc-guid/).
+        /// </summary>
+        [XmlAttribute(AttributeName = "Id")]
+        public string Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
             }
         }
 
         /// <summary>
-        /// Název dodatku
+        /// Název externí entity. Slouží pro uživatelskou prezentaci a orientaci. Pokud je externí entita z modelu IFC,
+        /// bude použita hodnota IfcRoot.Name.
         /// </summary>
         [XmlAttribute(AttributeName = "Nazev")]
         public string Nazev
@@ -3004,36 +1227,44 @@ namespace ORF.XML
         }
 
         /// <summary>
-        /// Stav dodatku (true = uzavřen, false = otevřen)
+        /// Zdroj externí entity (například název souboru)
         /// </summary>
-        [XmlAttribute(AttributeName = "Uzavren")]
-        public bool Uzavren
+        [XmlAttribute(AttributeName = "Zdroj")]
+        public string Zdroj
         {
             get
             {
-                return _uzavren;
+                return _zdroj;
             }
             set
             {
-                _uzavren = value;
+                _zdroj = value;
+            }
+        }
+
+        /// <summary>
+        /// Umístění externí entity. Například URL umístění ve společném datovém prostředí (CDE), nebo relativní
+        /// cesta k souboru s modelem stavby.
+        /// </summary>
+        [XmlAttribute(DataType = "anyURI", AttributeName = "Umisteni")]
+        public string Umisteni
+        {
+            get
+            {
+                return _umisteni;
+            }
+            set
+            {
+                _umisteni = value;
             }
         }
 
         [XmlIgnore()]
-        public bool PopisSpecified
+        public bool IdSpecified
         {
             get
             {
-                return (Equals(_popis, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZnackaSpecified
-        {
-            get
-            {
-                return (Equals(_znacka, null) != true);
+                return (Equals(_id, null) != true);
             }
         }
 
@@ -3047,43 +1278,166 @@ namespace ORF.XML
         }
 
         [XmlIgnore()]
-        public bool UzavrenSpecified
+        public bool ZdrojSpecified
         {
             get
             {
-                return (Equals(_uzavren, null) != true);
+                return (Equals(_zdroj, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool UmisteniSpecified
+        {
+            get
+            {
+                return (Equals(_umisteni, null) != true);
             }
         }
     }
 
+    /// <summary>
+    /// Element umožňující zachytit popisné vlastnosti sdružené do pojmenované skupiny
+    /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TPozadovanaVlastnost")]
-    public partial class TPozadovanaVlastnost
+    [XmlRootAttribute("TSkupinaVlastnosti")]
+    public partial class TSkupinaVlastnosti
+    {
+        #region Private fields
+        private string _popis;
+        private List<TVlastnost> _vlastnost;
+        private string _nazev;
+        #endregion
+
+        /// <summary>
+        /// TSkupinaVlastnosti class constructor
+        /// </summary>
+        public TSkupinaVlastnosti()
+        {
+            _vlastnost = new List<TVlastnost>();
+        }
+
+        /// <summary>
+        /// Popis skupiny vlastností
+        /// </summary>
+        [XmlElement("Popis")]
+        public string Popis
+        {
+            get
+            {
+                return _popis;
+            }
+            set
+            {
+                _popis = value;
+            }
+        }
+
+        /// <summary>
+        /// Vlastnosti v této skupině. Názvy vlastností musí být v rámci skupiny unikátní.
+        /// </summary>
+        [XmlElement("Vlastnost")]
+        public List<TVlastnost> Vlastnost
+        {
+            get
+            {
+                return _vlastnost;
+            }
+            set
+            {
+                _vlastnost = value;
+            }
+        }
+
+        /// <summary>
+        /// Název skupiny vlastností
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PopisSpecified
+        {
+            get
+            {
+                return (Equals(_popis, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool VlastnostSpecified
+        {
+            get
+            {
+                return (Equals(_vlastnost, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Element reprezentující popisnou vlastnost. Vlastnost má atribut "IdentifikatorDSS", pomocí kterého se
+    /// může odkázat na definici z Datového standardu staveb. Atribut "OvlivnujeCenu" určuje, jestli se
+    /// jedná o interní informaci zadavatele, nebo jestli se jedná o informaci, která ovlivňuje cenu a účastník
+    /// se jí musí zabývat. Prostřednictvím elementu "Pozadavek" se může vlastnost odkazovat na informační požadavek,
+    /// na který odpovídá.
+    /// </summary>
+    [XmlIncludeAttribute(typeof(TVlastnostDatum))]
+    [XmlIncludeAttribute(typeof(TVlastnostBoolean))]
+    [XmlIncludeAttribute(typeof(TVlastnostIntegral))]
+    [XmlIncludeAttribute(typeof(TVlastnostReal))]
+    [XmlIncludeAttribute(typeof(TVlastnostDecimal))]
+    [XmlIncludeAttribute(typeof(TVlastnostText))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TVlastnost")]
+    public abstract partial class TVlastnost
     {
         #region Private fields
         private string _popis;
         private TJednotkaRef _jednotka;
-        private string _id;
-        private string _skupinaVlastnosti;
+        private TPozadovanaVlastnostRef _pozadavek;
         private string _nazev;
-        private TTypHodnoty _typHodnoty;
-        private string _datovyProfil;
+        private string _identifikatorDSS;
+        private bool _ovlivnujeCenu;
         #endregion
 
         /// <summary>
-        /// TPozadovanaVlastnost class constructor
+        /// TVlastnost class constructor
         /// </summary>
-        public TPozadovanaVlastnost()
+        public TVlastnost()
         {
+            _pozadavek = new TPozadovanaVlastnostRef();
             _jednotka = new TJednotkaRef();
         }
 
         /// <summary>
-        /// Popis požadované vlastnosti
+        /// Popis vlastnosti
         /// </summary>
         [XmlElement("Popis")]
         public string Popis
@@ -3115,40 +1469,23 @@ namespace ORF.XML
         }
 
         /// <summary>
-        /// Lokální identita požadavku (v rámci souboru ORF). Vlastnosti, které představují odpověď na tento
-        /// informační požadavek se na něj budou odkazovat pomocí tohoto ID.
+        /// Pokud je tato vlastnost odpověď na určitý datový požadavek, je tento element odkazem na tento požadavek.
         /// </summary>
-        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
-        public string Id
+        [XmlElement("Pozadavek")]
+        public TPozadovanaVlastnostRef Pozadavek
         {
             get
             {
-                return _id;
+                return _pozadavek;
             }
             set
             {
-                _id = value;
+                _pozadavek = value;
             }
         }
 
         /// <summary>
-        /// Název skupiny, ve které má být vlastnost umístěna
-        /// </summary>
-        [XmlAttribute(AttributeName = "SkupinaVlastnosti")]
-        public string SkupinaVlastnosti
-        {
-            get
-            {
-                return _skupinaVlastnosti;
-            }
-            set
-            {
-                _skupinaVlastnosti = value;
-            }
-        }
-
-        /// <summary>
-        /// Název požadované vlastnosti
+        /// Název vlastnosti
         /// </summary>
         [XmlAttribute(AttributeName = "Nazev")]
         public string Nazev
@@ -3164,36 +1501,38 @@ namespace ORF.XML
         }
 
         /// <summary>
-        /// Datový typ hodnoty požadované vlastnosti
+        /// Identifikátor vlastnosti v datovém standardu staveb. Pokud se jedná o data, která by
+        /// měla být použita pro výměnu informací mezi dvěma a více subjekty, měla bz definice
+        /// vlastnosti být založena na definici v DSS.
         /// </summary>
-        [XmlAttribute(AttributeName = "TypHodnoty")]
-        public TTypHodnoty TypHodnoty
+        [XmlAttribute(AttributeName = "IdentifikatorDSS")]
+        public string IdentifikatorDSS
         {
             get
             {
-                return _typHodnoty;
+                return _identifikatorDSS;
             }
             set
             {
-                _typHodnoty = value;
+                _identifikatorDSS = value;
             }
         }
 
         /// <summary>
-        /// Identifikátor vlastnosti v datovém profilu ORF. Pokud se jedná o data, která by
-        /// měla být použita pro výměnu informací mezi dvěma a více subjekty, měla by definice
-        /// vlastnosti být založena na definici publikované ČAS ve formě datového profilu ORF.
+        /// Tento příznak udává, jestli má tato vlastnost vliv na cenu. Pokud nemá vliv na cenu,
+        /// může ji například SW pro podání nabídky ignorovat na importu a nemusí ji zobrazit účastníku výběrového řízení.
+        /// Musí však zaručit, že bude tato vlastnost přítomna ve výstupním souboru (tzv. round-trip).
         /// </summary>
-        [XmlAttribute(AttributeName = "DatovyProfil")]
-        public string DatovyProfil
+        [XmlAttribute(AttributeName = "OvlivnujeCenu")]
+        public bool OvlivnujeCenu
         {
             get
             {
-                return _datovyProfil;
+                return _ovlivnujeCenu;
             }
             set
             {
-                _datovyProfil = value;
+                _ovlivnujeCenu = value;
             }
         }
 
@@ -3216,20 +1555,11 @@ namespace ORF.XML
         }
 
         [XmlIgnore()]
-        public bool IdSpecified
+        public bool PozadavekSpecified
         {
             get
             {
-                return (Equals(_id, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool SkupinaVlastnostiSpecified
-        {
-            get
-            {
-                return (Equals(_skupinaVlastnosti, null) != true);
+                return (Equals(_pozadavek, null) != true);
             }
         }
 
@@ -3243,51 +1573,75 @@ namespace ORF.XML
         }
 
         [XmlIgnore()]
-        public bool TypHodnotySpecified
+        public bool IdentifikatorDSSSpecified
         {
             get
             {
-                return (Equals(_typHodnoty, null) != true);
+                return (Equals(_identifikatorDSS, null) != true);
             }
         }
 
         [XmlIgnore()]
-        public bool DatovyProfilSpecified
+        public bool OvlivnujeCenuSpecified
         {
             get
             {
-                return (Equals(_datovyProfil, null) != true);
+                return (Equals(_ovlivnujeCenu, null) != true);
             }
         }
     }
 
     /// <summary>
-    /// Výčet základních datový typů
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TTypHodnoty")]
-    public enum TTypHodnoty
-    {
-        TEXT,
-        DECIMAL,
-        REAL,
-        INTEGER,
-        BOOLEAL,
-        DATUM_CAS,
-    }
-
-    /// <summary>
-    /// Odkaz na organizaci
+    /// Odkaz na jednotku
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TOrganizaceRef")]
-    public partial class TOrganizaceRef
+    [XmlRootAttribute("TJednotkaRef")]
+    public partial class TJednotkaRef
+    {
+        #region Private fields
+        private string _ref;
+        #endregion
+
+        /// <summary>
+        /// Identifikátor jednotky
+        /// </summary>
+        [XmlAttribute(DataType = "IDREF", AttributeName = "Ref")]
+        public string Ref
+        {
+            get
+            {
+                return _ref;
+            }
+            set
+            {
+                _ref = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool RefSpecified
+        {
+            get
+            {
+                return (Equals(_ref, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Odkaz na požadovanou vlastnost.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TPozadovanaVlastnostRef")]
+    public partial class TPozadovanaVlastnostRef
     {
         #region Private fields
         private string _ref;
@@ -3320,15 +1674,417 @@ namespace ORF.XML
     }
 
     /// <summary>
-    /// Odkaz na sazbu DPH
+    /// Vlastnost reprezentující datum a čas
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TSazbaDPHRef")]
-    public partial class TSazbaDPHRef
+    [XmlRootAttribute("TVlastnostDatum")]
+    public partial class TVlastnostDatum : TVlastnost
+    {
+        #region Private fields
+        private System.DateTime _hodnota;
+        private bool hodnotaFieldSpecified;
+        #endregion
+
+        /// <summary>
+        /// Hodnota datum a čas
+        /// </summary>
+        [XmlAttribute(AttributeName = "Hodnota")]
+        public System.DateTime Hodnota
+        {
+            get
+            {
+                return _hodnota;
+            }
+            set
+            {
+                _hodnota = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool HodnotaSpecified
+        {
+            get
+            {
+                return hodnotaFieldSpecified;
+            }
+            set
+            {
+                hodnotaFieldSpecified = value;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Vlastnost s logickou hodnotou
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TVlastnostBoolean")]
+    public partial class TVlastnostBoolean : TVlastnost
+    {
+        #region Private fields
+        private bool _hodnota;
+        private bool hodnotaFieldSpecified;
+        #endregion
+
+        /// <summary>
+        /// Logická hodnota
+        /// </summary>
+        [XmlAttribute(AttributeName = "Hodnota")]
+        public bool Hodnota
+        {
+            get
+            {
+                return _hodnota;
+            }
+            set
+            {
+                _hodnota = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool HodnotaSpecified
+        {
+            get
+            {
+                return hodnotaFieldSpecified;
+            }
+            set
+            {
+                hodnotaFieldSpecified = value;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Vlastnost s celočíselnou hodnotou
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TVlastnostIntegral")]
+    public partial class TVlastnostIntegral : TVlastnost
+    {
+        #region Private fields
+        private long _hodnota;
+        private bool hodnotaFieldSpecified;
+        #endregion
+
+        /// <summary>
+        /// Hodnota vlastnosti jako celé číslo
+        /// </summary>
+        [XmlAttribute(AttributeName = "Hodnota")]
+        public long Hodnota
+        {
+            get
+            {
+                return _hodnota;
+            }
+            set
+            {
+                _hodnota = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool HodnotaSpecified
+        {
+            get
+            {
+                return hodnotaFieldSpecified;
+            }
+            set
+            {
+                hodnotaFieldSpecified = value;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Vlastnost s reálnou hodnotou
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TVlastnostReal")]
+    public partial class TVlastnostReal : TVlastnost
+    {
+        #region Private fields
+        private double _hodnota;
+        private bool hodnotaFieldSpecified;
+        #endregion
+
+        /// <summary>
+        /// Hodnota vlastnosti jako reálné číslo s plovoucí desetinnou čárkou
+        /// </summary>
+        [XmlAttribute(AttributeName = "Hodnota")]
+        public double Hodnota
+        {
+            get
+            {
+                return _hodnota;
+            }
+            set
+            {
+                _hodnota = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool HodnotaSpecified
+        {
+            get
+            {
+                return hodnotaFieldSpecified;
+            }
+            set
+            {
+                hodnotaFieldSpecified = value;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Vlastnost jako desetinné číslo
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TVlastnostDecimal")]
+    public partial class TVlastnostDecimal : TVlastnost
+    {
+        #region Private fields
+        private decimal _hodnota;
+        private bool hodnotaFieldSpecified;
+        #endregion
+
+        /// <summary>
+        /// Hodnota vlastnosti jako desetinné číslo
+        /// </summary>
+        [XmlAttribute(AttributeName = "Hodnota")]
+        public decimal Hodnota
+        {
+            get
+            {
+                return _hodnota;
+            }
+            set
+            {
+                _hodnota = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool HodnotaSpecified
+        {
+            get
+            {
+                return hodnotaFieldSpecified;
+            }
+            set
+            {
+                hodnotaFieldSpecified = value;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Textová vlastnost
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TVlastnostText")]
+    public partial class TVlastnostText : TVlastnost
+    {
+        #region Private fields
+        private string _hodnota;
+        #endregion
+
+        /// <summary>
+        /// Hodnota vlastnosti jako text
+        /// </summary>
+        [XmlElement("Hodnota")]
+        public string Hodnota
+        {
+            get
+            {
+                return _hodnota;
+            }
+            set
+            {
+                _hodnota = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool HodnotaSpecified
+        {
+            get
+            {
+                return (Equals(_hodnota, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Element reprezentující uzel v hierarchii rozpočtu.
+    /// </summary>
+    [XmlIncludeAttribute(typeof(TObjekt))]
+    [XmlIncludeAttribute(typeof(TUzelRozpoctu))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TUzel")]
+    public abstract partial class TUzel : TIdentita
+    {
+        #region Private fields
+        private List<TTridaRef> _zatrideni;
+        private List<TUzel> _uzelRozpoctu;
+        private List<TPolozkaRozpoctu> _polozka;
+        private string _kod;
+        #endregion
+
+        /// <summary>
+        /// TUzel class constructor
+        /// </summary>
+        public TUzel()
+        {
+            _polozka = new List<TPolozkaRozpoctu>();
+            _uzelRozpoctu = new List<TUzel>();
+            _zatrideni = new List<TTridaRef>();
+        }
+
+        /// <summary>
+        /// Zařazení uzlu rozpočtu do vybrané klasifikace
+        /// </summary>
+        [XmlElement("Zatrideni")]
+        public List<TTridaRef> Zatrideni
+        {
+            get
+            {
+                return _zatrideni;
+            }
+            set
+            {
+                _zatrideni = value;
+            }
+        }
+
+        /// <summary>
+        /// Podřízené uzly rozpočtu (nižší stupeň hierarchie)
+        /// </summary>
+        [XmlElement("UzelRozpoctu")]
+        public List<TUzel> UzelRozpoctu
+        {
+            get
+            {
+                return _uzelRozpoctu;
+            }
+            set
+            {
+                _uzelRozpoctu = value;
+            }
+        }
+
+        /// <summary>
+        /// Položky rozpočtu
+        /// </summary>
+        [XmlElement("Polozka")]
+        public List<TPolozkaRozpoctu> Polozka
+        {
+            get
+            {
+                return _polozka;
+            }
+            set
+            {
+                _polozka = value;
+            }
+        }
+
+        /// <summary>
+        /// Kód
+        /// </summary>
+        [XmlAttribute(AttributeName = "Kod")]
+        public string Kod
+        {
+            get
+            {
+                return _kod;
+            }
+            set
+            {
+                _kod = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ZatrideniSpecified
+        {
+            get
+            {
+                return (Equals(_zatrideni, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool UzelRozpoctuSpecified
+        {
+            get
+            {
+                return (Equals(_uzelRozpoctu, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PolozkaSpecified
+        {
+            get
+            {
+                return (Equals(_polozka, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool KodSpecified
+        {
+            get
+            {
+                return (Equals(_kod, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Odkaz na klasifikační třídu
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TTridaRef")]
+    public partial class TTridaRef
     {
         #region Private fields
         private string _ref;
@@ -3361,23 +2117,209 @@ namespace ORF.XML
     }
 
     /// <summary>
-    /// Element popisující jednotkovou cenu. Uchazeč může přidat vlastní komentář.
+    /// Element reprezentující položku rozpočtu
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TJednotkovaCena")]
-    public partial class TJednotkovaCena
+    [XmlRootAttribute("TPolozkaRozpoctu")]
+    public partial class TPolozkaRozpoctu
     {
         #region Private fields
+        private string _popis;
+        private string _specifikace;
+        private List<TExterniEntita> _externiEntita;
+        private List<TSkupinaVlastnosti> _skupinaVlastnosti;
+        private List<TTridaRef> _zatrideni;
+        private TCenovaSoustavaRef _cenovaSoustava;
+        private TMnozstvi _mnozstvi;
+        private TMnozstvi _mnozstviPuvodni;
+        private List<TDodatekMnozstvi> _dodatkyMnozstvi;
         private string _komentar;
-        private decimal _cena;
+        private TJednotkovaCena _jednotkovaCena;
+        private TSazbaDPHRef _sazbaDPH;
+        private string _id;
+        private string _nazev;
+        private string _kod;
+        private string _poradoveCislo;
+        private TTypPolozky _typ;
+        private bool typFieldSpecified;
+        private bool _pouzeMaterial;
+        private bool pouzeMaterialFieldSpecified;
+        private double _jednotkovaHmotnost;
+        private bool jednotkovaHmotnostFieldSpecified;
+        private double _jednotkovaDemontazniHmotnost;
+        private bool jednotkovaDemontazniHmotnostFieldSpecified;
+        private bool _prenesenaDPH;
+        private bool prenesenaDPHFieldSpecified;
+        private string _varianta;
+        private string _zpusobilost;
         #endregion
 
         /// <summary>
-        /// Komentář uchazeče k jednotkové ceně
+        /// TPolozkaRozpoctu class constructor
+        /// </summary>
+        public TPolozkaRozpoctu()
+        {
+            _sazbaDPH = new TSazbaDPHRef();
+            _jednotkovaCena = new TJednotkovaCena();
+            _dodatkyMnozstvi = new List<TDodatekMnozstvi>();
+            _mnozstviPuvodni = new TMnozstvi();
+            _mnozstvi = new TMnozstvi();
+            _cenovaSoustava = new TCenovaSoustavaRef();
+            _zatrideni = new List<TTridaRef>();
+            _skupinaVlastnosti = new List<TSkupinaVlastnosti>();
+            _externiEntita = new List<TExterniEntita>();
+        }
+
+        /// <summary>
+        /// Popis položky
+        /// </summary>
+        [XmlElement("Popis")]
+        public string Popis
+        {
+            get
+            {
+                return _popis;
+            }
+            set
+            {
+                _popis = value;
+            }
+        }
+
+        /// <summary>
+        /// Podrobná technická specifikace položky, zpravidla vycházející z cenové soustavy
+        /// </summary>
+        [XmlElement("Specifikace")]
+        public string Specifikace
+        {
+            get
+            {
+                return _specifikace;
+            }
+            set
+            {
+                _specifikace = value;
+            }
+        }
+
+        /// <summary>
+        /// Externí entity související s položkou rozpočtu (například elementy modelu stavby).
+        /// </summary>
+        [XmlElement("ExterniEntita")]
+        public List<TExterniEntita> ExterniEntita
+        {
+            get
+            {
+                return _externiEntita;
+            }
+            set
+            {
+                _externiEntita = value;
+            }
+        }
+
+        /// <summary>
+        /// Volitelné další vlastnosti popisující danou datovou entitu
+        /// </summary>
+        [XmlElement("SkupinaVlastnosti")]
+        public List<TSkupinaVlastnosti> SkupinaVlastnosti
+        {
+            get
+            {
+                return _skupinaVlastnosti;
+            }
+            set
+            {
+                _skupinaVlastnosti = value;
+            }
+        }
+
+        /// <summary>
+        /// Zařazení položky rozpočtu do vybraných klasifikací
+        /// </summary>
+        [XmlElement("Zatrideni")]
+        public List<TTridaRef> Zatrideni
+        {
+            get
+            {
+                return _zatrideni;
+            }
+            set
+            {
+                _zatrideni = value;
+            }
+        }
+
+        /// <summary>
+        /// Odkaz na použitou cenovou soustavu
+        /// </summary>
+        [XmlElement("CenovaSoustava")]
+        public TCenovaSoustavaRef CenovaSoustava
+        {
+            get
+            {
+                return _cenovaSoustava;
+            }
+            set
+            {
+                _cenovaSoustava = value;
+            }
+        }
+
+        /// <summary>
+        /// Informace o množství
+        /// </summary>
+        [XmlElement("Mnozstvi")]
+        public TMnozstvi Mnozstvi
+        {
+            get
+            {
+                return _mnozstvi;
+            }
+            set
+            {
+                _mnozstvi = value;
+            }
+        }
+
+        /// <summary>
+        /// Informace o množství před aplikací dodatků
+        /// </summary>
+        [XmlElement("MnozstviPuvodni")]
+        public TMnozstvi MnozstviPuvodni
+        {
+            get
+            {
+                return _mnozstviPuvodni;
+            }
+            set
+            {
+                _mnozstviPuvodni = value;
+            }
+        }
+
+        /// <summary>
+        /// Dodatky množství rozdělené podle skupin (typu) změn a jednotlivých změnových řízení
+        /// </summary>
+        [XmlArrayItemAttribute("DodatekMnozstvi", IsNullable = false)]
+        public List<TDodatekMnozstvi> DodatkyMnozstvi
+        {
+            get
+            {
+                return _dodatkyMnozstvi;
+            }
+            set
+            {
+                _dodatkyMnozstvi = value;
+            }
+        }
+
+        /// <summary>
+        /// Volitelný komentář položky. Slouží pro podrobnější specifikaci.
         /// </summary>
         [XmlElement("Komentar")]
         public string Komentar
@@ -3395,91 +2337,328 @@ namespace ORF.XML
         /// <summary>
         /// Jednotková cena
         /// </summary>
-        [XmlAttribute(AttributeName = "Cena")]
-        public decimal Cena
+        [XmlElement("JednotkovaCena")]
+        public TJednotkovaCena JednotkovaCena
         {
             get
             {
-                return _cena;
+                return _jednotkovaCena;
             }
             set
             {
-                _cena = value;
+                _jednotkovaCena = value;
+            }
+        }
+
+        /// <summary>
+        /// Odkaz na sazbu DPH
+        /// </summary>
+        [XmlElement("SazbaDPH")]
+        public TSazbaDPHRef SazbaDPH
+        {
+            get
+            {
+                return _sazbaDPH;
+            }
+            set
+            {
+                _sazbaDPH = value;
+            }
+        }
+
+        /// <summary>
+        /// Unikátní ID (podle ISO/IEC 9834-8:2005). Tento identifikátor umožňuje spolehlivě zachovat kontinuitu dat
+        /// při jejich zpracování v různých izovolaných systémech. Umožňuje zachovat softwarovou identitu datové entity.
+        /// </summary>
+        [XmlAttribute(AttributeName = "Id")]
+        public string Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        /// <summary>
+        /// Název položky (maximálně 255 znaků)
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Kód položky, maximálně 20 znaků
+        /// </summary>
+        [XmlAttribute(AttributeName = "Kod")]
+        public string Kod
+        {
+            get
+            {
+                return _kod;
+            }
+            set
+            {
+                _kod = value;
+            }
+        }
+
+        /// <summary>
+        /// Pořadové číslo položky. Unikátní v rámci stavebního objektu nejvyšší úrovně hierarchie rozpočtu
+        /// </summary>
+        [XmlAttribute(DataType = "positiveInteger", AttributeName = "PoradoveCislo")]
+        public string PoradoveCislo
+        {
+            get
+            {
+                return _poradoveCislo;
+            }
+            set
+            {
+                _poradoveCislo = value;
+            }
+        }
+
+        /// <summary>
+        /// Typ položky
+        /// </summary>
+        [XmlAttribute(AttributeName = "Typ")]
+        public TTypPolozky Typ
+        {
+            get
+            {
+                return _typ;
+            }
+            set
+            {
+                _typ = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool TypSpecified
+        {
+            get
+            {
+                return typFieldSpecified;
+            }
+            set
+            {
+                typFieldSpecified = value;
+            }
+        }
+
+        /// <summary>
+        /// Indikuje, jestli je tato položka pouze pro materiál
+        /// </summary>
+        [XmlAttribute(AttributeName = "PouzeMaterial")]
+        public bool PouzeMaterial
+        {
+            get
+            {
+                return _pouzeMaterial;
+            }
+            set
+            {
+                _pouzeMaterial = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool PouzeMaterialSpecified
+        {
+            get
+            {
+                return pouzeMaterialFieldSpecified;
+            }
+            set
+            {
+                pouzeMaterialFieldSpecified = value;
+            }
+        }
+
+        /// <summary>
+        /// Jednotková montážní hmotnost
+        /// </summary>
+        [XmlAttribute(AttributeName = "JednotkovaHmotnost")]
+        public double JednotkovaHmotnost
+        {
+            get
+            {
+                return _jednotkovaHmotnost;
+            }
+            set
+            {
+                _jednotkovaHmotnost = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool JednotkovaHmotnostSpecified
+        {
+            get
+            {
+                return jednotkovaHmotnostFieldSpecified;
+            }
+            set
+            {
+                jednotkovaHmotnostFieldSpecified = value;
+            }
+        }
+
+        /// <summary>
+        /// Jednotková demontážní hmotnost
+        /// </summary>
+        [XmlAttribute(AttributeName = "JednotkovaDemontazniHmotnost")]
+        public double JednotkovaDemontazniHmotnost
+        {
+            get
+            {
+                return _jednotkovaDemontazniHmotnost;
+            }
+            set
+            {
+                _jednotkovaDemontazniHmotnost = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool JednotkovaDemontazniHmotnostSpecified
+        {
+            get
+            {
+                return jednotkovaDemontazniHmotnostFieldSpecified;
+            }
+            set
+            {
+                jednotkovaDemontazniHmotnostFieldSpecified = value;
+            }
+        }
+
+        /// <summary>
+        /// Indikuje, zda se na tuto položku vztahuje přenesená daňová povinnost
+        /// </summary>
+        [XmlAttribute(AttributeName = "PrenesenaDPH")]
+        public bool PrenesenaDPH
+        {
+            get
+            {
+                return _prenesenaDPH;
+            }
+            set
+            {
+                _prenesenaDPH = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool PrenesenaDPHSpecified
+        {
+            get
+            {
+                return prenesenaDPHFieldSpecified;
+            }
+            set
+            {
+                prenesenaDPHFieldSpecified = value;
+            }
+        }
+
+        /// <summary>
+        /// Odlišení variace od cenové soustavy (především OTSKP)
+        /// </summary>
+        [XmlAttribute(AttributeName = "Varianta")]
+        public string Varianta
+        {
+            get
+            {
+                return _varianta;
+            }
+            set
+            {
+                _varianta = value;
+            }
+        }
+
+        /// <summary>
+        /// Způsobilost pro dotace. Tento údaj slouží především pro vyhodnocení oceněného rozpočtu zadavatelem.
+        /// </summary>
+        [XmlAttribute(AttributeName = "Zpusobilost")]
+        public string Zpusobilost
+        {
+            get
+            {
+                return _zpusobilost;
+            }
+            set
+            {
+                _zpusobilost = value;
             }
         }
 
         [XmlIgnore()]
-        public bool KomentarSpecified
+        public bool PopisSpecified
         {
             get
             {
-                return (Equals(_komentar, null) != true);
+                return (Equals(_popis, null) != true);
             }
         }
 
         [XmlIgnore()]
-        public bool CenaSpecified
+        public bool SpecifikaceSpecified
         {
             get
             {
-                return (Equals(_cena, null) != true);
+                return (Equals(_specifikace, null) != true);
             }
         }
-    }
 
-    /// <summary>
-    /// Skupina změn položky zachycuje část hodnoty změny v jedné skupině změn
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TSkupinaZmenPolozky")]
-    public partial class TSkupinaZmenPolozky
-    {
-        #region Private fields
-        private TMnozstvi _mnozstvi;
-        private string _skupina;
-        #endregion
-
-        /// <summary>
-        /// TSkupinaZmenPolozky class constructor
-        /// </summary>
-        public TSkupinaZmenPolozky()
-        {
-            _mnozstvi = new TMnozstvi();
-        }
-
-        /// <summary>
-        /// Element popisující množství, včetně metody měření, jednotky měření a dalších aspektů.
-        /// </summary>
-        [XmlElement("Mnozstvi")]
-        public TMnozstvi Mnozstvi
+        [XmlIgnore()]
+        public bool ExterniEntitaSpecified
         {
             get
             {
-                return _mnozstvi;
-            }
-            set
-            {
-                _mnozstvi = value;
+                return (Equals(_externiEntita, null) != true);
             }
         }
 
-        /// <summary>
-        /// Odkaz (reference) na skupinu změn v definicích
-        /// </summary>
-        [XmlAttribute(DataType = "IDREF", AttributeName = "Skupina")]
-        public string Skupina
+        [XmlIgnore()]
+        public bool SkupinaVlastnostiSpecified
         {
             get
             {
-                return _skupina;
+                return (Equals(_skupinaVlastnosti, null) != true);
             }
-            set
+        }
+
+        [XmlIgnore()]
+        public bool ZatrideniSpecified
+        {
+            get
             {
-                _skupina = value;
+                return (Equals(_zatrideni, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool CenovaSoustavaSpecified
+        {
+            get
+            {
+                return (Equals(_cenovaSoustava, null) != true);
             }
         }
 
@@ -3493,11 +2672,142 @@ namespace ORF.XML
         }
 
         [XmlIgnore()]
-        public bool SkupinaSpecified
+        public bool MnozstviPuvodniSpecified
         {
             get
             {
-                return (Equals(_skupina, null) != true);
+                return (Equals(_mnozstviPuvodni, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool DodatkyMnozstviSpecified
+        {
+            get
+            {
+                return (Equals(_dodatkyMnozstvi, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool KomentarSpecified
+        {
+            get
+            {
+                return (Equals(_komentar, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool JednotkovaCenaSpecified
+        {
+            get
+            {
+                return (Equals(_jednotkovaCena, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool SazbaDPHSpecified
+        {
+            get
+            {
+                return (Equals(_sazbaDPH, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool IdSpecified
+        {
+            get
+            {
+                return (Equals(_id, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool KodSpecified
+        {
+            get
+            {
+                return (Equals(_kod, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PoradoveCisloSpecified
+        {
+            get
+            {
+                return (Equals(_poradoveCislo, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool VariantaSpecified
+        {
+            get
+            {
+                return (Equals(_varianta, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ZpusobilostSpecified
+        {
+            get
+            {
+                return (Equals(_zpusobilost, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Odkaz na cenovou soustavu
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TCenovaSoustavaRef")]
+    public partial class TCenovaSoustavaRef
+    {
+        #region Private fields
+        private string _ref;
+        #endregion
+
+        /// <summary>
+        /// Reference. Musí existovat odpovídající element s tímto ID.
+        /// </summary>
+        [XmlAttribute(DataType = "IDREF", AttributeName = "Ref")]
+        public string Ref
+        {
+            get
+            {
+                return _ref;
+            }
+            set
+            {
+                _ref = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool RefSpecified
+        {
+            get
+            {
+                return (Equals(_ref, null) != true);
             }
         }
     }
@@ -4213,6 +3523,7 @@ namespace ORF.XML
     /// <summary>
     /// Number
     /// </summary>
+    [XmlIncludeAttribute(typeof(MeasureFromModel))]
     [XmlIncludeAttribute(typeof(ValueFromModel))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
@@ -4364,6 +3675,44 @@ namespace ORF.XML
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("MeasureFromModel")]
+    public partial class MeasureFromModel : Cn
+    {
+        #region Private fields
+        private string _geometry;
+        #endregion
+
+        /// <summary>
+        /// Odkaz na definici geometrie. Vlastní geometrie je zachycena v kořenu datového elementu ORF
+        /// </summary>
+        [XmlAttribute(DataType = "IDREF", AttributeName = "Geometry")]
+        public string Geometry
+        {
+            get
+            {
+                return _geometry;
+            }
+            set
+            {
+                _geometry = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool GeometrySpecified
+        {
+            get
+            {
+                return (Equals(_geometry, null) != true);
+            }
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
     [XmlRootAttribute("ValueFromModel")]
     public partial class ValueFromModel : Cn
     {
@@ -4400,6 +3749,9 @@ namespace ORF.XML
             }
         }
 
+        /// <summary>
+        /// Skupina vlastností, která obsahuje hodnotu na kterou se odkazuje hodnota ve výkazu výměr
+        /// </summary>
         [XmlAttribute(AttributeName = "propertyset")]
         public string Propertyset
         {
@@ -4413,6 +3765,9 @@ namespace ORF.XML
             }
         }
 
+        /// <summary>
+        /// Vlastnost na kterou se odkazuje hodnota ve výkazu výměr
+        /// </summary>
         [XmlAttribute(AttributeName = "property")]
         public string Property
         {
@@ -4831,202 +4186,31 @@ namespace ORF.XML
     }
 
     /// <summary>
-    /// Odkaz na cenovou soustavu
+    /// Skupina změn položky zachycuje část hodnoty změny v jedné skupině změn
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TCenovaSoustavaRef")]
-    public partial class TCenovaSoustavaRef
+    [XmlRootAttribute("TSkupinaZmenPolozky")]
+    public partial class TSkupinaZmenPolozky
     {
         #region Private fields
-        private string _ref;
-        #endregion
-
-        /// <summary>
-        /// Reference. Musí existovat odpovídající element s tímto ID.
-        /// </summary>
-        [XmlAttribute(DataType = "IDREF", AttributeName = "Ref")]
-        public string Ref
-        {
-            get
-            {
-                return _ref;
-            }
-            set
-            {
-                _ref = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool RefSpecified
-        {
-            get
-            {
-                return (Equals(_ref, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Element reprezentující položku rozpočtu
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TPolozkaRozpoctu")]
-    public partial class TPolozkaRozpoctu
-    {
-        #region Private fields
-        private string _popis;
-        private string _specifikace;
-        private List<TExterniEntita> _externiEntita;
-        private List<TSkupinaVlastnosti> _skupinaVlastnosti;
-        private List<TTridaRef> _zatrideni;
-        private TCenovaSoustavaRef _cenovaSoustava;
         private TMnozstvi _mnozstvi;
-        private TMnozstvi _mnozstviPuvodni;
-        private List<TDodatekMnozstvi> _dodatkyMnozstvi;
-        private string _komentar;
-        private TJednotkovaCena _jednotkovaCena;
-        private TSazbaDPHRef _sazbaDPH;
-        private string _id;
-        private string _nazev;
-        private string _kod;
-        private string _poradoveCislo;
-        private TTypPolozky _typ;
-        private bool typFieldSpecified;
-        private bool _pouzeMaterial;
-        private bool pouzeMaterialFieldSpecified;
-        private double _jednotkovaHmotnost;
-        private bool jednotkovaHmotnostFieldSpecified;
-        private double _jednotkovaDemontazniHmotnost;
-        private bool jednotkovaDemontazniHmotnostFieldSpecified;
-        private bool _prenesenaDPH;
-        private bool prenesenaDPHFieldSpecified;
-        private string _varianta;
-        private string _zpusobilost;
+        private string _skupina;
         #endregion
 
         /// <summary>
-        /// TPolozkaRozpoctu class constructor
+        /// TSkupinaZmenPolozky class constructor
         /// </summary>
-        public TPolozkaRozpoctu()
+        public TSkupinaZmenPolozky()
         {
-            _sazbaDPH = new TSazbaDPHRef();
-            _jednotkovaCena = new TJednotkovaCena();
-            _dodatkyMnozstvi = new List<TDodatekMnozstvi>();
-            _mnozstviPuvodni = new TMnozstvi();
             _mnozstvi = new TMnozstvi();
-            _cenovaSoustava = new TCenovaSoustavaRef();
-            _zatrideni = new List<TTridaRef>();
-            _skupinaVlastnosti = new List<TSkupinaVlastnosti>();
-            _externiEntita = new List<TExterniEntita>();
         }
 
         /// <summary>
-        /// Popis položky
-        /// </summary>
-        [XmlElement("Popis")]
-        public string Popis
-        {
-            get
-            {
-                return _popis;
-            }
-            set
-            {
-                _popis = value;
-            }
-        }
-
-        /// <summary>
-        /// Podrobná technická specifikace položky, zpravidla vycházející z cenové soustavy
-        /// </summary>
-        [XmlElement("Specifikace")]
-        public string Specifikace
-        {
-            get
-            {
-                return _specifikace;
-            }
-            set
-            {
-                _specifikace = value;
-            }
-        }
-
-        /// <summary>
-        /// Externí entity související s položkou rozpočtu (například elementy modelu stavby).
-        /// </summary>
-        [XmlElement("ExterniEntita")]
-        public List<TExterniEntita> ExterniEntita
-        {
-            get
-            {
-                return _externiEntita;
-            }
-            set
-            {
-                _externiEntita = value;
-            }
-        }
-
-        /// <summary>
-        /// Volitelné další vlastnosti popisující danou datovou entitu
-        /// </summary>
-        [XmlElement("SkupinaVlastnosti")]
-        public List<TSkupinaVlastnosti> SkupinaVlastnosti
-        {
-            get
-            {
-                return _skupinaVlastnosti;
-            }
-            set
-            {
-                _skupinaVlastnosti = value;
-            }
-        }
-
-        /// <summary>
-        /// Zařazení položky rozpočtu do vybraných klasifikací
-        /// </summary>
-        [XmlElement("Zatrideni")]
-        public List<TTridaRef> Zatrideni
-        {
-            get
-            {
-                return _zatrideni;
-            }
-            set
-            {
-                _zatrideni = value;
-            }
-        }
-
-        /// <summary>
-        /// Odkaz na použitou cenovou soustavu
-        /// </summary>
-        [XmlElement("CenovaSoustava")]
-        public TCenovaSoustavaRef CenovaSoustava
-        {
-            get
-            {
-                return _cenovaSoustava;
-            }
-            set
-            {
-                _cenovaSoustava = value;
-            }
-        }
-
-        /// <summary>
-        /// Informace o množství
+        /// Element popisující množství, včetně metody měření, jednotky měření a dalších aspektů.
         /// </summary>
         [XmlElement("Mnozstvi")]
         public TMnozstvi Mnozstvi
@@ -5042,39 +4226,58 @@ namespace ORF.XML
         }
 
         /// <summary>
-        /// Informace o množství před aplikací dodatků
+        /// Odkaz (reference) na skupinu změn v definicích
         /// </summary>
-        [XmlElement("MnozstviPuvodni")]
-        public TMnozstvi MnozstviPuvodni
+        [XmlAttribute(DataType = "IDREF", AttributeName = "Skupina")]
+        public string Skupina
         {
             get
             {
-                return _mnozstviPuvodni;
+                return _skupina;
             }
             set
             {
-                _mnozstviPuvodni = value;
+                _skupina = value;
             }
         }
 
-        /// <summary>
-        /// Dodatky množství rozdělené podle skupin (typu) změn a jednotlivých změnových řízení
-        /// </summary>
-        [XmlArrayItemAttribute("DodatekMnozstvi", IsNullable = false)]
-        public List<TDodatekMnozstvi> DodatkyMnozstvi
+        [XmlIgnore()]
+        public bool MnozstviSpecified
         {
             get
             {
-                return _dodatkyMnozstvi;
-            }
-            set
-            {
-                _dodatkyMnozstvi = value;
+                return (Equals(_mnozstvi, null) != true);
             }
         }
 
+        [XmlIgnore()]
+        public bool SkupinaSpecified
+        {
+            get
+            {
+                return (Equals(_skupina, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Element popisující jednotkovou cenu. Uchazeč může přidat vlastní komentář.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TJednotkovaCena")]
+    public partial class TJednotkovaCena
+    {
+        #region Private fields
+        private string _komentar;
+        private decimal _cena;
+        #endregion
+
         /// <summary>
-        /// Volitelný komentář položky. Slouží pro podrobnější specifikaci.
+        /// Komentář uchazeče k jednotkové ceně
         /// </summary>
         [XmlElement("Komentar")]
         public string Komentar
@@ -5092,355 +4295,16 @@ namespace ORF.XML
         /// <summary>
         /// Jednotková cena
         /// </summary>
-        [XmlElement("JednotkovaCena")]
-        public TJednotkovaCena JednotkovaCena
+        [XmlAttribute(AttributeName = "Cena")]
+        public decimal Cena
         {
             get
             {
-                return _jednotkovaCena;
+                return _cena;
             }
             set
             {
-                _jednotkovaCena = value;
-            }
-        }
-
-        /// <summary>
-        /// Odkaz na sazbu DPH
-        /// </summary>
-        [XmlElement("SazbaDPH")]
-        public TSazbaDPHRef SazbaDPH
-        {
-            get
-            {
-                return _sazbaDPH;
-            }
-            set
-            {
-                _sazbaDPH = value;
-            }
-        }
-
-        /// <summary>
-        /// Unikátní ID (podle ISO/IEC 9834-8:2005). Tento identifikátor umožňuje spolehlivě zachovat kontinuitu dat
-        /// při jejich zpracování v různých izovolaných systémech. Umožňuje zachovat softwarovou identitu datové entity.
-        /// </summary>
-        [XmlAttribute(AttributeName = "Id")]
-        public string Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        /// <summary>
-        /// Název položky (maximálně 255 znaků)
-        /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        /// <summary>
-        /// Kód položky, maximálně 20 znaků
-        /// </summary>
-        [XmlAttribute(AttributeName = "Kod")]
-        public string Kod
-        {
-            get
-            {
-                return _kod;
-            }
-            set
-            {
-                _kod = value;
-            }
-        }
-
-        /// <summary>
-        /// Pořadové číslo položky. Unikátní v rámci stavebního objektu nejvyšší úrovně hierarchie rozpočtu
-        /// </summary>
-        [XmlAttribute(DataType = "positiveInteger", AttributeName = "PoradoveCislo")]
-        public string PoradoveCislo
-        {
-            get
-            {
-                return _poradoveCislo;
-            }
-            set
-            {
-                _poradoveCislo = value;
-            }
-        }
-
-        /// <summary>
-        /// Typ položky
-        /// </summary>
-        [XmlAttribute(AttributeName = "Typ")]
-        public TTypPolozky Typ
-        {
-            get
-            {
-                return _typ;
-            }
-            set
-            {
-                _typ = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool TypSpecified
-        {
-            get
-            {
-                return typFieldSpecified;
-            }
-            set
-            {
-                typFieldSpecified = value;
-            }
-        }
-
-        /// <summary>
-        /// Indikuje, jestli je tato položka pouze pro materiál
-        /// </summary>
-        [XmlAttribute(AttributeName = "PouzeMaterial")]
-        public bool PouzeMaterial
-        {
-            get
-            {
-                return _pouzeMaterial;
-            }
-            set
-            {
-                _pouzeMaterial = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool PouzeMaterialSpecified
-        {
-            get
-            {
-                return pouzeMaterialFieldSpecified;
-            }
-            set
-            {
-                pouzeMaterialFieldSpecified = value;
-            }
-        }
-
-        /// <summary>
-        /// Jednotková montážní hmotnost
-        /// </summary>
-        [XmlAttribute(AttributeName = "JednotkovaHmotnost")]
-        public double JednotkovaHmotnost
-        {
-            get
-            {
-                return _jednotkovaHmotnost;
-            }
-            set
-            {
-                _jednotkovaHmotnost = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool JednotkovaHmotnostSpecified
-        {
-            get
-            {
-                return jednotkovaHmotnostFieldSpecified;
-            }
-            set
-            {
-                jednotkovaHmotnostFieldSpecified = value;
-            }
-        }
-
-        /// <summary>
-        /// Jednotková demontážní hmotnost
-        /// </summary>
-        [XmlAttribute(AttributeName = "JednotkovaDemontazniHmotnost")]
-        public double JednotkovaDemontazniHmotnost
-        {
-            get
-            {
-                return _jednotkovaDemontazniHmotnost;
-            }
-            set
-            {
-                _jednotkovaDemontazniHmotnost = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool JednotkovaDemontazniHmotnostSpecified
-        {
-            get
-            {
-                return jednotkovaDemontazniHmotnostFieldSpecified;
-            }
-            set
-            {
-                jednotkovaDemontazniHmotnostFieldSpecified = value;
-            }
-        }
-
-        /// <summary>
-        /// Indikuje, zda se na tuto položku vztahuje přenesená daňová povinnost
-        /// </summary>
-        [XmlAttribute(AttributeName = "PrenesenaDPH")]
-        public bool PrenesenaDPH
-        {
-            get
-            {
-                return _prenesenaDPH;
-            }
-            set
-            {
-                _prenesenaDPH = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool PrenesenaDPHSpecified
-        {
-            get
-            {
-                return prenesenaDPHFieldSpecified;
-            }
-            set
-            {
-                prenesenaDPHFieldSpecified = value;
-            }
-        }
-
-        /// <summary>
-        /// Odlišení variace od cenové soustavy (především OTSKP)
-        /// </summary>
-        [XmlAttribute(AttributeName = "Varianta")]
-        public string Varianta
-        {
-            get
-            {
-                return _varianta;
-            }
-            set
-            {
-                _varianta = value;
-            }
-        }
-
-        /// <summary>
-        /// Způsobilost pro dotace. Tento údaj slouží především pro vyhodnocení oceněného rozpočtu zadavatelem.
-        /// </summary>
-        [XmlAttribute(AttributeName = "Zpusobilost")]
-        public string Zpusobilost
-        {
-            get
-            {
-                return _zpusobilost;
-            }
-            set
-            {
-                _zpusobilost = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PopisSpecified
-        {
-            get
-            {
-                return (Equals(_popis, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool SpecifikaceSpecified
-        {
-            get
-            {
-                return (Equals(_specifikace, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ExterniEntitaSpecified
-        {
-            get
-            {
-                return (Equals(_externiEntita, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool SkupinaVlastnostiSpecified
-        {
-            get
-            {
-                return (Equals(_skupinaVlastnosti, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZatrideniSpecified
-        {
-            get
-            {
-                return (Equals(_zatrideni, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool CenovaSoustavaSpecified
-        {
-            get
-            {
-                return (Equals(_cenovaSoustava, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool MnozstviSpecified
-        {
-            get
-            {
-                return (Equals(_mnozstvi, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool MnozstviPuvodniSpecified
-        {
-            get
-            {
-                return (Equals(_mnozstviPuvodni, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool DodatkyMnozstviSpecified
-        {
-            get
-            {
-                return (Equals(_dodatkyMnozstvi, null) != true);
+                _cena = value;
             }
         }
 
@@ -5454,820 +4318,25 @@ namespace ORF.XML
         }
 
         [XmlIgnore()]
-        public bool JednotkovaCenaSpecified
+        public bool CenaSpecified
         {
             get
             {
-                return (Equals(_jednotkovaCena, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool SazbaDPHSpecified
-        {
-            get
-            {
-                return (Equals(_sazbaDPH, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool IdSpecified
-        {
-            get
-            {
-                return (Equals(_id, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool KodSpecified
-        {
-            get
-            {
-                return (Equals(_kod, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PoradoveCisloSpecified
-        {
-            get
-            {
-                return (Equals(_poradoveCislo, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool VariantaSpecified
-        {
-            get
-            {
-                return (Equals(_varianta, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZpusobilostSpecified
-        {
-            get
-            {
-                return (Equals(_zpusobilost, null) != true);
+                return (Equals(_cena, null) != true);
             }
         }
     }
 
     /// <summary>
-    /// Externí identita představuje odkaz na softwarovou identitu, která existuje v jiném datovém modelu a
-    /// která je jednoznačně adresovatelná svým unikátním ID. Zároveň může mít název pro uživatelskou interakci.
-    /// Typicky bude použito pro vazbu na datové entity v IFC, nebo v nativním modelu.
+    /// Odkaz na sazbu DPH
     /// </summary>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [Serializable]
     [DebuggerStepThrough]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TExterniEntita")]
-    public partial class TExterniEntita
-    {
-        #region Private fields
-        private string _id;
-        private string _nazev;
-        private string _zdroj;
-        private string _umisteni;
-        #endregion
-
-        /// <summary>
-        /// Identifikátor externí datové entity. Pokud se jedná o UUID odkazující do modelu IFC, bude toto UUID
-        /// reprezentováno stejně jako v souborech IFC, tedy jako UUID v base64 kódování.
-        /// (https://technical.buildingsmart.org/resources/ifcimplementationguidance/ifc-guid/).
-        /// </summary>
-        [XmlAttribute(AttributeName = "Id")]
-        public string Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        /// <summary>
-        /// Název externí entity. Slouží pro uživatelskou prezentaci a orientaci. Pokud je externí entita z modelu IFC,
-        /// bude použita hodnota IfcRoot.Name.
-        /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        /// <summary>
-        /// Zdroj externí entity (například název souboru)
-        /// </summary>
-        [XmlAttribute(AttributeName = "Zdroj")]
-        public string Zdroj
-        {
-            get
-            {
-                return _zdroj;
-            }
-            set
-            {
-                _zdroj = value;
-            }
-        }
-
-        /// <summary>
-        /// Umístění externí entity. Například URL umístění ve společném datovém prostředí (CDE), nebo relativní
-        /// cesta k souboru s modelem stavby.
-        /// </summary>
-        [XmlAttribute(DataType = "anyURI", AttributeName = "Umisteni")]
-        public string Umisteni
-        {
-            get
-            {
-                return _umisteni;
-            }
-            set
-            {
-                _umisteni = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool IdSpecified
-        {
-            get
-            {
-                return (Equals(_id, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZdrojSpecified
-        {
-            get
-            {
-                return (Equals(_zdroj, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool UmisteniSpecified
-        {
-            get
-            {
-                return (Equals(_umisteni, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Element umožňující zachytit popisné vlastnosti sdružené do pojmenované skupiny
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TSkupinaVlastnosti")]
-    public partial class TSkupinaVlastnosti
-    {
-        #region Private fields
-        private string _popis;
-        private List<TVlastnost> _vlastnost;
-        private string _nazev;
-        #endregion
-
-        /// <summary>
-        /// TSkupinaVlastnosti class constructor
-        /// </summary>
-        public TSkupinaVlastnosti()
-        {
-            _vlastnost = new List<TVlastnost>();
-        }
-
-        /// <summary>
-        /// Popis skupiny vlastností
-        /// </summary>
-        [XmlElement("Popis")]
-        public string Popis
-        {
-            get
-            {
-                return _popis;
-            }
-            set
-            {
-                _popis = value;
-            }
-        }
-
-        /// <summary>
-        /// Vlastnosti v této skupině. Názvy vlastností musí být v rámci skupiny unikátní.
-        /// </summary>
-        [XmlElement("Vlastnost")]
-        public List<TVlastnost> Vlastnost
-        {
-            get
-            {
-                return _vlastnost;
-            }
-            set
-            {
-                _vlastnost = value;
-            }
-        }
-
-        /// <summary>
-        /// Název skupiny vlastností
-        /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PopisSpecified
-        {
-            get
-            {
-                return (Equals(_popis, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool VlastnostSpecified
-        {
-            get
-            {
-                return (Equals(_vlastnost, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Element reprezentující popisnou vlastnost. Vlastnost má atribut "IdentifikatorDSS", pomocí kterého se
-    /// může odkázat na definici z Datového standardu staveb. Atribut "OvlivnujeCenu" určuje, jestli se
-    /// jedná o interní informaci zadavatele, nebo jestli se jedná o informaci, která ovlivňuje cenu a účastník
-    /// se jí musí zabývat. Prostřednictvím elementu "Pozadavek" se může vlastnost odkazovat na informační požadavek,
-    /// na který odpovídá.
-    /// </summary>
-    [XmlIncludeAttribute(typeof(TVlastnostDatum))]
-    [XmlIncludeAttribute(typeof(TVlastnostBoolean))]
-    [XmlIncludeAttribute(typeof(TVlastnostIntegral))]
-    [XmlIncludeAttribute(typeof(TVlastnostReal))]
-    [XmlIncludeAttribute(typeof(TVlastnostDecimal))]
-    [XmlIncludeAttribute(typeof(TVlastnostText))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TVlastnost")]
-    public abstract partial class TVlastnost
-    {
-        #region Private fields
-        private string _popis;
-        private TJednotkaRef _jednotka;
-        private TPozadovanaVlastnostRef _pozadavek;
-        private string _nazev;
-        private string _identifikatorDSS;
-        private bool _ovlivnujeCenu;
-        #endregion
-
-        /// <summary>
-        /// TVlastnost class constructor
-        /// </summary>
-        public TVlastnost()
-        {
-            _pozadavek = new TPozadovanaVlastnostRef();
-            _jednotka = new TJednotkaRef();
-        }
-
-        /// <summary>
-        /// Popis vlastnosti
-        /// </summary>
-        [XmlElement("Popis")]
-        public string Popis
-        {
-            get
-            {
-                return _popis;
-            }
-            set
-            {
-                _popis = value;
-            }
-        }
-
-        /// <summary>
-        /// Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
-        /// </summary>
-        [XmlElement("Jednotka")]
-        public TJednotkaRef Jednotka
-        {
-            get
-            {
-                return _jednotka;
-            }
-            set
-            {
-                _jednotka = value;
-            }
-        }
-
-        /// <summary>
-        /// Pokud je tato vlastnost odpověď na určitý datový požadavek, je tento element odkazem na tento požadavek.
-        /// </summary>
-        [XmlElement("Pozadavek")]
-        public TPozadovanaVlastnostRef Pozadavek
-        {
-            get
-            {
-                return _pozadavek;
-            }
-            set
-            {
-                _pozadavek = value;
-            }
-        }
-
-        /// <summary>
-        /// Název vlastnosti
-        /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        /// <summary>
-        /// Identifikátor vlastnosti v datovém standardu staveb. Pokud se jedná o data, která by
-        /// měla být použita pro výměnu informací mezi dvěma a více subjekty, měla bz definice
-        /// vlastnosti být založena na definici v DSS.
-        /// </summary>
-        [XmlAttribute(AttributeName = "IdentifikatorDSS")]
-        public string IdentifikatorDSS
-        {
-            get
-            {
-                return _identifikatorDSS;
-            }
-            set
-            {
-                _identifikatorDSS = value;
-            }
-        }
-
-        /// <summary>
-        /// Tento příznak udává, jestli má tato vlastnost vliv na cenu. Pokud nemá vliv na cenu,
-        /// může ji například SW pro podání nabídky ignorovat na importu a nemusí ji zobrazit účastníku výběrového řízení.
-        /// Musí však zaručit, že bude tato vlastnost přítomna ve výstupním souboru (tzv. round-trip).
-        /// </summary>
-        [XmlAttribute(AttributeName = "OvlivnujeCenu")]
-        public bool OvlivnujeCenu
-        {
-            get
-            {
-                return _ovlivnujeCenu;
-            }
-            set
-            {
-                _ovlivnujeCenu = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PopisSpecified
-        {
-            get
-            {
-                return (Equals(_popis, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool JednotkaSpecified
-        {
-            get
-            {
-                return (Equals(_jednotka, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PozadavekSpecified
-        {
-            get
-            {
-                return (Equals(_pozadavek, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool IdentifikatorDSSSpecified
-        {
-            get
-            {
-                return (Equals(_identifikatorDSS, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool OvlivnujeCenuSpecified
-        {
-            get
-            {
-                return (Equals(_ovlivnujeCenu, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Odkaz na požadovanou vlastnost.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TPozadovanaVlastnostRef")]
-    public partial class TPozadovanaVlastnostRef
-    {
-        #region Private fields
-        private string _ref;
-        #endregion
-
-        /// <summary>
-        /// Reference. Musí existovat odpovídající element s tímto ID.
-        /// </summary>
-        [XmlAttribute(DataType = "IDREF", AttributeName = "Ref")]
-        public string Ref
-        {
-            get
-            {
-                return _ref;
-            }
-            set
-            {
-                _ref = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool RefSpecified
-        {
-            get
-            {
-                return (Equals(_ref, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Vlastnost reprezentující datum a čas
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TVlastnostDatum")]
-    public partial class TVlastnostDatum : TVlastnost
-    {
-        #region Private fields
-        private System.DateTime _hodnota;
-        private bool hodnotaFieldSpecified;
-        #endregion
-
-        /// <summary>
-        /// Hodnota datum a čas
-        /// </summary>
-        [XmlAttribute(AttributeName = "Hodnota")]
-        public System.DateTime Hodnota
-        {
-            get
-            {
-                return _hodnota;
-            }
-            set
-            {
-                _hodnota = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool HodnotaSpecified
-        {
-            get
-            {
-                return hodnotaFieldSpecified;
-            }
-            set
-            {
-                hodnotaFieldSpecified = value;
-            }
-        }
-    }
-
-    /// <summary>
-    /// Vlastnost s logickou hodnotou
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TVlastnostBoolean")]
-    public partial class TVlastnostBoolean : TVlastnost
-    {
-        #region Private fields
-        private bool _hodnota;
-        private bool hodnotaFieldSpecified;
-        #endregion
-
-        /// <summary>
-        /// Logická hodnota
-        /// </summary>
-        [XmlAttribute(AttributeName = "Hodnota")]
-        public bool Hodnota
-        {
-            get
-            {
-                return _hodnota;
-            }
-            set
-            {
-                _hodnota = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool HodnotaSpecified
-        {
-            get
-            {
-                return hodnotaFieldSpecified;
-            }
-            set
-            {
-                hodnotaFieldSpecified = value;
-            }
-        }
-    }
-
-    /// <summary>
-    /// Vlastnost s celočíselnou hodnotou
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TVlastnostIntegral")]
-    public partial class TVlastnostIntegral : TVlastnost
-    {
-        #region Private fields
-        private long _hodnota;
-        private bool hodnotaFieldSpecified;
-        #endregion
-
-        /// <summary>
-        /// Hodnota vlastnosti jako celé číslo
-        /// </summary>
-        [XmlAttribute(AttributeName = "Hodnota")]
-        public long Hodnota
-        {
-            get
-            {
-                return _hodnota;
-            }
-            set
-            {
-                _hodnota = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool HodnotaSpecified
-        {
-            get
-            {
-                return hodnotaFieldSpecified;
-            }
-            set
-            {
-                hodnotaFieldSpecified = value;
-            }
-        }
-    }
-
-    /// <summary>
-    /// Vlastnost s reálnou hodnotou
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TVlastnostReal")]
-    public partial class TVlastnostReal : TVlastnost
-    {
-        #region Private fields
-        private double _hodnota;
-        private bool hodnotaFieldSpecified;
-        #endregion
-
-        /// <summary>
-        /// Hodnota vlastnosti jako reálné číslo s plovoucí desetinnou čárkou
-        /// </summary>
-        [XmlAttribute(AttributeName = "Hodnota")]
-        public double Hodnota
-        {
-            get
-            {
-                return _hodnota;
-            }
-            set
-            {
-                _hodnota = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool HodnotaSpecified
-        {
-            get
-            {
-                return hodnotaFieldSpecified;
-            }
-            set
-            {
-                hodnotaFieldSpecified = value;
-            }
-        }
-    }
-
-    /// <summary>
-    /// Vlastnost jako desetinné číslo
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TVlastnostDecimal")]
-    public partial class TVlastnostDecimal : TVlastnost
-    {
-        #region Private fields
-        private decimal _hodnota;
-        private bool hodnotaFieldSpecified;
-        #endregion
-
-        /// <summary>
-        /// Hodnota vlastnosti jako desetinné číslo
-        /// </summary>
-        [XmlAttribute(AttributeName = "Hodnota")]
-        public decimal Hodnota
-        {
-            get
-            {
-                return _hodnota;
-            }
-            set
-            {
-                _hodnota = value;
-            }
-        }
-
-        [XmlIgnore]
-        public bool HodnotaSpecified
-        {
-            get
-            {
-                return hodnotaFieldSpecified;
-            }
-            set
-            {
-                hodnotaFieldSpecified = value;
-            }
-        }
-    }
-
-    /// <summary>
-    /// Textová vlastnost
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TVlastnostText")]
-    public partial class TVlastnostText : TVlastnost
-    {
-        #region Private fields
-        private string _hodnota;
-        #endregion
-
-        /// <summary>
-        /// Hodnota vlastnosti jako text
-        /// </summary>
-        [XmlElement("Hodnota")]
-        public string Hodnota
-        {
-            get
-            {
-                return _hodnota;
-            }
-            set
-            {
-                _hodnota = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool HodnotaSpecified
-        {
-            get
-            {
-                return (Equals(_hodnota, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Odkaz na klasifikační třídu
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TTridaRef")]
-    public partial class TTridaRef
+    [XmlRootAttribute("TSazbaDPHRef")]
+    public partial class TSazbaDPHRef
     {
         #region Private fields
         private string _ref;
@@ -6325,367 +4394,6 @@ namespace ORF.XML
         /// Ostatní, jiné
         /// </summary>
         OSTATNI,
-    }
-
-    /// <summary>
-    /// Poloha v souřadnicích WGS-84 (GPS souřadnice)
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TPoloha")]
-    public partial class TPoloha
-    {
-        #region Private fields
-        private double _zemSirka;
-        private double _zemDelka;
-        #endregion
-
-        /// <summary>
-        /// Zeměpisná šířka
-        /// </summary>
-        [XmlAttribute(AttributeName = "ZemSirka")]
-        public double ZemSirka
-        {
-            get
-            {
-                return _zemSirka;
-            }
-            set
-            {
-                _zemSirka = value;
-            }
-        }
-
-        /// <summary>
-        /// Zeměpisná délka
-        /// </summary>
-        [XmlAttribute(AttributeName = "ZemDelka")]
-        public double ZemDelka
-        {
-            get
-            {
-                return _zemDelka;
-            }
-            set
-            {
-                _zemDelka = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZemSirkaSpecified
-        {
-            get
-            {
-                return (Equals(_zemSirka, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZemDelkaSpecified
-        {
-            get
-            {
-                return (Equals(_zemDelka, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Abstraktní element, ze kterého jsou odvozeny všechny elementy, které mají ze své podstaty
-    /// vlastní softwarovou identitu. Proto mají unikátní ID (UUID) a uživatelsky srozumitelný
-    /// název a popis. Zároveň se mohou odkazovat na externí identity (například odpovídající,
-    /// nebo související elementy v modelu stavby).
-    /// </summary>
-    [XmlIncludeAttribute(typeof(TUzel))]
-    [XmlIncludeAttribute(typeof(TObjekt))]
-    [XmlIncludeAttribute(typeof(TUzelRozpoctu))]
-    [XmlIncludeAttribute(typeof(TRozpocet))]
-    [XmlIncludeAttribute(typeof(TProjekt))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TIdentita")]
-    public abstract partial class TIdentita
-    {
-        #region Private fields
-        private string _popis;
-        private List<TExterniEntita> _externiEntita;
-        private List<TSkupinaVlastnosti> _skupinaVlastnosti;
-        private string _id;
-        private string _nazev;
-        #endregion
-
-        /// <summary>
-        /// TIdentita class constructor
-        /// </summary>
-        public TIdentita()
-        {
-            _skupinaVlastnosti = new List<TSkupinaVlastnosti>();
-            _externiEntita = new List<TExterniEntita>();
-        }
-
-        /// <summary>
-        /// Popis
-        /// </summary>
-        [XmlElement("Popis")]
-        public string Popis
-        {
-            get
-            {
-                return _popis;
-            }
-            set
-            {
-                _popis = value;
-            }
-        }
-
-        /// <summary>
-        /// Externí identity (například odpovídající, nebo související elementy v modelu stavby).
-        /// </summary>
-        [XmlElement("ExterniEntita")]
-        public List<TExterniEntita> ExterniEntita
-        {
-            get
-            {
-                return _externiEntita;
-            }
-            set
-            {
-                _externiEntita = value;
-            }
-        }
-
-        /// <summary>
-        /// Volitelné další vlastnosti popisující danou datovou entitu
-        /// </summary>
-        [XmlElement("SkupinaVlastnosti")]
-        public List<TSkupinaVlastnosti> SkupinaVlastnosti
-        {
-            get
-            {
-                return _skupinaVlastnosti;
-            }
-            set
-            {
-                _skupinaVlastnosti = value;
-            }
-        }
-
-        /// <summary>
-        /// Unikátní ID (podle ISO/IEC 9834-8:2005). Tento identifikátor umožňuje spolehlivě zachovat kontinuitu dat
-        /// při jejich zpracování v různých izolovaných systémech. Umožňuje zachovat softwarovou identitu datové entity.
-        /// </summary>
-        [XmlAttribute(AttributeName = "Id")]
-        public string Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        /// <summary>
-        /// Krátký název, který lze spolehlivě prezentovat uživateli
-        /// </summary>
-        [XmlAttribute(AttributeName = "Nazev")]
-        public string Nazev
-        {
-            get
-            {
-                return _nazev;
-            }
-            set
-            {
-                _nazev = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PopisSpecified
-        {
-            get
-            {
-                return (Equals(_popis, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ExterniEntitaSpecified
-        {
-            get
-            {
-                return (Equals(_externiEntita, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool SkupinaVlastnostiSpecified
-        {
-            get
-            {
-                return (Equals(_skupinaVlastnosti, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool IdSpecified
-        {
-            get
-            {
-                return (Equals(_id, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool NazevSpecified
-        {
-            get
-            {
-                return (Equals(_nazev, null) != true);
-            }
-        }
-    }
-
-    /// <summary>
-    /// Element reprezentující uzel v hierarchii rozpočtu.
-    /// </summary>
-    [XmlIncludeAttribute(typeof(TObjekt))]
-    [XmlIncludeAttribute(typeof(TUzelRozpoctu))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [Serializable]
-    [DebuggerStepThrough]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
-    [XmlRootAttribute("TUzel")]
-    public abstract partial class TUzel : TIdentita
-    {
-        #region Private fields
-        private List<TTridaRef> _zatrideni;
-        private List<TUzel> _uzelRozpoctu;
-        private List<TPolozkaRozpoctu> _polozka;
-        private string _kod;
-        #endregion
-
-        /// <summary>
-        /// TUzel class constructor
-        /// </summary>
-        public TUzel()
-        {
-            _polozka = new List<TPolozkaRozpoctu>();
-            _uzelRozpoctu = new List<TUzel>();
-            _zatrideni = new List<TTridaRef>();
-        }
-
-        /// <summary>
-        /// Zařazení uzlu rozpočtu do vybrané klasifikace
-        /// </summary>
-        [XmlElement("Zatrideni")]
-        public List<TTridaRef> Zatrideni
-        {
-            get
-            {
-                return _zatrideni;
-            }
-            set
-            {
-                _zatrideni = value;
-            }
-        }
-
-        /// <summary>
-        /// Podřízené uzly rozpočtu (nižší stupeň hierarchie)
-        /// </summary>
-        [XmlElement("UzelRozpoctu")]
-        public List<TUzel> UzelRozpoctu
-        {
-            get
-            {
-                return _uzelRozpoctu;
-            }
-            set
-            {
-                _uzelRozpoctu = value;
-            }
-        }
-
-        /// <summary>
-        /// Položky rozpočtu
-        /// </summary>
-        [XmlElement("Polozka")]
-        public List<TPolozkaRozpoctu> Polozka
-        {
-            get
-            {
-                return _polozka;
-            }
-            set
-            {
-                _polozka = value;
-            }
-        }
-
-        /// <summary>
-        /// Kód
-        /// </summary>
-        [XmlAttribute(AttributeName = "Kod")]
-        public string Kod
-        {
-            get
-            {
-                return _kod;
-            }
-            set
-            {
-                _kod = value;
-            }
-        }
-
-        [XmlIgnore()]
-        public bool ZatrideniSpecified
-        {
-            get
-            {
-                return (Equals(_zatrideni, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool UzelRozpoctuSpecified
-        {
-            get
-            {
-                return (Equals(_uzelRozpoctu, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool PolozkaSpecified
-        {
-            get
-            {
-                return (Equals(_polozka, null) != true);
-            }
-        }
-
-        [XmlIgnore()]
-        public bool KodSpecified
-        {
-            get
-            {
-                return (Equals(_kod, null) != true);
-            }
-        }
     }
 
     /// <summary>
@@ -7042,6 +4750,2906 @@ namespace ORF.XML
             get
             {
                 return (Equals(_povinnaSkupinaMereni, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Odkaz na organizaci
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TOrganizaceRef")]
+    public partial class TOrganizaceRef
+    {
+        #region Private fields
+        private string _ref;
+        #endregion
+
+        /// <summary>
+        /// Reference. Musí existovat odpovídající element s tímto ID.
+        /// </summary>
+        [XmlAttribute(DataType = "IDREF", AttributeName = "Ref")]
+        public string Ref
+        {
+            get
+            {
+                return _ref;
+            }
+            set
+            {
+                _ref = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool RefSpecified
+        {
+            get
+            {
+                return (Equals(_ref, null) != true);
+            }
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TPozadovanaVlastnost")]
+    public partial class TPozadovanaVlastnost
+    {
+        #region Private fields
+        private string _popis;
+        private TJednotkaRef _jednotka;
+        private string _id;
+        private string _skupinaVlastnosti;
+        private string _nazev;
+        private TTypHodnoty _typHodnoty;
+        private string _datovyProfil;
+        #endregion
+
+        /// <summary>
+        /// TPozadovanaVlastnost class constructor
+        /// </summary>
+        public TPozadovanaVlastnost()
+        {
+            _jednotka = new TJednotkaRef();
+        }
+
+        /// <summary>
+        /// Popis požadované vlastnosti
+        /// </summary>
+        [XmlElement("Popis")]
+        public string Popis
+        {
+            get
+            {
+                return _popis;
+            }
+            set
+            {
+                _popis = value;
+            }
+        }
+
+        /// <summary>
+        /// Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
+        /// </summary>
+        [XmlElement("Jednotka")]
+        public TJednotkaRef Jednotka
+        {
+            get
+            {
+                return _jednotka;
+            }
+            set
+            {
+                _jednotka = value;
+            }
+        }
+
+        /// <summary>
+        /// Lokální identita požadavku (v rámci souboru ORF). Vlastnosti, které představují odpověď na tento
+        /// informační požadavek se na něj budou odkazovat pomocí tohoto ID.
+        /// </summary>
+        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
+        public string Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        /// <summary>
+        /// Název skupiny, ve které má být vlastnost umístěna
+        /// </summary>
+        [XmlAttribute(AttributeName = "SkupinaVlastnosti")]
+        public string SkupinaVlastnosti
+        {
+            get
+            {
+                return _skupinaVlastnosti;
+            }
+            set
+            {
+                _skupinaVlastnosti = value;
+            }
+        }
+
+        /// <summary>
+        /// Název požadované vlastnosti
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Datový typ hodnoty požadované vlastnosti
+        /// </summary>
+        [XmlAttribute(AttributeName = "TypHodnoty")]
+        public TTypHodnoty TypHodnoty
+        {
+            get
+            {
+                return _typHodnoty;
+            }
+            set
+            {
+                _typHodnoty = value;
+            }
+        }
+
+        /// <summary>
+        /// Identifikátor vlastnosti v datovém profilu ORF. Pokud se jedná o data, která by
+        /// měla být použita pro výměnu informací mezi dvěma a více subjekty, měla by definice
+        /// vlastnosti být založena na definici publikované ČAS ve formě datového profilu ORF.
+        /// </summary>
+        [XmlAttribute(AttributeName = "DatovyProfil")]
+        public string DatovyProfil
+        {
+            get
+            {
+                return _datovyProfil;
+            }
+            set
+            {
+                _datovyProfil = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PopisSpecified
+        {
+            get
+            {
+                return (Equals(_popis, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool JednotkaSpecified
+        {
+            get
+            {
+                return (Equals(_jednotka, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool IdSpecified
+        {
+            get
+            {
+                return (Equals(_id, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool SkupinaVlastnostiSpecified
+        {
+            get
+            {
+                return (Equals(_skupinaVlastnosti, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool TypHodnotySpecified
+        {
+            get
+            {
+                return (Equals(_typHodnoty, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool DatovyProfilSpecified
+        {
+            get
+            {
+                return (Equals(_datovyProfil, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Výčet základních datový typů
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TTypHodnoty")]
+    public enum TTypHodnoty
+    {
+        TEXT,
+        DECIMAL,
+        REAL,
+        INTEGER,
+        BOOLEAL,
+        DATUM_CAS,
+    }
+
+    /// <summary>
+    /// Dodatek k rozpočtu
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TDodatek")]
+    public partial class TDodatek
+    {
+        #region Private fields
+        private string _popis;
+        private string _id;
+        private string _znacka;
+        private string _nazev;
+        private bool _uzavren;
+        #endregion
+
+        /// <summary>
+        /// Popis změn v tomto dodatku
+        /// </summary>
+        [XmlElement("Popis")]
+        public string Popis
+        {
+            get
+            {
+                return _popis;
+            }
+            set
+            {
+                _popis = value;
+            }
+        }
+
+        /// <summary>
+        /// ID dodatku k rozpočtu
+        /// </summary>
+        [XmlAttribute(DataType = "ID", AttributeName = "ID")]
+        public string ID
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        /// <summary>
+        /// Značka nebo kód dodatku
+        /// </summary>
+        [XmlAttribute(AttributeName = "Znacka")]
+        public string Znacka
+        {
+            get
+            {
+                return _znacka;
+            }
+            set
+            {
+                _znacka = value;
+            }
+        }
+
+        /// <summary>
+        /// Název dodatku
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Stav dodatku (true = uzavřen, false = otevřen)
+        /// </summary>
+        [XmlAttribute(AttributeName = "Uzavren")]
+        public bool Uzavren
+        {
+            get
+            {
+                return _uzavren;
+            }
+            set
+            {
+                _uzavren = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PopisSpecified
+        {
+            get
+            {
+                return (Equals(_popis, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ZnackaSpecified
+        {
+            get
+            {
+                return (Equals(_znacka, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool UzavrenSpecified
+        {
+            get
+            {
+                return (Equals(_uzavren, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Sekce definic, na které se pomocí ID odkazují další objekty v datovém modelu
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TDefinice")]
+    public partial class TDefinice
+    {
+        #region Private fields
+        private List<TOrganizace> _organizace;
+        private List<TKlasifikace> _klasifikace;
+        private List<TCenovaSoustava> _cenovaSoustava;
+        private List<TJednotka> _jednotka;
+        private List<TSazbaDPH> _sazbaDPH;
+        private List<TMetodikaMereni> _metodikaMereni;
+        private List<TSkupinaZmen> _skupinyZmen;
+        private int _zaokrouhleniMnozstviPolozky;
+        #endregion
+
+        /// <summary>
+        /// TDefinice class constructor
+        /// </summary>
+        public TDefinice()
+        {
+            _skupinyZmen = new List<TSkupinaZmen>();
+            _metodikaMereni = new List<TMetodikaMereni>();
+            _sazbaDPH = new List<TSazbaDPH>();
+            _jednotka = new List<TJednotka>();
+            _cenovaSoustava = new List<TCenovaSoustava>();
+            _klasifikace = new List<TKlasifikace>();
+            _organizace = new List<TOrganizace>();
+        }
+
+        /// <summary>
+        /// Seznam organizací
+        /// </summary>
+        [XmlElement("Organizace")]
+        public List<TOrganizace> Organizace
+        {
+            get
+            {
+                return _organizace;
+            }
+            set
+            {
+                _organizace = value;
+            }
+        }
+
+        /// <summary>
+        /// Seznam klasifikací včetně klasifikační hierarchie. Jednotlivé elementy hierarchie rozpočtu se
+        /// mohou odkazovat na několik klasifikačních tříd.
+        /// </summary>
+        [XmlElement("Klasifikace")]
+        public List<TKlasifikace> Klasifikace
+        {
+            get
+            {
+                return _klasifikace;
+            }
+            set
+            {
+                _klasifikace = value;
+            }
+        }
+
+        /// <summary>
+        /// Informace o použité cenové soustavě. Položky rozpočtu se na cenovou soustavu odkazují.
+        /// </summary>
+        [XmlElement("CenovaSoustava")]
+        public List<TCenovaSoustava> CenovaSoustava
+        {
+            get
+            {
+                return _cenovaSoustava;
+            }
+            set
+            {
+                _cenovaSoustava = value;
+            }
+        }
+
+        /// <summary>
+        /// Seznam jednotek. Fyzikální jednotky jsou popsány strojově čitelnou formou, ostatní prostým
+        /// textovým popisem. Položky rozpočtu se na tyto jednotky odkazují.
+        /// </summary>
+        [XmlElement("Jednotka")]
+        public List<TJednotka> Jednotka
+        {
+            get
+            {
+                return _jednotka;
+            }
+            set
+            {
+                _jednotka = value;
+            }
+        }
+
+        /// <summary>
+        /// Sazby DPH použité v dokumentu ORF
+        /// </summary>
+        [XmlElement("SazbaDPH")]
+        public List<TSazbaDPH> SazbaDPH
+        {
+            get
+            {
+                return _sazbaDPH;
+            }
+            set
+            {
+                _sazbaDPH = value;
+            }
+        }
+
+        /// <summary>
+        /// Metodiky měření, na které se mohou odkazovat jednotlivé položky rozpočtu
+        /// </summary>
+        [XmlElement("MetodikaMereni")]
+        public List<TMetodikaMereni> MetodikaMereni
+        {
+            get
+            {
+                return _metodikaMereni;
+            }
+            set
+            {
+                _metodikaMereni = value;
+            }
+        }
+
+        /// <summary>
+        /// Seznam skupin změn během výstavby
+        /// </summary>
+        [XmlArrayItemAttribute("SkupinaZmen", IsNullable = false)]
+        public List<TSkupinaZmen> SkupinyZmen
+        {
+            get
+            {
+                return _skupinyZmen;
+            }
+            set
+            {
+                _skupinyZmen = value;
+            }
+        }
+
+        /// <summary>
+        /// Počet platných desetinných míst pro zaohrouhlování množství
+        /// </summary>
+        [XmlAttribute(AttributeName = "ZaokrouhleniMnozstviPolozky")]
+        public int ZaokrouhleniMnozstviPolozky
+        {
+            get
+            {
+                return _zaokrouhleniMnozstviPolozky;
+            }
+            set
+            {
+                _zaokrouhleniMnozstviPolozky = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool OrganizaceSpecified
+        {
+            get
+            {
+                return (Equals(_organizace, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool KlasifikaceSpecified
+        {
+            get
+            {
+                return (Equals(_klasifikace, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool CenovaSoustavaSpecified
+        {
+            get
+            {
+                return (Equals(_cenovaSoustava, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool JednotkaSpecified
+        {
+            get
+            {
+                return (Equals(_jednotka, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool SazbaDPHSpecified
+        {
+            get
+            {
+                return (Equals(_sazbaDPH, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool MetodikaMereniSpecified
+        {
+            get
+            {
+                return (Equals(_metodikaMereni, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool SkupinyZmenSpecified
+        {
+            get
+            {
+                return (Equals(_skupinyZmen, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ZaokrouhleniMnozstviPolozkySpecified
+        {
+            get
+            {
+                return (Equals(_zaokrouhleniMnozstviPolozky, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Element popisující organizaci
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TOrganizace")]
+    public partial class TOrganizace
+    {
+        #region Private fields
+        private TAdresa _adresa;
+        private TOsoba _kontakt;
+        private string _id;
+        private string _nazev;
+        private string _iCO;
+        private string _dIC;
+        private string _telefon;
+        private string _email;
+        #endregion
+
+        /// <summary>
+        /// TOrganizace class constructor
+        /// </summary>
+        public TOrganizace()
+        {
+            _kontakt = new TOsoba();
+            _adresa = new TAdresa();
+        }
+
+        /// <summary>
+        /// Poštovní adresa
+        /// </summary>
+        [XmlElement("Adresa")]
+        public TAdresa Adresa
+        {
+            get
+            {
+                return _adresa;
+            }
+            set
+            {
+                _adresa = value;
+            }
+        }
+
+        /// <summary>
+        /// Kontaktní osoba
+        /// </summary>
+        [XmlElement("Kontakt")]
+        public TOsoba Kontakt
+        {
+            get
+            {
+                return _kontakt;
+            }
+            set
+            {
+                _kontakt = value;
+            }
+        }
+
+        /// <summary>
+        /// Reference v rámci dokumentu ORF
+        /// </summary>
+        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
+        public string Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        /// <summary>
+        /// Název organizace
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Identifikační číslo organizace
+        /// </summary>
+        [XmlAttribute(AttributeName = "ICO")]
+        public string ICO
+        {
+            get
+            {
+                return _iCO;
+            }
+            set
+            {
+                _iCO = value;
+            }
+        }
+
+        /// <summary>
+        /// Daňové identifikační číslo organizace
+        /// </summary>
+        [XmlAttribute(AttributeName = "DIC")]
+        public string DIC
+        {
+            get
+            {
+                return _dIC;
+            }
+            set
+            {
+                _dIC = value;
+            }
+        }
+
+        /// <summary>
+        /// Telefonní číslo organizace
+        /// </summary>
+        [XmlAttribute(AttributeName = "Telefon")]
+        public string Telefon
+        {
+            get
+            {
+                return _telefon;
+            }
+            set
+            {
+                _telefon = value;
+            }
+        }
+
+        /// <summary>
+        /// Email organizace
+        /// </summary>
+        [XmlAttribute(AttributeName = "Email")]
+        public string Email
+        {
+            get
+            {
+                return _email;
+            }
+            set
+            {
+                _email = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool AdresaSpecified
+        {
+            get
+            {
+                return (Equals(_adresa, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool KontaktSpecified
+        {
+            get
+            {
+                return (Equals(_kontakt, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool IdSpecified
+        {
+            get
+            {
+                return (Equals(_id, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ICOSpecified
+        {
+            get
+            {
+                return (Equals(_iCO, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool DICSpecified
+        {
+            get
+            {
+                return (Equals(_dIC, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool TelefonSpecified
+        {
+            get
+            {
+                return (Equals(_telefon, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool EmailSpecified
+        {
+            get
+            {
+                return (Equals(_email, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Element popisující osobu
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TOsoba")]
+    public partial class TOsoba
+    {
+        #region Private fields
+        private TAdresa _adresa;
+        private string _jmeno;
+        private string _telefon;
+        private string _email;
+        #endregion
+
+        /// <summary>
+        /// TOsoba class constructor
+        /// </summary>
+        public TOsoba()
+        {
+            _adresa = new TAdresa();
+        }
+
+        /// <summary>
+        /// Poštovní adresa
+        /// </summary>
+        [XmlElement("Adresa")]
+        public TAdresa Adresa
+        {
+            get
+            {
+                return _adresa;
+            }
+            set
+            {
+                _adresa = value;
+            }
+        }
+
+        /// <summary>
+        /// Jméno a příjmení, případně včetně titulů.
+        /// </summary>
+        [XmlAttribute(AttributeName = "Jmeno")]
+        public string Jmeno
+        {
+            get
+            {
+                return _jmeno;
+            }
+            set
+            {
+                _jmeno = value;
+            }
+        }
+
+        /// <summary>
+        /// Telefonní číslo osoby
+        /// </summary>
+        [XmlAttribute(AttributeName = "Telefon")]
+        public string Telefon
+        {
+            get
+            {
+                return _telefon;
+            }
+            set
+            {
+                _telefon = value;
+            }
+        }
+
+        /// <summary>
+        /// Email osoby
+        /// </summary>
+        [XmlAttribute(AttributeName = "Email")]
+        public string Email
+        {
+            get
+            {
+                return _email;
+            }
+            set
+            {
+                _email = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool AdresaSpecified
+        {
+            get
+            {
+                return (Equals(_adresa, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool JmenoSpecified
+        {
+            get
+            {
+                return (Equals(_jmeno, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool TelefonSpecified
+        {
+            get
+            {
+                return (Equals(_telefon, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool EmailSpecified
+        {
+            get
+            {
+                return (Equals(_email, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Element obsahující definici klasifikačního systému
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("Klasifikace", Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd", IsNullable = false)]
+    public partial class TKlasifikace
+    {
+        #region Private fields
+        private List<TTrida> _trida;
+        private TTypKlasifikace _typ;
+        private string _nazev;
+        private string _popis;
+        private string _zdroj;
+        private string _umisteni;
+        private string _edice;
+        #endregion
+
+        /// <summary>
+        /// TKlasifikace class constructor
+        /// </summary>
+        public TKlasifikace()
+        {
+            _trida = new List<TTrida>();
+            _typ = TTypKlasifikace.Vlastni;
+        }
+
+        /// <summary>
+        /// Třídy klasifikačního systému
+        /// </summary>
+        [XmlElement("Trida")]
+        public List<TTrida> Trida
+        {
+            get
+            {
+                return _trida;
+            }
+            set
+            {
+                _trida = value;
+            }
+        }
+
+        /// <summary>
+        /// Typ klasifikačního systému, pokud se jedná o jeden z často používaných systémů.
+        /// Pokud se jedná o jiný klasifikační systém, použije se hodnota "Vlastní"
+        /// </summary>
+        [XmlAttribute(AttributeName = "Typ")]
+        [DefaultValue(TTypKlasifikace.Vlastni)]
+        public TTypKlasifikace Typ
+        {
+            get
+            {
+                return _typ;
+            }
+            set
+            {
+                _typ = value;
+            }
+        }
+
+        /// <summary>
+        /// Název klasifikačního systému
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Popis klasifikačního systému
+        /// </summary>
+        [XmlAttribute(AttributeName = "Popis")]
+        public string Popis
+        {
+            get
+            {
+                return _popis;
+            }
+            set
+            {
+                _popis = value;
+            }
+        }
+
+        /// <summary>
+        /// Zdroj klasifikačního systému (například organizace, předpis a pod.)
+        /// </summary>
+        [XmlAttribute(AttributeName = "Zdroj")]
+        public string Zdroj
+        {
+            get
+            {
+                return _zdroj;
+            }
+            set
+            {
+                _zdroj = value;
+            }
+        }
+
+        /// <summary>
+        /// Odkaz na umístění klasifikačního systému na webu (pokud je dostupná online)
+        /// </summary>
+        [XmlAttribute(DataType = "anyURI", AttributeName = "Umisteni")]
+        public string Umisteni
+        {
+            get
+            {
+                return _umisteni;
+            }
+            set
+            {
+                _umisteni = value;
+            }
+        }
+
+        /// <summary>
+        /// Označení edice klasifikačního systému (verze, rok a pod.)
+        /// </summary>
+        [XmlAttribute(AttributeName = "Edice")]
+        public string Edice
+        {
+            get
+            {
+                return _edice;
+            }
+            set
+            {
+                _edice = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool TridaSpecified
+        {
+            get
+            {
+                return (Equals(_trida, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool TypSpecified
+        {
+            get
+            {
+                return (Equals(_typ, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PopisSpecified
+        {
+            get
+            {
+                return (Equals(_popis, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ZdrojSpecified
+        {
+            get
+            {
+                return (Equals(_zdroj, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool UmisteniSpecified
+        {
+            get
+            {
+                return (Equals(_umisteni, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool EdiceSpecified
+        {
+            get
+            {
+                return (Equals(_edice, null) != true);
+            }
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TTrida")]
+    public partial class TTrida
+    {
+        #region Private fields
+        private List<TTrida> _trida;
+        private string _id;
+        private string _kod;
+        private string _nazev;
+        private string _popis;
+        #endregion
+
+        /// <summary>
+        /// TTrida class constructor
+        /// </summary>
+        public TTrida()
+        {
+            _trida = new List<TTrida>();
+        }
+
+        [XmlElement("Trida")]
+        public List<TTrida> Trida
+        {
+            get
+            {
+                return _trida;
+            }
+            set
+            {
+                _trida = value;
+            }
+        }
+
+        /// <summary>
+        /// Reference v rámci dokumentu ORF
+        /// </summary>
+        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
+        public string Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        /// <summary>
+        /// Kód klasifikační třídy
+        /// </summary>
+        [XmlAttribute(AttributeName = "Kod")]
+        public string Kod
+        {
+            get
+            {
+                return _kod;
+            }
+            set
+            {
+                _kod = value;
+            }
+        }
+
+        /// <summary>
+        /// Název klasifikační třídy
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Popis klasifikační třídy
+        /// </summary>
+        [XmlAttribute(AttributeName = "Popis")]
+        public string Popis
+        {
+            get
+            {
+                return _popis;
+            }
+            set
+            {
+                _popis = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool TridaSpecified
+        {
+            get
+            {
+                return (Equals(_trida, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool IdSpecified
+        {
+            get
+            {
+                return (Equals(_id, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool KodSpecified
+        {
+            get
+            {
+                return (Equals(_kod, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PopisSpecified
+        {
+            get
+            {
+                return (Equals(_popis, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Výčet nejčastěji používaných klasifikací v českém stavebnictví.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TTypKlasifikace")]
+    public enum TTypKlasifikace
+    {
+        [XmlEnumAttribute("CZ-CC")]
+        CZCC,
+        CPV,
+        CPA,
+        CCI_STAVEBNI_ENTITY,
+        CCI_VYBUDOVANE_PROSTORY,
+        CCI_FUNKCNI_SYSTEMY,
+        CCI_KONSTRUKCNI_SYSTEMY,
+        CCI_KOMPONENTY,
+        CCI_KOMPLEXY,
+        Vlastni,
+    }
+
+    /// <summary>
+    /// Informace o cenové soustavě
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TCenovaSoustava")]
+    public partial class TCenovaSoustava
+    {
+        #region Private fields
+        private string _id;
+        private string _nazev;
+        private string _popis;
+        private string _zdroj;
+        private string _umisteni;
+        private string _edice;
+        #endregion
+
+        /// <summary>
+        /// Reference v rámci dokumentu ORF
+        /// </summary>
+        [XmlAttribute(AttributeName = "Id")]
+        public string Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        /// <summary>
+        /// Název cenové soustavy
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Popis cenové soustavy
+        /// </summary>
+        [XmlAttribute(AttributeName = "Popis")]
+        public string Popis
+        {
+            get
+            {
+                return _popis;
+            }
+            set
+            {
+                _popis = value;
+            }
+        }
+
+        /// <summary>
+        /// Zdroj cenové soustavy (například organizace, předpis a pod.)
+        /// </summary>
+        [XmlAttribute(AttributeName = "Zdroj")]
+        public string Zdroj
+        {
+            get
+            {
+                return _zdroj;
+            }
+            set
+            {
+                _zdroj = value;
+            }
+        }
+
+        /// <summary>
+        /// Odkaz na umístění cenové soustavy na webu (pokud je dostupná online)
+        /// </summary>
+        [XmlAttribute(DataType = "anyURI", AttributeName = "Umisteni")]
+        public string Umisteni
+        {
+            get
+            {
+                return _umisteni;
+            }
+            set
+            {
+                _umisteni = value;
+            }
+        }
+
+        /// <summary>
+        /// Označení edice cenové soustavy (verze, rok a pod.)
+        /// </summary>
+        [XmlAttribute(AttributeName = "Edice")]
+        public string Edice
+        {
+            get
+            {
+                return _edice;
+            }
+            set
+            {
+                _edice = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool IdSpecified
+        {
+            get
+            {
+                return (Equals(_id, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PopisSpecified
+        {
+            get
+            {
+                return (Equals(_popis, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ZdrojSpecified
+        {
+            get
+            {
+                return (Equals(_zdroj, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool UmisteniSpecified
+        {
+            get
+            {
+                return (Equals(_umisteni, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool EdiceSpecified
+        {
+            get
+            {
+                return (Equals(_edice, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Abstraktní datový typ pro všechny definice jednotek
+    /// </summary>
+    [XmlIncludeAttribute(typeof(TPenezniJednotka))]
+    [XmlIncludeAttribute(typeof(TJednotkaZavislaNaKontextu))]
+    [XmlIncludeAttribute(typeof(TKonverzniJednotka))]
+    [XmlIncludeAttribute(typeof(TOdvozenaJednotka))]
+    [XmlIncludeAttribute(typeof(TJednotkaSI))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TJednotka")]
+    public abstract partial class TJednotka
+    {
+        #region Private fields
+        private string _id;
+        #endregion
+
+        /// <summary>
+        /// Lokální identifikátor jednotky v souboru ORF. Ostatní elementy v souboru se budou na
+        /// jednotku odkazovat pomocí tohoto identifikátoru.
+        /// </summary>
+        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
+        public string Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool IdSpecified
+        {
+            get
+            {
+                return (Equals(_id, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Jednotka pro cenu
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TPenezniJednotka")]
+    public partial class TPenezniJednotka : TJednotka
+    {
+        #region Private fields
+        private TMena _mena;
+        #endregion
+
+        [XmlAttribute(AttributeName = "Mena")]
+        public TMena Mena
+        {
+            get
+            {
+                return _mena;
+            }
+            set
+            {
+                _mena = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool MenaSpecified
+        {
+            get
+            {
+                return (Equals(_mena, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Vyjadřuje jednotky, které nejsou vztažené k jednotkám SI. Například "kus", "komplet" a pod.
+    /// Tento datový typ by se měl používat pouze v případě, že není možné jednotku vyjádřit pomocí jednotek SI, odvozených ani konverzních jednotek
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TJednotkaZavislaNaKontextu")]
+    public partial class TJednotkaZavislaNaKontextu : TJednotka
+    {
+        #region Private fields
+        private string _nazev;
+        private string _symbol;
+        #endregion
+
+        /// <summary>
+        /// Název jednotky
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Krátký symbol pro uživatelské zobrazení
+        /// </summary>
+        [XmlAttribute(AttributeName = "Symbol")]
+        public string Symbol
+        {
+            get
+            {
+                return _symbol;
+            }
+            set
+            {
+                _symbol = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool SymbolSpecified
+        {
+            get
+            {
+                return (Equals(_symbol, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Další jednotky je možné vyjádřit pomocí měřítka a odszení. Například h = 60 * s
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TKonverzniJednotka")]
+    public partial class TKonverzniJednotka : TJednotka
+    {
+        #region Private fields
+        private TJednotka _zakladniJednotka;
+        private string _nazev;
+        private string _symbol;
+        private double _meritko;
+        private double _odsazeni;
+        #endregion
+
+        /// <summary>
+        /// TKonverzniJednotka class constructor
+        /// </summary>
+        public TKonverzniJednotka()
+        {
+            _meritko = 1D;
+            _odsazeni = 0D;
+        }
+
+        [XmlElement("ZakladniJednotka")]
+        public TJednotka ZakladniJednotka
+        {
+            get
+            {
+                return _zakladniJednotka;
+            }
+            set
+            {
+                _zakladniJednotka = value;
+            }
+        }
+
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        [XmlAttribute(AttributeName = "Symbol")]
+        public string Symbol
+        {
+            get
+            {
+                return _symbol;
+            }
+            set
+            {
+                _symbol = value;
+            }
+        }
+
+        [XmlAttribute(AttributeName = "Meritko")]
+        [DefaultValue(1D)]
+        public double Meritko
+        {
+            get
+            {
+                return _meritko;
+            }
+            set
+            {
+                _meritko = value;
+            }
+        }
+
+        [XmlAttribute(AttributeName = "Odsazeni")]
+        [DefaultValue(0D)]
+        public double Odsazeni
+        {
+            get
+            {
+                return _odsazeni;
+            }
+            set
+            {
+                _odsazeni = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ZakladniJednotkaSpecified
+        {
+            get
+            {
+                return (Equals(_zakladniJednotka, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool SymbolSpecified
+        {
+            get
+            {
+                return (Equals(_symbol, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool MeritkoSpecified
+        {
+            get
+            {
+                return (Equals(_meritko, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool OdsazeniSpecified
+        {
+            get
+            {
+                return (Equals(_odsazeni, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Jednotky je možné kombinovat do odvozených jednotek, například m · s⁻¹
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TOdvozenaJednotka")]
+    public partial class TOdvozenaJednotka : TJednotka
+    {
+        #region Private fields
+        private List<TKomponentaJednotky> _komponenta;
+        #endregion
+
+        /// <summary>
+        /// TOdvozenaJednotka class constructor
+        /// </summary>
+        public TOdvozenaJednotka()
+        {
+            _komponenta = new List<TKomponentaJednotky>();
+        }
+
+        /// <summary>
+        /// Komponenty odvozené jednotky
+        /// </summary>
+        [XmlElement("Komponenta")]
+        public List<TKomponentaJednotky> Komponenta
+        {
+            get
+            {
+                return _komponenta;
+            }
+            set
+            {
+                _komponenta = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool KomponentaSpecified
+        {
+            get
+            {
+                return (Equals(_komponenta, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Komponenta odvozené jednotky
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TKomponentaJednotky")]
+    public partial class TKomponentaJednotky
+    {
+        #region Private fields
+        private TJednotka _jednotka;
+        private int _exponent;
+        #endregion
+
+        /// <summary>
+        /// Základní jednotka
+        /// </summary>
+        [XmlElement("Jednotka")]
+        public TJednotka Jednotka
+        {
+            get
+            {
+                return _jednotka;
+            }
+            set
+            {
+                _jednotka = value;
+            }
+        }
+
+        /// <summary>
+        /// Exponent komponenty
+        /// </summary>
+        [XmlAttribute(AttributeName = "Exponent")]
+        public int Exponent
+        {
+            get
+            {
+                return _exponent;
+            }
+            set
+            {
+                _exponent = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool JednotkaSpecified
+        {
+            get
+            {
+                return (Equals(_jednotka, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ExponentSpecified
+        {
+            get
+            {
+                return (Equals(_exponent, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Jednotky SI jsou dané svým názvem (enumerace) a předponou, která definuje jejich zlomek nebo násobek
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TJednotkaSI")]
+    public partial class TJednotkaSI : TJednotka
+    {
+        #region Private fields
+        private TNazevJednotkySI _nazev;
+        private TPredponaSI _predpona;
+        private bool predponaFieldSpecified;
+        #endregion
+
+        /// <summary>
+        /// Název jednotky podle ISO 80000-1
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public TNazevJednotkySI Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Předpona jednotky podle ISO 80000-1
+        /// </summary>
+        [XmlAttribute(AttributeName = "Predpona")]
+        public TPredponaSI Predpona
+        {
+            get
+            {
+                return _predpona;
+            }
+            set
+            {
+                _predpona = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool PredponaSpecified
+        {
+            get
+            {
+                return predponaFieldSpecified;
+            }
+            set
+            {
+                predponaFieldSpecified = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Názvy jednotek podle ISO 80000-1:2009
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TNazevJednotkySI")]
+    public enum TNazevJednotkySI
+    {
+        /// <summary>
+        /// Veličina: délka
+        /// Symbol: m
+        /// </summary>
+        METRE,
+        /// <summary>
+        /// Veličina: hmotnost
+        /// Symbol: g
+        /// </summary>
+        GRAM,
+        /// <summary>
+        /// Veličina: čas
+        /// Symbol: s
+        /// </summary>
+        SECOND,
+        /// <summary>
+        /// Veličina: elektrický proud
+        /// Symbol: A
+        /// </summary>
+        AMPERE,
+        /// <summary>
+        /// Veličina: termodynamická teplota
+        /// Symbol: K
+        /// </summary>
+        KELVIN,
+        /// <summary>
+        /// Veličina: látkové množství
+        /// Symbol: mol
+        /// </summary>
+        MOLE,
+        /// <summary>
+        /// Veličina: svítivost
+        /// Symbol: cd
+        /// </summary>
+        CANDELA,
+        /// <summary>
+        /// Veličina: rovinný úhel
+        /// Symbol: rad
+        /// Výraz: rad = m/m = 1
+        /// </summary>
+        RADIAN,
+        /// <summary>
+        /// Veličina: prostorový úhel
+        /// Symbol: sr
+        /// Výraz: sr = m2/m2 = 1
+        /// </summary>
+        STERADIAN,
+        /// <summary>
+        /// Veličina: frekvence
+        /// Symbol: Hz
+        /// Výraz: Hz = s−1
+        /// </summary>
+        HERTZ,
+        /// <summary>
+        /// Veličina: síla
+        /// Symbol: N
+        /// Výraz: N = kg · m/s2
+        /// </summary>
+        NEWTON,
+        /// <summary>
+        /// Veličina: tlak
+        /// Symbol: stress
+        /// Výraz: Pa	Pa = N/m2
+        /// </summary>
+        PASCAL,
+        /// <summary>
+        /// Veličina: energie
+        /// Symbol: J
+        /// Výraz: J = N · m
+        /// </summary>
+        JOULE,
+        /// <summary>
+        /// Veličina: výkon
+        /// Symbol: W
+        /// Výraz: W = J/s
+        /// </summary>
+        WATT,
+        /// <summary>
+        /// Veličina: elektrický náboj
+        /// Symbol: C
+        /// Výraz: C = A · s
+        /// </summary>
+        COULOMB,
+        /// <summary>
+        /// Veličina: rozdíl elektrického potenciálu
+        /// Symbol: V
+        /// Výraz: V = W/A
+        /// </summary>
+        VOLT,
+        /// <summary>
+        /// Veličina: elektrická kapacita
+        /// Symbol: F
+        /// Výraz: F = C/V
+        /// </summary>
+        FARAD,
+        /// <summary>
+        /// Veličina: elektrický odpor
+        /// Symbol: Ω
+        /// Výraz: Ω = V/A
+        /// </summary>
+        OHM,
+        /// <summary>
+        /// Veličina: elektrická vodivost
+        /// Symbol: S
+        /// Výraz: S = Ω−1
+        /// </summary>
+        SIEMENS,
+        /// <summary>
+        /// Veličina: magnetický tok
+        /// Symbol: Wb
+        /// Výraz: Wb = V · s
+        /// </summary>
+        WEBER,
+        /// <summary>
+        /// Veličina: magnetická indukce
+        /// Symbol: T
+        /// Výraz: T = Wb/m2
+        /// </summary>
+        TESLA,
+        /// <summary>
+        /// Veličina: indukčnost
+        /// Symbol: H
+        /// Výraz: H = Wb/A
+        /// </summary>
+        HENRY,
+        /// <summary>
+        /// Veličina: teplota ve stupních Celsia
+        /// Symbol: ºC
+        /// Výraz: ºC = K
+        /// </summary>
+        DEGREE_CELSIUS,
+        /// <summary>
+        /// Veličina: světelný tok
+        /// Symbol: lm
+        /// Výraz: lm = cd · sr
+        /// </summary>
+        LUMEN,
+        /// <summary>
+        /// Veličina: intenzita osvětlení
+        /// Symbol: lx
+        /// Výraz: lx = lm/m2
+        /// </summary>
+        LUX,
+        /// <summary>
+        /// Veličina: aktivita radionuklidu
+        /// Symbol: Bq
+        /// Výraz: Bq = s−1
+        /// </summary>
+        BECQUEREL,
+        /// <summary>
+        /// Veličina: vstřebaná dávka
+        /// Symbol: Gy
+        /// Výraz: Gy = J/kg
+        /// </summary>
+        GRAY,
+        /// <summary>
+        /// Veličina: equivalentní dávka
+        /// Symbol: Sv
+        /// Výraz: Sv = J/kg
+        /// </summary>
+        SIEVERT,
+        /// <summary>
+        /// Veličina: katalytická aktivita
+        /// Symbol: kat
+        /// Výraz: kat = mol/s
+        /// </summary>
+        KATAL,
+    }
+
+    /// <summary>
+    /// Předpony jednotek podle ISO 80000-1:2009
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TPredponaSI")]
+    public enum TPredponaSI
+    {
+        /// <summary>
+        /// Mocnina: 10^24
+        /// Symbol: Y
+        /// </summary>
+        YOTTA,
+        /// <summary>
+        /// Mocnina: 10^21
+        /// Symbol: Z
+        /// </summary>
+        ZETTA,
+        /// <summary>
+        /// Mocnina: 10^18
+        /// Symbol: E
+        /// </summary>
+        EXA,
+        /// <summary>
+        /// Mocnina: 10^15
+        /// Symbol: P
+        /// </summary>
+        PETA,
+        /// <summary>
+        /// Mocnina: 10^12
+        /// Symbol: T
+        /// </summary>
+        TERA,
+        /// <summary>
+        /// Mocnina: 10^9
+        /// Symbol: G
+        /// </summary>
+        GIGA,
+        /// <summary>
+        /// Mocnina: 10^6
+        /// Symbol: M
+        /// </summary>
+        MEGA,
+        /// <summary>
+        /// Mocnina: 10^3
+        /// Symbol: k
+        /// </summary>
+        KILO,
+        /// <summary>
+        /// Mocnina: 10^2
+        /// Symbol: h
+        /// </summary>
+        HECTO,
+        /// <summary>
+        /// Mocnina: 10^1 d
+        /// Symbol: a
+        /// </summary>
+        DECA,
+        /// <summary>
+        /// Mocnina: 10^−1
+        /// Symbol: d
+        /// </summary>
+        DECI,
+        /// <summary>
+        /// Mocnina: 10^−2
+        /// Symbol: c
+        /// </summary>
+        CENTI,
+        /// <summary>
+        /// Mocnina: 10^−3
+        /// Symbol: m
+        /// </summary>
+        MILLI,
+        /// <summary>
+        /// Mocnina: 10^−6
+        /// Symbol: μ
+        /// </summary>
+        MICRO,
+        /// <summary>
+        /// Mocnina: 10^−9
+        /// Symbol: n
+        /// </summary>
+        NANO,
+        /// <summary>
+        /// Mocnina: 10^−12
+        /// Symbol: p
+        /// </summary>
+        PICO,
+        /// <summary>
+        /// Mocnina: 10^−15
+        /// Symbol: f
+        /// </summary>
+        FEMTO,
+        /// <summary>
+        /// Mocnina: 10^−18
+        /// Symbol: a
+        /// </summary>
+        ATTO,
+        /// <summary>
+        /// Mocnina: 10^−21
+        /// Symbol: z
+        /// </summary>
+        ZEPTO,
+        /// <summary>
+        /// Mocnina: 10^−24
+        /// Symbol: y
+        /// </summary>
+        YOCTO,
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TSazbaDPH")]
+    public partial class TSazbaDPH
+    {
+        #region Private fields
+        private string _popis;
+        private string _id;
+        private decimal _sazbaDPH;
+        private bool sazbaDPHFieldSpecified;
+        #endregion
+
+        /// <summary>
+        /// Popis sazby DPH („Základní“, „Snížená“, „Nulová“)
+        /// </summary>
+        [XmlElement("Popis")]
+        public string Popis
+        {
+            get
+            {
+                return _popis;
+            }
+            set
+            {
+                _popis = value;
+            }
+        }
+
+        /// <summary>
+        /// Identifikátor sazby DPH
+        /// </summary>
+        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
+        public string Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        /// <summary>
+        /// Sazba DPH
+        /// </summary>
+        [XmlAttribute(AttributeName = "SazbaDPH")]
+        public decimal SazbaDPH
+        {
+            get
+            {
+                return _sazbaDPH;
+            }
+            set
+            {
+                _sazbaDPH = value;
+            }
+        }
+
+        [XmlIgnore]
+        public bool SazbaDPHSpecified
+        {
+            get
+            {
+                return sazbaDPHFieldSpecified;
+            }
+            set
+            {
+                sazbaDPHFieldSpecified = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PopisSpecified
+        {
+            get
+            {
+                return (Equals(_popis, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool IdSpecified
+        {
+            get
+            {
+                return (Equals(_id, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Element popisující metodiku měření
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TMetodikaMereni")]
+    public partial class TMetodikaMereni
+    {
+        #region Private fields
+        private TJednotkaRef _mernaJednotka;
+        private string _id;
+        private string _znacka;
+        private string _popis;
+        private string _podrobnyPopis;
+        #endregion
+
+        /// <summary>
+        /// TMetodikaMereni class constructor
+        /// </summary>
+        public TMetodikaMereni()
+        {
+            _mernaJednotka = new TJednotkaRef();
+        }
+
+        /// <summary>
+        /// Odkaz na strojově čitelnou fyzikální jednotku, nebo název jiné jednotky (například "komplet")
+        /// </summary>
+        [XmlElement("MernaJednotka")]
+        public TJednotkaRef MernaJednotka
+        {
+            get
+            {
+                return _mernaJednotka;
+            }
+            set
+            {
+                _mernaJednotka = value;
+            }
+        }
+
+        /// <summary>
+        /// Lokální ID, které použijí další elementy v ORF pro odkaz na tuto metodiku měření
+        /// </summary>
+        [XmlAttribute(DataType = "ID", AttributeName = "Id")]
+        public string Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        /// <summary>
+        /// Značka nebo kód metodiky měření
+        /// </summary>
+        [XmlAttribute(AttributeName = "Znacka")]
+        public string Znacka
+        {
+            get
+            {
+                return _znacka;
+            }
+            set
+            {
+                _znacka = value;
+            }
+        }
+
+        /// <summary>
+        /// Krátký popis metodiky měření
+        /// </summary>
+        [XmlAttribute(AttributeName = "Popis")]
+        public string Popis
+        {
+            get
+            {
+                return _popis;
+            }
+            set
+            {
+                _popis = value;
+            }
+        }
+
+        /// <summary>
+        /// Podrobnější popis nebo kategorie metodiky měření
+        /// </summary>
+        [XmlAttribute(AttributeName = "PodrobnyPopis")]
+        public string PodrobnyPopis
+        {
+            get
+            {
+                return _podrobnyPopis;
+            }
+            set
+            {
+                _podrobnyPopis = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool MernaJednotkaSpecified
+        {
+            get
+            {
+                return (Equals(_mernaJednotka, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool IdSpecified
+        {
+            get
+            {
+                return (Equals(_id, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool ZnackaSpecified
+        {
+            get
+            {
+                return (Equals(_znacka, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PopisSpecified
+        {
+            get
+            {
+                return (Equals(_popis, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PodrobnyPopisSpecified
+        {
+            get
+            {
+                return (Equals(_podrobnyPopis, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Identifikace druhu skupiny změn během výstavby
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TSkupinaZmen")]
+    public partial class TSkupinaZmen
+    {
+        #region Private fields
+        private string _id;
+        private string _nazev;
+        private TTypZmeny _typ;
+        #endregion
+
+        /// <summary>
+        /// Id skupiny změn během výstavby
+        /// </summary>
+        [XmlAttribute(DataType = "ID", AttributeName = "ID")]
+        public string ID
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        /// <summary>
+        /// Název skupiny změn během výstavby
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Typ změny
+        /// </summary>
+        [XmlAttribute(AttributeName = "Typ")]
+        public TTypZmeny Typ
+        {
+            get
+            {
+                return _typ;
+            }
+            set
+            {
+                _typ = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool TypSpecified
+        {
+            get
+            {
+                return (Equals(_typ, null) != true);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Typ změn během výstavby
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TTypZmeny")]
+    public enum TTypZmeny
+    {
+        VYHRAZENA,
+        ZAMENA_POLOZEK,
+        NEPREDVIDANA,
+        NEZBYTNA,
+        NEMENICI_CELK_POVAHU,
+        JINA,
+    }
+
+    /// <summary>
+    /// Záznam geometrie, která vznikla měřením v prostředí BIM modelu, nebo CAD výkresu
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [Serializable]
+    [DebuggerStepThrough]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlTypeAttribute(Namespace = "http://www.koncepcebim.cz/ORF_v1.0.xsd")]
+    [XmlRootAttribute("TMerenaGeometrie")]
+    public partial class TMerenaGeometrie
+    {
+        #region Private fields
+        private string _popis;
+        private List<TBod> _bod;
+        private List<TBod> _linie;
+        private TBod[][][] _polyLinie;
+        private List<TBod> _polygon;
+        private TBod[][][] _multiPolygon;
+        private TBod[][][] _polyhedron;
+        private string _nazev;
+        private string _id;
+        #endregion
+
+        /// <summary>
+        /// TMerenaGeometrie class constructor
+        /// </summary>
+        public TMerenaGeometrie()
+        {
+            _polygon = new List<TBod>();
+            _linie = new List<TBod>();
+            _bod = new List<TBod>();
+        }
+
+        /// <summary>
+        /// Popis měřené geometrie
+        /// </summary>
+        [XmlElement("Popis")]
+        public string Popis
+        {
+            get
+            {
+                return _popis;
+            }
+            set
+            {
+                _popis = value;
+            }
+        }
+
+        [XmlElement("Bod")]
+        public List<TBod> Bod
+        {
+            get
+            {
+                return _bod;
+            }
+            set
+            {
+                _bod = value;
+            }
+        }
+
+        [XmlArrayItemAttribute("Bod", typeof(TBod), IsNullable = false)]
+        public List<TBod> Linie
+        {
+            get
+            {
+                return _linie;
+            }
+            set
+            {
+                _linie = value;
+            }
+        }
+
+        [XmlArrayItemAttribute("Linie", typeof(TBod[]), IsNullable = false)]
+        [XmlArrayItemAttribute("Bod", typeof(TBod), IsNullable = false, NestingLevel = 1)]
+        public TBod[][][] PolyLinie
+        {
+            get
+            {
+                return _polyLinie;
+            }
+            set
+            {
+                _polyLinie = value;
+            }
+        }
+
+        [XmlArrayItemAttribute("Bod", typeof(TBod), IsNullable = false)]
+        public List<TBod> Polygon
+        {
+            get
+            {
+                return _polygon;
+            }
+            set
+            {
+                _polygon = value;
+            }
+        }
+
+        [XmlArrayItemAttribute("Polygon", typeof(TBod[]), IsNullable = false)]
+        [XmlArrayItemAttribute("Bod", typeof(TBod), IsNullable = false, NestingLevel = 1)]
+        public TBod[][][] MultiPolygon
+        {
+            get
+            {
+                return _multiPolygon;
+            }
+            set
+            {
+                _multiPolygon = value;
+            }
+        }
+
+        [XmlArrayItemAttribute("Polygon", typeof(TBod[]), IsNullable = false)]
+        [XmlArrayItemAttribute("Bod", typeof(TBod), IsNullable = false, NestingLevel = 1)]
+        public TBod[][][] Polyhedron
+        {
+            get
+            {
+                return _polyhedron;
+            }
+            set
+            {
+                _polyhedron = value;
+            }
+        }
+
+        /// <summary>
+        /// Popis měřené geometrie
+        /// </summary>
+        [XmlAttribute(AttributeName = "Nazev")]
+        public string Nazev
+        {
+            get
+            {
+                return _nazev;
+            }
+            set
+            {
+                _nazev = value;
+            }
+        }
+
+        /// <summary>
+        /// Identita měřené geometrie. Bude použita jako reference ve výkazu výměr.
+        /// </summary>
+        [XmlAttribute(DataType = "ID", AttributeName = "ID")]
+        public string ID
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PopisSpecified
+        {
+            get
+            {
+                return (Equals(_popis, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool BodSpecified
+        {
+            get
+            {
+                return (Equals(_bod, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool LinieSpecified
+        {
+            get
+            {
+                return (Equals(_linie, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PolyLinieSpecified
+        {
+            get
+            {
+                return (Equals(_polyLinie, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PolygonSpecified
+        {
+            get
+            {
+                return (Equals(_polygon, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool MultiPolygonSpecified
+        {
+            get
+            {
+                return (Equals(_multiPolygon, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool PolyhedronSpecified
+        {
+            get
+            {
+                return (Equals(_polyhedron, null) != true);
+            }
+        }
+
+        [XmlIgnore()]
+        public bool NazevSpecified
+        {
+            get
+            {
+                return (Equals(_nazev, null) != true);
             }
         }
     }

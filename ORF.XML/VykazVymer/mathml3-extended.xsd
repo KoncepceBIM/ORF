@@ -113,7 +113,7 @@
   <xs:complexType name="point">
     <xs:attribute name="x" use="required" type="xs:double"/>
     <xs:attribute name="y" use="required" type="xs:double"/>
-    <xs:attribute name="z" use="required" type="xs:double"/>
+    <xs:attribute name="z" use="optional" type="xs:double"/>
   </xs:complexType>
 
   <xs:element name="pt" type="m:point"></xs:element>

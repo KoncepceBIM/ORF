@@ -9,7 +9,7 @@ namespace ORF.XML.Doc
     {
         static void Main(string[] args)
         {
-            using var file = File.OpenRead("Schema\\ORF_v0.1.xsd");
+            using var file = File.OpenRead("Schema\\ORF_v0.9.xsd");
             using var doc = File.CreateText("doc.html");
 
             doc.Write(@"<!doctype html>
@@ -33,13 +33,13 @@ namespace ORF.XML.Doc
                 Console.WriteLine(e.Message);
             });
 
-            foreach (var type in schema.Items.OfType<XmlSchemaComplexType>().OrderBy(t => t.Name))
+            foreach (var type in schema.Items.OfType<XmlSchemaComplexType>().OrderBy(t => GetName(t.Name)))
             {
-                doc.H3(type.Name);
+                doc.H3(GetName(type.Name));
                 var baseType = type.GetBase();
                 if (baseType != null)
                 {
-                    doc.P($"Element odvozený od {baseType.Name}.");
+                    doc.P($"Element odvozený od datového typu \"{GetName(baseType.Name)}\".");
                 }
 
                 doc.P(type.Annotation());
@@ -57,7 +57,7 @@ namespace ORF.XML.Doc
 
             foreach (var type in schema.Items.OfType<XmlSchemaSimpleType>().OrderBy(t => t.Name))
             {
-                doc.H3(type.Name);
+                doc.H3(GetName(type.Name));
                 doc.P(type.Annotation());
 
                 if (type.IsEnum())
@@ -85,6 +85,16 @@ namespace ORF.XML.Doc
   </body>
 </html>
 ");
+        }
+
+        private static string GetName(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name) || name.Length < 2)
+                return name;
+            if (name[0] != 'T' || !char.IsUpper(name[1]))
+                return name;
+
+            return name[1..];
         }
     }
 

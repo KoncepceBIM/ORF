@@ -1030,6 +1030,11 @@
           <xs:documentation xml:lang="cs">Definice datov7ch objektů, na které se odkazují jiné datové entity v modelu ORF</xs:documentation>
         </xs:annotation>
       </xs:element>
+      <xs:element name="Mereni" type="TMereneGeometrie">
+        <xs:annotation>
+          <xs:documentation> Záznamy geometrií, které vznikly měřením v prostředí BIM modelu, nebo CAD výkresu. Výkaz výměr se může odkazovat na tato měření </xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:sequence>
     <xs:attribute name="Verze" type="TVerze" use="required">
       <xs:annotation>
@@ -2109,8 +2114,34 @@
     <xs:simpleContent>
       <xs:extension base="m:cn">
         <xs:attributeGroup ref="model-entity-identity"></xs:attributeGroup>
-        <xs:attribute name="propertyset" use="optional"></xs:attribute>
-        <xs:attribute name="property" use="optional"></xs:attribute>
+        <xs:attribute name="propertyset" use="optional">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">
+              Skupina vlastností, která obsahuje hodnotu na kterou se odkazuje hodnota ve výkazu výměr
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="property" use="optional">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">
+              Vlastnost na kterou se odkazuje hodnota ve výkazu výměr
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="MeasureFromModel">
+    <xs:simpleContent>
+      <xs:extension base="m:cn">
+        <xs:attribute name="Geometry" type="xs:IDREF" use="required">
+          <xs:annotation>
+            <xs:documentation xml:lang="cs">
+              Odkaz na definici geometrie. Vlastní geometrie je zachycena v kořenu datového elementu ORF
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -2754,6 +2785,107 @@
       <xs:element name="SkupinaZmen" type="TSkupinaZmenPolozky" minOccurs="0" maxOccurs="unbounded">
         <xs:annotation>
           <xs:documentation> Skupina změn položky zachycuje část hodnoty změny v jedné skupině změn </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!--Measure Geometry-->
+  <xs:complexType name="TBod">
+    <xs:attribute name="x" use="required" type="xs:double"/>
+    <xs:attribute name="y" use="required" type="xs:double"/>
+    <xs:attribute name="z" use="optional" type="xs:double"/>
+  </xs:complexType>
+
+  <xs:element name="Bod" type="TBod"></xs:element>
+
+  <xs:complexType name="TLinie">
+    <xs:sequence>
+      <xs:element ref="Bod" minOccurs="2" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Linie" type="TLinie"></xs:element>
+
+  <xs:complexType name="TPolyLinie">
+    <xs:sequence>
+      <xs:element ref="Linie" minOccurs="1" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="PolyLinie" type="TPolyLinie"></xs:element>
+
+  <xs:complexType name="TPolygon">
+    <xs:sequence>
+      <xs:element ref="Bod" minOccurs="2" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Polygon" type="TPolygon"></xs:element>
+
+  <xs:complexType name="TMultiPolygon">
+    <xs:sequence>
+      <xs:element ref="Polygon" minOccurs="1" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="MultiPolygon" type="TMultiPolygon"></xs:element>
+
+  <xs:complexType name="TPolyhedron">
+    <xs:sequence>
+      <xs:element ref="Polygon" minOccurs="1" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Polyhedron" type="TPolyhedron"></xs:element>
+
+  <xs:group name="Geometrie">
+    <xs:choice>
+      <xs:element ref="Bod"></xs:element>
+      <xs:element ref="Linie"></xs:element>
+      <xs:element ref="PolyLinie"></xs:element>
+      <xs:element ref="Polygon"></xs:element>
+      <xs:element ref="MultiPolygon"></xs:element>
+      <xs:element ref="Polyhedron"></xs:element>
+    </xs:choice>
+  </xs:group>
+
+  <xs:complexType name="TMerenaGeometrie">
+    <xs:annotation>
+      <xs:documentation> Záznam geometrie, která vznikla měřením v prostředí BIM modelu, nebo CAD výkresu </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Popis" type="xs:string">
+        <xs:annotation>
+          <xs:documentation> Popis měřené geometrie </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:group ref="Geometrie" minOccurs="1" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation> Geometrie </xs:documentation>
+        </xs:annotation>
+      </xs:group>
+    </xs:sequence>
+    <xs:attribute name="Nazev" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation> Popis měřené geometrie </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ID" type="xs:ID" use="required">
+      <xs:annotation>
+        <xs:documentation> Identita měřené geometrie. Bude použita jako reference ve výkazu výměr. </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="TMereneGeometrie">
+    <xs:annotation>
+      <xs:documentation> Záznamy geometrií, které vznikly měřením v prostředí BIM modelu, nebo CAD výkresu. Výkaz výměr se může odkazovat na tato měření </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Geometrie" type="TMerenaGeometrie" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation> Záznam geometrie, která vznikla měřením v prostředí BIM modelu, nebo CAD výkresu </xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
